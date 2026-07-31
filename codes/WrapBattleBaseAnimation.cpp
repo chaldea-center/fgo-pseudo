@@ -18,63 +18,63 @@ WrapBattleBaseAnimation_o *WrapBattleBaseAnimation__MakeWrapAnimation(
 {
   _BOOL8 v3; // x0
   __int64 v4; // x1
-  Il2CppObject *v5; // x20
-  _QWORD *v6; // x8
+  _QWORD *v5; // x8
+  Il2CppObject *v6; // x20
   __int64 v7; // x19
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   Il2CppObject *v15; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *component; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E7B06F & 1) == 0 )
+  if ( (byte_593C1B5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_Animation___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&WrapBattleAnimation_TypeInfo);
-    sub_1D0F0B4(&WrapBattleBaseAnimation_TypeInfo);
-    sub_1D0F0B4(&WrapBattleSimpleAnimation_TypeInfo);
-    byte_4E7B06F = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_Animation___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&WrapBattleAnimation_TypeInfo);
+    sub_21FFC50(&WrapBattleBaseAnimation_TypeInfo);
+    sub_21FFC50(&WrapBattleSimpleAnimation_TypeInfo);
+    byte_593C1B5 = 1;
   }
   v15 = 0;
   component = 0;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   v3 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)obj, 0, 0);
   if ( !v3 )
     goto LABEL_12;
   if ( !obj )
-    sub_1D0F30C(v3, v4);
+    sub_21FFECC(v3, v4);
   if ( !UnityEngine_GameObject__TryGetComponent_object_(
           obj,
           &component,
-          (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
+          (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
   {
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            obj,
            &v15,
-           (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
+           (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
     {
-      v5 = v15;
-      v6 = &WrapBattleAnimation_TypeInfo;
+      v5 = &WrapBattleAnimation_TypeInfo;
+      v6 = v15;
       goto LABEL_11;
     }
 LABEL_12:
-    v7 = sub_1D0F300(WrapBattleBaseAnimation_TypeInfo);
+    v7 = sub_21FFEBC(WrapBattleBaseAnimation_TypeInfo);
     System_Object___ctor((Il2CppObject *)v7, 0);
     return (WrapBattleBaseAnimation_o *)v7;
   }
-  v5 = component;
-  v6 = &WrapBattleSimpleAnimation_TypeInfo;
+  v5 = &WrapBattleSimpleAnimation_TypeInfo;
+  v6 = component;
 LABEL_11:
-  v7 = sub_1D0F300(*v6);
+  v7 = sub_21FFEBC(*v5);
   System_Object___ctor((Il2CppObject *)v7, 0);
-  *(_QWORD *)(v7 + 16) = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)v5, v8, v9, v10, v11, v12, v13);
+  *(_QWORD *)(v7 + 16) = v6;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)v6, v8, v9, v10, v11, v12, v13);
   return (WrapBattleBaseAnimation_o *)v7;
 }
 
@@ -96,17 +96,17 @@ void WrapBattleBaseAnimation_SimpleData___ctor(
         const MethodInfo *method)
 {
   WrapBattleBaseAnimation_SimpleData_o *v6; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.animName = name;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)((char *)v6 + 16);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v6, (int32_t)name, v7, v8, v9, v10, v11, v12);
   *(float *)&v6->monitor = time;
 }

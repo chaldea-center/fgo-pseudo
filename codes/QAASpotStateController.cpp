@@ -11,12 +11,12 @@ void QAASpotStateController__Init(
 {
   CStateManager_T__o *v5; // x21
   QAASpotStateController_Fields *p_fields; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   CStateManager_T__o *stateManager; // x21
   Il2CppObject *v14; // x22
   __int64 v15; // x0
@@ -41,31 +41,31 @@ void QAASpotStateController__Init(
   __int64 v34; // x21
   const MethodInfo *v35; // x2
 
-  if ( (byte_4E7415D & 1) == 0 )
+  if ( (byte_59350A0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CStateManager_QAASpotStateController_IMapSpot___ctor__);
-    sub_1D0F0B4(&Method_CStateManager_QAASpotStateController_IMapSpot__add__);
-    sub_1D0F0B4(&CStateManager_QAASpotStateController_IMapSpot__TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateMapMain_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateNone_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaAnimation_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaChange_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaDisp_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaGray_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaHide_TypeInfo);
-    byte_4E7415D = 1;
+    sub_21FFC50(&Method_CStateManager_QAASpotStateController_IMapSpot___ctor__);
+    sub_21FFC50(&Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    sub_21FFC50(&CStateManager_QAASpotStateController_IMapSpot__TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateMapMain_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateNone_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateQaaAnimation_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateQaaChange_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateQaaDisp_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateQaaGray_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_StateQaaHide_TypeInfo);
+    byte_59350A0 = 1;
   }
-  v5 = (CStateManager_T__o *)sub_1D0F300(CStateManager_QAASpotStateController_IMapSpot__TypeInfo);
+  v5 = (CStateManager_T__o *)sub_21FFEBC(CStateManager_QAASpotStateController_IMapSpot__TypeInfo);
   CStateManager_object____ctor(
     v5,
     (Il2CppObject *)targetObject,
     10,
-    (const MethodInfo_34BF700 *)Method_CStateManager_QAASpotStateController_IMapSpot___ctor__);
+    (const MethodInfo_3E505AC *)Method_CStateManager_QAASpotStateController_IMapSpot___ctor__);
   this->fields.stateManager = (struct CStateManager_QAASpotStateController_IMapSpot__o *)v5;
   p_fields = &this->fields;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
-  v14 = (Il2CppObject *)sub_1D0F300(QAASpotStateController_StateNone_TypeInfo);
+  v14 = (Il2CppObject *)sub_21FFEBC(QAASpotStateController_StateNone_TypeInfo);
   System_Object___ctor(v14, 0);
   if ( !stateManager )
     goto LABEL_22;
@@ -73,9 +73,9 @@ void QAASpotStateController__Init(
     stateManager,
     0,
     (IState_T__o *)v14,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v17 = (CStateManager_T__o *)p_fields->stateManager;
-  v18 = (Il2CppObject *)sub_1D0F300(QAASpotStateController_StateMapMain_TypeInfo);
+  v18 = (Il2CppObject *)sub_21FFEBC(QAASpotStateController_StateMapMain_TypeInfo);
   System_Object___ctor(v18, 0);
   if ( !v17 )
     goto LABEL_22;
@@ -83,9 +83,9 @@ void QAASpotStateController__Init(
     v17,
     1,
     (IState_T__o *)v18,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v19 = (CStateManager_T__o *)p_fields->stateManager;
-  v20 = sub_1D0F300(QAASpotStateController_StateQaaHide_TypeInfo);
+  v20 = sub_21FFEBC(QAASpotStateController_StateQaaHide_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0);
   if ( !v20 )
     goto LABEL_22;
@@ -96,9 +96,9 @@ void QAASpotStateController__Init(
     v19,
     2,
     (IState_T__o *)v20,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v21 = (CStateManager_T__o *)p_fields->stateManager;
-  v22 = sub_1D0F300(QAASpotStateController_StateQaaGray_TypeInfo);
+  v22 = sub_21FFEBC(QAASpotStateController_StateQaaGray_TypeInfo);
   System_Object___ctor((Il2CppObject *)v22, 0);
   if ( !v22 )
     goto LABEL_22;
@@ -109,9 +109,9 @@ void QAASpotStateController__Init(
     v21,
     3,
     (IState_T__o *)v22,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v23 = (CStateManager_T__o *)p_fields->stateManager;
-  v24 = sub_1D0F300(QAASpotStateController_StateQaaDisp_TypeInfo);
+  v24 = sub_21FFEBC(QAASpotStateController_StateQaaDisp_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0);
   if ( !v24 )
     goto LABEL_22;
@@ -122,9 +122,9 @@ void QAASpotStateController__Init(
     v23,
     4,
     (IState_T__o *)v24,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v25 = (CStateManager_T__o *)p_fields->stateManager;
-  v26 = sub_1D0F300(QAASpotStateController_StateQaaHide_TypeInfo);
+  v26 = sub_21FFEBC(QAASpotStateController_StateQaaHide_TypeInfo);
   System_Object___ctor((Il2CppObject *)v26, 0);
   if ( !v26 )
     goto LABEL_22;
@@ -135,9 +135,9 @@ void QAASpotStateController__Init(
     v25,
     5,
     (IState_T__o *)v26,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v27 = (CStateManager_T__o *)p_fields->stateManager;
-  v28 = sub_1D0F300(QAASpotStateController_StateQaaGray_TypeInfo);
+  v28 = sub_21FFEBC(QAASpotStateController_StateQaaGray_TypeInfo);
   System_Object___ctor((Il2CppObject *)v28, 0);
   if ( !v28 )
     goto LABEL_22;
@@ -148,9 +148,9 @@ void QAASpotStateController__Init(
     v27,
     6,
     (IState_T__o *)v28,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v29 = (CStateManager_T__o *)p_fields->stateManager;
-  v30 = sub_1D0F300(QAASpotStateController_StateQaaDisp_TypeInfo);
+  v30 = sub_21FFEBC(QAASpotStateController_StateQaaDisp_TypeInfo);
   System_Object___ctor((Il2CppObject *)v30, 0);
   if ( !v30 )
     goto LABEL_22;
@@ -161,9 +161,9 @@ void QAASpotStateController__Init(
     v29,
     7,
     (IState_T__o *)v30,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   v31 = (CStateManager_T__o *)p_fields->stateManager;
-  v32 = sub_1D0F300(QAASpotStateController_StateQaaChange_TypeInfo);
+  v32 = sub_21FFEBC(QAASpotStateController_StateQaaChange_TypeInfo);
   System_Object___ctor((Il2CppObject *)v32, 0);
   if ( !v32
     || (*(_DWORD *)(v32 + 16) = 1056964608, !v31)
@@ -171,21 +171,21 @@ void QAASpotStateController__Init(
           v31,
           8,
           (IState_T__o *)v32,
-          (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__),
+          (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__),
         v33 = (CStateManager_T__o *)p_fields->stateManager,
-        v34 = sub_1D0F300(QAASpotStateController_StateQaaAnimation_TypeInfo),
+        v34 = sub_21FFEBC(QAASpotStateController_StateQaaAnimation_TypeInfo),
         System_Object___ctor((Il2CppObject *)v34, 0),
         !v34)
     || (*(_DWORD *)(v34 + 16) = 1056964608, !v33) )
   {
 LABEL_22:
-    sub_1D0F30C(v15, v16);
+    sub_21FFECC(v15, v16);
   }
   CStateManager_object___add(
     v33,
     9,
     (IState_T__o *)v34,
-    (const MethodInfo_34BF7A8 *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
+    (const MethodInfo_3E5065C *)Method_CStateManager_QAASpotStateController_IMapSpot__add__);
   QAASpotStateController__SetState(this, 0, v35);
 }
 
@@ -200,18 +200,18 @@ void QAASpotStateController__SetQaaColorAnim(
   __int64 v9; // x20
   __int64 v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   __int64 *v24; // x21
   __int64 v25; // x8
   __int64 v26; // x9
@@ -219,12 +219,12 @@ void QAASpotStateController__SetQaaColorAnim(
   __int64 v28; // x0
   UnityEngine_GameObject_o *v29; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
   int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  bool v35; // w6
+  bool v36; // w7
   __int64 *v37; // x21
   __int64 v38; // x8
   __int64 v39; // x9
@@ -232,28 +232,29 @@ void QAASpotStateController__SetQaaColorAnim(
   __int64 v41; // x0
   const MethodInfo *v42; // x1
   float v43; // s0
-  EasingObject_o *v44; // x19
-  System_Action_o *v45; // x21
-  System_Action_o *v46; // x22
+  float v44; // s1
+  EasingObject_o *v45; // x19
+  System_Action_o *v46; // x21
+  System_Action_o *v47; // x22
 
-  if ( (byte_4E74161 & 1) == 0 )
+  if ( (byte_59350A4 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    sub_1D0F0B4(&Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__ApplyCurrentColor_1__);
-    sub_1D0F0B4(&Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__EndAction_0__);
-    sub_1D0F0B4(&QAASpotStateController___c__DisplayClass9_0_TypeInfo);
-    byte_4E74161 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    sub_21FFC50(&Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__ApplyCurrentColor_1__);
+    sub_21FFC50(&Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__EndAction_0__);
+    sub_21FFC50(&QAASpotStateController___c__DisplayClass9_0_TypeInfo);
+    byte_59350A4 = 1;
   }
-  v9 = sub_1D0F300(QAASpotStateController___c__DisplayClass9_0_TypeInfo);
+  v9 = sub_21FFEBC(QAASpotStateController___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_24;
   *(_QWORD *)(v9 + 16) = targetObject;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)targetObject, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)targetObject, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 32) = finishCallback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)finishCallback, v18, v19, v20, v21, v22, v23);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 32), (int32_t)finishCallback, v18, v19, v20, v21, v22, v23);
   v24 = *(__int64 **)(v9 + 16);
   if ( !v24 )
     goto LABEL_24;
@@ -274,14 +275,14 @@ void QAASpotStateController__SetQaaColorAnim(
   else
   {
 LABEL_9:
-    v28 = sub_1CE5430(v24, QAASpotStateController_IMapSpot_TypeInfo, 5);
+    v28 = sub_2237E2C(v24, QAASpotStateController_IMapSpot_TypeInfo, 5);
   }
   v29 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64 *, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8));
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        v29,
-                       (const MethodInfo_32A9F2C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_38852A8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v9 + 48) = Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)Component_object, v31, v32, v33, v34, v35, v36);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 48), (int32_t)Component_object, v31, v32, v33, v34, v35, v36);
   v37 = *(__int64 **)(v9 + 16);
   if ( !v37 )
     goto LABEL_24;
@@ -302,35 +303,36 @@ LABEL_9:
   else
   {
 LABEL_16:
-    v41 = sub_1CE5430(*(_QWORD *)(v9 + 16), QAASpotStateController_IMapSpot_TypeInfo, 7);
+    v41 = sub_2237E2C(*(_QWORD *)(v9 + 16), QAASpotStateController_IMapSpot_TypeInfo, 7);
   }
-  *(float *)(v9 + 40) = (*(float (__fastcall **)(__int64 *, _QWORD))v41)(v37, *(_QWORD *)(v41 + 8));
-  v43 = 0.5;
+  v43 = (*(float (__fastcall **)(__int64 *, _QWORD))v41)(v37, *(_QWORD *)(v41 + 8));
+  v44 = 0.5;
+  *(float *)(v9 + 40) = v43;
   if ( isActive )
-    v43 = 1.0;
-  *(float *)(v9 + 24) = v43;
+    v44 = 1.0;
+  *(float *)(v9 + 24) = v44;
   if ( time > 0.0 )
   {
-    v44 = *(EasingObject_o **)(v9 + 48);
-    v45 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(
-      v45,
-      (Il2CppObject *)v9,
-      Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__ApplyCurrentColor_1__,
-      0);
-    v46 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v45 = *(EasingObject_o **)(v9 + 48);
+    v46 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(
       v46,
       (Il2CppObject *)v9,
+      Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__ApplyCurrentColor_1__,
+      0);
+    v47 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(
+      v47,
+      (Il2CppObject *)v9,
       Method_QAASpotStateController___c__DisplayClass9_0__SetQaaColorAnim_g__EndAction_0__,
       0);
-    if ( v44 )
+    if ( v45 )
     {
-      EasingObject__Play(v44, time, v45, v46, 0.0, 17, 0);
+      EasingObject__Play(v45, time, v46, v47, 0.0, 17, 0);
       return;
     }
 LABEL_24:
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   }
   QAASpotStateController___c__DisplayClass9_0___SetQaaColorAnim_g__EndAction_0(
     (QAASpotStateController___c__DisplayClass9_0_o *)v9,
@@ -348,12 +350,12 @@ void QAASpotStateController__SetQaaScaleAnim(
   __int64 v9; // x19
   Il2CppObject *v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   QAASpotStateController_IMapSpot_c *klass; // x8
   __int64 v19; // x9
   int32_t *p_offset; // x10
@@ -371,34 +373,36 @@ void QAASpotStateController__SetQaaScaleAnim(
   __int64 v32; // x9
   int32_t *v33; // x10
   __int64 v34; // x0
-  float v35; // s12
+  float v35; // s14
   float v36; // s1
-  float v37; // s13
+  float v37; // s12
   float v38; // s2
-  float v39; // s14
+  float v39; // s13
   float v40; // s1
   float v41; // s2
   struct UnityEngine_Vector3_StaticFields *v42; // x8
   System_Collections_Generic_List_EventDelegate__o *monitor; // x20
   EventDelegate_Callback_o *v44; // x21
-  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v45; // x1
+  __int64 v46; // x2
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E74160 & 1) == 0 )
+  if ( (byte_59350A3 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    sub_1D0F0B4(&Method_QAASpotStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__);
-    sub_1D0F0B4(&QAASpotStateController___c__DisplayClass8_0_TypeInfo);
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenScale___);
-    byte_4E74160 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    sub_21FFC50(&Method_QAASpotStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__);
+    sub_21FFC50(&QAASpotStateController___c__DisplayClass8_0_TypeInfo);
+    sub_21FFC50(&Method_UITweener_Begin_TweenScale___);
+    byte_59350A3 = 1;
   }
-  v9 = sub_1D0F300(QAASpotStateController___c__DisplayClass8_0_TypeInfo);
+  v9 = sub_21FFEBC(QAASpotStateController___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_36;
   *(_QWORD *)(v9 + 16) = finishCallback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)finishCallback, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)finishCallback, v12, v13, v14, v15, v16, v17);
   if ( !targetObject )
     goto LABEL_36;
   klass = targetObject->klass;
@@ -418,17 +422,17 @@ void QAASpotStateController__SetQaaScaleAnim(
   else
   {
 LABEL_9:
-    v21 = sub_1CE5430(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 5);
+    v21 = sub_2237E2C(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 5);
   }
   v22 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v21)(
                                       targetObject,
                                       *(_QWORD *)(v21 + 8));
   if ( isDisp )
   {
-    if ( !byte_4E70C99 )
+    if ( !byte_5931940 )
     {
-      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
+      sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
     }
     v23 = targetObject->klass;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -451,12 +455,9 @@ LABEL_9:
     else
     {
 LABEL_18:
-      v30 = sub_1CE5430(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 4);
+      v30 = sub_2237E2C(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 4);
     }
-    LODWORD(v35) = COERCE_UNSIGNED_INT128(
-                     ((long double (__fastcall *)(QAASpotStateController_IMapSpot_o *, _QWORD))*(_QWORD *)v30)(
-                       targetObject,
-                       *(_QWORD *)(v30 + 8)));
+    v35 = (*(float (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v30)(targetObject, *(_QWORD *)(v30 + 8));
     v37 = v36;
     v39 = v38;
   }
@@ -479,18 +480,15 @@ LABEL_18:
     else
     {
 LABEL_23:
-      v34 = sub_1CE5430(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 4);
+      v34 = sub_2237E2C(targetObject, QAASpotStateController_IMapSpot_TypeInfo, 4);
     }
-    LODWORD(x) = COERCE_UNSIGNED_INT128(
-                   ((long double (__fastcall *)(QAASpotStateController_IMapSpot_o *, _QWORD))*(_QWORD *)v34)(
-                     targetObject,
-                     *(_QWORD *)(v34 + 8)));
+    x = (*(float (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v34)(targetObject, *(_QWORD *)(v34 + 8));
     y = v40;
     z = v41;
-    if ( !byte_4E70C99 )
+    if ( !byte_5931940 )
     {
-      sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
+      sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
     }
     v42 = UnityEngine_Vector3_TypeInfo->static_fields;
     v35 = v42->zeroVector.fields.x;
@@ -499,34 +497,34 @@ LABEL_23:
   }
   if ( time <= 0.0 )
   {
-    v45.fields.x = v35;
-    v45.fields.y = v37;
-    v45.fields.z = v39;
-    GameObjectExtensions__SetLocalScale(v22, v45, 0);
+    v47.fields.x = v35;
+    v47.fields.y = v37;
+    v47.fields.z = v39;
+    GameObjectExtensions__SetLocalScale(v22, v47, 0);
     ActionExtensions__Call(*(System_Action_o **)(v9 + 16), 0);
     return;
   }
-  v10 = UITweener__Begin_object_(v22, time, (const MethodInfo_332666C *)Method_UITweener_Begin_TweenScale___);
+  v10 = UITweener__Begin_object_(v22, time, (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenScale___);
   if ( !v10 )
 LABEL_36:
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   *(float *)&v10[8].klass = x;
   *((float *)&v10[8].klass + 1) = y;
   *(float *)&v10[8].monitor = z;
   *((float *)&v10[8].monitor + 1) = v35;
   *(float *)&v10[9].klass = v37;
   *((float *)&v10[9].klass + 1) = v39;
-  LODWORD(v10[2].klass) = 2;
   monitor = (System_Collections_Generic_List_EventDelegate__o *)v10[4].monitor;
-  v44 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+  LODWORD(v10[2].klass) = 2;
+  v44 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v44,
     (Il2CppObject *)v9,
     Method_QAASpotStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__,
     0);
-  if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_50659024(monitor, v44, 0);
+  if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v45, v46);
+  EventDelegate__Set_56117672(monitor, v44, 0);
 }
 
 
@@ -535,18 +533,18 @@ void QAASpotStateController__SetState(QAASpotStateController_o *this, int32_t st
 {
   CStateManager_T__o *stateManager; // x0
 
-  if ( (byte_4E7415F & 1) == 0 )
+  if ( (byte_59350A2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CStateManager_QAASpotStateController_IMapSpot__setState__);
-    byte_4E7415F = 1;
+    sub_21FFC50(&Method_CStateManager_QAASpotStateController_IMapSpot__setState__);
+    byte_59350A2 = 1;
   }
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
   if ( !stateManager )
-    sub_1D0F30C(0, *(_QWORD *)&state);
+    sub_21FFECC(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     stateManager,
     state,
-    (const MethodInfo_34BF834 *)Method_CStateManager_QAASpotStateController_IMapSpot__setState__);
+    (const MethodInfo_3E506E4 *)Method_CStateManager_QAASpotStateController_IMapSpot__setState__);
 }
 
 
@@ -554,17 +552,17 @@ void QAASpotStateController__Update(QAASpotStateController_o *this, const Method
 {
   CStateManager_T__o *stateManager; // x0
 
-  if ( (byte_4E7415E & 1) == 0 )
+  if ( (byte_59350A1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CStateManager_QAASpotStateController_IMapSpot__update__);
-    byte_4E7415E = 1;
+    sub_21FFC50(&Method_CStateManager_QAASpotStateController_IMapSpot__update__);
+    byte_59350A1 = 1;
   }
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
   if ( !stateManager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   CStateManager_object___update(
     stateManager,
-    (const MethodInfo_34BF810 *)Method_CStateManager_QAASpotStateController_IMapSpot__update__);
+    (const MethodInfo_3E506C4 *)Method_CStateManager_QAASpotStateController_IMapSpot__update__);
 }
 
 
@@ -585,23 +583,22 @@ void QAASpotStateController_StateMapMain__begin(
   __int64 v7; // x0
   char v8; // w0
   QAASpotStateController_IMapSpot_c *v9; // x8
-  __int64 v10; // x9
-  int32_t *v11; // x10
-  __int64 v12; // x0
-  int32_t *v13; // x10
-  __int64 v14; // x0
-  __int64 v15; // x2
-  void (__fastcall *v16)(QAASpotStateController_IMapSpot_o *, __int64, __int64); // x3
-  QAASpotStateController_IMapSpot_o *v17; // x0
-  __int64 v18; // x1
+  char v10; // w20
+  __int64 v11; // x9
+  QAASpotStateController_IMapSpot_c **v12; // x10
+  QAASpotStateController_IMapSpot_o *v13; // x0
+  __int64 v14; // x2
+  QAASpotStateController_IMapSpot_c **v15; // x10
+  __int64 v16; // x0
+  int v17; // w9
 
-  if ( (byte_4E74162 & 1) == 0 )
+  if ( (byte_59350A5 & 1) == 0 )
   {
-    this = (QAASpotStateController_StateMapMain_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74162 = 1;
+    this = (QAASpotStateController_StateMapMain_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350A5 = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -619,60 +616,58 @@ void QAASpotStateController_StateMapMain__begin(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 0);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 0);
   }
   v8 = (*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v7)(that, *(_QWORD *)(v7 + 8));
   v9 = that->klass;
-  v10 = *(unsigned __int16 *)&that->klass->_2.rank;
+  v10 = v8;
+  v11 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( (v8 & 1) != 0 )
   {
     if ( *(_WORD *)&that->klass->_2.rank )
     {
-      v11 = &v9->_1.interfaceOffsets->offset;
-      while ( *((QAASpotStateController_IMapSpot_c **)v11 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
+      v12 = (QAASpotStateController_IMapSpot_c **)&v9->_1.interfaceOffsets->offset;
+      while ( *(v12 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
       {
-        --v10;
-        v11 += 4;
-        if ( !v10 )
+        --v11;
+        v12 += 2;
+        if ( !v11 )
           goto LABEL_15;
       }
-      v12 = (__int64)&v9->vtable[*v11 + 1];
+      v17 = *(_DWORD *)v12 + 1;
+LABEL_24:
+      v16 = (__int64)&v9->vtable[v17];
+      goto LABEL_25;
     }
-    else
-    {
 LABEL_15:
-      v12 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 1);
-    }
-    v16 = *(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, __int64))v12;
-    v15 = *(_QWORD *)(v12 + 8);
-    v17 = that;
-    v18 = 0;
+    v13 = that;
+    v14 = 1;
   }
   else
   {
     if ( *(_WORD *)&that->klass->_2.rank )
     {
-      v13 = &v9->_1.interfaceOffsets->offset;
-      while ( *((QAASpotStateController_IMapSpot_c **)v13 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
+      v15 = (QAASpotStateController_IMapSpot_c **)&v9->_1.interfaceOffsets->offset;
+      while ( *(v15 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
       {
-        --v10;
-        v13 += 4;
-        if ( !v10 )
+        --v11;
+        v15 += 2;
+        if ( !v11 )
           goto LABEL_20;
       }
-      v14 = (__int64)&v9->vtable[*v13 + 3];
+      v17 = *(_DWORD *)v15 + 3;
+      goto LABEL_24;
     }
-    else
-    {
 LABEL_20:
-      v14 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 3);
-    }
-    v16 = *(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, __int64))v14;
-    v15 = *(_QWORD *)(v14 + 8);
-    v18 = 1;
-    v17 = that;
+    v13 = that;
+    v14 = 3;
   }
-  v16(v17, v18, v15);
+  v16 = sub_2237E2C(v13, QAASpotStateController_IMapSpot_TypeInfo, v14);
+LABEL_25:
+  (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, bool, _QWORD))v16)(
+    that,
+    (v10 & 1) == 0,
+    *(_QWORD *)(v16 + 8));
 }
 
 
@@ -695,13 +690,13 @@ void QAASpotStateController_StateMapMain__update(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4E74163 & 1) == 0 )
+  if ( (byte_59350A6 & 1) == 0 )
   {
-    this = (QAASpotStateController_StateMapMain_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74163 = 1;
+    this = (QAASpotStateController_StateMapMain_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350A6 = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -719,7 +714,7 @@ void QAASpotStateController_StateMapMain__update(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 9);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 9);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, _QWORD))v7)(that, 0, *(_QWORD *)(v7 + 8));
 }
@@ -769,10 +764,10 @@ void QAASpotStateController_StateQaaAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -798,14 +793,14 @@ void QAASpotStateController_StateQaaAnimation__begin(
   int32_t *v17; // x10
   __int64 v18; // x0
 
-  if ( (byte_4E7416C & 1) == 0 )
+  if ( (byte_59350AF & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    this = (QAASpotStateController_StateQaaAnimation_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E7416C = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    this = (QAASpotStateController_StateQaaAnimation_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350AF = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -823,10 +818,10 @@ void QAASpotStateController_StateQaaAnimation__begin(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 6);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 6);
   }
   v8 = (*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v7)(that, *(_QWORD *)(v7 + 8));
-  v9 = sub_1D0F300(System_Action_TypeInfo);
+  v9 = sub_21FFEBC(System_Action_TypeInfo);
   v10 = that->klass;
   v11 = (System_Action_o *)v9;
   v12 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -845,7 +840,7 @@ LABEL_8:
   else
   {
 LABEL_14:
-    v14 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+    v14 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
   }
   System_Action___ctor(v11, (Il2CppObject *)that, *(_QWORD *)(v14 + 8), 0);
   v15 = that->klass;
@@ -865,7 +860,7 @@ LABEL_14:
   else
   {
 LABEL_20:
-    v18 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 16);
+    v18 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 16);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, System_Action_o *, _QWORD))v18)(
     that,
@@ -886,10 +881,10 @@ void QAASpotStateController_StateQaaBase___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -932,10 +927,10 @@ void QAASpotStateController_StateQaaChange___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -948,19 +943,19 @@ void QAASpotStateController_StateQaaChange__begin(
   __int64 v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   __int64 **v14; // x21
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   __int64 *v21; // x22
   __int64 v22; // x8
   __int64 v23; // x9
@@ -974,23 +969,23 @@ void QAASpotStateController_StateQaaChange__begin(
   QAASpotStateController_IMapSpot_c **v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_4E7416A & 1) == 0 )
+  if ( (byte_59350AD & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    sub_1D0F0B4(&Method_QAASpotStateController_StateQaaChange___c__DisplayClass1_0__begin_b__0__);
-    sub_1D0F0B4(&QAASpotStateController_StateQaaChange___c__DisplayClass1_0_TypeInfo);
-    byte_4E7416A = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    sub_21FFC50(&Method_QAASpotStateController_StateQaaChange___c__DisplayClass1_0__begin_b__0__);
+    sub_21FFC50(&QAASpotStateController_StateQaaChange___c__DisplayClass1_0_TypeInfo);
+    byte_59350AD = 1;
   }
-  v5 = sub_1D0F300(QAASpotStateController_StateQaaChange___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_21FFEBC(QAASpotStateController_StateQaaChange___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_23;
   *(_QWORD *)(v5 + 16) = that;
   v14 = (__int64 **)(v5 + 16);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)that, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)that, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v15, v16, v17, v18, v19, v20);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v15, v16, v17, v18, v19, v20);
   v21 = *(__int64 **)(v5 + 16);
   if ( !v21 )
     goto LABEL_23;
@@ -1011,14 +1006,14 @@ void QAASpotStateController_StateQaaChange__begin(
   else
   {
 LABEL_9:
-    v25 = sub_1CE5430(*v14, QAASpotStateController_IMapSpot_TypeInfo, 13);
+    v25 = sub_2237E2C(*v14, QAASpotStateController_IMapSpot_TypeInfo, 13);
   }
   v6 = (*(__int64 (__fastcall **)(__int64 *, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8));
   if ( (_DWORD)v6 )
   {
-    if ( (unsigned int)(v6 - 1) < 2 )
+    if ( (unsigned int)v6 < 3 )
     {
-      v26 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+      v26 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
       System_Action___ctor(
         v26,
         (Il2CppObject *)v5,
@@ -1036,7 +1031,7 @@ LABEL_9:
   v28 = *v14;
   if ( !*v14 )
 LABEL_23:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   v29 = *v28;
   v30 = *(unsigned __int16 *)(*v28 + 302);
   if ( *(_WORD *)(*v28 + 302) )
@@ -1054,7 +1049,7 @@ LABEL_23:
   else
   {
 LABEL_19:
-    v32 = sub_1CE5430(*v14, QAASpotStateController_IMapSpot_TypeInfo, 10);
+    v32 = sub_2237E2C(*v14, QAASpotStateController_IMapSpot_TypeInfo, 10);
   }
   (*(void (__fastcall **)(__int64 *, _QWORD))v32)(v28, *(_QWORD *)(v32 + 8));
 }
@@ -1089,11 +1084,11 @@ void QAASpotStateController_StateQaaChange___c__DisplayClass1_0___begin_b__0(
   const MethodInfo *v16; // x3
 
   v2 = this;
-  if ( (byte_4E7416B & 1) == 0 )
+  if ( (byte_59350AE & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    this = (QAASpotStateController_StateQaaChange___c__DisplayClass1_0_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E7416B = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    this = (QAASpotStateController_StateQaaChange___c__DisplayClass1_0_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350AE = 1;
   }
   that = v2->fields.that;
   if ( !that )
@@ -1115,7 +1110,7 @@ void QAASpotStateController_StateQaaChange___c__DisplayClass1_0___begin_b__0(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(v2->fields.that, QAASpotStateController_IMapSpot_TypeInfo, 12);
+    v7 = sub_2237E2C(v2->fields.that, QAASpotStateController_IMapSpot_TypeInfo, 12);
   }
   this = (QAASpotStateController_StateQaaChange___c__DisplayClass1_0_o *)(*(__int64 (__fastcall **)(struct QAASpotStateController_IMapSpot_o *, _QWORD))v7)(
                                                                            that,
@@ -1124,11 +1119,11 @@ LABEL_8:
   if ( !_4__this
     || (v9 = (Il2CppObject *)v2->fields.that,
         Duration = _4__this->fields.Duration,
-        this = (QAASpotStateController_StateQaaChange___c__DisplayClass1_0_o *)sub_1D0F300(System_Action_TypeInfo),
+        this = (QAASpotStateController_StateQaaChange___c__DisplayClass1_0_o *)sub_21FFEBC(System_Action_TypeInfo),
         !v9) )
   {
 LABEL_19:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v11 = v9->klass;
   v12 = this;
@@ -1148,7 +1143,7 @@ LABEL_19:
   else
   {
 LABEL_16:
-    v15 = sub_1CE5430(v9, QAASpotStateController_IMapSpot_TypeInfo, 10);
+    v15 = sub_2237E2C(v9, QAASpotStateController_IMapSpot_TypeInfo, 10);
   }
   System_Action___ctor((System_Action_o *)v12, v9, *(_QWORD *)(v15 + 8), 0);
   QAASpotStateController__SetQaaScaleAnim(
@@ -1171,10 +1166,10 @@ void QAASpotStateController_StateQaaDisp___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -1205,14 +1200,14 @@ void QAASpotStateController_StateQaaDisp__begin(
   __int64 v22; // x9
   int32_t *v23; // x10
   __int64 v24; // x0
-  float v25; // s8
-  __int64 v26; // x0
-  QAASpotStateController_IMapSpot_c *v27; // x8
-  System_Action_o *v28; // x20
-  __int64 v29; // x9
-  int32_t *v30; // x10
-  __int64 v31; // x0
-  const MethodInfo *v32; // x3
+  const MethodInfo *v25; // x3
+  float v26; // s8
+  __int64 v27; // x0
+  QAASpotStateController_IMapSpot_c *v28; // x8
+  System_Action_o *v29; // x20
+  __int64 v30; // x9
+  int32_t *v31; // x10
+  __int64 v32; // x0
   const MethodInfo *v33; // x3
   QAASpotStateController_IMapSpot_c *v34; // x8
   __int64 v35; // x9
@@ -1220,14 +1215,14 @@ void QAASpotStateController_StateQaaDisp__begin(
   __int64 v37; // x0
 
   v4 = this;
-  if ( (byte_4E74168 & 1) == 0 )
+  if ( (byte_59350AB & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    this = (QAASpotStateController_StateQaaDisp_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74168 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    this = (QAASpotStateController_StateQaaDisp_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350AB = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v6 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1245,14 +1240,14 @@ void QAASpotStateController_StateQaaDisp__begin(
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
+    v8 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
   }
   v9 = (*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v8)(that, *(_QWORD *)(v8 + 8));
   switch ( v9 )
   {
     case 2:
       Duration = v4->fields.Duration;
-      v19 = sub_1D0F300(System_Action_TypeInfo);
+      v19 = sub_21FFEBC(System_Action_TypeInfo);
       v20 = that->klass;
       v21 = (System_Action_o *)v19;
       v22 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -1271,10 +1266,10 @@ LABEL_8:
       else
       {
 LABEL_27:
-        v24 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+        v24 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
       System_Action___ctor(v21, (Il2CppObject *)that, *(_QWORD *)(v24 + 8), 0);
-      QAASpotStateController__SetQaaColorAnim(that, 1, Duration, v21, v32);
+      QAASpotStateController__SetQaaColorAnim(that, 1, Duration, v21, v25);
       break;
     case 1:
       v14 = that->klass;
@@ -1294,7 +1289,7 @@ LABEL_27:
       else
       {
 LABEL_22:
-        v17 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+        v17 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
       (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v17)(that, *(_QWORD *)(v17 + 8));
       break;
@@ -1316,33 +1311,33 @@ LABEL_22:
       else
       {
 LABEL_17:
-        v13 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 8);
+        v13 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 8);
       }
       (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, float))v13)(that, *(_QWORD *)(v13 + 8), 1.0);
-      v25 = v4->fields.Duration;
-      v26 = sub_1D0F300(System_Action_TypeInfo);
-      v27 = that->klass;
-      v28 = (System_Action_o *)v26;
-      v29 = *(unsigned __int16 *)&that->klass->_2.rank;
+      v26 = v4->fields.Duration;
+      v27 = sub_21FFEBC(System_Action_TypeInfo);
+      v28 = that->klass;
+      v29 = (System_Action_o *)v27;
+      v30 = *(unsigned __int16 *)&that->klass->_2.rank;
       if ( *(_WORD *)&that->klass->_2.rank )
       {
-        v30 = &v27->_1.interfaceOffsets->offset;
-        while ( *((QAASpotStateController_IMapSpot_c **)v30 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
+        v31 = &v28->_1.interfaceOffsets->offset;
+        while ( *((QAASpotStateController_IMapSpot_c **)v31 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
         {
-          --v29;
-          v30 += 4;
-          if ( !v29 )
-            goto LABEL_33;
+          --v30;
+          v31 += 4;
+          if ( !v30 )
+            goto LABEL_37;
         }
-        v31 = (__int64)&v27->vtable[*v30 + 10];
+        v32 = (__int64)&v28->vtable[*v31 + 10];
       }
       else
       {
-LABEL_33:
-        v31 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+LABEL_37:
+        v32 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
-      System_Action___ctor(v28, (Il2CppObject *)that, *(_QWORD *)(v31 + 8), 0);
-      QAASpotStateController__SetQaaScaleAnim(that, 1, v25, v28, v33);
+      System_Action___ctor(v29, (Il2CppObject *)that, *(_QWORD *)(v32 + 8), 0);
+      QAASpotStateController__SetQaaScaleAnim(that, 1, v26, v29, v33);
       break;
   }
   v34 = that->klass;
@@ -1362,7 +1357,7 @@ LABEL_33:
   else
   {
 LABEL_44:
-    v37 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 11);
+    v37 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 11);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v37)(that, *(_QWORD *)(v37 + 8));
 }
@@ -1382,13 +1377,13 @@ void QAASpotStateController_StateQaaDisp__end(
   int32_t *v10; // x10
   __int64 v11; // x0
 
-  if ( (byte_4E74169 & 1) == 0 )
+  if ( (byte_59350AC & 1) == 0 )
   {
-    this = (QAASpotStateController_StateQaaDisp_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74169 = 1;
+    this = (QAASpotStateController_StateQaaDisp_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350AC = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1406,7 +1401,7 @@ void QAASpotStateController_StateQaaDisp__end(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, _QWORD))v7)(that, 1, *(_QWORD *)(v7 + 8));
   v8 = that->klass;
@@ -1426,7 +1421,7 @@ LABEL_8:
   else
   {
 LABEL_14:
-    v11 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
+    v11 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, _QWORD))v11)(that, 1, *(_QWORD *)(v11 + 8));
 }
@@ -1443,10 +1438,10 @@ void QAASpotStateController_StateQaaGray___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -1477,25 +1472,25 @@ void QAASpotStateController_StateQaaGray__begin(
   __int64 v22; // x9
   int32_t *v23; // x10
   __int64 v24; // x0
-  float v25; // s8
-  __int64 v26; // x0
-  QAASpotStateController_IMapSpot_c *v27; // x8
-  System_Action_o *v28; // x20
-  __int64 v29; // x9
-  int32_t *v30; // x10
-  __int64 v31; // x0
-  const MethodInfo *v32; // x3
+  const MethodInfo *v25; // x3
+  float v26; // s8
+  __int64 v27; // x0
+  QAASpotStateController_IMapSpot_c *v28; // x8
+  System_Action_o *v29; // x20
+  __int64 v30; // x9
+  int32_t *v31; // x10
+  __int64 v32; // x0
   const MethodInfo *v33; // x3
 
   v4 = this;
-  if ( (byte_4E74166 & 1) == 0 )
+  if ( (byte_59350A9 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    this = (QAASpotStateController_StateQaaGray_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74166 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    this = (QAASpotStateController_StateQaaGray_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350A9 = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v6 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1513,7 +1508,7 @@ void QAASpotStateController_StateQaaGray__begin(
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
+    v8 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
   }
   v9 = (*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v8)(that, *(_QWORD *)(v8 + 8));
   switch ( v9 )
@@ -1536,13 +1531,13 @@ LABEL_8:
       else
       {
 LABEL_27:
-        v24 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+        v24 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
       (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v24)(that, *(_QWORD *)(v24 + 8));
       break;
     case 1:
       Duration = v4->fields.Duration;
-      v15 = sub_1D0F300(System_Action_TypeInfo);
+      v15 = sub_21FFEBC(System_Action_TypeInfo);
       v16 = that->klass;
       v17 = (System_Action_o *)v15;
       v18 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -1561,10 +1556,10 @@ LABEL_27:
       else
       {
 LABEL_22:
-        v20 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+        v20 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
       System_Action___ctor(v17, (Il2CppObject *)that, *(_QWORD *)(v20 + 8), 0);
-      QAASpotStateController__SetQaaColorAnim(that, 0, Duration, v17, v32);
+      QAASpotStateController__SetQaaColorAnim(that, 0, Duration, v17, v25);
       break;
     case 0:
       v10 = that->klass;
@@ -1584,33 +1579,33 @@ LABEL_22:
       else
       {
 LABEL_17:
-        v13 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 8);
+        v13 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 8);
       }
       (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, float))v13)(that, *(_QWORD *)(v13 + 8), 0.5);
-      v25 = v4->fields.Duration;
-      v26 = sub_1D0F300(System_Action_TypeInfo);
-      v27 = that->klass;
-      v28 = (System_Action_o *)v26;
-      v29 = *(unsigned __int16 *)&that->klass->_2.rank;
+      v26 = v4->fields.Duration;
+      v27 = sub_21FFEBC(System_Action_TypeInfo);
+      v28 = that->klass;
+      v29 = (System_Action_o *)v27;
+      v30 = *(unsigned __int16 *)&that->klass->_2.rank;
       if ( *(_WORD *)&that->klass->_2.rank )
       {
-        v30 = &v27->_1.interfaceOffsets->offset;
-        while ( *((QAASpotStateController_IMapSpot_c **)v30 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
+        v31 = &v28->_1.interfaceOffsets->offset;
+        while ( *((QAASpotStateController_IMapSpot_c **)v31 - 1) != QAASpotStateController_IMapSpot_TypeInfo )
         {
-          --v29;
-          v30 += 4;
-          if ( !v29 )
-            goto LABEL_34;
+          --v30;
+          v31 += 4;
+          if ( !v30 )
+            goto LABEL_38;
         }
-        v31 = (__int64)&v27->vtable[*v30 + 10];
+        v32 = (__int64)&v28->vtable[*v31 + 10];
       }
       else
       {
-LABEL_34:
-        v31 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+LABEL_38:
+        v32 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
-      System_Action___ctor(v28, (Il2CppObject *)that, *(_QWORD *)(v31 + 8), 0);
-      QAASpotStateController__SetQaaScaleAnim(that, 1, v25, v28, v33);
+      System_Action___ctor(v29, (Il2CppObject *)that, *(_QWORD *)(v32 + 8), 0);
+      QAASpotStateController__SetQaaScaleAnim(that, 1, v26, v29, v33);
       break;
   }
 }
@@ -1630,13 +1625,13 @@ void QAASpotStateController_StateQaaGray__end(
   int32_t *v10; // x10
   __int64 v11; // x0
 
-  if ( (byte_4E74167 & 1) == 0 )
+  if ( (byte_59350AA & 1) == 0 )
   {
-    this = (QAASpotStateController_StateQaaGray_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74167 = 1;
+    this = (QAASpotStateController_StateQaaGray_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350AA = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1654,7 +1649,7 @@ void QAASpotStateController_StateQaaGray__end(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, _QWORD))v7)(that, 2, *(_QWORD *)(v7 + 8));
   v8 = that->klass;
@@ -1674,7 +1669,7 @@ LABEL_8:
   else
   {
 LABEL_14:
-    v11 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
+    v11 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, __int64, _QWORD))v11)(that, 1, *(_QWORD *)(v11 + 8));
 }
@@ -1691,10 +1686,10 @@ void QAASpotStateController_StateQaaHide___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1D0F30C(v5, v6);
-  v7 = 0.5;
-  if ( isQuick )
-    v7 = 0.0;
+    sub_21FFECC(v5, v6);
+  v7 = 0.0;
+  if ( !isQuick )
+    v7 = 0.5;
   this->fields.Duration = v7;
 }
 
@@ -1709,7 +1704,7 @@ void QAASpotStateController_StateQaaHide__begin(
   __int64 v6; // x9
   int32_t *p_offset; // x10
   __int64 v8; // x0
-  int v9; // w0
+  unsigned int v9; // w0
   float Duration; // s8
   __int64 v11; // x0
   QAASpotStateController_IMapSpot_c *v12; // x8
@@ -1724,14 +1719,14 @@ void QAASpotStateController_StateQaaHide__begin(
   const MethodInfo *v21; // x3
 
   v4 = this;
-  if ( (byte_4E74164 & 1) == 0 )
+  if ( (byte_59350A7 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    this = (QAASpotStateController_StateQaaHide_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74164 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    this = (QAASpotStateController_StateQaaHide_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350A7 = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v6 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1749,15 +1744,15 @@ void QAASpotStateController_StateQaaHide__begin(
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
+    v8 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 13);
   }
   v9 = (*(__int64 (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v8)(that, *(_QWORD *)(v8 + 8));
   if ( v9 )
   {
-    if ( (unsigned int)(v9 - 1) < 2 )
+    if ( v9 < 3 )
     {
       Duration = v4->fields.Duration;
-      v11 = sub_1D0F300(System_Action_TypeInfo);
+      v11 = sub_21FFEBC(System_Action_TypeInfo);
       v12 = that->klass;
       v13 = (System_Action_o *)v11;
       v14 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -1776,7 +1771,7 @@ LABEL_8:
       else
       {
 LABEL_16:
-        v16 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+        v16 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
       }
       System_Action___ctor(v13, (Il2CppObject *)that, *(_QWORD *)(v16 + 8), 0);
       QAASpotStateController__SetQaaScaleAnim(that, 0, Duration, v13, v21);
@@ -1801,7 +1796,7 @@ LABEL_16:
     else
     {
 LABEL_21:
-      v20 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
+      v20 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 10);
     }
     (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD))v20)(that, *(_QWORD *)(v20 + 8));
   }
@@ -1822,13 +1817,13 @@ void QAASpotStateController_StateQaaHide__end(
   int32_t *v10; // x10
   __int64 v11; // x0
 
-  if ( (byte_4E74165 & 1) == 0 )
+  if ( (byte_59350A8 & 1) == 0 )
   {
-    this = (QAASpotStateController_StateQaaHide_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E74165 = 1;
+    this = (QAASpotStateController_StateQaaHide_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350A8 = 1;
   }
   if ( !that )
-    sub_1D0F30C(this, that);
+    sub_21FFECC(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1846,7 +1841,7 @@ void QAASpotStateController_StateQaaHide__end(
   else
   {
 LABEL_8:
-    v7 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
+    v7 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 14);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, _QWORD))v7)(that, 0, *(_QWORD *)(v7 + 8));
   v8 = that->klass;
@@ -1866,7 +1861,7 @@ LABEL_8:
   else
   {
 LABEL_14:
-    v11 = sub_1CE5430(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
+    v11 = sub_2237E2C(that, QAASpotStateController_IMapSpot_TypeInfo, 15);
   }
   (*(void (__fastcall **)(QAASpotStateController_IMapSpot_o *, _QWORD, _QWORD))v11)(that, 0, *(_QWORD *)(v11 + 8));
 }
@@ -1901,38 +1896,38 @@ void QAASpotStateController___c__DisplayClass9_0___SetQaaColorAnim_g__ApplyCurre
         const MethodInfo *method)
 {
   QAASpotStateController___c__DisplayClass9_0_o *v2; // x20
-  struct EasingObject_o *easingObj; // x9
+  struct EasingObject_o *easingObj; // x10
   struct QAASpotStateController_IMapSpot_o *targetObject; // x19
   QAASpotStateController_IMapSpot_c *klass; // x8
   float from; // s8
   float to; // s9
+  __int64 v8; // x9
   float mNow; // s10
-  __int64 v9; // x9
   QAASpotStateController_IMapSpot_c **p_offset; // x10
   __int64 v11; // x0
 
   v2 = this;
-  if ( (byte_4E7416E & 1) == 0 )
+  if ( (byte_59350B1 & 1) == 0 )
   {
-    this = (QAASpotStateController___c__DisplayClass9_0_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E7416E = 1;
+    this = (QAASpotStateController___c__DisplayClass9_0_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350B1 = 1;
   }
   easingObj = v2->fields.easingObj;
   if ( !easingObj || (targetObject = v2->fields.targetObject) == 0 )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   klass = targetObject->klass;
   from = v2->fields.from;
   to = v2->fields.to;
+  v8 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
   mNow = easingObj->fields.mNow;
-  v9 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
   if ( *(_WORD *)&targetObject->klass->_2.rank )
   {
     p_offset = (QAASpotStateController_IMapSpot_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != QAASpotStateController_IMapSpot_TypeInfo )
     {
-      --v9;
+      --v8;
       p_offset += 2;
-      if ( !v9 )
+      if ( !v8 )
         goto LABEL_9;
     }
     v11 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 8];
@@ -1940,7 +1935,7 @@ void QAASpotStateController___c__DisplayClass9_0___SetQaaColorAnim_g__ApplyCurre
   else
   {
 LABEL_9:
-    v11 = sub_1CE5430(v2->fields.targetObject, QAASpotStateController_IMapSpot_TypeInfo, 8);
+    v11 = sub_2237E2C(v2->fields.targetObject, QAASpotStateController_IMapSpot_TypeInfo, 8);
   }
   (*(void (__fastcall **)(struct QAASpotStateController_IMapSpot_o *, _QWORD, float))v11)(
     targetObject,
@@ -1953,25 +1948,25 @@ void QAASpotStateController___c__DisplayClass9_0___SetQaaColorAnim_g__EndAction_
         QAASpotStateController___c__DisplayClass9_0_o *this,
         const MethodInfo *method)
 {
-  long double v2; // q8
-  QAASpotStateController___c__DisplayClass9_0_o *v3; // x19
+  QAASpotStateController___c__DisplayClass9_0_o *v2; // x19
   struct QAASpotStateController_IMapSpot_o *targetObject; // x20
   QAASpotStateController_IMapSpot_c *klass; // x8
+  float to; // s8
   __int64 v6; // x9
   QAASpotStateController_IMapSpot_c **p_offset; // x10
   __int64 v8; // x0
 
-  v3 = this;
-  if ( (byte_4E7416D & 1) == 0 )
+  v2 = this;
+  if ( (byte_59350B0 & 1) == 0 )
   {
-    this = (QAASpotStateController___c__DisplayClass9_0_o *)sub_1D0F0B4(&QAASpotStateController_IMapSpot_TypeInfo);
-    byte_4E7416D = 1;
+    this = (QAASpotStateController___c__DisplayClass9_0_o *)sub_21FFC50(&QAASpotStateController_IMapSpot_TypeInfo);
+    byte_59350B0 = 1;
   }
-  targetObject = v3->fields.targetObject;
+  targetObject = v2->fields.targetObject;
   if ( !targetObject )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   klass = targetObject->klass;
-  *(float *)&v2 = v3->fields.to;
+  to = v2->fields.to;
   v6 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
   if ( *(_WORD *)&targetObject->klass->_2.rank )
   {
@@ -1988,11 +1983,11 @@ void QAASpotStateController___c__DisplayClass9_0___SetQaaColorAnim_g__EndAction_
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(v3->fields.targetObject, QAASpotStateController_IMapSpot_TypeInfo, 8);
+    v8 = sub_2237E2C(v2->fields.targetObject, QAASpotStateController_IMapSpot_TypeInfo, 8);
   }
-  (*(void (__fastcall **)(struct QAASpotStateController_IMapSpot_o *, _QWORD, long double))v8)(
+  (*(void (__fastcall **)(struct QAASpotStateController_IMapSpot_o *, _QWORD, float))v8)(
     targetObject,
     *(_QWORD *)(v8 + 8),
-    v2);
-  ActionExtensions__Call(v3->fields.finishCallback, 0);
+    to);
+  ActionExtensions__Call(v2->fields.finishCallback, 0);
 }

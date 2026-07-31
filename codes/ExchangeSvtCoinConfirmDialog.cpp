@@ -1,12 +1,14 @@
 void ExchangeSvtCoinConfirmDialog___ctor(ExchangeSvtCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7235F & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5933356 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E7235F = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_5933356 = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -21,65 +23,67 @@ void ExchangeSvtCoinConfirmDialog__Close(ExchangeSvtCoinConfirmDialog_o *this, c
 {
   const MethodInfo *v2; // x2
 
-  ExchangeSvtCoinConfirmDialog__Close_34158764(this, 0, v2);
+  ExchangeSvtCoinConfirmDialog__Close_39765460(this, 0, v2);
 }
 
 
-void ExchangeSvtCoinConfirmDialog__Close_34158764(
+void ExchangeSvtCoinConfirmDialog__Close_39765460(
         ExchangeSvtCoinConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  System_Action_o *v10; // x20
+  bool v6; // w6
+  bool v7; // w7
+  System_Action_c *v10; // x0
+  System_Action_o *v11; // x20
 
-  if ( (byte_4E7235B & 1) == 0 )
+  if ( (byte_5933352 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ExchangeSvtCoinConfirmDialog_EndClose__);
-    byte_4E7235B = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ExchangeSvtCoinConfirmDialog_EndClose__);
+    byte_5933352 = 1;
   }
   this->fields.onClose = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onClose,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onClose,
     (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
+  v10 = System_Action_TypeInfo;
   this->fields.state = 2;
-  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_ExchangeSvtCoinConfirmDialog_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
+  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_ExchangeSvtCoinConfirmDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
 
 
 void ExchangeSvtCoinConfirmDialog__EndClose(ExchangeSvtCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
-  GrandQuestFolderBoardItem_o *p_onClose; // x19
+  bool v7; // w6
+  bool v8; // w7
+  MissionNaviTransitionBoardItem_o *p_onClose; // x19
   struct System_Action_o *v10; // x20
   struct System_Action_o *onClose; // t1
 
   ExchangeSvtCoinConfirmDialog__Init(this, method);
   onClose = this->fields.onClose;
-  p_onClose = (GrandQuestFolderBoardItem_o *)&this->fields.onClose;
+  p_onClose = (MissionNaviTransitionBoardItem_o *)&this->fields.onClose;
   v10 = onClose;
   if ( onClose )
   {
     p_onClose->klass = 0;
-    sub_1D0F058(p_onClose, 0, v3, v4, v5, v6, v7, v8);
+    sub_21FFBF4(p_onClose, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -87,23 +91,23 @@ void ExchangeSvtCoinConfirmDialog__EndClose(ExchangeSvtCoinConfirmDialog_o *this
 
 void ExchangeSvtCoinConfirmDialog__Init(ExchangeSvtCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
   this->fields.onDecide = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onDecide, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDecide, 0, v2, v3, v4, v5, v6, v7);
   this->fields.onCancel = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onCancel, 0, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onCancel, 0, v9, v10, v11, v12, v13, v14);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -115,33 +119,33 @@ void ExchangeSvtCoinConfirmDialog__OnClickCancel(ExchangeSvtCoinConfirmDialog_o 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
   struct System_Action_o *onCancel; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   __int64 v13; // x0
   __int64 v14; // x1
 
-  if ( (byte_4E7235D & 1) == 0 )
+  if ( (byte_5933354 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
-    byte_4E7235D = 1;
+    sub_21FFC50(&Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
+    byte_5933354 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    ExchangeSvtCoinConfirmDialog__Close_34158764(this, 0, v5);
+    ExchangeSvtCoinConfirmDialog__Close_39765460(this, 0, v5);
     onCancel = this->fields.onCancel;
     this->fields.onCancel = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onCancel, 0, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onCancel, 0, v7, v8, v9, v10, v11, v12);
     if ( !onCancel )
-      sub_1D0F30C(v13, v14);
+      sub_21FFECC(v13, v14);
     ((void (__fastcall *)(intptr_t, intptr_t))onCancel->fields.invoke_impl)(
       onCancel->fields.method_code,
       onCancel->fields.method);
@@ -155,33 +159,33 @@ void ExchangeSvtCoinConfirmDialog__OnClickDecide(ExchangeSvtCoinConfirmDialog_o 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
   struct System_Action_o *onDecide; // x21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   __int64 v13; // x0
   __int64 v14; // x1
 
-  if ( (byte_4E7235C & 1) == 0 )
+  if ( (byte_5933353 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
-    byte_4E7235C = 1;
+    sub_21FFC50(&Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
+    byte_5933353 = 1;
   }
   if ( this->fields.state == 1 && this->fields.onDecide )
   {
     v3 = Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    ExchangeSvtCoinConfirmDialog__Close_34158764(this, 0, v5);
+    ExchangeSvtCoinConfirmDialog__Close_39765460(this, 0, v5);
     onDecide = this->fields.onDecide;
     this->fields.onDecide = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onDecide, 0, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDecide, 0, v7, v8, v9, v10, v11, v12);
     if ( !onDecide )
-      sub_1D0F30C(v13, v14);
+      sub_21FFECC(v13, v14);
     ((void (__fastcall *)(intptr_t, intptr_t))onDecide->fields.invoke_impl)(
       onDecide->fields.method_code,
       onDecide->fields.method);
@@ -193,13 +197,13 @@ void ExchangeSvtCoinConfirmDialog__OnEnable(ExchangeSvtCoinConfirmDialog_o *this
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4E7235E & 1) == 0 )
+  if ( (byte_5933355 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15855/*"Window/Objects/CancelButton"*/);
-    byte_4E7235E = 1;
+    sub_21FFC50(&StringLiteral_16236/*"Window/Objects/CancelButton"*/);
+    byte_5933355 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15855/*"Window/Objects/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16236/*"Window/Objects/CancelButton"*/, 0);
 }
 
 
@@ -211,58 +215,61 @@ void ExchangeSvtCoinConfirmDialog__Open(
         System_Action_o *onCancelFunc,
         const MethodInfo *method)
 {
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
+  __int64 v19; // x1
+  __int64 v20; // x2
   UILabel_o *titleLabel; // x22
   System_String_o *TargetId; // x0
-  __int64 v21; // x1
+  __int64 v23; // x1
   UILabel_o *decideButtonLabel; // x22
   UILabel_o *cancelButtonLabel; // x22
-  System_String_o *v24; // x0
-  UILabel_o *detailLabel; // x22
   System_String_o *v26; // x23
-  Il2CppObject *v27; // x0
+  UILabel_o *detailLabel; // x22
+  Il2CppObject *v28; // x0
+  __int64 v29; // x1
+  __int64 v30; // x2
+  __int64 v31; // x2
   Il2CppObject *Master_object; // x21
-  int64_t v29; // x22
+  int64_t v33; // x22
   UserItemEntity_o *EntityDefinitely; // x0
   ItemIconComponent_o *itemIcon; // x21
-  UserItemEntity_o *v32; // x22
-  int32_t v33; // [xsp+Ch] [xbp-34h] BYREF
+  UserItemEntity_o *v36; // x22
+  int32_t v37; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E7235A & 1) == 0 )
+  if ( (byte_5933351 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5815/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/);
-    sub_1D0F0B4(&StringLiteral_5817/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_5816/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/);
-    sub_1D0F0B4(&StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4E7235A = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_5975/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/);
+    sub_21FFC50(&StringLiteral_5977/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/);
+    sub_21FFC50(&StringLiteral_5976/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/);
+    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_5933351 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecideFunc;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.onDecide,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.onDecide,
       (int32_t)onDecideFunc,
-      (int32_t)shopEntity,
-      (int32_t)onDecideFunc,
-      (System_String_o *)onCancelFunc,
+      (System_String_o *)shopEntity,
+      (System_String_o *)onDecideFunc,
+      (int32_t)onCancelFunc,
       (int32_t)method,
       v6,
       v7);
     this->fields.onCancel = onCancelFunc;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.onCancel,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.onCancel,
       (int32_t)onCancelFunc,
       v13,
       v14,
@@ -271,66 +278,65 @@ void ExchangeSvtCoinConfirmDialog__Open(
       v17,
       v18);
     titleLabel = this->fields.titleLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5817/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19, v20);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5977/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_24;
     UILabel__set_text(titleLabel, TargetId, 0);
     decideButtonLabel = this->fields.decideButtonLabel;
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5815/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5975/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0);
     if ( !decideButtonLabel )
       goto LABEL_24;
     UILabel__set_text(decideButtonLabel, TargetId, 0);
     cancelButtonLabel = this->fields.cancelButtonLabel;
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/, 0);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
     if ( !cancelButtonLabel )
       goto LABEL_24;
     UILabel__set_text(cancelButtonLabel, TargetId, 0);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5816/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, 0);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5976/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, 0);
     detailLabel = this->fields.detailLabel;
-    v26 = v24;
-    v33 = buyCount;
-    v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-    TargetId = System_String__Format(v26, v27, 0);
+    v37 = buyCount;
+    v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v37);
+    TargetId = System_String__Format(v26, v28, 0);
     if ( !detailLabel )
       goto LABEL_24;
     UILabel__set_text(detailLabel, TargetId, 0);
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserItemMaster___);
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4E710BF )
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v29, v30);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v23, v31);
+    if ( !byte_5931D52 )
     {
-      sub_1D0F0B4(&NetworkManager_TypeInfo);
-      byte_4E710BF = 1;
+      sub_21FFC50(&NetworkManager_TypeInfo);
+      byte_5931D52 = 1;
     }
     TargetId = (System_String_o *)NetworkManager_TypeInfo;
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v23, v31);
       TargetId = (System_String_o *)NetworkManager_TypeInfo;
     }
     if ( !shopEntity
-      || (v29 = *(_QWORD *)(*(_QWORD *)&TargetId[7].fields + 64LL),
+      || (v33 = *(_QWORD *)(*(_QWORD *)&TargetId[7].fields + 64LL),
           TargetId = (System_String_o *)ShopEntity__get_TargetId(shopEntity, 0),
           !Master_object)
       || (EntityDefinitely = UserItemMaster__GetEntityDefinitely(
                                (UserItemMaster_o *)Master_object,
-                               v29,
+                               v33,
                                (int32_t)TargetId,
                                0),
           itemIcon = this->fields.itemIcon,
-          v32 = EntityDefinitely,
+          v36 = EntityDefinitely,
           TargetId = (System_String_o *)ShopEntity__get_TargetId(shopEntity, 0),
-          !v32)
+          !v36)
       || !itemIcon )
     {
 LABEL_24:
-      sub_1D0F30C(TargetId, v21);
+      sub_21FFECC(TargetId, v23);
     }
-    ItemIconComponent__SetItem(itemIcon, (int32_t)TargetId, v32->fields.num, 0, 0);
+    ItemIconComponent__SetItem(itemIcon, (int32_t)TargetId, v36->fields.num, 0, 0);
     this->fields.state = 1;
     BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
   }

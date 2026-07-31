@@ -4,471 +4,488 @@ void MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v2; // x20
   __int64 v3; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v11; // x20
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v18; // x20
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v25; // x20
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v32; // x20
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v39; // x20
-  int32_t v40; // w2
-  int32_t v41; // w3
-  System_String_o *v42; // x4
-  int32_t v43; // w5
-  int64_t v44; // x6
-  System_String_o *v45; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v46; // x20
-  int32_t v47; // w2
-  int32_t v48; // w3
-  System_String_o *v49; // x4
-  int32_t v50; // w5
-  int64_t v51; // x6
-  System_String_o *v52; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v53; // x20
-  int32_t v54; // w2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
-  int32_t v57; // w5
-  int64_t v58; // x6
-  System_String_o *v59; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v60; // x20
-  int32_t v61; // w2
-  int32_t v62; // w3
-  System_String_o *v63; // x4
-  int32_t v64; // w5
-  int64_t v65; // x6
-  System_String_o *v66; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v67; // x20
-  int32_t v68; // w2
-  int32_t v69; // w3
-  System_String_o *v70; // x4
-  int32_t v71; // w5
-  int64_t v72; // x6
-  System_String_o *v73; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v74; // x20
-  int32_t v75; // w2
-  int32_t v76; // w3
-  System_String_o *v77; // x4
-  int32_t v78; // w5
-  int64_t v79; // x6
-  System_String_o *v80; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v81; // x20
-  int32_t v82; // w2
-  int32_t v83; // w3
-  System_String_o *v84; // x4
-  int32_t v85; // w5
-  int64_t v86; // x6
-  System_String_o *v87; // x7
-  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v88; // x20
-  int32_t v89; // w2
-  int32_t v90; // w3
-  System_String_o *v91; // x4
-  int32_t v92; // w5
-  int64_t v93; // x6
-  System_String_o *v94; // x7
-  int32_t v95; // w2
-  int32_t v96; // w3
-  System_String_o *v97; // x4
-  int32_t v98; // w5
-  int64_t v99; // x6
-  System_String_o *v100; // x7
-  System_Array_o *v101; // x0
-  System_RuntimeFieldHandle_o v102; // x1
-  System_Array_o *v103; // x19
+  bool v9; // w6
+  bool v10; // w7
+  __int64 v11; // x1
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v12; // x20
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v19; // x20
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v26; // x20
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v33; // x20
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v40; // x20
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v47; // x20
+  System_String_o *v48; // x2
+  System_String_o *v49; // x3
+  int32_t v50; // w4
+  int32_t v51; // w5
+  bool v52; // w6
+  bool v53; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v54; // x20
+  System_String_o *v55; // x2
+  System_String_o *v56; // x3
+  int32_t v57; // w4
+  int32_t v58; // w5
+  bool v59; // w6
+  bool v60; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v61; // x20
+  System_String_o *v62; // x2
+  System_String_o *v63; // x3
+  int32_t v64; // w4
+  int32_t v65; // w5
+  bool v66; // w6
+  bool v67; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v68; // x20
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v75; // x20
+  System_String_o *v76; // x2
+  System_String_o *v77; // x3
+  int32_t v78; // w4
+  int32_t v79; // w5
+  bool v80; // w6
+  bool v81; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v82; // x20
+  System_String_o *v83; // x2
+  System_String_o *v84; // x3
+  int32_t v85; // w4
+  int32_t v86; // w5
+  bool v87; // w6
+  bool v88; // w7
+  MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *v89; // x20
+  System_String_o *v90; // x2
+  System_String_o *v91; // x3
+  int32_t v92; // w4
+  int32_t v93; // w5
+  bool v94; // w6
+  bool v95; // w7
+  System_String_o *v96; // x2
+  System_String_o *v97; // x3
+  int32_t v98; // w4
+  int32_t v99; // w5
+  bool v100; // w6
+  bool v101; // w7
+  System_Array_o *v102; // x0
+  System_RuntimeFieldHandle_o v103; // x1
+  System_Array_o *v104; // x19
   struct MyRoomHelpListViewManager_StaticFields *static_fields; // x0
-  int32_t v105; // w2
-  int32_t v106; // w3
-  System_String_o *v107; // x4
-  int32_t v108; // w5
-  int64_t v109; // x6
-  System_String_o *v110; // x7
-  int32_t v111; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v112; // x0
-  int32_t v113; // w2
-  int32_t v114; // w3
-  System_String_o *v115; // x4
-  int32_t v116; // w5
-  int64_t v117; // x6
-  System_String_o *v118; // x7
-  int32_t v119; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v120; // x0
-  int32_t v121; // w2
-  int32_t v122; // w3
-  System_String_o *v123; // x4
-  int32_t v124; // w5
-  int64_t v125; // x6
-  System_String_o *v126; // x7
-  int32_t v127; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v128; // x0
-  int32_t v129; // w2
-  int32_t v130; // w3
-  System_String_o *v131; // x4
-  int32_t v132; // w5
-  int64_t v133; // x6
-  System_String_o *v134; // x7
-  int32_t v135; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v136; // x0
-  int32_t v137; // w2
-  int32_t v138; // w3
-  System_String_o *v139; // x4
-  int32_t v140; // w5
-  int64_t v141; // x6
-  System_String_o *v142; // x7
-  __int64 v143; // x0
+  System_String_o *v106; // x2
+  System_String_o *v107; // x3
+  int32_t v108; // w4
+  int32_t v109; // w5
+  bool v110; // w6
+  bool v111; // w7
+  int32_t v112; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v113; // x0
+  System_String_o *v114; // x2
+  System_String_o *v115; // x3
+  int32_t v116; // w4
+  int32_t v117; // w5
+  bool v118; // w6
+  bool v119; // w7
+  int32_t v120; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v121; // x0
+  System_String_o *v122; // x2
+  System_String_o *v123; // x3
+  int32_t v124; // w4
+  int32_t v125; // w5
+  bool v126; // w6
+  bool v127; // w7
+  int32_t v128; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v129; // x0
+  System_String_o *v130; // x2
+  System_String_o *v131; // x3
+  int32_t v132; // w4
+  int32_t v133; // w5
+  bool v134; // w6
+  bool v135; // w7
+  int32_t v136; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v137; // x0
+  System_String_o *v138; // x2
+  System_String_o *v139; // x3
+  int32_t v140; // w4
+  int32_t v141; // w5
+  bool v142; // w6
+  bool v143; // w7
+  __int64 v144; // x0
 
-  if ( (byte_4E72C3E & 1) == 0 )
+  if ( (byte_5933C36 & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpListViewManager_ItemKind___TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_MyRoomHelpItemInfo___TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_TypeInfo);
-    sub_1D0F0B4(&Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595);
-    sub_1D0F0B4(&StringLiteral_8952/*"MYROOM_MENU_NAME_3"*/);
-    sub_1D0F0B4(&StringLiteral_8929/*"MYROOM_HELP_HELP_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8927/*"MYROOM_HELP_ACCOUNT_LINKAGE_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_14812/*"Tutorial/tutorial_alpha"*/);
-    sub_1D0F0B4(&StringLiteral_8938/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8930/*"MYROOM_HELP_ITEM_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8928/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8932/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8944/*"MYROOM_MENU_NAME_1"*/);
-    sub_1D0F0B4(&StringLiteral_8950/*"MYROOM_MENU_NAME_15"*/);
-    sub_1D0F0B4(&StringLiteral_8935/*"MYROOM_HELP_OPTION_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8936/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8953/*"MYROOM_MENU_NAME_4"*/);
-    sub_1D0F0B4(&StringLiteral_8931/*"MYROOM_HELP_MATERIAL_GALLERY_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_24740/*"tutorial_0006"*/);
-    sub_1D0F0B4(&StringLiteral_8937/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8958/*"MYROOM_MENU_NAME_9"*/);
-    sub_1D0F0B4(&StringLiteral_8946/*"MYROOM_MENU_NAME_11"*/);
-    sub_1D0F0B4(&StringLiteral_8951/*"MYROOM_MENU_NAME_2"*/);
-    sub_1D0F0B4(&StringLiteral_20849/*"img_menuboard_01"*/);
-    sub_1D0F0B4(&StringLiteral_8954/*"MYROOM_MENU_NAME_5"*/);
-    sub_1D0F0B4(&StringLiteral_8957/*"MYROOM_MENU_NAME_8"*/);
-    sub_1D0F0B4(&StringLiteral_8947/*"MYROOM_MENU_NAME_12"*/);
-    sub_1D0F0B4(&StringLiteral_20945/*"img_shop_0"*/);
-    sub_1D0F0B4(&StringLiteral_14811/*"Tutorial/tutorial_0006"*/);
-    sub_1D0F0B4(&StringLiteral_8955/*"MYROOM_MENU_NAME_6"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_8933/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_24741/*"tutorial_alpha"*/);
-    sub_1D0F0B4(&StringLiteral_8934/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/);
-    sub_1D0F0B4(&StringLiteral_8948/*"MYROOM_MENU_NAME_13"*/);
-    byte_4E72C3E = 1;
+    sub_21FFC50(&MyRoomHelpListViewManager_ItemKind___TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_MyRoomHelpItemInfo___TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_TypeInfo);
+    sub_21FFC50(&Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595);
+    sub_21FFC50(&StringLiteral_9202/*"MYROOM_MENU_NAME_3"*/);
+    sub_21FFC50(&StringLiteral_9179/*"MYROOM_HELP_HELP_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9177/*"MYROOM_HELP_ACCOUNT_LINKAGE_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_15189/*"Tutorial/tutorial_alpha"*/);
+    sub_21FFC50(&StringLiteral_9188/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9180/*"MYROOM_HELP_ITEM_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9178/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9182/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9194/*"MYROOM_MENU_NAME_1"*/);
+    sub_21FFC50(&StringLiteral_9200/*"MYROOM_MENU_NAME_15"*/);
+    sub_21FFC50(&StringLiteral_9185/*"MYROOM_HELP_OPTION_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9186/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9203/*"MYROOM_MENU_NAME_4"*/);
+    sub_21FFC50(&StringLiteral_9181/*"MYROOM_HELP_MATERIAL_GALLERY_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_25500/*"tutorial_0006"*/);
+    sub_21FFC50(&StringLiteral_9187/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9208/*"MYROOM_MENU_NAME_9"*/);
+    sub_21FFC50(&StringLiteral_9196/*"MYROOM_MENU_NAME_11"*/);
+    sub_21FFC50(&StringLiteral_9201/*"MYROOM_MENU_NAME_2"*/);
+    sub_21FFC50(&StringLiteral_21406/*"img_menuboard_01"*/);
+    sub_21FFC50(&StringLiteral_9204/*"MYROOM_MENU_NAME_5"*/);
+    sub_21FFC50(&StringLiteral_9207/*"MYROOM_MENU_NAME_8"*/);
+    sub_21FFC50(&StringLiteral_9197/*"MYROOM_MENU_NAME_12"*/);
+    sub_21FFC50(&StringLiteral_21506/*"img_shop_0"*/);
+    sub_21FFC50(&StringLiteral_15188/*"Tutorial/tutorial_0006"*/);
+    sub_21FFC50(&StringLiteral_9205/*"MYROOM_MENU_NAME_6"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_9183/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_25501/*"tutorial_alpha"*/);
+    sub_21FFC50(&StringLiteral_9184/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/);
+    sub_21FFC50(&StringLiteral_9198/*"MYROOM_MENU_NAME_13"*/);
+    byte_5933C36 = 1;
   }
-  v1 = (struct MyRoomHelpListViewManager_MyRoomHelpItemInfo_array *)sub_1D0F15C(
+  v1 = (struct MyRoomHelpListViewManager_MyRoomHelpItemInfo_array *)sub_21FFD10(
                                                                       MyRoomHelpListViewManager_MyRoomHelpItemInfo___TypeInfo,
                                                                       13);
-  v2 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v2 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v2,
     1,
-    (System_String_o *)StringLiteral_8933/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8946/*"MYROOM_MENU_NAME_11"*/,
+    (System_String_o *)StringLiteral_9183/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9196/*"MYROOM_MENU_NAME_11"*/,
     0);
   if ( !v1 )
-    sub_1D0F30C(v3, v4);
+    sub_21FFECC(v3, v4);
   if ( v2 )
   {
-    v3 = sub_1D0F1F0(v2, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v2, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( !LODWORD(v1->max_length) )
     goto LABEL_44;
   v1->m_Items[0] = v2;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v1->m_Items, (int32_t)v2, v5, v6, v7, v8, v9, v10);
-  v11 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v1->m_Items, (int32_t)v2, v5, v6, v7, v8, v9, v10);
+  v12 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v11,
+    v12,
     2,
-    (System_String_o *)StringLiteral_8932/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8947/*"MYROOM_MENU_NAME_12"*/,
+    (System_String_o *)StringLiteral_9182/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9197/*"MYROOM_MENU_NAME_12"*/,
     0);
-  if ( v11 )
+  if ( v12 )
   {
-    v3 = sub_1D0F1F0(v11, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v12, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
-  if ( LODWORD(v1->max_length) <= 1 )
+  if ( (v1->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_44;
-  v1->m_Items[1] = v11;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[1], (int32_t)v11, v12, v13, v14, v15, v16, v17);
-  v18 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[1] = v12;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[1], (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  v19 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v18,
+    v19,
     3,
-    (System_String_o *)StringLiteral_8931/*"MYROOM_HELP_MATERIAL_GALLERY_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8950/*"MYROOM_MENU_NAME_15"*/,
+    (System_String_o *)StringLiteral_9181/*"MYROOM_HELP_MATERIAL_GALLERY_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9200/*"MYROOM_MENU_NAME_15"*/,
     0);
-  if ( v18 )
+  if ( v19 )
   {
-    v3 = sub_1D0F1F0(v18, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v19, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 2 )
     goto LABEL_44;
-  v1->m_Items[2] = v18;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[2], (int32_t)v18, v19, v20, v21, v22, v23, v24);
-  v25 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[2] = v19;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[2], (int32_t)v19, v20, v21, v22, v23, v24, v25);
+  v26 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v25,
+    v26,
     4,
-    (System_String_o *)StringLiteral_8930/*"MYROOM_HELP_ITEM_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8944/*"MYROOM_MENU_NAME_1"*/,
+    (System_String_o *)StringLiteral_9180/*"MYROOM_HELP_ITEM_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9194/*"MYROOM_MENU_NAME_1"*/,
     0);
-  if ( v25 )
+  if ( v26 )
   {
-    v3 = sub_1D0F1F0(v25, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v26, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
-  if ( LODWORD(v1->max_length) <= 3 )
+  if ( (v1->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_44;
-  v1->m_Items[3] = v25;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[3], (int32_t)v25, v26, v27, v28, v29, v30, v31);
-  v32 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[3] = v26;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[3], (int32_t)v26, v27, v28, v29, v30, v31, v32);
+  v33 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v32,
+    v33,
     6,
-    (System_String_o *)StringLiteral_8937/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8951/*"MYROOM_MENU_NAME_2"*/,
+    (System_String_o *)StringLiteral_9187/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9201/*"MYROOM_MENU_NAME_2"*/,
     0);
-  if ( v32 )
+  if ( v33 )
   {
-    v3 = sub_1D0F1F0(v32, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v33, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 4 )
     goto LABEL_44;
-  v1->m_Items[4] = v32;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[4], (int32_t)v32, v33, v34, v35, v36, v37, v38);
-  v39 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[4] = v33;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[4], (int32_t)v33, v34, v35, v36, v37, v38, v39);
+  v40 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v39,
+    v40,
     7,
-    (System_String_o *)StringLiteral_8934/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8952/*"MYROOM_MENU_NAME_3"*/,
+    (System_String_o *)StringLiteral_9184/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9202/*"MYROOM_MENU_NAME_3"*/,
     0);
-  if ( v39 )
+  if ( v40 )
   {
-    v3 = sub_1D0F1F0(v39, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v40, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 5 )
     goto LABEL_44;
-  v1->m_Items[5] = v39;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[5], (int32_t)v39, v40, v41, v42, v43, v44, v45);
-  v46 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[5] = v40;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[5], (int32_t)v40, v41, v42, v43, v44, v45, v46);
+  v47 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v46,
+    v47,
     8,
-    (System_String_o *)StringLiteral_8928/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8953/*"MYROOM_MENU_NAME_4"*/,
+    (System_String_o *)StringLiteral_9178/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9203/*"MYROOM_MENU_NAME_4"*/,
     0);
-  if ( v46 )
+  if ( v47 )
   {
-    v3 = sub_1D0F1F0(v46, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v47, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 6 )
     goto LABEL_44;
-  v1->m_Items[6] = v46;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[6], (int32_t)v46, v47, v48, v49, v50, v51, v52);
-  v53 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[6] = v47;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[6], (int32_t)v47, v48, v49, v50, v51, v52, v53);
+  v54 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v53,
+    v54,
     9,
-    (System_String_o *)StringLiteral_8929/*"MYROOM_HELP_HELP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8954/*"MYROOM_MENU_NAME_5"*/,
+    (System_String_o *)StringLiteral_9179/*"MYROOM_HELP_HELP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9204/*"MYROOM_MENU_NAME_5"*/,
     0);
-  if ( v53 )
+  if ( v54 )
   {
-    v3 = sub_1D0F1F0(v53, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v54, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
-  if ( LODWORD(v1->max_length) <= 7 )
+  if ( (v1->max_length & 0xFFFFFFF8) == 0 )
     goto LABEL_44;
-  v1->m_Items[7] = v53;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[7], (int32_t)v53, v54, v55, v56, v57, v58, v59);
-  v60 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[7] = v54;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[7], (int32_t)v54, v55, v56, v57, v58, v59, v60);
+  v61 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v60,
+    v61,
     10,
-    (System_String_o *)StringLiteral_8935/*"MYROOM_HELP_OPTION_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8955/*"MYROOM_MENU_NAME_6"*/,
+    (System_String_o *)StringLiteral_9185/*"MYROOM_HELP_OPTION_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9205/*"MYROOM_MENU_NAME_6"*/,
     0);
-  if ( v60 )
+  if ( v61 )
   {
-    v3 = sub_1D0F1F0(v60, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v61, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 8 )
     goto LABEL_44;
-  v1->m_Items[8] = v60;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[8], (int32_t)v60, v61, v62, v63, v64, v65, v66);
-  v67 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[8] = v61;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[8], (int32_t)v61, v62, v63, v64, v65, v66, v67);
+  v68 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v67,
+    v68,
     11,
-    (System_String_o *)StringLiteral_8938/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8957/*"MYROOM_MENU_NAME_8"*/,
+    (System_String_o *)StringLiteral_9188/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9207/*"MYROOM_MENU_NAME_8"*/,
     0);
-  if ( v67 )
+  if ( v68 )
   {
-    v3 = sub_1D0F1F0(v67, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v68, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 9 )
     goto LABEL_44;
-  v1->m_Items[9] = v67;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[9], (int32_t)v67, v68, v69, v70, v71, v72, v73);
-  v74 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[9] = v68;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[9], (int32_t)v68, v69, v70, v71, v72, v73, v74);
+  v75 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v74,
+    v75,
     12,
-    (System_String_o *)StringLiteral_8927/*"MYROOM_HELP_ACCOUNT_LINKAGE_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8948/*"MYROOM_MENU_NAME_13"*/,
+    (System_String_o *)StringLiteral_9177/*"MYROOM_HELP_ACCOUNT_LINKAGE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9198/*"MYROOM_MENU_NAME_13"*/,
     0);
-  if ( v74 )
+  if ( v75 )
   {
-    v3 = sub_1D0F1F0(v74, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v75, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 0xA )
     goto LABEL_44;
-  v1->m_Items[10] = v74;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[10], (int32_t)v74, v75, v76, v77, v78, v79, v80);
-  v81 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[10] = v75;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[10], (int32_t)v75, v76, v77, v78, v79, v80, v81);
+  v82 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v81,
+    v82,
     13,
-    (System_String_o *)StringLiteral_8936/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20849/*"img_menuboard_01"*/,
-    (System_String_o *)StringLiteral_8958/*"MYROOM_MENU_NAME_9"*/,
+    (System_String_o *)StringLiteral_9186/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_9208/*"MYROOM_MENU_NAME_9"*/,
     0);
-  if ( v81 )
+  if ( v82 )
   {
-    v3 = sub_1D0F1F0(v81, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v82, v1->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_45;
   }
   if ( LODWORD(v1->max_length) <= 0xB )
     goto LABEL_44;
-  v1->m_Items[11] = v81;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[11], (int32_t)v81, v82, v83, v84, v85, v86, v87);
-  v88 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_1D0F300(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
+  v1->m_Items[11] = v82;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[11], (int32_t)v82, v83, v84, v85, v86, v87, v88);
+  v89 = (MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *)sub_21FFEBC(MyRoomHelpListViewManager_MyRoomHelpItemInfo_TypeInfo);
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
-    v88,
+    v89,
     14,
     (System_String_o *)StringLiteral_1/*""*/,
-    (System_String_o *)StringLiteral_20945/*"img_shop_0"*/,
+    (System_String_o *)StringLiteral_21506/*"img_shop_0"*/,
     (System_String_o *)StringLiteral_1/*""*/,
     0);
-  if ( v88 )
+  if ( v89 )
   {
-    v3 = sub_1D0F1F0(v88, v1->obj.klass->_1.element_class);
+    v3 = sub_21FFDA4(v89, v1->obj.klass->_1.element_class);
     if ( !v3 )
     {
 LABEL_45:
-      v143 = sub_1D0F330();
-      sub_1D0F1DC(v143, 0);
+      v144 = sub_21FFEF0(v3, v11);
+      sub_21FFD90(v144, 0);
     }
   }
   if ( LODWORD(v1->max_length) <= 0xC )
 LABEL_44:
-    sub_1D0F314(v3);
-  v1->m_Items[12] = v88;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v1->m_Items[12], (int32_t)v88, v89, v90, v91, v92, v93, v94);
+    sub_21FFED4(v3);
+  v1->m_Items[12] = v89;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[12], (int32_t)v89, v90, v91, v92, v93, v94, v95);
   MyRoomHelpListViewManager_TypeInfo->static_fields->itemInfoList = v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)MyRoomHelpListViewManager_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)MyRoomHelpListViewManager_TypeInfo->static_fields,
     (int32_t)v1,
-    v95,
     v96,
     v97,
     v98,
     v99,
-    v100);
-  v101 = (System_Array_o *)sub_1D0F15C(MyRoomHelpListViewManager_ItemKind___TypeInfo, 12);
-  v102.fields.value = Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595;
-  v103 = v101;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_66261996(v101, v102, 0);
+    v100,
+    v101);
+  v102 = (System_Array_o *)sub_21FFD10(MyRoomHelpListViewManager_ItemKind___TypeInfo, 12);
+  v103.fields.value = Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595;
+  v104 = v102;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v102, v103, 0);
   static_fields = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  static_fields->KindList = (struct MyRoomHelpListViewManager_ItemKind_array *)v103;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&static_fields->KindList,
-    (int32_t)v103,
-    v105,
+  static_fields->KindList = (struct MyRoomHelpListViewManager_ItemKind_array *)v104;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->KindList,
+    (int32_t)v104,
     v106,
     v107,
     v108,
     v109,
-    v110);
-  v111 = StringLiteral_14811/*"Tutorial/tutorial_0006"*/;
-  v112 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v112->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_14811/*"Tutorial/tutorial_0006"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v112->HELP_BASE_SPRITE_PATH, v111, v113, v114, v115, v116, v117, v118);
-  v119 = StringLiteral_24740/*"tutorial_0006"*/;
-  v120 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v120->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_24740/*"tutorial_0006"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v120->HELP_BASE_SPRITE_NAME, v119, v121, v122, v123, v124, v125, v126);
-  v127 = StringLiteral_14812/*"Tutorial/tutorial_alpha"*/;
-  v128 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v128->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_14812/*"Tutorial/tutorial_alpha"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v128->HELP_BASE_ALPHA_PATH, v127, v129, v130, v131, v132, v133, v134);
-  v135 = StringLiteral_24741/*"tutorial_alpha"*/;
-  v136 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v136->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_24741/*"tutorial_alpha"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v136->HELP_BASE_ALPHA_NAME, v135, v137, v138, v139, v140, v141, v142);
+    v110,
+    v111);
+  v112 = StringLiteral_15188/*"Tutorial/tutorial_0006"*/;
+  v113 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v113->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_15188/*"Tutorial/tutorial_0006"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v113->HELP_BASE_SPRITE_PATH,
+    v112,
+    v114,
+    v115,
+    v116,
+    v117,
+    v118,
+    v119);
+  v120 = StringLiteral_25500/*"tutorial_0006"*/;
+  v121 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v121->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_25500/*"tutorial_0006"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v121->HELP_BASE_SPRITE_NAME,
+    v120,
+    v122,
+    v123,
+    v124,
+    v125,
+    v126,
+    v127);
+  v128 = StringLiteral_15189/*"Tutorial/tutorial_alpha"*/;
+  v129 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v129->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_15189/*"Tutorial/tutorial_alpha"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v129->HELP_BASE_ALPHA_PATH, v128, v130, v131, v132, v133, v134, v135);
+  v136 = StringLiteral_25501/*"tutorial_alpha"*/;
+  v137 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v137->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_25501/*"tutorial_alpha"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v137->HELP_BASE_ALPHA_NAME, v136, v138, v139, v140, v141, v142, v143);
 }
 
 
@@ -480,17 +497,17 @@ void MyRoomHelpListViewManager___ctor(MyRoomHelpListViewManager_o *this, const M
 
 void MyRoomHelpListViewManager__Callback(MyRoomHelpListViewManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct MyRoomHelpListViewManager_CallbackFunc_o *callbackFunc; // x19
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
@@ -503,176 +520,185 @@ void MyRoomHelpListViewManager__CloseHelpDialog(
         MyRoomHelpListViewManager_CallbackFunc2_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   MyRoomHelpMenu_o *baseDialog; // x20
   MyRoomHelpMenu_CallbackFunc_o *v11; // x21
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_4E72C38 & 1) == 0 )
+  if ( (byte_5933C30 & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
-    sub_1D0F0B4(&Method_MyRoomHelpListViewManager_WaitFadeOut__);
-    byte_4E72C38 = 1;
+    sub_21FFC50(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
+    sub_21FFC50(&Method_MyRoomHelpListViewManager_WaitFadeOut__);
+    byte_5933C30 = 1;
   }
   this->fields.callbackFunc2 = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc2,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc2,
     (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
   baseDialog = this->fields.baseDialog;
-  v11 = (MyRoomHelpMenu_CallbackFunc_o *)sub_1D0F300(MyRoomHelpMenu_CallbackFunc_TypeInfo);
+  v11 = (MyRoomHelpMenu_CallbackFunc_o *)sub_21FFEBC(MyRoomHelpMenu_CallbackFunc_TypeInfo);
   MyRoomHelpMenu_CallbackFunc___ctor(v11, (Il2CppObject *)this, Method_MyRoomHelpListViewManager_WaitFadeOut__, 0);
   if ( !baseDialog )
-    sub_1D0F30C(v12, v13);
+    sub_21FFECC(v12, v13);
   MyRoomHelpMenu__Close(baseDialog, v11, 0);
 }
 
 
 void MyRoomHelpListViewManager__CreateList(MyRoomHelpListViewManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v9; // x1
   MyRoomHelpMenu_o *baseDialog; // x0
-  __int64 v11; // x25
-  __int64 v12; // x8
-  unsigned __int64 v13; // x26
-  int v14; // w20
-  __int64 v15; // x9
-  __int64 v16; // x8
-  __int64 *v17; // x9
-  __int64 v18; // x22
+  __int64 v11; // x2
+  __int64 v12; // x25
+  __int64 v13; // x8
+  unsigned __int64 v14; // x26
+  int v15; // w20
+  __int64 v16; // x10
+  __int64 v17; // x9
+  __int64 v18; // x8
+  __int64 v19; // x9
+  __int64 *v20; // x10
+  __int64 v21; // x22
   System_Collections_Generic_List_object__o *itemList; // x20
   int32_t size; // w23
-  __int64 v21; // x21
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  int32_t v25; // w5
-  int64_t v26; // x6
-  System_String_o *v27; // x7
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  __int64 v24; // x21
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v35; // x9
-  __int64 v36; // x10
-  Il2CppClass **v37; // x0
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  Il2CppClass **v40; // x0
 
-  if ( (byte_4E72C37 & 1) == 0 )
+  if ( (byte_5933C2F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1D0F0B4(&MyRoomHelpListViewItem_TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_TypeInfo);
-    byte_4E72C37 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_21FFC50(&MyRoomHelpListViewItem_TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_TypeInfo);
+    byte_5933C2F = 1;
   }
   this->fields.callbackFunc2 = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc2, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc2, 0, v2, v3, v4, v5, v6, v7);
   baseDialog = this->fields.baseDialog;
   if ( !baseDialog )
-    goto LABEL_27;
+    goto LABEL_28;
   MyRoomHelpMenu__Open(baseDialog, 0);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   baseDialog = (MyRoomHelpMenu_o *)MyRoomHelpListViewManager_TypeInfo;
-  if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, v9, v11);
     baseDialog = (MyRoomHelpMenu_o *)MyRoomHelpListViewManager_TypeInfo;
   }
-  v11 = *(_QWORD *)(*(_QWORD *)&baseDialog[1].fields.refuseInit + 8LL);
-  if ( !v11 )
-    goto LABEL_27;
-  v12 = *(_QWORD *)(v11 + 24);
-  if ( (int)v12 >= 1 )
+  v12 = *(_QWORD *)(*(_QWORD *)&baseDialog[1].fields.refuseInit + 8LL);
+  if ( !v12 )
+    goto LABEL_28;
+  v13 = *(_QWORD *)(v12 + 24);
+  if ( (int)v13 >= 1 )
   {
-    v13 = 0;
+    v14 = 0;
     while ( 1 )
     {
-      if ( v13 >= (unsigned int)v12 )
-        sub_1D0F314(baseDialog);
+      if ( v14 >= (unsigned int)v13 )
+LABEL_27:
+        sub_21FFED4(baseDialog);
       baseDialog = (MyRoomHelpMenu_o *)MyRoomHelpListViewManager_TypeInfo;
-      v14 = *(_DWORD *)(v11 + 4 * v13 + 32);
-      if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
+      v15 = *(_DWORD *)(v12 + 4 * v14 + 32);
+      if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
+        j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, v9, v11);
         baseDialog = (MyRoomHelpMenu_o *)MyRoomHelpListViewManager_TypeInfo;
       }
-      v15 = **(_QWORD **)&baseDialog[1].fields.refuseInit;
-      if ( !v15 )
+      v16 = **(_QWORD **)&baseDialog[1].fields.refuseInit;
+      if ( !v16 )
         break;
-      if ( (int)*(_QWORD *)(v15 + 24) >= 1 )
+      v17 = *(_QWORD *)(v16 + 24);
+      if ( (int)v17 >= 1 )
       {
-        v16 = (unsigned int)*(_QWORD *)(v15 + 24);
-        v17 = (__int64 *)(v15 + 32);
+        v18 = (unsigned int)v17 & ~((int)v17 >> 31);
+        v19 = (unsigned int)*(_QWORD *)(v16 + 24);
+        v20 = (__int64 *)(v16 + 32);
         while ( 1 )
         {
-          v18 = *v17;
-          if ( *v17 )
+          if ( !v19 )
+            goto LABEL_27;
+          v21 = *v20;
+          if ( *v20 )
           {
-            if ( *(_DWORD *)(v18 + 16) == v14 )
+            if ( *(_DWORD *)(v21 + 16) == v15 )
               break;
           }
-          --v16;
-          ++v17;
-          if ( !v16 )
-            goto LABEL_24;
+          --v18;
+          ++v20;
+          --v19;
+          if ( !v18 )
+            goto LABEL_25;
         }
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         if ( !itemList )
           break;
         size = itemList->fields._size;
-        v21 = sub_1D0F300(MyRoomHelpListViewItem_TypeInfo);
-        ListViewItem___ctor_45157124((ListViewItem_o *)v21, size, 0);
-        *(_QWORD *)(v21 + 120) = v18;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v21 + 120), v18, v22, v23, v24, v25, v26, v27);
+        v24 = sub_21FFEBC(MyRoomHelpListViewItem_TypeInfo);
+        ListViewItem___ctor_50749276((ListViewItem_o *)v24, size, 0);
+        *(_QWORD *)(v24 + 120) = v21;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 120), v21, v25, v26, v27, v28, v29, v30);
         items = itemList->fields._items;
-        v35 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+        v38 = Method_System_Collections_Generic_List_ListViewItem__Add__;
         ++itemList->fields._version;
         if ( !items )
           break;
-        v36 = itemList->fields._size;
-        if ( (unsigned int)v36 >= LODWORD(items->max_length) )
+        v39 = itemList->fields._size;
+        if ( (unsigned int)v39 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
-            (Il2CppObject *)v21,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+            (Il2CppObject *)v24,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
         }
         else
         {
-          v37 = &items->obj.klass + v36;
-          itemList->fields._size = v36 + 1;
-          v37[4] = (Il2CppClass *)v21;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v37 + 4), v21, v28, v29, v30, v31, v32, v33);
+          v40 = &items->obj.klass + v39;
+          itemList->fields._size = v39 + 1;
+          v40[4] = (Il2CppClass *)v24;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v40 + 4), v24, v31, v32, v33, v34, v35, v36);
         }
       }
-LABEL_24:
-      LODWORD(v12) = *(_DWORD *)(v11 + 24);
-      if ( (__int64)++v13 >= (int)v12 )
-        goto LABEL_25;
-    }
-LABEL_27:
-    sub_1D0F30C(baseDialog, v9);
-  }
 LABEL_25:
+      LODWORD(v13) = *(_DWORD *)(v12 + 24);
+      if ( (__int64)++v14 >= (int)v13 )
+        goto LABEL_26;
+    }
+LABEL_28:
+    sub_21FFECC(baseDialog, v9);
+  }
+LABEL_26:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
 }
 
@@ -691,11 +717,11 @@ MyRoomHelpListViewItem_o *MyRoomHelpListViewManager__GetItem(
   MyRoomHelpListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4E72C39 & 1) == 0 )
+  if ( (byte_5933C31 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1D0F0B4(&MyRoomHelpListViewItem_TypeInfo);
-    byte_4E72C39 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_21FFC50(&MyRoomHelpListViewItem_TypeInfo);
+    byte_5933C31 = 1;
   }
   result = (MyRoomHelpListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -703,7 +729,7 @@ MyRoomHelpListViewItem_o *MyRoomHelpListViewManager__GetItem(
     result = (MyRoomHelpListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)result,
                                            index,
-                                           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = MyRoomHelpListViewItem_TypeInfo->_2.naturalAligment;
@@ -727,71 +753,73 @@ void MyRoomHelpListViewManager__LoadBaseSprite(MyRoomHelpListViewManager_o *this
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v10; // w6
+  bool v11; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   __int64 v18; // x21
   MyRoomHelpListViewManager_c *v19; // x8
   struct System_String_o *HELP_BASE_SPRITE_PATH; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   struct System_String_o *HELP_BASE_ALPHA_PATH; // x1
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
   int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  System_String_array *v34; // x19
-  System_Action_o *v35; // x21
+  bool v32; // w6
+  bool v33; // w7
+  System_String_array *v34; // x21
+  System_Action_o *v35; // x19
+  __int64 v36; // x1
+  __int64 v37; // x2
 
-  if ( (byte_4E72C35 & 1) == 0 )
+  if ( (byte_5933C2D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_TypeInfo);
-    sub_1D0F0B4(&string___TypeInfo);
-    sub_1D0F0B4(&Method_MyRoomHelpListViewManager___c__DisplayClass25_0__LoadBaseSprite_b__0__);
-    sub_1D0F0B4(&MyRoomHelpListViewManager___c__DisplayClass25_0_TypeInfo);
-    byte_4E72C35 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_TypeInfo);
+    sub_21FFC50(&string___TypeInfo);
+    sub_21FFC50(&Method_MyRoomHelpListViewManager___c__DisplayClass25_0__LoadBaseSprite_b__0__);
+    sub_21FFC50(&MyRoomHelpListViewManager___c__DisplayClass25_0_TypeInfo);
+    byte_5933C2D = 1;
   }
-  v3 = sub_1D0F300(MyRoomHelpListViewManager___c__DisplayClass25_0_TypeInfo);
+  v3 = sub_21FFEBC(MyRoomHelpListViewManager___c__DisplayClass25_0_TypeInfo);
   MyRoomHelpListViewManager___c__DisplayClass25_0___ctor((MyRoomHelpListViewManager___c__DisplayClass25_0_o *)v3, 0);
   if ( !v3 )
     goto LABEL_13;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
   if ( this->fields.initMode )
     return;
-  v4 = sub_1D0F15C(string___TypeInfo, 2);
+  v4 = sub_21FFD10(string___TypeInfo, 2);
   v18 = v4;
   v19 = MyRoomHelpListViewManager_TypeInfo;
-  if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, v5, v12);
     v19 = MyRoomHelpListViewManager_TypeInfo;
   }
   if ( !v18 )
 LABEL_13:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   if ( !*(_DWORD *)(v18 + 24)
     || (HELP_BASE_SPRITE_PATH = v19->static_fields->HELP_BASE_SPRITE_PATH,
         *(_QWORD *)(v18 + 32) = HELP_BASE_SPRITE_PATH,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)(v18 + 32),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)(v18 + 32),
           (int32_t)HELP_BASE_SPRITE_PATH,
           v12,
           v13,
@@ -799,26 +827,34 @@ LABEL_13:
           v15,
           v16,
           v17),
-        *(_DWORD *)(v18 + 24) <= 1u) )
+        (*(_DWORD *)(v18 + 24) & 0xFFFFFFFE) == 0) )
   {
-    sub_1D0F314(v4);
+    sub_21FFED4(v4);
   }
   HELP_BASE_ALPHA_PATH = MyRoomHelpListViewManager_TypeInfo->static_fields->HELP_BASE_ALPHA_PATH;
   *(_QWORD *)(v18 + 40) = HELP_BASE_ALPHA_PATH;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 40), (int32_t)HELP_BASE_ALPHA_PATH, v21, v22, v23, v24, v25, v26);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)(v18 + 40),
+    (int32_t)HELP_BASE_ALPHA_PATH,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   *(_QWORD *)(v3 + 24) = v18;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 24), v18, v28, v29, v30, v31, v32, v33);
-  this->fields.initMode = 1;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 24), v18, v28, v29, v30, v31, v32, v33);
   v34 = *(System_String_array **)(v3 + 24);
-  v35 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  this->fields.initMode = 1;
+  v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
     v35,
     (Il2CppObject *)v3,
     Method_MyRoomHelpListViewManager___c__DisplayClass25_0__LoadBaseSprite_b__0__,
     0);
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_41901004(v34, v35, 1, 0);
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v36, v37);
+  AssetManager__loadAssetStorage_47472372(v34, v35, 1, 0);
 }
 
 
@@ -827,15 +863,18 @@ void MyRoomHelpListViewManager__OnMoveEnd(MyRoomHelpListViewManager_o *this, con
   int32_t callbackCount; // w8
   bool v4; // vf
   int32_t v5; // w8
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *scrollBar; // x20
-  __int64 v7; // x1
+  __int64 v9; // x1
+  __int64 v10; // x2
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *scrollView; // x20
 
-  if ( (byte_4E72C3D & 1) == 0 )
+  if ( (byte_5933C35 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72C3D = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933C35 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -847,8 +886,8 @@ void MyRoomHelpListViewManager__OnMoveEnd(MyRoomHelpListViewManager_o *this, con
     {
       ListViewManager__DragMaskEnd((ListViewManager_o *)this, 0);
       scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
       if ( UnityEngine_Object__op_Inequality(scrollBar, 0, 0) )
       {
         gameObject = (UnityEngine_Component_o *)this->fields.scrollBar;
@@ -860,8 +899,8 @@ void MyRoomHelpListViewManager__OnMoveEnd(MyRoomHelpListViewManager_o *this, con
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
       }
       scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
       {
         gameObject = (UnityEngine_Component_o *)this->fields.scrollView;
@@ -874,7 +913,7 @@ void MyRoomHelpListViewManager__OnMoveEnd(MyRoomHelpListViewManager_o *this, con
           return;
         }
 LABEL_17:
-        sub_1D0F30C(gameObject, v7);
+        sub_21FFECC(gameObject, v9);
       }
     }
   }
@@ -883,29 +922,30 @@ LABEL_17:
 
 void MyRoomHelpListViewManager__ReleaseBaseSprite(MyRoomHelpListViewManager_o *this, const MethodInfo *method)
 {
-  MyRoomHelpListViewManager_c *v3; // x0
+  __int64 v2; // x2
+  MyRoomHelpListViewManager_c *v4; // x0
   System_String_o *HELP_BASE_SPRITE_PATH; // x20
-  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_GameObject_o *BaseWindow; // x0
 
-  if ( (byte_4E72C36 & 1) == 0 )
+  if ( (byte_5933C2E & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UITexture___);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_TypeInfo);
-    byte_4E72C36 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    sub_21FFC50(&MyRoomHelpListViewManager_TypeInfo);
+    byte_5933C2E = 1;
   }
   if ( this->fields.initMode == 2 )
   {
-    v3 = MyRoomHelpListViewManager_TypeInfo;
-    if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
+    v4 = MyRoomHelpListViewManager_TypeInfo;
+    if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
-      v3 = MyRoomHelpListViewManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, method, v2);
+      v4 = MyRoomHelpListViewManager_TypeInfo;
     }
-    HELP_BASE_SPRITE_PATH = v3->static_fields->HELP_BASE_SPRITE_PATH;
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+    HELP_BASE_SPRITE_PATH = v4->static_fields->HELP_BASE_SPRITE_PATH;
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
     AssetManager__releaseAssetStorage(HELP_BASE_SPRITE_PATH, 0);
     AssetManager__releaseAssetStorage(MyRoomHelpListViewManager_TypeInfo->static_fields->HELP_BASE_ALPHA_PATH, 0);
     BaseWindow = this->fields.BaseWindow;
@@ -913,9 +953,9 @@ void MyRoomHelpListViewManager__ReleaseBaseSprite(MyRoomHelpListViewManager_o *t
       || (BaseWindow = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(BaseWindow, 0)) == 0
       || (BaseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)BaseWindow,
-                                                     (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UITexture___)) == 0 )
+                                                     (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UITexture___)) == 0 )
     {
-      sub_1D0F30C(BaseWindow, v5);
+      sub_21FFECC(BaseWindow, v6);
     }
     ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *))BaseWindow->klass[1].vtable._3_ToString.method)(
       BaseWindow,
@@ -936,67 +976,69 @@ void MyRoomHelpListViewManager__RequestListObject(
   System_Collections_Generic_List_object__o *ObjectList; // x0
   __int64 v8; // x1
   int32_t size; // w8
+  const MethodInfo_4450604 *v10; // x1
   Il2CppObject *current; // x21
-  System_Action_o *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v12; // x22
+  __int64 v13; // x0
+  __int64 v14; // x1
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4E72C3B & 1) == 0 )
+  if ( (byte_5933C33 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__);
-    sub_1D0F0B4(&Method_MyRoomHelpListViewManager_OnMoveEnd__);
-    sub_1D0F0B4(&StringLiteral_10060/*"OnMoveEnd"*/);
-    byte_4E72C3B = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__);
+    sub_21FFC50(&Method_MyRoomHelpListViewManager_OnMoveEnd__);
+    sub_21FFC50(&StringLiteral_10331/*"OnMoveEnd"*/);
+    byte_5933C33 = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)MyRoomHelpListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10060/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10331/*"OnMoveEnd"*/,
       delay,
       0);
   }
   else
   {
+    v10 = (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__;
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
+      v10);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v14,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__) )
+              &v15,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__) )
     {
-      current = v14.fields._current;
-      v11 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-      System_Action___ctor(v11, (Il2CppObject *)this, Method_MyRoomHelpListViewManager_OnMoveEnd__, 0);
+      current = v15.fields._current;
+      v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      System_Action___ctor(v12, (Il2CppObject *)this, Method_MyRoomHelpListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1D0F30C(v12, v13);
-      MyRoomHelpListViewObject__Init_35074224((MyRoomHelpListViewObject_o *)current, mode, v11, delay, 0);
+        sub_21FFECC(v13, v14);
+      MyRoomHelpListViewObject__Init_40664316((MyRoomHelpListViewObject_o *)current, mode, v12, delay, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v14,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
+      &v15,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void MyRoomHelpListViewManager__RequestListObject_35068540(
+void MyRoomHelpListViewManager__RequestListObject_40658652(
         MyRoomHelpListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -1004,61 +1046,67 @@ void MyRoomHelpListViewManager__RequestListObject_35068540(
   System_Collections_Generic_List_object__o *ObjectList; // x0
   __int64 v6; // x1
   int32_t size; // w8
+  const MethodInfo_4450604 *v8; // x1
   Il2CppObject *current; // x21
-  System_Action_o *v9; // x22
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v10; // x22
+  __int64 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // [xsp+8h] [xbp-78h]
+  System_Collections_Generic_List_Enumerator_object__o *v14; // [xsp+10h] [xbp-70h]
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4E72C3C & 1) == 0 )
+  if ( (byte_5933C34 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__);
-    sub_1D0F0B4(&Method_MyRoomHelpListViewManager_OnMoveEnd__);
-    sub_1D0F0B4(&StringLiteral_10060/*"OnMoveEnd"*/);
-    byte_4E72C3C = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__);
+    sub_21FFC50(&Method_MyRoomHelpListViewManager_OnMoveEnd__);
+    sub_21FFC50(&StringLiteral_10331/*"OnMoveEnd"*/);
+    byte_5933C34 = 1;
   }
-  memset(&v12, 0, sizeof(v12));
+  memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)MyRoomHelpListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10060/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10331/*"OnMoveEnd"*/,
       0.0,
       0);
   }
   else
   {
+    v8 = (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__;
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__);
+      v8);
+    v13 = 0;
+    v14 = &v15;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v12,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__) )
+              &v15,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__MoveNext__) )
     {
-      current = v12.fields._current;
-      v9 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-      System_Action___ctor(v9, (Il2CppObject *)this, Method_MyRoomHelpListViewManager_OnMoveEnd__, 0);
+      current = v15.fields._current;
+      v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      System_Action___ctor(v10, (Il2CppObject *)this, Method_MyRoomHelpListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1D0F30C(v10, v11);
-      MyRoomHelpListViewObject__Init_35074308((MyRoomHelpListViewObject_o *)current, mode, v9, 0);
+        sub_21FFECC(v11, v12);
+      MyRoomHelpListViewObject__Init_40664400((MyRoomHelpListViewObject_o *)current, mode, v10, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v12,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
+      &v15,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MyRoomHelpListViewObject__Dispose__);
   }
 }
 
@@ -1071,35 +1119,35 @@ void MyRoomHelpListViewManager__SetObjectItem(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4E72C3A & 1) == 0 )
+  if ( (byte_5933C32 & 1) == 0 )
   {
-    this = (MyRoomHelpListViewManager_o *)sub_1D0F0B4(&MyRoomHelpListViewObject_TypeInfo);
-    byte_4E72C3A = 1;
+    this = (MyRoomHelpListViewManager_o *)sub_21FFC50(&MyRoomHelpListViewObject_TypeInfo);
+    byte_5933C32 = 1;
   }
   if ( !obj
     || (naturalAligment = MyRoomHelpListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (MyRoomHelpListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != MyRoomHelpListViewObject_TypeInfo )
   {
-    sub_1D0F30C(this, obj);
+    sub_21FFECC(this, obj);
   }
-  MyRoomHelpListViewObject__Init_35073496((MyRoomHelpListViewObject_o *)obj, 2, 0);
+  MyRoomHelpListViewObject__Init_40663588((MyRoomHelpListViewObject_o *)obj, 2, 0);
 }
 
 
 void MyRoomHelpListViewManager__WaitFadeOut(MyRoomHelpListViewManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct MyRoomHelpListViewManager_CallbackFunc2_o *callbackFunc2; // x19
 
   callbackFunc2 = this->fields.callbackFunc2;
   this->fields.callbackFunc2 = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc2, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc2, 0, v2, v3, v4, v5, v6, v7);
   if ( callbackFunc2 )
     ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc2->fields.invoke_impl)(
       callbackFunc2->fields.method_code,
@@ -1113,37 +1161,37 @@ void MyRoomHelpListViewManager__add_callbackFunc(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc; // x21
-  struct MyRoomHelpListViewManager_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  MyRoomHelpListViewManager_o *v10; // x0
-  MyRoomHelpListViewManager_CallbackFunc_o *v11; // x1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  MyRoomHelpListViewManager_o *v11; // x0
+  MyRoomHelpListViewManager_CallbackFunc_o *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E72C2F & 1) == 0 )
+  if ( (byte_5933C27 & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpListViewManager_CallbackFunc_TypeInfo);
-    byte_4E72C2F = 1;
+    sub_21FFC50(&MyRoomHelpListViewManager_CallbackFunc_TypeInfo);
+    byte_5933C27 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (MyRoomHelpListViewManager_CallbackFunc_c *)v7->klass != MyRoomHelpListViewManager_CallbackFunc_TypeInfo )
+      if ( (MyRoomHelpListViewManager_CallbackFunc_c *)v6->klass != MyRoomHelpListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v10 = v9 == (_QWORD)callbackFunc;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (MyRoomHelpListViewManager_o *)sub_1D0F6A8(v7);
-  MyRoomHelpListViewManager__remove_callbackFunc(v10, v11, v12);
+  v11 = (MyRoomHelpListViewManager_o *)sub_220024C(v6, MyRoomHelpListViewManager_CallbackFunc_TypeInfo, v7, v8);
+  MyRoomHelpListViewManager__remove_callbackFunc(v11, v12, v13);
 }
 
 
@@ -1153,37 +1201,37 @@ void MyRoomHelpListViewManager__add_callbackFunc2(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc2; // x21
-  struct MyRoomHelpListViewManager_CallbackFunc2_o **p_callbackFunc2; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  MyRoomHelpListViewManager_o *v10; // x0
-  MyRoomHelpListViewManager_CallbackFunc2_o *v11; // x1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  MyRoomHelpListViewManager_o *v11; // x0
+  MyRoomHelpListViewManager_CallbackFunc2_o *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E72C31 & 1) == 0 )
+  if ( (byte_5933C29 & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
-    byte_4E72C31 = 1;
+    sub_21FFC50(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
+    byte_5933C29 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
-  p_callbackFunc2 = &this->fields.callbackFunc2;
   while ( 1 )
   {
-    v7 = System_Delegate__Combine(callbackFunc2, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Combine(callbackFunc2, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (MyRoomHelpListViewManager_CallbackFunc2_c *)v7->klass != MyRoomHelpListViewManager_CallbackFunc2_TypeInfo )
+      if ( (MyRoomHelpListViewManager_CallbackFunc2_c *)v6->klass != MyRoomHelpListViewManager_CallbackFunc2_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc2, v7, callbackFunc2);
-    v9 = callbackFunc2 == (System_Delegate_o *)v8;
-    callbackFunc2 = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc2, v6, callbackFunc2);
+    v10 = v9 == (_QWORD)callbackFunc2;
+    callbackFunc2 = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (MyRoomHelpListViewManager_o *)sub_1D0F6A8(v7);
-  MyRoomHelpListViewManager__remove_callbackFunc2(v10, v11, v12);
+  v11 = (MyRoomHelpListViewManager_o *)sub_220024C(v6, MyRoomHelpListViewManager_CallbackFunc2_TypeInfo, v7, v8);
+  MyRoomHelpListViewManager__remove_callbackFunc2(v11, v12, v13);
 }
 
 
@@ -1194,121 +1242,126 @@ System_Collections_Generic_List_MyRoomHelpListViewObject__o *MyRoomHelpListViewM
   System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
   Il2CppObject *current; // x21
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
-  Il2CppObject *Component_object; // x0
+  _BOOL8 v9; // x0
   __int64 v10; // x1
-  Il2CppObject *v11; // x21
+  Il2CppObject *Component_object; // x0
+  __int64 v12; // x1
+  Il2CppObject *v13; // x21
   ListViewItem_o *Item; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  _BOOL8 v21; // x0
+  __int64 v22; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v26; // x0
+  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4E72C34 & 1) == 0 )
+  if ( (byte_5933C2C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72C34 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933C2C = 1;
   }
-  memset(&v28, 0, sizeof(v28));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
+  memset(&v29, 0, sizeof(v29));
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v27,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v28,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v28 = v27;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v29 = v28;
+  v28.fields._list = 0;
+  *(_QWORD *)&v28.fields._index = &v29;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v28,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v29,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v28.fields._current;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v7 )
+    current = v29.fields._current;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
+    v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v9 )
     {
       if ( !current )
-        sub_1D0F30C(v7, v8);
+        sub_21FFECC(v9, v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
-      v11 = Component_object;
+                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
+      v13 = Component_object;
       if ( !Component_object )
-        sub_1D0F30C(0, v10);
+        sub_21FFECC(0, v12);
       Item = (ListViewItem_o *)MyRoomHelpListViewObject__GetItem((MyRoomHelpListViewObject_o *)Component_object, 0);
       if ( !Item )
-        sub_1D0F30C(0, v13);
+        sub_21FFECC(0, 0);
       if ( Item->fields.isTermination )
       {
-        v20 = ListViewManager__ClippingItem_45173204((ListViewManager_o *)this, Item, 0);
-        if ( v20 )
+        v21 = ListViewManager__ClippingItem_50765052((ListViewManager_o *)this, Item, 0);
+        if ( v21 )
         {
-          if ( !v3 )
-            sub_1D0F30C(v20, v21);
-          items = v3->fields._items;
-          v23 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__;
-          ++v3->fields._version;
-          if ( !items )
-            sub_1D0F30C(v20, v21);
+          if ( !v3
+            || (items = v3->fields._items,
+                v24 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__,
+                ++v3->fields._version,
+                !items) )
+          {
+            sub_21FFECC(v21, v22);
+          }
           size = v3->fields._size;
           if ( (unsigned int)size < LODWORD(items->max_length) )
             goto LABEL_17;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
             v3,
-            v11,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            v13,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
         }
       }
       else
       {
-        if ( !v3 )
-          sub_1D0F30C(Item, v13);
-        items = v3->fields._items;
-        v23 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__;
-        ++v3->fields._version;
-        if ( !items )
-          sub_1D0F30C(Item, v13);
+        if ( !v3
+          || (items = v3->fields._items,
+              v24 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__,
+              ++v3->fields._version,
+              !items) )
+        {
+          sub_21FFECC(Item, Item);
+        }
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
           goto LABEL_21;
 LABEL_17:
-        v25 = &items->obj.klass + size;
+        v26 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v25[4] = (Il2CppClass *)v11;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v25 + 4), (int32_t)v11, v14, v15, v16, v17, v18, v19);
+        v26[4] = (Il2CppClass *)v13;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v13, v15, v16, v17, v18, v19, v20);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v28,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v29,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_MyRoomHelpListViewObject__o *)v3;
 }
 
@@ -1320,93 +1373,98 @@ System_Collections_Generic_List_MyRoomHelpListViewObject__o *MyRoomHelpListViewM
   System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
   Il2CppObject *current; // x20
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  Il2CppObject *v16; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  Il2CppObject *v18; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v20; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v22; // x0
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4E72C33 & 1) == 0 )
+  if ( (byte_5933C2B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72C33 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933C2B = 1;
   }
-  memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
+  memset(&v25, 0, sizeof(v25));
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MyRoomHelpListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MyRoomHelpListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v23 = v22;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v25 = v24;
+  v24.fields._list = 0;
+  *(_QWORD *)&v24.fields._index = &v25;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v23,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v25,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v23.fields._current;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v7 )
+    current = v25.fields._current;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
+    v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v9 )
     {
       if ( !current )
-        sub_1D0F30C(v7, v8);
+        sub_21FFECC(v9, v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
-      v16 = Component_object;
-      if ( !v3 )
-        sub_1D0F30C(Component_object, Component_object);
-      items = v3->fields._items;
-      v18 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__;
-      ++v3->fields._version;
-      if ( !items )
-        sub_1D0F30C(Component_object, Component_object);
+                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_MyRoomHelpListViewObject___);
+      v18 = Component_object;
+      if ( !v3
+        || (items = v3->fields._items,
+            v20 = Method_System_Collections_Generic_List_MyRoomHelpListViewObject__Add__,
+            ++v3->fields._version,
+            !items) )
+      {
+        sub_21FFECC(Component_object, Component_object);
+      }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
-        v20 = &items->obj.klass + size;
+        v22 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v20[4] = (Il2CppClass *)v16;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        v22[4] = (Il2CppClass *)v18;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v23,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v25,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_MyRoomHelpListViewObject__o *)v3;
 }
 
@@ -1417,37 +1475,37 @@ void MyRoomHelpListViewManager__remove_callbackFunc(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc; // x21
-  struct MyRoomHelpListViewManager_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  MyRoomHelpListViewManager_o *v10; // x0
-  MyRoomHelpListViewManager_CallbackFunc2_o *v11; // x1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  MyRoomHelpListViewManager_o *v11; // x0
+  MyRoomHelpListViewManager_CallbackFunc2_o *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E72C30 & 1) == 0 )
+  if ( (byte_5933C28 & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpListViewManager_CallbackFunc_TypeInfo);
-    byte_4E72C30 = 1;
+    sub_21FFC50(&MyRoomHelpListViewManager_CallbackFunc_TypeInfo);
+    byte_5933C28 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (MyRoomHelpListViewManager_CallbackFunc_c *)v7->klass != MyRoomHelpListViewManager_CallbackFunc_TypeInfo )
+      if ( (MyRoomHelpListViewManager_CallbackFunc_c *)v6->klass != MyRoomHelpListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v10 = v9 == (_QWORD)callbackFunc;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (MyRoomHelpListViewManager_o *)sub_1D0F6A8(v7);
-  MyRoomHelpListViewManager__add_callbackFunc2(v10, v11, v12);
+  v11 = (MyRoomHelpListViewManager_o *)sub_220024C(v6, MyRoomHelpListViewManager_CallbackFunc_TypeInfo, v7, v8);
+  MyRoomHelpListViewManager__add_callbackFunc2(v11, v12, v13);
 }
 
 
@@ -1457,36 +1515,36 @@ void MyRoomHelpListViewManager__remove_callbackFunc2(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc2; // x21
-  struct MyRoomHelpListViewManager_CallbackFunc2_o **p_callbackFunc2; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  MyRoomHelpListViewManager_o *v10; // x0
-  const MethodInfo *v11; // x1
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  MyRoomHelpListViewManager_o *v11; // x0
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4E72C32 & 1) == 0 )
+  if ( (byte_5933C2A & 1) == 0 )
   {
-    sub_1D0F0B4(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
-    byte_4E72C32 = 1;
+    sub_21FFC50(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
+    byte_5933C2A = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
-  p_callbackFunc2 = &this->fields.callbackFunc2;
   while ( 1 )
   {
-    v7 = System_Delegate__Remove(callbackFunc2, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Remove(callbackFunc2, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (MyRoomHelpListViewManager_CallbackFunc2_c *)v7->klass != MyRoomHelpListViewManager_CallbackFunc2_TypeInfo )
+      if ( (MyRoomHelpListViewManager_CallbackFunc2_c *)v6->klass != MyRoomHelpListViewManager_CallbackFunc2_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc2, v7, callbackFunc2);
-    v9 = callbackFunc2 == (System_Delegate_o *)v8;
-    callbackFunc2 = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc2, v6, callbackFunc2);
+    v10 = v9 == (_QWORD)callbackFunc2;
+    callbackFunc2 = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  v10 = (MyRoomHelpListViewManager_o *)sub_1D0F6A8(v7);
-  MyRoomHelpListViewManager__get_ObjectList(v10, v11);
+  v11 = (MyRoomHelpListViewManager_o *)sub_220024C(v6, MyRoomHelpListViewManager_CallbackFunc2_TypeInfo, v7, v8);
+  MyRoomHelpListViewManager__get_ObjectList(v11, v12);
 }
 
 
@@ -1496,10 +1554,10 @@ void MyRoomHelpListViewManager_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -1509,23 +1567,23 @@ void MyRoomHelpListViewManager_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1537,9 +1595,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B368A0;
+  this->fields.invoke_impl = (intptr_t)sub_1FF0A3C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B36860;
+  this->fields.extra_arg = (intptr_t)&loc_1FF09FC;
 }
 
 
@@ -1551,8 +1609,7 @@ System_IAsyncResult_o *MyRoomHelpListViewManager_CallbackFunc__BeginInvoke(
 {
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  v5 = 0;
-  return (System_IAsyncResult_o *)sub_1D0F068(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
 }
 
 
@@ -1561,7 +1618,7 @@ void MyRoomHelpListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 
@@ -1579,10 +1636,10 @@ void MyRoomHelpListViewManager_CallbackFunc2___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -1592,23 +1649,23 @@ void MyRoomHelpListViewManager_CallbackFunc2___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1620,9 +1677,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B368F4;
+  this->fields.invoke_impl = (intptr_t)sub_1FF0A90;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B368B4;
+  this->fields.extra_arg = (intptr_t)sub_1FF0A50;
 }
 
 
@@ -1634,8 +1691,7 @@ System_IAsyncResult_o *MyRoomHelpListViewManager_CallbackFunc2__BeginInvoke(
 {
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  v5 = 0;
-  return (System_IAsyncResult_o *)sub_1D0F068(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
 }
 
 
@@ -1644,7 +1700,7 @@ void MyRoomHelpListViewManager_CallbackFunc2__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 
@@ -1664,33 +1720,57 @@ void MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
         System_String_o *itemName,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  bool v15; // w6
+  bool v16; // w7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
+  bool v21; // w6
+  bool v22; // w7
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
   int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v27; // w6
+  bool v28; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.textCode, (int32_t)textCode, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.textCode,
+    (int32_t)textCode,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   this->fields.imageName = imageName;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.imageName, (int32_t)imageName, v17, v18, v19, v20, v21, v22);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.imageName,
+    (int32_t)imageName,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
   this->fields.itemName = itemName;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemName, (int32_t)itemName, v23, v24, v25, v26, v27, v28);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemName,
+    (int32_t)itemName,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
 }
 
 
@@ -1706,76 +1786,78 @@ void MyRoomHelpListViewManager___c__DisplayClass25_0___LoadBaseSprite_b__0(
         MyRoomHelpListViewManager___c__DisplayClass25_0_o *this,
         const MethodInfo *method)
 {
-  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v2; // x19
+  __int64 v2; // x2
+  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v3; // x19
   struct MyRoomHelpListViewManager_o *_4__this; // x8
   struct System_String_array *path; // x8
-  System_String_o *v5; // x20
-  AssetData_o *v6; // x20
-  struct System_String_array *v7; // x8
-  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v8; // x20
-  struct MyRoomHelpListViewManager_o *v9; // x8
-  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v10; // x21
+  System_String_o *v6; // x20
+  __int64 v7; // x2
+  AssetData_o *v8; // x20
+  struct System_String_array *v9; // x8
+  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v10; // x20
+  struct MyRoomHelpListViewManager_o *v11; // x8
+  MyRoomHelpListViewManager___c__DisplayClass25_0_o *v12; // x21
   Il2CppObject *Component_object; // x23
-  UnityEngine_Shader_o *v12; // x24
-  UnityEngine_Material_o *v13; // x22
-  struct MyRoomHelpListViewManager_o *v14; // x8
-  MyRoomHelpListViewManager_c *v15; // x0
+  UnityEngine_Shader_o *v14; // x24
+  UnityEngine_Material_o *v15; // x22
+  struct MyRoomHelpListViewManager_o *v16; // x8
+  MyRoomHelpListViewManager_c *v17; // x0
   System_String_o *HELP_BASE_SPRITE_PATH; // x19
 
-  v2 = this;
-  if ( (byte_4E72C3F & 1) == 0 )
+  v3 = this;
+  if ( (byte_5933C37 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_Texture2D____80369832);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UITexture___);
-    sub_1D0F0B4(&UnityEngine_Material_TypeInfo);
-    sub_1D0F0B4(&MyRoomHelpListViewManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_4988/*"Custom/SpriteWithMask"*/);
-    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)sub_1D0F0B4(&StringLiteral_16486/*"_MaskTex"*/);
-    byte_4E72C3F = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    sub_21FFC50(&UnityEngine_Material_TypeInfo);
+    sub_21FFC50(&MyRoomHelpListViewManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_5116/*"Custom/SpriteWithMask"*/);
+    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
+    byte_5933C37 = 1;
   }
-  _4__this = v2->fields.__4__this;
+  _4__this = v3->fields.__4__this;
   if ( !_4__this )
     goto LABEL_27;
   if ( _4__this->fields.initMode == 1 )
   {
-    path = v2->fields.path;
+    path = v3->fields.path;
     if ( !path )
       goto LABEL_27;
     if ( !LODWORD(path->max_length) )
       goto LABEL_28;
-    v5 = path->m_Items[0];
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetManager__getAssetStorage(v5, 0);
-    v6 = (AssetData_o *)this;
-    if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
-    if ( !v6 )
+    v6 = path->m_Items[0];
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
+    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetManager__getAssetStorage(v6, 0);
+    v8 = (AssetData_o *)this;
+    if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, method, v7);
+    if ( !v8 )
       goto LABEL_27;
-    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__52624444(
-                                                                  v6,
+    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+                                                                  v8,
                                                                   MyRoomHelpListViewManager_TypeInfo->static_fields->HELP_BASE_SPRITE_NAME,
-                                                                  (const MethodInfo_322FC3C *)Method_AssetData_GetObject_Texture2D____80369832);
-    v7 = v2->fields.path;
-    if ( !v7 )
+                                                                  (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+    v9 = v3->fields.path;
+    if ( !v9 )
       goto LABEL_27;
-    if ( LODWORD(v7->max_length) <= 1 )
+    if ( (v9->max_length & 0xFFFFFFFE) == 0 )
 LABEL_28:
-      sub_1D0F314(this);
-    v8 = this;
-    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetManager__getAssetStorage(v7->m_Items[1], 0);
+      sub_21FFED4(this);
+    v10 = this;
+    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetManager__getAssetStorage(v9->m_Items[1], 0);
     if ( this )
     {
-      this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__52624444(
+      this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
                                                                     (AssetData_o *)this,
                                                                     MyRoomHelpListViewManager_TypeInfo->static_fields->HELP_BASE_ALPHA_NAME,
-                                                                    (const MethodInfo_322FC3C *)Method_AssetData_GetObject_Texture2D____80369832);
-      v9 = v2->fields.__4__this;
-      if ( v9 )
+                                                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+      v11 = v3->fields.__4__this;
+      if ( v11 )
       {
-        v10 = this;
-        this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)v9->fields.BaseWindow;
+        v12 = this;
+        this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)v11->fields.BaseWindow;
         if ( this )
         {
           this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)UnityEngine_GameObject__get_transform(
@@ -1785,28 +1867,28 @@ LABEL_28:
           {
             Component_object = UnityEngine_Component__GetComponent_object_(
                                  (UnityEngine_Component_o *)this,
-                                 (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UITexture___);
-            v12 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4988/*"Custom/SpriteWithMask"*/, 0);
-            v13 = (UnityEngine_Material_o *)sub_1D0F300(UnityEngine_Material_TypeInfo);
-            UnityEngine_Material___ctor(v13, v12, 0);
+                                 (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+            v14 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5116/*"Custom/SpriteWithMask"*/, 0);
+            v15 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
+            UnityEngine_Material___ctor(v15, v14, 0);
             if ( Component_object )
             {
               this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)((__int64 (__fastcall *)(Il2CppObject *, UnityEngine_Material_o *, const MethodInfo *))Component_object->klass->vtable[25].methodPtr)(
                                                                             Component_object,
-                                                                            v13,
+                                                                            v15,
                                                                             Component_object->klass->vtable[25].method);
-              if ( v13 )
+              if ( v15 )
               {
-                UnityEngine_Material__set_mainTexture(v13, (UnityEngine_Texture_o *)v8, 0);
+                UnityEngine_Material__set_mainTexture(v15, (UnityEngine_Texture_o *)v10, 0);
                 UnityEngine_Material__SetTexture(
-                  v13,
-                  (System_String_o *)StringLiteral_16486/*"_MaskTex"*/,
-                  (UnityEngine_Texture_o *)v10,
+                  v15,
+                  (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
+                  (UnityEngine_Texture_o *)v12,
                   0);
-                v14 = v2->fields.__4__this;
-                if ( v14 )
+                v16 = v3->fields.__4__this;
+                if ( v16 )
                 {
-                  v14->fields.initMode = 2;
+                  v16->fields.initMode = 2;
                   return;
                 }
               }
@@ -1816,17 +1898,17 @@ LABEL_28:
       }
     }
 LABEL_27:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
-  v15 = MyRoomHelpListViewManager_TypeInfo;
-  if ( !MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished )
+  v17 = MyRoomHelpListViewManager_TypeInfo;
+  if ( !*(&MyRoomHelpListViewManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo);
-    v15 = MyRoomHelpListViewManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MyRoomHelpListViewManager_TypeInfo, method, v2);
+    v17 = MyRoomHelpListViewManager_TypeInfo;
   }
-  HELP_BASE_SPRITE_PATH = v15->static_fields->HELP_BASE_SPRITE_PATH;
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+  HELP_BASE_SPRITE_PATH = v17->static_fields->HELP_BASE_SPRITE_PATH;
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
   AssetManager__releaseAssetStorage(HELP_BASE_SPRITE_PATH, 0);
   AssetManager__releaseAssetStorage(MyRoomHelpListViewManager_TypeInfo->static_fields->HELP_BASE_ALPHA_PATH, 0);
 }

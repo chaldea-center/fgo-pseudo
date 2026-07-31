@@ -1,13 +1,13 @@
 void EventCombineCostumeEntity___ctor(EventCombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E775B6 & 1) == 0 )
+  if ( (byte_5938589 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E775B6 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938589 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventCombineCostumeEntity__CreatePK(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4E775B4 & 1) == 0 )
+  if ( (byte_5938587 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E775B4 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5938587 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            costumeId,
            eventId,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,31 +49,31 @@ bool EventCombineCostumeEntity__IsShortEventItem(EventCombineCostumeEntity_o *th
   struct System_Int32_array *itemNums; // x9
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E775B5 & 1) == 0 )
+  if ( (byte_5938588 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E775B5 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5938588 = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserItemMaster___);
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
   }
   itemIds = this->fields.itemIds;
@@ -83,7 +83,7 @@ bool EventCombineCostumeEntity__IsShortEventItem(EventCombineCostumeEntity_o *th
     goto LABEL_20;
   if ( !MasterData_object )
 LABEL_19:
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   Instance = (DataManager_o *)UserItemMaster__TryGetEntity(
                                 (UserItemMaster_o *)MasterData_object,
                                 &entity,
@@ -100,7 +100,7 @@ LABEL_19:
         if ( LODWORD(itemNums->max_length) )
           return entity->fields.num < itemNums->m_Items[0];
 LABEL_20:
-        sub_1D0F314(Instance);
+        sub_21FFED4(Instance);
       }
     }
     goto LABEL_19;

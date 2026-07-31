@@ -20,72 +20,65 @@ void UVScrollAnimation__Update(UVScrollAnimation_o *this, const MethodInfo *meth
 // local variable allocation has failed, the output may be wrong!
 void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x2
   Il2CppObject *Component_object; // x20
   UnityEngine_Material_o *material; // x0
-  __int64 v5; // x1
-  float time; // s0
-  float offsetXPerSec; // s10
-  float v8; // s8
-  float v9; // s0
-  float offsetYPerSec; // s11
-  float v11; // s9
-  float v12; // s0
-  float v13; // s1
-  bool v14; // nf
-  float v15; // s1 OVERLAPPED
-  float v16; // s2
-  float v17; // s0
+  __int64 v7; // x1
+  float32x2_t v8; // d0
+  int8x8_t v9; // d0
+  unsigned __int64 v15; // d0
+  float v16; // [xsp+0h] [xbp-70h]
+  float offsetYPerSec; // [xsp+10h] [xbp-60h]
+  float time; // [xsp+20h] [xbp-50h]
+  float offsetXPerSec; // [xsp+30h] [xbp-40h]
 
-  if ( (byte_4E74AA4 & 1) == 0 )
+  if ( (byte_5935A35 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
-    byte_4E74AA4 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
+    byte_5935A35 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( ((unsigned __int8)material & 1) != 0 )
-    goto LABEL_17;
-  if ( !Component_object
-    || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0)) == 0 )
+  if ( ((unsigned __int8)material & 1) == 0 )
   {
-LABEL_18:
-    sub_1D0F30C(material, v5);
+    if ( !Component_object )
+      goto LABEL_12;
+    material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0);
+    if ( !material )
+      goto LABEL_12;
+    if ( UnityEngine_Material__HasProperty_83064036(material, (System_String_o *)StringLiteral_16879/*"_MainTex"*/, 0) )
+    {
+      time = UnityEngine_Time__get_time(0);
+      offsetXPerSec = this->fields.offsetXPerSec;
+      v16 = UnityEngine_Time__get_time(0);
+      offsetYPerSec = this->fields.offsetYPerSec;
+      material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0);
+      if ( material )
+      {
+        v8.n64_u64[0] = vmul_f32(
+                          (float32x2_t)__PAIR64__(LODWORD(v16), LODWORD(time)),
+                          (float32x2_t)__PAIR64__(LODWORD(offsetYPerSec), LODWORD(offsetXPerSec))).n64_u64[0];
+        v9.n64_u64[0] = vsub_f32(v8, vrndm_f32(v8)).n64_u64[0];
+        __asm { FMOV            V1.2S, #1.0 }
+        v15 = vbic_s8(vbsl_s8(vcgt_f32(v9, _D1), _D1, v9), vcltz_f32(v9)).n64_u64[0];
+        _D1.n64_u32[0] = HIDWORD(v15);
+        UnityEngine_Material__SetTextureOffset(
+          material,
+          (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+          *(UnityEngine_Vector2_o *)((char *)&_D1 - 4),
+          0);
+        return;
+      }
+LABEL_12:
+      sub_21FFECC(material, v7);
+    }
   }
-  if ( !UnityEngine_Material__HasProperty_73224956(material, (System_String_o *)StringLiteral_16481/*"_MainTex"*/, 0) )
-  {
-LABEL_17:
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
-    return;
-  }
-  time = UnityEngine_Time__get_time(0);
-  offsetXPerSec = this->fields.offsetXPerSec;
-  v8 = time;
-  v9 = UnityEngine_Time__get_time(0);
-  offsetYPerSec = this->fields.offsetYPerSec;
-  v11 = v9;
-  material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0);
-  if ( !material )
-    goto LABEL_18;
-  v12 = (float)(v8 * offsetXPerSec) - floorf(v8 * offsetXPerSec);
-  v13 = (float)(v11 * offsetYPerSec) - floorf(v11 * offsetYPerSec);
-  v14 = v13 < 0.0;
-  v15 = fminf(v13, 1.0);
-  v16 = fminf(v12, 1.0);
-  if ( v14 )
-    v15 = 0.0;
-  if ( v12 < 0.0 )
-    v17 = 0.0;
-  else
-    v17 = v16;
-  UnityEngine_Material__SetTextureOffset(
-    material,
-    (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
-    *(UnityEngine_Vector2_o *)(&v15 - 1),
-    0);
+  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
 }

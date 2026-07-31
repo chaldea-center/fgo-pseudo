@@ -1,27 +1,27 @@
 void RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77EC8 & 1) == 0 )
+  if ( (byte_5938EE9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77EC8 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938EE9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4E77EC7 & 1) == 0 )
+  if ( (byte_5938EE8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E77EC7 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5938EE8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -61,51 +61,41 @@ bool RestrictionSlotDetailEntity__IsSearchVals(
         System_Int32_array *vList,
         const MethodInfo *method)
 {
-  bool result; // w0
   struct System_Int32_array *targetVals; // x8
-  unsigned __int64 max_length; // x10
-  unsigned __int64 v7; // x9
-  int v8; // w13
-  __int64 v9; // x15
+  bool result; // w0
+  __int64 v5; // x9
+  int max_length; // w14
+  int32_t *m_Items; // x15
+  int v8; // t1
 
+  targetVals = this->fields.targetVals;
   result = 0;
-  if ( vList )
+  if ( targetVals && vList )
   {
-    targetVals = this->fields.targetVals;
-    if ( targetVals )
+    if ( (int)targetVals->max_length < 1 )
     {
-      if ( (int)targetVals->max_length < 1 )
+      return 0;
+    }
+    else
+    {
+      v5 = 0;
+      while ( SLODWORD(vList->max_length) < 1 )
       {
-        return 0;
+LABEL_9:
+        ++v5;
+        result = 0;
+        if ( v5 == (unsigned int)targetVals->max_length )
+          return result;
       }
-      else
+      max_length = vList->max_length;
+      m_Items = vList->m_Items;
+      while ( 1 )
       {
-        max_length = (unsigned int)targetVals->max_length;
-        v7 = 0;
-        while ( 1 )
-        {
-          if ( v7 >= max_length )
-LABEL_16:
-            sub_1D0F314(0);
-          v8 = vList->max_length;
-          if ( v8 >= 1 )
-            break;
-LABEL_11:
-          ++v7;
-          result = 0;
-          if ( (__int64)v7 >= (int)max_length )
-            return result;
-        }
-        v9 = 0;
-        while ( 1 )
-        {
-          if ( (unsigned int)v9 >= v8 )
-            goto LABEL_16;
-          if ( targetVals->m_Items[v7] == vList->m_Items[v9] )
-            return 1;
-          if ( (int)++v9 >= v8 )
-            goto LABEL_11;
-        }
+        v8 = *m_Items++;
+        if ( targetVals->m_Items[v5] == v8 )
+          return 1;
+        if ( !--max_length )
+          goto LABEL_9;
       }
     }
   }

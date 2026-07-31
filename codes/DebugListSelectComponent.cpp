@@ -12,130 +12,133 @@ void DebugListSelectComponent__CheckBattleBGResourceExist(
 {
   DebugListSelectComponent_o *v4; // x19
   System_String_array *v5; // x0
-  DebugListSelectComponent___c_c *v6; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x20
+  __int64 v6; // x1
+  DebugListSelectComponent___c_c *v7; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x20
+  struct DebugListSelectComponent___c_StaticFields *static_fields; // x9
   System_Func_object__int__o *_9__28_0; // x21
-  Il2CppObject *v9; // x22
-  struct DebugListSelectComponent___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
+  Il2CppObject *v11; // x22
+  struct DebugListSelectComponent___c_StaticFields *v12; // x0
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
   int32_t BaseCell; // w20
   int32_t BaseCell_high; // w21
-  BgResourceData_o *v20; // x22
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  BgResourceData_o *v22; // x22
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   struct BgResourceData_o *bgResourceData; // x8
-  Il2CppObject *v28; // x0
-  System_String_o *v29; // x20
-  AssetLoader_LoadEndDataHandler_o *v30; // x21
+  Il2CppObject *v30; // x0
+  System_String_o *v31; // x20
+  AssetLoader_LoadEndDataHandler_o *v32; // x21
+  __int64 v33; // x1
   int32_t Id_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4E78C86 & 1) == 0 )
+  if ( (byte_5939CCD & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&BgResourceData_TypeInfo);
-    sub_1D0F0B4(&Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1D0F0B4(&System_Func_string__int__TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1D0F0B4(&Method_DebugListSelectComponent___c__CheckBattleBGResourceExist_b__28_0__);
-    sub_1D0F0B4(&DebugListSelectComponent___c_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3180/*"Bg/{0}"*/);
-    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
-    this = (DebugListSelectComponent_o *)sub_1D0F0B4(&StringLiteral_25918/*"アセットが存在しません。"*/);
-    byte_4E78C86 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&BgResourceData_TypeInfo);
+    sub_21FFC50(&Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_21FFC50(&System_Func_string__int__TypeInfo);
+    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_21FFC50(&Method_DebugListSelectComponent___c__CheckBattleBGResourceExist_b__28_0__);
+    sub_21FFC50(&DebugListSelectComponent___c_TypeInfo);
+    sub_21FFC50(&StringLiteral_3273/*"Bg/{0}"*/);
+    sub_21FFC50(&StringLiteral_1532/*":"*/);
+    this = (DebugListSelectComponent_o *)sub_21FFC50(&StringLiteral_26744/*"アセットが存在しません。"*/);
+    byte_5939CCD = 1;
   }
   if ( !bgid )
     goto LABEL_19;
-  v5 = System_String__Split_65614680(bgid, (System_String_o *)StringLiteral_1453/*":"*/, 0, 0);
-  v6 = DebugListSelectComponent___c_TypeInfo;
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)v5;
-  if ( !DebugListSelectComponent___c_TypeInfo->_2.cctor_finished )
+  v5 = System_String__Split_75495420(bgid, (System_String_o *)StringLiteral_1532/*":"*/, 0, 0);
+  v7 = DebugListSelectComponent___c_TypeInfo;
+  v8 = (System_Collections_Generic_IEnumerable_TSource__o *)v5;
+  if ( !*(&DebugListSelectComponent___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(DebugListSelectComponent___c_TypeInfo);
-    v6 = DebugListSelectComponent___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(DebugListSelectComponent___c_TypeInfo, v6);
+    v7 = DebugListSelectComponent___c_TypeInfo;
   }
-  _9__28_0 = (System_Func_object__int__o *)v6->static_fields->__9__28_0;
+  static_fields = v7->static_fields;
+  _9__28_0 = (System_Func_object__int__o *)static_fields->__9__28_0;
   if ( !_9__28_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !*(&v7->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = DebugListSelectComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v7, v6);
+      static_fields = DebugListSelectComponent___c_TypeInfo->static_fields;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__28_0 = (System_Func_object__int__o *)sub_1D0F300(System_Func_string__int__TypeInfo);
+    v11 = (Il2CppObject *)static_fields->__9;
+    _9__28_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__28_0,
-      v9,
+      v11,
       Method_DebugListSelectComponent___c__CheckBattleBGResourceExist_b__28_0__,
       0);
-    static_fields = DebugListSelectComponent___c_TypeInfo->static_fields;
-    static_fields->__9__28_0 = (struct System_Func_string__int__o *)_9__28_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__28_0,
-      (int32_t)_9__28_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    v12 = DebugListSelectComponent___c_TypeInfo->static_fields;
+    v12->__9__28_0 = (struct System_Func_string__int__o *)_9__28_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__28_0, (int32_t)_9__28_0, v13, v14, v15, v16, v17, v18);
   }
-  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                               v7,
+  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                               v8,
                                                                (System_Func_TSource__TResult__o *)_9__28_0,
-                                                               (const MethodInfo_3285DC8 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                               (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_string__int___);
   this = (DebugListSelectComponent_o *)System_Linq_Enumerable__ToArray_int_(
-                                         v17,
-                                         (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                         v19,
+                                         (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !this )
     goto LABEL_19;
   if ( SLODWORD(this->fields.m_CancellationTokenSource) < 2 )
     return;
   BaseCell = (int32_t)this->fields.BaseCell;
   BaseCell_high = HIDWORD(this->fields.BaseCell);
-  v20 = (BgResourceData_o *)sub_1D0F300(BgResourceData_TypeInfo);
-  BgResourceData___ctor(v20, BaseCell, BaseCell_high, 0);
-  v4->fields.bgResourceData = v20;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.bgResourceData, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  v22 = (BgResourceData_o *)sub_21FFEBC(BgResourceData_TypeInfo);
+  BgResourceData___ctor(v22, BaseCell, BaseCell_high, 0);
+  v4->fields.bgResourceData = v22;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v4->fields.bgResourceData,
+    (int32_t)v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
   bgResourceData = v4->fields.bgResourceData;
   if ( !bgResourceData )
     goto LABEL_19;
   Id_k__BackingField = bgResourceData->fields._Id_k__BackingField;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Id_k__BackingField);
-  v29 = System_String__Format((System_String_o *)StringLiteral_3180/*"Bg/{0}"*/, v28, 0);
-  v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1D0F300(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &Id_k__BackingField);
+  v31 = System_String__Format((System_String_o *)StringLiteral_3273/*"Bg/{0}"*/, v30, 0);
+  v32 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v30,
+    v32,
     (Il2CppObject *)v4,
     Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__,
     0);
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__loadAssetStorage(v29, v30, 1, 0, 0) )
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v33);
+  if ( !AssetManager__loadAssetStorage(v31, v32, 1, 0, 0) )
   {
     this = (DebugListSelectComponent_o *)v4->fields.messageLabel;
     v4->fields.showIndex = v4->fields.selectIndex;
     if ( this )
     {
-      UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25918/*"アセットが存在しません。"*/, 0);
+      UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_26744/*"アセットが存在しません。"*/, 0);
       return;
     }
 LABEL_19:
-    sub_1D0F30C(this, bgid);
+    sub_21FFECC(this, bgid);
   }
 }
 
@@ -147,65 +150,70 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
 {
   AssetData_o *v3; // x20
   DebugListSelectComponent_o *v4; // x19
+  int32_t selectIndex; // w9
   struct BgResourceData_o *bgResourceData; // x8
-  System_String_o *v6; // x0
-  Il2CppObject *Object_object__52624444; // x21
-  __int64 *v8; // x8
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  Il2CppObject *Object_object__58323140; // x21
+  __int64 v10; // x1
+  __int64 *v11; // x8
   struct UILabel_o *selectingItemLabel; // x8
   struct System_Action_string__bool__o *callback; // x9
   int Type_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
   v3 = data;
   v4 = this;
-  if ( (byte_4E78C87 & 1) == 0 )
+  if ( (byte_5939CCE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_17391/*"bg"*/);
-    sub_1D0F0B4(&StringLiteral_25918/*"アセットが存在しません。"*/);
-    this = (DebugListSelectComponent_o *)sub_1D0F0B4(&StringLiteral_17394/*"bg0"*/);
-    byte_4E78C87 = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_17833/*"bg"*/);
+    sub_21FFC50(&StringLiteral_26744/*"アセットが存在しません。"*/);
+    this = (DebugListSelectComponent_o *)sub_21FFC50(&StringLiteral_17836/*"bg0"*/);
+    byte_5939CCE = 1;
   }
+  selectIndex = v4->fields.selectIndex;
   bgResourceData = v4->fields.bgResourceData;
-  v4->fields.showIndex = v4->fields.selectIndex;
+  Type_k__BackingField = 0;
+  v4->fields.showIndex = selectIndex;
   if ( !bgResourceData )
     goto LABEL_23;
   Type_k__BackingField = bgResourceData->fields._Type_k__BackingField;
   if ( Type_k__BackingField <= 0 )
   {
-    data = (AssetData_o *)StringLiteral_17391/*"bg"*/;
+    data = (AssetData_o *)StringLiteral_17833/*"bg"*/;
     if ( !v3 )
       goto LABEL_23;
   }
   else
   {
-    v6 = System_Int32__ToString((int32_t)&Type_k__BackingField, 0);
-    this = (DebugListSelectComponent_o *)System_String__Concat_65562772((System_String_o *)StringLiteral_17391/*"bg"*/, v6, 0);
+    v7 = System_Int32__ToString((int32_t)&Type_k__BackingField, 0);
+    this = (DebugListSelectComponent_o *)System_String__Concat_75438412((System_String_o *)StringLiteral_17833/*"bg"*/, v7, 0);
     data = (AssetData_o *)this;
     if ( !v3 )
       goto LABEL_23;
   }
-  Object_object__52624444 = AssetData__GetObject_object__52624444(
+  Object_object__58323140 = AssetData__GetObject_object__58323140(
                               v3,
                               (System_String_o *)data,
-                              (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__52624444, 0, 0) )
+                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__58323140, 0, 0) )
   {
     if ( Type_k__BackingField <= 0 )
-      v8 = &StringLiteral_17394/*"bg0"*/;
+      v11 = &StringLiteral_17836/*"bg0"*/;
     else
-      v8 = &StringLiteral_17391/*"bg"*/;
-    Object_object__52624444 = AssetData__GetObject_object__52624444(
+      v11 = &StringLiteral_17833/*"bg"*/;
+    Object_object__58323140 = AssetData__GetObject_object__58323140(
                                 v3,
-                                (System_String_o *)*v8,
-                                (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
+                                (System_String_o *)*v11,
+                                (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   this = (DebugListSelectComponent_o *)UnityEngine_Object__op_Inequality(
-                                         (UnityEngine_Object_o *)Object_object__52624444,
+                                         (UnityEngine_Object_o *)Object_object__58323140,
                                          0,
                                          0);
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -225,12 +233,12 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
       }
     }
 LABEL_23:
-    sub_1D0F30C(this, data);
+    sub_21FFECC(this, data);
   }
   this = (DebugListSelectComponent_o *)v4->fields.messageLabel;
   if ( !this )
     goto LABEL_23;
-  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25918/*"アセットが存在しません。"*/, 0);
+  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_26744/*"アセットが存在しません。"*/, 0);
 }
 
 
@@ -241,7 +249,7 @@ void DebugListSelectComponent__Close(DebugListSelectComponent_o *this, const Met
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -251,23 +259,23 @@ System_Collections_IEnumerator_o *DebugListSelectComponent__CreateListCoroutine(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E78C81 & 1) == 0 )
+  if ( (byte_5939CC8 & 1) == 0 )
   {
-    sub_1D0F0B4(&DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
-    byte_4E78C81 = 1;
+    sub_21FFC50(&DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
+    byte_5939CC8 = 1;
   }
-  v3 = sub_1D0F300(DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
+  v3 = sub_21FFEBC(DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -285,12 +293,12 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
   struct System_Action_string__bool__o *callback; // x9
 
   v2 = this;
-  if ( (byte_4E78C83 & 1) == 0 )
+  if ( (byte_5939CCA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (DebugListSelectComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78C83 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
+    this = (DebugListSelectComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939CCA = 1;
   }
   showIndex = v2->fields.showIndex;
   if ( (showIndex & 0x80000000) == 0 )
@@ -312,7 +320,7 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
     this = (DebugListSelectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)this,
                                            v2->fields.selectIndex,
-                                           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !selectingItemLabel )
       goto LABEL_18;
     UILabel__set_text(selectingItemLabel, (System_String_o *)this, 0);
@@ -325,7 +333,7 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
         return;
       }
 LABEL_18:
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
     v9 = v2->fields.selectingItemLabel;
     v2->fields.showIndex = v2->fields.selectIndex;
@@ -346,10 +354,10 @@ LABEL_18:
 void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, const MethodInfo *method)
 {
   DebugListSelectComponent_o *v2; // x19
-  int showIndex; // w8
+  int32_t showIndex; // w8
   struct System_Collections_Generic_List_string__o *filteredList; // x9
-  int size; // w9
-  int v6; // w11
+  int32_t size; // w9
+  int v6; // w10
   int v7; // w9
   int32_t v8; // w8
   UILabel_o *selectingItemLabel; // x20
@@ -359,12 +367,12 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
   struct System_Action_string__bool__o *callback; // x9
 
   v2 = this;
-  if ( (byte_4E78C84 & 1) == 0 )
+  if ( (byte_5939CCB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (DebugListSelectComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78C84 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
+    this = (DebugListSelectComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939CCB = 1;
   }
   showIndex = v2->fields.showIndex;
   if ( (showIndex & 0x80000000) == 0 )
@@ -377,7 +385,7 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
     this = (DebugListSelectComponent_o *)v2->fields.messageLabel;
     v6 = size - 1;
     v7 = showIndex >= size ? 0 : showIndex - 1;
-    v8 = showIndex >= 1 ? v7 : v6;
+    v8 = showIndex ? v7 : v6;
     v2->fields.selectIndex = v8;
     if ( !this )
       goto LABEL_21;
@@ -389,7 +397,7 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
     this = (DebugListSelectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)this,
                                            v2->fields.selectIndex,
-                                           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !selectingItemLabel )
       goto LABEL_21;
     UILabel__set_text(selectingItemLabel, (System_String_o *)this, 0);
@@ -402,7 +410,7 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
         return;
       }
 LABEL_21:
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
     v12 = v2->fields.selectingItemLabel;
     v2->fields.showIndex = v2->fields.selectIndex;
@@ -428,10 +436,10 @@ void DebugListSelectComponent__OnClickSubmit(DebugListSelectComponent_o *this, c
   struct UILabel_o *v6; // x8
   struct System_Action_string__bool__o *callback; // x9
 
-  if ( (byte_4E78C82 & 1) == 0 )
+  if ( (byte_5939CC9 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78C82 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939CC9 = 1;
   }
   if ( this->fields.callback && (this->fields.selectIndex & 0x80000000) == 0 )
   {
@@ -448,7 +456,7 @@ void DebugListSelectComponent__OnClickSubmit(DebugListSelectComponent_o *this, c
         return;
       }
 LABEL_13:
-      sub_1D0F30C(messageLabel, method);
+      sub_21FFECC(messageLabel, method);
     }
     v6 = this->fields.selectingItemLabel;
     this->fields.showIndex = this->fields.selectIndex;
@@ -472,23 +480,23 @@ void DebugListSelectComponent__OnSearchLabelChange(DebugListSelectComponent_o *t
   struct UnityEngine_Coroutine_o **p_createListCoroutine; // x20
   const MethodInfo *v5; // x1
   System_Collections_IEnumerator_o *ListCoroutine; // x0
-  struct UnityEngine_Coroutine_o *started; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  struct UnityEngine_Coroutine_o *started; // x1
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
   p_createListCoroutine = &this->fields.createListCoroutine;
   createListCoroutine = this->fields.createListCoroutine;
   if ( createListCoroutine )
-    UnityEngine_MonoBehaviour__StopCoroutine_73345296((UnityEngine_MonoBehaviour_o *)this, createListCoroutine, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine_83232056((UnityEngine_MonoBehaviour_o *)this, createListCoroutine, 0);
   DebugListSelectComponent__RemoveList(this, (const MethodInfo *)createListCoroutine);
   ListCoroutine = DebugListSelectComponent__CreateListCoroutine(this, v5);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
   this->fields.createListCoroutine = started;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_createListCoroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_createListCoroutine, (int32_t)started, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -502,18 +510,18 @@ void DebugListSelectComponent__Open(
 {
   __int64 gameObject; // x0
   __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t size; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  bool v17; // w6
+  bool v18; // w7
+  System_String_o *size; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
   struct System_Collections_Generic_List_string__o *dataList; // x8
   int v26; // w9
   struct UIInput_o *inputField; // x8
@@ -522,12 +530,12 @@ void DebugListSelectComponent__Open(
   int v30; // w10
   System_Collections_Generic_List_object__o *v31; // x21
   EventDelegate_o *v32; // x22
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
   int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
+  bool v37; // w6
+  bool v38; // w7
   struct System_Object_array *items; // x8
   _QWORD *v40; // x9
   __int64 v41; // x10
@@ -551,12 +559,12 @@ void DebugListSelectComponent__Open(
   struct UIButton_o *v59; // x8
   System_Collections_Generic_List_object__o *v60; // x21
   EventDelegate_o *v61; // x22
-  int32_t v62; // w2
-  int32_t v63; // w3
-  System_String_o *v64; // x4
+  System_String_o *v62; // x2
+  System_String_o *v63; // x3
+  int32_t v64; // w4
   int32_t v65; // w5
-  int64_t v66; // x6
-  System_String_o *v67; // x7
+  bool v66; // w6
+  bool v67; // w7
   struct System_Object_array *v68; // x8
   _QWORD *v69; // x9
   __int64 v70; // x10
@@ -564,12 +572,12 @@ void DebugListSelectComponent__Open(
   struct UIButton_o *v72; // x8
   System_Collections_Generic_List_object__o *v73; // x21
   EventDelegate_o *v74; // x22
-  int32_t v75; // w2
-  int32_t v76; // w3
-  System_String_o *v77; // x4
+  System_String_o *v75; // x2
+  System_String_o *v76; // x3
+  int32_t v77; // w4
   int32_t v78; // w5
-  int64_t v79; // x6
-  System_String_o *v80; // x7
+  bool v79; // w6
+  bool v80; // w7
   struct System_Object_array *v81; // x8
   _QWORD *v82; // x9
   __int64 v83; // x10
@@ -577,12 +585,12 @@ void DebugListSelectComponent__Open(
   struct UIButton_o *v85; // x8
   System_Collections_Generic_List_object__o *v86; // x21
   EventDelegate_o *v87; // x22
-  int32_t v88; // w2
-  int32_t v89; // w3
-  System_String_o *v90; // x4
+  System_String_o *v88; // x2
+  System_String_o *v89; // x3
+  int32_t v90; // w4
   int32_t v91; // w5
-  int64_t v92; // x6
-  System_String_o *v93; // x7
+  bool v92; // w6
+  bool v93; // w7
   struct System_Object_array *v94; // x8
   _QWORD *v95; // x9
   __int64 v96; // x10
@@ -590,12 +598,12 @@ void DebugListSelectComponent__Open(
   struct UIButton_o *v98; // x8
   System_Collections_Generic_List_object__o *v99; // x21
   EventDelegate_o *v100; // x22
-  int32_t v101; // w2
-  int32_t v102; // w3
-  System_String_o *v103; // x4
+  System_String_o *v101; // x2
+  System_String_o *v102; // x3
+  int32_t v103; // w4
   int32_t v104; // w5
-  int64_t v105; // x6
-  System_String_o *v106; // x7
+  bool v105; // w6
+  bool v106; // w7
   struct System_Object_array *v107; // x8
   _QWORD *v108; // x9
   __int64 v109; // x10
@@ -605,27 +613,27 @@ void DebugListSelectComponent__Open(
   const MethodInfo *v113; // x1
   System_Collections_IEnumerator_o *ListCoroutine; // x0
   struct UnityEngine_Coroutine_o *started; // x0
-  int32_t v116; // w2
-  int32_t v117; // w3
-  System_String_o *v118; // x4
+  System_String_o *v116; // x2
+  System_String_o *v117; // x3
+  int32_t v118; // w4
   int32_t v119; // w5
-  int64_t v120; // x6
-  System_String_o *v121; // x7
+  bool v120; // w6
+  bool v121; // w7
 
-  if ( (byte_4E78C80 & 1) == 0 )
+  if ( (byte_5939CC7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1D0F0B4(&StringLiteral_10074/*"OnSearchLabelChange"*/);
-    sub_1D0F0B4(&StringLiteral_9979/*"OnClickNext"*/);
-    sub_1D0F0B4(&StringLiteral_4550/*"Close"*/);
-    sub_1D0F0B4(&StringLiteral_9991/*"OnClickSubmit"*/);
-    sub_1D0F0B4(&StringLiteral_9981/*"OnClickPrev"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78C80 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_21FFC50(&StringLiteral_10346/*"OnSearchLabelChange"*/);
+    sub_21FFC50(&StringLiteral_10248/*"OnClickNext"*/);
+    sub_21FFC50(&StringLiteral_4674/*"Close"*/);
+    sub_21FFC50(&StringLiteral_10260/*"OnClickSubmit"*/);
+    sub_21FFC50(&StringLiteral_10250/*"OnClickPrev"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939CC7 = 1;
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -636,19 +644,27 @@ void DebugListSelectComponent__Open(
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   this->fields.callback = callback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callback, (int32_t)callback, v13, v14, v15, v16, v17, v18);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
+    (int32_t)callback,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
   dataList = this->fields.dataList;
   if ( dataList )
   {
-    size = dataList->fields._size;
+    size = (System_String_o *)(unsigned int)dataList->fields._size;
     v26 = dataList->fields._version + 1;
     dataList->fields._size = 0;
     dataList->fields._version = v26;
-    if ( size >= 1 )
-      System_Array__Clear((System_Array_o *)dataList->fields._items, 0, size, 0);
+    if ( (int)size >= 1 )
+      System_Array__Clear((System_Array_o *)dataList->fields._items, 0, (int32_t)size, 0);
   }
   this->fields.dataList = list;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dataList, (int32_t)list, size, v20, v21, v22, v23, v24);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dataList, (int32_t)list, size, v20, v21, v22, v23, v24);
   gameObject = (__int64)this->fields.selectingItemLabel;
   if ( !gameObject )
     goto LABEL_71;
@@ -683,8 +699,8 @@ void DebugListSelectComponent__Open(
       goto LABEL_71;
   }
   v31 = (System_Collections_Generic_List_object__o *)inputField->fields.onChange;
-  v32 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v32, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10074/*"OnSearchLabelChange"*/, 0);
+  v32 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v32, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10346/*"OnSearchLabelChange"*/, 0);
   if ( !v31 )
     goto LABEL_71;
   items = v31->fields._items;
@@ -698,14 +714,14 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v31,
       (Il2CppObject *)v32,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
   }
   else
   {
     v42 = &items->obj.klass + v41;
     v31->fields._size = v41 + 1;
     v42[4] = (Il2CppClass *)v32;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v42 + 4), (int32_t)v32, v33, v34, v35, v36, v37, v38);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v42 + 4), (int32_t)v32, v33, v34, v35, v36, v37, v38);
   }
   submitButton = this->fields.submitButton;
   if ( !submitButton )
@@ -759,8 +775,8 @@ void DebugListSelectComponent__Open(
   if ( !v59 )
     goto LABEL_71;
   v60 = (System_Collections_Generic_List_object__o *)v59->fields.onClick;
-  v61 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v61, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9991/*"OnClickSubmit"*/, 0);
+  v61 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v61, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10260/*"OnClickSubmit"*/, 0);
   if ( !v60 )
     goto LABEL_71;
   v68 = v60->fields._items;
@@ -774,21 +790,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v60,
       (Il2CppObject *)v61,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
   }
   else
   {
     v71 = &v68->obj.klass + v70;
     v60->fields._size = v70 + 1;
     v71[4] = (Il2CppClass *)v61;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v71 + 4), (int32_t)v61, v62, v63, v64, v65, v66, v67);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v71 + 4), (int32_t)v61, v62, v63, v64, v65, v66, v67);
   }
   v72 = this->fields.closeButton;
   if ( !v72 )
     goto LABEL_71;
   v73 = (System_Collections_Generic_List_object__o *)v72->fields.onClick;
-  v74 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v74, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_4550/*"Close"*/, 0);
+  v74 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v74, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_4674/*"Close"*/, 0);
   if ( !v73 )
     goto LABEL_71;
   v81 = v73->fields._items;
@@ -802,21 +818,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v73,
       (Il2CppObject *)v74,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
   }
   else
   {
     v84 = &v81->obj.klass + v83;
     v73->fields._size = v83 + 1;
     v84[4] = (Il2CppClass *)v74;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v84 + 4), (int32_t)v74, v75, v76, v77, v78, v79, v80);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v84 + 4), (int32_t)v74, v75, v76, v77, v78, v79, v80);
   }
   v85 = this->fields.nextButton;
   if ( !v85 )
     goto LABEL_71;
   v86 = (System_Collections_Generic_List_object__o *)v85->fields.onClick;
-  v87 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v87, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9979/*"OnClickNext"*/, 0);
+  v87 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v87, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10248/*"OnClickNext"*/, 0);
   if ( !v86 )
     goto LABEL_71;
   v94 = v86->fields._items;
@@ -830,21 +846,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v86,
       (Il2CppObject *)v87,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v95[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v95[4] + 192LL) + 112LL));
   }
   else
   {
     v97 = &v94->obj.klass + v96;
     v86->fields._size = v96 + 1;
     v97[4] = (Il2CppClass *)v87;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v97 + 4), (int32_t)v87, v88, v89, v90, v91, v92, v93);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v97 + 4), (int32_t)v87, v88, v89, v90, v91, v92, v93);
   }
   v98 = this->fields.prevButton;
   if ( !v98 )
     goto LABEL_71;
   v99 = (System_Collections_Generic_List_object__o *)v98->fields.onClick;
-  v100 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v100, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9981/*"OnClickPrev"*/, 0);
+  v100 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v100, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10250/*"OnClickPrev"*/, 0);
   if ( !v99 )
     goto LABEL_71;
   v107 = v99->fields._items;
@@ -858,24 +874,24 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v99,
       (Il2CppObject *)v100,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
   }
   else
   {
     v110 = &v107->obj.klass + v109;
     v99->fields._size = v109 + 1;
     v110[4] = (Il2CppClass *)v100;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v110 + 4), (int32_t)v100, v101, v102, v103, v104, v105, v106);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v110 + 4), (int32_t)v100, v101, v102, v103, v104, v105, v106);
   }
   gameObject = (__int64)this->fields.ScrollView;
   if ( !gameObject )
     goto LABEL_71;
   gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
   v111 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    gameObject = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    gameObject = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   if ( !v111 )
     goto LABEL_71;
@@ -885,23 +901,23 @@ void DebugListSelectComponent__Open(
     goto LABEL_71;
   gameObject = (__int64)UnityEngine_Component__GetComponent_object_(
                           (UnityEngine_Component_o *)gameObject,
-                          (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   v112 = (UIPanel_o *)gameObject;
-  if ( !byte_4E70B79 )
+  if ( !byte_5931820 )
   {
-    gameObject = sub_1D0F0B4(&UnityEngine_Vector2_TypeInfo);
-    byte_4E70B79 = 1;
+    gameObject = sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+    byte_5931820 = 1;
   }
   if ( !v112 )
 LABEL_71:
-    sub_1D0F30C(gameObject, v12);
+    sub_21FFECC(gameObject, v12);
   UIPanel__set_clipOffset(v112, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0);
   this->fields.dataType = type;
   ListCoroutine = DebugListSelectComponent__CreateListCoroutine(this, v113);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
   this->fields.createListCoroutine = started;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.createListCoroutine,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.createListCoroutine,
     (int32_t)started,
     v116,
     v117,
@@ -916,17 +932,18 @@ void DebugListSelectComponent__RemoveList(DebugListSelectComponent_o *this, cons
 {
   UnityEngine_Component_o *grid; // x0
   int32_t v4; // w20
+  __int64 v5; // x1
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4E78C85 & 1) == 0 )
+  if ( (byte_5939CCC & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78C85 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939CCC = 1;
   }
   grid = (UnityEngine_Component_o *)this->fields.grid;
   if ( !grid )
 LABEL_13:
-    sub_1D0F30C(grid, method);
+    sub_21FFECC(grid, method);
   v4 = 0;
   while ( 1 )
   {
@@ -945,9 +962,9 @@ LABEL_13:
         if ( grid )
         {
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(grid, 0);
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_73359484(gameObject, 0);
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+          UnityEngine_Object__Destroy_83246496(gameObject, 0);
           grid = (UnityEngine_Component_o *)this->fields.grid;
           ++v4;
           if ( grid )
@@ -970,7 +987,7 @@ void DebugListSelectComponent__TapItemSelectCallback(
 
   selectingItemLabel = this->fields.selectingItemLabel;
   if ( !selectingItemLabel )
-    sub_1D0F30C(0, id);
+    sub_21FFECC(0, id);
   UILabel__set_text(selectingItemLabel, id, 0);
   this->fields.selectIndex = index;
 }
@@ -994,38 +1011,38 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   int32_t _1__state; // w8
   struct DebugListSelectComponent_o *_4__this; // x20
   __int64 v5; // x22
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   System_Collections_Generic_List_object__o *v12; // x24
   System_Collections_Generic_IEnumerable_TSource__o **p_filteredList; // x21
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   bool v20; // w0
   System_Collections_Generic_IEnumerable_TSource__o *dataList; // x23
   System_Func_object__bool__o *v22; // x24
   System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
   System_Collections_Generic_List_TSource__o *v24; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
   int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  bool v29; // w6
+  bool v30; // w7
   System_Collections_Generic_List_object__o *v31; // x22
-  int32_t v32; // w2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
   int32_t v35; // w5
-  int64_t v36; // x6
-  System_String_o *v37; // x7
+  bool v36; // w6
+  bool v37; // w7
   int v38; // w8
   bool result; // w0
   Il2CppObject *BaseCell; // x21
@@ -1042,35 +1059,35 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   int32_t interval_5__2; // w9
   int v52; // w8
   struct System_Collections_Generic_List_string__o *filteredList; // x9
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
-  int32_t v55; // w2
-  int32_t v56; // w3
-  System_String_o *v57; // x4
+  MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  System_String_o *v55; // x2
+  System_String_o *v56; // x3
+  int32_t v57; // w4
   int32_t v58; // w5
-  int64_t v59; // x6
-  System_String_o *v60; // x7
+  bool v59; // w6
+  bool v60; // w7
 
   v2 = this;
-  if ( (byte_4E78C89 & 1) == 0 )
+  if ( (byte_5939CD0 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_string__int__TypeInfo);
-    sub_1D0F0B4(&Method_DebugListSelectComponent_TapItemSelectCallback__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Count_string___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_string___);
-    sub_1D0F0B4(&System_Func_string__bool__TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor___80331160);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_DebugListSelectComponent___c__DisplayClass19_0__CreateListCoroutine_b__0__);
-    sub_1D0F0B4(&DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
-    this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78C89 = 1;
+    sub_21FFC50(&System_Action_string__int__TypeInfo);
+    sub_21FFC50(&Method_DebugListSelectComponent_TapItemSelectCallback__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Count_string___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_string___);
+    sub_21FFC50(&System_Func_string__bool__TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor___91439360);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_DebugListSelectComponent___c__DisplayClass19_0__CreateListCoroutine_b__0__);
+    sub_21FFC50(&DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
+    this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939CD0 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1082,7 +1099,7 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   if ( _1__state )
     return 0;
   v2->fields.__1__state = -1;
-  v5 = sub_1D0F300(DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
+  v5 = sub_21FFEBC(DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !_4__this )
     goto LABEL_39;
@@ -1094,19 +1111,27 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   if ( !v5 )
     goto LABEL_39;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
   _4__this->fields.filteredList = (struct System_Collections_Generic_List_string__o *)v12;
   p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o **)&_4__this->fields.filteredList;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&_4__this->fields.filteredList, (int32_t)v12, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&_4__this->fields.filteredList,
+    (int32_t)v12,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   v20 = System_String__op_Inequality(*(System_String_o **)(v5 + 16), (System_String_o *)StringLiteral_1/*""*/, 0);
   dataList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.dataList;
   if ( !v20 )
     goto LABEL_11;
-  v22 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_string__bool__TypeInfo);
+  v22 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v22,
     (Il2CppObject *)v5,
@@ -1115,27 +1140,35 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   v23 = System_Linq_Enumerable__Where_object_(
           dataList,
           (System_Func_TSource__bool__o *)v22,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_string___);
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_string___);
   v24 = System_Linq_Enumerable__ToList_object_(
           v23,
-          (const MethodInfo_329539C *)Method_System_Linq_Enumerable_ToList_string___);
+          (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_string___);
   *p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o *)v24;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&_4__this->fields.filteredList, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&_4__this->fields.filteredList,
+    (int32_t)v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30);
   this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)System_Linq_Enumerable__Count_object_(
                                                                     *p_filteredList,
-                                                                    (const MethodInfo_326FA04 *)Method_System_Linq_Enumerable_Count_string___);
+                                                                    (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_string___);
   if ( (int)this <= 0 )
   {
     dataList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.dataList;
 LABEL_11:
-    v31 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_60144900(
+    v31 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_71627776(
       v31,
       (System_Collections_Generic_IEnumerable_T__o *)dataList,
-      (const MethodInfo_395BD04 *)Method_System_Collections_Generic_List_string___ctor___80331160);
+      (const MethodInfo_444F400 *)Method_System_Collections_Generic_List_string___ctor___91439360);
     *p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o *)v31;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&_4__this->fields.filteredList,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&_4__this->fields.filteredList,
       (int32_t)v31,
       v32,
       v33,
@@ -1177,14 +1210,14 @@ LABEL_11:
         }
       }
 LABEL_39:
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
     BaseCell = (Il2CppObject *)_4__this->fields.BaseCell;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)UnityEngine_Object__Instantiate_object_(
                                                                       BaseCell,
-                                                                      (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                      (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !this )
       goto LABEL_39;
     v41 = this;
@@ -1205,10 +1238,10 @@ LABEL_39:
                                                                       (UnityEngine_GameObject_o *)v41,
                                                                       0);
     v43 = this;
-    if ( !byte_4E70C99 )
+    if ( !byte_5931940 )
     {
-      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
+      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
     }
     if ( !v43 )
       goto LABEL_39;
@@ -1220,10 +1253,10 @@ LABEL_39:
                                                                       (UnityEngine_GameObject_o *)v41,
                                                                       0);
     v44 = this;
-    if ( !byte_4E70C9E )
+    if ( !byte_5931945 )
     {
-      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C9E = 1;
+      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931945 = 1;
     }
     if ( !v44 )
       goto LABEL_39;
@@ -1233,17 +1266,17 @@ LABEL_39:
       0);
     this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       (UnityEngine_GameObject_o *)v41,
-                                                                      (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
+                                                                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
     if ( !_4__this->fields.filteredList )
       goto LABEL_39;
     v45 = (DebugListSelectCellComponent_o *)this;
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)_4__this->fields.filteredList,
              v2->fields._i_5__4,
-             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_string__get_Item__);
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
     i_5__4 = v2->fields._i_5__4;
     v48 = (System_String_o *)Item;
-    v49 = (System_Action_T1__T2__o *)sub_1D0F300(System_Action_string__int__TypeInfo);
+    v49 = (System_Action_T1__T2__o *)sub_21FFEBC(System_Action_string__int__TypeInfo);
     System_Action_object__int____ctor(
       v49,
       (Il2CppObject *)_4__this,
@@ -1261,18 +1294,18 @@ LABEL_29:
     v38 = v2->fields._i_5__4 + 1;
     v2->fields._i_5__4 = v38;
   }
-  v2->fields._cnt_5__3 = 0;
   this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)_4__this->fields.grid;
+  v2->fields._cnt_5__3 = 0;
   if ( !this )
     goto LABEL_39;
   ((void (__fastcall *)(DebugListSelectComponent__CreateListCoroutine_d__19_o *, const MethodInfo *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
     this,
     this->klass->vtable._8_System_Collections_IEnumerator_Reset.method);
   v2->fields.__2__current = 0;
-  p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-  sub_1D0F058(p__2__current, 0, v55, v56, v57, v58, v59, v60);
+  p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
+  sub_21FFBF4(p__2__current, 0, v55, v56, v57, v58, v59, v60);
   result = 1;
-  LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
+  p__2__current[-1].fields._BoardType_k__BackingField = 1;
   return result;
 }
 
@@ -1293,11 +1326,11 @@ void __noreturn DebugListSelectComponent__CreateListCoroutine_d__19__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_DebugListSelectComponent__CreateListCoroutine_d__19_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_DebugListSelectComponent__CreateListCoroutine_d__19_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 
@@ -1320,23 +1353,23 @@ void DebugListSelectComponent__CreateListCoroutine_d__19__System_IDisposable_Dis
 void DebugListSelectComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E78C88 & 1) == 0 )
+  if ( (byte_5939CCF & 1) == 0 )
   {
-    sub_1D0F0B4(&DebugListSelectComponent___c_TypeInfo);
-    byte_4E78C88 = 1;
+    sub_21FFC50(&DebugListSelectComponent___c_TypeInfo);
+    byte_5939CCF = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(DebugListSelectComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(DebugListSelectComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   DebugListSelectComponent___c_TypeInfo->static_fields->__9 = (struct DebugListSelectComponent___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)DebugListSelectComponent___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)DebugListSelectComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -1376,6 +1409,6 @@ bool DebugListSelectComponent___c__DisplayClass19_0___CreateListCoroutine_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return System_String__Contains(x, this->fields.searchStr, 0);
 }

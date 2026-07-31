@@ -22,156 +22,158 @@ void CommandSpellAddFunctionLabelComponent__SetData(
         BattleData_o *battleData,
         const MethodInfo *method)
 {
+  int v9; // w8
   ClassBoardCommandSpellMaster_o *Master_object; // x0
-  __int64 v10; // x1
-  ClassBoardCommandSpellMaster_o *v11; // x22
+  __int64 v11; // x1
+  ClassBoardCommandSpellMaster_o *v12; // x22
   bool IsAddFunctionCommandSpell; // w24
-  int32_t battleGenderType; // w8
-  UISprite_o *commandSpellIcon; // x23
-  int32_t v15; // w24
-  char v16; // w21
+  UISprite_o *commandSpellIcon; // x24
+  int32_t v15; // w23
   struct AddSkillData_array *classBoardAddCommandSpells; // x23
   int max_length; // w8
-  bool v19; // w24
-  int v20; // w25
-  AddSkillData_o *v21; // x8
-  bool IsNullOrEmpty; // w0
+  _BOOL4 v18; // w24
+  __int64 v19; // x25
+  AddSkillData_o *v20; // x8
+  __int64 v21; // x1
+  UILabel_o *v22; // x20
+  float v23; // s0 OVERLAPPED
+  float v24; // s1
+  float v25; // s2
+  float v26; // s3
   UILabel_o *addFunctionLabel; // x20
-  char v24; // w21
-  float v25; // s0 OVERLAPPED
-  float v26; // s1
-  float v27; // s2
-  float v28; // s3
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E7A711 & 1) == 0 )
+  if ( (byte_593B680 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3713/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
-    sub_1D0F0B4(&StringLiteral_3712/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
-    byte_4E7A711 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3812/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
+    sub_21FFC50(&StringLiteral_3811/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
+    byte_593B680 = 1;
   }
+  v9 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  if ( !v9 )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, svtData);
+  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_object )
-    goto LABEL_37;
-  v11 = Master_object;
+    goto LABEL_39;
+  v12 = Master_object;
   IsAddFunctionCommandSpell = ClassBoardCommandSpellMaster__IsAddFunctionCommandSpell(Master_object, commandSpellId, 0);
   Master_object = (ClassBoardCommandSpellMaster_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)this,
                                                       0);
-  if ( !Master_object )
-    goto LABEL_37;
-  if ( !IsAddFunctionCommandSpell )
+  if ( IsAddFunctionCommandSpell )
   {
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
-    return;
-  }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
-  if ( !battleData )
-    goto LABEL_37;
-  battleGenderType = battleData->fields.battleGenderType;
-  commandSpellIcon = this->fields.commandSpellIcon;
-  if ( battleGenderType == 1 )
-    v15 = 386;
-  else
-    v15 = 387;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  Master_object = (ClassBoardCommandSpellMaster_o *)AtlasManager__SetSBuffIconByIconId(commandSpellIcon, v15, 0);
-  if ( !svtData )
-    goto LABEL_37;
-  Master_object = (ClassBoardCommandSpellMaster_o *)BasicHelper__IsNullOrEmpty(
-                                                      (System_Collections_ICollection_o *)svtData->fields.classBoardAddCommandSpells,
-                                                      0);
-  if ( ((unsigned __int8)Master_object & 1) != 0 )
-  {
-    v16 = 1;
-  }
-  else
-  {
+    if ( !Master_object )
+      goto LABEL_39;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
+    if ( !battleData )
+      goto LABEL_39;
+    commandSpellIcon = this->fields.commandSpellIcon;
+    if ( battleData->fields.battleGenderType == 1 )
+      v15 = 386;
+    else
+      v15 = 387;
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v11);
+    Master_object = (ClassBoardCommandSpellMaster_o *)AtlasManager__SetSBuffIconByIconId(commandSpellIcon, v15, 0);
+    if ( !svtData )
+      goto LABEL_39;
+    Master_object = (ClassBoardCommandSpellMaster_o *)BasicHelper__IsNullOrEmpty(
+                                                        (System_Collections_ICollection_o *)svtData->fields.classBoardAddCommandSpells,
+                                                        0);
     classBoardAddCommandSpells = svtData->fields.classBoardAddCommandSpells;
-    if ( !classBoardAddCommandSpells )
-      goto LABEL_37;
-    max_length = classBoardAddCommandSpells->max_length;
-    v19 = max_length > 0;
-    if ( max_length >= 1 )
+    if ( ((unsigned __int8)Master_object & 1) == 0 )
     {
-      v20 = 0;
-      while ( 1 )
+      if ( !classBoardAddCommandSpells )
+        goto LABEL_39;
+      max_length = classBoardAddCommandSpells->max_length;
+      v18 = max_length < 1;
+      if ( max_length >= 1 )
       {
-        if ( v20 >= (unsigned int)max_length )
-          sub_1D0F314(Master_object);
-        v21 = classBoardAddCommandSpells->m_Items[v20];
-        if ( !v21 )
-          goto LABEL_37;
-        Master_object = (ClassBoardCommandSpellMaster_o *)ClassBoardCommandSpellMaster__TryGetEntity(
-                                                            v11,
-                                                            &entity,
-                                                            v21->fields.id,
-                                                            commandSpellId,
-                                                            v21->fields.lv,
-                                                            0);
-        if ( ((unsigned __int8)Master_object & 1) == 0 )
+        v19 = 0;
+        while ( 1 )
         {
+          if ( (unsigned int)v19 >= max_length )
+            sub_21FFED4(Master_object);
+          v20 = classBoardAddCommandSpells->m_Items[v19];
+          if ( !v20 )
+            goto LABEL_39;
+          Master_object = (ClassBoardCommandSpellMaster_o *)ClassBoardCommandSpellMaster__TryGetEntity(
+                                                              v12,
+                                                              &entity,
+                                                              v20->fields.id,
+                                                              commandSpellId,
+                                                              v20->fields.lv,
+                                                              0);
+          if ( ((unsigned __int8)Master_object & 1) != 0 )
+            break;
           max_length = classBoardAddCommandSpells->max_length;
-          v19 = ++v20 < max_length;
-          if ( v20 < max_length )
-            continue;
+          v18 = (int)++v19 >= max_length;
+          if ( (int)v19 >= max_length )
+            goto LABEL_23;
         }
-        break;
+        if ( ((v18
+             | BasicHelper__IsNullOrEmpty(
+                 (System_Collections_ICollection_o *)svtData->fields.classBoardAddCommandSpells,
+                 0))
+            & 1) == 0 )
+        {
+          addFunctionLabel = this->fields.addFunctionLabel;
+          if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
+          Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
+                                                              (System_String_o *)StringLiteral_3811/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
+                                                              0);
+          if ( addFunctionLabel )
+          {
+            UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0);
+            Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
+            if ( Master_object )
+            {
+              v23 = 1.0;
+              v24 = 1.0;
+              v25 = 1.0;
+              goto LABEL_30;
+            }
+          }
+          goto LABEL_39;
+        }
+LABEL_25:
+        v22 = this->fields.addFunctionLabel;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
+        Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
+                                                            (System_String_o *)StringLiteral_3812/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/,
+                                                            0);
+        if ( v22 )
+        {
+          UILabel__set_text(v22, (System_String_o *)Master_object, 0);
+          Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
+          if ( Master_object )
+          {
+            v23 = 0.5;
+            v24 = 0.5;
+            v25 = 0.5;
+LABEL_30:
+            v26 = 1.0;
+            UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v23, 0);
+            return;
+          }
+        }
+LABEL_39:
+        sub_21FFECC(Master_object, v11);
       }
+LABEL_23:
+      classBoardAddCommandSpells = svtData->fields.classBoardAddCommandSpells;
     }
-    v16 = !v19;
+    BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)classBoardAddCommandSpells, 0);
+    goto LABEL_25;
   }
-  IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
-                    (System_Collections_ICollection_o *)svtData->fields.classBoardAddCommandSpells,
-                    0);
-  addFunctionLabel = this->fields.addFunctionLabel;
-  v24 = v16 | IsNullOrEmpty;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( (v24 & 1) != 0 )
-      goto LABEL_28;
-    goto LABEL_32;
-  }
-  if ( (v24 & 1) == 0 )
-  {
-LABEL_32:
-    Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3712/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, 0);
-    if ( addFunctionLabel )
-    {
-      UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0);
-      Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
-      if ( Master_object )
-      {
-        v25 = 1.0;
-        v26 = 1.0;
-        v27 = 1.0;
-        goto LABEL_35;
-      }
-    }
-LABEL_37:
-    sub_1D0F30C(Master_object, v10);
-  }
-LABEL_28:
-  Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3713/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0);
-  if ( !addFunctionLabel )
-    goto LABEL_37;
-  UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0);
-  Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
   if ( !Master_object )
-    goto LABEL_37;
-  v25 = 0.5;
-  v26 = 0.5;
-  v27 = 0.5;
-LABEL_35:
-  v28 = 1.0;
-  UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v25, 0);
+    goto LABEL_39;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
 }

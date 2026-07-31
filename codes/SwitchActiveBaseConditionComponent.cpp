@@ -32,13 +32,13 @@ void SwitchActiveBaseConditionComponent__SwitchActive(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4E7B06B & 1) == 0 )
+  if ( (byte_593C1B1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B06B = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C1B1 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, data);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)data, 0, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -48,7 +48,7 @@ void SwitchActiveBaseConditionComponent__SwitchActive(
            actor,
            this->klass->vtable._4_IsSatisfyCond.method);
     if ( !gameObject )
-      sub_1D0F30C(v8, v9);
+      sub_21FFECC(v8, v9);
     UnityEngine_GameObject__SetActive(gameObject, v8 & 1, 0);
   }
 }

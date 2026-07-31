@@ -38,7 +38,7 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNextFrameHeight(
 
   nextFrameSprite = this->fields.nextFrameSprite;
   if ( !nextFrameSprite )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return nextFrameSprite->fields.mHeight;
 }
 
@@ -51,45 +51,50 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNowFrameHeight(
 
   nowFrameSprite = this->fields.nowFrameSprite;
   if ( !nowFrameSprite )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return nowFrameSprite->fields.mHeight;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCharaChangeConfirmListViewItemDraw__Init(
         BattleCharaChangeConfirmListViewItemDraw_o *this,
         int32_t kind,
         const MethodInfo *method)
 {
-  struct System_String_o *v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  __int64 v12; // x1
+  LocalizationManager_c *v5; // x0
+  int v6; // w8
+  struct System_String_o *v7; // x0
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
+  __int64 v14; // x1
   UILabel_o *nowTitleLabel; // x0
 
-  if ( (byte_4E72D57 & 1) == 0 )
+  if ( (byte_5933916 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_12069/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E72D57 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_12387/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5933916 = 1;
   }
+  v5 = LocalizationManager_TypeInfo;
+  v6 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   this->fields.drawKind = kind;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12069/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
-  this->fields.modifyColor = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.modifyColor, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  if ( !v6 )
+    j_il2cpp_runtime_class_init_0(v5, *(_QWORD *)&kind, method);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12387/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
+  this->fields.modifyColor = v7;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.modifyColor, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   nowTitleLabel = this->fields.nowTitleLabel;
   if ( !nowTitleLabel
     || (UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (nowTitleLabel = this->fields.nextTitleLabel) == 0) )
   {
-    sub_1D0F30C(nowTitleLabel, v12);
+    sub_21FFECC(nowTitleLabel, v14);
   }
   UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
 }

@@ -1,14 +1,14 @@
 void ServantCommandCodeUnlockMaster___ctor(ServantCommandCodeUnlockMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77F55 & 1) == 0 )
+  if ( (byte_5938F77 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
-    byte_4E77F55 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
+    byte_5938F77 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    257,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
+    259,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantCommandCodeUnlockEntity_o *ServantCommandCodeUnlockMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77F53 & 1) == 0 )
+  if ( (byte_5938F75 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
-    byte_4E77F53 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
+    byte_5938F75 = 1;
   }
   PK = (Il2CppObject *)ServantCommandCodeUnlockEntity__CreatePK(svtId, cardIdx, *(const MethodInfo **)&cardIdx);
   return (ServantCommandCodeUnlockEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_353AADC *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
+                                               (const MethodInfo_3EE2044 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool ServantCommandCodeUnlockMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77F54 & 1) == 0 )
+  if ( (byte_5938F76 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
-    byte_4E77F54 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
+    byte_5938F76 = 1;
   }
   PK = (Il2CppObject *)ServantCommandCodeUnlockEntity__CreatePK(svtId, cardIdx, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
 }

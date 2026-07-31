@@ -18,7 +18,7 @@ void UI2DSpriteAnimation__Play(UI2DSpriteAnimation_o *this, const MethodInfo *me
   _BOOL8 enabled; // x0
   __int64 v5; // x1
   int32_t framerate; // w8
-  int v7; // w10
+  int32_t mIndex; // w9
   int v8; // w9
   struct UnityEngine_Sprite_array *v9; // x10
   int32_t v10; // w8
@@ -32,12 +32,12 @@ void UI2DSpriteAnimation__Play(UI2DSpriteAnimation_o *this, const MethodInfo *me
     if ( enabled || this->fields.loop )
       goto LABEL_17;
     framerate = this->fields.framerate;
-    if ( framerate < 1 )
-      v7 = -1;
+    mIndex = this->fields.mIndex;
+    if ( framerate >= 1 )
+      v8 = mIndex + 1;
     else
-      v7 = 1;
-    v8 = v7 + this->fields.mIndex;
-    if ( v8 >= 0 )
+      v8 = mIndex - 1;
+    if ( (v8 & 0x80000000) == 0 )
     {
       v9 = this->fields.frames;
       if ( !v9 )
@@ -64,7 +64,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1D0F30C(enabled, v5);
+    sub_21FFECC(enabled, v5);
   }
 }
 
@@ -78,7 +78,7 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
   {
     frames = this->fields.frames;
     if ( !frames )
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     v2 = LODWORD(frames->max_length) - 1;
   }
   else
@@ -98,10 +98,9 @@ void UI2DSpriteAnimation__Update(UI2DSpriteAnimation_o *this, const MethodInfo *
   int32_t framerate; // w8
   int32_t mIndex; // w9
   _BOOL4 loop; // w10
-  int v9; // w8
-  __int64 v10; // x0
-  struct UnityEngine_Sprite_array *v11; // x8
-  const MethodInfo *v12; // x1
+  __int64 v9; // x0
+  struct UnityEngine_Sprite_array *v10; // x8
+  const MethodInfo *v11; // x1
 
   frames = this->fields.frames;
   if ( !frames || !frames->max_length )
@@ -119,30 +118,29 @@ LABEL_18:
       mIndex = this->fields.mIndex;
       loop = this->fields.loop;
       this->fields.mUpdate = v5;
-      if ( framerate < 1 )
-        v9 = -1;
+      if ( framerate >= 1 )
+        v9 = (unsigned int)(mIndex + 1);
       else
-        v9 = 1;
-      v10 = (unsigned int)(v9 + mIndex);
+        v9 = (unsigned int)(mIndex - 1);
       if ( loop )
       {
-        v11 = this->fields.frames;
-        if ( v11 )
+        v10 = this->fields.frames;
+        if ( v10 )
         {
 LABEL_13:
-          this->fields.mIndex = NGUIMath__RepeatIndex(v10, v11->max_length, 0);
-          UI2DSpriteAnimation__UpdateSprite(this, v12);
+          this->fields.mIndex = NGUIMath__RepeatIndex(v9, v10->max_length, 0);
+          UI2DSpriteAnimation__UpdateSprite(this, v11);
           return;
         }
 LABEL_19:
-        sub_1D0F30C(v10, v4);
+        sub_21FFECC(v9, v4);
       }
-      if ( (v10 & 0x80000000) == 0 )
+      if ( (v9 & 0x80000000) == 0 )
       {
-        v11 = this->fields.frames;
-        if ( !v11 )
+        v10 = this->fields.frames;
+        if ( !v10 )
           goto LABEL_19;
-        if ( (int)v10 < SLODWORD(v11->max_length) )
+        if ( (int)v9 < SLODWORD(v10->max_length) )
           goto LABEL_13;
       }
       goto LABEL_18;
@@ -154,86 +152,98 @@ LABEL_19:
 void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mUnitySprite; // x21
+  __int64 v4; // x1
   UnityEngine_Object_o *mNguiSprite; // x22
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  Il2CppObject *v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  UnityEngine_Object_o *v19; // x22
-  UnityEngine_Object_o *v20; // x21
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
+  UnityEngine_Object_o *v21; // x22
+  __int64 v22; // x1
+  UnityEngine_Object_o *v23; // x21
+  __int64 v24; // x1
   float time; // s0
   int32_t framerate; // w8
-  UnityEngine_Object_o *v23; // x20
-  UnityEngine_SpriteRenderer_o *v24; // x0
-  __int64 v25; // x1
+  UnityEngine_Object_o *v27; // x20
+  UnityEngine_SpriteRenderer_o *v28; // x0
+  __int64 v29; // x1
   struct UnityEngine_Sprite_array *frames; // x8
   __int64 mIndex; // x9
-  UnityEngine_Object_o *v28; // x20
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
-  struct UnityEngine_Sprite_array *v35; // x8
-  __int64 v36; // x9
-  struct UI2DSprite_o *v37; // x10
-  struct UnityEngine_Sprite_o *v38; // x1
+  UnityEngine_Object_o *v32; // x20
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  struct UnityEngine_Sprite_array *v39; // x8
+  __int64 v40; // x9
+  struct UI2DSprite_o *v41; // x10
+  struct UnityEngine_Sprite_o *v42; // x1
 
-  if ( (byte_4E7BFF6 & 1) == 0 )
+  if ( (byte_593CF3F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFF6 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF3F = 1;
   }
   mUnitySprite = (UnityEngine_Object_o *)this->fields.mUnitySprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(mUnitySprite, 0, 0) )
   {
     mNguiSprite = (UnityEngine_Object_o *)this->fields.mNguiSprite;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
     if ( UnityEngine_Object__op_Equality(mNguiSprite, 0, 0) )
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
       this->fields.mUnitySprite = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&this->fields.mUnitySprite,
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.mUnitySprite,
         (int32_t)Component_object,
-        v6,
         v7,
         v8,
         v9,
         v10,
-        v11);
-      v12 = UnityEngine_Component__GetComponent_object_(
+        v11,
+        v12);
+      v13 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-      this->fields.mNguiSprite = (struct UI2DSprite_o *)v12;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mNguiSprite, (int32_t)v12, v13, v14, v15, v16, v17, v18);
-      v19 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality(v19, 0, 0) )
+              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+      this->fields.mNguiSprite = (struct UI2DSprite_o *)v13;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.mNguiSprite,
+        (int32_t)v13,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18,
+        v19);
+      v21 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
+      if ( UnityEngine_Object__op_Equality(v21, 0, 0) )
       {
-        v20 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Equality(v20, 0, 0) )
+        v23 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+        if ( UnityEngine_Object__op_Equality(v23, 0, 0) )
         {
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
           return;
@@ -248,11 +258,11 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   framerate = this->fields.framerate;
   if ( framerate )
     this->fields.mUpdate = time + fabsf(1.0 / (float)framerate);
-  v23 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v24 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v23, 0, 0);
-  if ( ((unsigned __int8)v24 & 1) != 0 )
+  v27 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
+  v28 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v27, 0, 0);
+  if ( ((unsigned __int8)v28 & 1) != 0 )
   {
     frames = this->fields.frames;
     if ( !frames )
@@ -260,36 +270,36 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     mIndex = this->fields.mIndex;
     if ( (unsigned int)mIndex < LODWORD(frames->max_length) )
     {
-      v24 = this->fields.mUnitySprite;
-      if ( v24 )
+      v28 = this->fields.mUnitySprite;
+      if ( v28 )
       {
-        UnityEngine_SpriteRenderer__set_sprite(v24, frames->m_Items[mIndex], 0);
+        UnityEngine_SpriteRenderer__set_sprite(v28, frames->m_Items[mIndex], 0);
         return;
       }
 LABEL_36:
-      sub_1D0F30C(v24, v25);
+      sub_21FFECC(v28, v29);
     }
 LABEL_37:
-    sub_1D0F314(v24);
+    sub_21FFED4(v28);
   }
-  v28 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v24 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v28, 0, 0);
-  if ( ((unsigned __int8)v24 & 1) != 0 )
+  v32 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29);
+  v28 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v32, 0, 0);
+  if ( ((unsigned __int8)v28 & 1) != 0 )
   {
-    v35 = this->fields.frames;
-    if ( !v35 )
+    v39 = this->fields.frames;
+    if ( !v39 )
       goto LABEL_36;
-    v36 = this->fields.mIndex;
-    if ( (unsigned int)v36 >= LODWORD(v35->max_length) )
+    v40 = this->fields.mIndex;
+    if ( (unsigned int)v40 >= LODWORD(v39->max_length) )
       goto LABEL_37;
-    v37 = this->fields.mNguiSprite;
-    if ( !v37 )
+    v41 = this->fields.mNguiSprite;
+    if ( !v41 )
       goto LABEL_36;
-    v38 = v35->m_Items[v36];
-    v37->fields.nextSprite = v38;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v37->fields.nextSprite, (int32_t)v38, v29, v30, v31, v32, v33, v34);
+    v42 = v39->m_Items[v40];
+    v41->fields.nextSprite = v42;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v41->fields.nextSprite, (int32_t)v42, v33, v34, v35, v36, v37, v38);
   }
 }
 

@@ -4,41 +4,43 @@ void LimitCountUtility___ctor(LimitCountUtility_o *this, const MethodInfo *metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, const MethodInfo *method)
 {
+  __int64 v5; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
 
-  if ( (byte_4E76B8D & 1) == 0 )
+  if ( (byte_5937B31 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&OptionManager_TypeInfo);
-    byte_4E76B8D = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&OptionManager_TypeInfo);
+    byte_5937B31 = 1;
   }
   if ( limitCountStage == 4 )
   {
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, *(_QWORD *)&limitCountStage);
     if ( !OptionManager__GetFriendImageLimitCount(0) )
       return 0;
   }
   else if ( limitCountStage >= 11 )
   {
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, *(_QWORD *)&limitCountStage);
     if ( !OptionManager__GetFriendCostume(0) )
       return 0;
   }
-  if ( !OptionManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+  if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, *(_QWORD *)&limitCountStage);
   if ( OptionManager__GetSpoilerSetting(0) )
     return 1;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
   if ( !Master_object )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v7);
   return ServantLimitSpoilerProtectionMaster__CheckLimitCount(
            (ServantLimitSpoilerProtectionMaster_o *)Master_object,
            svtId,
@@ -49,13 +51,13 @@ bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, cons
 
 int32_t LimitCountUtility__ConvertLimitCountStageIndexOneToZero(int32_t limitCountStage, const MethodInfo *method)
 {
+  int32_t v2; // w8
+
+  v2 = limitCountStage - 1;
+  if ( limitCountStage <= 0 )
+    v2 = 0;
   if ( limitCountStage <= 4 )
-  {
-    if ( limitCountStage <= 0 )
-      return 0;
-    else
-      --limitCountStage;
-  }
+    return v2;
   return limitCountStage;
 }
 
@@ -75,70 +77,74 @@ int32_t LimitCountUtility__ConvertLimitCountToStage(
 {
   if ( stageLimitCount <= 4 )
   {
-    switch ( stageLimitCount )
+    if ( stageLimitCount > 2 )
     {
-      case 1:
-      case 2:
-        stageLimitCount = 2;
-        break;
-      case 3:
-        return stageLimitCount;
-      case 4:
+      if ( stageLimitCount != 3 )
+      {
         if ( hasRewardStage )
-          stageLimitCount = 4;
+          return 4;
         else
-          stageLimitCount = 3;
-        break;
-      default:
-        stageLimitCount = 1;
-        break;
+          return 3;
+      }
+    }
+    else if ( stageLimitCount == 1 )
+    {
+      return 2;
+    }
+    else if ( stageLimitCount != 2 )
+    {
+      return 1;
     }
   }
   return stageLimitCount;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t LimitCountUtility__ConvertStageToLimitCount(
         int32_t limitCount,
         int32_t limitCountStage,
         bool hasRewardStage,
         const MethodInfo *method)
 {
-  if ( (byte_4E76B8B & 1) == 0 )
+  int v5; // w20
+
+  v5 = limitCountStage;
+  if ( (byte_5937B2F & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E76B8B = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_5937B2F = 1;
   }
-  if ( limitCountStage > 4 )
-    return limitCountStage;
-  if ( limitCountStage != 2 )
+  if ( v5 > 4 )
+    return v5;
+  if ( v5 != 2 )
   {
-    if ( limitCountStage == 3 )
+    if ( v5 == 3 )
     {
       if ( hasRewardStage )
-        limitCountStage = 3;
+        v5 = 3;
       else
-        limitCountStage = 4;
+        v5 = 4;
     }
-    else if ( limitCountStage != 4 )
+    else if ( v5 != 4 )
     {
-      limitCountStage = 0;
+      v5 = 0;
     }
   }
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_67085072(limitCountStage, limitCount, 0);
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, *(_QWORD *)&limitCountStage);
+  return System_Math__Min_76940292(v5, limitCount, 0);
 }
 
 
-int32_t LimitCountUtility__ConvertStageToLimitCount_42407000(int32_t limitCountStage, const MethodInfo *method)
+int32_t LimitCountUtility__ConvertStageToLimitCount_47970664(int32_t limitCountStage, const MethodInfo *method)
 {
   if ( limitCountStage <= 4 )
   {
     if ( (unsigned int)(limitCountStage - 2) > 2 )
       return 0;
     else
-      return dword_D6A59C[limitCountStage - 2];
+      return dword_ED1114[limitCountStage - 2];
   }
   return limitCountStage;
 }
@@ -153,30 +159,23 @@ int32_t LimitCountUtility__GetLimitCountStageCheckZero(
   if ( limitCountStage <= 0 )
   {
     if ( limitCount > 4 )
-    {
       return limitCount;
+    if ( limitCount > 2 )
+    {
+      if ( limitCount == 3 )
+        return limitCount;
+      if ( hasRewardStage )
+        return 4;
+      else
+        return 3;
+    }
+    else if ( limitCount == 1 || limitCount == 2 )
+    {
+      return 2;
     }
     else
     {
-      limitCountStage = limitCount;
-      switch ( limitCount )
-      {
-        case 1:
-        case 2:
-          limitCountStage = 2;
-          break;
-        case 3:
-          return limitCountStage;
-        case 4:
-          if ( hasRewardStage )
-            limitCountStage = 4;
-          else
-            limitCountStage = 3;
-          break;
-        default:
-          limitCountStage = 1;
-          break;
-      }
+      return 1;
     }
   }
   return limitCountStage;
@@ -190,20 +189,24 @@ System_Collections_Generic_IEnumerable_int__o *LimitCountUtility__GetLimitCountS
 {
   bool v5; // w21
   __int64 v6; // x20
+  int32_t CurrentManagedThreadId; // w0
+  System_Collections_Generic_IEnumerable_int__o *result; // x0
 
-  if ( (byte_4E76B8E & 1) == 0 )
+  if ( (byte_5937B32 & 1) == 0 )
   {
-    sub_1D0F0B4(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
-    byte_4E76B8E = 1;
+    sub_21FFC50(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    byte_5937B32 = 1;
   }
   v5 = hasRewardStage;
-  v6 = sub_1D0F300(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+  v6 = sub_21FFEBC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = -2;
-  *(_DWORD *)(v6 + 24) = System_Environment__get_CurrentManagedThreadId(0);
+  CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
   *(_DWORD *)(v6 + 36) = maxLimitCountStage;
+  *(_DWORD *)(v6 + 24) = CurrentManagedThreadId;
+  result = (System_Collections_Generic_IEnumerable_int__o *)v6;
   *(_BYTE *)(v6 + 29) = v5;
-  return (System_Collections_Generic_IEnumerable_int__o *)v6;
+  return result;
 }
 
 
@@ -215,21 +218,20 @@ int32_t LimitCountUtility__GetOptionAfter(
         bool hasRewardStage,
         const MethodInfo *method)
 {
-  int v5; // w19
+  int v5; // w21
   int v8; // w22
-  int v9; // w23
+  int32_t result; // w0
 
   v5 = limitCountStage;
   if ( limitCountStage >= 2 )
   {
-    v8 = limitCount - 1;
     if ( hasRewardStage )
-      v9 = 4;
+      v8 = 4;
     else
-      v9 = 3;
+      v8 = 3;
     while ( !LimitCountUtility__CheckOption(svtId, v5, *(const MethodInfo **)&limitCountStage) )
     {
-      if ( v5 < 11 )
+      if ( (unsigned int)v5 < 0xB )
       {
         --v5;
       }
@@ -238,28 +240,24 @@ int32_t LimitCountUtility__GetOptionAfter(
         v5 = limitCount;
         if ( limitCount <= 4 )
         {
-          v5 = limitCount;
-          switch ( v8 )
+          result = 1;
+          if ( limitCount > 2 )
           {
-            case 0:
-            case 1:
-              v5 = 2;
-              goto LABEL_11;
-            case 2:
-              goto LABEL_11;
-            case 3:
-              v5 = v9;
-              goto LABEL_11;
-            default:
-              v5 = 1;
-              break;
+            v5 = limitCount;
+            if ( limitCount != 3 )
+              v5 = v8;
           }
-          return v5;
+          else
+          {
+            if ( limitCount != 1 && limitCount != 2 )
+              return result;
+            v5 = 2;
+          }
         }
       }
-LABEL_11:
+      result = v5;
       if ( v5 <= 1 )
-        return v5;
+        return result;
     }
   }
   return v5;
@@ -274,57 +272,62 @@ int32_t LimitCountUtility__GetSealAfter(
         bool hasRewardStage,
         const MethodInfo *method)
 {
-  int32_t v9; // w22
+  __int64 v9; // x1
+  int32_t v10; // w22
   Il2CppObject *Master_object; // x0
-  __int64 v11; // x1
+  __int64 v12; // x1
   int ServantLimitCountSealAfter; // w0
 
-  if ( (byte_4E76B8C & 1) == 0 )
+  if ( (byte_5937B30 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E76B8C = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_5937B30 = 1;
   }
   if ( limitCountStage <= 4 )
   {
-    v9 = LimitCountUtility__ConvertStageToLimitCount(
-           limitCount,
-           limitCountStage,
-           hasRewardStage,
-           (const MethodInfo *)hasRewardStage);
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    v10 = LimitCountUtility__ConvertStageToLimitCount(
+            limitCount,
+            limitCountStage,
+            hasRewardStage,
+            (const MethodInfo *)hasRewardStage);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     if ( !Master_object )
-      sub_1D0F30C(0, v11);
+      sub_21FFECC(0, v12);
     ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                    (ServantLimitImageMaster_o *)Master_object,
                                    svtId,
-                                   v9,
+                                   v10,
                                    0);
-    if ( v9 != ServantLimitCountSealAfter )
+    if ( v10 != ServantLimitCountSealAfter )
     {
-      limitCountStage = ServantLimitCountSealAfter;
       if ( ServantLimitCountSealAfter <= 4 )
       {
-        switch ( ServantLimitCountSealAfter )
+        if ( ServantLimitCountSealAfter > 2 )
         {
-          case 1:
-          case 2:
-            limitCountStage = 2;
-            break;
-          case 3:
-            return limitCountStage;
-          case 4:
+          limitCountStage = ServantLimitCountSealAfter;
+          if ( ServantLimitCountSealAfter != 3 )
+          {
             if ( hasRewardStage )
-              limitCountStage = 4;
+              return 4;
             else
-              limitCountStage = 3;
-            break;
-          default:
-            limitCountStage = 1;
-            break;
+              return 3;
+          }
         }
+        else if ( ServantLimitCountSealAfter == 1 || ServantLimitCountSealAfter == 2 )
+        {
+          return 2;
+        }
+        else
+        {
+          return 1;
+        }
+      }
+      else
+      {
+        return ServantLimitCountSealAfter;
       }
     }
   }
@@ -342,15 +345,15 @@ bool LimitCountUtility__IsOtherImage(int32_t value, const MethodInfo *method)
 {
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_4E76B8A & 1) == 0 )
+  if ( (byte_5937B2E & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    byte_4E76B8A = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    byte_5937B2E = 1;
   }
   v3 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
     v3 = BalanceConfig_TypeInfo;
   }
   return v3->static_fields->OtherImageLimitCount == value;
@@ -398,22 +401,26 @@ bool LimitCountUtility__GetLimitCountStageList_d__21__MoveNext(
   int32_t _1__state; // w8
   int32_t i_5__3; // w8
   int32_t loop_5__2; // w10
-  int32_t v5; // w9
-  int32_t v6; // w8
-  bool v7; // w8
+  int v5; // w9
+  _BOOL4 hasRewardStage; // w8
+  int32_t v7; // w8
+  bool v8; // w8
+  int32_t v9; // w10
 
   _1__state = this->fields.__1__state;
   if ( (unsigned int)(_1__state - 1) >= 2 )
   {
     if ( _1__state )
       return 0;
+    hasRewardStage = this->fields.hasRewardStage;
     v5 = 1;
-    if ( this->fields.hasRewardStage )
-      v6 = 4;
+    this->fields.__1__state = -1;
+    if ( hasRewardStage )
+      v7 = 4;
     else
-      v6 = 3;
-    this->fields._loop_5__2 = v6;
-    this->fields._i_5__3 = 1;
+      v7 = 3;
+    *(_QWORD *)&this->fields._loop_5__2 = 0x100000004LL;
+    this->fields._loop_5__2 = v7;
   }
   else
   {
@@ -425,19 +432,19 @@ bool LimitCountUtility__GetLimitCountStageList_d__21__MoveNext(
     if ( i_5__3 + 1 > loop_5__2 )
       return 0;
   }
+  v8 = 1;
   if ( v5 <= this->fields.maxLimitCountStage )
   {
-    v7 = 1;
-    this->fields.__1__state = 1;
-    this->fields.__2__current = v5;
+    v9 = 1;
   }
   else
   {
-    this->fields.__1__state = 2;
-    this->fields.__2__current = -v5;
-    return 1;
+    v5 = -v5;
+    v9 = 2;
   }
-  return v7;
+  this->fields.__1__state = v9;
+  this->fields.__2__current = v5;
+  return v8;
 }
 
 
@@ -447,12 +454,13 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
 {
   int32_t l__initialThreadId; // w20
   LimitCountUtility__GetLimitCountStageList_d__21_o *v4; // x20
+  bool _3__hasRewardStage; // w9
   System_Collections_Generic_IEnumerator_int__o *result; // x0
 
-  if ( (byte_4E76B90 & 1) == 0 )
+  if ( (byte_5937B33 & 1) == 0 )
   {
-    sub_1D0F0B4(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
-    byte_4E76B90 = 1;
+    sub_21FFC50(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    byte_5937B33 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -463,14 +471,15 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   }
   else
   {
-    v4 = (LimitCountUtility__GetLimitCountStageList_d__21_o *)sub_1D0F300(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    v4 = (LimitCountUtility__GetLimitCountStageList_d__21_o *)sub_21FFEBC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
+  _3__hasRewardStage = this->fields.__3__hasRewardStage;
   result = (System_Collections_Generic_IEnumerator_int__o *)v4;
   v4->fields.maxLimitCountStage = this->fields.__3__maxLimitCountStage;
-  v4->fields.hasRewardStage = this->fields.__3__hasRewardStage;
+  v4->fields.hasRewardStage = _3__hasRewardStage;
   return result;
 }
 
@@ -491,11 +500,11 @@ void __noreturn LimitCountUtility__GetLimitCountStageList_d__21__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_LimitCountUtility__GetLimitCountStageList_d__21_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_LimitCountUtility__GetLimitCountStageList_d__21_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 
@@ -503,15 +512,10 @@ Il2CppObject *LimitCountUtility__GetLimitCountStageList_d__21__System_Collection
         LimitCountUtility__GetLimitCountStageList_d__21_o *this,
         const MethodInfo *method)
 {
-  int32_t _2__current; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t _2__current; // [xsp+Ch] [xbp-4h] BYREF
 
-  if ( (byte_4E76B8F & 1) == 0 )
-  {
-    sub_1D0F0B4(&int_TypeInfo);
-    byte_4E76B8F = 1;
-  }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &_2__current);
+  return (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &_2__current);
 }
 
 

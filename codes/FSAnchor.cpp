@@ -1,63 +1,63 @@
 void FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   __int64 v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   __int64 v17; // x20
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   __int64 v24; // x20
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
   int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  bool v29; // w6
+  bool v30; // w7
 
-  if ( (byte_4E7906A & 1) == 0 )
+  if ( (byte_593A0B9 & 1) == 0 )
   {
-    sub_1D0F0B4(&FSAnchor_Absolute_TypeInfo);
-    byte_4E7906A = 1;
+    sub_21FFC50(&FSAnchor_Absolute_TypeInfo);
+    byte_593A0B9 = 1;
   }
-  v3 = sub_1D0F300(FSAnchor_Absolute_TypeInfo);
+  v3 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_BYTE *)(v3 + 16) = 1;
-  *(_QWORD *)(v3 + 20) = 0x4400000000LL;
   this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
-  v10 = sub_1D0F300(FSAnchor_Absolute_TypeInfo);
+  *(_QWORD *)(v3 + 20) = 0x4400000000LL;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
+  v10 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_BYTE *)(v10 + 16) = 1;
-  *(_QWORD *)(v10 + 20) = 0xFFFFFFBC00000000LL;
   this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
-  v17 = sub_1D0F300(FSAnchor_Absolute_TypeInfo);
+  *(_QWORD *)(v10 + 20) = 0xFFFFFFBC00000000LL;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
+  v17 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   *(_BYTE *)(v17 + 16) = 0;
-  *(_QWORD *)(v17 + 20) = 0;
   this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
-  v24 = sub_1D0F300(FSAnchor_Absolute_TypeInfo);
+  *(_QWORD *)(v17 + 20) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
+  v24 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0);
   *(_BYTE *)(v24 + 16) = 0;
-  *(_QWORD *)(v24 + 20) = 0;
   this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v24;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
+  *(_QWORD *)(v24 + 20) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -74,75 +74,80 @@ void FSAnchor__Awake(FSAnchor_o *this, const MethodInfo *method)
 bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
 {
   int32_t calcNotchSize; // w20
-  FSUtility_c *v4; // x0
+  __int64 v4; // x1
+  FSUtility_c *v5; // x0
+  __int64 v6; // x1
   float SafeAreaWidth; // s8
-  unsigned int v6; // w9
-  int32_t v7; // w23
+  unsigned int v8; // w9
+  int32_t v9; // w23
   const MethodInfo *width; // x0
-  int v9; // w20
-  __int64 v10; // x1
-  const MethodInfo *v11; // x3
+  __int64 v11; // x1
+  int v12; // w20
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
   float ScreenToConfigSizeRate; // s8
-  System_Math_c *v13; // x0
-  float v14; // s8
+  float v16; // s9
+  System_Math_c *v17; // x0
+  float v18; // s8
+  unsigned int v19; // w9
   struct UIWidget_o *widget; // x8
-  unsigned int v16; // w10
-  int32_t v17; // w20
-  const MethodInfo *v18; // x3
-  struct UIWidget_o *v19; // x8
+  int32_t v21; // w20
+  const MethodInfo *v22; // x3
+  struct UIWidget_o *v23; // x8
 
-  if ( (byte_4E79069 & 1) == 0 )
+  if ( (byte_593A0B8 & 1) == 0 )
   {
-    sub_1D0F0B4(&FSUtility_TypeInfo);
-    byte_4E79069 = 1;
+    sub_21FFC50(&FSUtility_TypeInfo);
+    byte_593A0B8 = 1;
   }
   calcNotchSize = this->fields.calcNotchSize;
-  if ( !FSUtility_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
+  if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
   if ( !FSUtility__IsCalcNotch(calcNotchSize, method) )
     return 0;
-  v4 = FSUtility_TypeInfo;
-  if ( !FSUtility_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-  SafeAreaWidth = FSUtility__GetSafeAreaWidth((const MethodInfo *)v4);
-  if ( !byte_4E71327 )
+  v5 = FSUtility_TypeInfo;
+  if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v4);
+  SafeAreaWidth = FSUtility__GetSafeAreaWidth((const MethodInfo *)v5);
+  if ( !byte_5931FBB )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E71327 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_5931FBB = 1;
   }
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v6 = vcvtps_s32_f32(SafeAreaWidth);
-  v7 = ceilf(SafeAreaWidth) == INFINITY ? 0x80000000 : v6;
-  if ( v7 >= UnityEngine_Screen__get_width(0) )
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6);
+  v8 = vcvtps_s32_f32(SafeAreaWidth);
+  v9 = ceilf(SafeAreaWidth) == INFINITY ? 0x80000000 : v8;
+  if ( v9 >= UnityEngine_Screen__get_width(0) )
     return 0;
   width = (const MethodInfo *)UnityEngine_Screen__get_width(0);
-  v9 = (int)width;
-  if ( !FSUtility_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
+  v12 = (int)width;
+  if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v11);
   ScreenToConfigSizeRate = FSUtility__GetScreenToConfigSizeRate(width);
-  if ( !byte_4E70C98 )
+  v16 = vcvts_n_f32_s32(v12 - v9, 1u);
+  if ( !byte_593193F )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E70C98 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593193F = 1;
   }
-  v13 = System_Math_TypeInfo;
-  v14 = (float)((float)(v9 - v7) * 0.5) * ScreenToConfigSizeRate;
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+  v17 = System_Math_TypeInfo;
+  v18 = v16 * ScreenToConfigSizeRate;
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v13);
+  v19 = vcvtms_s32_f32(v18);
   widget = this->fields.widget;
-  v16 = vcvtms_s32_f32(v14);
-  if ( floorf(v14) == INFINITY )
-    v17 = 0x80000000;
+  if ( floorf(v18) == INFINITY )
+    v21 = 0x80000000;
   else
-    v17 = v16;
+    v21 = v19;
   if ( !widget
-    || (FSAnchor__SetAbsoluteValueForNotch(this->fields.leftAbsolute, widget->fields.leftAnchor, v17, v11),
-        (v19 = this->fields.widget) == 0) )
+    || (FSAnchor__SetAbsoluteValueForNotch(this->fields.leftAbsolute, widget->fields.leftAnchor, v21, v14),
+        (v23 = this->fields.widget) == 0) )
   {
-    sub_1D0F30C(v13, v10);
+    sub_21FFECC(v17, v13);
   }
-  FSAnchor__SetAbsoluteValueForNotch(this->fields.rightAbsolute, v19->fields.rightAnchor, v17, v18);
+  FSAnchor__SetAbsoluteValueForNotch(this->fields.rightAbsolute, v23->fields.rightAnchor, v21, v22);
   return 1;
 }
 
@@ -163,7 +168,7 @@ void FSAnchor__SetAbsoluteValueForNotch(
     return;
   if ( !anchorPoint )
 LABEL_10:
-    sub_1D0F30C(absolute, anchorPoint);
+    sub_21FFECC(absolute, anchorPoint);
   relative = anchorPoint->fields.relative;
   vista = absolute->fields.vista;
   anchorPoint->fields.absolute = vista;
@@ -214,8 +219,8 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v31; // x9
   struct UIRect_AnchorPoint_o *v32; // x9
   float v33; // s9
-  struct UIWidget_o *v34; // x9
-  unsigned int v35; // w10
+  unsigned int v34; // w10
+  struct UIWidget_o *v35; // x9
   unsigned int v36; // w8
   struct UIRect_AnchorPoint_o *v37; // x9
   float relative; // s0
@@ -223,29 +228,25 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct FSAnchor_Absolute_o *v40; // x8
   struct UIWidget_o *v41; // x9
   struct UIRect_AnchorPoint_o *v42; // x9
-  float v43; // s8
-  float v44; // s8
-  struct UIWidget_o *v45; // x9
-  unsigned int v46; // w10
-  unsigned int v47; // w8
-  struct UIRect_AnchorPoint_o *v48; // x9
-  float v49; // s0
-  unsigned int v50; // w8
-  struct FSAnchor_Absolute_o *v51; // x8
-  struct UIWidget_o *v52; // x9
-  struct UIRect_AnchorPoint_o *v53; // x9
-  struct FSAnchor_Absolute_o *v54; // x8
-  struct UIWidget_o *v55; // x9
-  struct UIRect_AnchorPoint_o *v56; // x9
+  struct UIWidget_o *v43; // x8
+  struct UIRect_AnchorPoint_o *v44; // x8
+  float v45; // s0
+  int v46; // w9
+  struct FSAnchor_Absolute_o *v47; // x8
+  struct UIWidget_o *v48; // x9
+  struct UIRect_AnchorPoint_o *v49; // x9
+  struct FSAnchor_Absolute_o *v50; // x8
+  struct UIWidget_o *v51; // x9
+  struct UIRect_AnchorPoint_o *v52; // x9
 
-  if ( (byte_4E79068 & 1) == 0 )
+  if ( (byte_593A0B7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79068 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A0B7 = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(widget, 0, 0) )
   {
     width = UnityEngine_Screen__get_width(0);
@@ -257,55 +258,55 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
       {
         leftAbsolute = this->fields.leftAbsolute;
         if ( !leftAbsolute )
-          goto LABEL_94;
+          goto LABEL_87;
         if ( leftAbsolute->fields.enable )
         {
           v10 = this->fields.widget;
           if ( !v10 )
-            goto LABEL_94;
+            goto LABEL_87;
           leftAnchor = v10->fields.leftAnchor;
           if ( !leftAnchor )
-            goto LABEL_94;
+            goto LABEL_87;
           leftAnchor->fields.absolute = leftAbsolute->fields.vista;
         }
         rightAbsolute = this->fields.rightAbsolute;
         if ( !rightAbsolute )
-          goto LABEL_94;
+          goto LABEL_87;
         if ( rightAbsolute->fields.enable )
         {
           v13 = this->fields.widget;
           if ( !v13 )
-            goto LABEL_94;
+            goto LABEL_87;
           rightAnchor = v13->fields.rightAnchor;
           if ( !rightAnchor )
-            goto LABEL_94;
+            goto LABEL_87;
           rightAnchor->fields.absolute = rightAbsolute->fields.vista;
         }
       }
       bottomAbsolute = this->fields.bottomAbsolute;
       if ( !bottomAbsolute )
-        goto LABEL_94;
+        goto LABEL_87;
       if ( bottomAbsolute->fields.enable )
       {
         v16 = this->fields.widget;
         if ( !v16 )
-          goto LABEL_94;
+          goto LABEL_87;
         bottomAnchor = v16->fields.bottomAnchor;
         if ( !bottomAnchor )
-          goto LABEL_94;
+          goto LABEL_87;
         vista = bottomAbsolute->fields.vista;
         bottomAnchor->fields.absolute = vista;
         if ( v5 < 1.7778 )
         {
-          if ( !byte_4E70C98 )
+          if ( !byte_593193F )
           {
-            sub_1D0F0B4(&System_Math_TypeInfo);
-            byte_4E70C98 = 1;
+            sub_21FFC50(&System_Math_TypeInfo);
+            byte_593193F = 1;
           }
           v19 = (float)((float)((float)(1.7778 - v5) * 576.0) * 16.0) / 9.0;
           v7 = System_Math_TypeInfo;
-          if ( !System_Math_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+          if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v8);
           v20 = vcvtms_s32_f32(v19);
           if ( floorf(v19) == INFINITY )
             v21 = 0x80000000;
@@ -330,14 +331,14 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
             if ( v5 < 1.7778 )
             {
               v26 = (float)((float)(1.7778 - v5) * 576.0) * 16.0;
-              if ( !byte_4E70C98 )
+              if ( !byte_593193F )
               {
-                sub_1D0F0B4(&System_Math_TypeInfo);
-                byte_4E70C98 = 1;
+                sub_21FFC50(&System_Math_TypeInfo);
+                byte_593193F = 1;
               }
               v27 = v26 / 9.0;
-              if ( !System_Math_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+              if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+                j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v8);
               v28 = vcvtms_s32_f32(v27);
               if ( floorf(v27) == INFINITY )
                 v29 = 0x80000000;
@@ -349,44 +350,44 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
           }
         }
       }
-      goto LABEL_94;
+      goto LABEL_87;
     }
     if ( ((unsigned __int8)v7 & 1) != 0 )
-      goto LABEL_83;
+      goto LABEL_76;
     v30 = this->fields.leftAbsolute;
     if ( !v30 )
-      goto LABEL_94;
+      goto LABEL_87;
     if ( v30->fields.enable )
     {
       v31 = this->fields.widget;
       if ( !v31 )
-        goto LABEL_94;
+        goto LABEL_87;
       v32 = v31->fields.leftAnchor;
       if ( !v32 )
-        goto LABEL_94;
+        goto LABEL_87;
       v32->fields.absolute = v30->fields.scope;
       if ( v5 > 2.3333 )
       {
-        if ( !byte_4E70C98 )
+        if ( !byte_593193F )
         {
-          sub_1D0F0B4(&System_Math_TypeInfo);
-          byte_4E70C98 = 1;
+          sub_21FFC50(&System_Math_TypeInfo);
+          byte_593193F = 1;
         }
         v33 = (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625;
         v7 = System_Math_TypeInfo;
-        if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v34 = this->fields.widget;
-        v35 = vcvtms_s32_f32(v33);
+        if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v8);
+        v34 = vcvtms_s32_f32(v33);
+        v35 = this->fields.widget;
         if ( floorf(v33) == INFINITY )
           v36 = 0x80000000;
         else
-          v36 = v35;
-        if ( !v34 )
-          goto LABEL_94;
-        v37 = v34->fields.leftAnchor;
+          v36 = v34;
+        if ( !v35 )
+          goto LABEL_87;
+        v37 = v35->fields.leftAnchor;
         if ( !v37 )
-          goto LABEL_94;
+          goto LABEL_87;
         relative = v37->fields.relative;
         if ( relative == 0.0 )
         {
@@ -404,84 +405,70 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
 LABEL_64:
     v40 = this->fields.rightAbsolute;
     if ( !v40 )
-      goto LABEL_94;
+      goto LABEL_87;
     if ( !v40->fields.enable )
-      goto LABEL_83;
+      goto LABEL_76;
     v41 = this->fields.widget;
     if ( !v41 )
-      goto LABEL_94;
+      goto LABEL_87;
     v42 = v41->fields.rightAnchor;
     if ( !v42 )
-      goto LABEL_94;
+      goto LABEL_87;
     v42->fields.absolute = v40->fields.scope;
     if ( v5 <= 2.3333 )
-      goto LABEL_83;
-    v43 = (float)((float)(v5 + -2.3333) * 512.0) * 9.0;
-    if ( !byte_4E70C98 )
+      goto LABEL_76;
+    v7 = (System_Math_c *)sub_30D0D04(0, (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625);
+    v43 = this->fields.widget;
+    if ( !v43 )
+      goto LABEL_87;
+    v44 = v43->fields.rightAnchor;
+    if ( !v44 )
+      goto LABEL_87;
+    v45 = v44->fields.relative;
+    if ( v45 == 0.0 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E70C98 = 1;
+      v46 = v44->fields.absolute + (_DWORD)v7;
+LABEL_75:
+      v44->fields.absolute = v46;
+      goto LABEL_76;
     }
-    v44 = v43 * 0.0625;
-    v7 = System_Math_TypeInfo;
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v45 = this->fields.widget;
-    v46 = vcvtms_s32_f32(v44);
-    if ( floorf(v44) == INFINITY )
-      v47 = 0x80000000;
-    else
-      v47 = v46;
-    if ( !v45 )
-      goto LABEL_94;
-    v48 = v45->fields.rightAnchor;
-    if ( !v48 )
-      goto LABEL_94;
-    v49 = v48->fields.relative;
-    if ( v49 == 0.0 )
+    if ( v45 == 1.0 )
     {
-      v50 = v48->fields.absolute + v47;
-LABEL_82:
-      v48->fields.absolute = v50;
-      goto LABEL_83;
+      v46 = v44->fields.absolute - (_DWORD)v7;
+      goto LABEL_75;
     }
-    if ( v49 == 1.0 )
+LABEL_76:
+    v47 = this->fields.bottomAbsolute;
+    if ( !v47 )
+      goto LABEL_87;
+    if ( v47->fields.enable )
     {
-      v50 = v48->fields.absolute - v47;
-      goto LABEL_82;
+      v48 = this->fields.widget;
+      if ( !v48 )
+        goto LABEL_87;
+      v49 = v48->fields.bottomAnchor;
+      if ( !v49 )
+        goto LABEL_87;
+      v49->fields.absolute = v47->fields.scope;
     }
-LABEL_83:
-    v51 = this->fields.bottomAbsolute;
-    if ( !v51 )
-      goto LABEL_94;
-    if ( v51->fields.enable )
+    v50 = this->fields.topAbsolute;
+    if ( v50 )
     {
-      v52 = this->fields.widget;
-      if ( !v52 )
-        goto LABEL_94;
-      v53 = v52->fields.bottomAnchor;
-      if ( !v53 )
-        goto LABEL_94;
-      v53->fields.absolute = v51->fields.scope;
-    }
-    v54 = this->fields.topAbsolute;
-    if ( v54 )
-    {
-      if ( !v54->fields.enable )
+      if ( !v50->fields.enable )
         return;
-      v55 = this->fields.widget;
-      if ( v55 )
+      v51 = this->fields.widget;
+      if ( v51 )
       {
-        v56 = v55->fields.topAnchor;
-        if ( v56 )
+        v52 = v51->fields.topAnchor;
+        if ( v52 )
         {
-          v56->fields.absolute = v54->fields.scope;
+          v52->fields.absolute = v50->fields.scope;
           return;
         }
       }
     }
-LABEL_94:
-    sub_1D0F30C(v7, v8);
+LABEL_87:
+    sub_21FFECC(v7, v8);
   }
 }
 
@@ -493,11 +480,8 @@ void FSAnchor_Absolute___ctor(
         int32_t scope,
         const MethodInfo *method)
 {
-  bool v5; // w22
-
-  v5 = enable;
   System_Object___ctor((Il2CppObject *)this, 0);
-  this->fields.enable = v5;
+  this->fields.enable = enable;
   this->fields.vista = vista;
   this->fields.scope = scope;
 }

@@ -6,19 +6,16 @@ void BattleServantActionHistory___ctor(
         bool isOpponent,
         const MethodInfo *method)
 {
-  bool v10; // w23
-
-  v10 = isOpponent;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actType = type;
   this->fields.targetUniqueId = in_targetUniqueID;
   this->fields.waveCount = wavecount;
-  this->fields.isOpponent = v10;
-  this->fields.isEnableLastAttackInfo = (unsigned int)(type - 1) > 1;
+  this->fields.isOpponent = isOpponent;
+  this->fields.isEnableLastAttackInfo = (unsigned int)(type - 3) < 0xFFFFFFFE;
 }
 
 
-void BattleServantActionHistory___ctor_47847112(
+void BattleServantActionHistory___ctor_53433244(
         BattleServantActionHistory_o *this,
         BattleServantActionHistory_SaveData_o *save,
         const MethodInfo *method)
@@ -28,11 +25,10 @@ void BattleServantActionHistory___ctor_47847112(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !save )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   *(_QWORD *)&this->fields.actType = *(_QWORD *)&save->fields.actType;
   this->fields.waveCount = save->fields.waveCount;
-  this->fields.isOpponent = save->fields.isOpponent;
-  this->fields.isEnableLastAttackInfo = save->fields.isEnableLastAttackInfo;
+  *(_WORD *)&this->fields.isOpponent = *(_WORD *)&save->fields.isOpponent;
 }
 
 
@@ -45,20 +41,19 @@ BattleServantActionHistory_SaveData_o *BattleServantActionHistory__GetSaveData(
   __int64 v5; // x1
   BattleServantActionHistory_SaveData_o *result; // x0
 
-  if ( (byte_4E7A4F3 & 1) == 0 )
+  if ( (byte_593B555 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleServantActionHistory_SaveData_TypeInfo);
-    byte_4E7A4F3 = 1;
+    sub_21FFC50(&BattleServantActionHistory_SaveData_TypeInfo);
+    byte_593B555 = 1;
   }
-  v3 = sub_1D0F300(BattleServantActionHistory_SaveData_TypeInfo);
+  v3 = sub_21FFEBC(BattleServantActionHistory_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   result = (BattleServantActionHistory_SaveData_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.actType;
   *(_DWORD *)(v3 + 24) = this->fields.waveCount;
-  *(_BYTE *)(v3 + 28) = this->fields.isOpponent;
-  *(_BYTE *)(v3 + 29) = this->fields.isEnableLastAttackInfo;
+  *(_WORD *)(v3 + 28) = *(_WORD *)&this->fields.isOpponent;
   return result;
 }
 
@@ -83,15 +78,7 @@ int32_t BattleServantActionHistory__getReactionTarget(BattleServantActionHistory
 
 bool BattleServantActionHistory__isDamage(BattleServantActionHistory_o *this, const MethodInfo *method)
 {
-  unsigned int v2; // w8
-  _BOOL4 v3; // w0
-
-  v2 = this->fields.actType - 1;
-  if ( v2 > 6 )
-    LOBYTE(v3) = 0;
-  else
-    return (0x6Fu >> v2) & 1;
-  return v3;
+  return (this->fields.actType < 8u) & (0xDEu >> this->fields.actType);
 }
 
 

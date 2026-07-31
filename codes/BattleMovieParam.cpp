@@ -1,7 +1,7 @@
 void BattleMovieParam___ctor(BattleMovieParam_o *this, const MethodInfo *method)
 {
-  *(_QWORD *)&this->fields.FadeOutBgmBeforeMovie = -1;
   this->fields.movieAfterCrossFadeTime = -1;
+  *(_QWORD *)&this->fields.FadeOutBgmBeforeMovie = -1;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -14,10 +14,10 @@ System_Nullable_bool__o BattleMovieParam__get_HasMovieCrossFadeSetting(
   System_Nullable_bool__o *v4; // x0
   System_Nullable_bool__o v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4E771D3 & 1) == 0 )
+  if ( (byte_5938198 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_bool___ctor__);
-    byte_4E771D3 = 1;
+    sub_21FFC50(&Method_System_Nullable_bool___ctor__);
+    byte_5938198 = 1;
   }
   movieAfterCrossFadeTime = this->fields.movieAfterCrossFadeTime;
   v6 = 0;
@@ -31,7 +31,7 @@ System_Nullable_bool__o BattleMovieParam__get_HasMovieCrossFadeSetting(
     System_Nullable_bool____ctor(
       (System_Nullable_bool__o)v4,
       movieAfterCrossFadeTime != 0,
-      (const MethodInfo_3A80B88 *)Method_System_Nullable_bool___ctor__);
+      (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
     return v6;
   }
 }
@@ -45,10 +45,10 @@ System_Nullable_bool__o BattleMovieParam__get_IsFadeOutBgmBeforeMovie(
   System_Nullable_bool__o *v4; // x0
   System_Nullable_bool__o v6; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4E771D0 & 1) == 0 )
+  if ( (byte_5938195 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_bool___ctor__);
-    byte_4E771D0 = 1;
+    sub_21FFC50(&Method_System_Nullable_bool___ctor__);
+    byte_5938195 = 1;
   }
   FadeOutBgmBeforeMovie = this->fields.FadeOutBgmBeforeMovie;
   v6 = 0;
@@ -62,7 +62,7 @@ System_Nullable_bool__o BattleMovieParam__get_IsFadeOutBgmBeforeMovie(
     System_Nullable_bool____ctor(
       (System_Nullable_bool__o)v4,
       FadeOutBgmBeforeMovie != 0,
-      (const MethodInfo_3A80B88 *)Method_System_Nullable_bool___ctor__);
+      (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
     return v6;
   }
 }
@@ -76,10 +76,10 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeStartFrame(
   System_Nullable_int__o v4; // x0
   System_Nullable_int__o v6; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E771D1 & 1) == 0 )
+  if ( (byte_5938196 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
-    byte_4E771D1 = 1;
+    sub_21FFC50(&Method_System_Nullable_int___ctor__);
+    byte_5938196 = 1;
   }
   movieAfterCrossFadeStartFrame = this->fields.movieAfterCrossFadeStartFrame;
   v6 = 0;
@@ -93,7 +93,7 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeStartFrame(
     System_Nullable_int____ctor(
       v4,
       movieAfterCrossFadeStartFrame,
-      (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
+      (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
     return v6;
   }
 }
@@ -107,10 +107,10 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeTime(
   System_Nullable_int__o v4; // x0
   System_Nullable_int__o v6; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E771D2 & 1) == 0 )
+  if ( (byte_5938197 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
-    byte_4E771D2 = 1;
+    sub_21FFC50(&Method_System_Nullable_int___ctor__);
+    byte_5938197 = 1;
   }
   movieAfterCrossFadeTime = this->fields.movieAfterCrossFadeTime;
   v6 = 0;
@@ -124,7 +124,7 @@ System_Nullable_int__o BattleMovieParam__get_MovieAfterCrossFadeTime(
     System_Nullable_int____ctor(
       v4,
       movieAfterCrossFadeTime,
-      (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
+      (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
     return v6;
   }
 }

@@ -1,12 +1,14 @@
 void SubmarineSelectScannerDialog___ctor(SubmarineSelectScannerDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E73F0C & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5934E44 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E73F0C = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_5934E44 = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -15,20 +17,22 @@ void SubmarineSelectScannerDialog__Init(SubmarineSelectScannerDialog_o *this, co
 {
   __int64 v3; // x1
   UILabel_o *titleLabel; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
   UILabel_o *closeLabel; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E73F07 & 1) == 0 )
+  if ( (byte_5934E3F & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E73F07 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934E3F = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -41,15 +45,15 @@ void SubmarineSelectScannerDialog__Init(SubmarineSelectScannerDialog_o *this, co
     goto LABEL_9;
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   closeLabel = this->fields.closeLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
 LABEL_9:
-    sub_1D0F30C(titleLabel, v3);
+    sub_21FFECC(titleLabel, v3);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
   this->fields.closeAction = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.closeAction, 0, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -59,22 +63,22 @@ void SubmarineSelectScannerDialog__OnClickCloseButton(SubmarineSelectScannerDial
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4E73F09 & 1) == 0 )
+  if ( (byte_5934E41 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog_OnClickCloseButton__);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog__OnClickCloseButton_b__10_0__);
-    byte_4E73F09 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog_OnClickCloseButton__);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog__OnClickCloseButton_b__10_0__);
+    byte_5934E41 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_SubmarineSelectScannerDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_SubmarineSelectScannerDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SubmarineSelectScannerDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SubmarineSelectScannerDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineSelectScannerDialog__OnClickCloseButton_b__10_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -90,58 +94,60 @@ void SubmarineSelectScannerDialog__OnSelectScanner(
   __int64 v7; // x20
   __int64 v8; // x0
   __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  _QWORD *v16; // x0
-  System_Reflection_MethodBase_o *v17; // x0
-  System_Action_o *v18; // x21
-  _QWORD *v19; // x0
-  System_Reflection_MethodBase_o *v20; // x0
+  bool v14; // w6
+  bool v15; // w7
+  int32_t state; // w8
+  _BYTE *v17; // x0
+  System_Reflection_MethodBase_o *v18; // x0
+  System_Action_o *v19; // x21
+  _QWORD *v20; // x0
+  System_Reflection_MethodBase_o *v21; // x0
 
-  if ( (byte_4E73F0A & 1) == 0 )
+  if ( (byte_5934E42 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog_OnSelectScanner__);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog___c__DisplayClass11_0__OnSelectScanner_b__0__);
-    sub_1D0F0B4(&SubmarineSelectScannerDialog___c__DisplayClass11_0_TypeInfo);
-    byte_4E73F0A = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog_OnSelectScanner__);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog___c__DisplayClass11_0__OnSelectScanner_b__0__);
+    sub_21FFC50(&SubmarineSelectScannerDialog___c__DisplayClass11_0_TypeInfo);
+    byte_5934E42 = 1;
   }
-  v7 = sub_1D0F300(SubmarineSelectScannerDialog___c__DisplayClass11_0_TypeInfo);
+  v7 = sub_21FFEBC(SubmarineSelectScannerDialog___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1D0F30C(v8, v9);
+    sub_21FFECC(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  state = this->fields.state;
   *(_DWORD *)(v7 + 24) = scanId;
-  if ( this->fields.state == 2 )
+  if ( state == 2 )
   {
     if ( isEnabled )
     {
+      v17 = Method_SubmarineSelectScannerDialog_OnSelectScanner__;
       this->fields.state = 3;
-      v16 = Method_SubmarineSelectScannerDialog_OnSelectScanner__;
-      if ( (*((_BYTE *)Method_SubmarineSelectScannerDialog_OnSelectScanner__ + 83) & 2) != 0 )
-        v16 = (_QWORD *)sub_1D0F0CC(Method_SubmarineSelectScannerDialog_OnSelectScanner__);
-      v17 = (System_Reflection_MethodBase_o *)sub_1D0F098(v16, v16[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0);
-      v18 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+      if ( (v17[83] & 2) != 0 )
+        v17 = (_BYTE *)sub_21FFC68(v17);
+      v18 = (System_Reflection_MethodBase_o *)sub_21FFC34(v17, *((_QWORD *)v17 + 4));
+      OverwriteAssetSoundName__PlaySystemSe(v18, 0, 0, 0);
+      v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
       System_Action___ctor(
-        v18,
+        v19,
         (Il2CppObject *)v7,
         Method_SubmarineSelectScannerDialog___c__DisplayClass11_0__OnSelectScanner_b__0__,
         0);
-      BaseDialog__Close((BaseDialog_o *)this, v18, 0);
+      BaseDialog__Close((BaseDialog_o *)this, v19, 0);
     }
     else
     {
-      v19 = Method_SubmarineSelectScannerDialog_OnSelectScanner__;
+      v20 = Method_SubmarineSelectScannerDialog_OnSelectScanner__;
       if ( (*((_BYTE *)Method_SubmarineSelectScannerDialog_OnSelectScanner__ + 83) & 2) != 0 )
-        v19 = (_QWORD *)sub_1D0F0CC(Method_SubmarineSelectScannerDialog_OnSelectScanner__);
-      v20 = (System_Reflection_MethodBase_o *)sub_1D0F098(v19, v19[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0, 0);
+        v20 = (_QWORD *)sub_21FFC68(Method_SubmarineSelectScannerDialog_OnSelectScanner__);
+      v21 = (System_Reflection_MethodBase_o *)sub_21FFC34(v20, v20[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v21, 2, 0, 0);
     }
   }
 }
@@ -157,60 +163,64 @@ void SubmarineSelectScannerDialog__Open(
   __int64 v9; // x21
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   const MethodInfo *v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x2
   UILabel_o *titleLabel; // x23
   UILabel_o *messageLabel; // x23
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  __int64 v35; // x1
+  __int64 v36; // x2
   UnityEngine_Object_o *listViewManager; // x22
-  const MethodInfo *v34; // x2
-  struct SubmarineSelectScannerListViewManager_o *v35; // x22
-  System_Action_int__bool__o *v36; // x20
-  int32_t v37; // w2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  int32_t v40; // w5
-  int64_t v41; // x6
-  System_String_o *v42; // x7
-  System_Action_o *v43; // x20
+  const MethodInfo *v38; // x2
+  struct SubmarineSelectScannerListViewManager_o *v39; // x22
+  System_Action_int__bool__o *v40; // x20
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  System_Action_o *v47; // x20
 
-  if ( (byte_4E73F08 & 1) == 0 )
+  if ( (byte_5934E40 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_int__bool__TypeInfo);
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog_OnSelectScanner__);
-    sub_1D0F0B4(&Method_SubmarineSelectScannerDialog___c__DisplayClass9_0__Open_b__0__);
-    sub_1D0F0B4(&SubmarineSelectScannerDialog___c__DisplayClass9_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5785/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/);
-    sub_1D0F0B4(&StringLiteral_5787/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/);
-    byte_4E73F08 = 1;
+    sub_21FFC50(&System_Action_int__bool__TypeInfo);
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog_OnSelectScanner__);
+    sub_21FFC50(&Method_SubmarineSelectScannerDialog___c__DisplayClass9_0__Open_b__0__);
+    sub_21FFC50(&SubmarineSelectScannerDialog___c__DisplayClass9_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_5945/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/);
+    sub_21FFC50(&StringLiteral_5947/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/);
+    byte_5934E40 = 1;
   }
-  v9 = sub_1D0F300(SubmarineSelectScannerDialog___c__DisplayClass9_0_TypeInfo);
+  v9 = sub_21FFEBC(SubmarineSelectScannerDialog___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_16;
   *(_QWORD *)(v9 + 16) = openFinishedAction;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)openFinishedAction, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)openFinishedAction, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)this, v18, v19, v20, v21, v22, v23);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)this, v18, v19, v20, v21, v22, v23);
   SubmarineSelectScannerDialog__Init(this, v24);
   this->fields.state = 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -218,30 +228,30 @@ void SubmarineSelectScannerDialog__Open(
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   titleLabel = this->fields.titleLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5787/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5947/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_16;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   messageLabel = this->fields.messageLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5785/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5945/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_16;
   UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
   this->fields.closeAction = closeAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.closeAction,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)closeAction,
-    v27,
-    v28,
     v29,
     v30,
     v31,
-    v32);
+    v32,
+    v33,
+    v34);
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v35, v36);
   if ( UnityEngine_Object__op_Inequality(listViewManager, 0, 0) )
   {
     gameObject = (UnityEngine_GameObject_o *)this->fields.listViewManager;
@@ -250,40 +260,40 @@ void SubmarineSelectScannerDialog__Open(
       SubmarineSelectScannerListViewManager__CreateList(
         (SubmarineSelectScannerListViewManager_o *)gameObject,
         eventId,
-        v34);
-      v35 = this->fields.listViewManager;
-      v36 = (System_Action_int__bool__o *)sub_1D0F300(System_Action_int__bool__TypeInfo);
+        v38);
+      v39 = this->fields.listViewManager;
+      v40 = (System_Action_int__bool__o *)sub_21FFEBC(System_Action_int__bool__TypeInfo);
       System_Action_int__bool____ctor(
-        v36,
+        v40,
         (Il2CppObject *)this,
         (intptr_t)Method_SubmarineSelectScannerDialog_OnSelectScanner__,
         0);
-      if ( v35 )
+      if ( v39 )
       {
-        v35->fields._OnClickItemAction_k__BackingField = v36;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&v35->fields._OnClickItemAction_k__BackingField,
-          (int32_t)v36,
-          v37,
-          v38,
-          v39,
-          v40,
+        v39->fields._OnClickItemAction_k__BackingField = v40;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v39->fields._OnClickItemAction_k__BackingField,
+          (int32_t)v40,
           v41,
-          v42);
+          v42,
+          v43,
+          v44,
+          v45,
+          v46);
         goto LABEL_15;
       }
     }
 LABEL_16:
-    sub_1D0F30C(gameObject, v11);
+    sub_21FFECC(gameObject, v11);
   }
 LABEL_15:
-  v43 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v47 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
-    v43,
+    v47,
     (Il2CppObject *)v9,
     Method_SubmarineSelectScannerDialog___c__DisplayClass9_0__Open_b__0__,
     0);
-  BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v47, 0, 0, 0);
 }
 
 
@@ -293,14 +303,14 @@ void SubmarineSelectScannerDialog___OnClickCloseButton_b__10_0(
 {
   System_Action_T__o *closeAction; // x0
 
-  if ( (byte_4E73F0D & 1) == 0 )
+  if ( (byte_5934E45 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
-    byte_4E73F0D = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_int___);
+    byte_5934E45 = 1;
   }
   closeAction = (System_Action_T__o *)this->fields.closeAction;
   if ( closeAction )
-    ActionExtensions__Call_int_(closeAction, 0, (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
+    ActionExtensions__Call_int_(closeAction, 0, (const MethodInfo_36CDE6C *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -308,24 +318,25 @@ UnityEngine_GameObject_o *SubmarineSelectScannerDialog__get_closeBtnObject(
         SubmarineSelectScannerDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *closeButton; // x20
-  __int64 v4; // x1
-  UnityEngine_Component_o *v6; // x0
+  __int64 v5; // x1
+  UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_4E73F0B & 1) == 0 )
+  if ( (byte_5934E43 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73F0B = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934E43 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(closeButton, 0, 0) )
     return 0;
-  v6 = (UnityEngine_Component_o *)this->fields.closeButton;
-  if ( !v6 )
-    sub_1D0F30C(0, v4);
-  return UnityEngine_Component__get_gameObject(v6, 0);
+  v7 = (UnityEngine_Component_o *)this->fields.closeButton;
+  if ( !v7 )
+    sub_21FFECC(0, v5);
+  return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
 
@@ -346,20 +357,20 @@ void SubmarineSelectScannerDialog___c__DisplayClass11_0___OnSelectScanner_b__0(
   System_Action_T__o *closeAction; // x0
 
   v2 = this;
-  if ( (byte_4E73F0E & 1) == 0 )
+  if ( (byte_5934E46 & 1) == 0 )
   {
-    this = (SubmarineSelectScannerDialog___c__DisplayClass11_0_o *)sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
-    byte_4E73F0E = 1;
+    this = (SubmarineSelectScannerDialog___c__DisplayClass11_0_o *)sub_21FFC50(&Method_ActionExtensions_Call_int___);
+    byte_5934E46 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   closeAction = (System_Action_T__o *)_4__this->fields.closeAction;
   if ( closeAction )
     ActionExtensions__Call_int_(
       closeAction,
       v2->fields.scanId,
-      (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
+      (const MethodInfo_36CDE6C *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -387,7 +398,7 @@ void SubmarineSelectScannerDialog___c__DisplayClass9_0___Open_b__0(
                                                                         openFinishedAction->fields.method),
         (_4__this = v3->fields.__4__this) == 0) )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   _4__this->fields.state = 2;
 }

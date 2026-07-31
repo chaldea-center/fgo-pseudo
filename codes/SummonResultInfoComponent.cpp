@@ -10,24 +10,24 @@ void SummonResultInfoComponent__OnClickSvt(SummonResultInfoComponent_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x0
   __int64 v6; // x1
-  struct GachaInfos_o *resultData; // x8
-  struct SummonResultInfoComponent_ClickDelegate_o *clickCallbackFunc; // x9
+  struct GachaInfos_o *resultData; // x9
+  struct SummonResultInfoComponent_ClickDelegate_o *clickCallbackFunc; // x8
 
-  if ( (byte_4E73ACD & 1) == 0 )
+  if ( (byte_5934A9E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SummonResultInfoComponent_OnClickSvt__);
-    byte_4E73ACD = 1;
+    sub_21FFC50(&Method_SummonResultInfoComponent_OnClickSvt__);
+    byte_5934A9E = 1;
   }
   if ( this->fields.clickCallbackFunc )
   {
     v3 = Method_SummonResultInfoComponent_OnClickSvt__;
     if ( (*((_BYTE *)Method_SummonResultInfoComponent_OnClickSvt__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SummonResultInfoComponent_OnClickSvt__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SummonResultInfoComponent_OnClickSvt__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     resultData = this->fields.resultData;
     if ( !resultData || (clickCallbackFunc = this->fields.clickCallbackFunc) == 0 )
-      sub_1D0F30C(v5, v6);
+      sub_21FFECC(v5, v6);
     ((void (__fastcall *)(intptr_t, int64_t, intptr_t))clickCallbackFunc->fields.invoke_impl)(
       clickCallbackFunc->fields.method_code,
       resultData->fields.userSvtId,
@@ -36,6 +36,7 @@ void SummonResultInfoComponent__OnClickSvt(SummonResultInfoComponent_o *this, co
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SummonResultInfoComponent__setResultData(
         SummonResultInfoComponent_o *this,
         GachaInfos_o *data,
@@ -45,13 +46,13 @@ void SummonResultInfoComponent__setResultData(
         int32_t befMana,
         const MethodInfo *method)
 {
-  System_String_o *v7; // x7
-  char v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v7; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   DataManager_o *Instance; // x0
   __int64 sellMana; // x1
   DataManager_o *v22; // x23
@@ -60,56 +61,59 @@ void SummonResultInfoComponent__setResultData(
   Il2CppObject *v25; // x0
   UserCommandCodeEntity_o *v26; // x26
   int32_t v27; // w25
-  struct DataMasterBase_array *datalist; // x25
-  __int64 v29; // x26
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v30; // x26
-  struct System_Collections_Generic_List_string__o *masterCheckName; // x25
-  __int64 v32; // x27
-  int32_t v33; // w0
+  __int64 v28; // x2
+  __int64 v29; // x25
+  struct DataMasterBase_array *datalist; // x26
+  __int64 v31; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v32; // x26
+  __int64 v33; // x25
+  struct System_Collections_Generic_List_string__o *masterCheckName; // x27
+  int32_t v35; // w0
   int32_t fakeValue; // w4
-  int32_t v35; // w2
+  int32_t v37; // w2
   UIButton_o *iconBtn; // x24
-  System_String_o *v37; // x21
-  Il2CppObject *v38; // x0
+  __int64 v39; // x1
+  __int64 v40; // x2
+  System_String_o *v41; // x21
+  Il2CppObject *v42; // x0
   int32_t svtCoinNum; // [xsp+64h] [xbp-6Ch] BYREF
-  Il2CppObject *v40; // [xsp+68h] [xbp-68h] BYREF
+  Il2CppObject *v44; // [xsp+68h] [xbp-68h] BYREF
   Il2CppObject *entity; // [xsp+78h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v46; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
 
-  if ( (byte_4E73ACC & 1) == 0 )
+  if ( (byte_5934A9D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_SvtCoinMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_12650/*"SUMMON_RESULT_COIN_FORMAT"*/);
-    byte_4E73ACC = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_SvtCoinMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_12971/*"SUMMON_RESULT_COIN_FORMAT"*/);
+    byte_5934A9D = 1;
   }
   entity = 0;
-  v40 = 0;
+  v44 = 0;
   this->fields.resultData = data;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.resultData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.resultData,
     (int32_t)data,
-    isOverlap,
-    (int32_t)callback,
-    (System_String_o *)befQp,
+    (System_String_o *)isOverlap,
+    (System_String_o *)callback,
+    befQp,
     befMana,
-    (int64_t)method,
+    (bool)method,
     v7);
   this->fields.clickCallbackFunc = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.clickCallbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.clickCallbackFunc,
     (int32_t)callback,
     v14,
     v15,
@@ -117,88 +121,90 @@ void SummonResultInfoComponent__setResultData(
     v17,
     v18,
     v19);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !data )
-    goto LABEL_49;
+    goto LABEL_50;
   v22 = Instance;
   isNew = data->fields.isNew && !isOverlap;
   if ( !data->fields.userSvtId )
   {
     if ( !Instance )
-      goto LABEL_49;
+      goto LABEL_50;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
-      goto LABEL_49;
+      goto LABEL_50;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   data->fields.objectId,
-                                  (const MethodInfo_3535B7C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                  (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !Instance )
-      goto LABEL_49;
+      goto LABEL_50;
     v29 = *(_QWORD *)&Instance->fields._DispLog;
     datalist = Instance->fields.datalist;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v42.fields.currentCryptoKey = v29;
-    *(_QWORD *)&v42.fields.fakeValue = datalist;
-    v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v42, 0);
-    goto LABEL_24;
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, sellMana, v28);
+    *(_QWORD *)&v46.fields.currentCryptoKey = v29;
+    *(_QWORD *)&v46.fields.fakeValue = datalist;
+    v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v46, 0);
+    goto LABEL_25;
   }
   type = data->fields.type;
   Instance = (DataManager_o *)SvtType__IsCommandCode(type, 0);
-  if ( !v22 )
-    goto LABEL_49;
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
+    if ( !v22 )
+      goto LABEL_50;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   v22,
-                                  (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !Instance )
-      goto LABEL_49;
+      goto LABEL_50;
     Instance = (DataManager_o *)DataMasterBase_object__object__long___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   data->fields.userSvtId,
-                                  (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                  (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     if ( !Instance )
-      goto LABEL_49;
-    v30 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)Instance;
-    v32 = *(_QWORD *)&Instance->fields.lastFrameTime;
+      goto LABEL_50;
+    v32 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)Instance;
+    v33 = *(_QWORD *)&Instance->fields.lastFrameTime;
     masterCheckName = Instance->fields.masterCheckName;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v43.fields.currentCryptoKey = v32;
-    *(_QWORD *)&v43.fields.fakeValue = masterCheckName;
-    v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v43, 0);
-    v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v30[6], 0);
-    fakeValue = v30[27].fields.fakeValue;
-    v35 = v33;
-    goto LABEL_25;
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, sellMana, v31);
+    *(_QWORD *)&v47.fields.currentCryptoKey = v33;
+    *(_QWORD *)&v47.fields.fakeValue = masterCheckName;
+    v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v47, 0);
+    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v32[6], 0);
+    fakeValue = v32[27].fields.fakeValue;
+    v37 = v35;
+    goto LABEL_26;
   }
+  if ( !v22 )
+    goto LABEL_50;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v22,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_50;
   v25 = DataMasterBase_object__object__long___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           data->fields.userSvtId,
-          (const MethodInfo_353832C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+          (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
   if ( !v25 || (v26 = (UserCommandCodeEntity_o *)v25, !SvtType__IsCommandCode(type, 0)) )
   {
     v27 = 0;
-LABEL_24:
-    v35 = 0;
-    fakeValue = 0;
 LABEL_25:
+    v37 = 0;
+    fakeValue = 0;
+LABEL_26:
     Instance = (DataManager_o *)this->fields.svtFaceInfo;
     if ( !Instance )
-      goto LABEL_49;
-    ServantFaceIconComponent__Set_42458076(
+      goto LABEL_50;
+    ServantFaceIconComponent__Set_48021296(
       (ServantFaceIconComponent_o *)Instance,
       v27,
-      v35,
+      v37,
       -1,
       fakeValue,
       0,
@@ -215,32 +221,32 @@ LABEL_25:
       0,
       1,
       0);
-    goto LABEL_27;
+    goto LABEL_28;
   }
   Instance = (DataManager_o *)this->fields.svtFaceInfo;
   if ( !Instance )
-    goto LABEL_49;
-  ServantFaceIconComponent__Set_42464004((ServantFaceIconComponent_o *)Instance, v26, isNew, 0, 0, 0);
+    goto LABEL_50;
+  ServantFaceIconComponent__Set_48027268((ServantFaceIconComponent_o *)Instance, v26, isNew, 0, 0, 0);
   v27 = 0;
-LABEL_27:
+LABEL_28:
   Instance = (DataManager_o *)this->fields.svtFaceInfo;
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_50;
   iconBtn = this->fields.iconBtn;
   Instance = (DataManager_o *)ServantFaceIconComponent__GetFaceSpriteName((ServantFaceIconComponent_o *)Instance, 0);
   if ( !iconBtn )
-    goto LABEL_49;
+    goto LABEL_50;
   UIButton__set_normalSprite(iconBtn, (System_String_o *)Instance, 0);
   Instance = (DataManager_o *)this->fields.autoSaleInfo;
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_50;
   AutoSellInfoComponent__Clear((AutoSellInfoComponent_o *)Instance, 0);
   sellMana = (unsigned int)data->fields.sellMana;
   if ( *(_QWORD *)&data->fields.sellQp )
   {
     Instance = (DataManager_o *)this->fields.autoSaleInfo;
     if ( !Instance )
-      goto LABEL_49;
+      goto LABEL_50;
     AutoSellInfoComponent__SetData(
       (AutoSellInfoComponent_o *)Instance,
       sellMana,
@@ -251,52 +257,52 @@ LABEL_27:
   }
   Instance = (DataManager_o *)this->fields.addRoot;
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_50;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v22,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_50;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           v27,
-          (const MethodInfo_3535BC8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return;
   Instance = (DataManager_o *)entity;
   if ( !entity )
-LABEL_49:
-    sub_1D0F30C(Instance, sellMana);
+LABEL_50:
+    sub_21FFECC(Instance, sellMana);
   if ( ServantEntity__get_IsServant((ServantEntity_o *)entity, 0) && data->fields.svtCoinNum >= 1 )
   {
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   v22,
-                                  (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SvtCoinMaster___);
+                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SvtCoinMaster___);
     if ( Instance )
     {
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-              &v40,
+              &v44,
               v27,
-              (const MethodInfo_3535BC8 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__) )
+              (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__) )
         return;
       Instance = (DataManager_o *)this->fields.addRoot;
       if ( Instance )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-        if ( v40 )
+        if ( v44 )
         {
           Instance = (DataManager_o *)this->fields.addIcon;
           if ( Instance )
           {
-            ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, (int32_t)v40[1].monitor, -1, 1, 0);
-            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v37 = LocalizationManager__Get((System_String_o *)StringLiteral_12650/*"SUMMON_RESULT_COIN_FORMAT"*/, 0);
+            ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, (int32_t)v44[1].monitor, -1, 1, 0);
+            if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39, v40);
+            v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12971/*"SUMMON_RESULT_COIN_FORMAT"*/, 0);
             svtCoinNum = data->fields.svtCoinNum;
-            v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtCoinNum);
-            Instance = (DataManager_o *)System_String__Format(v37, v38, 0);
+            v42 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &svtCoinNum);
+            Instance = (DataManager_o *)System_String__Format(v41, v42, 0);
             if ( this->fields.addNumLabel )
             {
               UILabel__set_text(this->fields.addNumLabel, (System_String_o *)Instance, 0);
@@ -306,7 +312,7 @@ LABEL_49:
         }
       }
     }
-    goto LABEL_49;
+    goto LABEL_50;
   }
 }
 
@@ -317,10 +323,10 @@ void SummonResultInfoComponent_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -330,23 +336,23 @@ void SummonResultInfoComponent_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -358,9 +364,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B397CC;
+  this->fields.invoke_impl = (intptr_t)sub_1FF3E58;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B39784;
+  this->fields.extra_arg = (intptr_t)sub_1FF3E10;
 }
 
 
@@ -371,18 +377,13 @@ System_IAsyncResult_o *SummonResultInfoComponent_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  int64_t v10; // [xsp+18h] [xbp-38h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  int64_t v10; // [xsp+18h] [xbp-28h] BYREF
 
-  v10 = usrSvtId;
-  if ( (byte_4E73ACE & 1) == 0 )
-  {
-    sub_1D0F0B4(&long_TypeInfo);
-    byte_4E73ACE = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(long_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v10 = usrSvtId;
+  v9[0] = j_il2cpp_value_box_0(qword_594C090, &v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -391,7 +392,7 @@ void SummonResultInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

@@ -28,10 +28,10 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
     if ( possessionAmount->fields.mOverflow == 2 )
     {
       mWidth = possessionAmount->fields.mWidth;
-      if ( SLODWORD(useAmount[7].klass) >= mWidth )
-        klass = (int32_t)useAmount[7].klass;
-      else
+      if ( SLODWORD(useAmount[7].klass) <= mWidth )
         klass = mWidth;
+      else
+        klass = (int32_t)useAmount[7].klass;
       useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0);
       if ( this->fields.useName )
       {
@@ -66,7 +66,7 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
         }
       }
 LABEL_15:
-      sub_1D0F30C(useAmount, method);
+      sub_21FFECC(useAmount, method);
     }
   }
 }
@@ -85,7 +85,7 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
   UnityEngine_GameObject_o *gameObject; // x0
   float LocalPositionX; // s0
   float v12; // s8
-  int v13; // w20
+  unsigned int v13; // w20
   UnityEngine_GameObject_o *v14; // x0
   float v15; // s0
   UnityEngine_GameObject_o *v16; // x0
@@ -106,28 +106,28 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
     goto LABEL_15;
   possessionAmount = v4->fields.possessionAmount;
   if ( !possessionAmount
-    || (mWidth = useName->fields.mWidth,
+    || (mWidth = possessionName->fields.mWidth,
         useAmount = (int)this[2].fields.useAmount,
-        v8 = possessionName->fields.mWidth,
+        v8 = useName->fields.mWidth,
         v9 = possessionAmount->fields.mWidth,
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
         LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, 0),
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0) )
   {
 LABEL_15:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v12 = LocalPositionX;
-  if ( useAmount + mWidth >= v9 + v8 )
-    v13 = useAmount + mWidth;
+  if ( v8 + useAmount <= v9 + mWidth )
+    v13 = v9 + mWidth;
   else
-    v13 = v9 + v8;
+    v13 = v8 + useAmount;
   v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v15 = GameObjectExtensions__GetLocalPositionX(v14, 0);
   if ( v12 < v15 )
     v12 = v15;
   v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
-  GameObjectExtensions__SetLocalPositionX(v16, (float)((float)v13 * 0.5) - v12, 0);
+  GameObjectExtensions__SetLocalPositionX(v16, vcvts_n_f32_s32(v13, 1u) - v12, 0);
 }
 
 
@@ -138,26 +138,28 @@ System_Collections_IEnumerator_o *RetryConfirmItem__SetCondensedScalePossessionA
 {
   bool v5; // w21
   __int64 v6; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_4E7B282 & 1) == 0 )
+  if ( (byte_593C302 & 1) == 0 )
   {
-    sub_1D0F0B4(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
-    byte_4E7B282 = 1;
+    sub_21FFC50(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+    byte_593C302 = 1;
   }
   v5 = isDispUseItemUI;
-  v6 = sub_1D0F300(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+  v6 = sub_21FFEBC(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
+  result = (System_Collections_IEnumerator_o *)v6;
   *(_BYTE *)(v6 + 40) = v5;
-  return (System_Collections_IEnumerator_o *)v6;
+  return result;
 }
 
 
@@ -175,39 +177,22 @@ bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {
-  int32_t _1__state; // w9
+  int32_t _1__state; // w20
   struct RetryConfirmItem_o *_4__this; // x8
   RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *v4; // x19
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  bool result; // w0
   _BOOL4 isDispUseItemUI; // w9
+  MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
   v4 = this;
-  if ( _1__state == 1 )
-  {
-    isDispUseItemUI = this->fields.isDispUseItemUI;
-    this->fields.__1__state = -1;
-    if ( isDispUseItemUI )
-      method = (const MethodInfo *)(&qword_80 + 2);
-    else
-      method = (const MethodInfo *)(&qword_A8 + 2);
-    if ( !_4__this )
-      goto LABEL_14;
-    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *)_4__this->fields.possessionAmount;
-    if ( !this )
-      goto LABEL_14;
-    if ( SLODWORD(this[3].fields.__2__current) > (int)method )
-      UILabel__SetCondensedScale((UILabel_o *)this, (int32_t)method, 0, 0);
-  }
-  else if ( !_1__state )
+  if ( !_1__state )
   {
     this->fields.__1__state = -1;
     if ( _4__this )
@@ -217,17 +202,31 @@ bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
       {
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0);
         v4->fields.__2__current = 0;
-        p__2__current = (GrandQuestFolderBoardItem_o *)&v4->fields.__2__current;
-        sub_1D0F058(p__2__current, 0, v6, v7, v8, v9, v10, v11);
-        result = 1;
-        LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-        return result;
+        p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
+        sub_21FFBF4(p__2__current, 0, v7, v8, v9, v10, v11, v12);
+        p__2__current[-1].fields._BoardType_k__BackingField = 1;
+        return _1__state == 0;
       }
     }
-LABEL_14:
-    sub_1D0F30C(this, method);
+    goto LABEL_14;
   }
-  return 0;
+  if ( _1__state != 1 )
+    return _1__state == 0;
+  isDispUseItemUI = this->fields.isDispUseItemUI;
+  this->fields.__1__state = -1;
+  if ( isDispUseItemUI )
+    method = (const MethodInfo *)(&qword_80 + 2);
+  else
+    method = (const MethodInfo *)(&qword_A8 + 2);
+  if ( !_4__this
+    || (this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *)_4__this->fields.possessionAmount) == 0 )
+  {
+LABEL_14:
+    sub_21FFECC(this, method);
+  }
+  if ( SLODWORD(this[3].fields.__2__current) > (int)method )
+    UILabel__SetCondensedScale((UILabel_o *)this, (int32_t)method, 0, 0);
+  return _1__state == 0;
 }
 
 
@@ -247,11 +246,11 @@ void __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

@@ -3,17 +3,17 @@ void BattleOverwriteFieldMotionActionData___ctor(
         System_Int32_array *motionIds,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   ExecInActionData___ctor((ExecInActionData_o *)this, (const MethodInfo *)motionIds);
   this->fields.overwriteMotionIds = motionIds;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.overwriteMotionIds,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteMotionIds,
     (int32_t)motionIds,
     v5,
     v6,
@@ -30,6 +30,6 @@ void BattleOverwriteFieldMotionActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   BattlePerformance__SetOverwriteFieldMotion(perf, this->fields.overwriteMotionIds, 1, 0);
 }

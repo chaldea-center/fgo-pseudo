@@ -2,27 +2,27 @@ void EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *met
 {
   int32_t v3; // w1
   struct System_String_o **p_value; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E779D1 & 1) == 0 )
+  if ( (byte_59389E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E779D1 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59389E3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
-  *(_QWORD *)&this->fields.id = 0;
-  v3 = StringLiteral_1/*""*/;
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+  v3 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
+  *(p_value - 1) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -33,16 +33,16 @@ System_String_o *EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4E779D2 & 1) == 0 )
+  if ( (byte_59389E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
-    byte_4E779D2 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_59389E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_324DA20 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_382164C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

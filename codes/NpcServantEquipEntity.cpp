@@ -1,13 +1,13 @@
 void NpcServantEquipEntity___ctor(NpcServantEquipEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77C46 & 1) == 0 )
+  if ( (byte_5938C63 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E77C46 = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_5938C63 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 

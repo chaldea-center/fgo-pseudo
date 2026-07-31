@@ -2,11 +2,14 @@ void EnemySimpleHpData___ctor(EnemySimpleHpData_o *this, BattleServantData_o *sv
 {
   __int64 v5; // x0
   __int64 v6; // x1
+  int32_t maxtpturn; // w9
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_1D0F30C(v5, v6);
-  *(int32x2_t *)&this->fields._NextTpTurn_k__BackingField = vrev64_s32(*(int32x2_t *)&svtData->fields.maxtpturn);
+    sub_21FFECC(v5, v6);
+  maxtpturn = svtData->fields.maxtpturn;
+  this->fields._NextTpTurn_k__BackingField = svtData->fields.nexttpturn;
+  this->fields._MaxTpTurn_k__BackingField = maxtpturn;
 }
 
 

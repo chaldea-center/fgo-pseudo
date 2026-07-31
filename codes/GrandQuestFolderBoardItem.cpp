@@ -9,26 +9,24 @@ void GrandQuestFolderBoardItem___ctor(
         System_String_o *closedMessage,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *v14; // x24
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  bool v19; // w6
+  bool v20; // w7
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
 
-  v14 = this;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
-  v14->fields._WarId_k__BackingField = warId;
-  v14->fields._Name_k__BackingField = boardName;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v14->fields._Name_k__BackingField,
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  this->fields._WarId_k__BackingField = warId;
+  this->fields._Name_k__BackingField = boardName;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)boardName,
     v15,
     v16,
@@ -36,11 +34,18 @@ void GrandQuestFolderBoardItem___ctor(
     v18,
     v19,
     v20);
-  v14->fields._ClosedMessage_k__BackingField = closedMessage;
-  v14 = (GrandQuestFolderBoardItem_o *)((char *)v14 + 152);
-  LODWORD(v14[-1].fields._ListCreatedTime_k__BackingField) = iconId;
-  v14[-1].fields._ClosedMessage_k__BackingField = (struct System_String_o *)listCreatedTime;
-  sub_1D0F058(v14, (int32_t)closedMessage, v21, v22, v23, v24, v25, v26);
+  this->fields._ClosedMessage_k__BackingField = closedMessage;
+  this->fields._IconId_k__BackingField = iconId;
+  this->fields._ListCreatedTime_k__BackingField = listCreatedTime;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
+    (int32_t)closedMessage,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
 }
 
 

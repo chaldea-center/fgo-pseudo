@@ -1,14 +1,14 @@
 void WarReleaseMaster___ctor(WarReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7894B & 1) == 0 )
+  if ( (byte_5939A6A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string___ctor__);
-    byte_4E7894B = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string___ctor__);
+    byte_5939A6A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    524,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string___ctor__);
+    526,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string___ctor__);
 }
 
 
@@ -20,41 +20,43 @@ WarReleaseEntity_array *WarReleaseMaster__GetEntities(
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *v8; // x19
-  System_Func_object__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  System_Collections_IEnumerable_o *list; // x0
+  const MethodInfo_38355E8 *v9; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
+  System_Func_object__bool__o *v11; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
 
-  if ( (byte_4E78949 & 1) == 0 )
+  if ( (byte_5939A68 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Cast_WarReleaseEntity___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_WarReleaseEntity___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_WarReleaseEntity___);
-    sub_1D0F0B4(&System_Func_WarReleaseEntity__bool__TypeInfo);
-    sub_1D0F0B4(&Method_WarReleaseMaster___c__DisplayClass0_0__GetEntities_b__0__);
-    sub_1D0F0B4(&WarReleaseMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4E78949 = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Cast_WarReleaseEntity___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_WarReleaseEntity___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_WarReleaseEntity___);
+    sub_21FFC50(&System_Func_WarReleaseEntity__bool__TypeInfo);
+    sub_21FFC50(&Method_WarReleaseMaster___c__DisplayClass0_0__GetEntities_b__0__);
+    sub_21FFC50(&WarReleaseMaster___c__DisplayClass0_0_TypeInfo);
+    byte_5939A68 = 1;
   }
-  v5 = sub_1D0F300(WarReleaseMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_21FFEBC(WarReleaseMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
+  list = (System_Collections_IEnumerable_o *)this->fields.list;
+  v9 = (const MethodInfo_38355E8 *)Method_System_Linq_Enumerable_Cast_WarReleaseEntity___;
   *(_DWORD *)(v5 + 16) = warId;
-  v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_object_(
-                                                              (System_Collections_IEnumerable_o *)this->fields.list,
-                                                              (const MethodInfo_325FCE8 *)Method_System_Linq_Enumerable_Cast_WarReleaseEntity___);
-  v9 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_WarReleaseEntity__bool__TypeInfo);
+  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_object_(list, v9);
+  v11 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_WarReleaseEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
+    v11,
     (Il2CppObject *)v5,
     Method_WarReleaseMaster___c__DisplayClass0_0__GetEntities_b__0__,
     0);
-  v10 = System_Linq_Enumerable__Where_object_(
-          v8,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_WarReleaseEntity___);
+  v12 = System_Linq_Enumerable__Where_object_(
+          v10,
+          (System_Func_TSource__bool__o *)v11,
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_WarReleaseEntity___);
   return (WarReleaseEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                     v10,
-                                     (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_WarReleaseEntity___);
+                                     v12,
+                                     (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_WarReleaseEntity___);
 }
 
 
@@ -68,194 +70,202 @@ WarReleaseEntity_o *WarReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E7894C & 1) == 0 )
+  if ( (byte_5939A6B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__GetEntity__);
-    byte_4E7894C = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__GetEntity__);
+    byte_5939A6B = 1;
   }
   PK = (Il2CppObject *)WarReleaseEntity__CreatePK(warId, condType, condId, condNum, (const MethodInfo *)condNum);
   return (WarReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_353AADC *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__GetEntity__);
+                                 (const MethodInfo_3EE2044 *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__GetEntity__);
 }
 
 
 WarReleaseEntity_o *WarReleaseMaster__GetOpenEntity(WarReleaseMaster_o *this, int32_t warId, const MethodInfo *method)
 {
   WarReleaseEntity_array *Entities; // x0
-  WarReleaseMaster___c_c *v6; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x19
+  __int64 v6; // x1
+  WarReleaseMaster___c_c *v7; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x19
+  struct WarReleaseMaster___c_StaticFields *static_fields; // x9
   System_Func_object__int__o *_9__1_0; // x20
-  Il2CppObject *v9; // x21
-  struct WarReleaseMaster___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  System_Linq_IOrderedEnumerable_TSource__o *v17; // x0
-  __int64 v18; // x1
+  Il2CppObject *v11; // x21
+  struct WarReleaseMaster___c_StaticFields *v12; // x0
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v19; // x0
+  __int64 v20; // x1
   System_Linq_IOrderedEnumerable_TSource__c *klass; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v20; // x19
-  __int64 v21; // x9
+  System_Linq_IOrderedEnumerable_TSource__o *v22; // x19
+  __int64 v23; // x9
   int32_t *p_offset; // x10
-  __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x19
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
-  __int64 v30; // x8
-  __int64 v31; // x9
-  int *v32; // x10
-  __int64 v33; // x0
-  WarReleaseEntity_o *v34; // x0
-  const MethodInfo *v35; // x1
-  WarReleaseEntity_o *v36; // x21
-  __int64 v37; // x8
-  __int64 v38; // x9
-  int *v39; // x10
-  __int64 v40; // x0
+  __int64 v25; // x0
+  __int64 IsRelease; // x0
+  __int64 v27; // x1
+  __int64 v28; // x8
+  __int64 v29; // x9
+  int *v30; // x10
+  __int64 v31; // x0
+  __int64 v32; // x8
+  __int64 v33; // x9
+  int *v34; // x10
+  __int64 v35; // x0
+  WarReleaseEntity_o *v36; // x0
+  const MethodInfo *v37; // x1
+  WarReleaseEntity_o *v38; // x19
+  __int64 v39; // x8
+  __int64 v40; // x9
+  int *v41; // x10
+  __int64 v42; // x0
+  __int64 v44; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4E7894A & 1) == 0 )
+  if ( (byte_5939A69 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_OrderByDescending_WarReleaseEntity__int___);
-    sub_1D0F0B4(&System_Func_WarReleaseEntity__int__TypeInfo);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_WarReleaseEntity__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1D0F0B4(&Method_WarReleaseMaster___c__GetOpenEntity_b__1_0__);
-    sub_1D0F0B4(&WarReleaseMaster___c_TypeInfo);
-    byte_4E7894A = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_WarReleaseEntity__int___);
+    sub_21FFC50(&System_Func_WarReleaseEntity__int__TypeInfo);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_WarReleaseEntity__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&Method_WarReleaseMaster___c__GetOpenEntity_b__1_0__);
+    sub_21FFC50(&WarReleaseMaster___c_TypeInfo);
+    byte_5939A69 = 1;
   }
   Entities = WarReleaseMaster__GetEntities(this, warId, method);
-  v6 = WarReleaseMaster___c_TypeInfo;
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Entities;
-  if ( !WarReleaseMaster___c_TypeInfo->_2.cctor_finished )
+  v7 = WarReleaseMaster___c_TypeInfo;
+  v8 = (System_Collections_Generic_IEnumerable_TSource__o *)Entities;
+  if ( !*(&WarReleaseMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(WarReleaseMaster___c_TypeInfo);
-    v6 = WarReleaseMaster___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(WarReleaseMaster___c_TypeInfo, v6);
+    v7 = WarReleaseMaster___c_TypeInfo;
   }
-  _9__1_0 = (System_Func_object__int__o *)v6->static_fields->__9__1_0;
+  static_fields = v7->static_fields;
+  _9__1_0 = (System_Func_object__int__o *)static_fields->__9__1_0;
   if ( !_9__1_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !*(&v7->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = WarReleaseMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v7, v6);
+      static_fields = WarReleaseMaster___c_TypeInfo->static_fields;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__1_0 = (System_Func_object__int__o *)sub_1D0F300(System_Func_WarReleaseEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__1_0, v9, Method_WarReleaseMaster___c__GetOpenEntity_b__1_0__, 0);
-    static_fields = WarReleaseMaster___c_TypeInfo->static_fields;
-    static_fields->__9__1_0 = (struct System_Func_WarReleaseEntity__int__o *)_9__1_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v11, v12, v13, v14, v15, v16);
+    v11 = (Il2CppObject *)static_fields->__9;
+    _9__1_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_WarReleaseEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__1_0, v11, Method_WarReleaseMaster___c__GetOpenEntity_b__1_0__, 0);
+    v12 = WarReleaseMaster___c_TypeInfo->static_fields;
+    v12->__9__1_0 = (struct System_Func_WarReleaseEntity__int__o *)_9__1_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__1_0, (int32_t)_9__1_0, v13, v14, v15, v16, v17, v18);
   }
-  v17 = System_Linq_Enumerable__OrderByDescending_object__int_(
-          v7,
+  v19 = System_Linq_Enumerable__OrderByDescending_object__int_(
+          v8,
           (System_Func_TSource__TKey__o *)_9__1_0,
-          (const MethodInfo_327F654 *)Method_System_Linq_Enumerable_OrderByDescending_WarReleaseEntity__int___);
-  if ( !v17 )
-    sub_1D0F30C(0, v18);
-  klass = v17->klass;
-  v20 = v17;
-  v21 = *(unsigned __int16 *)&v17->klass->_2.rank;
-  if ( *(_WORD *)&v17->klass->_2.rank )
+          (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_WarReleaseEntity__int___);
+  if ( !v19 )
+    sub_21FFECC(0, v20);
+  klass = v19->klass;
+  v22 = v19;
+  v23 = *(unsigned __int16 *)&v19->klass->_2.rank;
+  if ( *(_WORD *)&v19->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_WarReleaseEntity__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_WarReleaseEntity__TypeInfo )
     {
-      --v21;
+      --v23;
       p_offset += 4;
-      if ( !v21 )
+      if ( !v23 )
         goto LABEL_14;
     }
-    v23 = (__int64)&klass->vtable[*p_offset];
+    v25 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_14:
-    v23 = sub_1CE5430(v17, System_Collections_Generic_IEnumerable_WarReleaseEntity__TypeInfo, 0);
+    v25 = sub_2237E2C(v19, System_Collections_Generic_IEnumerable_WarReleaseEntity__TypeInfo, 0);
   }
-  v25 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v23)(v20, *(_QWORD *)(v23 + 8));
-  if ( !v25 )
-    sub_1D0F30C(0, v24);
+  IsRelease = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v25)(
+                v22,
+                *(_QWORD *)(v25 + 8));
+  v44 = IsRelease;
   while ( 1 )
   {
-    v26 = *(_QWORD *)v25;
-    v27 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+    if ( !v44 )
+      sub_21FFECC(IsRelease, v27);
+    v28 = *(_QWORD *)v44;
+    v29 = *(unsigned __int16 *)(*(_QWORD *)v44 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v44 + 302LL) )
     {
-      v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v28 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v30 = (int *)(*(_QWORD *)(v28 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v30 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v27;
-        v28 += 4;
-        if ( !v27 )
-          goto LABEL_21;
+        --v29;
+        v30 += 4;
+        if ( !v29 )
+          goto LABEL_22;
       }
-      v29 = v26 + 16LL * *v28 + 312;
+      v31 = v28 + 16LL * *v30 + 312;
     }
     else
     {
-LABEL_21:
-      v29 = sub_1CE5430(v25, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_22:
+      v31 = sub_2237E2C(v44, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v44, *(_QWORD *)(v31 + 8)) & 1) == 0 )
       break;
-    v30 = *(_QWORD *)v25;
-    v31 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+    v32 = *(_QWORD *)v44;
+    v33 = *(unsigned __int16 *)(*(_QWORD *)v44 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v44 + 302LL) )
     {
-      v32 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_WarReleaseEntity__c **)v32 - 1) != System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo )
+      v34 = (int *)(*(_QWORD *)(v32 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_WarReleaseEntity__c **)v34 - 1) != System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo )
       {
-        --v31;
-        v32 += 4;
-        if ( !v31 )
-          goto LABEL_28;
+        --v33;
+        v34 += 4;
+        if ( !v33 )
+          goto LABEL_29;
       }
-      v33 = v30 + 16LL * *v32 + 312;
+      v35 = v32 + 16LL * *v34 + 312;
     }
     else
     {
-LABEL_28:
-      v33 = sub_1CE5430(v25, System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo, 0);
+LABEL_29:
+      v35 = sub_2237E2C(v44, System_Collections_Generic_IEnumerator_WarReleaseEntity__TypeInfo, 0);
     }
-    v34 = (WarReleaseEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
-    v36 = v34;
-    if ( !v34 )
-      sub_1D0F30C(0, v35);
-    if ( WarReleaseEntity__IsRelease(v34, v35) )
-      goto LABEL_34;
+    v36 = (WarReleaseEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v35)(v44, *(_QWORD *)(v35 + 8));
+    v38 = v36;
+    if ( !v36 )
+      sub_21FFECC(0, v37);
+    IsRelease = WarReleaseEntity__IsRelease(v36, v37);
+    if ( (IsRelease & 1) != 0 )
+      goto LABEL_35;
   }
-  v36 = 0;
-LABEL_34:
-  v37 = *(_QWORD *)v25;
-  v38 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+  v38 = 0;
+LABEL_35:
+  v39 = *(_QWORD *)v44;
+  v40 = *(unsigned __int16 *)(*(_QWORD *)v44 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v44 + 302LL) )
   {
-    v39 = (int *)(*(_QWORD *)(v37 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
+    v41 = (int *)(*(_QWORD *)(v39 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v41 - 1) != System_IDisposable_TypeInfo )
     {
-      --v38;
-      v39 += 4;
-      if ( !v38 )
-        goto LABEL_38;
+      --v40;
+      v41 += 4;
+      if ( !v40 )
+        goto LABEL_39;
     }
-    v40 = v37 + 16LL * *v39 + 312;
+    v42 = v39 + 16LL * *v41 + 312;
   }
   else
   {
-LABEL_38:
-    v40 = sub_1CE5430(v25, System_IDisposable_TypeInfo, 0);
+LABEL_39:
+    v42 = sub_2237E2C(v44, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v40)(v25, *(_QWORD *)(v40 + 8));
-  return v36;
+  (*(void (__fastcall **)(__int64, _QWORD))v42)(v44, *(_QWORD *)(v42 + 8));
+  return v38;
 }
 
 
@@ -271,40 +281,40 @@ bool WarReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E7894D & 1) == 0 )
+  if ( (byte_5939A6C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__TryGetEntity__);
-    byte_4E7894D = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__TryGetEntity__);
+    byte_5939A6C = 1;
   }
   PK = (Il2CppObject *)WarReleaseEntity__CreatePK(warId, condType, condId, condNum, *(const MethodInfo **)&condId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_WarReleaseMaster__WarReleaseEntity__string__TryGetEntity__);
 }
 
 
 void WarReleaseMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7894E & 1) == 0 )
+  if ( (byte_5939A6D & 1) == 0 )
   {
-    sub_1D0F0B4(&WarReleaseMaster___c_TypeInfo);
-    byte_4E7894E = 1;
+    sub_21FFC50(&WarReleaseMaster___c_TypeInfo);
+    byte_5939A6D = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(WarReleaseMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(WarReleaseMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarReleaseMaster___c_TypeInfo->static_fields->__9 = (struct WarReleaseMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)WarReleaseMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)WarReleaseMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -327,7 +337,7 @@ int32_t WarReleaseMaster___c___GetOpenEntity_b__1_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return v->fields.priority;
 }
 
@@ -346,6 +356,6 @@ bool WarReleaseMaster___c__DisplayClass0_0___GetEntities_b__0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return v->fields.warId == this->fields.warId;
 }

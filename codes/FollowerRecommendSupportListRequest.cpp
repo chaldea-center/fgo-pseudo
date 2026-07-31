@@ -2,10 +2,10 @@ void FollowerRecommendSupportListRequest___cctor(const MethodInfo *method)
 {
   struct FollowerRecommendSupportListRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4E791FF & 1) == 0 )
+  if ( (byte_593A253 & 1) == 0 )
   {
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    byte_4E791FF = 1;
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    byte_593A253 = 1;
   }
   static_fields = FollowerRecommendSupportListRequest_TypeInfo->static_fields;
   static_fields->refreshResetTime = -1;
@@ -21,97 +21,101 @@ void FollowerRecommendSupportListRequest___ctor(FollowerRecommendSupportListRequ
 
 bool FollowerRecommendSupportListRequest__CheckRefreshRate(const MethodInfo *method)
 {
-  BalanceConfig_c *v1; // x0
+  __int64 v1; // x1
+  BalanceConfig_c *v2; // x0
   int64_t Time; // x0
-  FollowerRecommendSupportListRequest_c *v3; // x8
-  int64_t v4; // x19
+  __int64 v4; // x1
+  FollowerRecommendSupportListRequest_c *v5; // x8
+  int64_t v6; // x19
 
-  if ( (byte_4E791F9 & 1) == 0 )
+  if ( (byte_593A24D & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E791F9 = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593A24D = 1;
   }
-  v1 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v2 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v1 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1);
+    v2 = BalanceConfig_TypeInfo;
   }
-  if ( v1->static_fields->FollowerRefreshRestTime < 0 )
+  if ( v2->static_fields->FollowerRefreshRestTime < 0 )
     return 1;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v1);
   Time = NetworkManager__getTime(0);
-  v3 = FollowerRecommendSupportListRequest_TypeInfo;
-  v4 = Time;
-  if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+  v5 = FollowerRecommendSupportListRequest_TypeInfo;
+  v6 = Time;
+  if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-    v3 = FollowerRecommendSupportListRequest_TypeInfo;
+    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, v4);
+    v5 = FollowerRecommendSupportListRequest_TypeInfo;
   }
-  return v4 >= v3->static_fields->refreshResetTime;
+  return v6 >= v5->static_fields->refreshResetTime;
 }
 
 
 void FollowerRecommendSupportListRequest__ClearRefreshRate(const MethodInfo *method)
 {
-  FollowerRecommendSupportListRequest_c *v1; // x0
+  __int64 v1; // x1
+  FollowerRecommendSupportListRequest_c *v2; // x0
 
-  if ( (byte_4E791F8 & 1) == 0 )
+  if ( (byte_593A24C & 1) == 0 )
   {
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    byte_4E791F8 = 1;
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    byte_593A24C = 1;
   }
-  v1 = FollowerRecommendSupportListRequest_TypeInfo;
-  if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+  v2 = FollowerRecommendSupportListRequest_TypeInfo;
+  if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-    v1 = FollowerRecommendSupportListRequest_TypeInfo;
+    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, v1);
+    v2 = FollowerRecommendSupportListRequest_TypeInfo;
   }
-  v1->static_fields->refreshResetTime = -1;
+  v2->static_fields->refreshResetTime = -1;
 }
 
 
 int64_t FollowerRecommendSupportListRequest__GetRefreshRemain(const MethodInfo *method)
 {
-  BalanceConfig_c *v1; // x0
-  FollowerRecommendSupportListRequest_c *v2; // x0
+  __int64 v1; // x1
+  BalanceConfig_c *v2; // x0
+  FollowerRecommendSupportListRequest_c *v3; // x0
   int64_t refreshResetTime; // x20
   int64_t Time; // x0
 
-  if ( (byte_4E791FB & 1) == 0 )
+  if ( (byte_593A24F & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E791FB = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593A24F = 1;
   }
-  v1 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v2 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v1 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1);
+    v2 = BalanceConfig_TypeInfo;
   }
-  if ( v1->static_fields->FollowerRefreshRestTime < 0 )
+  if ( v2->static_fields->FollowerRefreshRestTime < 0 )
     return 0;
-  v2 = FollowerRecommendSupportListRequest_TypeInfo;
-  if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+  v3 = FollowerRecommendSupportListRequest_TypeInfo;
+  if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-    v2 = FollowerRecommendSupportListRequest_TypeInfo;
+    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, v1);
+    v3 = FollowerRecommendSupportListRequest_TypeInfo;
   }
-  refreshResetTime = v2->static_fields->refreshResetTime;
+  refreshResetTime = v3->static_fields->refreshResetTime;
   if ( refreshResetTime == -1 )
     return 0;
-  if ( !v2->_2.cctor_finished )
+  if ( !*(&v3->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v2);
+    j_il2cpp_runtime_class_init_0(v3, v1);
     refreshResetTime = FollowerRecommendSupportListRequest_TypeInfo->static_fields->refreshResetTime;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v1);
   Time = NetworkManager__getTime(0);
   return (refreshResetTime - Time) & ~((refreshResetTime - Time) >> 63);
 }
@@ -126,54 +130,54 @@ bool FollowerRecommendSupportListRequest__beginRequest(
 {
   __int64 v9; // x0
   __int64 v10; // x1
-  BalanceConfig_c *v11; // x0
-  FollowerRecommendSupportListRequest_c *v12; // x0
-  char v13; // w8
+  __int64 v11; // x1
+  BalanceConfig_c *v12; // x0
+  FollowerRecommendSupportListRequest_c *v13; // x0
+  char v14; // w20
+  char v15; // w8
 
-  if ( (byte_4E791FD & 1) == 0 )
+  if ( (byte_593A251 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23474/*"refresh"*/);
-    sub_1D0F0B4(&StringLiteral_23331/*"questPhase"*/);
-    sub_1D0F0B4(&StringLiteral_23327/*"questId"*/);
-    byte_4E791FD = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    sub_21FFC50(&StringLiteral_24154/*"refresh"*/);
+    sub_21FFC50(&StringLiteral_24008/*"questPhase"*/);
+    sub_21FFC50(&StringLiteral_24004/*"questId"*/);
+    byte_593A251 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23327/*"questId"*/, questId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23331/*"questPhase"*/, questPhase, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24004/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24008/*"questPhase"*/, questPhase, 0);
   if ( !this )
-    sub_1D0F30C(v9, v10);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23474/*"refresh"*/, isEnforceRefresh, 0);
+    sub_21FFECC(v9, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24154/*"refresh"*/, isEnforceRefresh, 0);
   if ( !isEnforceRefresh )
-    goto LABEL_11;
-  v11 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+    goto LABEL_9;
+  v12 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v11 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v11);
+    v12 = BalanceConfig_TypeInfo;
   }
-  if ( v11->static_fields->FollowerRefreshRestTime < 0 )
+  if ( v12->static_fields->FollowerRefreshRestTime < 0 )
   {
-LABEL_11:
-    v12 = FollowerRecommendSupportListRequest_TypeInfo;
-    if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-      v12 = FollowerRecommendSupportListRequest_TypeInfo;
-    }
-    v13 = 0;
+LABEL_9:
+    v13 = FollowerRecommendSupportListRequest_TypeInfo;
+    v14 = 0;
+    v15 = 0;
   }
   else
   {
-    v12 = FollowerRecommendSupportListRequest_TypeInfo;
-    if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-      v12 = FollowerRecommendSupportListRequest_TypeInfo;
-    }
-    v13 = 1;
+    v13 = FollowerRecommendSupportListRequest_TypeInfo;
+    v14 = 1;
+    v15 = 1;
   }
-  v12->static_fields->refreshTimeUpdate = v13;
+  if ( !*(&v13->_2.cctor_finished + 1) )
+  {
+    j_il2cpp_runtime_class_init_0(v13, v11);
+    v13 = FollowerRecommendSupportListRequest_TypeInfo;
+    v15 = v14;
+  }
+  v13->static_fields->refreshTimeUpdate = v15;
   RequestBase__beginRequest((RequestBase_o *)this, 0);
   return 1;
 }
@@ -188,33 +192,33 @@ bool FollowerRecommendSupportListRequest__checkExpirationDate(
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E791FA & 1) == 0 )
+  if ( (byte_593A24E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__);
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    byte_4E791FA = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__);
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    byte_593A24E = 1;
   }
   v2 = FollowerRecommendSupportListRequest_TypeInfo;
   entity = 0;
-  if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+  if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
+    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, method);
     v2 = FollowerRecommendSupportListRequest_TypeInfo;
   }
   if ( v2->static_fields->refreshResetTime < 0 )
     return 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
   if ( !Master_object )
 LABEL_14:
-    sub_1D0F30C(Master_object, v4);
+    sub_21FFECC(Master_object, v4);
   if ( !DataMasterBase_object__object__long___TryGetSingleEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
-          (const MethodInfo_3538458 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
+          (const MethodInfo_3EDFB14 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
@@ -229,16 +233,16 @@ System_String_o *FollowerRecommendSupportListRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E791FC & 1) == 0 )
+  if ( (byte_593A250 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19875/*"follower/recommendSupportList"*/);
-    byte_4E791FC = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_20401/*"follower/recommendSupportList"*/);
+    byte_593A250 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_19875/*"follower/recommendSupportList"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20401/*"follower/recommendSupportList"*/, 0);
 }
 
 
@@ -248,57 +252,60 @@ void FollowerRecommendSupportListRequest__requestCompleted(
         const MethodInfo *method)
 {
   FollowerRecommendSupportListRequest_c *v5; // x0
-  int64_t Time; // x0
-  BalanceConfig_c *v7; // x8
-  int64_t v8; // x21
-  FollowerRecommendSupportListRequest_c *v9; // x0
-  __int64 FollowerRefreshRestTime; // x23
   struct FollowerRecommendSupportListRequest_StaticFields *static_fields; // x8
+  int64_t Time; // x0
+  __int64 v8; // x1
+  BalanceConfig_c *v9; // x8
+  int64_t v10; // x21
+  FollowerRecommendSupportListRequest_c *v11; // x0
+  __int64 FollowerRefreshRestTime; // x23
+  struct FollowerRecommendSupportListRequest_StaticFields *v13; // x8
 
-  if ( (byte_4E791FE & 1) == 0 )
+  if ( (byte_593A252 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&FollowerRecommendSupportListRequest_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E791FE = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&FollowerRecommendSupportListRequest_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593A252 = 1;
   }
   v5 = FollowerRecommendSupportListRequest_TypeInfo;
-  if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+  if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
+    j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, responseList);
     v5 = FollowerRecommendSupportListRequest_TypeInfo;
   }
-  if ( v5->static_fields->refreshTimeUpdate )
+  static_fields = v5->static_fields;
+  if ( static_fields->refreshTimeUpdate )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, responseList);
     Time = NetworkManager__getTime(0);
-    v7 = BalanceConfig_TypeInfo;
-    v8 = Time;
-    if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+    v9 = BalanceConfig_TypeInfo;
+    v10 = Time;
+    if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v7 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v8);
+      v9 = BalanceConfig_TypeInfo;
     }
-    v9 = FollowerRecommendSupportListRequest_TypeInfo;
-    FollowerRefreshRestTime = v7->static_fields->FollowerRefreshRestTime;
-    if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
+    v11 = FollowerRecommendSupportListRequest_TypeInfo;
+    FollowerRefreshRestTime = v9->static_fields->FollowerRefreshRestTime;
+    if ( !*(&FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo);
-      v9 = FollowerRecommendSupportListRequest_TypeInfo;
+      j_il2cpp_runtime_class_init_0(FollowerRecommendSupportListRequest_TypeInfo, v8);
+      v11 = FollowerRecommendSupportListRequest_TypeInfo;
     }
-    static_fields = v9->static_fields;
-    static_fields->refreshResetTime = v8 + FollowerRefreshRestTime;
-    static_fields->refreshTimeUpdate = 0;
+    v13 = v11->static_fields;
+    v13->refreshResetTime = v10 + FollowerRefreshRestTime;
+    v13->refreshTimeUpdate = 0;
   }
   else
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v5->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = FollowerRecommendSupportListRequest_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, responseList);
+      static_fields = FollowerRecommendSupportListRequest_TypeInfo->static_fields;
     }
-    v5->static_fields->refreshResetTime = 0;
+    static_fields->refreshResetTime = 0;
   }
   RequestBase__requestCompleted((RequestBase_o *)this, responseList, 0);
 }

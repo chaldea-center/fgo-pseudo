@@ -3,17 +3,17 @@ void UpdateIntervalBuffViewBattleLogicTask___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)actData);
   this->fields.actiontype = 58;
   this->fields.baseActData = actData;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.baseActData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.baseActData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
   this->fields.isSkipStep = 1;
 }
 
@@ -26,13 +26,13 @@ BattleActionData_o *UpdateIntervalBuffViewBattleLogicTask__MakeActionData(
   BattleActionData_o *baseActData; // x19
   UpdateViewIntervalBuffActionData_o *v5; // x20
 
-  if ( (byte_4E7AAE1 & 1) == 0 )
+  if ( (byte_593BB40 & 1) == 0 )
   {
-    sub_1D0F0B4(&UpdateViewIntervalBuffActionData_TypeInfo);
-    byte_4E7AAE1 = 1;
+    sub_21FFC50(&UpdateViewIntervalBuffActionData_TypeInfo);
+    byte_593BB40 = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1D0F300(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_21FFEBC(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0);
   return (BattleActionData_o *)v5;
 }

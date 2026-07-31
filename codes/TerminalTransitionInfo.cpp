@@ -9,42 +9,43 @@ void TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, const MethodI
 
 void TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   int32_t v15; // w1
   struct System_String_o **p_voiceAssetName; // x19
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
 
-  if ( (byte_4E748BB & 1) == 0 )
+  if ( (byte_5935838 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E748BB = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935838 = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.beforeActionVals, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.beforeActionVals, 0, v2, v3, v4, v5, v6, v7);
   this->fields.afterActionVals = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.afterActionVals, 0, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_1/*""*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.afterActionVals, 0, v9, v10, v11, v12, v13, v14);
+  v15 = (int)StringLiteral_1/*""*/;
   this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_voiceAssetName = &this->fields.voiceAssetName;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_voiceAssetName, v15, v17, v18, v19, v20, v21, v22);
-  *((_DWORD *)p_voiceAssetName + 2) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_voiceAssetName, v15, v17, v18, v19, v20, v21, v22);
+  p_voiceAssetName[1] = 0;
+  p_voiceAssetName[2] = 0;
 }
 
 
@@ -53,22 +54,26 @@ void TerminalTransitionInfo__SetParameters(
         TerminalTransitionInfo_o *info,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  struct System_String_o *voiceAssetName; // x1
+  bool v6; // w6
+  bool v7; // w7
+  struct System_String_o *voiceAssetName; // x8
+  int32_t missionId; // w9
+  struct System_String_o **p_voiceAssetName; // x0
 
   if ( !info )
-    sub_1D0F30C(this, 0);
-  this->fields.missionId = info->fields.missionId;
+    sub_21FFECC(this, 0);
   voiceAssetName = info->fields.voiceAssetName;
+  missionId = info->fields.missionId;
   this->fields.voiceAssetName = voiceAssetName;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.voiceAssetName,
+  p_voiceAssetName = &this->fields.voiceAssetName;
+  *((_DWORD *)p_voiceAssetName - 6) = missionId;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)p_voiceAssetName,
     (int32_t)voiceAssetName,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

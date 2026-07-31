@@ -17,17 +17,17 @@ void CombineListViewItemDraw__SetItem(
   UnityEngine_Object_o *baseButton; // x20
   char v12; // w20
 
-  if ( (byte_4E7B707 & 1) == 0 )
+  if ( (byte_593C78B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B707 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C78B = 1;
   }
   if ( item && mode )
   {
     baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
     Component_object = (UISprite_o *)UnityEngine_Object__op_Inequality(baseSprite, 0, 0);
     if ( ((unsigned __int8)Component_object & 1) != 0 )
     {
@@ -40,8 +40,8 @@ void CombineListViewItemDraw__SetItem(
       UISprite__set_spriteName(Component_object, info->fields.spriteName, 0);
     }
     baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
     {
       Component_object = (UISprite_o *)this->fields.baseButton;
@@ -49,7 +49,7 @@ void CombineListViewItemDraw__SetItem(
       {
         Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                            (UnityEngine_Component_o *)Component_object,
-                                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
         if ( Component_object )
         {
           Component_object = (UISprite_o *)UnityEngine_Collider__get_enabled(
@@ -60,7 +60,7 @@ void CombineListViewItemDraw__SetItem(
             v12 = (char)Component_object;
             Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this->fields.baseButton,
-                                               (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                               (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
             if ( Component_object )
             {
               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 1, 0);
@@ -77,7 +77,7 @@ void CombineListViewItemDraw__SetItem(
                 {
                   Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)Component_object,
-                                                     (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                     (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
                   if ( Component_object )
                   {
                     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, v12 & 1, 0);
@@ -90,7 +90,7 @@ void CombineListViewItemDraw__SetItem(
         }
       }
 LABEL_23:
-      sub_1D0F30C(Component_object, v9);
+      sub_21FFECC(Component_object, v9);
     }
   }
 }

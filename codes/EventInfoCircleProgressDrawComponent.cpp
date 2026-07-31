@@ -3,8 +3,8 @@ void EventInfoCircleProgressDrawComponent___ctor(
         const MethodInfo *method)
 {
   this->fields.nameLabelMaxWidth = 57;
-  *(_QWORD *)&this->fields.minLevel = 0x500000001LL;
   this->fields.progressBarAnimDuration = 0.5;
+  *(_QWORD *)&this->fields.minLevel = 0x500000001LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -25,91 +25,93 @@ void EventInfoCircleProgressDrawComponent__PlayCompleteAnim(
   __int64 v5; // x21
   UnityEngine_Component_o *progressBarCompleteSprite; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
   UnityEngine_Object_o *completedAnimPrefab; // x22
-  Il2CppObject *v21; // x22
-  UnityEngine_GameObject_o *v22; // x22
+  Il2CppObject *v22; // x22
+  UnityEngine_GameObject_o *v23; // x22
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  Il2CppObject *v31; // x22
-  System_Action_o *v32; // x20
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  System_Action_o *v39; // x20
-  System_Collections_IEnumerator_o *v40; // x1
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  __int64 v32; // x1
+  Il2CppObject *v33; // x22
+  System_Action_o *v34; // x20
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  System_Action_o *v41; // x20
+  System_Collections_IEnumerator_o *v42; // x1
 
-  if ( (byte_4E77925 & 1) == 0 )
+  if ( (byte_5938752 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__0__);
-    sub_1D0F0B4(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__1__);
-    sub_1D0F0B4(&EventInfoCircleProgressDrawComponent___c__DisplayClass40_0_TypeInfo);
-    byte_4E77925 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__0__);
+    sub_21FFC50(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__1__);
+    sub_21FFC50(&EventInfoCircleProgressDrawComponent___c__DisplayClass40_0_TypeInfo);
+    byte_5938752 = 1;
   }
-  v5 = sub_1D0F300(EventInfoCircleProgressDrawComponent___c__DisplayClass40_0_TypeInfo);
+  v5 = sub_21FFEBC(EventInfoCircleProgressDrawComponent___c__DisplayClass40_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_20;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = endAction;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)endAction, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)endAction, v14, v15, v16, v17, v18, v19);
   completedAnimPrefab = (UnityEngine_Object_o *)this->fields.completedAnimPrefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
   if ( UnityEngine_Object__op_Equality(completedAnimPrefab, 0, 0) )
     goto LABEL_15;
-  v21 = (Il2CppObject *)this->fields.completedAnimPrefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v22 = (Il2CppObject *)this->fields.completedAnimPrefab;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
   progressBarCompleteSprite = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object_(
-                                                           v21,
-                                                           (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                           v22,
+                                                           (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this->fields.progressBarBgSprite )
     goto LABEL_20;
-  v22 = (UnityEngine_GameObject_o *)progressBarCompleteSprite;
+  v23 = (UnityEngine_GameObject_o *)progressBarCompleteSprite;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.progressBarBgSprite, 0);
-  GameObjectExtensions__SafeSetParent_37349004(v22, gameObject, 0);
-  if ( !v22 )
+  GameObjectExtensions__SafeSetParent_42881912(v23, gameObject, 0);
+  if ( !v23 )
     goto LABEL_20;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       v22,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                       v23,
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   *(_QWORD *)(v5 + 32) = Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)Component_object, v25, v26, v27, v28, v29, v30);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)Component_object, v26, v27, v28, v29, v30, v31);
   if ( UnityEngine_Object__op_Equality(*(UnityEngine_Object_o **)(v5 + 32), 0, 0) )
     goto LABEL_15;
-  v31 = UnityEngine_GameObject__GetComponent_object_(
-          v22,
-          (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v31, 0, 0) )
+  v33 = UnityEngine_GameObject__GetComponent_object_(
+          v23,
+          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v33, 0, 0) )
   {
 LABEL_15:
     progressBarCompleteSprite = (UnityEngine_Component_o *)this->fields.progressBarCompleteSprite;
@@ -126,26 +128,26 @@ LABEL_15:
       }
     }
 LABEL_20:
-    sub_1D0F30C(progressBarCompleteSprite, v7);
+    sub_21FFECC(progressBarCompleteSprite, v7);
   }
-  v32 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v34 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
-    v32,
+    v34,
     (Il2CppObject *)v5,
     Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__0__,
     0);
-  if ( !v31 )
+  if ( !v33 )
     goto LABEL_20;
-  v31[2].monitor = v32;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v31[2].monitor, (int32_t)v32, v33, v34, v35, v36, v37, v38);
-  v39 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v33[2].monitor = v34;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33[2].monitor, (int32_t)v34, v35, v36, v37, v38, v39, v40);
+  v41 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
-    v39,
+    v41,
     (Il2CppObject *)v5,
     Method_EventInfoCircleProgressDrawComponent___c__DisplayClass40_0__PlayCompleteAnim_b__1__,
     0);
-  v40 = BasicHelper__DelayCall(0.066, v39, 1, 0);
-  UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)this, v40, 0);
+  v42 = BasicHelper__DelayCall(0.066, v41, 1, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v42, 0);
 }
 
 
@@ -162,28 +164,27 @@ void EventInfoCircleProgressDrawComponent__PlayLevelUpAnim(
   Il2CppObject *v10; // x0
   int32_t Level; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E77924 & 1) == 0 )
+  if ( (byte_5938751 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_8363/*"LEVEL_INFO"*/);
-    byte_4E77924 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_8598/*"LEVEL_INFO"*/);
+    byte_5938751 = 1;
   }
   if ( this->fields.progressData )
   {
     buffLevelLabel = this->fields.buffLevelLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8363/*"LEVEL_INFO"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, endAction);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8598/*"LEVEL_INFO"*/, 0);
     progressData = this->fields.progressData;
     if ( !progressData
       || (v9 = v6,
           Level = progressData->fields.Level,
-          v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Level),
+          v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &Level),
           v6 = System_String__Format(v9, v10, 0),
           !buffLevelLabel) )
     {
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     }
     UILabel__set_text(buffLevelLabel, v6, 0);
   }
@@ -199,18 +200,18 @@ void EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(
   __int64 v5; // x20
   Il2CppObject *v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   struct UISprite_o *progressBarSprite; // x8
   float mFillAmount; // s0
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
@@ -220,38 +221,38 @@ void EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(
   UnityEngine_GameObject_o *gameObject; // x0
   System_Action_o *v27; // x21
   Il2CppObject *Component_object; // x20
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
   int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
+  bool v33; // w6
+  bool v34; // w7
   System_Collections_IEnumerator_o *v35; // x1
 
-  if ( (byte_4E77923 & 1) == 0 )
+  if ( (byte_5938750 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_0__PlayProgressBarAnim_b__0__);
-    sub_1D0F0B4(&EventInfoCircleProgressDrawComponent___c__DisplayClass38_0_TypeInfo);
-    byte_4E77923 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_0__PlayProgressBarAnim_b__0__);
+    sub_21FFC50(&EventInfoCircleProgressDrawComponent___c__DisplayClass38_0_TypeInfo);
+    byte_5938750 = 1;
   }
-  v5 = sub_1D0F300(EventInfoCircleProgressDrawComponent___c__DisplayClass38_0_TypeInfo);
+  v5 = sub_21FFEBC(EventInfoCircleProgressDrawComponent___c__DisplayClass38_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_16;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 32) = endAction;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)endAction, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)endAction, v14, v15, v16, v17, v18, v19);
   progressBarSprite = this->fields.progressBarSprite;
   if ( !progressBarSprite )
     goto LABEL_16;
   mFillAmount = progressBarSprite->fields.mFillAmount;
-  *(float *)(v5 + 24) = mFillAmount;
   progressData = this->fields.progressData;
+  *(float *)(v5 + 24) = mFillAmount;
   if ( !progressData )
     goto LABEL_16;
   v23 = (float)(progressData->fields.Level - this->fields.minLevel)
@@ -263,17 +264,17 @@ void EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(
     return;
   }
   progressBarAnimPrefab = (Il2CppObject *)this->fields.progressBarAnimPrefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
   v6 = UnityEngine_Object__Instantiate_object_(
          progressBarAnimPrefab,
-         (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this->fields.progressBarBgSprite )
     goto LABEL_16;
   v25 = (UnityEngine_GameObject_o *)v6;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.progressBarBgSprite, 0);
-  GameObjectExtensions__SafeSetParent_37349004(v25, gameObject, 0);
-  v27 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  GameObjectExtensions__SafeSetParent_42881912(v25, gameObject, 0);
+  v27 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
     v27,
     (Il2CppObject *)v5,
@@ -283,19 +284,27 @@ void EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v25,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   v6 = (Il2CppObject *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( ((unsigned __int8)v6 & 1) != 0 )
   {
     v35 = BasicHelper__DelayCall(0.7, v27, 1, 0);
-    UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)this, v35, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v35, 0);
     return;
   }
   if ( !Component_object )
 LABEL_16:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   Component_object[2].monitor = v27;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&Component_object[2].monitor, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&Component_object[2].monitor,
+    (int32_t)v27,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34);
 }
 
 
@@ -309,7 +318,7 @@ void EventInfoCircleProgressDrawComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
 }
 
@@ -323,76 +332,76 @@ void EventInfoCircleProgressDrawComponent__Setup(
         bool isInitCompleted,
         const MethodInfo *method)
 {
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   bool v12; // w23
-  int32_t v13; // w2
-  char v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  char v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
   const MethodInfo *v19; // x1
   UILabel_o *nameLabel; // x0
   struct EventPointBuffEntity_o *EventPointBuffEnt; // x8
   System_String_o **v22; // x8
+  __int64 v23; // x1
   UILabel_o *buffLevelLabel; // x23
-  System_String_o *v24; // x24
-  Il2CppObject *v25; // x0
-  struct EventPointBuffEntity_o *v26; // x8
+  System_String_o *v25; // x24
+  Il2CppObject *v26; // x0
+  struct EventPointBuffEntity_o *v27; // x8
   UISprite_o *buffIconSprite; // x23
-  Il2CppObject *v28; // x0
+  Il2CppObject *v29; // x0
   struct EventInfoCircleProgressDrawComponent_ImageInfo_array *imageInfoList; // x24
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v31; // x25
-  EventInfoCircleProgressDrawComponent_ImageInfo_o *v32; // x28
+  unsigned __int64 v32; // x25
+  EventInfoCircleProgressDrawComponent_ImageInfo_o *v33; // x28
   UnityEngine_Object_o *Sprite; // x23
   struct UnityEngine_GameObject_o *GameObjectFromEventUIAssetData; // x0
-  int32_t v35; // w2
-  char v36; // w3
-  System_String_o *v37; // x4
-  int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  struct UnityEngine_GameObject_o *v41; // x0
-  int32_t v42; // w2
-  char v43; // w3
-  System_String_o *v44; // x4
-  int32_t v45; // w5
-  int64_t v46; // x6
-  System_String_o *v47; // x7
-  int v48; // [xsp+8h] [xbp-58h] BYREF
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  char v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  struct UnityEngine_GameObject_o *v42; // x0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  char v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  int v49; // [xsp+8h] [xbp-58h] BYREF
   int32_t OldLevel; // [xsp+Ch] [xbp-54h] BYREF
 
   v12 = isExtraCircle;
-  if ( (byte_4E77921 & 1) == 0 )
+  if ( (byte_593874E & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_8363/*"LEVEL_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_17440/*"bit_circlemeter_gain"*/);
-    sub_1D0F0B4(&StringLiteral_17901/*"bufficon_{0:D2}"*/);
-    sub_1D0F0B4(&StringLiteral_17439/*"bit_circlemeter_comptext"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E77921 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_8598/*"LEVEL_INFO"*/);
+    sub_21FFC50(&StringLiteral_17885/*"bit_circlemeter_gain"*/);
+    sub_21FFC50(&StringLiteral_18371/*"bufficon_{0:D2}"*/);
+    sub_21FFC50(&StringLiteral_17884/*"bit_circlemeter_comptext"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593874E = 1;
   }
   this->fields.circleProgressCtrl = circleProgressCtrl;
   this->fields.isExtraCircle = v12;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.circleProgressCtrl,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.circleProgressCtrl,
     (int32_t)circleProgressCtrl,
-    (int32_t)progressData,
-    isExtraCircle,
-    (System_String_o *)isInitCompleted,
+    (System_String_o *)progressData,
+    (System_String_o *)isExtraCircle,
+    isInitCompleted,
     (int32_t)method,
     v6,
     v7);
   if ( progressData )
   {
     this->fields.progressData = progressData;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.progressData,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.progressData,
       (int32_t)progressData,
       v13,
       v14,
@@ -411,22 +420,22 @@ void EventInfoCircleProgressDrawComponent__Setup(
       goto LABEL_33;
     UILabel__SetCondensedScale(nameLabel, this->fields.nameLabelMaxWidth, 0, 0);
     buffLevelLabel = this->fields.buffLevelLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8363/*"LEVEL_INFO"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v23);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8598/*"LEVEL_INFO"*/, 0);
     OldLevel = progressData->fields.OldLevel;
-    v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &OldLevel);
-    nameLabel = (UILabel_o *)System_String__Format(v24, v25, 0);
+    v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &OldLevel);
+    nameLabel = (UILabel_o *)System_String__Format(v25, v26, 0);
     if ( !buffLevelLabel )
       goto LABEL_33;
     UILabel__set_text(buffLevelLabel, (System_String_o *)nameLabel, 0);
-    v26 = progressData->fields.EventPointBuffEnt;
-    if ( v26 )
-      LODWORD(v26) = v26->fields.skillIconId;
+    v27 = progressData->fields.EventPointBuffEnt;
+    if ( v27 )
+      LODWORD(v27) = v27->fields.skillIconId;
     buffIconSprite = this->fields.buffIconSprite;
-    v48 = (int)v26;
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
-    nameLabel = (UILabel_o *)System_String__Format((System_String_o *)StringLiteral_17901/*"bufficon_{0:D2}"*/, v28, 0);
+    v49 = (int)v27;
+    v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v49);
+    nameLabel = (UILabel_o *)System_String__Format((System_String_o *)StringLiteral_18371/*"bufficon_{0:D2}"*/, v29, 0);
     if ( !circleProgressCtrl )
       goto LABEL_33;
     nameLabel = (UILabel_o *)EventInfoUIBase__SetSpriteByLocalAtlas(
@@ -440,29 +449,29 @@ void EventInfoCircleProgressDrawComponent__Setup(
     max_length = imageInfoList->max_length;
     if ( (int)max_length >= 1 )
     {
-      v31 = 0;
+      v32 = 0;
       do
       {
-        if ( v31 >= (unsigned int)max_length )
-          sub_1D0F314(nameLabel);
-        v32 = imageInfoList->m_Items[v31];
-        if ( v32 )
+        if ( v32 >= (unsigned int)max_length )
+          sub_21FFED4(nameLabel);
+        v33 = imageInfoList->m_Items[v32];
+        if ( v33 )
         {
-          Sprite = (UnityEngine_Object_o *)v32->fields.Sprite;
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          Sprite = (UnityEngine_Object_o *)v33->fields.Sprite;
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
           nameLabel = (UILabel_o *)UnityEngine_Object__op_Equality(Sprite, 0, 0);
           if ( ((unsigned __int8)nameLabel & 1) == 0 )
             nameLabel = (UILabel_o *)EventInfoUIBase__SetSpriteByLocalAtlas(
                                        (EventInfoUIBase_o *)circleProgressCtrl,
-                                       v32->fields.Sprite,
-                                       v32->fields.SpriteName,
+                                       v33->fields.Sprite,
+                                       v33->fields.SpriteName,
                                        0);
         }
         LODWORD(max_length) = imageInfoList->max_length;
-        ++v31;
+        ++v32;
       }
-      while ( (__int64)v31 < (int)max_length );
+      while ( (__int64)v32 < (int)max_length );
     }
     EventInfoCircleProgressDrawComponent__SetupLeaderIcon(this, v19);
     nameLabel = (UILabel_o *)this->fields.progressBarCompleteSprite;
@@ -482,37 +491,37 @@ void EventInfoCircleProgressDrawComponent__Setup(
           (nameLabel = (UILabel_o *)this->fields.circleProgressCtrl) == 0)
       || (GameObjectFromEventUIAssetData = EventInfoUIBase__GetGameObjectFromEventUIAssetData(
                                              (EventInfoUIBase_o *)nameLabel,
-                                             (System_String_o *)StringLiteral_17440/*"bit_circlemeter_gain"*/,
+                                             (System_String_o *)StringLiteral_17885/*"bit_circlemeter_gain"*/,
                                              0),
           this->fields.progressBarAnimPrefab = GameObjectFromEventUIAssetData,
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&this->fields.progressBarAnimPrefab,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&this->fields.progressBarAnimPrefab,
             (int32_t)GameObjectFromEventUIAssetData,
-            v35,
             v36,
             v37,
             v38,
             v39,
-            v40),
+            v40,
+            v41),
           (nameLabel = (UILabel_o *)this->fields.circleProgressCtrl) == 0) )
     {
 LABEL_33:
-      sub_1D0F30C(nameLabel, v19);
+      sub_21FFECC(nameLabel, v19);
     }
-    v41 = EventInfoUIBase__GetGameObjectFromEventUIAssetData(
+    v42 = EventInfoUIBase__GetGameObjectFromEventUIAssetData(
             (EventInfoUIBase_o *)nameLabel,
-            (System_String_o *)StringLiteral_17439/*"bit_circlemeter_comptext"*/,
+            (System_String_o *)StringLiteral_17884/*"bit_circlemeter_comptext"*/,
             0);
-    this->fields.completedAnimPrefab = v41;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.completedAnimPrefab,
-      (int32_t)v41,
-      v42,
+    this->fields.completedAnimPrefab = v42;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.completedAnimPrefab,
+      (int32_t)v42,
       v43,
       v44,
       v45,
       v46,
-      v47);
+      v47,
+      v48);
   }
 }
 
@@ -531,11 +540,10 @@ void EventInfoCircleProgressDrawComponent__SetupLeaderIcon(
   Il2CppObject *v10; // x0
   int v11; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4E77922 & 1) == 0 )
+  if ( (byte_593874F & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20681/*"img_LeaderIcon{0:D2}"*/);
-    byte_4E77922 = 1;
+    sub_21FFC50(&StringLiteral_21237/*"img_LeaderIcon{0:D2}"*/);
+    byte_593874F = 1;
   }
   if ( this->fields.isExtraCircle )
   {
@@ -561,7 +569,7 @@ void EventInfoCircleProgressDrawComponent__SetupLeaderIcon(
         return;
       }
 LABEL_16:
-      sub_1D0F30C(SelfUserGame, v4);
+      sub_21FFECC(SelfUserGame, v4);
     }
   }
   else
@@ -576,8 +584,8 @@ LABEL_16:
     circleProgressCtrl = (EventInfoUIBase_o *)this->fields.circleProgressCtrl;
     leaderIconSprite = this->fields.leaderIconSprite;
     v11 = (int)progressData;
-    v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
-    SelfUserGame = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_20681/*"img_LeaderIcon{0:D2}"*/, v10, 0);
+    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v11);
+    SelfUserGame = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_21237/*"img_LeaderIcon{0:D2}"*/, v10, 0);
     if ( !circleProgressCtrl )
       goto LABEL_16;
     EventInfoUIBase__SetSpriteByLocalAtlas(circleProgressCtrl, leaderIconSprite, (System_String_o *)SelfUserGame, 0);
@@ -620,7 +628,7 @@ void EventInfoCircleProgressDrawComponent__Update(
           return;
         }
 LABEL_10:
-        sub_1D0F30C(SelfUserGame, v4);
+        sub_21FFECC(SelfUserGame, v4);
       }
     }
   }
@@ -698,48 +706,48 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_0___PlayProgressBa
   __int64 v3; // x20
   UnityEngine_Component_o *progressBarSprite; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   struct EventInfoCircleProgressDrawComponent_o *_4__this; // x8
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   struct EventInfoCircleProgressDrawComponent_o *v21; // x8
   EasingObject_o *v22; // x21
   float progressBarAnimDuration; // s8
   System_Action_o *v24; // x22
   System_Action_o *_9__2; // x20
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
   int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
+  bool v30; // w6
+  bool v31; // w7
 
-  if ( (byte_4E77926 & 1) == 0 )
+  if ( (byte_5938753 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1D0F0B4(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_0__PlayProgressBarAnim_b__2__);
-    sub_1D0F0B4(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_1__PlayProgressBarAnim_b__1__);
-    sub_1D0F0B4(&EventInfoCircleProgressDrawComponent___c__DisplayClass38_1_TypeInfo);
-    byte_4E77926 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_21FFC50(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_0__PlayProgressBarAnim_b__2__);
+    sub_21FFC50(&Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_1__PlayProgressBarAnim_b__1__);
+    sub_21FFC50(&EventInfoCircleProgressDrawComponent___c__DisplayClass38_1_TypeInfo);
+    byte_5938753 = 1;
   }
-  v3 = sub_1D0F300(EventInfoCircleProgressDrawComponent___c__DisplayClass38_1_TypeInfo);
+  v3 = sub_21FFEBC(EventInfoCircleProgressDrawComponent___c__DisplayClass38_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_11;
   *(_QWORD *)(v3 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_11;
@@ -749,15 +757,15 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_0___PlayProgressBa
   gameObject = UnityEngine_Component__get_gameObject(progressBarSprite, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_32A9F2C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_38852A8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v3 + 16) = Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
   v21 = this->fields.__4__this;
   if ( !v21 )
     goto LABEL_11;
   v22 = *(EasingObject_o **)(v3 + 16);
   progressBarAnimDuration = v21->fields.progressBarAnimDuration;
-  v24 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
     v24,
     (Il2CppObject *)v3,
@@ -766,18 +774,18 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_0___PlayProgressBa
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_EventInfoCircleProgressDrawComponent___c__DisplayClass38_0__PlayProgressBarAnim_b__2__,
       0);
     this->fields.__9__2 = _9__2;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v26, v27, v28, v29, v30, v31);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v26, v27, v28, v29, v30, v31);
   }
   if ( !v22 )
 LABEL_11:
-    sub_1D0F30C(progressBarSprite, v5);
+    sub_21FFECC(progressBarSprite, v5);
   EasingObject__Play(v22, progressBarAnimDuration, v24, _9__2, 0.0, 0, 0);
 }
 
@@ -789,7 +797,7 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_0___PlayProgressBa
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   EventInfoCircleProgressDrawComponent__PlayLevelUpAnim(this->fields.__4__this, this->fields.endAction, v2);
 }
 
@@ -809,10 +817,8 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_1___PlayProgressBa
   struct EventInfoCircleProgressDrawComponent___c__DisplayClass38_0_o *CS___8__locals1; // x8
   struct EasingObject_o *easingObj; // x9
   struct EventInfoCircleProgressDrawComponent_o *_4__this; // x10
-  float mNow; // s2
-  float v6; // s3
-  bool v7; // nf
-  float v8; // s2
+  float v5; // s0
+  float mNow; // s1
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1
@@ -820,17 +826,17 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass38_1___PlayProgressBa
     || (_4__this = CS___8__locals1->fields.__4__this) == 0
     || (this = (EventInfoCircleProgressDrawComponent___c__DisplayClass38_1_o *)_4__this->fields.progressBarSprite) == 0 )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
+  v5 = 1.0;
   mNow = easingObj->fields.mNow;
-  v6 = fminf(mNow, 1.0);
-  v7 = mNow < 0.0;
-  v8 = 0.0;
-  if ( !v7 )
-    v8 = v6;
+  if ( mNow <= 1.0 )
+    v5 = easingObj->fields.mNow;
+  if ( mNow < 0.0 )
+    v5 = 0.0;
   UIBasicSprite__set_fillAmount(
     (UIBasicSprite_o *)this,
-    CS___8__locals1->fields.from + (float)((float)(CS___8__locals1->fields.to - CS___8__locals1->fields.from) * v8),
+    CS___8__locals1->fields.from + (float)((float)(CS___8__locals1->fields.to - CS___8__locals1->fields.from) * v5),
     0);
 }
 
@@ -858,7 +864,7 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass40_0___PlayCompleteAn
                                                                                  (UnityEngine_Component_o *)this,
                                                                                  0)) == 0 )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   ActionExtensions__Call(v3->fields.endAction, 0);
@@ -871,13 +877,13 @@ void EventInfoCircleProgressDrawComponent___c__DisplayClass40_0___PlayCompleteAn
 {
   UnityEngine_Animation_o *anim; // x0
 
-  if ( (byte_4E77927 & 1) == 0 )
+  if ( (byte_5938754 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17439/*"bit_circlemeter_comptext"*/);
-    byte_4E77927 = 1;
+    sub_21FFC50(&StringLiteral_17884/*"bit_circlemeter_comptext"*/);
+    byte_5938754 = 1;
   }
   anim = this->fields.anim;
   if ( !anim )
-    sub_1D0F30C(0, method);
-  UnityEngine_Animation__Play_73101556(anim, (System_String_o *)StringLiteral_17439/*"bit_circlemeter_comptext"*/, 0);
+    sub_21FFECC(0, method);
+  UnityEngine_Animation__Play_82865240(anim, (System_String_o *)StringLiteral_17884/*"bit_circlemeter_comptext"*/, 0);
 }

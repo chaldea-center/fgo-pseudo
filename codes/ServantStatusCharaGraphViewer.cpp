@@ -13,7 +13,7 @@ void ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0);
 }
@@ -28,7 +28,7 @@ void ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -43,14 +43,14 @@ ServantStatusCharaGraphListViewItem_o *ServantStatusCharaGraphViewer__GetCenterI
   __int64 naturalAligment; // x11
 
   v2 = this;
-  if ( (byte_4E73525 & 1) == 0 )
+  if ( (byte_593414B & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphViewer_o *)sub_1D0F0B4(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_4E73525 = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_593414B = 1;
   }
   viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0;
@@ -88,7 +88,7 @@ bool ServantStatusCharaGraphViewer__IsAbleToPinch(ServantStatusCharaGraphViewer_
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
 LABEL_11:
-    sub_1D0F30C(viewerListViewManager, method);
+    sub_21FFECC(viewerListViewManager, method);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
     v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
@@ -120,7 +120,7 @@ void ServantStatusCharaGraphViewer__SetDispType(
         viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
         if ( viewerListViewManager )
         {
-          ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
+          ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, double))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
             viewerListViewManager,
             viewerListViewManager->klass->vtable._8_ItemDragStart.method,
             0.0);
@@ -129,38 +129,42 @@ void ServantStatusCharaGraphViewer__SetDispType(
           {
             klass = viewerListViewManager->klass;
             LODWORD(v5) = 1.0;
-            goto LABEL_11;
+            goto LABEL_15;
           }
         }
       }
 LABEL_17:
-      sub_1D0F30C(viewerListViewManager, *(_QWORD *)&dispType);
+      sub_21FFECC(viewerListViewManager, *(_QWORD *)&dispType);
     case 1:
-      viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
-      if ( !viewerListViewManager )
-        goto LABEL_17;
-      ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
-        viewerListViewManager,
-        viewerListViewManager->klass->vtable._8_ItemDragStart.method,
-        method,
-        1.0);
-      viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.listViewPanel;
-      if ( !viewerListViewManager )
-        goto LABEL_17;
-      ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
-        viewerListViewManager,
-        viewerListViewManager->klass->vtable._8_ItemDragStart.method,
-        0.0);
-      viewerListViewManager = this->fields.viewerListViewManager;
-      if ( !viewerListViewManager )
-        goto LABEL_17;
-      ServantStatusCharaGraphViewerListViewManager__SetEnableScroll(viewerListViewManager, 0, v7);
-      break;
-    case 0:
       viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
       if ( viewerListViewManager )
       {
         ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
+          viewerListViewManager,
+          viewerListViewManager->klass->vtable._8_ItemDragStart.method,
+          method,
+          1.0);
+        viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.listViewPanel;
+        if ( viewerListViewManager )
+        {
+          ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, double))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
+            viewerListViewManager,
+            viewerListViewManager->klass->vtable._8_ItemDragStart.method,
+            0.0);
+          viewerListViewManager = this->fields.viewerListViewManager;
+          if ( viewerListViewManager )
+          {
+            ServantStatusCharaGraphViewerListViewManager__SetEnableScroll(viewerListViewManager, 0, v7);
+            return;
+          }
+        }
+      }
+      goto LABEL_17;
+    case 0:
+      viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
+      if ( viewerListViewManager )
+      {
+        ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, const MethodInfo *, const MethodInfo *, double))viewerListViewManager->klass->vtable._8_ItemDragStart.methodPtr)(
           viewerListViewManager,
           viewerListViewManager->klass->vtable._8_ItemDragStart.method,
           method,
@@ -169,8 +173,8 @@ LABEL_17:
         if ( viewerListViewManager )
         {
           klass = viewerListViewManager->klass;
-          LODWORD(v5) = 0;
-LABEL_11:
+          *(_QWORD *)&v5 = 0;
+LABEL_15:
           ((void (__fastcall *)(long double))klass->vtable._8_ItemDragStart.methodPtr)(v5);
           return;
         }
@@ -180,6 +184,7 @@ LABEL_11:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusCharaGraphViewer__SetItemDataType(
         ServantStatusCharaGraphViewer_o *this,
         int32_t dispType,
@@ -189,7 +194,7 @@ void ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1D0F30C(0, dispType);
+    sub_21FFECC(0, *(_QWORD *)&dispType);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -204,19 +209,19 @@ void ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   const MethodInfo *v7; // x2
   ServantStatusCharaGraphViewerListViewManager_o *v8; // x0
 
-  if ( (byte_4E73526 & 1) == 0 )
+  if ( (byte_593414C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73526 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593414C = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, onModifyScrollViewCenter, method);
   if ( UnityEngine_Object__op_Inequality(viewerListViewManager, 0, 0) )
   {
     v8 = this->fields.viewerListViewManager;
     if ( !v8 )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v8, onModifyScrollViewCenter, v7);
   }
 }
@@ -238,7 +243,7 @@ void ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v7);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

@@ -44,45 +44,47 @@ System_Nullable_Color__o *ColorHelper__ParseColorCode(
   __int64 v6; // x1
   System_String_o *v7; // x1
   System_String_o *v8; // x0
-  UnityEngine_Color_o v9; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo_45AD82C *v9; // x1
+  UnityEngine_Color_o v10; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E790A1 & 1) == 0 )
+  if ( (byte_593A0F2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_Color___ctor__);
-    sub_1D0F0B4(&StringLiteral_370/*"#"*/);
-    sub_1D0F0B4(&StringLiteral_1164/*"0x"*/);
-    byte_4E790A1 = 1;
+    sub_21FFC50(&Method_System_Nullable_Color___ctor__);
+    sub_21FFC50(&StringLiteral_395/*"#"*/);
+    sub_21FFC50(&StringLiteral_1244/*"0x"*/);
+    byte_593A0F2 = 1;
   }
-  *(_QWORD *)&v9.fields.r = 0;
-  *(_QWORD *)&v9.fields.b = 0;
+  *(_QWORD *)&v10.fields.r = 0;
+  *(_QWORD *)&v10.fields.b = 0;
   result = (System_Nullable_Color__o *)System_String__IsNullOrEmpty(colorCode, 0);
   if ( ((unsigned __int8)result & 1) != 0 )
     goto LABEL_12;
   if ( !colorCode )
-    sub_1D0F30C(result, v6);
-  if ( System_String__StartsWith_65599760(colorCode, (System_String_o *)StringLiteral_1164/*"0x"*/, 5, 0) )
+    sub_21FFECC(result, v6);
+  if ( System_String__StartsWith_75474912(colorCode, (System_String_o *)StringLiteral_1244/*"0x"*/, 5, 0) )
   {
-    v7 = System_String__Substring_65608712(colorCode, 2, colorCode->fields._stringLength - 2, 0);
-    v8 = (System_String_o *)StringLiteral_370/*"#"*/;
+    v7 = System_String__Substring_75489544(colorCode, 2, colorCode->fields._stringLength - 2, 0);
+    v8 = (System_String_o *)StringLiteral_395/*"#"*/;
   }
   else
   {
-    if ( System_String__StartsWith(colorCode, (System_String_o *)StringLiteral_370/*"#"*/, 0) )
+    if ( System_String__StartsWith(colorCode, (System_String_o *)StringLiteral_395/*"#"*/, 0) )
       goto LABEL_10;
-    v8 = (System_String_o *)StringLiteral_370/*"#"*/;
+    v8 = (System_String_o *)StringLiteral_395/*"#"*/;
     v7 = colorCode;
   }
-  colorCode = System_String__Concat_65562772(v8, v7, 0);
+  colorCode = System_String__Concat_75438412(v8, v7, 0);
 LABEL_10:
-  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(colorCode, &v9, 0);
+  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(colorCode, &v10, 0);
   if ( ((unsigned __int8)result & 1) != 0 )
   {
-    v10 = v9;
+    v11 = v10;
     *(_QWORD *)&retstr->fields.hasValue = 0;
     *(_QWORD *)&retstr->fields.value.fields.g = 0;
+    v9 = (const MethodInfo_45AD82C *)Method_System_Nullable_Color___ctor__;
     retstr->fields.value.fields.a = 0.0;
-    System_Nullable_Color____ctor(retstr, v10, (const MethodInfo_3A81824 *)Method_System_Nullable_Color___ctor__);
+    System_Nullable_Color____ctor(retstr, v11, v9);
     return result;
   }
 LABEL_12:
@@ -93,7 +95,7 @@ LABEL_12:
 }
 
 
-UnityEngine_Color_o ColorHelper__ParseColorCode_45504796(
+UnityEngine_Color_o ColorHelper__ParseColorCode_51093332(
         System_String_o *colorCode,
         UnityEngine_Color_o defaultColor,
         const MethodInfo *method)
@@ -106,18 +108,18 @@ UnityEngine_Color_o ColorHelper__ParseColorCode_45504796(
   float v9; // s1
   float v10; // s2
   float v11; // s3
-  System_Nullable_Color__o v12; // [xsp+8h] [xbp-58h] BYREF
+  System_Nullable_Color__o v12; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = defaultColor.fields.a;
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4E790A2 & 1) == 0 )
+  if ( (byte_593A0F3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_Color__get_HasValue__);
-    byte_4E790A2 = 1;
+    sub_21FFC50(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_Color__get_HasValue__);
+    byte_593A0F3 = 1;
   }
   ColorHelper__ParseColorCode(&v12, colorCode, method);
   if ( v12.fields.hasValue )
@@ -139,22 +141,56 @@ UnityEngine_Color_o ColorHelper__ParseColorCode_45504796(
 }
 
 
+int32_t ColorHelper__ToByteColor(float normalizedColor, const MethodInfo *method)
+{
+  float v2; // s1
+  float v3; // s1
+  float v4; // s0
+
+  v2 = 1.0;
+  if ( normalizedColor <= 1.0 )
+    v2 = normalizedColor;
+  v3 = v2 * 255.0;
+  if ( normalizedColor >= 0.0 )
+    v4 = v3;
+  else
+    v4 = 0.0;
+  if ( v4 == INFINITY )
+    return 0x80000000;
+  else
+    return (int)v4;
+}
+
+
+float ColorHelper__ToNormalizedColor(int32_t byteColor, const MethodInfo *method)
+{
+  int32_t v2; // w8
+
+  if ( byteColor >= 255 )
+    v2 = 255;
+  else
+    v2 = byteColor;
+  return (float)(v2 & ~(v2 >> 31)) / 255.0;
+}
+
+
 float ColorHelper___GetClamped_g__Clamp_0_0(float value, const MethodInfo *method)
 {
+  __int64 v2; // x1
   float result; // s0
 
-  if ( (byte_4E790A3 & 1) == 0 )
+  if ( (byte_593A0F4 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E790A3 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593A0F4 = 1;
   }
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4E7923B )
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v2);
+  if ( !byte_593A284 )
   {
-    sub_1D0F0B4(&Method_System_Math_ThrowMinMaxException_float___);
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E7923B = 1;
+    sub_21FFC50(&Method_System_Math_ThrowMinMaxException_float___);
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593A284 = 1;
   }
   result = 0.0;
   if ( value >= 0.0 )

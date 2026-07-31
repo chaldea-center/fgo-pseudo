@@ -4,6 +4,7 @@ void BitmapFontProperties___ctor(BitmapFontProperties_o *this, const MethodInfo 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
         BitmapFontProperties_o *this,
         int32_t type,
@@ -11,29 +12,29 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
 {
   struct BitmapFontProperties_BitmapFontInfo_array *bitmapFontInfos; // x8
   int max_length; // w9
-  unsigned int v5; // w10
+  int v5; // w11
 
   bitmapFontInfos = this->fields.bitmapFontInfos;
   if ( !bitmapFontInfos )
-    goto LABEL_11;
+    goto LABEL_10;
   max_length = bitmapFontInfos->max_length;
   if ( max_length >= 1 )
   {
     v5 = 0;
     while ( 1 )
     {
-      if ( v5 >= max_length )
-        sub_1D0F314(this);
+      if ( max_length == v5 )
+        sub_21FFED4(this);
       this = (BitmapFontProperties_o *)bitmapFontInfos->m_Items[v5];
       if ( !this )
         break;
       if ( LODWORD(this->fields.m_CachedPtr) == type )
         return (BitmapFontProperties_BitmapFontInfo_o *)this;
-      if ( (int)++v5 >= max_length )
+      if ( (max_length & ~(max_length >> 31)) == ++v5 )
         return 0;
     }
-LABEL_11:
-    sub_1D0F30C(this, type);
+LABEL_10:
+    sub_21FFECC(this, *(_QWORD *)&type);
   }
   return 0;
 }

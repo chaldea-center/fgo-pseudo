@@ -1,22 +1,24 @@
 void TitleInfoEventTowerBase___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
+  int32_t v7; // w1
 
-  if ( (byte_4E76019 & 1) == 0 )
+  if ( (byte_5937196 & 1) == 0 )
   {
-    sub_1D0F0B4(&TitleInfoEventTowerBase_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_24639/*"tower_img_base{0:00}"*/);
-    byte_4E76019 = 1;
+    sub_21FFC50(&TitleInfoEventTowerBase_TypeInfo);
+    sub_21FFC50(&StringLiteral_25392/*"tower_img_base{0:00}"*/);
+    byte_5937196 = 1;
   }
-  TitleInfoEventTowerBase_TypeInfo->static_fields->SPRITE_NAME_TOWER_BASE = (struct System_String_o *)StringLiteral_24639/*"tower_img_base{0:00}"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)TitleInfoEventTowerBase_TypeInfo->static_fields,
-    StringLiteral_24639/*"tower_img_base{0:00}"*/,
+  v7 = StringLiteral_25392/*"tower_img_base{0:00}"*/;
+  TitleInfoEventTowerBase_TypeInfo->static_fields->SPRITE_NAME_TOWER_BASE = (struct System_String_o *)StringLiteral_25392/*"tower_img_base{0:00}"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)TitleInfoEventTowerBase_TypeInfo->static_fields,
+    v7,
     v1,
     v2,
     v3,
@@ -42,26 +44,30 @@ void TitleInfoEventTowerBase__SetBaseSprite(
   __int64 v8; // x1
   UIWidget_o *v9; // x20
   int32_t *p_towerBaseHeight; // x8
-  TitleInfoEventTowerBase_c *v11; // x0
-  System_String_o *SPRITE_NAME_TOWER_BASE; // x21
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x19
-  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v11; // x1
+  __int64 v12; // x2
+  TitleInfoEventTowerBase_c *v13; // x0
+  System_String_o **p_SPRITE_NAME_TOWER_BASE; // x8
+  System_String_o *v15; // x21
+  Il2CppObject *v16; // x0
+  __int64 v17; // x1
+  __int64 v18; // x2
+  System_String_o *v19; // x19
+  int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E76018 & 1) == 0 )
+  if ( (byte_5937195 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&TitleInfoEventTowerBase_TypeInfo);
-    byte_4E76018 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_21FFC50(&TitleInfoEventTowerBase_TypeInfo);
+    byte_5937195 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_14;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v9 = (UIWidget_o *)gameObject;
   if ( changeSize )
   {
@@ -72,7 +78,7 @@ void TitleInfoEventTowerBase__SetBaseSprite(
       goto LABEL_9;
     }
 LABEL_14:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
   if ( !gameObject )
     goto LABEL_14;
@@ -80,17 +86,18 @@ LABEL_14:
   p_towerBaseHeight = &this->fields.towerBaseDefaultHeight;
 LABEL_9:
   UIWidget__set_height(v9, *p_towerBaseHeight, 0);
-  v11 = TitleInfoEventTowerBase_TypeInfo;
-  if ( !TitleInfoEventTowerBase_TypeInfo->_2.cctor_finished )
+  v13 = TitleInfoEventTowerBase_TypeInfo;
+  if ( !*(&TitleInfoEventTowerBase_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleInfoEventTowerBase_TypeInfo);
-    v11 = TitleInfoEventTowerBase_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleInfoEventTowerBase_TypeInfo, v11, v12);
+    v13 = TitleInfoEventTowerBase_TypeInfo;
   }
-  SPRITE_NAME_TOWER_BASE = v11->static_fields->SPRITE_NAME_TOWER_BASE;
-  v15 = towerId;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  v14 = System_String__Format(SPRITE_NAME_TOWER_BASE, v13, 0);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)v9, v14, 0);
+  p_SPRITE_NAME_TOWER_BASE = &v13->static_fields->SPRITE_NAME_TOWER_BASE;
+  v20 = towerId;
+  v15 = *p_SPRITE_NAME_TOWER_BASE;
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+  v19 = System_String__Format(v15, v16, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v17, v18);
+  AtlasManager__SetEventUI((UISprite_o *)v9, v19, 0);
 }

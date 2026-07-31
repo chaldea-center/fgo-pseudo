@@ -1,8 +1,8 @@
 void BattleSealedCommandWindowComponent___ctor(BattleSealedCommandWindowComponent_o *this, const MethodInfo *method)
 {
   this->fields.labelDefaultFontSize = 30;
-  *(_QWORD *)&this->fields.labelDefaultPosition.fields.x = 0x4180000000000000LL;
   this->fields.labelDefaultPosition.fields.z = 0.0;
+  *(_QWORD *)&this->fields.labelDefaultPosition.fields.x = 0x4180000000000000LL;
   BattleWindowOuterClickManagerComponent___ctor((BattleWindowOuterClickManagerComponent_o *)this, 0);
 }
 
@@ -11,12 +11,12 @@ System_String_o *BattleSealedCommandWindowComponent__get_closeBtnPath(
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E7AED4 & 1) == 0 )
+  if ( (byte_593BF3F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17734/*"btn_close"*/);
-    byte_4E7AED4 = 1;
+    sub_21FFC50(&StringLiteral_18198/*"btn_close"*/);
+    byte_593BF3F = 1;
   }
-  return (System_String_o *)StringLiteral_17734/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_18198/*"btn_close"*/;
 }
 
 
@@ -28,51 +28,51 @@ void BattleSealedCommandWindowComponent__setLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *confLabel; // x22
-  __int64 value; // x1
+  __int64 labelDefaultFontSize; // x1
   UILabel_o *transform; // x0
   __int64 v10; // x8
-  float x; // s0 OVERLAPPED
-  float z; // s2
   float y; // s1
+  float z; // s2
+  float x; // s0 OVERLAPPED
 
-  if ( (byte_4E7AED3 & 1) == 0 )
+  if ( (byte_593BF3E & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7AED3 = 1;
+    sub_21FFC50(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BF3E = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, str);
   if ( !UnityEngine_Object__op_Equality(confLabel, 0, 0) )
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1D0F300(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_21FFEBC(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
       System_Object___ctor((Il2CppObject *)args, 0);
     }
     transform = this->fields.confLabel;
     if ( !transform || (UILabel__set_text(transform, str, 0), !args) )
 LABEL_19:
-      sub_1D0F30C(transform, value);
+      sub_21FFECC(transform, labelDefaultFontSize);
     transform = this->fields.confLabel;
-    if ( args->fields._fontSize_k__BackingField.fields.hasValue )
+    if ( (unsigned __int8)*(_QWORD *)&args->fields._fontSize_k__BackingField )
     {
-      value = (unsigned int)args->fields._fontSize_k__BackingField.fields.value;
+      labelDefaultFontSize = HIDWORD(*(_QWORD *)&args->fields._fontSize_k__BackingField);
       if ( !transform )
         goto LABEL_19;
     }
     else
     {
-      value = (unsigned int)this->fields.labelDefaultFontSize;
+      labelDefaultFontSize = (unsigned int)this->fields.labelDefaultFontSize;
       if ( !transform )
         goto LABEL_19;
     }
-    UILabel__set_fontSize(transform, value, 0);
+    UILabel__set_fontSize(transform, labelDefaultFontSize, 0);
     transform = this->fields.confLabel;
     if ( !transform )
       goto LABEL_19;
@@ -80,9 +80,9 @@ LABEL_19:
     v10 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
     if ( (_BYTE)v10 )
     {
+      y = args->fields._localPosition_k__BackingField.fields.value.fields.y;
+      z = args->fields._localPosition_k__BackingField.fields.value.fields.z;
       x = *((float *)&v10 + 1);
-      LODWORD(z) = HIDWORD(*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y);
-      LODWORD(y) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y;
       if ( !transform )
         goto LABEL_19;
     }

@@ -11,17 +11,17 @@ void ServantStatusCharaGraphViewerListViewIndicator__Init(
         ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *onModifyCenter,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.onModifyCenterItem = onModifyCenter;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onModifyCenterItem,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onModifyCenterItem,
     (int32_t)onModifyCenter,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -45,10 +45,10 @@ void ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterItem(
   __int64 naturalAligment; // x11
   ListViewItem_o *v12; // x1
 
-  if ( (byte_4E73527 & 1) == 0 )
+  if ( (byte_593414D & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_4E73527 = 1;
+    sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_593414D = 1;
   }
   onModifyCenterItem = this->fields.onModifyCenterItem;
   if ( onModifyCenterItem )
@@ -85,10 +85,10 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   __int64 (__fastcall *v13)(); // x8
@@ -101,22 +101,22 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) != 0 )
+  if ( (sub_21FFD28(method) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1B38894;
+      v13 = sub_1FF1C64;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -128,41 +128,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v15 = sub_1D0F16C(method);
-        v16 = sub_1D0F700(method);
+        v15 = sub_21FFD20(method);
+        v16 = sub_22002A4(method);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = sub_1B38990;
+            v13 = sub_1FF1D5C;
           else
-            v13 = sub_1B38954;
+            v13 = sub_1FF1D20;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = sub_1B388D0;
+          v13 = sub_1FF1C9C;
         }
         else
         {
-          v13 = sub_1B388A4;
+          v13 = sub_1FF1C74;
         }
       }
       else
       {
-        v13 = sub_1B38874;
+        v13 = sub_1FF1C48;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v17, 0);
+      v17 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1B3882C;
+  this->fields.extra_arg = (intptr_t)sub_1FF1C00;
 }
 
 
@@ -176,7 +176,7 @@ System_IAsyncResult_o *ServantStatusCharaGraphViewerListViewIndicator_OnModifyCe
   ServantStatusCharaGraphListViewItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return (System_IAsyncResult_o *)sub_1D0F068(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, &v6, callback, object);
 }
 
 
@@ -185,7 +185,7 @@ void ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent__EndInvo
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

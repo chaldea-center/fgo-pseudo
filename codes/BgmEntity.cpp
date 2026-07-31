@@ -1,13 +1,13 @@
 void BgmEntity___ctor(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77320 & 1) == 0 )
+  if ( (byte_59382ED & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77320 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_59382ED = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,23 +19,23 @@ int32_t BgmEntity__CreatePrimaryKey(BgmEntity_o *this, const MethodInfo *method)
 
 int32_t BgmEntity__GetInvalidOverwrite(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7731E & 1) == 0 )
+  if ( (byte_59382EB & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_8045/*"InvalidOverwrite"*/);
-    byte_4E7731E = 1;
+    sub_21FFC50(&StringLiteral_8276/*"InvalidOverwrite"*/);
+    byte_59382EB = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8045/*"InvalidOverwrite"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8276/*"InvalidOverwrite"*/, 0, 0);
 }
 
 
 int32_t BgmEntity__GetPriorityBgm(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7731F & 1) == 0 )
+  if ( (byte_59382EC & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23241/*"priorityBgm"*/);
-    byte_4E7731F = 1;
+    sub_21FFC50(&StringLiteral_23915/*"priorityBgm"*/);
+    byte_59382EC = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23241/*"priorityBgm"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23915/*"priorityBgm"*/, 0, 0);
 }
 
 

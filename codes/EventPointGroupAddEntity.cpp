@@ -1,13 +1,13 @@
 void EventPointGroupAddEntity___ctor(EventPointGroupAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77725 & 1) == 0 )
+  if ( (byte_593881B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77725 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_593881B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventPointGroupAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4E77723 & 1) == 0 )
+  if ( (byte_5938819 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4E77723 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_5938819 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            termId,
            groupId,
            priority,
-           (const MethodInfo_324DC90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -47,19 +47,19 @@ System_String_o *EventPointGroupAddEntity__CreatePrimaryKey(EventPointGroupAddEn
 
 bool EventPointGroupAddEntity__IsAvailable(EventPointGroupAddEntity_o *this, const MethodInfo *method)
 {
-  int32_t condTargetId; // w20
-  int32_t condType; // w21
+  int32_t condType; // w20
+  int32_t condTargetId; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4E77724 & 1) == 0 )
+  if ( (byte_593881A & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E77724 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_593881A = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsOpen(condType, condTargetId, condNum, 0, 0, 0);
 }

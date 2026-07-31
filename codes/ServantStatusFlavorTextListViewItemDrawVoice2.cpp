@@ -99,11 +99,11 @@ void ServantStatusFlavorTextListViewItemDrawVoice2__SetItem(
       || (illustLabel = (UILabel_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)illustLabel, 0)) == 0 )
     {
 LABEL_23:
-      sub_1D0F30C(illustLabel, v9);
+      sub_21FFECC(illustLabel, v9);
     }
+    v25.fields.z = z;
     v25.fields.y = y + (float)(v19 >> 1);
     v25.fields.x = x;
-    v25.fields.z = z;
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)illustLabel, v25, 0);
   }
 }

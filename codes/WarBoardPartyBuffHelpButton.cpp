@@ -8,24 +8,25 @@ void WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(
         WarBoardPartyBuffHelpButton_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *fsOffset; // x20
-  __int64 v4; // x1
-  FSOffset_o *v5; // x0
+  __int64 v5; // x1
+  FSOffset_o *v6; // x0
 
-  if ( (byte_4E75368 & 1) == 0 )
+  if ( (byte_59362EE & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E75368 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59362EE = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(fsOffset, 0, 0) )
   {
-    v5 = this->fields.fsOffset;
-    if ( !v5 || (FSOffset__AddOffsetX(v5, 0), (v5 = this->fields.fsOffset) == 0) )
-      sub_1D0F30C(v5, v4);
-    FSOffset__AddBottomY(v5, 0);
+    v6 = this->fields.fsOffset;
+    if ( !v6 || (FSOffset__AddOffsetX(v6, 0), (v6 = this->fields.fsOffset) == 0) )
+      sub_21FFECC(v6, v5);
+    FSOffset__AddBottomY(v6, 0);
   }
 }
 
@@ -38,7 +39,7 @@ void WarBoardPartyBuffHelpButton__Awake(WarBoardPartyBuffHelpButton_o *this, con
   this->fields.isEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -48,15 +49,15 @@ void WarBoardPartyBuffHelpButton__OnClickButton(WarBoardPartyBuffHelpButton_o *t
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4E75367 & 1) == 0 )
+  if ( (byte_59362ED & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_WarBoardPartyBuffHelpButton_OnClickButton__);
-    byte_4E75367 = 1;
+    sub_21FFC50(&Method_WarBoardPartyBuffHelpButton_OnClickButton__);
+    byte_59362ED = 1;
   }
   v3 = Method_WarBoardPartyBuffHelpButton_OnClickButton__;
   if ( (*((_BYTE *)Method_WarBoardPartyBuffHelpButton_OnClickButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_WarBoardPartyBuffHelpButton_OnClickButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    v3 = (_QWORD *)sub_21FFC68(Method_WarBoardPartyBuffHelpButton_OnClickButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onButtonClickCallback, 0);
 }
@@ -70,9 +71,19 @@ void WarBoardPartyBuffHelpButton__SetActive(WarBoardPartyBuffHelpButton_o *this,
 
   isEnable = this->fields.isEnable;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !gameObject )
-    sub_1D0F30C(0, v6);
-  UnityEngine_GameObject__SetActive(gameObject, isEnable && flag, 0);
+  if ( isEnable )
+  {
+    if ( !gameObject )
+LABEL_7:
+      sub_21FFECC(gameObject, v6);
+  }
+  else
+  {
+    if ( !gameObject )
+      goto LABEL_7;
+    flag = 0;
+  }
+  UnityEngine_GameObject__SetActive(gameObject, flag, 0);
 }
 
 
@@ -81,17 +92,17 @@ void WarBoardPartyBuffHelpButton__SetClickButtonCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.onButtonClickCallback = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onButtonClickCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onButtonClickCallback,
     (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -102,16 +113,14 @@ void WarBoardPartyBuffHelpButton__SetClickButtonCallback(
 
 void WarBoardPartyBuffHelpButton__SetEnable(WarBoardPartyBuffHelpButton_o *this, bool flag, const MethodInfo *method)
 {
-  bool v3; // w19
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  v3 = flag;
   this->fields.isEnable = flag;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v5);
-  UnityEngine_GameObject__SetActive(gameObject, v3, 0);
+    sub_21FFECC(0, v5);
+  UnityEngine_GameObject__SetActive(gameObject, flag, 0);
 }
 
 
@@ -125,7 +134,7 @@ void WarBoardPartyBuffHelpButton__SetUpPositionForConfigurationMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForConfigurationMode, 0);
   WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(this, v5);
 }
@@ -141,7 +150,7 @@ void WarBoardPartyBuffHelpButton__SetUpPositionForPlayMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForPlayMode, 0);
   WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(this, v5);
 }

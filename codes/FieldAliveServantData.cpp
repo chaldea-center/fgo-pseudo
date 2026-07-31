@@ -1,38 +1,38 @@
 void FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E7A0E6 & 1) == 0 )
+  if ( (byte_593B149 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4E7A0E6 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_593B149 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -44,33 +44,35 @@ void FieldAliveServantData__addSvtData(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  FieldAliveServantData_o *v10; // x20
   __int64 v11; // x8
-  System_Collections_Generic_List_object__o *v12; // x0
-  struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
-  __int64 size; // x10
-  Il2CppClass **v16; // x8
+  System_Collections_Generic_List_object__o *v12; // x8
+  struct System_Object_array *items; // x9
+  _QWORD *v14; // x10
+  __int64 size; // x11
+  Il2CppClass **v16; // x0
 
-  if ( (byte_4E7A0E5 & 1) == 0 )
+  v10 = this;
+  if ( (byte_593B148 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    byte_4E7A0E5 = 1;
+    this = (FieldAliveServantData_o *)sub_21FFC50(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    byte_593B148 = 1;
   }
   v11 = 16;
   if ( isEnemySide )
     v11 = 24;
-  v12 = *(System_Collections_Generic_List_object__o **)((char *)&this->klass + v11);
+  v12 = *(System_Collections_Generic_List_object__o **)((char *)&v10->klass + v11);
   if ( !v12
     || (items = v12->fields._items,
         v14 = Method_System_Collections_Generic_List_BattleServantData__Add__,
         ++v12->fields._version,
         !items) )
   {
-    sub_1D0F30C(v12, isEnemySide);
+    sub_21FFECC(this, isEnemySide);
   }
   size = v12->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -78,18 +80,18 @@ void FieldAliveServantData__addSvtData(
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v16[4] = (Il2CppClass *)svtData;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)(v16 + 4),
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)(v16 + 4),
       (int32_t)svtData,
-      (int32_t)svtData,
-      (int32_t)method,
+      (System_String_o *)svtData,
+      (System_String_o *)method,
       v4,
       v5,
       v6,

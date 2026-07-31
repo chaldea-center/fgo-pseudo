@@ -6,40 +6,41 @@ void BgmPlayArgs___ctor(
         int64_t startTime,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  float value; // s0
-  BgmManager_c *v18; // x0
+  bool v15; // w6
+  bool v16; // w7
+  __int64 v17; // x1
+  unsigned __int64 v18; // x8
+  BgmManager_c *v19; // x0
 
-  if ( (byte_4E76CF2 & 1) == 0 )
+  if ( (byte_5937CA2 & 1) == 0 )
   {
-    sub_1D0F0B4(&BgmManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_float__get_HasValue__);
-    byte_4E76CF2 = 1;
+    sub_21FFC50(&BgmManager_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
+    byte_5937CA2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
   if ( volume.fields.hasValue )
   {
-    value = volume.fields.value;
+    v18 = HIDWORD(*(unsigned __int64 *)&volume);
   }
   else
   {
-    v18 = BgmManager_TypeInfo;
-    if ( !BgmManager_TypeInfo->_2.cctor_finished )
+    v19 = BgmManager_TypeInfo;
+    if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v18 = BgmManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v17);
+      v19 = BgmManager_TypeInfo;
     }
-    value = v18->static_fields->DEFAULT_VOLUME;
+    *(float *)&v18 = v19->static_fields->DEFAULT_VOLUME;
   }
-  this->fields._Volume_k__BackingField = value;
+  LODWORD(this->fields._Volume_k__BackingField) = v18;
   this->fields._FadeTime_k__BackingField = fadeTime;
   this->fields._StartTime_k__BackingField = startTime;
 }
@@ -55,36 +56,36 @@ void BgmPlayArgs__Update(
   int64_t value; // x19
   bool hasValue; // w21
   BgmPlayArgs_o *v9; // x20
-  float Volume_k__BackingField; // s0
-  float FadeTime_k__BackingField; // s0
+  unsigned __int64 v10; // x8
+  unsigned __int64 v11; // x8
 
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4E76CF3 & 1) == 0 )
+  if ( (byte_5937CA3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_long__get_HasValue__);
-    this = (BgmPlayArgs_o *)sub_1D0F0B4(&Method_System_Nullable_float__get_HasValue__);
-    byte_4E76CF3 = 1;
+    sub_21FFC50(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
+    this = (BgmPlayArgs_o *)sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
+    byte_5937CA3 = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, volume);
-    Volume_k__BackingField = volume.fields.value;
+      sub_21FFECC(this, volume);
+    v10 = HIDWORD(*(unsigned __int64 *)&volume);
   }
   else
   {
-    Volume_k__BackingField = v9->fields._Volume_k__BackingField;
+    *(float *)&v10 = v9->fields._Volume_k__BackingField;
   }
-  v9->fields._Volume_k__BackingField = Volume_k__BackingField;
+  LODWORD(v9->fields._Volume_k__BackingField) = v10;
   if ( fadeTime.fields.hasValue )
-    FadeTime_k__BackingField = fadeTime.fields.value;
+    v11 = HIDWORD(*(unsigned __int64 *)&fadeTime);
   else
-    FadeTime_k__BackingField = v9->fields._FadeTime_k__BackingField;
-  v9->fields._FadeTime_k__BackingField = FadeTime_k__BackingField;
+    *(float *)&v11 = v9->fields._FadeTime_k__BackingField;
+  LODWORD(v9->fields._FadeTime_k__BackingField) = v11;
   if ( !hasValue )
     value = v9->fields._StartTime_k__BackingField;
   v9->fields._StartTime_k__BackingField = value;
@@ -117,14 +118,22 @@ float BgmPlayArgs__get_Volume(BgmPlayArgs_o *this, const MethodInfo *method)
 
 void BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)value,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

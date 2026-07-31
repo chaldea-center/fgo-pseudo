@@ -6,12 +6,12 @@ void FollowAssignRequest___ctor(FollowAssignRequest_o *this, const MethodInfo *m
 
 void FollowAssignRequest__beginRequest(FollowAssignRequest_o *this, int64_t targetUserId, const MethodInfo *method)
 {
-  if ( (byte_4E791E6 & 1) == 0 )
+  if ( (byte_593A23A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_19870/*"followId"*/);
-    byte_4E791E6 = 1;
+    sub_21FFC50(&StringLiteral_20396/*"followId"*/);
+    byte_593A23A = 1;
   }
-  RequestBase__addField_45612144((RequestBase_o *)this, (System_String_o *)StringLiteral_19870/*"followId"*/, targetUserId, 0);
+  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_20396/*"followId"*/, targetUserId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -20,16 +20,16 @@ System_String_o *FollowAssignRequest__getURL(FollowAssignRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E791E5 & 1) == 0 )
+  if ( (byte_593A239 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19868/*"follow/assign"*/);
-    byte_4E791E5 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_20394/*"follow/assign"*/);
+    byte_593A239 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_19868/*"follow/assign"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20394/*"follow/assign"*/, 0);
 }
 
 
@@ -41,129 +41,132 @@ void FollowAssignRequest__requestCompleted(
   ResponseData_o *v5; // x0
   ResponseData_o *v6; // x20
   Il2CppObject *v7; // x0
-  System_String_c *v8; // x1
+  __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *success; // x23
   Il2CppObject *Item; // x0
-  System_String_o *v11; // x22
-  System_String_o *v12; // x1
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x21
-  System_String_o *v15; // x23
-  Il2CppObject *v16; // x20
+  __int64 v11; // x2
+  System_String_o *v12; // x22
+  System_String_o *v13; // x1
+  Il2CppObject *v14; // x0
+  __int64 v15; // x2
+  System_String_o *v16; // x21
+  __int64 v17; // x2
+  System_String_o *v18; // x23
+  __int64 v19; // x1
+  Il2CppObject *v20; // x20
   Il2CppObject *Instance; // x20
-  NotificationDialog_ClickDelegate_o *v18; // x22
+  NotificationDialog_ClickDelegate_o *v22; // x22
 
-  if ( (byte_4E791E7 & 1) == 0 )
+  if ( (byte_593A23B & 1) == 0 )
   {
-    sub_1D0F0B4(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1D0F0B4(&Method_FollowAssignRequest_requestErrorDialog__);
-    sub_1D0F0B4(&JsonManager_TypeInfo);
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&string_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    sub_1D0F0B4(&StringLiteral_24596/*"title"*/);
-    sub_1D0F0B4(&StringLiteral_21969/*"message"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_1118/*"0"*/);
-    sub_1D0F0B4(&StringLiteral_24162/*"status"*/);
-    byte_4E791E7 = 1;
+    sub_21FFC50(&NotificationDialog_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_21FFC50(&Method_FollowAssignRequest_requestErrorDialog__);
+    sub_21FFC50(&JsonManager_TypeInfo);
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    sub_21FFC50(&StringLiteral_25345/*"title"*/);
+    sub_21FFC50(&StringLiteral_22593/*"message"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_1198/*"0"*/);
+    sub_21FFC50(&StringLiteral_24896/*"status"*/);
+    byte_593A23B = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(81, responseList, 0);
   if ( !v5 )
     goto LABEL_12;
   v6 = v5;
-  v7 = (Il2CppObject *)ResponseData__checkError_45600864(v5, 0);
+  v7 = (Il2CppObject *)ResponseData__checkError_51190916(v5, 0);
   if ( ((unsigned __int8)v7 & 1) == 0 )
     goto LABEL_12;
   success = (System_Collections_Generic_Dictionary_object__object__o *)v6->fields.success;
   if ( !success )
 LABEL_32:
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v6->fields.success,
-         (Il2CppObject *)StringLiteral_24162/*"status"*/,
-         (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_24896/*"status"*/,
+         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24162/*"status"*/,
-             (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v11 = (System_String_o *)Item;
-    if ( Item && (System_String_c *)Item->klass != string_TypeInfo )
+             (Il2CppObject *)StringLiteral_24896/*"status"*/,
+             (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v12 = (System_String_o *)Item;
+    if ( Item && Item->klass != (Il2CppClass *)qword_594C0B8 )
     {
-      sub_1D0F6A8(Item);
+      sub_220024C(Item, qword_594C0B8, v11);
 LABEL_12:
-      v12 = (System_String_o *)StringLiteral_22648/*"ng"*/;
+      v13 = (System_String_o *)StringLiteral_23290/*"ng"*/;
 LABEL_13:
-      RequestBase__completed((RequestBase_o *)this, v12, 0);
+      RequestBase__completed((RequestBase_o *)this, v13, 0);
       return;
     }
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_1118/*"0"*/;
+    v12 = (System_String_o *)StringLiteral_1198/*"0"*/;
   }
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           success,
-          (Il2CppObject *)StringLiteral_24596/*"title"*/,
-          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_25345/*"title"*/,
+          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_19;
-  v13 = System_Collections_Generic_Dictionary_object__object___get_Item(
+  v14 = System_Collections_Generic_Dictionary_object__object___get_Item(
           success,
-          (Il2CppObject *)StringLiteral_24596/*"title"*/,
-          (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v14 = (System_String_o *)v13;
-  if ( v13 && (System_String_c *)v13->klass != string_TypeInfo )
+          (Il2CppObject *)StringLiteral_25345/*"title"*/,
+          (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v16 = (System_String_o *)v14;
+  if ( v14 && v14->klass != (Il2CppClass *)qword_594C0B8 )
   {
-    sub_1D0F6A8(v13);
+    sub_220024C(v14, qword_594C0B8, v15);
 LABEL_19:
-    v14 = (System_String_o *)StringLiteral_1/*""*/;
+    v16 = (System_String_o *)StringLiteral_1/*""*/;
   }
   v7 = (Il2CppObject *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                          success,
-                         (Il2CppObject *)StringLiteral_21969/*"message"*/,
-                         (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                         (Il2CppObject *)StringLiteral_22593/*"message"*/,
+                         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   if ( ((unsigned __int8)v7 & 1) != 0 )
   {
     v7 = System_Collections_Generic_Dictionary_object__object___get_Item(
            success,
-           (Il2CppObject *)StringLiteral_21969/*"message"*/,
-           (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v15 = (System_String_o *)v7;
+           (Il2CppObject *)StringLiteral_22593/*"message"*/,
+           (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v18 = (System_String_o *)v7;
     if ( !v7 )
       goto LABEL_25;
-    v8 = string_TypeInfo;
-    if ( (System_String_c *)v7->klass == string_TypeInfo )
+    v8 = qword_594C0B8;
+    if ( v7->klass == (Il2CppClass *)qword_594C0B8 )
       goto LABEL_25;
-    sub_1D0F6A8(v7);
+    sub_220024C(v7, qword_594C0B8, v17);
   }
-  v15 = (System_String_o *)StringLiteral_1/*""*/;
+  v18 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_25:
-  if ( !v11 )
+  if ( !v12 )
     goto LABEL_32;
-  if ( System_String__Equals_65598092(v11, (System_String_o *)StringLiteral_1118/*"0"*/, 0) )
+  if ( System_String__Equals_75473208(v12, (System_String_o *)StringLiteral_1198/*"0"*/, 0) )
   {
-    v16 = (Il2CppObject *)v6->fields.success;
-    if ( !JsonManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v12 = JsonManager__toJson(v16, 0, 0, 0);
+    v20 = (Il2CppObject *)v6->fields.success;
+    if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v19);
+    v13 = JsonManager__toJson(v20, 0, 0, 0);
     goto LABEL_13;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v18 = (NotificationDialog_ClickDelegate_o *)sub_1D0F300(NotificationDialog_ClickDelegate_TypeInfo);
-  NotificationDialog_ClickDelegate___ctor(v18, (Il2CppObject *)this, Method_FollowAssignRequest_requestErrorDialog__, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v22 = (NotificationDialog_ClickDelegate_o *)sub_21FFEBC(NotificationDialog_ClickDelegate_TypeInfo);
+  NotificationDialog_ClickDelegate___ctor(v22, (Il2CppObject *)this, Method_FollowAssignRequest_requestErrorDialog__, 0);
   if ( !Instance )
     goto LABEL_32;
-  CommonUI__OpenNotificationDialog_32089520(
+  CommonUI__OpenNotificationDialog_37294692(
     (CommonUI_o *)Instance,
-    v14,
-    v15,
+    v16,
     v18,
+    v22,
     -1,
     0,
     0,
@@ -188,15 +191,15 @@ void FollowAssignRequest__requestErrorDialog(FollowAssignRequest_o *this, bool f
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E791E8 & 1) == 0 )
+  if ( (byte_593A23C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E791E8 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A23C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_22648/*"ng"*/, 0);
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_23290/*"ng"*/, 0);
 }

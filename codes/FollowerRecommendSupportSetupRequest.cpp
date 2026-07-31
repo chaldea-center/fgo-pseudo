@@ -14,25 +14,26 @@ bool FollowerRecommendSupportSetupRequest__beginRequest(
   MiniMessagePack_MiniMessagePacker_o *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Byte_array *v8; // x20
-  System_String_o *v9; // x0
+  __int64 v8; // x1
+  System_Byte_array *v9; // x20
+  System_String_o *v10; // x0
 
-  if ( (byte_4E79201 & 1) == 0 )
+  if ( (byte_593A255 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Convert_TypeInfo);
-    sub_1D0F0B4(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23452/*"recommendDeckData"*/);
-    byte_4E79201 = 1;
+    sub_21FFC50(&System_Convert_TypeInfo);
+    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_21FFC50(&StringLiteral_24132/*"recommendDeckData"*/);
+    byte_593A255 = 1;
   }
-  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_1D0F300(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  v8 = MiniMessagePack_MiniMessagePacker__PackClass(v5, &updateDeckData->obj, 0);
-  if ( !System_Convert_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v9 = System_Convert__ToBase64String(v8, 0);
-  RequestBase__addField_45601604((RequestBase_o *)this, (System_String_o *)StringLiteral_23452/*"recommendDeckData"*/, v9, 0);
+    sub_21FFECC(v6, v7);
+  v9 = MiniMessagePack_MiniMessagePacker__PackClass(v5, &updateDeckData->obj, 0);
+  if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v8);
+  v10 = System_Convert__ToBase64String(v9, 0);
+  RequestBase__addField_51187332((RequestBase_o *)this, (System_String_o *)StringLiteral_24132/*"recommendDeckData"*/, v10, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
   return 1;
 }
@@ -44,16 +45,16 @@ System_String_o *FollowerRecommendSupportSetupRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E79200 & 1) == 0 )
+  if ( (byte_593A254 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19877/*"follower/setupRecommendSupport"*/);
-    byte_4E79200 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_20403/*"follower/setupRecommendSupport"*/);
+    byte_593A254 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_19877/*"follower/setupRecommendSupport"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20403/*"follower/setupRecommendSupport"*/, 0);
 }
 
 
@@ -65,19 +66,19 @@ void FollowerRecommendSupportSetupRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4E79202 & 1) == 0 )
+  if ( (byte_593A256 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E79202 = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A256 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(133, responseList, 0);
-  if ( v5 && ResponseData__checkError_45600864(v5, 0) )
-    v6 = &StringLiteral_22821/*"ok"*/;
+  if ( v5 && ResponseData__checkError_51190916(v5, 0) )
+    v6 = &StringLiteral_23468/*"ok"*/;
   else
-    v6 = &StringLiteral_22648/*"ng"*/;
+    v6 = &StringLiteral_23290/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

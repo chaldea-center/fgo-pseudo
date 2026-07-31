@@ -12,20 +12,20 @@ void CommandCodeAttachRequest__beginRequest(
         int64_t attachedUserCommandCodeId,
         const MethodInfo *method)
 {
-  if ( (byte_4E7916F & 1) == 0 )
+  if ( (byte_593A1C3 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24355/*"svtId"*/);
-    sub_1D0F0B4(&StringLiteral_25020/*"userCommandCodeId"*/);
-    sub_1D0F0B4(&StringLiteral_20650/*"idx"*/);
-    sub_1D0F0B4(&StringLiteral_17173/*"attachedUserCommandCodeId"*/);
-    byte_4E7916F = 1;
+    sub_21FFC50(&StringLiteral_25091/*"svtId"*/);
+    sub_21FFC50(&StringLiteral_25810/*"userCommandCodeId"*/);
+    sub_21FFC50(&StringLiteral_21205/*"idx"*/);
+    sub_21FFC50(&StringLiteral_17607/*"attachedUserCommandCodeId"*/);
+    byte_593A1C3 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24355/*"svtId"*/, servantId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20650/*"idx"*/, idx, 0);
-  RequestBase__addField_45612144((RequestBase_o *)this, (System_String_o *)StringLiteral_25020/*"userCommandCodeId"*/, userCommandCodeId, 0);
-  RequestBase__addField_45612144(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25091/*"svtId"*/, servantId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21205/*"idx"*/, idx, 0);
+  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_25810/*"userCommandCodeId"*/, userCommandCodeId, 0);
+  RequestBase__addField_51200900(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17173/*"attachedUserCommandCodeId"*/,
+    (System_String_o *)StringLiteral_17607/*"attachedUserCommandCodeId"*/,
     attachedUserCommandCodeId,
     0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
@@ -36,16 +36,16 @@ System_String_o *CommandCodeAttachRequest__getURL(CommandCodeAttachRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E7916E & 1) == 0 )
+  if ( (byte_593A1C2 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_18437/*"commandCode/attach"*/);
-    byte_4E7916E = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_18924/*"commandCode/attach"*/);
+    byte_593A1C2 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_18437/*"commandCode/attach"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18924/*"commandCode/attach"*/, 0);
 }
 
 
@@ -56,29 +56,30 @@ void CommandCodeAttachRequest__requestCompleted(
 {
   ResponseData_o *v5; // x0
   ResponseData_o *v6; // x20
+  __int64 v7; // x1
   Il2CppObject *success; // x20
-  System_String_o *v8; // x1
+  System_String_o *v9; // x1
 
-  if ( (byte_4E79170 & 1) == 0 )
+  if ( (byte_593A1C4 & 1) == 0 )
   {
-    sub_1D0F0B4(&JsonManager_TypeInfo);
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E79170 = 1;
+    sub_21FFC50(&JsonManager_TypeInfo);
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A1C4 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(77, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_45600864(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
-    if ( !JsonManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0);
+    if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v7);
+    v9 = JsonManager__toJson(success, 0, 0, 0);
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22648/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_23290/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v8, 0);
+  RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

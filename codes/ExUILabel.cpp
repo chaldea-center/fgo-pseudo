@@ -1,11 +1,11 @@
 void ExUILabel___ctor(ExUILabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78DA1 & 1) == 0 )
+  if ( (byte_5939DF0 & 1) == 0 )
   {
-    sub_1D0F0B4(&UILabel_TypeInfo);
-    byte_4E78DA1 = 1;
+    sub_21FFC50(&UILabel_TypeInfo);
+    byte_5939DF0 = 1;
   }
-  if ( !UILabel_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
+  if ( !*(&UILabel_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UILabel_TypeInfo, method);
   UILabel___ctor((UILabel_o *)this, 0);
 }

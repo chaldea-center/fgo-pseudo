@@ -1,14 +1,19 @@
 void NpCombineControl___ctor(NpCombineControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7B8D6 & 1) == 0 )
+  CombineMenuControl_c *v3; // x0
+  int v4; // w8
+
+  if ( (byte_593C959 & 1) == 0 )
   {
-    sub_1D0F0B4(&CombineMenuControl_TypeInfo);
-    byte_4E7B8D6 = 1;
+    sub_21FFC50(&CombineMenuControl_TypeInfo);
+    byte_593C959 = 1;
   }
+  v3 = CombineMenuControl_TypeInfo;
   this->fields.EnableMaskScrollViewWidth = 684.0;
+  v4 = *(&v3->_2.cctor_finished + 1);
   *(_QWORD *)&this->fields.DefaultScrollViewWidth = 0x432A0000442F0000LL;
-  if ( !CombineMenuControl_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CombineMenuControl_TypeInfo);
+  if ( !v4 )
+    j_il2cpp_runtime_class_init_0(v3, method);
   CombineMenuControl___ctor((CombineMenuControl_o *)this, 0);
 }
 
@@ -20,35 +25,35 @@ bool NpCombineControl__CheckConfirm(int64_t myUserSvtId, const MethodInfo *metho
   Il2CppObject *Entity; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E7B8D1 & 1) == 0 )
+  if ( (byte_593C954 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8D1 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C954 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              myUserSvtId,
-             (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-  return NpCombineControl__CheckConfirm_50160792((UserServantEntity_o *)Entity, v6);
+             (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+  return NpCombineControl__CheckConfirm_55769236((UserServantEntity_o *)Entity, v6);
 }
 
 
-bool NpCombineControl__CheckConfirm_50160792(UserServantEntity_o *selectUsrSvtEnt, const MethodInfo *method)
+bool NpCombineControl__CheckConfirm_55769236(UserServantEntity_o *selectUsrSvtEnt, const MethodInfo *method)
 {
   UserServantEntity_o *v2; // x19
   int64_t hiddenValue; // x8
   int v4; // w9
-  int v5; // w10
+  int v5; // w11
 
   if ( !selectUsrSvtEnt )
     goto LABEL_17;
@@ -63,7 +68,7 @@ bool NpCombineControl__CheckConfirm_50160792(UserServantEntity_o *selectUsrSvtEn
   selectUsrSvtEnt = (UserServantEntity_o *)UserServantEntity__getAppendSkillInfo(selectUsrSvtEnt, 0);
   if ( !selectUsrSvtEnt || (hiddenValue = selectUsrSvtEnt->fields.id.fields.hiddenValue) == 0 )
 LABEL_17:
-    sub_1D0F30C(selectUsrSvtEnt, method);
+    sub_21FFECC(selectUsrSvtEnt, method);
   v4 = *(_DWORD *)(hiddenValue + 24);
   if ( v4 >= 1 )
   {
@@ -71,11 +76,11 @@ LABEL_17:
     do
     {
       if ( v4 == v5 )
-        sub_1D0F314(selectUsrSvtEnt);
+        sub_21FFED4(selectUsrSvtEnt);
       if ( *(int *)(hiddenValue + 4LL * v5 + 32) >= 2 )
         return 1;
     }
-    while ( v4 != ++v5 );
+    while ( (v4 & ~(v4 >> 31)) != ++v5 );
   }
   if ( v2->fields.adjustAtk > 0 || v2->fields.adjustHp > 0 )
     return 1;
@@ -90,19 +95,19 @@ bool NpCombineControl__CheckTdLvMax(NpCombineControl_o *this, UserServantEntity_
   int32_t currentId; // w21
 
   v4 = this;
-  if ( (byte_4E7B8CC & 1) == 0 )
+  if ( (byte_593C94F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    this = (NpCombineControl_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8CC = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    this = (NpCombineControl_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C94F = 1;
   }
   lvUpData = v4->fields.lvUpData;
   if ( !lvUpData
     || (currentId = lvUpData->fields.currentId,
-        (this = (NpCombineControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (this = (NpCombineControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (this = (NpCombineControl_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)this,
-                                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0
+                                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0
     || (this = (NpCombineControl_o *)TreasureDvcMaster__GetEntityCheckServantOverwrite(
                                        (TreasureDvcMaster_o *)this,
                                        v4->fields.baseSvtId,
@@ -110,7 +115,7 @@ bool NpCombineControl__CheckTdLvMax(NpCombineControl_o *this, UserServantEntity_
                                        0)) == 0
     || !resData )
   {
-    sub_1D0F30C(this, resData);
+    sub_21FFECC(this, resData);
   }
   return resData->fields.treasureDeviceLv1 >= SLODWORD(this->fields.baseUserServantEntity);
 }
@@ -121,20 +126,21 @@ void NpCombineControl__DestroyGrid(NpCombineControl_o *this, const MethodInfo *m
   UnityEngine_Component_o *wrapContent; // x0
   int32_t childCount; // w0
   int v5; // w22
+  __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
   System_String_array *assetList; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E7B8C6 & 1) == 0 )
+  if ( (byte_593C949 & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8C6 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C949 = 1;
   }
   wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
   if ( !wrapContent )
@@ -161,24 +167,24 @@ void NpCombineControl__DestroyGrid(NpCombineControl_o *this, const MethodInfo *m
       if ( !wrapContent )
         break;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(wrapContent, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_73359672(gameObject, 0);
-      if ( --v5 <= 1 )
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+      UnityEngine_Object__DestroyImmediate_83246828(gameObject, 0);
+      if ( (unsigned int)--v5 <= 1 )
         goto LABEL_13;
     }
 LABEL_18:
-    sub_1D0F30C(wrapContent, method);
+    sub_21FFECC(wrapContent, method);
   }
 LABEL_13:
   assetList = this->fields.assetList;
   if ( assetList )
   {
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_41903356(assetList, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
+    AssetManager__releaseAssetStorage_47474708(assetList, 0);
     this->fields.assetList = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetList, 0, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetList, 0, v9, v10, v11, v12, v13, v14);
   }
   NpCombineControl__ResetScrollView(this, method);
 }
@@ -189,15 +195,16 @@ void NpCombineControl__DestroyMaterialGrid(NpCombineControl_o *this, const Metho
   UnityEngine_Component_o *materialGrid; // x0
   int32_t childCount; // w0
   int v5; // w22
+  __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
   struct System_Collections_Generic_List_long__o *selectMtUsrSvtIdList; // x8
-  int v8; // w9
+  int v9; // w9
 
-  if ( (byte_4E7B8C7 & 1) == 0 )
+  if ( (byte_593C94A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8C7 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C94A = 1;
   }
   materialGrid = (UnityEngine_Component_o *)this->fields.materialGrid;
   if ( !materialGrid )
@@ -224,22 +231,22 @@ void NpCombineControl__DestroyMaterialGrid(NpCombineControl_o *this, const Metho
       if ( !materialGrid )
         break;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(materialGrid, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(gameObject, 0);
-      if ( --v5 <= 1 )
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+      UnityEngine_Object__Destroy_83246496(gameObject, 0);
+      if ( (unsigned int)--v5 <= 1 )
         goto LABEL_13;
     }
 LABEL_16:
-    sub_1D0F30C(materialGrid, method);
+    sub_21FFECC(materialGrid, method);
   }
 LABEL_13:
   selectMtUsrSvtIdList = this->fields.selectMtUsrSvtIdList;
   if ( selectMtUsrSvtIdList )
   {
-    v8 = selectMtUsrSvtIdList->fields._version + 1;
+    v9 = selectMtUsrSvtIdList->fields._version + 1;
     selectMtUsrSvtIdList->fields._size = 0;
-    selectMtUsrSvtIdList->fields._version = v8;
+    selectMtUsrSvtIdList->fields._version = v9;
   }
 }
 
@@ -248,56 +255,60 @@ UserServantEntity_o *NpCombineControl__GetBaseUsrSvtData(NpCombineControl_o *thi
 {
   NpCombineControl_o *v2; // x19
   struct UserServantEntity_o *v3; // x8
-  GrandQuestFolderBoardItem_o *p_baseUserServantEntity; // x19
+  MissionNaviTransitionBoardItem_o *p_baseUserServantEntity; // x19
   struct UserServantEntity_o *baseUserServantEntity; // t1
-  __int128 v6; // q1
-  int64_t v7; // x20
+  __int128 v6; // q0
+  __int128 v7; // q1
+  int v8; // w8
+  int64_t v9; // x20
   Il2CppObject *Entity; // x20
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-40h]
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-40h]
 
   v2 = this;
-  if ( (byte_4E7B8C5 & 1) == 0 )
+  if ( (byte_593C948 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    this = (NpCombineControl_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8C5 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    this = (NpCombineControl_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C948 = 1;
   }
   baseUserServantEntity = v2->fields.baseUserServantEntity;
-  p_baseUserServantEntity = (GrandQuestFolderBoardItem_o *)&v2->fields.baseUserServantEntity;
+  p_baseUserServantEntity = (MissionNaviTransitionBoardItem_o *)&v2->fields.baseUserServantEntity;
   v3 = baseUserServantEntity;
   if ( !baseUserServantEntity )
     goto LABEL_9;
-  v6 = *(_OWORD *)&v3->fields.id.fields.fakeValue;
-  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&v3->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v17.fields.fakeValue = v6;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v16 = v17;
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v16, 0);
-  this = (NpCombineControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v6 = *(_OWORD *)&v3->fields.id.fields.currentCryptoKey;
+  v7 = *(_OWORD *)&v3->fields.id.fields.fakeValue;
+  v8 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
+  *(_OWORD *)&v19.fields.currentCryptoKey = v6;
+  *(_OWORD *)&v19.fields.fakeValue = v7;
+  if ( !v8 )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+  v18 = v19;
+  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v18, 0);
+  this = (NpCombineControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (NpCombineControl_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)this,
-                                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
+                                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
   {
 LABEL_9:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-             v7,
-             (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-  p_baseUserServantEntity->klass = (GrandQuestFolderBoardItem_c *)Entity;
-  sub_1D0F058(p_baseUserServantEntity, (int32_t)Entity, v9, v10, v11, v12, v13, v14);
+             v9,
+             (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+  p_baseUserServantEntity->klass = (MissionNaviTransitionBoardItem_c *)Entity;
+  sub_21FFBF4(p_baseUserServantEntity, (int32_t)Entity, v11, v12, v13, v14, v15, v16);
   return (UserServantEntity_o *)Entity;
 }
 
@@ -315,109 +326,103 @@ int32_t NpCombineControl__GetLimitCountForMulti(
   long double v7; // q0
   __int64 v13; // x0
   Il2CppObject *MasterData_object; // x0
-  int v15; // w25
-  bool v16; // cc
-  int v17; // w24
-  DataManager_o *v18; // x21
-  int32_t v19; // w26
-  System_Collections_Generic_HashSet_int__o *CorrespondsCostume; // x23
-  int32_t v21; // w22
-  DataManager_o *v22; // x27
-  _BOOL4 v23; // w8
-  DataManager_o *v24; // x20
+  DataManager_o **monitor; // x8
+  int v16; // w23
+  int32_t v17; // w26
+  int32_t v18; // w27
+  DataManager_o *v19; // x22
+  __int64 v20; // x1
+  System_Collections_Generic_HashSet_int__o *CorrespondsCostume; // x25
+  int32_t v22; // w24
 
-  if ( (byte_4E7B8C1 & 1) == 0 )
+  if ( (byte_593C943 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1D0F0B4(&ImageLimitCount_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4E7B8C1 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_21FFC50(&ImageLimitCount_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_593C943 = 1;
   }
   v13 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1CE513C(v7);
+  if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
+    v13 = sub_2237AF8(v7);
   MasterData_object = *(Il2CppObject **)(*(_QWORD *)(v13 + 192) + 16LL);
-  if ( (BYTE5(MasterData_object[19].klass) & 1) == 0 )
-    MasterData_object = (Il2CppObject *)sub_1CE513C(v7);
-  v15 = condLimitCount - 1;
-  v16 = index < 1;
+  if ( (*(_WORD *)((_BYTE *)&MasterData_object[19].klass + 5) & 1) == 0 )
+    MasterData_object = (Il2CppObject *)sub_2237AF8(v7);
+  monitor = (DataManager_o **)MasterData_object[11].monitor;
+  v16 = condLimitCount - 1;
   if ( index >= 1 )
     v17 = -1;
   else
     v17 = condLimitCount - 1;
-  v18 = *(DataManager_o **)MasterData_object[11].monitor;
-  if ( v16 )
-    v19 = -1;
+  if ( index < 1 )
+    v18 = -1;
   else
-    v19 = condLimitCount;
-  if ( !v18 )
-    goto LABEL_36;
+    v18 = condLimitCount;
+  v19 = *monitor;
+  if ( !*monitor )
+    goto LABEL_37;
   MasterData_object = DataManager__GetMasterData_object_(
-                        v18,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
+                        *monitor,
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
   if ( !MasterData_object )
-    goto LABEL_36;
+    goto LABEL_37;
   CorrespondsCostume = ServantTreasureDeviceReleaseMaster__GetCorrespondsCostume(
                          (ServantTreasureDeviceReleaseMaster_o *)MasterData_object,
                          svtId,
                          0);
-  if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
+  if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, v20);
   MasterData_object = (Il2CppObject *)ImageLimitCount__GetLimitCountByImageLimitCostumeIn(cardLimitCount, 0);
-  v21 = (int)MasterData_object;
-  if ( v19 >= 0 && (_DWORD)MasterData_object != v19 && fixedFlag )
-    v22 = v18;
-  else
-    v22 = 0;
-  if ( v19 >= 0 && (_DWORD)MasterData_object != v19 && fixedFlag )
+  v22 = (int)MasterData_object;
+  if ( v18 < 0 || (_DWORD)MasterData_object == v18 || !fixedFlag )
   {
-    if ( (int)MasterData_object < 11 )
-      goto LABEL_24;
+    condLimitCount = (int)MasterData_object;
+  }
+  else if ( (int)MasterData_object >= 11 )
+  {
     if ( !CorrespondsCostume )
-      goto LABEL_36;
+      goto LABEL_37;
     MasterData_object = (Il2CppObject *)System_Collections_Generic_HashSet_int___Contains(
                                           CorrespondsCostume,
                                           (int32_t)MasterData_object,
-                                          (const MethodInfo_3800E64 *)Method_System_Collections_Generic_HashSet_int__Contains__);
-    v18 = v22;
-    if ( ((unsigned __int8)MasterData_object & 1) == 0 )
-LABEL_24:
-      v21 = v19;
-  }
-  v23 = v17 >= 0 && v21 > v17 && fixedFlag;
-  if ( v17 >= 0 && v21 > v17 && fixedFlag )
-    v24 = v18;
-  else
-    v24 = 0;
-  if ( v23 )
-  {
-    if ( v21 < 11 )
-      goto LABEL_32;
-    if ( !CorrespondsCostume )
-      goto LABEL_36;
-    MasterData_object = (Il2CppObject *)System_Collections_Generic_HashSet_int___Contains(
-                                          CorrespondsCostume,
-                                          v21,
-                                          (const MethodInfo_3800E64 *)Method_System_Collections_Generic_HashSet_int__Contains__);
-    v18 = v24;
+                                          (const MethodInfo_4280968 *)Method_System_Collections_Generic_HashSet_int__Contains__);
     if ( ((unsigned __int8)MasterData_object & 1) != 0 )
-LABEL_32:
-      v21 = v15;
+      condLimitCount = v22;
+    else
+      condLimitCount = v18;
   }
-  if ( !v18
-    || (MasterData_object = DataManager__GetMasterData_object_(
-                              v18,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0 )
+  if ( v17 < 0 || condLimitCount <= v17 || !fixedFlag )
   {
-LABEL_36:
-    sub_1D0F30C(MasterData_object, *(_QWORD *)&svtId);
+    v16 = condLimitCount;
   }
+  else if ( condLimitCount >= 11 )
+  {
+    if ( !CorrespondsCostume )
+      goto LABEL_37;
+    if ( System_Collections_Generic_HashSet_int___Contains(
+           CorrespondsCostume,
+           condLimitCount,
+           (const MethodInfo_4280968 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+    {
+      v16 = v17;
+    }
+    else
+    {
+      v16 = condLimitCount;
+    }
+  }
+  MasterData_object = DataManager__GetMasterData_object_(
+                        v19,
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+  if ( !MasterData_object )
+LABEL_37:
+    sub_21FFECC(MasterData_object, *(_QWORD *)&svtId);
   return ServantLimitImageMaster__GetServantLimitCountSealAfter(
            (ServantLimitImageMaster_o *)MasterData_object,
            svtId,
-           v21,
+           v16,
            0);
 }
 
@@ -434,25 +439,25 @@ int32_t NpCombineControl__GetLimitCountForSingle(
   __int64 v8; // x0
   Il2CppObject *MasterData_object; // x0
 
-  if ( (byte_4E7B8C0 & 1) == 0 )
+  if ( (byte_593C942 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4E7B8C0 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_593C942 = 1;
   }
   v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1CE513C(v4);
+  if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
+    v7 = sub_2237AF8(v4);
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1CE513C(v4);
+  if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
+    v8 = sub_2237AF8(v4);
   MasterData_object = **(Il2CppObject ***)(v8 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0 )
+                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0 )
   {
-    sub_1D0F30C(MasterData_object, *(_QWORD *)&svtId);
+    sub_21FFECC(MasterData_object, *(_QWORD *)&svtId);
   }
   return ServantLimitImageMaster__GetServantLimitCountSealAfter(
            (ServantLimitImageMaster_o *)MasterData_object,
@@ -480,9 +485,9 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetNpAddDataL
   __int64 v16; // x20
   struct System_Int32_array *treasureDeviceIds; // x8
   unsigned __int64 v18; // x24
-  int32_t v19; // w26
-  __int64 v20; // x23
-  __int64 v21; // x25
+  __int64 v19; // x23
+  __int64 v20; // x25
+  int32_t v21; // w26
   DataManager_o *v22; // x27
   TreasureDvcInfo_o *v23; // x23
   int32_t v24; // w0
@@ -492,103 +497,108 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetNpAddDataL
   TreasureDvcInfo_o *v28; // x19
   int32_t v29; // w23
   __int64 v30; // x25
-  __int64 v31; // x23
-  __int64 v32; // x29
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  __int64 v39; // x1
+  const MethodInfo *v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x23
+  __int64 v34; // x29
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  __int64 v41; // x1
+  __int64 v42; // d0
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x1
-  int32_t v41; // w2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  int32_t v44; // w5
-  int64_t v45; // x6
-  System_String_o *v46; // x7
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
+  int32_t v47; // w5
+  bool v48; // w6
+  bool v49; // w7
+  __int64 v50; // x1
   int32_t DispLimitCount; // w23
-  int32_t v48; // w1
-  int32_t v49; // w2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  int32_t v52; // w5
-  int64_t v53; // x6
-  System_String_o *v54; // x7
-  char v55; // w26
-  NpCombineControl_o *v56; // x0
-  const MethodInfo *v57; // x6
-  int32_t v58; // w2
-  int32_t v59; // w3
-  System_String_o *v60; // x4
-  int32_t v61; // w5
-  int64_t v62; // x6
-  System_String_o *v63; // x7
+  int32_t LimitCountByImageLimitCostumeIn; // w0
+  int32_t v53; // w1
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
+  char v60; // w26
+  NpCombineControl_o *v61; // x0
+  const MethodInfo *v62; // x6
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v65; // x9
+  _QWORD *v70; // x9
   __int64 size; // x10
-  Il2CppClass **v67; // x0
-  __int64 v68; // x8
-  TreasureDvcInfo_o *v70; // [xsp+0h] [xbp-A0h]
-  System_Int32_array *v71; // [xsp+8h] [xbp-98h]
-  ServantTreasureDeviceAddEntity_o *v72; // [xsp+10h] [xbp-90h]
+  Il2CppClass **v72; // x0
+  __int64 v73; // x8
+  TreasureDvcInfo_o *v75; // [xsp+0h] [xbp-A0h]
+  ServantTreasureDeviceAddEntity_o *v76; // [xsp+8h] [xbp-98h]
+  System_Int32_array *v77; // [xsp+10h] [xbp-90h]
   int32_t *p_cardId; // [xsp+18h] [xbp-88h]
-  int v74; // [xsp+20h] [xbp-80h]
-  bool v75; // [xsp+24h] [xbp-7Ch]
+  int v79; // [xsp+20h] [xbp-80h]
+  bool v80; // [xsp+24h] [xbp-7Ch]
   int32_t tdGuageCount[2]; // [xsp+28h] [xbp-78h] BYREF
   System_String_o *tdExplanation; // [xsp+30h] [xbp-70h] BYREF
   System_String_o *tdName; // [xsp+38h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v79; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v80; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v84; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
 
-  if ( (byte_4E7B8BF & 1) == 0 )
+  if ( (byte_593C941 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Convert_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Count_int___);
-    sub_1D0F0B4(&ImageLimitCount_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1D0F0B4(&SvtUseNpData_TypeInfo);
-    byte_4E7B8BF = 1;
+    sub_21FFC50(&System_Convert_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Count_int___);
+    sub_21FFC50(&ImageLimitCount_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_21FFC50(&SvtUseNpData_TypeInfo);
+    byte_593C941 = 1;
   }
   tdExplanation = 0;
   tdName = 0;
   *(_QWORD *)tdGuageCount = 0;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
   v11 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1CE513C(v10);
+  if ( (*(_WORD *)(v11 + 309) & 1) == 0 )
+    v11 = sub_2237AF8(v10);
   v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
-  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1CE513C(v10);
+  if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
+    v12 = sub_2237AF8(v10);
   MasterData_object = **(DataManager_o ***)(v12 + 184);
   if ( !MasterData_object )
     goto LABEL_41;
   MasterData_object = (DataManager_o *)DataManager__GetMasterData_object_(
                                          MasterData_object,
-                                         (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   if ( !tdAddEntity )
     goto LABEL_41;
   v14 = (TreasureDvcMaster_o *)MasterData_object;
   FixedCardLimitCounts = ServantTreasureDeviceAddEntity__GetFixedCardLimitCounts(tdAddEntity, 0);
   MasterData_object = (DataManager_o *)System_Linq_Enumerable__Count_int_(
                                          (System_Collections_Generic_IEnumerable_TSource__o *)tdAddEntity->fields.treasureDeviceIds,
-                                         (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
+                                         (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
   if ( (int)MasterData_object >= 1 )
   {
     v16 = 8;
-    v72 = tdAddEntity;
+    v75 = tdInfo;
+    v76 = tdAddEntity;
+    v77 = FixedCardLimitCounts;
     p_cardId = &tdInfo->fields.cardId;
-    v70 = tdInfo;
-    v71 = FixedCardLimitCounts;
     while ( 1 )
     {
       treasureDeviceIds = tdAddEntity->fields.treasureDeviceIds;
@@ -599,20 +609,20 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetNpAddDataL
         goto LABEL_42;
       if ( !usrSvtData )
         break;
-      v19 = *((_DWORD *)&treasureDeviceIds->obj.klass + v16);
-      v21 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
+      v19 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
       v20 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
-      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v79.fields.currentCryptoKey = v21;
-      *(_QWORD *)&v79.fields.fakeValue = v20;
-      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v79, 0);
+      v21 = *((_DWORD *)&treasureDeviceIds->obj.klass + v16);
+      if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+      *(_QWORD *)&v84.fields.currentCryptoKey = v19;
+      *(_QWORD *)&v84.fields.fakeValue = v20;
+      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v84, 0);
       if ( !v14 )
         break;
       MasterData_object = (DataManager_o *)TreasureDvcMaster__GetEntityCheckServantOverwrite(
                                              v14,
                                              (int32_t)MasterData_object,
-                                             v19,
+                                             v21,
                                              0);
       if ( !tdInfo )
         break;
@@ -628,8 +638,8 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetNpAddDataL
         tdGuageCount,
         tdInfo->fields.lv,
         0);
-      v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(usrSvtData->fields.svtId, 0);
-      MasterData_object = (DataManager_o *)ServantTreasureDvcMaster__getEntityFromIDID(v24, v19, 0);
+      v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(usrSvtData->fields.svtId, 0);
+      MasterData_object = (DataManager_o *)ServantTreasureDvcMaster__getEntityFromIDID(v24, v21, 0);
       hideCardChara = tdAddEntity->fields.hideCardChara;
       p_saveNameList = (int *)&MasterData_object->fields.saveNameList;
       if ( !MasterData_object )
@@ -640,66 +650,68 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetNpAddDataL
         goto LABEL_42;
       v27 = v14;
       v28 = v23;
-      v74 = *p_saveNameList;
       v29 = *((_DWORD *)&hideCardChara->obj.klass + v16);
-      if ( !System_Convert_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      v75 = System_Convert__ToBoolean_66641268(v29, 0);
-      v30 = sub_1D0F300(SvtUseNpData_TypeInfo);
-      SvtUseNpData___ctor((SvtUseNpData_o *)v30, 0);
-      v31 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
-      v32 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
-      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v80.fields.currentCryptoKey = v31;
-      *(_QWORD *)&v80.fields.fakeValue = v32;
-      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v80, 0);
+      v79 = *p_saveNameList;
+      if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v9);
+      v80 = System_Convert__ToBoolean_76466212(v29, 0);
+      v30 = sub_21FFEBC(SvtUseNpData_TypeInfo);
+      SvtUseNpData___ctor((SvtUseNpData_o *)v30, v31);
+      v34 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
+      v33 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
+      if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v32);
+      *(_QWORD *)&v85.fields.currentCryptoKey = v34;
+      *(_QWORD *)&v85.fields.fakeValue = v33;
+      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v85, 0);
       if ( !v30 )
         break;
       *(_DWORD *)(v30 + 16) = (_DWORD)MasterData_object;
-      *(_DWORD *)(v30 + 20) = v19;
-      *(_QWORD *)(v30 + 24) = *(_QWORD *)&v28->fields.id;
-      v39 = *(_QWORD *)&v22->fields._DispLog;
-      *(_QWORD *)(v30 + 32) = v39;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v30 + 32), v39, v33, v34, v35, v36, v37, v38);
+      *(_DWORD *)(v30 + 20) = v21;
+      v41 = *(_QWORD *)&v22->fields._DispLog;
+      v42 = *(_QWORD *)&v28->fields.id;
+      *(_QWORD *)(v30 + 32) = v41;
+      *(_QWORD *)(v30 + 24) = v42;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 32), v41, v35, v36, v37, v38, v39, v40);
       m_CancellationTokenSource = v22->fields.m_CancellationTokenSource;
       *(_QWORD *)(v30 + 40) = m_CancellationTokenSource;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)(v30 + 40),
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)(v30 + 40),
         (int32_t)m_CancellationTokenSource,
-        v41,
-        v42,
-        v43,
         v44,
         v45,
-        v46);
-      *(_DWORD *)(v30 + 48) = v74;
+        v46,
+        v47,
+        v48,
+        v49);
+      *(_DWORD *)(v30 + 48) = v79;
       *(_DWORD *)(v30 + 72) = UserServantEntity__getCommandCardLimitCount(usrSvtData, 0, 0);
       DispLimitCount = UserServantEntity__getDispLimitCount(usrSvtData, 0, 0);
-      if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-      *(_DWORD *)(v30 + 76) = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(DispLimitCount, 0);
-      v48 = (int)tdExplanation;
+      if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, v50);
+      LimitCountByImageLimitCostumeIn = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(DispLimitCount, 0);
+      v53 = (int)tdExplanation;
       *(_QWORD *)(v30 + 56) = tdExplanation;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v30 + 56), v48, v49, v50, v51, v52, v53, v54);
-      v55 = 1;
-      *(_BYTE *)(v30 + 64) = v75;
+      *(_DWORD *)(v30 + 76) = LimitCountByImageLimitCostumeIn;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 56), v53, v54, v55, v56, v57, v58, v59);
+      v60 = 1;
+      *(_BYTE *)(v30 + 64) = v80;
       *(_BYTE *)(v30 + 65) = 1;
-      if ( v71 )
+      if ( v77 )
       {
-        tdAddEntity = v72;
-        if ( v18 >= LODWORD(v71->max_length) )
+        tdAddEntity = v76;
+        if ( v18 >= LODWORD(v77->max_length) )
 LABEL_42:
-          sub_1D0F314(MasterData_object);
+          sub_21FFED4(MasterData_object);
         v14 = v27;
-        v55 = *((_DWORD *)&v71->obj.klass + v16) != 0;
+        v60 = *((_DWORD *)&v77->obj.klass + v16) != 0;
       }
       else
       {
-        tdAddEntity = v72;
+        tdAddEntity = v76;
         v14 = v27;
       }
-      tdInfo = v70;
+      tdInfo = v75;
       ServantTreasureDeviceAddEntity__GetMaskInfo(
         tdAddEntity,
         v16 - 8,
@@ -707,18 +719,18 @@ LABEL_42:
         (System_String_o **)(v30 + 88),
         0);
       MasterData_object = (DataManager_o *)NpCombineControl__GetLimitCountForMulti(
-                                             v56,
+                                             v61,
                                              *(_DWORD *)(v30 + 16),
                                              *(_DWORD *)(v30 + 72),
                                              tdAddEntity->fields.condLimitCount,
                                              v16 - 8,
-                                             v55,
-                                             v57);
+                                             v60,
+                                             v62);
       *(_DWORD *)(v30 + 68) = (_DWORD)MasterData_object;
       if ( !v8 )
         break;
       items = v8->fields._items;
-      v65 = Method_System_Collections_Generic_List_SvtUseNpData__Add__;
+      v70 = Method_System_Collections_Generic_List_SvtUseNpData__Add__;
       ++v8->fields._version;
       if ( !items )
         break;
@@ -728,25 +740,25 @@ LABEL_42:
         System_Collections_Generic_List_object___AddWithResize(
           v8,
           (Il2CppObject *)v30,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
       }
       else
       {
-        v67 = &items->obj.klass + size;
+        v72 = &items->obj.klass + size;
         v8->fields._size = size + 1;
-        v67[4] = (Il2CppClass *)v30;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v67 + 4), v30, v58, v59, v60, v61, v62, v63);
+        v72[4] = (Il2CppClass *)v30;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v72 + 4), v30, v63, v64, v65, v66, v67, v68);
       }
       MasterData_object = (DataManager_o *)System_Linq_Enumerable__Count_int_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)tdAddEntity->fields.treasureDeviceIds,
-                                             (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
-      v68 = v16 - 7;
+                                             (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
+      v73 = v16 - 7;
       ++v16;
-      if ( v68 >= (int)MasterData_object )
+      if ( v73 >= (int)MasterData_object )
         return (System_Collections_Generic_List_SvtUseNpData__o *)v8;
     }
 LABEL_41:
-    sub_1D0F30C(MasterData_object, v9);
+    sub_21FFECC(MasterData_object, v9);
   }
   return (System_Collections_Generic_List_SvtUseNpData__o *)v8;
 }
@@ -764,17 +776,17 @@ int32_t NpCombineControl__GetNpLv(
   unsigned __int64 v8; // x23
   int64_t v9; // x22
   UserServantEntity_o *v10; // x22
-  int32_t treasureDeviceLv1; // w8
+  int32_t treasureDeviceLv1; // w9
   int32_t tdMaxLv[2]; // [xsp+8h] [xbp-58h] BYREF
 
   v5 = mtSvtIdList;
   v6 = baseUsrSvtData;
-  if ( (byte_4E7B8CF & 1) == 0 )
+  if ( (byte_593C952 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    baseUsrSvtData = (UserServantEntity_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8CF = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    baseUsrSvtData = (UserServantEntity_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C952 = 1;
   }
   *(_QWORD *)tdMaxLv = 0;
   *tmpTargetLv = 0;
@@ -787,26 +799,26 @@ int32_t NpCombineControl__GetNpLv(
     if ( v6 )
       return UserServantEntity__checkTreasureDeviceLevelUp(v6, (int32_t)mtSvtIdList, 0);
 LABEL_17:
-    sub_1D0F30C(baseUsrSvtData, mtSvtIdList);
+    sub_21FFECC(baseUsrSvtData, mtSvtIdList);
   }
   v8 = 0;
   do
   {
     if ( v8 >= (unsigned int)max_length )
-      sub_1D0F314(baseUsrSvtData);
+      sub_21FFED4(baseUsrSvtData);
     v9 = v5->m_Items[v8];
-    baseUsrSvtData = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseUsrSvtData = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseUsrSvtData )
       goto LABEL_17;
     baseUsrSvtData = (UserServantEntity_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)baseUsrSvtData,
-                                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !baseUsrSvtData )
       goto LABEL_17;
     baseUsrSvtData = (UserServantEntity_o *)DataMasterBase_object__object__long___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)baseUsrSvtData,
                                               v9,
-                                              (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                              (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     if ( !baseUsrSvtData )
       goto LABEL_17;
     v10 = baseUsrSvtData;
@@ -818,17 +830,17 @@ LABEL_17:
     }
     else
     {
-      baseUsrSvtData = (UserServantEntity_o *)UserServantEntity__getTreasureDeviceInfo_44543568(
+      baseUsrSvtData = (UserServantEntity_o *)UserServantEntity__getTreasureDeviceInfo_50128532(
                                                 v10,
                                                 &tdMaxLv[1],
                                                 tdMaxLv,
                                                 0);
       treasureDeviceLv1 = tdMaxLv[1];
     }
+    LODWORD(max_length) = v5->max_length;
     ++v8;
     mtSvtIdList = (System_Int64_array *)(unsigned int)(treasureDeviceLv1 + *tmpTargetLv);
     *tmpTargetLv = (int)mtSvtIdList;
-    LODWORD(max_length) = v5->max_length;
   }
   while ( (__int64)v8 < (int)max_length );
   if ( !v6 )
@@ -844,24 +856,24 @@ int32_t NpCombineControl__GetQp(int32_t currentId, int32_t currentLv, int32_t re
   __int64 v9; // x1
   TreasureDvcLvEntity_o *Entity; // x0
 
-  if ( (byte_4E7B8D0 & 1) == 0 )
+  if ( (byte_593C953 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8D0 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C953 = 1;
   }
   if ( currentLv >= resNpLv )
     return 0;
   v7 = 0;
   do
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0 )
+                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0 )
     {
-      sub_1D0F30C(Instance, v9);
+      sub_21FFECC(Instance, v9);
     }
     Entity = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)Instance, currentId, currentLv, 0);
     if ( Entity )
@@ -879,8 +891,9 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetSvtNpData(
         const MethodInfo *method)
 {
   long double v3; // q0
-  __int64 v6; // x0
+  __int64 v5; // x0
   __int64 MasterData_object; // x0
+  DataManager_o **v7; // x8
   DataManager_o *v8; // x22
   ServantTreasureDeviceAddMaster_o *v9; // x29
   __int64 v10; // x23
@@ -890,170 +903,171 @@ System_Collections_Generic_List_SvtUseNpData__o *NpCombineControl__GetSvtNpData(
   struct System_Int32_array *treasureDeviceIds; // x8
   Il2CppObject *v15; // x20
   System_Collections_Generic_List_object__o *v16; // x22
-  CombineMenuControl_o *v17; // x23
-  int32_t v18; // w24
-  __int64 v19; // x21
+  int32_t v17; // w24
   int32_t TransformedServantId; // w25
-  __int64 v21; // x26
+  __int64 v19; // x27
   int32_t *p_cardId; // x8
-  int32_t v23; // w23
-  Il2CppObject *v24; // x21
-  int32_t v25; // w28
-  __int64 v26; // x27
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
-  int v33; // w8
-  ServantTreasureDeviceAddMaster_o *v34; // x20
-  __int64 v35; // x1
+  int32_t v21; // w21
+  NpCombineControl_o *v22; // x19
+  int32_t v23; // w28
+  __int64 v24; // x26
+  const MethodInfo *v25; // x1
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  int v32; // w9
+  TreasureDvcInfo_o *v33; // x8
+  __int64 v34; // x1
+  ServantTreasureDeviceAddMaster_o *v35; // x23
   __int64 v36; // x1
-  int32_t v37; // w2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
   int32_t v40; // w5
-  int64_t v41; // x6
-  System_String_o *v42; // x7
+  bool v41; // w6
+  bool v42; // w7
   int32_t CommandCardLimitCountStage; // w0
-  int32_t v44; // w29
+  __int64 v44; // x1
+  int32_t v45; // w29
   int32_t DispLimitCountStage; // w0
-  int32_t v46; // w0
-  int32_t v47; // w1
-  int32_t v48; // w2
-  int32_t v49; // w3
-  System_String_o *v50; // x4
-  int32_t v51; // w5
-  int64_t v52; // x6
-  System_String_o *v53; // x7
-  __int64 v54; // x28
-  __int64 v55; // x29
-  int32_t v56; // w0
-  ServantTreasureDeviceAddEntity_o *v57; // x0
-  const MethodInfo *v58; // x3
-  ServantTreasureDeviceAddEntity_o *v59; // x25
+  int32_t v47; // w0
+  int32_t LimitCountByImageLimitCostumeIn; // w0
+  int32_t v49; // w1
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  __int64 v56; // x1
+  bool IsTransformServant_k__BackingField; // w8
+  __int64 v58; // x28
+  __int64 v59; // x29
   int32_t v60; // w0
-  int32_t v61; // w2
-  int32_t v62; // w3
-  System_String_o *v63; // x4
-  int32_t v64; // w5
-  int64_t v65; // x6
-  System_String_o *v66; // x7
+  ServantTreasureDeviceAddEntity_o *v61; // x0
+  const MethodInfo *v62; // x3
+  ServantTreasureDeviceAddEntity_o *v63; // x25
+  int32_t v64; // w0
+  System_String_o *v65; // x2
+  System_String_o *v66; // x3
+  int32_t v67; // w4
+  int32_t v68; // w5
+  bool v69; // w6
+  bool v70; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v68; // x9
+  _QWORD *v72; // x9
   __int64 size; // x10
-  Il2CppClass **v70; // x0
-  __int64 v71; // x21
-  __int64 v72; // x22
-  int32_t v73; // w0
-  const MethodInfo *v74; // x4
-  CombineMenuControl_o *v76; // [xsp+8h] [xbp-98h]
-  __int64 v77; // [xsp+10h] [xbp-90h]
-  int32_t tdGuageCount[2]; // [xsp+18h] [xbp-88h] BYREF
-  System_String_o *tdName; // [xsp+20h] [xbp-80h] BYREF
-  System_String_o *tdExplanation; // [xsp+28h] [xbp-78h] BYREF
-  TreasureDvcInfo_o *tdInfo; // [xsp+30h] [xbp-70h] BYREF
-  TreasureDvcInfo_o *v82; // [xsp+38h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v83; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v84; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
+  Il2CppClass **v74; // x0
+  __int64 v75; // x1
+  __int64 v76; // x21
+  __int64 v77; // x22
+  int32_t v78; // w0
+  const MethodInfo *v79; // x4
+  int32_t tdGuageCount[2]; // [xsp+8h] [xbp-88h] BYREF
+  System_String_o *tdName; // [xsp+10h] [xbp-80h] BYREF
+  System_String_o *tdExplanation; // [xsp+18h] [xbp-78h] BYREF
+  TreasureDvcInfo_o *tdInfo; // [xsp+20h] [xbp-70h] BYREF
+  TreasureDvcInfo_o *v86; // [xsp+28h] [xbp-68h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v87; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v89; // 0:x0.16
 
-  if ( (byte_4E7B8BE & 1) == 0 )
+  if ( (byte_593C940 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_IndexOf_int___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1D0F0B4(&ImageLimitCount_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1D0F0B4(&SvtUseNpData_TypeInfo);
-    byte_4E7B8BE = 1;
+    sub_21FFC50(&Method_System_Array_IndexOf_int___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_21FFC50(&ImageLimitCount_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_21FFC50(&SvtUseNpData_TypeInfo);
+    byte_593C940 = 1;
   }
   tdInfo = 0;
-  v82 = 0;
+  v86 = 0;
   tdName = 0;
   tdExplanation = 0;
+  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   *(_QWORD *)tdGuageCount = 0;
-  v6 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1CE513C(v3);
-  MasterData_object = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
-  if ( (*(_BYTE *)(MasterData_object + 309) & 1) == 0 )
-    MasterData_object = sub_1CE513C(v3);
-  v8 = **(DataManager_o ***)(MasterData_object + 184);
-  if ( !v8 )
-    goto LABEL_52;
-  v76 = (CombineMenuControl_o *)this;
+  if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
+    v5 = sub_2237AF8(v3);
+  MasterData_object = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
+  if ( (*(_WORD *)(MasterData_object + 309) & 1) == 0 )
+    MasterData_object = sub_2237AF8(v3);
+  v7 = *(DataManager_o ***)(MasterData_object + 184);
+  v8 = *v7;
+  if ( !*v7 )
+    goto LABEL_49;
   MasterData_object = (__int64)DataManager__GetMasterData_object_(
-                                 v8,
-                                 (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
+                                 *v7,
+                                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
   if ( !usrSvtData )
-    goto LABEL_52;
+    goto LABEL_49;
   v9 = (ServantTreasureDeviceAddMaster_o *)MasterData_object;
-  v11 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
-  v10 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v83.fields.currentCryptoKey = v11;
-  *(_QWORD *)&v83.fields.fakeValue = v10;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v83, 0);
-  MasterData_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
+  v10 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
+  v11 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, usrSvtData);
+  *(_QWORD *)&v87.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v87.fields.fakeValue = v11;
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v87, 0);
+  MasterData_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
                         usrSvtData->fields.limitCount,
                         0);
   if ( !v9 )
-    goto LABEL_52;
+    goto LABEL_49;
   EnableEntity = ServantTreasureDeviceAddMaster__GetEnableEntity(v9, v12, MasterData_object, 0, 0, 0, 0);
   CombineMenuControl__SetTransformInfo((CombineMenuControl_o *)this, 0);
   if ( !EnableEntity )
     goto LABEL_15;
   treasureDeviceIds = EnableEntity->fields.treasureDeviceIds;
   if ( !treasureDeviceIds )
-    goto LABEL_52;
+    goto LABEL_49;
   if ( SLODWORD(treasureDeviceIds->max_length) > 1 )
   {
-    UserServantEntity__getTreasureDeviceInfo(usrSvtData, &v82, -1, -1, 0, 0);
-    v72 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
-    v71 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v85.fields.currentCryptoKey = v72;
-    *(_QWORD *)&v85.fields.fakeValue = v71;
-    v73 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v85, 0);
-    EventTutorialMaster__CheckTutorial(-1, 69, 0, v73, 0, 0, 0, 0);
-    return NpCombineControl__GetNpAddDataList(this, usrSvtData, v82, EnableEntity, v74);
+    UserServantEntity__getTreasureDeviceInfo(usrSvtData, &v86, -1, -1, 0, 0);
+    v76 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
+    v77 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v75);
+    *(_QWORD *)&v89.fields.currentCryptoKey = v76;
+    *(_QWORD *)&v89.fields.fakeValue = v77;
+    v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v89, 0);
+    EventTutorialMaster__CheckTutorial(-1, 69, 0, v78, 0, 0, 0, 0);
+    return NpCombineControl__GetNpAddDataList(this, usrSvtData, v86, EnableEntity, v79);
   }
   else
   {
 LABEL_15:
     v15 = DataManager__GetMasterData_object_(
             v8,
-            (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    v16 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    v16 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v16,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
-    v17 = v76;
-    if ( v76->fields.transformTotal >= 1 )
+      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    if ( this->fields.transformTotal >= 1 )
     {
-      v18 = 0;
-      v19 = 0;
+      v17 = 0;
       while ( 1 )
       {
-        MasterData_object = (__int64)v17->fields.baseUserServantEntity;
+        MasterData_object = (__int64)this->fields.baseUserServantEntity;
         if ( !MasterData_object )
           break;
         TransformedServantId = UserServantEntity__GetTransformedServantId(
                                  (UserServantEntity_o *)MasterData_object,
-                                 v18,
+                                 v17,
                                  0);
         MasterData_object = UserServantEntity__GetTransformedTreasureDeviceInfoByTransformCount(
                               usrSvtData,
                               &tdInfo,
-                              v18,
+                              v17,
                               -1,
                               -1,
                               0,
@@ -1069,7 +1083,7 @@ LABEL_15:
                                        0);
         if ( !tdInfo )
           break;
-        v21 = MasterData_object;
+        v19 = MasterData_object;
         if ( !MasterData_object )
           break;
         TreasureDvcEntity__getEffectExplanation(
@@ -1082,16 +1096,11 @@ LABEL_15:
           0);
         MasterData_object = (__int64)ServantTreasureDvcMaster__getEntityFromIDID(
                                        TransformedServantId,
-                                       *(_DWORD *)(v21 + 16),
+                                       *(_DWORD *)(v19 + 16),
                                        0);
         if ( MasterData_object )
-          v19 = MasterData_object;
-        v77 = v19;
-        if ( MasterData_object )
         {
-          if ( !v19 )
-            break;
-          p_cardId = (int32_t *)(v19 + 64);
+          p_cardId = (int32_t *)(MasterData_object + 64);
         }
         else
         {
@@ -1099,80 +1108,82 @@ LABEL_15:
             break;
           p_cardId = &tdInfo->fields.cardId;
         }
-        MasterData_object = (__int64)v17->fields.baseUserServantEntity;
+        MasterData_object = (__int64)this->fields.baseUserServantEntity;
         if ( !MasterData_object )
           break;
-        v23 = *p_cardId;
-        v24 = v15;
-        v25 = UserServantEntity__get_IsSaveTransformServant((UserServantEntity_o *)MasterData_object, 0) ? v18 : -1;
-        v26 = sub_1D0F300(SvtUseNpData_TypeInfo);
-        SvtUseNpData___ctor((SvtUseNpData_o *)v26, 0);
-        if ( !v26 )
+        v21 = *p_cardId;
+        v22 = this;
+        v23 = UserServantEntity__get_IsSaveTransformServant((UserServantEntity_o *)MasterData_object, 0) ? v17 : -1;
+        v24 = sub_21FFEBC(SvtUseNpData_TypeInfo);
+        SvtUseNpData___ctor((SvtUseNpData_o *)v24, v25);
+        if ( !v24 )
           break;
-        *(_DWORD *)(v26 + 16) = TransformedServantId;
-        v33 = *(_DWORD *)(v21 + 16);
-        *(_DWORD *)(v26 + 20) = v33;
-        *(_DWORD *)(v26 + 24) = v33;
-        if ( !tdInfo )
+        v32 = *(_DWORD *)(v19 + 16);
+        v33 = tdInfo;
+        *(_DWORD *)(v24 + 16) = TransformedServantId;
+        *(_DWORD *)(v24 + 20) = v32;
+        *(_DWORD *)(v24 + 24) = v32;
+        if ( !v33 )
           break;
-        v34 = v9;
-        *(_DWORD *)(v26 + 28) = tdInfo->fields.lv;
-        v35 = *(_QWORD *)(v21 + 32);
-        *(_QWORD *)(v26 + 32) = v35;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v26 + 32), v35, v27, v28, v29, v30, v31, v32);
-        v36 = *(_QWORD *)(v21 + 24);
-        *(_QWORD *)(v26 + 40) = v36;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v26 + 40), v36, v37, v38, v39, v40, v41, v42);
-        *(_DWORD *)(v26 + 48) = v23;
-        CommandCardLimitCountStage = UserServantEntity__GetCommandCardLimitCountStage(usrSvtData, v25, 0, 0);
-        v44 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(CommandCardLimitCountStage, 0);
-        if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-        *(_DWORD *)(v26 + 72) = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v44, 0);
-        DispLimitCountStage = UserServantEntity__GetDispLimitCountStage(usrSvtData, v25, 0, 0, 0);
-        v46 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStage, 0);
-        *(_DWORD *)(v26 + 76) = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v46, 0);
-        v47 = (int)tdExplanation;
-        *(_QWORD *)(v26 + 56) = tdExplanation;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v26 + 56), v47, v48, v49, v50, v51, v52, v53);
-        v17 = v76;
-        *(_BYTE *)(v26 + 64) = 0;
-        *(_BYTE *)(v26 + 65) = v76->fields._IsTransformServant_k__BackingField;
-        v55 = *(_QWORD *)&usrSvtData->fields.limitCount.fields.currentCryptoKey;
-        v54 = *(_QWORD *)&usrSvtData->fields.limitCount.fields.fakeValue;
-        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v84.fields.currentCryptoKey = v55;
-        *(_QWORD *)&v84.fields.fakeValue = v54;
-        v56 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v84, 0);
-        v9 = v34;
-        v57 = ServantTreasureDeviceAddMaster__GetEnableEntity(
-                v34,
+        v34 = *(_QWORD *)(v19 + 32);
+        v35 = v9;
+        *(_DWORD *)(v24 + 28) = v33->fields.lv;
+        *(_QWORD *)(v24 + 32) = v34;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 32), v34, v26, v27, v28, v29, v30, v31);
+        v36 = *(_QWORD *)(v19 + 24);
+        *(_QWORD *)(v24 + 40) = v36;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 40), v36, v37, v38, v39, v40, v41, v42);
+        *(_DWORD *)(v24 + 48) = v21;
+        CommandCardLimitCountStage = UserServantEntity__GetCommandCardLimitCountStage(usrSvtData, v23, 0, 0);
+        v45 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(CommandCardLimitCountStage, 0);
+        if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, v44);
+        *(_DWORD *)(v24 + 72) = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v45, 0);
+        DispLimitCountStage = UserServantEntity__GetDispLimitCountStage(usrSvtData, v23, 0, 0, 0);
+        v47 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStage, 0);
+        LimitCountByImageLimitCostumeIn = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v47, 0);
+        v49 = (int)tdExplanation;
+        *(_QWORD *)(v24 + 56) = tdExplanation;
+        *(_DWORD *)(v24 + 76) = LimitCountByImageLimitCostumeIn;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 56), v49, v50, v51, v52, v53, v54, v55);
+        IsTransformServant_k__BackingField = v22->fields._IsTransformServant_k__BackingField;
+        *(_BYTE *)(v24 + 64) = 0;
+        *(_BYTE *)(v24 + 65) = IsTransformServant_k__BackingField;
+        v58 = *(_QWORD *)&usrSvtData->fields.limitCount.fields.currentCryptoKey;
+        v59 = *(_QWORD *)&usrSvtData->fields.limitCount.fields.fakeValue;
+        if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v56);
+        *(_QWORD *)&v88.fields.currentCryptoKey = v58;
+        *(_QWORD *)&v88.fields.fakeValue = v59;
+        v60 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v88, 0);
+        v9 = v35;
+        v61 = ServantTreasureDeviceAddMaster__GetEnableEntity(
+                v35,
                 TransformedServantId,
-                v56,
+                v60,
                 0,
-                *(_DWORD *)(v21 + 16),
+                *(_DWORD *)(v19 + 16),
                 0,
                 0);
-        if ( v57 )
+        if ( v61 )
         {
-          v59 = v57;
-          v60 = System_Array__IndexOf_int_(
-                  v57->fields.treasureDeviceIds,
-                  *(_DWORD *)(v21 + 16),
-                  (const MethodInfo_33590E4 *)Method_System_Array_IndexOf_int___);
-          ServantTreasureDeviceAddEntity__GetMaskInfo(v59, v60, (bool *)(v26 + 84), (System_String_o **)(v26 + 88), 0);
+          v63 = v61;
+          v64 = System_Array__IndexOf_int_(
+                  v61->fields.treasureDeviceIds,
+                  *(_DWORD *)(v19 + 16),
+                  (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+          ServantTreasureDeviceAddEntity__GetMaskInfo(v63, v64, (bool *)(v24 + 84), (System_String_o **)(v24 + 88), 0);
         }
         MasterData_object = NpCombineControl__GetLimitCountForSingle(
-                              (NpCombineControl_o *)v57,
-                              *(_DWORD *)(v26 + 16),
-                              *(_DWORD *)(v26 + 72),
-                              v58);
-        *(_DWORD *)(v26 + 68) = MasterData_object;
+                              (NpCombineControl_o *)v61,
+                              *(_DWORD *)(v24 + 16),
+                              *(_DWORD *)(v24 + 72),
+                              v62);
+        *(_DWORD *)(v24 + 68) = MasterData_object;
         if ( !v16 )
           break;
         items = v16->fields._items;
-        v68 = Method_System_Collections_Generic_List_SvtUseNpData__Add__;
+        v72 = Method_System_Collections_Generic_List_SvtUseNpData__Add__;
         ++v16->fields._version;
         if ( !items )
           break;
@@ -1181,23 +1192,23 @@ LABEL_15:
         {
           System_Collections_Generic_List_object___AddWithResize(
             v16,
-            (Il2CppObject *)v26,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+            (Il2CppObject *)v24,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
         }
         else
         {
-          v70 = &items->obj.klass + size;
+          v74 = &items->obj.klass + size;
           v16->fields._size = size + 1;
-          v70[4] = (Il2CppClass *)v26;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v70 + 4), v26, v61, v62, v63, v64, v65, v66);
+          v74[4] = (Il2CppClass *)v24;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v74 + 4), v24, v65, v66, v67, v68, v69, v70);
         }
-        v15 = v24;
-        v19 = v77;
-        if ( ++v18 >= v76->fields.transformTotal )
+        ++v17;
+        this = v22;
+        if ( v17 >= v22->fields.transformTotal )
           return (System_Collections_Generic_List_SvtUseNpData__o *)v16;
       }
-LABEL_52:
-      sub_1D0F30C(MasterData_object, usrSvtData);
+LABEL_49:
+      sub_21FFECC(MasterData_object, usrSvtData);
     }
   }
   return (System_Collections_Generic_List_SvtUseNpData__o *)v16;
@@ -1219,41 +1230,42 @@ int32_t NpCombineControl__GetTutorialOpenType(NpCombineControl_o *this, const Me
 void NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, const MethodInfo *method)
 {
   UILabel_o *currentInfoLb; // x0
+  __int64 v4; // x1
   UILabel_o *needQpLb; // x20
   UILabel_o *qpLb; // x20
-  const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x1
+  const MethodInfo *v8; // x1
+  const MethodInfo *v9; // x2
+  const MethodInfo *v10; // x1
   UIWidget_o *transformSvtName; // x20
   UIWidget_o *transformBgSprite; // x19
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o DefaultCondTitleLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o DefaultCondTitleSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7B8BB & 1) == 0 )
+  if ( (byte_593C93D & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_860/*"-"*/);
-    sub_1D0F0B4(&StringLiteral_9351/*"NEED_QP_INFO"*/);
-    byte_4E7B8BB = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_923/*"-"*/);
+    sub_21FFC50(&StringLiteral_9610/*"NEED_QP_INFO"*/);
+    byte_593C93D = 1;
   }
   currentInfoLb = this->fields.currentInfoLb;
   if ( !currentInfoLb )
     goto LABEL_19;
-  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_860/*"-"*/, 0);
+  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_923/*"-"*/, 0);
   currentInfoLb = this->fields.afterInfoLb;
   if ( !currentInfoLb )
     goto LABEL_19;
-  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_860/*"-"*/, 0);
+  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_923/*"-"*/, 0);
   currentInfoLb = (UILabel_o *)this->fields.maxLvStatusInfo;
   if ( !currentInfoLb )
     goto LABEL_19;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)currentInfoLb, 0, 0);
   needQpLb = this->fields.needQpLb;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  currentInfoLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9351/*"NEED_QP_INFO"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
+  currentInfoLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9610/*"NEED_QP_INFO"*/, 0);
   if ( !needQpLb )
     goto LABEL_19;
   UILabel__set_text(needQpLb, (System_String_o *)currentInfoLb, 0);
@@ -1266,13 +1278,13 @@ void NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, const Metho
   currentInfoLb = this->fields.qpLb;
   if ( !currentInfoLb )
     goto LABEL_19;
-  v12.fields.r = 1.0;
-  v12.fields.g = 1.0;
-  v12.fields.b = 1.0;
-  v12.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)currentInfoLb, v12, 0);
-  NpCombineControl__SetHaveQpInfo(this, v6);
-  NpCombineControl__SetSelectMaterialEnable(this, v7);
+  v13.fields.r = 1.0;
+  v13.fields.g = 1.0;
+  v13.fields.b = 1.0;
+  v13.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)currentInfoLb, v13, 0);
+  NpCombineControl__SetHaveQpInfo(this, v7);
+  NpCombineControl__SetSelectMaterialEnable(this, v8);
   currentInfoLb = (UILabel_o *)this->fields.defaultNpInfo;
   if ( !currentInfoLb )
     goto LABEL_19;
@@ -1281,9 +1293,9 @@ void NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, const Metho
   if ( !currentInfoLb )
     goto LABEL_19;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)currentInfoLb, 0, 0);
-  NpCombineControl__SetEnabledNpInfoScroll(this, 0, v8);
+  NpCombineControl__SetEnabledNpInfoScroll(this, 0, v9);
   this->fields.currentMoveIdx = 0;
-  NpCombineControl__ResetScrollView(this, v9);
+  NpCombineControl__ResetScrollView(this, v10);
   currentInfoLb = (UILabel_o *)this->fields.switchButton;
   if ( !currentInfoLb )
     goto LABEL_19;
@@ -1301,7 +1313,7 @@ void NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, const Metho
         !transformBgSprite) )
   {
 LABEL_19:
-    sub_1D0F30C(currentInfoLb, method);
+    sub_21FFECC(currentInfoLb, method);
   }
   UIWidget__set_color(transformBgSprite, DefaultCondTitleSpriteColor, 0);
 }
@@ -1315,36 +1327,38 @@ void NpCombineControl__InitInfo(NpCombineControl_o *this, const MethodInfo *meth
   UnityEngine_Component_o *SelfUserGame; // x0
   __int64 v7; // x1
   int64_t klass; // x8
+  __int64 v9; // x1
   UILabel_o *preSelectBaseLb; // x20
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
   struct MenuListControl_o *menuListCtr; // x8
   struct System_Collections_Generic_List_EventInfoData__o *combineEventList; // x1
-  System_Collections_Generic_List_object__o *v18; // x0
-  _BOOL8 v19; // x0
-  __int64 v20; // x1
-  const MethodInfo *v21; // x3
+  System_Collections_Generic_List_object__o *v19; // x0
+  _BOOL8 v20; // x0
+  __int64 v21; // x1
   const MethodInfo *v22; // x3
-  const MethodInfo *v23; // x1
-  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-38h] BYREF
+  System_String_o *v23; // x2
+  const MethodInfo *v24; // x3
+  const MethodInfo *v25; // x1
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E7B8B9 & 1) == 0 )
+  if ( (byte_593C93B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_8908/*"MSG_PRESELECT_BASE_SVT"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7B8B9 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_9158/*"MSG_PRESELECT_BASE_SVT"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593C93B = 1;
   }
-  memset(&v24, 0, sizeof(v24));
+  memset(&v26, 0, sizeof(v26));
   this->fields.isSelectBase = 0;
   this->fields.baseSvtId = 0;
   NpCombineControl__DestroyGrid(this, method);
@@ -1365,9 +1379,9 @@ void NpCombineControl__InitInfo(NpCombineControl_o *this, const MethodInfo *meth
     goto LABEL_25;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SelfUserGame, 0, 0);
   preSelectBaseLb = this->fields.preSelectBaseLb;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  SelfUserGame = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8908/*"MSG_PRESELECT_BASE_SVT"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9);
+  SelfUserGame = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9158/*"MSG_PRESELECT_BASE_SVT"*/, 0);
   if ( !preSelectBaseLb )
     goto LABEL_25;
   UILabel__set_text(preSelectBaseLb, (System_String_o *)SelfUserGame, 0);
@@ -1387,59 +1401,60 @@ void NpCombineControl__InitInfo(NpCombineControl_o *this, const MethodInfo *meth
     goto LABEL_25;
   combineEventList = menuListCtr->fields.combineEventList;
   this->fields.combineEventList = combineEventList;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.combineEventList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.combineEventList,
     (int32_t)combineEventList,
-    v10,
     v11,
     v12,
     v13,
     v14,
-    v15);
-  v18 = (System_Collections_Generic_List_object__o *)this->fields.combineEventList;
-  if ( v18 && v18->fields._size >= 1 )
+    v15,
+    v16);
+  v19 = (System_Collections_Generic_List_object__o *)this->fields.combineEventList;
+  if ( v19 && v19->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v24,
-      v18,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+      (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+      v19,
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
     while ( 1 )
     {
-      v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v24,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-      if ( !v19 )
+      v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v26,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+      if ( !v20 )
         break;
-      if ( !v24.fields._current )
-        sub_1D0F30C(v19, v20);
-      if ( *(_DWORD *)((char *)&v24.fields._current->klass + (unsigned __int64)&dword_14) == 10 )
+      if ( !v26.fields._current )
+        sub_21FFECC(v20, v21);
+      if ( *(_DWORD *)((char *)&v26.fields._current->klass + (unsigned __int64)&dword_14) == 10 )
       {
         if ( !this->fields.menuListCtr )
-          sub_1D0F30C(v19, v20);
+          sub_21FFECC(v20, v21);
         MenuListControl__setBannerIcon(
-          (MenuListControl_o *)v19,
+          (MenuListControl_o *)v20,
           this->fields.eventNoticeImg,
-          *(EventEntity_o **)((char *)&v24.fields._current->klass + (unsigned __int64)off_50),
-          v21);
+          *(EventEntity_o **)((char *)&v26.fields._current->klass + (unsigned __int64)off_50),
+          v22);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v24,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+      &v26,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   SelfUserGame = (UnityEngine_Component_o *)this->fields.baseLvInfo;
   if ( !SelfUserGame )
 LABEL_25:
-    sub_1D0F30C(SelfUserGame, v7);
+    sub_21FFECC(SelfUserGame, v7);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SelfUserGame, 0, 0);
+  v23 = (System_String_o *)StringLiteral_1/*""*/;
   *(_WORD *)&this->fields.isExceedMaxLv = 0;
   this->fields._isExchangeSvtInList_k__BackingField = 0;
-  NpCombineControl__SetTransformNpMask(this, 0, (System_String_o *)StringLiteral_1/*""*/, v22);
+  NpCombineControl__SetTransformNpMask(this, 0, v23, v24);
   NpCombineControl__SetScrollViewSize(
     this,
     this->fields.DefaultScrollViewWidth,
     this->fields.DefaultScrollViewHeight,
-    v23);
+    v25);
 }
 
 
@@ -1448,20 +1463,22 @@ void NpCombineControl__InitSvtNpCombine(NpCombineControl_o *this, const MethodIn
   __int64 v3; // x1
   UnityEngine_GameObject_o *helpBtn; // x0
   const MethodInfo *v5; // x1
+  __int64 v6; // x1
   UnityEngine_Object_o *charaGraph; // x20
-  GrandQuestFolderBoardItem_o *p_charaGraph; // x19
+  MissionNaviTransitionBoardItem_o *p_charaGraph; // x19
+  __int64 v9; // x1
   UnityEngine_Object_o *gameObject; // x20
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E7B8B8 & 1) == 0 )
+  if ( (byte_593C93A & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8B8 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C93A = 1;
   }
   CombineMenuControl__InitMenuControl((CombineMenuControl_o *)this, 0);
   helpBtn = this->fields.helpBtn;
@@ -1470,24 +1487,105 @@ void NpCombineControl__InitSvtNpCombine(NpCombineControl_o *this, const MethodIn
   UnityEngine_GameObject__SetActive(helpBtn, 1, 0);
   NpCombineControl__InitInfo(this, v5);
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(charaGraph, 0, 0) )
   {
-    p_charaGraph = (GrandQuestFolderBoardItem_o *)&this->fields.charaGraph;
+    p_charaGraph = (MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph;
     helpBtn = (UnityEngine_GameObject_o *)p_charaGraph->klass;
     if ( p_charaGraph->klass )
     {
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)helpBtn, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(gameObject, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+      UnityEngine_Object__Destroy_83246496(gameObject, 0);
       p_charaGraph->klass = 0;
-      sub_1D0F058(p_charaGraph, 0, v9, v10, v11, v12, v13, v14);
+      sub_21FFBF4(p_charaGraph, 0, v11, v12, v13, v14, v15, v16);
       return;
     }
 LABEL_12:
-    sub_1D0F30C(helpBtn, v3);
+    sub_21FFECC(helpBtn, v3);
+  }
+}
+
+
+bool NpCombineControl__IsTransformedNpDispUnavailable(NpCombineControl_o *this, const MethodInfo *method)
+{
+  _BOOL4 IsTransformServant_k__BackingField; // w8
+  struct System_Collections_Generic_List_SvtUseNpData__o *svtNpDataList; // x8
+  void *Master_object; // x0
+  __int64 v6; // x1
+  struct System_Collections_Generic_List_SvtUseNpData__o *v7; // x8
+  TreasureDvcMaster_o *v8; // x20
+  int32_t transformTotal; // w21
+  int32_t size; // w22
+  int32_t v11; // w0
+  int32_t v12; // w21
+  int32_t v13; // w22
+  int32_t v14; // w3
+  TreasureDvcEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+
+  if ( (byte_593C945 & 1) == 0 )
+  {
+    sub_21FFC50(&Method_DataManager_GetMaster_TreasureDvcMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593C945 = 1;
+  }
+  IsTransformServant_k__BackingField = this->fields._IsTransformServant_k__BackingField;
+  entity = 0;
+  if ( !IsTransformServant_k__BackingField )
+    return 0;
+  svtNpDataList = this->fields.svtNpDataList;
+  if ( !svtNpDataList || svtNpDataList->fields._size < 2 )
+    return 0;
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  v7 = this->fields.svtNpDataList;
+  if ( !v7 )
+LABEL_24:
+    sub_21FFECC(Master_object, v6);
+  v8 = (TreasureDvcMaster_o *)Master_object;
+  transformTotal = this->fields.transformTotal;
+  size = v7->fields._size;
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6);
+  v11 = System_Math__Min_76940292(transformTotal, size, 0);
+  if ( v11 < 2 )
+    return 0;
+  v12 = v11;
+  v13 = 1;
+  while ( 1 )
+  {
+    Master_object = this->fields.svtNpDataList;
+    if ( !Master_object )
+      goto LABEL_24;
+    Master_object = System_Collections_Generic_List_object___get_Item(
+                      (System_Collections_Generic_List_object__o *)Master_object,
+                      v13,
+                      (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    if ( Master_object )
+    {
+      v14 = *((_DWORD *)Master_object + 5);
+      if ( v14 >= 1 )
+      {
+        if ( !v8 )
+          goto LABEL_24;
+        if ( TreasureDvcMaster__TryGetEntityCheckServantOverwrite(v8, &entity, *((_DWORD *)Master_object + 4), v14, 0) )
+        {
+          Master_object = entity;
+          if ( !entity )
+            goto LABEL_24;
+          if ( TreasureDvcEntity__IsDispUnavailable(entity, 0) )
+            return 1;
+        }
+      }
+    }
+    if ( v12 == ++v13 )
+      return 0;
   }
 }
 
@@ -1498,19 +1596,19 @@ void NpCombineControl__OnCenterOnChildFinished(NpCombineControl_o *this, const M
   struct UICenterOnChild_o *centerChild; // x8
 
   v2 = this;
-  if ( (byte_4E7B8D3 & 1) == 0 )
+  if ( (byte_593C956 & 1) == 0 )
   {
-    this = (NpCombineControl_o *)sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
-    byte_4E7B8D3 = 1;
+    this = (NpCombineControl_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+    byte_593C956 = 1;
   }
   centerChild = v2->fields.centerChild;
   if ( !centerChild
     || (this = (NpCombineControl_o *)centerChild->fields.mCenteredObject) == 0
     || (this = (NpCombineControl_o *)UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)this,
-                                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___)) == 0 )
+                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___)) == 0 )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v2->fields.currentMoveIdx = (int32_t)this->fields.combineItemInfoList;
 }
@@ -1527,15 +1625,15 @@ void NpCombineControl__OnClickArrow(NpCombineControl_o *this, int32_t delte, con
   int32_t v11; // w20
   UICenterOnChild_o *centerChild; // x19
 
-  if ( (byte_4E7B8D4 & 1) == 0 )
+  if ( (byte_593C957 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_NpCombineControl_OnClickArrow__);
-    byte_4E7B8D4 = 1;
+    sub_21FFC50(&Method_NpCombineControl_OnClickArrow__);
+    byte_593C957 = 1;
   }
   v5 = Method_NpCombineControl_OnClickArrow__;
   if ( (*((_BYTE *)Method_NpCombineControl_OnClickArrow__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1D0F0CC(Method_NpCombineControl_OnClickArrow__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
+    v5 = (_QWORD *)sub_21FFC68(Method_NpCombineControl_OnClickArrow__);
+  v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 7, 0, 0);
   wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
   if ( !wrapContent )
@@ -1560,9 +1658,9 @@ void NpCombineControl__OnClickArrow(NpCombineControl_o *this, int32_t delte, con
         !centerChild) )
   {
 LABEL_15:
-    sub_1D0F30C(wrapContent, v7);
+    sub_21FFECC(wrapContent, v7);
   }
-  UICenterOnChild__CenterOn_50548992(centerChild, (UnityEngine_Transform_o *)wrapContent, 1, 0);
+  UICenterOnChild__CenterOn_56009592(centerChild, (UnityEngine_Transform_o *)wrapContent, 1, 0, 0);
 }
 
 
@@ -1575,47 +1673,49 @@ void NpCombineControl__OnClickExeCombine(NpCombineControl_o *this, const MethodI
   Il2CppObject *MasterData_object; // x0
   __int64 v8; // x1
   Il2CppObject *Entity; // x0
-  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+18h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+30h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4E7B8CB & 1) == 0 )
+  if ( (byte_593C94E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__GetEnumerator__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7B8CB = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__GetEnumerator__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593C94E = 1;
   }
-  memset(&v11, 0, sizeof(v11));
   selectMtUsrSvtIdList = this->fields.selectMtUsrSvtIdList;
+  memset(&v11, 0, sizeof(v11));
   this->fields.isExceeded = 0;
   if ( !selectMtUsrSvtIdList )
     goto LABEL_15;
   System_Collections_Generic_List_long___GetEnumerator(
     &v10,
     selectMtUsrSvtIdList,
-    (const MethodInfo_3944F18 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
+    (const MethodInfo_4438C14 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
   v11 = v10;
+  v10.fields._list = 0;
+  *(_QWORD *)&v10.fields._index = &v11;
   while ( System_Collections_Generic_List_Enumerator_long___MoveNext(
             &v11,
-            (const MethodInfo_36CB448 *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__) )
+            (const MethodInfo_40C441C *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__) )
   {
     current = v11.fields._current;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !MasterData_object )
-      sub_1D0F30C(0, v8);
+      sub_21FFECC(0, v8);
     Entity = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                (int64_t)current,
-               (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+               (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     if ( Entity && UserServantEntity__isExceeded((UserServantEntity_o *)Entity, 0) )
     {
       this->fields.isExceeded = 1;
@@ -1624,11 +1724,11 @@ void NpCombineControl__OnClickExeCombine(NpCombineControl_o *this, const MethodI
   }
   System_Collections_Generic_List_Enumerator_long___Dispose(
     &v11,
-    (const MethodInfo_36CB444 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    (const MethodInfo_40C4418 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
   selectMtUsrSvtIdList = (System_Collections_Generic_List_long__o *)this->fields.exeCombineDlg;
   if ( !selectMtUsrSvtIdList )
 LABEL_15:
-    sub_1D0F30C(selectMtUsrSvtIdList, method);
+    sub_21FFECC(selectMtUsrSvtIdList, method);
   SetRarityDialogControl__SetNpCombineInfo(
     (SetRarityDialogControl_o *)selectMtUsrSvtIdList,
     this->fields.baseUserServantEntity,
@@ -1649,60 +1749,64 @@ void NpCombineControl__OnClickMaterialSelectList(NpCombineControl_o *this, const
   __int64 v5; // x1
   CombineRootComponent_o *combineRootComponent; // x0
 
-  if ( (byte_4E7B8CE & 1) == 0 )
+  if ( (byte_593C951 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_NpCombineControl_OnClickMaterialSelectList__);
-    byte_4E7B8CE = 1;
+    sub_21FFC50(&Method_NpCombineControl_OnClickMaterialSelectList__);
+    byte_593C951 = 1;
   }
   v3 = Method_NpCombineControl_OnClickMaterialSelectList__;
   if ( (*((_BYTE *)Method_NpCombineControl_OnClickMaterialSelectList__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_NpCombineControl_OnClickMaterialSelectList__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    v3 = (_QWORD *)sub_21FFC68(Method_NpCombineControl_OnClickMaterialSelectList__);
+  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   CombineRootComponent__ShowNpMaterialSvtList(combineRootComponent, 0);
 }
 
 
 void NpCombineControl__OnClickSwitchButton(NpCombineControl_o *this, const MethodInfo *method)
 {
+  int32_t baseSvtId; // w8
   UnityEngine_Object_o *targetObject; // x20
   UnityEngine_GameObject_o *Component_object; // x0
-  ServantNpInfoIconComponent_o *v5; // x20
-  UnityEngine_GameObject_o *v6; // x21
+  ServantNpInfoIconComponent_o *v6; // x20
+  UnityEngine_GameObject_o *v7; // x21
   float value; // s0
+  int32_t displayTransformIndex; // w8
+  int32_t transformTotal; // w9
   SvtUseNpData_o *Item; // x21
-  const MethodInfo *v9; // x3
+  const MethodInfo *v12; // x3
   struct UnityEngine_Color_o *p_CondTitleLabelColor_k__BackingField; // x8
   float *p_g; // x9
   float *p_b; // x10
   float *p_a; // x11
   struct UnityEngine_Color_o *p_CondTitleSpriteColor_k__BackingField; // x8
-  float *v15; // x9
-  float *v16; // x10
-  float *v17; // x11
-  _QWORD *v18; // x0
-  System_Reflection_MethodBase_o *v19; // x0
+  float *v18; // x9
+  float *v19; // x10
+  float *v20; // x11
+  _QWORD *v21; // x0
+  System_Reflection_MethodBase_o *v22; // x0
   TransformServantInfo_o *transformInfo; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7B8D5 & 1) == 0 )
+  if ( (byte_593C958 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    sub_1D0F0B4(&Method_NpCombineControl_OnClickSwitchButton__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8D5 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    sub_21FFC50(&Method_NpCombineControl_OnClickSwitchButton__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C958 = 1;
   }
+  baseSvtId = this->fields.baseSvtId;
   transformInfo = 0;
-  if ( this->fields.baseSvtId >= 1 )
+  if ( baseSvtId >= 1 )
   {
     targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     if ( UnityEngine_Object__op_Inequality(targetObject, 0, 0) )
     {
       Component_object = this->fields.targetObject;
@@ -1710,37 +1814,39 @@ void NpCombineControl__OnClickSwitchButton(NpCombineControl_o *this, const Metho
         goto LABEL_31;
       Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        Component_object,
-                                                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+                                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
       if ( !this->fields.svtNpDataList )
         goto LABEL_31;
-      v5 = (ServantNpInfoIconComponent_o *)Component_object;
+      v6 = (ServantNpInfoIconComponent_o *)Component_object;
       Component_object = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                        (System_Collections_Generic_List_object__o *)this->fields.svtNpDataList,
                                                        this->fields.displayTransformIndex,
-                                                       (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-      if ( !v5 )
+                                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+      if ( !v6 )
         goto LABEL_31;
-      v6 = Component_object;
-      Component_object = (UnityEngine_GameObject_o *)ServantNpInfoIconComponent__get_TextScrollBar(v5, 0);
+      v7 = Component_object;
+      Component_object = (UnityEngine_GameObject_o *)ServantNpInfoIconComponent__get_TextScrollBar(v6, 0);
       if ( !Component_object )
         goto LABEL_31;
       value = UIProgressBar__get_value((UIProgressBar_o *)Component_object, 0);
-      if ( !v6 )
+      if ( !v7 )
         goto LABEL_31;
-      *(float *)&v6[3].monitor = value;
+      displayTransformIndex = this->fields.displayTransformIndex;
+      transformTotal = this->fields.transformTotal;
       Component_object = (UnityEngine_GameObject_o *)this->fields.svtNpDataList;
-      method = (const MethodInfo *)(unsigned int)((this->fields.displayTransformIndex + 1) % this->fields.transformTotal);
+      *(float *)&v7[3].monitor = value;
+      method = (const MethodInfo *)(unsigned int)((displayTransformIndex + 1) % transformTotal);
       this->fields.displayTransformIndex = (int)method;
       if ( !Component_object )
         goto LABEL_31;
       Item = (SvtUseNpData_o *)System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)Component_object,
                                  (int32_t)method,
-                                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-      ServantNpInfoIconComponent__SetNpInfo(v5, this->fields.baseUserServantEntity, 0, Item, 1, 0.0, 0.0, 0);
+                                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+      ServantNpInfoIconComponent__SetNpInfo(v6, this->fields.baseUserServantEntity, 0, Item, 1, 0.0, 0.0, 0);
       if ( !Item )
         goto LABEL_31;
-      NpCombineControl__SetTransformNpMask(this, Item->fields.MaskFlag, Item->fields.ClosedMessage, v9);
+      NpCombineControl__SetTransformNpMask(this, Item->fields.MaskFlag, Item->fields.ClosedMessage, v12);
     }
   }
   if ( !this->fields._IsTransformServant_k__BackingField )
@@ -1756,7 +1862,7 @@ void NpCombineControl__OnClickSwitchButton(NpCombineControl_o *this, const Metho
     || (Component_object = (UnityEngine_GameObject_o *)this->fields.transformSvtName) == 0 )
   {
 LABEL_31:
-    sub_1D0F30C(Component_object, method);
+    sub_21FFECC(Component_object, method);
   }
   UILabel__set_text((UILabel_o *)Component_object, transformInfo->fields.titleText, 0);
   if ( this->fields._IsSaveTransformServant_k__BackingField )
@@ -1780,42 +1886,42 @@ LABEL_31:
       if ( !Component_object )
         goto LABEL_31;
     }
-    v21.fields.a = *p_a;
-    v21.fields.b = *p_b;
-    v21.fields.g = *p_g;
-    v21.fields.r = p_CondTitleLabelColor_k__BackingField->fields.r;
-    UIWidget__set_color((UIWidget_o *)Component_object, v21, 0);
+    v24.fields.a = *p_a;
+    v24.fields.b = *p_b;
+    v24.fields.g = *p_g;
+    v24.fields.r = p_CondTitleLabelColor_k__BackingField->fields.r;
+    UIWidget__set_color((UIWidget_o *)Component_object, v24, 0);
     Component_object = (UnityEngine_GameObject_o *)this->fields.transformBgSprite;
     if ( this->fields.displayTransformIndex <= 0 )
     {
       p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColor_k__BackingField;
-      v15 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
-      v16 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
-      v17 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+      v18 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
+      v19 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+      v20 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
       if ( !Component_object )
         goto LABEL_31;
     }
     else
     {
       p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColorAfter_k__BackingField;
-      v15 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
-      v16 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
-      v17 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
+      v18 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
+      v19 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
+      v20 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
       if ( !Component_object )
         goto LABEL_31;
     }
-    v22.fields.a = *v17;
-    v22.fields.b = *v16;
-    v22.fields.g = *v15;
-    v22.fields.r = p_CondTitleSpriteColor_k__BackingField->fields.r;
-    UIWidget__set_color((UIWidget_o *)Component_object, v22, 0);
+    v25.fields.a = *v20;
+    v25.fields.b = *v19;
+    v25.fields.g = *v18;
+    v25.fields.r = p_CondTitleSpriteColor_k__BackingField->fields.r;
+    UIWidget__set_color((UIWidget_o *)Component_object, v25, 0);
   }
 LABEL_27:
-  v18 = Method_NpCombineControl_OnClickSwitchButton__;
+  v21 = Method_NpCombineControl_OnClickSwitchButton__;
   if ( (*((_BYTE *)Method_NpCombineControl_OnClickSwitchButton__ + 83) & 2) != 0 )
-    v18 = (_QWORD *)sub_1D0F0CC(Method_NpCombineControl_OnClickSwitchButton__);
-  v19 = (System_Reflection_MethodBase_o *)sub_1D0F098(v18, v18[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0);
+    v21 = (_QWORD *)sub_21FFC68(Method_NpCombineControl_OnClickSwitchButton__);
+  v22 = (System_Reflection_MethodBase_o *)sub_21FFC34(v21, v21[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v22, 0, 0, 0);
 }
 
 
@@ -1824,50 +1930,53 @@ void NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineControl_o *thi
   __int64 v3; // x1
   UnityEngine_GameObject_o *helpBtn; // x0
   const MethodInfo *v5; // x1
+  __int64 v6; // x1
   UILabel_o *needQpLb; // x20
-  const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x1
+  const MethodInfo *v9; // x1
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x1
   int64_t klass; // x8
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
   struct MenuListControl_o *menuListCtr; // x8
   struct System_Collections_Generic_List_EventInfoData__o *combineEventList; // x1
-  System_Collections_Generic_List_object__o *v20; // x0
-  _BOOL8 v21; // x0
-  __int64 v22; // x1
-  const MethodInfo *v23; // x3
+  System_Collections_Generic_List_object__o *v21; // x0
+  _BOOL8 v22; // x0
+  __int64 v23; // x1
+  const MethodInfo *v24; // x3
+  __int64 v25; // x1
   UnityEngine_Object_o *charaGraph; // x20
-  GrandQuestFolderBoardItem_o *p_charaGraph; // x19
+  MissionNaviTransitionBoardItem_o *p_charaGraph; // x19
+  __int64 v28; // x1
   UnityEngine_Object_o *gameObject; // x20
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
-  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-58h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-40h] BYREF
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4E7B8BA & 1) == 0 )
+  if ( (byte_593C93C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_860/*"-"*/);
-    sub_1D0F0B4(&StringLiteral_9351/*"NEED_QP_INFO"*/);
-    byte_4E7B8BA = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_923/*"-"*/);
+    sub_21FFC50(&StringLiteral_9610/*"NEED_QP_INFO"*/);
+    byte_593C93C = 1;
   }
-  memset(&v34, 0, sizeof(v34));
+  memset(&v37, 0, sizeof(v37));
   EventTutorialMaster__CheckTutorial(0, 39, 0, 0, 0, 0, 0, 0);
   helpBtn = this->fields.helpBtn;
   if ( !helpBtn )
@@ -1879,24 +1988,24 @@ void NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineControl_o *thi
   helpBtn = (UnityEngine_GameObject_o *)this->fields.currentInfoLb;
   if ( !helpBtn )
     goto LABEL_35;
-  UILabel__set_text((UILabel_o *)helpBtn, (System_String_o *)StringLiteral_860/*"-"*/, 0);
+  UILabel__set_text((UILabel_o *)helpBtn, (System_String_o *)StringLiteral_923/*"-"*/, 0);
   helpBtn = (UnityEngine_GameObject_o *)this->fields.afterInfoLb;
   if ( !helpBtn )
     goto LABEL_35;
-  UILabel__set_text((UILabel_o *)helpBtn, (System_String_o *)StringLiteral_860/*"-"*/, 0);
+  UILabel__set_text((UILabel_o *)helpBtn, (System_String_o *)StringLiteral_923/*"-"*/, 0);
   helpBtn = this->fields.maxLvStatusInfo;
   if ( !helpBtn )
     goto LABEL_35;
   UnityEngine_GameObject__SetActive(helpBtn, 0, 0);
   needQpLb = this->fields.needQpLb;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9351/*"NEED_QP_INFO"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
+  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9610/*"NEED_QP_INFO"*/, 0);
   if ( !needQpLb )
     goto LABEL_35;
   UILabel__set_text(needQpLb, (System_String_o *)helpBtn, 0);
-  NpCombineControl__SetHaveQpInfo(this, v7);
-  NpCombineControl__SetSelectMaterialEnable(this, v8);
+  NpCombineControl__SetHaveQpInfo(this, v8);
+  NpCombineControl__SetSelectMaterialEnable(this, v9);
   helpBtn = this->fields.defaultNpInfo;
   if ( !helpBtn )
     goto LABEL_35;
@@ -1905,8 +2014,8 @@ void NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineControl_o *thi
   if ( !helpBtn )
     goto LABEL_35;
   UnityEngine_GameObject__SetActive(helpBtn, 0, 0);
-  NpCombineControl__SetEnabledNpInfoScroll(this, 0, v9);
-  NpCombineControl__ResetScrollView(this, v10);
+  NpCombineControl__SetEnabledNpInfoScroll(this, 0, v10);
+  NpCombineControl__ResetScrollView(this, v11);
   helpBtn = (UnityEngine_GameObject_o *)UserGameMaster__getSelfUserGame(0);
   if ( !helpBtn )
     goto LABEL_35;
@@ -1928,70 +2037,72 @@ void NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineControl_o *thi
     goto LABEL_35;
   combineEventList = menuListCtr->fields.combineEventList;
   this->fields.combineEventList = combineEventList;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.combineEventList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.combineEventList,
     (int32_t)combineEventList,
-    v12,
     v13,
     v14,
     v15,
     v16,
-    v17);
-  v20 = (System_Collections_Generic_List_object__o *)this->fields.combineEventList;
-  if ( v20 && v20->fields._size >= 1 )
+    v17,
+    v18);
+  v21 = (System_Collections_Generic_List_object__o *)this->fields.combineEventList;
+  if ( v21 && v21->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v33,
-      v20,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    v34 = v33;
+      (System_Collections_Generic_List_Enumerator_T__o *)&v36,
+      v21,
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+    v37 = v36;
+    v36.fields._list = 0;
+    *(_QWORD *)&v36.fields._index = &v37;
     while ( 1 )
     {
-      v21 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v34,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-      if ( !v21 )
+      v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v37,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+      if ( !v22 )
         break;
-      if ( !v34.fields._current )
-        sub_1D0F30C(v21, v22);
-      if ( HIDWORD(v34.fields._current[1].klass) == 10 )
+      if ( !v37.fields._current )
+        sub_21FFECC(v22, v23);
+      if ( HIDWORD(v37.fields._current[1].klass) == 10 )
       {
         if ( !this->fields.menuListCtr )
-          sub_1D0F30C(v21, v22);
+          sub_21FFECC(v22, v23);
         MenuListControl__setBannerIcon(
-          (MenuListControl_o *)v21,
+          (MenuListControl_o *)v22,
           this->fields.eventNoticeImg,
-          (EventEntity_o *)v34.fields._current[5].klass,
-          v23);
+          (EventEntity_o *)v37.fields._current[5].klass,
+          v24);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v34,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+      &v37,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   helpBtn = this->fields.baseLvInfo;
   if ( !helpBtn )
     goto LABEL_35;
   UnityEngine_GameObject__SetActive(helpBtn, 0, 0);
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
   if ( UnityEngine_Object__op_Inequality(charaGraph, 0, 0) )
   {
-    p_charaGraph = (GrandQuestFolderBoardItem_o *)&this->fields.charaGraph;
+    p_charaGraph = (MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph;
     helpBtn = (UnityEngine_GameObject_o *)p_charaGraph->klass;
     if ( p_charaGraph->klass )
     {
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)helpBtn, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(gameObject, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
+      UnityEngine_Object__Destroy_83246496(gameObject, 0);
       p_charaGraph->klass = 0;
-      sub_1D0F058(p_charaGraph, 0, v27, v28, v29, v30, v31, v32);
+      sub_21FFBF4(p_charaGraph, 0, v30, v31, v32, v33, v34, v35);
       return;
     }
 LABEL_35:
-    sub_1D0F30C(helpBtn, v3);
+    sub_21FFECC(helpBtn, v3);
   }
 }
 
@@ -2003,10 +2114,10 @@ void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInf
   UnityEngine_Vector2_o v5; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E7B8D2 & 1) == 0 )
+  if ( (byte_593C955 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4E7B8D2 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_593C955 = 1;
   }
   scrollView = (__int64)this->fields.scrollView;
   if ( !scrollView )
@@ -2025,10 +2136,10 @@ void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInf
     goto LABEL_15;
   scrollView = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0);
   v4 = (UnityEngine_Transform_o *)scrollView;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    scrollView = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    scrollView = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   if ( !v4 )
     goto LABEL_15;
@@ -2038,11 +2149,11 @@ void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInf
     goto LABEL_15;
   scrollView = (__int64)UnityEngine_Component__GetComponent_object_(
                           (UnityEngine_Component_o *)scrollView,
-                          (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !scrollView )
     goto LABEL_15;
-  v5.fields.y = *(float *)(scrollView + 336);
   v5.fields.x = 0.0;
+  v5.fields.y = *(float *)(scrollView + 336);
   UIPanel__set_clipOffset((UIPanel_o *)scrollView, v5, 0);
   scrollView = (__int64)this->fields.scrollView;
   if ( !scrollView
@@ -2053,7 +2164,7 @@ void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInf
         (scrollView = (__int64)this->fields.scrollView) == 0) )
   {
 LABEL_15:
-    sub_1D0F30C(scrollView, method);
+    sub_21FFECC(scrollView, method);
   }
   UIScrollView__DisableSpring((UIScrollView_o *)scrollView, 0);
 }
@@ -2064,23 +2175,21 @@ void NpCombineControl__SetBaseSvtCardImg(
         UserServantEntity_o *usrSvtData,
         const MethodInfo *method)
 {
-  struct UICharaGraphTexture_o **p_charaGraph; // x20
-  struct UICharaGraphTexture_o *v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  struct UICharaGraphTexture_o *v4; // x1
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  p_charaGraph = &this->fields.charaGraph;
-  v5 = (struct UICharaGraphTexture_o *)((__int64 (__fastcall *)(NpCombineControl_o *, struct UICharaGraphTexture_o *, UserServantEntity_o *, const MethodInfo *))this->klass->vtable._7_SetCharaGraph.methodPtr)(
+  v4 = (struct UICharaGraphTexture_o *)((__int64 (__fastcall *)(NpCombineControl_o *, struct UICharaGraphTexture_o *, UserServantEntity_o *, const MethodInfo *))this->klass->vtable._7_SetCharaGraph.methodPtr)(
                                          this,
                                          this->fields.charaGraph,
                                          usrSvtData,
                                          this->klass->vtable._7_SetCharaGraph.method);
-  this->fields.charaGraph = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_charaGraph, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  this->fields.charaGraph = v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -2093,81 +2202,85 @@ void NpCombineControl__SetBaseSvtNpInfo(
   __int64 v6; // x22
   int32_t v7; // w0
   struct UserServantEntity_o **p_baseUserServantEntity; // x21
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  UIIconLabel_o *iconLabel; // x22
-  int32_t lv; // w23
+  bool v13; // w6
+  bool v14; // w7
+  UIIconLabel_o *iconLabel; // x23
+  int32_t lv; // w22
   UnityEngine_GameObject_o *LevelMax; // x0
   __int64 v18; // x1
   const MethodInfo *v19; // x2
   struct System_Collections_Generic_List_SvtUseNpData__o *SvtNpData; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   struct System_String_array **p_assetList; // x22
-  System_String_array *v28; // x23
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
-  struct System_String_array *v35; // x0
-  int32_t v36; // w2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  int32_t v39; // w5
-  int64_t v40; // x6
-  System_String_o *v41; // x7
-  struct System_String_array *assetList; // x22
+  __int64 v28; // x1
+  System_String_array *v29; // x23
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  struct System_String_array *v36; // x0
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
   unsigned __int64 v43; // x23
-  __int64 v44; // x29
-  int32_t TransformedServantId; // w0
-  __int64 v46; // x25
-  __int64 v47; // x26
-  int32_t v48; // w24
-  int32_t v49; // w25
-  int32_t v50; // w2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
-  int32_t v53; // w5
-  int64_t v54; // x6
-  System_String_o *v55; // x7
-  System_Action_o *v56; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v58; // 0:x0.16
+  __int64 v44; // x28
+  struct System_String_array *v45; // x27
+  __int64 v46; // x1
+  int32_t TransformedServantId; // w24
+  __int64 v48; // x25
+  __int64 v49; // x26
+  __int64 v50; // x1
+  int32_t v51; // w25
+  System_String_o *v52; // x2
+  System_String_o *v53; // x3
+  int32_t v54; // w4
+  int32_t v55; // w5
+  bool v56; // w6
+  bool v57; // w7
+  System_String_array *assetList; // x20
+  System_Action_o *v59; // x21
+  __int64 v60; // x1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v61; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v62; // 0:x0.16
 
-  if ( (byte_4E7B8BD & 1) == 0 )
+  if ( (byte_593C93F & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&Method_NpCombineControl_SetCombineNpList__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&ServantAssetLoadManager_TypeInfo);
-    sub_1D0F0B4(&string___TypeInfo);
-    byte_4E7B8BD = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&Method_NpCombineControl_SetCombineNpList__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
+    sub_21FFC50(&string___TypeInfo);
+    byte_593C93F = 1;
   }
   if ( usrSvtEn )
   {
-    v6 = *(_QWORD *)&usrSvtEn->fields.svtId.fields.currentCryptoKey;
-    v5 = *(_QWORD *)&usrSvtEn->fields.svtId.fields.fakeValue;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v57.fields.currentCryptoKey = v6;
-    *(_QWORD *)&v57.fields.fakeValue = v5;
-    v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v57, 0);
+    v5 = *(_QWORD *)&usrSvtEn->fields.svtId.fields.currentCryptoKey;
+    v6 = *(_QWORD *)&usrSvtEn->fields.svtId.fields.fakeValue;
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, usrSvtEn);
+    *(_QWORD *)&v61.fields.currentCryptoKey = v5;
+    *(_QWORD *)&v61.fields.fakeValue = v6;
+    v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v61, 0);
     this->fields.baseUserServantEntity = usrSvtEn;
     p_baseUserServantEntity = &this->fields.baseUserServantEntity;
     this->fields.baseSvtId = v7;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.baseUserServantEntity,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.baseUserServantEntity,
       (int32_t)usrSvtEn,
       v9,
       v10,
@@ -2180,15 +2293,15 @@ void NpCombineControl__SetBaseSvtNpInfo(
     LevelMax = (UnityEngine_GameObject_o *)UserServantEntity__getLevelMax(usrSvtEn, 0);
     if ( !iconLabel )
       goto LABEL_26;
-    UIIconLabel__Set_42477084(iconLabel, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0, 0);
+    UIIconLabel__Set_48040364(iconLabel, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0, 0);
     LevelMax = this->fields.baseLvInfo;
     if ( !LevelMax )
       goto LABEL_26;
     UnityEngine_GameObject__SetActive(LevelMax, 1, 0);
     SvtNpData = NpCombineControl__GetSvtNpData(this, usrSvtEn, v19);
     this->fields.svtNpDataList = SvtNpData;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.svtNpDataList,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.svtNpDataList,
       (int32_t)SvtNpData,
       v21,
       v22,
@@ -2199,17 +2312,16 @@ void NpCombineControl__SetBaseSvtNpInfo(
     p_assetList = &this->fields.assetList;
     if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.assetList, 0) )
     {
-      v28 = *p_assetList;
-      if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAssetStorage_41903356(v28, 0);
+      v29 = *p_assetList;
+      if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v28);
+      AssetManager__releaseAssetStorage_47474708(v29, 0);
       *p_assetList = 0;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetList, 0, v29, v30, v31, v32, v33, v34);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetList, 0, v30, v31, v32, v33, v34, v35);
     }
-    v35 = (struct System_String_array *)sub_1D0F15C(string___TypeInfo, (unsigned int)this->fields.transformTotal);
-    this->fields.assetList = v35;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetList, (int32_t)v35, v36, v37, v38, v39, v40, v41);
-    assetList = this->fields.assetList;
+    v36 = (struct System_String_array *)sub_21FFD10(string___TypeInfo, (unsigned int)this->fields.transformTotal);
+    this->fields.assetList = v36;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetList, (int32_t)v36, v37, v38, v39, v40, v41, v42);
     if ( this->fields.transformTotal >= 1 )
     {
       v43 = 0;
@@ -2219,47 +2331,50 @@ void NpCombineControl__SetBaseSvtNpInfo(
         LevelMax = (UnityEngine_GameObject_o *)*p_baseUserServantEntity;
         if ( !*p_baseUserServantEntity )
           break;
+        v45 = *p_assetList;
         TransformedServantId = UserServantEntity__GetTransformedServantId((UserServantEntity_o *)LevelMax, v43, 0);
-        v47 = *(_QWORD *)&usrSvtEn->fields.limitCount.fields.currentCryptoKey;
-        v46 = *(_QWORD *)&usrSvtEn->fields.limitCount.fields.fakeValue;
-        v48 = TransformedServantId;
-        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v58.fields.currentCryptoKey = v47;
-        *(_QWORD *)&v58.fields.fakeValue = v46;
-        v49 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v58, 0);
-        if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-        LevelMax = (UnityEngine_GameObject_o *)ServantAssetLoadManager__getCommandCardLoadFolderName(v48, v49, 0);
-        if ( !assetList )
+        v48 = *(_QWORD *)&usrSvtEn->fields.limitCount.fields.currentCryptoKey;
+        v49 = *(_QWORD *)&usrSvtEn->fields.limitCount.fields.fakeValue;
+        if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v46);
+        *(_QWORD *)&v62.fields.currentCryptoKey = v48;
+        *(_QWORD *)&v62.fields.fakeValue = v49;
+        v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v62, 0);
+        if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v50);
+        LevelMax = (UnityEngine_GameObject_o *)ServantAssetLoadManager__getCommandCardLoadFolderName(
+                                                 TransformedServantId,
+                                                 v51,
+                                                 0);
+        if ( !v45 )
           break;
-        if ( v43 >= LODWORD(assetList->max_length) )
-          sub_1D0F314(LevelMax);
-        *(Il2CppClass **)((char *)&assetList->obj.klass + v44) = (Il2CppClass *)LevelMax;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)((char *)assetList + v44),
+        if ( v43 >= LODWORD(v45->max_length) )
+          sub_21FFED4(LevelMax);
+        *(Il2CppClass **)((char *)&v45->obj.klass + v44) = (Il2CppClass *)LevelMax;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)((char *)v45 + v44),
           (int32_t)LevelMax,
-          v50,
-          v51,
           v52,
           v53,
           v54,
-          v55);
-        assetList = this->fields.assetList;
+          v55,
+          v56,
+          v57);
         ++v43;
         v44 += 8;
         if ( (__int64)v43 >= this->fields.transformTotal )
           goto LABEL_22;
       }
 LABEL_26:
-      sub_1D0F30C(LevelMax, v18);
+      sub_21FFECC(LevelMax, v18);
     }
 LABEL_22:
-    v56 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(v56, (Il2CppObject *)this, Method_NpCombineControl_SetCombineNpList__, 0);
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage_41901004(assetList, v56, 1, 0);
+    assetList = this->fields.assetList;
+    v59 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(v59, (Il2CppObject *)this, Method_NpCombineControl_SetCombineNpList__, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v60);
+    AssetManager__loadAssetStorage_47472372(assetList, v59, 1, 0);
   }
 }
 
@@ -2267,443 +2382,632 @@ LABEL_22:
 void NpCombineControl__SetCombineNpList(NpCombineControl_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_List_SvtUseNpData__o *svtNpDataList; // x0
+  __int64 v4; // x1
   UnityEngine_Object_o *centerChild; // x20
   const MethodInfo *currentMoveIdx; // x1
-  UnityEngine_Component_o *wrapContent; // x0
-  Il2CppObject *v7; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  const MethodInfo *v14; // x2
-  UnityEngine_GameObject_o *v15; // x20
-  UnityEngine_Transform_o *v16; // x0
-  struct UnityEngine_GameObject_o *v17; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  SvtUseNpData_o *v24; // x20
-  UnityEngine_Component_o *v25; // x21
-  UnityEngine_GameObject_o *v26; // x0
-  UnityEngine_GameObject_o *v27; // x0
-  const MethodInfo *v28; // x1
-  const MethodInfo *v29; // x1
+  __int64 wrapContent; // x0
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  const MethodInfo *v15; // x1
+  bool IsTransformedNpDispUnavailable; // w21
+  const MethodInfo *v17; // x2
+  UnityEngine_GameObject_o *v18; // x20
+  UnityEngine_Transform_o *v19; // x0
+  struct UnityEngine_GameObject_o *v20; // x0
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  SvtUseNpData_o *v27; // x20
+  UnityEngine_Component_o *v28; // x21
+  UnityEngine_GameObject_o *v29; // x0
+  UnityEngine_GameObject_o *v30; // x0
+  const MethodInfo *v31; // x1
+  const MethodInfo *v32; // x1
   struct UnityEngine_Color_o *p_CondTitleLabelColor_k__BackingField; // x8
   float *p_g; // x9
   float *p_b; // x10
   float *p_a; // x11
-  struct System_Collections_Generic_List_SvtUseNpData__o *v34; // x8
-  int size; // w25
-  bool isScrollNpInfo; // w1
-  int v37; // w26
-  float *v38; // x11
-  struct UnityEngine_Color_o *p_CondTitleSpriteColor_k__BackingField; // x8
-  float *v40; // x10
-  float *v41; // x9
-  struct UICenterOnChild_o *v42; // x20
-  SpringPanel_OnFinished_o *v43; // x21
-  int32_t v44; // w2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  int32_t v47; // w5
-  int64_t v48; // x6
-  System_String_o *v49; // x7
-  System_Collections_Generic_Dictionary_int__object__o *v50; // x20
-  bool v51; // w29
+  struct System_Collections_Generic_List_SvtUseNpData__o *v37; // x8
+  _BOOL4 isScrollNpInfo; // w8
+  int v39; // w9
+  struct UICenterOnChild_o *v40; // x20
+  SpringPanel_OnFinished_o *v41; // x22
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  struct System_Collections_Generic_List_SvtUseNpData__o *v48; // x20
+  int size; // w8
+  int v50; // w21
+  int32_t displayTransformIndex; // w22
+  int v52; // w10
+  int32_t v53; // w1
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
+  Il2CppObject *v60; // x21
+  __int64 v61; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v62; // x21
+  bool v63; // w27
   int i; // w28
-  _BOOL8 v53; // x0
-  __int64 v54; // x1
-  SvtUseNpData_o *current; // x21
-  UnityEngine_Component_o *v56; // x0
-  UnityEngine_GameObject_o *npCombineInfoPrefab; // x22
-  UnityEngine_Transform_o *transform; // x2
-  UnityEngine_Object_o *Object; // x22
-  System_String_o *v60; // x0
-  Il2CppObject *Component_object; // x0
-  __int64 v62; // x1
-  ServantNpInfoIconComponent_o *v63; // x22
-  __int64 v64; // x0
-  __int64 v65; // x1
-  int v66; // w8
-  Il2CppObject *Item; // x21
-  UIScrollView_o *TextScrollView; // x23
-  UIScrollBar_o *TextScrollBar; // x0
+  System_Collections_Generic_List_SvtUseNpData__c *klass; // x8
+  __int64 v66; // x9
+  int32_t *p_offset; // x10
+  __int64 v68; // x0
+  __int64 v69; // x0
   __int64 v70; // x1
+  __int64 v71; // x8
+  __int64 v72; // x9
+  int *v73; // x10
+  __int64 v74; // x0
+  __int64 v75; // x8
+  __int64 v76; // x9
+  int *v77; // x10
+  __int64 v78; // x0
+  SvtUseNpData_o *v79; // x22
+  UnityEngine_Component_o *v80; // x0
+  UnityEngine_GameObject_o *npCombineInfoPrefab; // x23
+  UnityEngine_Transform_o *transform; // x0
+  UnityEngine_Object_o *Object; // x23
+  System_String_o *v84; // x0
+  Il2CppObject *Component_object; // x0
+  __int64 v86; // x1
+  ServantNpInfoIconComponent_o *v87; // x23
+  int v88; // w8
+  Il2CppObject *Item; // x22
+  UIScrollView_o *TextScrollView; // x24
+  UIScrollBar_o *TextScrollBar; // x0
+  __int64 v92; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  Il2CppObject *v72; // x23
-  UIScrollView_o *v73; // x24
-  UIScrollBar_o *v74; // x0
-  __int64 v75; // x1
-  __int64 v76; // x0
-  __int64 v77; // x1
-  const MethodInfo *v78; // x1
-  const MethodInfo *v79; // x3
-  System_Collections_Generic_List_Enumerator_object__o v80; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v81; // [xsp+20h] [xbp-90h] BYREF
-  TransformServantInfo_o *transformInfo; // [xsp+40h] [xbp-70h] BYREF
-  int32_t idx; // [xsp+4Ch] [xbp-64h] BYREF
-  UnityEngine_Color_o v84; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v85; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  Il2CppObject *v94; // x24
+  UIScrollView_o *v95; // x25
+  UIScrollBar_o *v96; // x0
+  __int64 v97; // x1
+  __int64 v98; // x0
+  __int64 v99; // x1
+  __int64 v100; // x8
+  __int64 v101; // x9
+  int *v102; // x10
+  __int64 v103; // x0
+  const MethodInfo *v104; // x1
+  float *v105; // x11
+  struct UnityEngine_Color_o *p_CondTitleSpriteColor_k__BackingField; // x8
+  float *v107; // x10
+  float *v108; // x9
+  const MethodInfo *v109; // x3
+  __int64 v110; // x0
+  bool v111; // [xsp+0h] [xbp-90h]
+  int v112; // [xsp+4h] [xbp-8Ch]
+  __int64 v113; // [xsp+18h] [xbp-78h]
+  TransformServantInfo_o *transformInfo; // [xsp+20h] [xbp-70h] BYREF
+  int32_t idx; // [xsp+2Ch] [xbp-64h] BYREF
+  UnityEngine_Color_o v116; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v117; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7B8C2 & 1) == 0 )
+  if ( (byte_593C944 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__set_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_int__SyncScrollComponent__TypeInfo);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Any_SvtUseNpData___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SvtUseNpData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SvtUseNpData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SvtUseNpData__get_Current__);
-    sub_1D0F0B4(&Method_GameObjectExtensions_SafeGetComponent_SyncScrollComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    sub_1D0F0B4(&Method_NpCombineControl_OnCenterOnChildFinished__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&SpringPanel_OnFinished_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5001/*"D3"*/);
-    byte_4E7B8C2 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__set_Item__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_int__SyncScrollComponent__TypeInfo);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Any_SvtUseNpData___);
+    sub_21FFC50(&Method_GameObjectExtensions_SafeGetComponent_SyncScrollComponent___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_SvtUseNpData__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_SvtUseNpData__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    sub_21FFC50(&Method_NpCombineControl_OnCenterOnChildFinished__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&SpringPanel_OnFinished_TypeInfo);
+    sub_21FFC50(&SvtUseNpData___TypeInfo);
+    sub_21FFC50(&StringLiteral_5130/*"D3"*/);
+    byte_593C944 = 1;
   }
+  svtNpDataList = this->fields.svtNpDataList;
   idx = 0;
   transformInfo = 0;
-  memset(&v81, 0, sizeof(v81));
-  svtNpDataList = this->fields.svtNpDataList;
-  if ( !svtNpDataList
-    || !System_Linq_Enumerable__Any_object_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)svtNpDataList,
-          (const MethodInfo_325D0AC *)Method_System_Linq_Enumerable_Any_SvtUseNpData___) )
+  if ( svtNpDataList
+    && System_Linq_Enumerable__Any_object_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)svtNpDataList,
+         (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_SvtUseNpData___) )
   {
-    return;
-  }
-  centerChild = (UnityEngine_Object_o *)this->fields.centerChild;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(centerChild, 0, 0) )
-  {
-    wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
-    if ( !wrapContent )
-      goto LABEL_83;
-    wrapContent = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(wrapContent, 0);
-    if ( !wrapContent )
-      goto LABEL_83;
-    v7 = UnityEngine_GameObject__AddComponent_object_(
-           (UnityEngine_GameObject_o *)wrapContent,
-           (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
-    this->fields.centerChild = (struct UICenterOnChild_o *)v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.centerChild, (int32_t)v7, v8, v9, v10, v11, v12, v13);
-  }
-  wrapContent = (UnityEngine_Component_o *)this->fields.defaultNpInfo;
-  if ( !wrapContent )
-    goto LABEL_83;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 0, 0);
-  wrapContent = (UnityEngine_Component_o *)this->fields.switchButton;
-  if ( !wrapContent )
-    goto LABEL_83;
-  UnityEngine_GameObject__SetActive(
-    (UnityEngine_GameObject_o *)wrapContent,
-    this->fields._IsTransformServant_k__BackingField,
-    0);
-  wrapContent = (UnityEngine_Component_o *)this->fields.transformSvtName;
-  if ( !wrapContent )
-    goto LABEL_83;
-  wrapContent = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(wrapContent, 0);
-  if ( !wrapContent )
-    goto LABEL_83;
-  UnityEngine_GameObject__SetActive(
-    (UnityEngine_GameObject_o *)wrapContent,
-    this->fields._IsTransformServant_k__BackingField,
-    0);
-  if ( !this->fields._IsTransformServant_k__BackingField )
-  {
-    v34 = this->fields.svtNpDataList;
-    if ( !v34 )
-      goto LABEL_83;
-    size = v34->fields._size;
-    if ( size >= 2 )
+    centerChild = (UnityEngine_Object_o *)this->fields.centerChild;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
+    if ( UnityEngine_Object__op_Equality(centerChild, 0, 0) )
     {
-      wrapContent = (UnityEngine_Component_o *)this->fields.arrowInfo;
-      this->fields.isScrollNpInfo = 1;
+      wrapContent = (__int64)this->fields.wrapContent;
       if ( !wrapContent )
-        goto LABEL_83;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 1, 0);
-      v42 = this->fields.centerChild;
-      v43 = (SpringPanel_OnFinished_o *)sub_1D0F300(SpringPanel_OnFinished_TypeInfo);
-      SpringPanel_OnFinished___ctor(v43, (Il2CppObject *)this, Method_NpCombineControl_OnCenterOnChildFinished__, 0);
-      if ( !v42 )
-        goto LABEL_83;
-      v42->fields.onFinished = v43;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v42->fields.onFinished, (int32_t)v43, v44, v45, v46, v47, v48, v49);
-      v37 = 2;
-      isScrollNpInfo = this->fields.isScrollNpInfo;
-    }
-    else
-    {
-      isScrollNpInfo = 0;
-      v37 = 1;
-      this->fields.isScrollNpInfo = 0;
-    }
-    NpCombineControl__SetEnabledNpInfoScroll(this, isScrollNpInfo, v14);
-    idx = 0;
-    v50 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_int__SyncScrollComponent__TypeInfo);
-    System_Collections_Generic_Dictionary_int__object____ctor(
-      v50,
-      (const MethodInfo_35A7834 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent___ctor__);
-    v51 = 0;
-    for ( i = 0; i != v37; ++i )
-    {
-      wrapContent = (UnityEngine_Component_o *)this->fields.svtNpDataList;
+        goto LABEL_129;
+      wrapContent = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)wrapContent, 0);
       if ( !wrapContent )
-        goto LABEL_83;
-      System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v80,
-        (System_Collections_Generic_List_object__o *)wrapContent,
-        (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_SvtUseNpData__GetEnumerator__);
-      v81 = v80;
-      while ( 1 )
+        goto LABEL_129;
+      v8 = UnityEngine_GameObject__AddComponent_object_(
+             (UnityEngine_GameObject_o *)wrapContent,
+             (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
+      this->fields.centerChild = (struct UICenterOnChild_o *)v8;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.centerChild,
+        (int32_t)v8,
+        v9,
+        v10,
+        v11,
+        v12,
+        v13,
+        v14);
+    }
+    wrapContent = (__int64)this->fields.defaultNpInfo;
+    if ( !wrapContent )
+      goto LABEL_129;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 0, 0);
+    IsTransformedNpDispUnavailable = NpCombineControl__IsTransformedNpDispUnavailable(this, v15);
+    wrapContent = (__int64)this->fields.switchButton;
+    if ( IsTransformedNpDispUnavailable )
+    {
+      if ( !wrapContent )
+        goto LABEL_129;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 0, 0);
+      wrapContent = (__int64)this->fields.transformSvtName;
+      if ( !wrapContent )
+        goto LABEL_129;
+      wrapContent = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)wrapContent, 0);
+      if ( !wrapContent )
+        goto LABEL_129;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 0, 0);
+LABEL_31:
+      v37 = this->fields.svtNpDataList;
+      if ( !v37 )
+        goto LABEL_129;
+      v111 = IsTransformedNpDispUnavailable || v37->fields._size < 2;
+      if ( IsTransformedNpDispUnavailable || v37->fields._size < 2 )
       {
-        v53 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v81,
-                (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_SvtUseNpData__MoveNext__);
-        if ( !v53 )
-          break;
-        current = (SvtUseNpData_o *)v81.fields._current;
-        if ( !v81.fields._current )
-          sub_1D0F30C(v53, v54);
-        if ( ((__int64)v81.fields._current[1].monitor & 0x80000000) == 0 )
+        isScrollNpInfo = 0;
+        v39 = 1;
+        this->fields.isScrollNpInfo = 0;
+      }
+      else
+      {
+        wrapContent = (__int64)this->fields.arrowInfo;
+        this->fields.isScrollNpInfo = 1;
+        if ( !wrapContent )
+          goto LABEL_129;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)wrapContent, 1, 0);
+        v40 = this->fields.centerChild;
+        v41 = (SpringPanel_OnFinished_o *)sub_21FFEBC(SpringPanel_OnFinished_TypeInfo);
+        SpringPanel_OnFinished___ctor(v41, (Il2CppObject *)this, Method_NpCombineControl_OnCenterOnChildFinished__, 0);
+        if ( !v40 )
+          goto LABEL_129;
+        v40->fields.onFinished = v41;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v40->fields.onFinished,
+          (int32_t)v41,
+          v42,
+          v43,
+          v44,
+          v45,
+          v46,
+          v47);
+        isScrollNpInfo = this->fields.isScrollNpInfo;
+        v39 = 2;
+      }
+      v112 = v39;
+      NpCombineControl__SetEnabledNpInfoScroll(this, isScrollNpInfo, v17);
+      v48 = this->fields.svtNpDataList;
+      idx = 0;
+      if ( IsTransformedNpDispUnavailable )
+      {
+        if ( !v48 )
+          goto LABEL_129;
+        size = v48->fields._size;
+        v50 = size - 1;
+        if ( size >= 1 )
         {
-          v56 = (UnityEngine_Component_o *)this->fields.wrapContent;
-          if ( !v56 )
-            sub_1D0F30C(0, v54);
-          npCombineInfoPrefab = this->fields.npCombineInfoPrefab;
-          transform = UnityEngine_Component__get_transform(v56, 0);
-          Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
-                                             (BaseMonoBehaviour_o *)this,
-                                             npCombineInfoPrefab,
-                                             transform,
-                                             0,
-                                             0);
-          v60 = System_Int32__ToString_67071420((int32_t)&idx, (System_String_o *)StringLiteral_5001/*"D3"*/, 0);
-          if ( !Object )
-            sub_1D0F30C(v60, v60);
-          UnityEngine_Object__set_name(Object, v60, 0);
-          Component_object = UnityEngine_GameObject__GetComponent_object_(
-                               (UnityEngine_GameObject_o *)Object,
-                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
-          v63 = (ServantNpInfoIconComponent_o *)Component_object;
-          if ( !Component_object )
-            sub_1D0F30C(0, v62);
-          ServantNpInfoIconComponent__SetNpInfo(
-            (ServantNpInfoIconComponent_o *)Component_object,
-            this->fields.baseUserServantEntity,
-            idx,
-            current,
-            0,
-            0.0,
-            0.0,
-            0);
-          ServantNpInfoIconComponent__SetMask(v63, current->fields.MaskFlag, current->fields.ClosedMessage, 0);
-          v66 = v51 || current->fields.MaskFlag;
-          v51 = v66 != 0;
-          ++idx;
-          if ( size >= 2 )
+          displayTransformIndex = this->fields.displayTransformIndex;
+          wrapContent = sub_21FFD10(SvtUseNpData___TypeInfo, 1);
+          if ( !this->fields.svtNpDataList )
+            goto LABEL_129;
+          v48 = (struct System_Collections_Generic_List_SvtUseNpData__o *)wrapContent;
+          v52 = displayTransformIndex >= v50 ? v50 : displayTransformIndex;
+          v53 = displayTransformIndex >= 0 ? v52 : 0;
+          wrapContent = (__int64)System_Collections_Generic_List_object___get_Item(
+                                   (System_Collections_Generic_List_object__o *)this->fields.svtNpDataList,
+                                   v53,
+                                   (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+          if ( !v48 )
+            goto LABEL_129;
+          v60 = (Il2CppObject *)wrapContent;
+          if ( wrapContent )
           {
-            if ( i )
+            wrapContent = sub_21FFDA4(wrapContent, v48->klass->_1.element_class);
+            if ( !wrapContent )
             {
-              if ( !v50 )
-                sub_1D0F30C(v64, v65);
-              Item = System_Collections_Generic_Dictionary_int__object___get_Item(
-                       v50,
-                       current->fields.svtDispNpId,
-                       (const MethodInfo_35A8168 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__get_Item__);
-              TextScrollView = ServantNpInfoIconComponent__get_TextScrollView(v63, 0);
-              TextScrollBar = ServantNpInfoIconComponent__get_TextScrollBar(v63, 0);
-              if ( !Item )
-                sub_1D0F30C(TextScrollBar, v70);
-              SyncScrollComponent__AddTarget((SyncScrollComponent_o *)Item, TextScrollView, TextScrollBar, 0);
+              v110 = sub_21FFEF0(0, v61);
+              sub_21FFD90(v110, 0);
             }
-            else
+          }
+          if ( !v48->fields._size )
+            sub_21FFED4(wrapContent);
+          v48->fields._syncRoot = v60;
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&v48->fields._syncRoot,
+            (int32_t)v60,
+            v54,
+            v55,
+            v56,
+            v57,
+            v58,
+            v59);
+        }
+      }
+      v62 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__SyncScrollComponent__TypeInfo);
+      System_Collections_Generic_Dictionary_int__object____ctor(
+        v62,
+        (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent___ctor__);
+      if ( !v48 )
+        goto LABEL_129;
+      v63 = 0;
+      for ( i = 0; i != v112; ++i )
+      {
+        klass = v48->klass;
+        v66 = *(unsigned __int16 *)&v48->klass->_2.rank;
+        if ( *(_WORD *)&v48->klass->_2.rank )
+        {
+          p_offset = &klass->_1.interfaceOffsets->offset;
+          while ( *((System_Collections_Generic_IEnumerable_SvtUseNpData__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_SvtUseNpData__TypeInfo )
+          {
+            --v66;
+            p_offset += 4;
+            if ( !v66 )
+              goto LABEL_58;
+          }
+          v68 = (__int64)&klass->vtable + 16 * *p_offset;
+        }
+        else
+        {
+LABEL_58:
+          v68 = sub_2237E2C(v48, System_Collections_Generic_IEnumerable_SvtUseNpData__TypeInfo, 0);
+        }
+        v69 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_List_SvtUseNpData__o *, _QWORD))v68)(
+                v48,
+                *(_QWORD *)(v68 + 8));
+        v113 = v69;
+        while ( 1 )
+        {
+          if ( !v113 )
+            sub_21FFECC(v69, v70);
+          v71 = *(_QWORD *)v113;
+          v72 = *(unsigned __int16 *)(*(_QWORD *)v113 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v113 + 302LL) )
+          {
+            v73 = (int *)(*(_QWORD *)(v71 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v73 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v63, 0);
-              v72 = GameObjectExtensions__SafeGetComponent_object_(
-                      gameObject,
-                      (const MethodInfo_32A9F2C *)Method_GameObjectExtensions_SafeGetComponent_SyncScrollComponent___);
-              v73 = ServantNpInfoIconComponent__get_TextScrollView(v63, 0);
-              v74 = ServantNpInfoIconComponent__get_TextScrollBar(v63, 0);
+              --v72;
+              v73 += 4;
               if ( !v72 )
-                sub_1D0F30C(v74, v75);
-              SyncScrollComponent__AddTarget((SyncScrollComponent_o *)v72, v73, v74, 0);
-              if ( !v50 )
-                sub_1D0F30C(v76, v77);
-              System_Collections_Generic_Dictionary_int__object___set_Item(
-                v50,
-                current->fields.svtDispNpId,
-                v72,
-                (const MethodInfo_35A81F4 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__set_Item__);
+                goto LABEL_66;
+            }
+            v74 = v71 + 16LL * *v73 + 312;
+          }
+          else
+          {
+LABEL_66:
+            v74 = sub_2237E2C(v113, System_Collections_IEnumerator_TypeInfo, 0);
+          }
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v74)(v113, *(_QWORD *)(v74 + 8)) & 1) == 0 )
+            break;
+          v75 = *(_QWORD *)v113;
+          v76 = *(unsigned __int16 *)(*(_QWORD *)v113 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v113 + 302LL) )
+          {
+            v77 = (int *)(*(_QWORD *)(v75 + 176) + 8LL);
+            while ( *((System_Collections_Generic_IEnumerator_SvtUseNpData__c **)v77 - 1) != System_Collections_Generic_IEnumerator_SvtUseNpData__TypeInfo )
+            {
+              --v76;
+              v77 += 4;
+              if ( !v76 )
+                goto LABEL_73;
+            }
+            v78 = v75 + 16LL * *v77 + 312;
+          }
+          else
+          {
+LABEL_73:
+            v78 = sub_2237E2C(v113, System_Collections_Generic_IEnumerator_SvtUseNpData__TypeInfo, 0);
+          }
+          v69 = (*(__int64 (__fastcall **)(__int64, _QWORD))v78)(v113, *(_QWORD *)(v78 + 8));
+          v79 = (SvtUseNpData_o *)v69;
+          if ( !v69 )
+            sub_21FFECC(0, v70);
+          if ( (*(_DWORD *)(v69 + 24) & 0x80000000) == 0 )
+          {
+            v80 = (UnityEngine_Component_o *)this->fields.wrapContent;
+            if ( !v80 )
+              sub_21FFECC(0, v70);
+            npCombineInfoPrefab = this->fields.npCombineInfoPrefab;
+            transform = UnityEngine_Component__get_transform(v80, 0);
+            Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
+                                               (BaseMonoBehaviour_o *)this,
+                                               npCombineInfoPrefab,
+                                               transform,
+                                               0,
+                                               0);
+            v84 = System_Int32__ToString_76925352((int32_t)&idx, (System_String_o *)StringLiteral_5130/*"D3"*/, 0);
+            if ( !Object )
+              sub_21FFECC(v84, v84);
+            UnityEngine_Object__set_name(Object, v84, 0);
+            Component_object = UnityEngine_GameObject__GetComponent_object_(
+                                 (UnityEngine_GameObject_o *)Object,
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+            v87 = (ServantNpInfoIconComponent_o *)Component_object;
+            if ( !Component_object )
+              sub_21FFECC(0, v86);
+            ServantNpInfoIconComponent__SetNpInfo(
+              (ServantNpInfoIconComponent_o *)Component_object,
+              this->fields.baseUserServantEntity,
+              idx,
+              v79,
+              0,
+              0.0,
+              0.0,
+              0);
+            ServantNpInfoIconComponent__SetMask(v87, v79->fields.MaskFlag, v79->fields.ClosedMessage, 0);
+            v88 = v63 || v79->fields.MaskFlag;
+            v63 = v88 != 0;
+            ++idx;
+            if ( !v111 )
+            {
+              if ( i )
+              {
+                if ( !v62 )
+                  sub_21FFECC(v69, v70);
+                Item = System_Collections_Generic_Dictionary_int__object___get_Item(
+                         v62,
+                         v79->fields.svtDispNpId,
+                         (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__get_Item__);
+                TextScrollView = ServantNpInfoIconComponent__get_TextScrollView(v87, 0);
+                TextScrollBar = ServantNpInfoIconComponent__get_TextScrollBar(v87, 0);
+                if ( !Item )
+                  sub_21FFECC(TextScrollBar, v92);
+                SyncScrollComponent__AddTarget((SyncScrollComponent_o *)Item, TextScrollView, TextScrollBar, 0);
+              }
+              else
+              {
+                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v87, 0);
+                v94 = GameObjectExtensions__SafeGetComponent_object_(
+                        gameObject,
+                        (const MethodInfo_38852A8 *)Method_GameObjectExtensions_SafeGetComponent_SyncScrollComponent___);
+                v95 = ServantNpInfoIconComponent__get_TextScrollView(v87, 0);
+                v96 = ServantNpInfoIconComponent__get_TextScrollBar(v87, 0);
+                if ( !v94 )
+                  sub_21FFECC(v96, v97);
+                SyncScrollComponent__AddTarget((SyncScrollComponent_o *)v94, v95, v96, 0);
+                if ( !v62 )
+                  sub_21FFECC(v98, v99);
+                System_Collections_Generic_Dictionary_int__object___set_Item(
+                  v62,
+                  v79->fields.svtDispNpId,
+                  v94,
+                  (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__SyncScrollComponent__set_Item__);
+              }
             }
           }
         }
+        v100 = *(_QWORD *)v113;
+        v101 = *(unsigned __int16 *)(*(_QWORD *)v113 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v113 + 302LL) )
+        {
+          v102 = (int *)(*(_QWORD *)(v100 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v102 - 1) != System_IDisposable_TypeInfo )
+          {
+            --v101;
+            v102 += 4;
+            if ( !v101 )
+              goto LABEL_95;
+          }
+          v103 = v100 + 16LL * *v102 + 312;
+        }
+        else
+        {
+LABEL_95:
+          v103 = sub_2237E2C(v113, System_IDisposable_TypeInfo, 0);
+        }
+        (*(void (__fastcall **)(__int64, _QWORD))v103)(v113, *(_QWORD *)(v103 + 8));
       }
-      System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v81,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_SvtUseNpData__Dispose__);
+      if ( v63 )
+        NpCombineControl__SetScrollViewSize(
+          this,
+          this->fields.EnableMaskScrollViewWidth,
+          this->fields.DefaultScrollViewHeight,
+          currentMoveIdx);
+      if ( this->fields.isScrollNpInfo )
+      {
+        wrapContent = (__int64)this->fields.wrapContent;
+        if ( !wrapContent )
+          goto LABEL_129;
+        *(_DWORD *)(wrapContent + 32) = 700;
+        UIWrapContent__WrapContent((UIWrapContent_o *)wrapContent, 0);
+      }
+      NpCombineControl__ResetScrollView(this, currentMoveIdx);
+      currentMoveIdx = (const MethodInfo *)(unsigned int)this->fields.currentMoveIdx;
+      if ( (int)currentMoveIdx < 1 )
+      {
+LABEL_116:
+        this->fields.isSelectBase = 1;
+        NpCombineControl__SetSelectMaterialEnable(this, currentMoveIdx);
+        NpCombineControl__SetSvtNpCombineData(this, v104);
+        return;
+      }
+      wrapContent = (__int64)this->fields.wrapContent;
+      if ( wrapContent )
+      {
+        UIWrapContent__setScrollPos((UIWrapContent_o *)wrapContent, (int32_t)currentMoveIdx, 0);
+        goto LABEL_116;
+      }
+LABEL_129:
+      sub_21FFECC(wrapContent, currentMoveIdx);
     }
-    if ( v51 )
-      NpCombineControl__SetScrollViewSize(
-        this,
-        this->fields.EnableMaskScrollViewWidth,
-        this->fields.DefaultScrollViewHeight,
-        currentMoveIdx);
-    if ( this->fields.isScrollNpInfo )
-    {
-      wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
-      if ( !wrapContent )
-        goto LABEL_83;
-      LODWORD(wrapContent[1].monitor) = 700;
-      UIWrapContent__WrapContent((UIWrapContent_o *)wrapContent, 0);
-    }
-    NpCombineControl__ResetScrollView(this, currentMoveIdx);
-    currentMoveIdx = (const MethodInfo *)(unsigned int)this->fields.currentMoveIdx;
-    if ( (int)currentMoveIdx >= 1 )
-    {
-      wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
-      if ( !wrapContent )
-        goto LABEL_83;
-      UIWrapContent__setScrollPos((UIWrapContent_o *)wrapContent, (int32_t)currentMoveIdx, 0);
-    }
+    if ( !wrapContent )
+      goto LABEL_129;
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)wrapContent,
+      this->fields._IsTransformServant_k__BackingField,
+      0);
+    wrapContent = (__int64)this->fields.transformSvtName;
+    if ( !wrapContent )
+      goto LABEL_129;
+    wrapContent = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)wrapContent, 0);
+    if ( !wrapContent )
+      goto LABEL_129;
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)wrapContent,
+      this->fields._IsTransformServant_k__BackingField,
+      0);
+    if ( !this->fields._IsTransformServant_k__BackingField )
+      goto LABEL_31;
+    wrapContent = (__int64)this->fields.wrapContent;
+    if ( !wrapContent )
+      goto LABEL_129;
+    v18 = this->fields.npCombineInfoPrefab;
+    v19 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)wrapContent, 0);
+    v20 = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v18, v19, 0, 0);
+    this->fields.targetObject = v20;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.targetObject,
+      (int32_t)v20,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25,
+      v26);
+    wrapContent = (__int64)this->fields.svtNpDataList;
+    if ( !wrapContent )
+      goto LABEL_129;
+    wrapContent = (__int64)System_Collections_Generic_List_object___get_Item(
+                             (System_Collections_Generic_List_object__o *)wrapContent,
+                             this->fields.displayTransformIndex,
+                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    if ( !this->fields.targetObject )
+      goto LABEL_129;
+    v27 = (SvtUseNpData_o *)wrapContent;
+    wrapContent = (__int64)UnityEngine_GameObject__GetComponent_object_(
+                             this->fields.targetObject,
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
+    if ( !wrapContent )
+      goto LABEL_129;
+    v28 = (UnityEngine_Component_o *)wrapContent;
+    ServantNpInfoIconComponent__SetNpInfo(
+      (ServantNpInfoIconComponent_o *)wrapContent,
+      this->fields.baseUserServantEntity,
+      0,
+      v27,
+      1,
+      3.0,
+      10.0,
+      0);
+    v29 = UnityEngine_Component__get_gameObject(v28, 0);
+    GameObjectExtensions__SetLocalPositionY(v29, -18.5, 0);
+    v30 = UnityEngine_Component__get_gameObject(v28, 0);
+    GameObjectExtensions__SetLocalScale_42878128(v30, this->fields.scaleOffset, 0);
     this->fields.isSelectBase = 1;
-    NpCombineControl__SetSelectMaterialEnable(this, currentMoveIdx);
-    NpCombineControl__SetSvtNpCombineData(this, v78);
-    return;
-  }
-  wrapContent = (UnityEngine_Component_o *)this->fields.wrapContent;
-  if ( !wrapContent )
-    goto LABEL_83;
-  v15 = this->fields.npCombineInfoPrefab;
-  v16 = UnityEngine_Component__get_transform(wrapContent, 0);
-  v17 = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v15, v16, 0, 0);
-  this->fields.targetObject = v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.targetObject, (int32_t)v17, v18, v19, v20, v21, v22, v23);
-  wrapContent = (UnityEngine_Component_o *)this->fields.svtNpDataList;
-  if ( !wrapContent )
-    goto LABEL_83;
-  wrapContent = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
-                                             (System_Collections_Generic_List_object__o *)wrapContent,
-                                             this->fields.displayTransformIndex,
-                                             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-  if ( !this->fields.targetObject )
-    goto LABEL_83;
-  v24 = (SvtUseNpData_o *)wrapContent;
-  wrapContent = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
-                                             this->fields.targetObject,
-                                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantNpInfoIconComponent___);
-  if ( !wrapContent )
-    goto LABEL_83;
-  v25 = wrapContent;
-  ServantNpInfoIconComponent__SetNpInfo(
-    (ServantNpInfoIconComponent_o *)wrapContent,
-    this->fields.baseUserServantEntity,
-    0,
-    v24,
-    1,
-    3.0,
-    10.0,
-    0);
-  v26 = UnityEngine_Component__get_gameObject(v25, 0);
-  GameObjectExtensions__SetLocalPositionY(v26, -18.5, 0);
-  v27 = UnityEngine_Component__get_gameObject(v25, 0);
-  GameObjectExtensions__SetLocalScale_37345220(v27, this->fields.scaleOffset, 0);
-  this->fields.isSelectBase = 1;
-  NpCombineControl__SetSelectMaterialEnable(this, v28);
-  NpCombineControl__SetSvtNpCombineData(this, v29);
-  wrapContent = (UnityEngine_Component_o *)this->fields.baseUserServantEntity;
-  if ( !wrapContent )
-    goto LABEL_83;
-  wrapContent = (UnityEngine_Component_o *)UserServantEntity__GetTransformedServantInfo(
-                                             (UserServantEntity_o *)wrapContent,
-                                             &transformInfo,
-                                             this->fields.displayTransformIndex,
-                                             0);
-  if ( !transformInfo )
-    goto LABEL_83;
-  wrapContent = (UnityEngine_Component_o *)this->fields.transformSvtName;
-  if ( !wrapContent )
-    goto LABEL_83;
-  UILabel__set_text((UILabel_o *)wrapContent, transformInfo->fields.titleText, 0);
-  wrapContent = (UnityEngine_Component_o *)this->fields.transformSvtName;
-  if ( this->fields._IsSaveTransformServant_k__BackingField )
-  {
-    if ( this->fields.displayTransformIndex <= 0 )
+    NpCombineControl__SetSelectMaterialEnable(this, v31);
+    NpCombineControl__SetSvtNpCombineData(this, v32);
+    wrapContent = (__int64)this->fields.baseUserServantEntity;
+    if ( !wrapContent )
+      goto LABEL_129;
+    wrapContent = UserServantEntity__GetTransformedServantInfo(
+                    (UserServantEntity_o *)wrapContent,
+                    &transformInfo,
+                    this->fields.displayTransformIndex,
+                    0);
+    if ( !transformInfo )
+      goto LABEL_129;
+    wrapContent = (__int64)this->fields.transformSvtName;
+    if ( !wrapContent )
+      goto LABEL_129;
+    UILabel__set_text((UILabel_o *)wrapContent, transformInfo->fields.titleText, 0);
+    wrapContent = (__int64)this->fields.transformSvtName;
+    if ( this->fields._IsSaveTransformServant_k__BackingField )
     {
-      p_CondTitleLabelColor_k__BackingField = &this->fields._CondTitleLabelColor_k__BackingField;
-      p_g = &this->fields._CondTitleLabelColor_k__BackingField.fields.g;
-      p_b = &this->fields._CondTitleLabelColor_k__BackingField.fields.b;
-      p_a = &this->fields._CondTitleLabelColor_k__BackingField.fields.a;
+      if ( this->fields.displayTransformIndex <= 0 )
+      {
+        p_CondTitleLabelColor_k__BackingField = &this->fields._CondTitleLabelColor_k__BackingField;
+        p_g = &this->fields._CondTitleLabelColor_k__BackingField.fields.g;
+        p_b = &this->fields._CondTitleLabelColor_k__BackingField.fields.b;
+        p_a = &this->fields._CondTitleLabelColor_k__BackingField.fields.a;
+      }
+      else
+      {
+        p_CondTitleLabelColor_k__BackingField = &this->fields._CondTitleLabelColorAfter_k__BackingField;
+        p_g = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.g;
+        p_b = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.b;
+        p_a = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.a;
+      }
       if ( !wrapContent )
-        goto LABEL_83;
+        goto LABEL_129;
+      v116.fields.a = *p_a;
+      v116.fields.b = *p_b;
+      v116.fields.g = *p_g;
+      v116.fields.r = p_CondTitleLabelColor_k__BackingField->fields.r;
+      UIWidget__set_color((UIWidget_o *)wrapContent, v116, 0);
+      wrapContent = (__int64)this->fields.transformBgSprite;
+      if ( this->fields.displayTransformIndex <= 0 )
+      {
+        p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColor_k__BackingField;
+        v108 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
+        v107 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+        v105 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+      }
+      else
+      {
+        p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColorAfter_k__BackingField;
+        v108 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
+        v107 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
+        v105 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
+      }
+      if ( !wrapContent )
+        goto LABEL_129;
     }
     else
     {
-      p_CondTitleLabelColor_k__BackingField = &this->fields._CondTitleLabelColorAfter_k__BackingField;
-      p_g = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.g;
-      p_b = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.b;
-      p_a = &this->fields._CondTitleLabelColorAfter_k__BackingField.fields.a;
       if ( !wrapContent )
-        goto LABEL_83;
-    }
-    v84.fields.a = *p_a;
-    v84.fields.b = *p_b;
-    v84.fields.g = *p_g;
-    v84.fields.r = p_CondTitleLabelColor_k__BackingField->fields.r;
-    UIWidget__set_color((UIWidget_o *)wrapContent, v84, 0);
-    wrapContent = (UnityEngine_Component_o *)this->fields.transformBgSprite;
-    if ( this->fields.displayTransformIndex <= 0 )
-    {
+        goto LABEL_129;
+      UIWidget__set_color((UIWidget_o *)wrapContent, this->fields._CondTitleLabelColor_k__BackingField, 0);
+      wrapContent = (__int64)this->fields.transformBgSprite;
+      if ( !wrapContent )
+        goto LABEL_129;
+      v105 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
       p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColor_k__BackingField;
-      v41 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
-      v40 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
-      v38 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
-      if ( !wrapContent )
-        goto LABEL_83;
+      v107 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+      v108 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
     }
-    else
-    {
-      p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColorAfter_k__BackingField;
-      v41 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
-      v40 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
-      v38 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
-      if ( !wrapContent )
-        goto LABEL_83;
-    }
-    goto LABEL_80;
+    v117.fields.a = *v105;
+    v117.fields.b = *v107;
+    v117.fields.g = *v108;
+    v117.fields.r = p_CondTitleSpriteColor_k__BackingField->fields.r;
+    UIWidget__set_color((UIWidget_o *)wrapContent, v117, 0);
+    if ( !v27 )
+      goto LABEL_129;
+    NpCombineControl__SetTransformNpMask(this, v27->fields.MaskFlag, v27->fields.ClosedMessage, v109);
   }
-  if ( !wrapContent
-    || (UIWidget__set_color((UIWidget_o *)wrapContent, this->fields._CondTitleLabelColor_k__BackingField, 0),
-        (wrapContent = (UnityEngine_Component_o *)this->fields.transformBgSprite) == 0) )
-  {
-LABEL_83:
-    sub_1D0F30C(wrapContent, currentMoveIdx);
-  }
-  v38 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
-  p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColor_k__BackingField;
-  v40 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
-  v41 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
-LABEL_80:
-  v85.fields.a = *v38;
-  v85.fields.b = *v40;
-  v85.fields.g = *v41;
-  v85.fields.r = p_CondTitleSpriteColor_k__BackingField->fields.r;
-  UIWidget__set_color((UIWidget_o *)wrapContent, v85, 0);
-  if ( !v24 )
-    goto LABEL_83;
-  NpCombineControl__SetTransformNpMask(this, v24->fields.MaskFlag, v24->fields.ClosedMessage, v79);
 }
 
 
@@ -2711,22 +3015,28 @@ LABEL_80:
 void NpCombineControl__SetEnableCombineBtn(NpCombineControl_o *this, bool isCombine, const MethodInfo *method)
 {
   UIWidget_o *combineBtn; // x0
-  float v5; // s8
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   combineBtn = (UIWidget_o *)this->fields.combineBtn;
   if ( !combineBtn
-    || (!isCombine ? (v5 = 0.5) : (v5 = 1.0),
-        ((void (__fastcall *)(UIWidget_o *))combineBtn->klass->vtable._5_get_isAnchoredVertically.methodPtr)(combineBtn),
+    || (((void (__fastcall *)(UIWidget_o *, bool, const MethodInfo *))combineBtn->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
+          combineBtn,
+          isCombine,
+          combineBtn->klass->vtable._5_get_isAnchoredVertically.method),
         (combineBtn = (UIWidget_o *)this->fields.combineBtnTxt) == 0) )
   {
-    sub_1D0F30C(combineBtn, isCombine);
+    sub_21FFECC(combineBtn, isCombine);
   }
-  v6.fields.a = 1.0;
-  v6.fields.r = v5;
-  v6.fields.g = v5;
-  v6.fields.b = v5;
-  UIWidget__set_color(combineBtn, v6, 0);
+  v6 = 0.5;
+  v7 = 1.0;
+  if ( isCombine )
+    v6 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color(combineBtn, *(UnityEngine_Color_o *)&v6, 0);
 }
 
 
@@ -2734,19 +3044,17 @@ void NpCombineControl__SetEnableCombineBtn(NpCombineControl_o *this, bool isComb
 void NpCombineControl__SetEnabledNpInfoScroll(NpCombineControl_o *this, bool enabled, const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *scrollView; // x0
-  bool v5; // w20
 
-  if ( (enabled & ~this->fields.isScrollNpInfo & 1) == 0 )
+  if ( this->fields.isScrollNpInfo || !enabled )
   {
     scrollView = (UnityEngine_Behaviour_o *)this->fields.scrollView;
     if ( !scrollView
-      || (v5 = enabled,
-          UnityEngine_Behaviour__set_enabled(scrollView, enabled, 0),
+      || (UnityEngine_Behaviour__set_enabled(scrollView, enabled, 0),
           (scrollView = (UnityEngine_Behaviour_o *)this->fields.wrapContent) == 0) )
     {
-      sub_1D0F30C(scrollView, enabled);
+      sub_21FFECC(scrollView, enabled);
     }
-    UnityEngine_Behaviour__set_enabled(scrollView, v5, 0);
+    UnityEngine_Behaviour__set_enabled(scrollView, enabled, 0);
   }
 }
 
@@ -2763,24 +3071,24 @@ void NpCombineControl__SetExeBtnState(NpCombineControl_o *this, const MethodInfo
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7B8C8 & 1) == 0 )
+  if ( (byte_593C94B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_TweenScale___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4E7B8C8 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_TweenScale___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_593C94B = 1;
   }
   combineBtnBg = (UnityEngine_Component_o *)this->fields.combineBtnBg;
   if ( !combineBtnBg )
     goto LABEL_14;
   combineBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               combineBtnBg,
-                                              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !this->fields.combineTxtImg )
     goto LABEL_14;
   v4 = (UIWidget_o *)combineBtnBg;
   combineBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this->fields.combineTxtImg,
-                                              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
+                                              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
   IsExeCombine_k__BackingField = this->fields._IsExeCombine_k__BackingField;
   combineBtnTxt = (UIWidget_o *)this->fields.combineBtnTxt;
   v7 = (UnityEngine_Behaviour_o *)combineBtnBg;
@@ -2809,7 +3117,7 @@ void NpCombineControl__SetExeBtnState(NpCombineControl_o *this, const MethodInfo
       }
     }
 LABEL_14:
-    sub_1D0F30C(combineBtnBg, method);
+    sub_21FFECC(combineBtnBg, method);
   }
   if ( !combineBtnTxt )
     goto LABEL_14;
@@ -2836,23 +3144,22 @@ void NpCombineControl__SetHaveQpInfo(NpCombineControl_o *this, const MethodInfo 
   void *SelfUserGame; // x0
   __int64 v4; // x1
   UILabel_o *haveQpLb; // x20
+  System_String_o *v6; // x1
 
-  if ( (byte_4E7B8BC & 1) == 0 )
+  if ( (byte_593C93E & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_9345/*"N0"*/);
-    byte_4E7B8BC = 1;
+    sub_21FFC50(&StringLiteral_9604/*"N0"*/);
+    byte_593C93E = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame
     || (haveQpLb = this->fields.haveQpLb,
+        v6 = (System_String_o *)StringLiteral_9604/*"N0"*/,
         this->fields.haveQpVal = *((_QWORD *)SelfUserGame + 12),
-        SelfUserGame = System_Int64__ToString_67076596(
-                         (int64_t)&this->fields.haveQpVal,
-                         (System_String_o *)StringLiteral_9345/*"N0"*/,
-                         0),
+        SelfUserGame = System_Int64__ToString_76930560((int64_t)&this->fields.haveQpVal, v6, 0),
         !haveQpLb) )
   {
-    sub_1D0F30C(SelfUserGame, v4);
+    sub_21FFECC(SelfUserGame, v4);
   }
   UILabel__set_text(haveQpLb, (System_String_o *)SelfUserGame, 0);
 }
@@ -2864,86 +3171,87 @@ void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData
   __int64 materialGrid; // x0
   __int64 v6; // x1
   struct System_Int64_array *materialUsrSvtIdList; // x8
-  il2cpp_array_size_t max_length; // x23
+  il2cpp_array_size_t max_length; // x24
   System_Collections_Generic_List_long__o *v9; // x22
   struct System_Collections_Generic_List_long__o **p_selectMtUsrSvtIdList; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   unsigned __int64 v17; // x22
-  struct System_Int64_array *v18; // x8
-  int64_t v19; // x24
+  __int64 v18; // x29
+  struct System_Int64_array *v19; // x8
   UnityEngine_GameObject_o *materialSvtPrefab; // x25
+  int64_t v21; // x24
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_GameObject_o *v22; // x25
-  UnityEngine_Transform_o *v23; // x26
+  UnityEngine_GameObject_o *v23; // x25
   UnityEngine_Transform_o *v24; // x26
+  UnityEngine_Transform_o *v25; // x26
   Il2CppObject *Component_object; // x25
-  NpMaterialSvtInfo_ClickDelegate_o *v26; // x26
-  const MethodInfo *v27; // x3
-  UserServantEntity_o *v28; // x2
-  const MethodInfo *v29; // x5
-  __int64 v30; // x8
-  _QWORD *v31; // x9
-  __int64 v32; // x10
-  const MethodInfo *v33; // x3
-  int32_t v34; // w21
-  const MethodInfo *v35; // x3
-  struct System_Int64_array *v36; // x22
-  il2cpp_array_size_t v37; // x8
-  unsigned __int64 v38; // x23
-  int64_t v39; // x20
-  const MethodInfo *v40; // x1
+  NpMaterialSvtInfo_ClickDelegate_o *v27; // x26
+  const MethodInfo *v28; // x3
+  UserServantEntity_o *v29; // x2
+  const MethodInfo *v30; // x5
+  __int64 v31; // x8
+  _QWORD *v32; // x9
+  __int64 v33; // x10
+  const MethodInfo *v34; // x3
+  int32_t v35; // w21
+  const MethodInfo *v36; // x3
+  struct System_Int64_array *v37; // x22
+  il2cpp_array_size_t v38; // x8
+  unsigned __int64 v39; // x23
+  int64_t v40; // x20
+  const MethodInfo *v41; // x1
   struct SetLevelUpData_o *lvUpData; // x8
   int32_t Qp; // w8
   System_Collections_Generic_List_object__o *combineEventList; // x0
   int32_t *p_spendQpVal; // x20
-  _BOOL8 v45; // x0
-  __int64 v46; // x1
-  float v47; // s0
-  int v48; // w8
+  _BOOL8 v46; // x0
+  __int64 v47; // x1
+  float v48; // s0
+  int v49; // w8
   UILabel_o *qpLb; // x22
-  float v50; // s1 OVERLAPPED
-  float v51; // s0
+  float v51; // s1 OVERLAPPED
   float v52; // s3
-  float v53; // s2
-  struct SetLevelUpData_o *v54; // x8
+  float v53; // s0
+  float v54; // s2
+  struct SetLevelUpData_o *v55; // x8
   int64_t spendQpVal; // x9
-  bool v56; // w20
-  float v57; // s0 OVERLAPPED
-  float v58; // s1
-  float v59; // s2
-  float v60; // s3
-  const MethodInfo *v61; // x1
-  System_Collections_Generic_List_Enumerator_object__o v62; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v63; // [xsp+20h] [xbp-80h] BYREF
+  float v57; // s1
+  float v58; // s0 OVERLAPPED
+  bool v59; // w20
+  float v60; // s2
+  float v61; // s3
+  const MethodInfo *v62; // x1
+  System_Collections_Generic_List_Enumerator_object__o v63; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v64; // [xsp+20h] [xbp-80h] BYREF
   int32_t tmpTargetLv; // [xsp+3Ch] [xbp-64h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E7B8C4 & 1) == 0 )
+  if ( (byte_593C947 & 1) == 0 )
   {
-    sub_1D0F0B4(&NpMaterialSvtInfo_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_CombineMenuControl_OnClickMaterial__);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_NpMaterialSvtInfo___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
-    sub_1D0F0B4(&System_Collections_Generic_List_long__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_9345/*"N0"*/);
-    byte_4E7B8C4 = 1;
+    sub_21FFC50(&NpMaterialSvtInfo_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_CombineMenuControl_OnClickMaterial__);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NpMaterialSvtInfo___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoData__get_Count__);
+    sub_21FFC50(&System_Collections_Generic_List_long__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_9604/*"N0"*/);
+    byte_593C947 = 1;
   }
   tmpTargetLv = 0;
-  memset(&v63, 0, sizeof(v63));
+  memset(&v64, 0, sizeof(v64));
   NpCombineControl__DestroyMaterialGrid(this, (const MethodInfo *)data);
   if ( !data )
     goto LABEL_62;
@@ -2951,14 +3259,14 @@ void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData
   if ( !materialUsrSvtIdList )
     goto LABEL_62;
   max_length = materialUsrSvtIdList->max_length;
-  v9 = (System_Collections_Generic_List_long__o *)sub_1D0F300(System_Collections_Generic_List_long__TypeInfo);
+  v9 = (System_Collections_Generic_List_long__o *)sub_21FFEBC(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v9,
-    (const MethodInfo_3943BF0 *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_44378D8 *)Method_System_Collections_Generic_List_long___ctor__);
   p_selectMtUsrSvtIdList = &this->fields.selectMtUsrSvtIdList;
   this->fields.selectMtUsrSvtIdList = v9;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.selectMtUsrSvtIdList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.selectMtUsrSvtIdList,
     (int32_t)v9,
     v11,
     v12,
@@ -2970,19 +3278,20 @@ void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData
   if ( (int)max_length < 1 )
     return;
   v17 = 0;
+  v18 = (unsigned int)max_length;
   do
   {
-    v18 = data->fields.materialUsrSvtIdList;
-    if ( !v18 )
+    v19 = data->fields.materialUsrSvtIdList;
+    if ( !v19 )
       goto LABEL_62;
-    if ( v17 >= LODWORD(v18->max_length) )
+    if ( v17 >= LODWORD(v19->max_length) )
 LABEL_63:
-      sub_1D0F314(materialGrid);
+      sub_21FFED4(materialGrid);
     materialGrid = (__int64)this->fields.materialGrid;
     if ( !materialGrid )
       goto LABEL_62;
-    v19 = v18->m_Items[v17];
     materialSvtPrefab = this->fields.materialSvtPrefab;
+    v21 = v19->m_Items[v17];
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)materialGrid, 0);
     materialGrid = (__int64)BaseMonoBehaviour__createObject(
                               (BaseMonoBehaviour_o *)this,
@@ -2992,66 +3301,66 @@ LABEL_63:
                               0);
     if ( !materialGrid )
       goto LABEL_62;
-    v22 = (UnityEngine_GameObject_o *)materialGrid;
+    v23 = (UnityEngine_GameObject_o *)materialGrid;
     materialGrid = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)materialGrid, 0);
     if ( !this->fields.materialGrid )
       goto LABEL_62;
-    v23 = (UnityEngine_Transform_o *)materialGrid;
+    v24 = (UnityEngine_Transform_o *)materialGrid;
     materialGrid = (__int64)UnityEngine_Component__get_transform(
                               (UnityEngine_Component_o *)this->fields.materialGrid,
                               0);
     if ( !materialGrid )
       goto LABEL_62;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)materialGrid, 0);
-    if ( !v23 )
-      goto LABEL_62;
-    UnityEngine_Transform__set_localPosition(v23, localPosition, 0);
-    materialGrid = (__int64)UnityEngine_GameObject__get_transform(v22, 0);
-    v24 = (UnityEngine_Transform_o *)materialGrid;
-    if ( !byte_4E70C99 )
-    {
-      materialGrid = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
-    }
     if ( !v24 )
       goto LABEL_62;
-    UnityEngine_Transform__set_localPosition(v24, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    UnityEngine_Transform__set_localPosition(v24, localPosition, 0);
+    materialGrid = (__int64)UnityEngine_GameObject__get_transform(v23, 0);
+    v25 = (UnityEngine_Transform_o *)materialGrid;
+    if ( !byte_5931940 )
+    {
+      materialGrid = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
+    }
+    if ( !v25 )
+      goto LABEL_62;
+    UnityEngine_Transform__set_localPosition(v25, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         v22,
-                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_NpMaterialSvtInfo___);
-    v26 = (NpMaterialSvtInfo_ClickDelegate_o *)sub_1D0F300(NpMaterialSvtInfo_ClickDelegate_TypeInfo);
+                         v23,
+                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NpMaterialSvtInfo___);
+    v27 = (NpMaterialSvtInfo_ClickDelegate_o *)sub_21FFEBC(NpMaterialSvtInfo_ClickDelegate_TypeInfo);
     NpMaterialSvtInfo_ClickDelegate___ctor(
-      v26,
+      v27,
       (Il2CppObject *)this,
       (intptr_t)Method_CombineMenuControl_OnClickMaterial__,
-      v27);
+      v28);
     if ( !Component_object )
       goto LABEL_62;
-    NpMaterialSvtInfo__setMaterialSvtInfo((NpMaterialSvtInfo_o *)Component_object, v17, v28, v19, v26, v29);
+    NpMaterialSvtInfo__setMaterialSvtInfo((NpMaterialSvtInfo_o *)Component_object, v17, v29, v21, v27, v30);
     materialGrid = (__int64)*p_selectMtUsrSvtIdList;
     if ( !*p_selectMtUsrSvtIdList )
       goto LABEL_62;
-    v30 = *(_QWORD *)(materialGrid + 16);
-    v31 = Method_System_Collections_Generic_List_long__Add__;
+    v31 = *(_QWORD *)(materialGrid + 16);
+    v32 = Method_System_Collections_Generic_List_long__Add__;
     ++*(_DWORD *)(materialGrid + 28);
-    if ( !v30 )
+    if ( !v31 )
       goto LABEL_62;
-    v32 = *(int *)(materialGrid + 24);
-    if ( (unsigned int)v32 >= *(_DWORD *)(v30 + 24) )
+    v33 = *(int *)(materialGrid + 24);
+    if ( (unsigned int)v33 >= *(_DWORD *)(v31 + 24) )
     {
       System_Collections_Generic_List_long___AddWithResize(
         (System_Collections_Generic_List_long__o *)materialGrid,
-        v19,
-        *(const MethodInfo_3944444 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+        v21,
+        *(const MethodInfo_4438164 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
     }
     else
     {
-      *(_DWORD *)(materialGrid + 24) = v32 + 1;
-      *(_QWORD *)(v30 + 8 * v32 + 32) = v19;
+      *(_DWORD *)(materialGrid + 24) = v33 + 1;
+      *(_QWORD *)(v31 + 8 * v33 + 32) = v21;
     }
     ++v17;
   }
-  while ( (unsigned int)max_length != v17 );
+  while ( v18 != v17 );
   materialGrid = (__int64)this->fields.materialGrid;
   if ( !materialGrid )
     goto LABEL_62;
@@ -3060,46 +3369,45 @@ LABEL_63:
                    this->fields.baseUserServantEntity,
                    data->fields.materialUsrSvtIdList,
                    &tmpTargetLv,
-                   v33);
+                   v34);
   if ( !this->fields.baseUserServantEntity )
     goto LABEL_62;
-  v34 = materialGrid;
+  v35 = materialGrid;
   materialGrid = UserServantEntity__IsExceedMaxLv(this->fields.baseUserServantEntity, tmpTargetLv, 0);
-  this->fields.isExceedMaxLv = materialGrid & 1;
-  this->fields.isCombineSvt = 0;
-  v36 = data->fields.materialUsrSvtIdList;
-  if ( !v36 )
+  *(_WORD *)&this->fields.isExceedMaxLv = materialGrid & 1;
+  v37 = data->fields.materialUsrSvtIdList;
+  if ( !v37 )
     goto LABEL_62;
-  v37 = v36->max_length;
-  if ( (int)v37 >= 1 )
+  v38 = v37->max_length;
+  if ( (int)v38 >= 1 )
   {
-    v38 = 0;
+    v39 = 0;
     while ( 1 )
     {
-      if ( v38 >= (unsigned int)v37 )
+      if ( v39 >= (unsigned int)v38 )
         goto LABEL_63;
-      v39 = v36->m_Items[v38];
-      materialGrid = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v40 = v37->m_Items[v39];
+      materialGrid = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !materialGrid )
         goto LABEL_62;
       materialGrid = (__int64)DataManager__GetMasterData_object_(
                                 (DataManager_o *)materialGrid,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( !materialGrid )
         goto LABEL_62;
       materialGrid = (__int64)DataMasterBase_object__object__long___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)materialGrid,
-                                v39,
-                                (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                v40,
+                                (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       if ( !materialGrid )
         goto LABEL_62;
       if ( UserServantEntity__IsExchangeSvt((UserServantEntity_o *)materialGrid, 0) )
         this->fields._isExchangeSvtInList_k__BackingField = 1;
-      materialGrid = NpCombineControl__CheckConfirm(v39, v40);
+      materialGrid = NpCombineControl__CheckConfirm(v40, v41);
       if ( (materialGrid & 1) != 0 )
         break;
-      LODWORD(v37) = v36->max_length;
-      if ( (__int64)++v38 >= (int)v37 )
+      LODWORD(v38) = v37->max_length;
+      if ( (__int64)++v39 >= (int)v38 )
         goto LABEL_39;
     }
     this->fields.isCombineSvt = 1;
@@ -3108,84 +3416,86 @@ LABEL_39:
   lvUpData = this->fields.lvUpData;
   if ( !lvUpData )
     goto LABEL_62;
-  Qp = NpCombineControl__GetQp(lvUpData->fields.currentId, lvUpData->fields.currentLv, v34, v35);
+  Qp = NpCombineControl__GetQp(lvUpData->fields.currentId, lvUpData->fields.currentLv, v35, v36);
   combineEventList = (System_Collections_Generic_List_object__o *)this->fields.combineEventList;
   p_spendQpVal = &this->fields.spendQpVal;
   this->fields.spendQpVal = Qp;
   if ( combineEventList && combineEventList->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v62,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v63,
       combineEventList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    v63 = v62;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+    v64 = v63;
+    v63.fields._list = 0;
+    *(_QWORD *)&v63.fields._index = &v64;
     while ( 1 )
     {
-      v45 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v63,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-      if ( !v45 )
+      v46 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v64,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+      if ( !v46 )
         break;
-      if ( !v63.fields._current )
-        sub_1D0F30C(v45, v46);
-      if ( HIDWORD(v63.fields._current[1].klass) == 10 )
+      if ( !v64.fields._current )
+        sub_21FFECC(v46, v47);
+      if ( HIDWORD(v64.fields._current[1].klass) == 10 )
       {
-        v47 = *(float *)&v63.fields._current[3].monitor * (float)*p_spendQpVal;
-        v48 = (int)v47;
-        if ( v47 == INFINITY )
-          v48 = 0x80000000;
-        *p_spendQpVal = v48;
+        v48 = *(float *)&v64.fields._current[3].monitor * (float)*p_spendQpVal;
+        v49 = (int)v48;
+        if ( v48 == INFINITY )
+          v49 = 0x80000000;
+        *p_spendQpVal = v49;
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v63,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+      &v64,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   qpLb = this->fields.qpLb;
-  materialGrid = (__int64)System_Int32__ToString_67071420((int)this + 520, (System_String_o *)StringLiteral_9345/*"N0"*/, 0);
+  materialGrid = (__int64)System_Int32__ToString_76925352((int)this + 520, (System_String_o *)StringLiteral_9604/*"N0"*/, 0);
   if ( !qpLb )
     goto LABEL_62;
   UILabel__set_text(qpLb, (System_String_o *)materialGrid, 0);
   materialGrid = (__int64)this->fields.qpLb;
-  v50 = 0.0;
-  if ( this->fields.haveQpVal >= this->fields.spendQpVal )
-    v50 = 1.0;
   if ( !materialGrid )
     goto LABEL_62;
   v51 = 1.0;
   v52 = 1.0;
-  v53 = v50;
-  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)(&v50 - 1), 0);
-  v54 = this->fields.lvUpData;
-  if ( !v54 )
+  if ( this->fields.haveQpVal < this->fields.spendQpVal )
+    v51 = 0.0;
+  v53 = 1.0;
+  v54 = v51;
+  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)(&v51 - 1), 0);
+  v55 = this->fields.lvUpData;
+  if ( !v55 )
     goto LABEL_62;
-  v54->fields.nextLv = v34;
+  v55->fields.nextLv = v35;
   spendQpVal = this->fields.spendQpVal;
-  v54->fields.spendQp = spendQpVal;
+  v55->fields.spendQp = spendQpVal;
   materialGrid = (__int64)this->fields.qpLb;
   if ( this->fields.haveQpVal >= spendQpVal )
   {
     if ( materialGrid )
     {
-      v57 = 1.0;
-      v56 = 1;
       v58 = 1.0;
+      v57 = 1.0;
+      v59 = 1;
       goto LABEL_60;
     }
 LABEL_62:
-    sub_1D0F30C(materialGrid, v6);
+    sub_21FFECC(materialGrid, v6);
   }
   if ( !materialGrid )
     goto LABEL_62;
-  v56 = 0;
-  v57 = 1.0;
-  v58 = 0.0;
+  v57 = 0.0;
+  v58 = 1.0;
+  v59 = 0;
 LABEL_60:
-  v59 = v58;
   v60 = v57;
-  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)&v57, 0);
-  this->fields._IsExeCombine_k__BackingField = v56;
-  NpCombineControl__SetExeBtnState(this, v61);
+  v61 = v58;
+  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)&v58, 0);
+  this->fields._IsExeCombine_k__BackingField = v59;
+  NpCombineControl__SetExeBtnState(this, v62);
 }
 
 
@@ -3202,7 +3512,7 @@ void NpCombineControl__SetNpCombineNullData(NpCombineControl_o *this, const Meth
   this->fields.spendQpVal = 0;
   v4 = System_Int32__ToString((int)this + 520, 0);
   if ( !qpLb || (UILabel__set_text(qpLb, v4, 0), (v4 = (System_String_o *)this->fields.qpLb) == 0) )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   v7.fields.r = 1.0;
   v7.fields.g = 1.0;
   v7.fields.b = 1.0;
@@ -3213,11 +3523,8 @@ void NpCombineControl__SetNpCombineNullData(NpCombineControl_o *this, const Meth
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void NpCombineControl__SetScrollViewSize(NpCombineControl_o *this, float width, float height, const MethodInfo *method)
 {
-  long double v4; // q8
-  long double v5; // q9
   UnityEngine_Object_o *scrollView; // x20
   struct UIPanel_o *v8; // x0
   __int64 v9; // x1
@@ -3225,16 +3532,14 @@ void NpCombineControl__SetScrollViewSize(NpCombineControl_o *this, float width, 
   UnityEngine_Object_o *mPanel; // x20
   struct UIScrollView_o *v12; // x8
 
-  v4 = *(long double *)&height;
-  v5 = *(long double *)&width;
-  if ( (byte_4E7B8CA & 1) == 0 )
+  if ( (byte_593C94D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8CA = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C94D = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   v8 = (struct UIPanel_o *)UnityEngine_Object__op_Equality(scrollView, 0, 0);
   if ( ((unsigned __int8)v8 & 1) == 0 )
   {
@@ -3242,8 +3547,8 @@ void NpCombineControl__SetScrollViewSize(NpCombineControl_o *this, float width, 
     if ( v10 )
     {
       mPanel = (UnityEngine_Object_o *)v10->fields.mPanel;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
       v8 = (struct UIPanel_o *)UnityEngine_Object__op_Equality(mPanel, 0, 0);
       if ( ((unsigned __int8)v8 & 1) != 0 )
         return;
@@ -3253,18 +3558,18 @@ void NpCombineControl__SetScrollViewSize(NpCombineControl_o *this, float width, 
         v8 = v12->fields.mPanel;
         if ( v8 )
         {
-          ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float, float, long double, long double))v8->klass->vtable._18_SetRect.methodPtr)(
+          ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, double, double, float, float))v8->klass->vtable._18_SetRect.methodPtr)(
             v8,
             v8->klass->vtable._18_SetRect.method,
             0.0,
             0.0,
-            v5,
-            v4);
+            width,
+            height);
           return;
         }
       }
     }
-    sub_1D0F30C(v8, v9);
+    sub_21FFECC(v8, v9);
   }
 }
 
@@ -3281,7 +3586,7 @@ void NpCombineControl__SetSelectMaterialEnable(NpCombineControl_o *this, const M
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preSelectBaseLb, !this->fields.isSelectBase, 0),
         (preSelectBaseLb = (UnityEngine_Component_o *)this->fields.selectMaterialSvtBtn) == 0) )
   {
-    sub_1D0F30C(preSelectBaseLb, method);
+    sub_21FFECC(preSelectBaseLb, method);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)preSelectBaseLb, this->fields.isSelectBase, 0);
 }
@@ -3293,79 +3598,83 @@ void NpCombineControl__SetStateInfoMsg(NpCombineControl_o *this, int32_t state, 
   int32_t v3; // w20
   UnityEngine_Component_o *detailInfoLb; // x0
   UIWidget_o *v6; // x21
-  __int64 *v7; // x8
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v7; // x1
+  LocalizationManager_c *v8; // x0
+  __int64 *v9; // x20
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = state;
-  if ( (byte_4E7B8CD & 1) == 0 )
+  if ( (byte_593C950 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_7288/*"HEADER_MSG_NPUP_MATERIAL"*/);
-    sub_1D0F0B4(&StringLiteral_5849/*"EXE_SUMMON_COMBINE_TXT"*/);
-    sub_1D0F0B4(&StringLiteral_7542/*"INFO_MSG_NPUP_BASE"*/);
-    sub_1D0F0B4(&StringLiteral_12361/*"SHORT_QP_INFO_MSG"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7B8CD = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_7494/*"HEADER_MSG_NPUP_MATERIAL"*/);
+    sub_21FFC50(&StringLiteral_6009/*"EXE_SUMMON_COMBINE_TXT"*/);
+    sub_21FFC50(&StringLiteral_7759/*"INFO_MSG_NPUP_BASE"*/);
+    sub_21FFC50(&StringLiteral_12680/*"SHORT_QP_INFO_MSG"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593C950 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
   if ( !detailInfoLb
     || (detailInfoLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     detailInfoLb,
-                                                    (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___)) == 0 )
+                                                    (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___)) == 0 )
   {
-LABEL_25:
-    sub_1D0F30C(detailInfoLb, *(_QWORD *)&state);
+LABEL_21:
+    sub_21FFECC(detailInfoLb, *(_QWORD *)&state);
   }
-  v8.fields.r = 0.0;
-  v8.fields.a = 1.0;
-  v8.fields.g = 0.87891;
-  v8.fields.b = 0.98828;
+  v10.fields.r = 0.0;
+  v10.fields.a = 1.0;
+  v10.fields.g = 0.87891;
+  v10.fields.b = 0.98828;
   v6 = (UIWidget_o *)detailInfoLb;
-  UIWidget__set_color((UIWidget_o *)detailInfoLb, v8, 0);
-  if ( v3 == 2 )
+  UIWidget__set_color((UIWidget_o *)detailInfoLb, v10, 0);
+  switch ( v3 )
   {
-    if ( this->fields._IsExeCombine_k__BackingField )
-    {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_5849/*"EXE_SUMMON_COMBINE_TXT"*/;
-    }
-    else
-    {
-      v9.fields.r = 1.0;
-      v9.fields.g = 1.0;
-      v9.fields.b = 1.0;
-      v9.fields.a = 1.0;
-      UIWidget__set_color(v6, v9, 0);
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_12361/*"SHORT_QP_INFO_MSG"*/;
-    }
+    case 2:
+      if ( this->fields._IsExeCombine_k__BackingField )
+      {
+        v8 = LocalizationManager_TypeInfo;
+        v9 = &StringLiteral_6009/*"EXE_SUMMON_COMBINE_TXT"*/;
+        if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          goto LABEL_12;
+      }
+      else
+      {
+        v11.fields.r = 1.0;
+        v11.fields.g = 1.0;
+        v11.fields.b = 1.0;
+        v11.fields.a = 1.0;
+        UIWidget__set_color(v6, v11, 0);
+        v8 = LocalizationManager_TypeInfo;
+        v9 = &StringLiteral_12680/*"SHORT_QP_INFO_MSG"*/;
+        if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          goto LABEL_12;
+      }
+      goto LABEL_11;
+    case 1:
+      v8 = LocalizationManager_TypeInfo;
+      v9 = &StringLiteral_7494/*"HEADER_MSG_NPUP_MATERIAL"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+LABEL_11:
+        j_il2cpp_runtime_class_init_0(v8, v7);
+LABEL_12:
+      *(_QWORD *)&state = LocalizationManager__Get((System_String_o *)*v9, 0);
+      goto LABEL_17;
+    case 0:
+      v8 = LocalizationManager_TypeInfo;
+      v9 = &StringLiteral_7759/*"INFO_MSG_NPUP_BASE"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        goto LABEL_11;
+      goto LABEL_12;
   }
-  else if ( v3 == 1 )
-  {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_7288/*"HEADER_MSG_NPUP_MATERIAL"*/;
-  }
-  else
-  {
-    if ( v3 )
-    {
-      *(_QWORD *)&state = StringLiteral_1/*""*/;
-      goto LABEL_23;
-    }
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_7542/*"INFO_MSG_NPUP_BASE"*/;
-  }
-  *(_QWORD *)&state = LocalizationManager__Get((System_String_o *)*v7, 0);
-LABEL_23:
+  *(_QWORD *)&state = StringLiteral_1/*""*/;
+LABEL_17:
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
   if ( !detailInfoLb )
-    goto LABEL_25;
+    goto LABEL_21;
   UILabel__set_text((UILabel_o *)detailInfoLb, *(System_String_o **)&state, 0);
 }
 
@@ -3374,189 +3683,202 @@ void NpCombineControl__SetSvtNpCombineData(NpCombineControl_o *this, const Metho
 {
   struct System_Collections_Generic_List_SvtUseNpData__o *svtNpDataList; // x0
   __int64 v4; // x1
-  char *Item; // x0
+  void *Item; // x0
   int32_t v6; // w22
-  char *v7; // x21
+  _DWORD *v7; // x21
   int32_t v8; // w20
   long double v9; // q0
   __int64 v10; // x0
-  DataManager_o *v11; // x24
-  int32_t v12; // w25
-  char *v13; // x23
+  DataManager_o **v11; // x8
+  DataManager_o *v12; // x24
+  _QWORD *v13; // x23
+  int32_t v14; // w25
   UILabel_o *currentInfoLb; // x24
-  const MethodInfo *v15; // x1
+  const MethodInfo *v16; // x1
   System_Collections_Generic_List_long__o *selectMtUsrSvtIdList; // x0
   int32_t NpLv; // w24
   UserServantEntity_o *baseUserServantEntity; // x24
-  System_Int64_array *v19; // x0
-  const MethodInfo *v20; // x3
-  SetLevelUpData_o *v21; // x26
+  System_Int64_array *v20; // x0
+  const MethodInfo *v21; // x3
+  Il2CppObject *v22; // x26
   struct SetLevelUpData_o **p_lvUpData; // x25
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
-  __int64 v35; // x1
-  int32_t v36; // w2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  int32_t v39; // w5
-  int64_t v40; // x6
-  System_String_o *v41; // x7
-  __int64 v42; // x1
-  int32_t v43; // w2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  int32_t v46; // w5
-  int64_t v47; // x6
-  System_String_o *v48; // x7
-  int64_t userQP; // x8
-  GrandQuestFolderBoardItem_o *v50; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  __int64 v36; // x1
+  char v37; // w8
+  char *v38; // x0
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  __int64 v45; // x1
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
+  MissionNaviTransitionBoardItem_o *v52; // x0
+  int32_t spendQpVal; // w8
+  int64_t userQP; // x9
   int32_t tmpTargetLv; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4E7B8C3 & 1) == 0 )
+  if ( (byte_593C946 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Any_SvtUseNpData___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    sub_1D0F0B4(&SetLevelUpData_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1D0F0B4(&StringLiteral_1118/*"0"*/);
-    byte_4E7B8C3 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Any_SvtUseNpData___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    sub_21FFC50(&SetLevelUpData_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_21FFC50(&StringLiteral_1198/*"0"*/);
+    byte_593C946 = 1;
   }
-  tmpTargetLv = 0;
   svtNpDataList = this->fields.svtNpDataList;
+  tmpTargetLv = 0;
   if ( svtNpDataList
     && System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)svtNpDataList,
-         (const MethodInfo_325D0AC *)Method_System_Linq_Enumerable_Any_SvtUseNpData___) )
+         (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_SvtUseNpData___) )
   {
-    Item = (char *)this->fields.svtNpDataList;
+    Item = this->fields.svtNpDataList;
     if ( !Item )
       goto LABEL_29;
-    Item = (char *)System_Collections_Generic_List_object___get_Item(
-                     (System_Collections_Generic_List_object__o *)Item,
-                     0,
-                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    Item = System_Collections_Generic_List_object___get_Item(
+             (System_Collections_Generic_List_object__o *)Item,
+             0,
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
     if ( !Item )
       goto LABEL_29;
     v6 = *((_DWORD *)Item + 6);
     v7 = Item;
     if ( v6 >= 1 )
     {
-      Item = (char *)this->fields.maxLvStatusInfo;
+      Item = this->fields.maxLvStatusInfo;
       if ( !Item )
         goto LABEL_29;
-      v8 = *((_DWORD *)v7 + 7);
+      v8 = v7[7];
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Item, 0, 0);
       v10 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-      if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-        v10 = sub_1CE513C(v9);
-      Item = *(char **)(*(_QWORD *)(v10 + 192) + 16LL);
-      if ( (Item[309] & 1) == 0 )
-        Item = (char *)sub_1CE513C(v9);
-      v11 = (DataManager_o *)**((_QWORD **)Item + 23);
-      if ( !v11 )
+      if ( (*(_WORD *)(v10 + 309) & 1) == 0 )
+        v10 = sub_2237AF8(v9);
+      Item = *(void **)(*(_QWORD *)(v10 + 192) + 16LL);
+      if ( (*(_WORD *)((_BYTE *)Item + 309) & 1) == 0 )
+        Item = (void *)sub_2237AF8(v9);
+      v11 = (DataManager_o **)*((_QWORD *)Item + 23);
+      v12 = *v11;
+      if ( !*v11 )
         goto LABEL_29;
-      Item = (char *)DataManager__GetMasterData_object_(
-                       v11,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+      Item = DataManager__GetMasterData_object_(
+               *v11,
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
       if ( !Item )
         goto LABEL_29;
-      Item = (char *)TreasureDvcMaster__GetEntityCheckServantOverwrite(
-                       (TreasureDvcMaster_o *)Item,
-                       *((_DWORD *)v7 + 4),
-                       v6,
-                       0);
+      Item = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Item, v7[4], v6, 0);
       if ( !Item )
         goto LABEL_29;
-      v12 = *((_DWORD *)Item + 12);
       v13 = Item;
-      Item = (char *)DataManager__GetMasterData_object_(
-                       v11,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+      v14 = *((_DWORD *)Item + 12);
+      Item = DataManager__GetMasterData_object_(
+               v12,
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
       if ( !Item )
         goto LABEL_29;
-      Item = (char *)TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)Item, v6, v8, 0);
+      Item = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)Item, v6, v8, 0);
       if ( !Item )
         goto LABEL_29;
       currentInfoLb = this->fields.currentInfoLb;
-      Item = (char *)TreasureDvcLvEntity__getDetail((TreasureDvcLvEntity_o *)Item, 0);
+      Item = TreasureDvcLvEntity__getDetail((TreasureDvcLvEntity_o *)Item, 0);
       if ( !currentInfoLb )
         goto LABEL_29;
       UILabel__set_text(currentInfoLb, (System_String_o *)Item, 0);
-      if ( v8 < v12 )
+      if ( v8 < v14 )
       {
         selectMtUsrSvtIdList = this->fields.selectMtUsrSvtIdList;
         NpLv = v8;
         if ( selectMtUsrSvtIdList )
         {
           baseUserServantEntity = this->fields.baseUserServantEntity;
-          v19 = System_Collections_Generic_List_long___ToArray(
+          v20 = System_Collections_Generic_List_long___ToArray(
                   selectMtUsrSvtIdList,
-                  (const MethodInfo_3945EFC *)Method_System_Collections_Generic_List_long__ToArray__);
-          NpLv = NpCombineControl__GetNpLv(baseUserServantEntity, v19, &tmpTargetLv, v20);
+                  (const MethodInfo_4439BE4 *)Method_System_Collections_Generic_List_long__ToArray__);
+          NpLv = NpCombineControl__GetNpLv(baseUserServantEntity, v20, &tmpTargetLv, v21);
         }
-        v21 = (SetLevelUpData_o *)sub_1D0F300(SetLevelUpData_TypeInfo);
-        SetLevelUpData___ctor(v21, 0);
+        v22 = (Il2CppObject *)sub_21FFEBC(SetLevelUpData_TypeInfo);
+        System_Object___ctor(v22, 0);
         p_lvUpData = &this->fields.lvUpData;
-        this->fields.lvUpData = v21;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.lvUpData, (int32_t)v21, v23, v24, v25, v26, v27, v28);
-        Item = (char *)this->fields.lvUpData;
+        this->fields.lvUpData = (struct SetLevelUpData_o *)v22;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.lvUpData,
+          (int32_t)v22,
+          v24,
+          v25,
+          v26,
+          v27,
+          v28,
+          v29);
+        Item = this->fields.lvUpData;
         if ( Item )
         {
-          *((_DWORD *)Item + 4) = v6;
-          *((_DWORD *)Item + 5) = v6;
-          *((_QWORD *)Item + 3) = 1;
-          Item[112] = v7[65];
-          v35 = *((_QWORD *)v13 + 4);
-          *((_QWORD *)Item + 4) = v35;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(Item + 32), v35, v29, v30, v31, v32, v33, v34);
-          Item = (char *)*p_lvUpData;
+          v36 = v13[4];
+          v37 = *((_BYTE *)v7 + 65);
+          *((_QWORD *)Item + 4) = v36;
+          v38 = (char *)Item + 32;
+          *((_DWORD *)v38 - 4) = v6;
+          *((_DWORD *)v38 - 3) = v6;
+          *((_QWORD *)v38 - 1) = 1;
+          v38[80] = v37;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v38, v36, v30, v31, v32, v33, v34, v35);
+          Item = *p_lvUpData;
           if ( *p_lvUpData )
           {
-            v42 = *((_QWORD *)v13 + 3);
-            *((_QWORD *)Item + 5) = v42;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(Item + 40), v42, v36, v37, v38, v39, v40, v41);
-            Item = (char *)*p_lvUpData;
+            v45 = v13[3];
+            *((_QWORD *)Item + 5) = v45;
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)Item + 40), v45, v39, v40, v41, v42, v43, v44);
+            Item = *p_lvUpData;
             if ( *p_lvUpData )
             {
-              *((_DWORD *)Item + 16) = v8;
-              *((_DWORD *)Item + 17) = NpLv;
-              *((_DWORD *)Item + 19) = this->fields.spendQpVal;
-              userQP = this->fields.userQP;
               *((_QWORD *)Item + 12) = 0;
-              v50 = (GrandQuestFolderBoardItem_o *)(Item + 96);
-              v50[-1].fields._ListCreatedTime_k__BackingField = userQP;
-              sub_1D0F058(v50, 0, v43, v44, v45, v46, v47, v48);
+              v52 = (MissionNaviTransitionBoardItem_o *)((char *)Item + 96);
+              spendQpVal = this->fields.spendQpVal;
+              v52[-1].fields._QuestId_k__BackingField = v8;
+              *(_DWORD *)&v52[-1].fields._IsNotDisplayQuestInfo_k__BackingField = NpLv;
+              userQP = this->fields.userQP;
+              HIDWORD(v52[-1].fields._ClosedMessage_k__BackingField) = spendQpVal;
+              v52[-1].fields._NaviAction_k__BackingField = (struct System_Action_o *)userQP;
+              sub_21FFBF4(v52, 0, v46, v47, v48, v49, v50, v51);
               return;
             }
           }
         }
 LABEL_29:
-        sub_1D0F30C(Item, v4);
+        sub_21FFECC(Item, v4);
       }
       this->fields._IsExeCombine_k__BackingField = 0;
-      NpCombineControl__SetExeBtnState(this, v15);
-      Item = (char *)this->fields.qpLb;
+      NpCombineControl__SetExeBtnState(this, v16);
+      Item = this->fields.qpLb;
       if ( !Item )
         goto LABEL_29;
-      UILabel__set_text((UILabel_o *)Item, (System_String_o *)StringLiteral_1118/*"0"*/, 0);
+      UILabel__set_text((UILabel_o *)Item, (System_String_o *)StringLiteral_1198/*"0"*/, 0);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NpCombineControl__SetTransformNpMask(
         NpCombineControl_o *this,
         bool maskFlag,
@@ -3564,42 +3886,46 @@ void NpCombineControl__SetTransformNpMask(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *transformMaskObject; // x22
+  __int64 v8; // x1
   UnityEngine_Object_o *transformMaskLabel; // x22
-  __int64 v9; // x1
-  UnityEngine_GameObject_o *v10; // x0
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *v11; // x0
 
-  if ( (byte_4E7B8C9 & 1) == 0 )
+  if ( (byte_593C94C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B8C9 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C94C = 1;
   }
   transformMaskObject = (UnityEngine_Object_o *)this->fields.transformMaskObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, maskFlag);
   if ( !UnityEngine_Object__op_Equality(transformMaskObject, 0, 0) )
   {
     transformMaskLabel = (UnityEngine_Object_o *)this->fields.transformMaskLabel;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
     if ( !UnityEngine_Object__op_Equality(transformMaskLabel, 0, 0) )
     {
-      v10 = this->fields.transformMaskObject;
-      if ( v10 )
+      v11 = this->fields.transformMaskObject;
+      if ( maskFlag )
       {
-        if ( !maskFlag )
+        if ( v11 )
         {
-          UnityEngine_GameObject__SetActive(v10, 0, 0);
-          return;
-        }
-        UnityEngine_GameObject__SetActive(v10, 1, 0);
-        v10 = (UnityEngine_GameObject_o *)this->fields.transformMaskLabel;
-        if ( v10 )
-        {
-          UILabel__set_text((UILabel_o *)v10, closedMessage, 0);
-          return;
+          UnityEngine_GameObject__SetActive(v11, 1, 0);
+          v11 = (UnityEngine_GameObject_o *)this->fields.transformMaskLabel;
+          if ( v11 )
+          {
+            UILabel__set_text((UILabel_o *)v11, closedMessage, 0);
+            return;
+          }
         }
       }
-      sub_1D0F30C(v10, v9);
+      else if ( v11 )
+      {
+        UnityEngine_GameObject__SetActive(v11, 0, 0);
+        return;
+      }
+      sub_21FFECC(v11, v10);
     }
   }
 }

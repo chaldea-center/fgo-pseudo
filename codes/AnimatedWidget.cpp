@@ -9,126 +9,128 @@ void AnimatedWidget___ctor(AnimatedWidget_o *this, const MethodInfo *method)
 void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mWidget; // x20
-  UIWidget_o *v4; // x20
+  __int64 v4; // x1
+  UIWidget_o *v5; // x20
   float width; // s9
-  double v6; // d8
-  __int64 v7; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
-  double v10; // d0
+  double v7; // d8
+  __int64 v8; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
   double v11; // d0
-  double v12; // d1
+  double v12; // d0
   double v13; // d1
-  int32_t v14; // w1
-  UIWidget_o *v15; // x20
+  double v14; // d1
+  int32_t v15; // w1
+  __int64 v16; // x1
+  UIWidget_o *v17; // x20
   float height; // s9
-  double v17; // d8
-  const MethodInfo *v18; // x2
-  double v19; // d0
-  double v20; // d0
-  double v21; // d1
-  double v22; // d1
-  int32_t v23; // w1
+  double v19; // d8
+  const MethodInfo *v20; // x2
+  double v21; // d0
+  double v22; // d0
+  double v23; // d1
+  double v24; // d1
+  int32_t v25; // w1
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4E7BFBD & 1) == 0 )
+  if ( (byte_593CF06 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFBD = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF06 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mWidget, 0, 0) )
   {
-    v4 = this->fields.mWidget;
+    v5 = this->fields.mWidget;
     width = this->fields.width;
-    if ( !byte_4E71453 )
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v6 = width;
-    v10 = modf(width, &iptr);
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4);
+    v7 = width;
+    v11 = modf(width, &iptr);
     if ( width >= 0.0 )
     {
-      if ( v10 != 0.5 )
+      if ( v11 != 0.5 )
       {
-        v11 = floor(v6 + 0.5);
+        v12 = floor(v7 + 0.5);
         goto LABEL_21;
       }
-      v11 = iptr;
-      v12 = 1.0;
+      v13 = 1.0;
+      v12 = iptr;
     }
     else
     {
-      if ( v10 != -0.5 )
+      if ( v11 != -0.5 )
       {
-        v11 = ceil(v6 + -0.5);
+        v12 = ceil(v7 + -0.5);
         goto LABEL_21;
       }
-      v11 = iptr;
-      v12 = -1.0;
+      v12 = iptr;
+      v13 = -1.0;
     }
-    v13 = v11 + v12;
-    if ( ((__int64)v11 & 1) != 0 )
-      v11 = v13;
+    v14 = v12 + v13;
+    if ( ((__int64)v12 & 1) != 0 )
+      v12 = v14;
 LABEL_21:
-    if ( !v4 )
+    if ( !v5 )
       goto LABEL_44;
-    if ( v11 == INFINITY )
-      v14 = 0x80000000;
+    if ( v12 == INFINITY )
+      v15 = 0x80000000;
     else
-      v14 = (int)v11;
-    UIWidget__set_width(v4, v14, v9);
-    v15 = this->fields.mWidget;
+      v15 = (int)v12;
+    UIWidget__set_width(v5, v15, v10);
+    v17 = this->fields.mWidget;
     height = this->fields.height;
-    if ( !byte_4E71453 )
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v17 = height;
-    v19 = modf(height, &iptr);
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16);
+    v19 = height;
+    v21 = modf(height, &iptr);
     if ( height >= 0.0 )
     {
-      if ( v19 != 0.5 )
+      if ( v21 != 0.5 )
       {
-        v20 = floor(v17 + 0.5);
+        v22 = floor(v19 + 0.5);
         goto LABEL_39;
       }
-      v20 = iptr;
-      v21 = 1.0;
+      v23 = 1.0;
+      v22 = iptr;
     }
     else
     {
-      if ( v19 != -0.5 )
+      if ( v21 != -0.5 )
       {
-        v20 = ceil(v17 + -0.5);
+        v22 = ceil(v19 + -0.5);
         goto LABEL_39;
       }
-      v20 = iptr;
-      v21 = -1.0;
+      v22 = iptr;
+      v23 = -1.0;
     }
-    v22 = v20 + v21;
-    if ( ((__int64)v20 & 1) != 0 )
-      v20 = v22;
+    v24 = v22 + v23;
+    if ( ((__int64)v22 & 1) != 0 )
+      v22 = v24;
 LABEL_39:
-    if ( v15 )
+    if ( v17 )
     {
-      if ( v20 == INFINITY )
-        v23 = 0x80000000;
+      if ( v22 == INFINITY )
+        v25 = 0x80000000;
       else
-        v23 = (int)v20;
-      UIWidget__set_height(v15, v23, v18);
+        v25 = (int)v22;
+      UIWidget__set_height(v17, v25, v20);
       return;
     }
 LABEL_44:
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v8, v9);
   }
 }
 
@@ -136,23 +138,31 @@ LABEL_44:
 void AnimatedWidget__OnEnable(AnimatedWidget_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4E7BFBC & 1) == 0 )
+  if ( (byte_593CF05 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4E7BFBC = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_593CF05 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   AnimatedWidget__LateUpdate(this, v10);
 }

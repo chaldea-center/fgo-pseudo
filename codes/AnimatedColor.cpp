@@ -9,7 +9,7 @@ void AnimatedColor___ctor(AnimatedColor_o *this, const MethodInfo *method)
 void AnimatedColor__LateUpdate(AnimatedColor_o *this, const MethodInfo *method)
 {
   if ( !this->fields.mWidget )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   UIWidget__set_color(this->fields.mWidget, this->fields.color, method);
 }
 
@@ -17,23 +17,31 @@ void AnimatedColor__LateUpdate(AnimatedColor_o *this, const MethodInfo *method)
 void AnimatedColor__OnEnable(AnimatedColor_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4E7BFBB & 1) == 0 )
+  if ( (byte_593CF04 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4E7BFBB = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_593CF04 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   AnimatedColor__LateUpdate(this, v10);
 }

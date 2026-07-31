@@ -1,12 +1,12 @@
 void GachaGroupMaster___ctor(GachaGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77A6D & 1) == 0 )
+  if ( (byte_5938A7E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int___ctor__);
-    byte_4E77A6D = 1;
+    sub_21FFC50(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int___ctor__);
+    byte_5938A7E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    165,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int___ctor__);
+    167,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int___ctor__);
 }

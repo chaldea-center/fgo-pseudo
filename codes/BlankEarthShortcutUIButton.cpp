@@ -14,8 +14,8 @@ void BlankEarthShortcutUIButton__OnPress(BlankEarthShortcutUIButton_o *this, boo
 {
   BlankEarthShortcutUIButton_c *klass; // x8
   int32_t waitState; // w8
-  bool v6; // w1
-  UICommonButton_o *v7; // x0
+  UICommonButton_o *v6; // x0
+  bool v7; // w1
 
   if ( !isPress )
   {
@@ -24,17 +24,17 @@ void BlankEarthShortcutUIButton__OnPress(BlankEarthShortcutUIButton_o *this, boo
     waitState = this->fields.waitState;
     if ( waitState == 2 )
     {
-      v7 = (UICommonButton_o *)this;
-      v6 = 0;
+      v6 = (UICommonButton_o *)this;
+      v7 = 0;
     }
     else
     {
       if ( waitState != 1 )
         return;
-      v6 = 1;
-      v7 = (UICommonButton_o *)this;
+      v6 = (UICommonButton_o *)this;
+      v7 = 1;
     }
-    UICommonButton__SetButtonEnable(v7, v6, 1, 0);
+    UICommonButton__SetButtonEnable(v6, v7, 1, 0);
     return;
   }
   ActionExtensions__Call(this->fields.onPressedAction, 0);
@@ -64,17 +64,17 @@ void BlankEarthShortcutUIButton__SetPressAction(
         System_Action_o *pressAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.onPressedAction = pressAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onPressedAction,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onPressedAction,
     (int32_t)pressAction,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

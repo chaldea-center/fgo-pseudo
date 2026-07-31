@@ -1,13 +1,13 @@
 void ServantScriptAddEntity___ctor(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E780ED & 1) == 0 )
+  if ( (byte_5939109 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E780ED = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_5939109 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -22,34 +22,40 @@ UnityEngine_Vector2_o ServantScriptAddEntity__getOffset(
         int32_t offsetKind,
         const MethodInfo *method)
 {
+  int32_t *p_offsetXEventReward; // x12
+  int32_t *p_offsetYEventReward; // x13
+  int32_t *p_offsetXGrandBoard; // x10
+  int32_t *p_offsetYGrandBoard; // x11
   int32_t *p_offsetXEventShop; // x8
   int32_t *p_offsetYEventShop; // x9
-  float v5; // s0
-  float v6; // s1
+  float v9; // s0
+  float v10; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  switch ( offsetKind )
+  p_offsetXEventReward = &this->fields.offsetXEventReward;
+  p_offsetYEventReward = &this->fields.offsetYEventReward;
+  p_offsetXGrandBoard = &this->fields.offsetXGrandBoard;
+  p_offsetYGrandBoard = &this->fields.offsetYGrandBoard;
+  if ( offsetKind == 8 )
   {
-    case 4:
-      p_offsetXEventShop = &this->fields.offsetXEventShop;
-      p_offsetYEventShop = &this->fields.offsetYEventShop;
-      break;
-    case 9:
-      p_offsetXEventShop = &this->fields.offsetXGrandBoard;
-      p_offsetYEventShop = &this->fields.offsetYGrandBoard;
-      break;
-    case 8:
-      p_offsetXEventShop = &this->fields.offsetXGrandSelect;
-      p_offsetYEventShop = &this->fields.offsetYGrandSelect;
-      break;
-    default:
-      p_offsetXEventShop = &this->fields.offsetXEventReward;
-      p_offsetYEventShop = &this->fields.offsetYEventReward;
-      break;
+    p_offsetYEventReward = &this->fields.offsetYGrandSelect;
+    p_offsetXEventReward = &this->fields.offsetXGrandSelect;
   }
-  v5 = (float)*p_offsetXEventShop;
-  v6 = (float)*p_offsetYEventShop;
-  result.fields.y = v6;
-  result.fields.x = v5;
+  p_offsetXEventShop = &this->fields.offsetXEventShop;
+  p_offsetYEventShop = &this->fields.offsetYEventShop;
+  if ( offsetKind != 9 )
+  {
+    p_offsetYGrandBoard = p_offsetYEventReward;
+    p_offsetXGrandBoard = p_offsetXEventReward;
+  }
+  if ( offsetKind != 4 )
+  {
+    p_offsetYEventShop = p_offsetYGrandBoard;
+    p_offsetXEventShop = p_offsetXGrandBoard;
+  }
+  v9 = (float)*p_offsetXEventShop;
+  v10 = (float)*p_offsetYEventShop;
+  result.fields.y = v10;
+  result.fields.x = v9;
   return result;
 }

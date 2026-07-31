@@ -10,14 +10,14 @@ void FirendLockSyncRequest__AddField(
         System_Int64_array *data,
         const MethodInfo *method)
 {
-  if ( (byte_4E791E3 & 1) == 0 )
+  if ( (byte_593A237 & 1) == 0 )
   {
-    sub_1D0F0B4(&long___TypeInfo);
-    byte_4E791E3 = 1;
+    sub_21FFC50(&long___TypeInfo);
+    byte_593A237 = 1;
   }
   if ( !data )
-    data = (System_Int64_array *)sub_1D0F15C(long___TypeInfo, 0);
-  RequestBase__addField_45601344((RequestBase_o *)this, fieldName, &data->obj, 0);
+    data = (System_Int64_array *)sub_21FFD10(long___TypeInfo, 0);
+  RequestBase__addField_51191900((RequestBase_o *)this, fieldName, &data->obj, 0);
 }
 
 
@@ -33,22 +33,22 @@ void FirendLockSyncRequest__beginRequest(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x3
 
-  if ( (byte_4E791E2 & 1) == 0 )
+  if ( (byte_593A236 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21756/*"lockFriendUserIds"*/);
-    sub_1D0F0B4(&StringLiteral_24926/*"unlockFriendUserIds"*/);
-    sub_1D0F0B4(&StringLiteral_24925/*"unlockFollowUserIds"*/);
-    sub_1D0F0B4(&StringLiteral_21755/*"lockFollowUserIds"*/);
-    byte_4E791E2 = 1;
+    sub_21FFC50(&StringLiteral_22364/*"lockFriendUserIds"*/);
+    sub_21FFC50(&StringLiteral_25715/*"unlockFriendUserIds"*/);
+    sub_21FFC50(&StringLiteral_25714/*"unlockFollowUserIds"*/);
+    sub_21FFC50(&StringLiteral_22363/*"lockFollowUserIds"*/);
+    byte_593A236 = 1;
   }
   FirendLockSyncRequest__AddField(
     this,
-    (System_String_o *)StringLiteral_21756/*"lockFriendUserIds"*/,
+    (System_String_o *)StringLiteral_22364/*"lockFriendUserIds"*/,
     lockFriendUserIds,
     (const MethodInfo *)lockFollowUserIds);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24926/*"unlockFriendUserIds"*/, unlockFriendUserIds, v11);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_21755/*"lockFollowUserIds"*/, lockFollowUserIds, v12);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24925/*"unlockFollowUserIds"*/, unlockFollowUserIds, v13);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_25715/*"unlockFriendUserIds"*/, unlockFriendUserIds, v11);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_22363/*"lockFollowUserIds"*/, lockFollowUserIds, v12);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_25714/*"unlockFollowUserIds"*/, unlockFollowUserIds, v13);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -57,16 +57,16 @@ System_String_o *FirendLockSyncRequest__getURL(FirendLockSyncRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E791E1 & 1) == 0 )
+  if ( (byte_593A235 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20036/*"friend/lockSync"*/);
-    byte_4E791E1 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_20561/*"friend/lockSync"*/);
+    byte_593A235 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_20036/*"friend/lockSync"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20561/*"friend/lockSync"*/, 0);
 }
 
 
@@ -78,19 +78,19 @@ void FirendLockSyncRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4E791E4 & 1) == 0 )
+  if ( (byte_593A238 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E791E4 = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A238 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(87, responseList, 0);
-  if ( v5 && ResponseData__checkError_45600864(v5, 0) )
-    v6 = &StringLiteral_22821/*"ok"*/;
+  if ( v5 && ResponseData__checkError_51190916(v5, 0) )
+    v6 = &StringLiteral_23468/*"ok"*/;
   else
-    v6 = &StringLiteral_22648/*"ng"*/;
+    v6 = &StringLiteral_23290/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

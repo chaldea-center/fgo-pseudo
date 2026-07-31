@@ -1,12 +1,12 @@
 void CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7A579 & 1) == 0 )
+  if ( (byte_593B5DA & 1) == 0 )
   {
-    sub_1D0F0B4(&EffectComponent_TypeInfo);
-    byte_4E7A579 = 1;
+    sub_21FFC50(&EffectComponent_TypeInfo);
+    byte_593B5DA = 1;
   }
-  if ( !EffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo);
+  if ( !*(&EffectComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo, method);
   EffectComponent___ctor((EffectComponent_o *)this, 0);
 }
 
@@ -21,55 +21,53 @@ void CardEffectComponent__SetCardEffectDepth(
   struct UIUnityRenderer_array *onCardEffectArray; // x22
   int max_length; // w8
   CardEffectComponent_o *v7; // x20
-  unsigned int v8; // w23
-  int32_t v9; // w21
+  __int64 v9; // x23
   struct UIUnityRenderer_array *underCardEffectArray; // x20
   int v11; // w8
-  unsigned int v12; // w21
+  __int64 v12; // x21
   int32_t v13; // w19
 
   onCardEffectArray = this->fields.onCardEffectArray;
   if ( !onCardEffectArray )
-    goto LABEL_15;
+    goto LABEL_14;
   max_length = onCardEffectArray->max_length;
   v7 = this;
   if ( max_length >= 1 )
   {
-    v8 = 0;
-    v9 = onBaseDepth + 1;
-    while ( v8 < max_length )
+    v9 = 0;
+    while ( (unsigned int)v9 < max_length )
     {
-      this = (CardEffectComponent_o *)onCardEffectArray->m_Items[v8];
+      this = (CardEffectComponent_o *)onCardEffectArray->m_Items[v9];
       if ( !this )
-        goto LABEL_15;
-      UIWidget__set_depth((UIWidget_o *)this, v9, 0);
+        goto LABEL_14;
+      UIWidget__set_depth((UIWidget_o *)this, onBaseDepth + 1, 0);
       max_length = onCardEffectArray->max_length;
-      if ( (int)++v8 >= max_length )
+      if ( (int)++v9 >= max_length )
         goto LABEL_7;
     }
-LABEL_14:
-    sub_1D0F314(this);
+LABEL_15:
+    sub_21FFED4(this);
   }
 LABEL_7:
   underCardEffectArray = v7->fields.underCardEffectArray;
   if ( !underCardEffectArray )
-LABEL_15:
-    sub_1D0F30C(this, *(_QWORD *)&onBaseDepth);
+LABEL_14:
+    sub_21FFECC(this, *(_QWORD *)&onBaseDepth);
   v11 = underCardEffectArray->max_length;
   if ( v11 >= 1 )
   {
     v12 = 0;
     v13 = underBaseDepth - 1;
-    while ( v12 < v11 )
+    while ( (unsigned int)v12 < v11 )
     {
       this = (CardEffectComponent_o *)underCardEffectArray->m_Items[v12];
       if ( !this )
-        goto LABEL_15;
+        goto LABEL_14;
       UIWidget__set_depth((UIWidget_o *)this, v13, 0);
       v11 = underCardEffectArray->max_length;
       if ( (int)++v12 >= v11 )
         return;
     }
-    goto LABEL_14;
+    goto LABEL_15;
   }
 }

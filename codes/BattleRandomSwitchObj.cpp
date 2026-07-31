@@ -1,21 +1,21 @@
 void BattleRandomSwitchObj___ctor(BattleRandomSwitchObj_o *this, const MethodInfo *method)
 {
   struct BattleRandomSwitchObj_SwitchData_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E7A335 & 1) == 0 )
+  if ( (byte_593B39A & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleRandomSwitchObj_SwitchData___TypeInfo);
-    byte_4E7A335 = 1;
+    sub_21FFC50(&BattleRandomSwitchObj_SwitchData___TypeInfo);
+    byte_593B39A = 1;
   }
-  v3 = (struct BattleRandomSwitchObj_SwitchData_array *)sub_1D0F15C(BattleRandomSwitchObj_SwitchData___TypeInfo, 2);
+  v3 = (struct BattleRandomSwitchObj_SwitchData_array *)sub_21FFD10(BattleRandomSwitchObj_SwitchData___TypeInfo, 2);
   this->fields.switchDataArray = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.switchDataArray, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.switchDataArray, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -25,20 +25,20 @@ void BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, const Metho
   __int64 v3; // x20
   __int64 Data; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   WeightRate_int__o *v12; // x21
   __int64 v13; // x22
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   struct BattleRandomSwitchObj_SwitchData_array *switchDataArray; // x8
   int32_t v21; // w2
   int32_t max_length; // w9
@@ -51,39 +51,39 @@ void BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, const Metho
   System_Object_array *v29; // x19
   System_Action_object__o *v30; // x21
 
-  if ( (byte_4E7A334 & 1) == 0 )
+  if ( (byte_593B399 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_GameObject__TypeInfo);
-    sub_1D0F0B4(&Method_System_Array_ForEach_GameObject___);
-    sub_1D0F0B4(&Method_BattleRandomSwitchObj___c__DisplayClass3_0__Execution_b__0__);
-    sub_1D0F0B4(&BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
-    sub_1D0F0B4(&Method_BattleRandomSwitchObj___c__DisplayClass3_1__Execution_b__1__);
-    sub_1D0F0B4(&BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
-    sub_1D0F0B4(&Method_WeightRate_int___ctor__);
-    sub_1D0F0B4(&Method_WeightRate_int__getData__);
-    sub_1D0F0B4(&Method_WeightRate_int__getTotalWeight__);
-    sub_1D0F0B4(&Method_WeightRate_int__setWeight__);
-    sub_1D0F0B4(&WeightRate_int__TypeInfo);
-    byte_4E7A334 = 1;
+    sub_21FFC50(&System_Action_GameObject__TypeInfo);
+    sub_21FFC50(&Method_System_Array_ForEach_GameObject___);
+    sub_21FFC50(&Method_BattleRandomSwitchObj___c__DisplayClass3_0__Execution_b__0__);
+    sub_21FFC50(&BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
+    sub_21FFC50(&Method_BattleRandomSwitchObj___c__DisplayClass3_1__Execution_b__1__);
+    sub_21FFC50(&BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
+    sub_21FFC50(&Method_WeightRate_int___ctor__);
+    sub_21FFC50(&Method_WeightRate_int__getData__);
+    sub_21FFC50(&Method_WeightRate_int__getTotalWeight__);
+    sub_21FFC50(&Method_WeightRate_int__setWeight__);
+    sub_21FFC50(&WeightRate_int__TypeInfo);
+    byte_593B399 = 1;
   }
-  v3 = sub_1D0F300(BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
+  v3 = sub_21FFEBC(BattleRandomSwitchObj___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    goto LABEL_20;
+    goto LABEL_14;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
-  v12 = (WeightRate_int__o *)sub_1D0F300(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v12, (const MethodInfo_3D9B2FC *)Method_WeightRate_int___ctor__);
-  v13 = sub_1D0F300(BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  v12 = (WeightRate_int__o *)sub_21FFEBC(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v12, (const MethodInfo_3D6E5DC *)Method_WeightRate_int___ctor__);
+  v13 = sub_21FFEBC(BattleRandomSwitchObj___c__DisplayClass3_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
-    goto LABEL_20;
+    goto LABEL_14;
   *(_QWORD *)(v13 + 24) = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v13 + 24), v3, v14, v15, v16, v17, v18, v19);
-  *(_DWORD *)(v13 + 16) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 24), v3, v14, v15, v16, v17, v18, v19);
   switchDataArray = this->fields.switchDataArray;
+  *(_DWORD *)(v13 + 16) = 0;
   if ( !switchDataArray )
-    goto LABEL_20;
+    goto LABEL_14;
   v21 = 0;
   while ( 1 )
   {
@@ -91,24 +91,24 @@ void BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, const Metho
     if ( v21 >= max_length )
       break;
     if ( v21 >= (unsigned int)max_length )
-      goto LABEL_21;
+      goto LABEL_20;
     if ( v12 )
     {
       WeightRate_int___setWeight(
         v12,
         switchDataArray->m_Items[v21].fields.weight,
         v21,
-        (const MethodInfo_3D9A818 *)Method_WeightRate_int__setWeight__);
+        (const MethodInfo_3D6DA50 *)Method_WeightRate_int__setWeight__);
       v23 = this->fields.switchDataArray;
       if ( v23 )
       {
         v24 = *(int *)(v13 + 16);
         if ( (unsigned int)v24 >= LODWORD(v23->max_length) )
-          goto LABEL_21;
+          goto LABEL_20;
         objs = (System_Object_array *)v23->m_Items[v24].fields.objs;
         if ( objs )
         {
-          v26 = (System_Action_object__o *)sub_1D0F300(System_Action_GameObject__TypeInfo);
+          v26 = (System_Action_object__o *)sub_21FFEBC(System_Action_GameObject__TypeInfo);
           System_Action_object____ctor(
             v26,
             (Il2CppObject *)v13,
@@ -117,33 +117,33 @@ void BattleRandomSwitchObj__Execution(BattleRandomSwitchObj_o *this, const Metho
           System_Array__ForEach_object_(
             objs,
             (System_Action_T__o *)v26,
-            (const MethodInfo_3358D74 *)Method_System_Array_ForEach_GameObject___);
+            (const MethodInfo_3979408 *)Method_System_Array_ForEach_GameObject___);
+          switchDataArray = this->fields.switchDataArray;
           v21 = *(_DWORD *)(v13 + 16) + 1;
           *(_DWORD *)(v13 + 16) = v21;
-          switchDataArray = this->fields.switchDataArray;
           if ( switchDataArray )
             continue;
         }
       }
     }
-    goto LABEL_20;
+    goto LABEL_14;
   }
   if ( !v12 )
-    goto LABEL_20;
-  v27 = UnityEngine_Random__Range_73319196(0, v12->fields.totalweight, 0);
-  Data = WeightRate_int___getData(v12, v27, (const MethodInfo_3D9AC8C *)Method_WeightRate_int__getData__);
-  *(_DWORD *)(v3 + 24) = Data;
+    goto LABEL_14;
+  v27 = UnityEngine_Random__Range_83187376(0, v12->fields.totalweight, 0);
+  Data = WeightRate_int___getData(v12, v27, (const MethodInfo_3D6DEE8 *)Method_WeightRate_int__getData__);
   v28 = this->fields.switchDataArray;
+  *(_DWORD *)(v3 + 24) = Data;
   if ( !v28 )
-    goto LABEL_20;
+    goto LABEL_14;
   if ( (unsigned int)Data >= LODWORD(v28->max_length) )
-LABEL_21:
-    sub_1D0F314(Data);
+LABEL_20:
+    sub_21FFED4(Data);
   v29 = (System_Object_array *)v28->m_Items[(int)Data].fields.objs;
   if ( !v29 )
-LABEL_20:
-    sub_1D0F30C(Data, v5);
-  v30 = (System_Action_object__o *)sub_1D0F300(System_Action_GameObject__TypeInfo);
+LABEL_14:
+    sub_21FFECC(Data, v5);
+  v30 = (System_Action_object__o *)sub_21FFEBC(System_Action_GameObject__TypeInfo);
   System_Action_object____ctor(
     v30,
     (Il2CppObject *)v3,
@@ -152,7 +152,7 @@ LABEL_20:
   System_Array__ForEach_object_(
     v29,
     (System_Action_T__o *)v30,
-    (const MethodInfo_3358D74 *)Method_System_Array_ForEach_GameObject___);
+    (const MethodInfo_3979408 *)Method_System_Array_ForEach_GameObject___);
 }
 
 
@@ -188,10 +188,10 @@ void BattleRandomSwitchObj___c__DisplayClass3_0___Execution_b__0(
     goto LABEL_6;
   hitIndex = this->fields.hitIndex;
   if ( (unsigned int)hitIndex >= LODWORD(switchDataArray->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   if ( !g )
 LABEL_6:
-    sub_1D0F30C(this, g);
+    sub_21FFECC(this, g);
   UnityEngine_GameObject__SetActive(g, switchDataArray->m_Items[hitIndex].fields.hitValue, 0);
 }
 
@@ -225,9 +225,9 @@ void BattleRandomSwitchObj___c__DisplayClass3_1___Execution_b__1(
     goto LABEL_7;
   i = this->fields.i;
   if ( (unsigned int)i >= LODWORD(switchDataArray->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   if ( !g )
 LABEL_7:
-    sub_1D0F30C(this, g);
+    sub_21FFECC(this, g);
   UnityEngine_GameObject__SetActive(g, switchDataArray->m_Items[i].fields.initValue, 0);
 }

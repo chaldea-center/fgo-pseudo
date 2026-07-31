@@ -23,6 +23,7 @@ void SummonBannerIconComponent__OnClickIcon(SummonBannerIconComponent_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SummonBannerIconComponent__SetInfo(
         SummonBannerIconComponent_o *this,
         int32_t moveIndex,
@@ -32,28 +33,31 @@ void SummonBannerIconComponent__SetInfo(
         System_Action_int__o *onClickAction,
         const MethodInfo *method)
 {
+  UnityEngine_Object_c *v13; // x0
   UIAtlas_o *Component_object; // x0
-  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x2
   UILabel_o *summonedLabel; // x22
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
 
-  if ( (byte_4E73973 & 1) == 0 )
+  if ( (byte_59348C5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_12633/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/);
-    byte_4E73973 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_12954/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/);
+    byte_59348C5 = 1;
   }
+  v13 = UnityEngine_Object_TypeInfo;
   this->fields.moveIndex = moveIndex;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&v13->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v13, *(_QWORD *)&moveIndex, spriteName);
   Component_object = (UIAtlas_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)bannerIconAtlas, 0, 0);
   if ( ((unsigned __int8)Component_object & 1) != 0 )
   {
@@ -61,7 +65,7 @@ void SummonBannerIconComponent__SetInfo(
       goto LABEL_21;
     Component_object = (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                                       bannerIconAtlas,
-                                      (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     if ( !this->fields.bannerSprite )
       goto LABEL_21;
     UISprite__set_atlas(this->fields.bannerSprite, Component_object, 0);
@@ -77,16 +81,16 @@ void SummonBannerIconComponent__SetInfo(
   if ( isSummoned )
   {
     summonedLabel = this->fields.summonedLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Component_object = (UIAtlas_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12633/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v16);
+    Component_object = (UIAtlas_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12954/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, 0);
     if ( summonedLabel )
     {
       UILabel__set_text(summonedLabel, (System_String_o *)Component_object, 0);
       goto LABEL_16;
     }
 LABEL_21:
-    sub_1D0F30C(Component_object, v14);
+    sub_21FFECC(Component_object, v15);
   }
 LABEL_16:
   Component_object = (UIAtlas_o *)this->fields.summonedLabel;
@@ -104,13 +108,13 @@ LABEL_16:
     goto LABEL_21;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, isSummoned, 0);
   this->fields.onClickAction = onClickAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onClickAction,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onClickAction,
     (int32_t)onClickAction,
-    v16,
-    v17,
     v18,
     v19,
     v20,
-    v21);
+    v21,
+    v22,
+    v23);
 }

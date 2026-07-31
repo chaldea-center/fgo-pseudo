@@ -7,45 +7,45 @@ void BlankEarthShortcutButtonListViewItem___ctor(
         System_Action_o *onClickAction,
         const MethodInfo *method)
 {
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   __int64 v18; // x0
   __int64 v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
   struct BlankEarthSpotNavimenuEntity_o *blankEarthSpotNavimenuEntity_k__BackingField; // x8
   struct System_String_o *name; // x1
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
   int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
+  bool v32; // w6
+  bool v33; // w7
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
   int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
-  int32_t v40; // w2
-  int32_t v41; // w3
-  System_String_o *v42; // x4
+  bool v38; // w6
+  bool v39; // w7
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
   int32_t v43; // w5
-  int64_t v44; // x6
-  System_String_o *v45; // x7
+  bool v44; // w6
+  bool v45; // w7
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)ent,
     v12,
     v13,
@@ -55,12 +55,12 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v17);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_1D0F30C(v18, v19);
-  this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
+    sub_21FFECC(v18, v19);
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
+  this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   this->fields._Name_k__BackingField = name;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v20,
     v21,
@@ -69,8 +69,8 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v24,
     v25);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)commonUiAtlas,
     v28,
     v29,
@@ -79,8 +79,8 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v32,
     v33);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)iconAtlas,
     v34,
     v35,
@@ -89,8 +89,8 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v38,
     v39);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)onClickAction,
     v40,
     v41,
@@ -154,17 +154,17 @@ void BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
         UIAtlas_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -178,17 +178,17 @@ void BlankEarthShortcutButtonListViewItem__set_IconAtlas(
         UIAtlas_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -211,17 +211,17 @@ void BlankEarthShortcutButtonListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -235,17 +235,17 @@ void BlankEarthShortcutButtonListViewItem__set_OnClickAction(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -259,17 +259,17 @@ void BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenuEntity(
         BlankEarthSpotNavimenuEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

@@ -1,63 +1,71 @@
 void ListViewItem___ctor(ListViewItem_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w1
+  bool v6; // w6
+  bool v7; // w7
+  struct System_String_o *v9; // x1
 
-  if ( (byte_4E78DB6 & 1) == 0 )
+  if ( (byte_5939E05 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78DB6 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939E05 = 1;
   }
+  v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.selectNum = -1;
-  v9 = StringLiteral_1/*""*/;
-  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sortStr1, v9, v2, v3, v4, v5, v6, v7);
+  this->fields.sortStr1 = v9;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.basePosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.basePosition.fields.x = 0;
 }
 
 
-void ListViewItem___ctor_45157124(ListViewItem_o *this, int32_t index, const MethodInfo *method)
+void ListViewItem___ctor_50749276(ListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v10; // w1
-  int32_t v11; // w1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v6; // w6
+  bool v7; // w7
+  struct System_String_o *v10; // x1
+  struct System_String_o *v11; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
 
-  if ( (byte_4E78DB7 & 1) == 0 )
+  if ( (byte_5939E06 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78DB7 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939E06 = 1;
   }
+  v10 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.selectNum = -1;
-  v10 = StringLiteral_1/*""*/;
-  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sortStr1, v10, (int32_t)method, v3, v4, v5, v6, v7);
+  this->fields.sortStr1 = v10;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1,
+    (int32_t)v10,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   System_Object___ctor((Il2CppObject *)this, 0);
+  v11 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.sortIndex = index;
   this->fields.loopIndex = index;
   this->fields.index = index;
   this->fields.sortValue2 = 0;
   this->fields.sortValue1 = 0;
   this->fields.sortValue0 = 0;
-  v11 = StringLiteral_1/*""*/;
-  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sortStr1, v11, v12, v13, v14, v15, v16, v17);
+  this->fields.sortStr1 = v11;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   this->fields.basePosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.basePosition.fields.x = 0;
 }
@@ -77,28 +85,34 @@ bool ListViewItem__IsMatchFilter(ListViewItem_o *this, ListViewSort_o *sort, con
 
 void ListViewItem__Set(ListViewItem_o *this, ListViewItem_o *item, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_String_o *sortStr1; // x1
+  __int64 v10; // d0
+  __int128 v11; // q1
   struct System_String_o **p_sortStr1; // x20
-  struct System_String_o *v11; // x9
+  int64_t sortValue1; // x9
+  struct System_String_o *v14; // x9
 
   if ( !item )
-    sub_1D0F30C(this, 0);
-  *(_QWORD *)&this->fields.index = *(_QWORD *)&item->fields.index;
-  this->fields.loopIndex = item->fields.loopIndex;
-  *(_OWORD *)&this->fields.sortValue0 = *(_OWORD *)&item->fields.sortValue0;
-  this->fields.sortValue1 = item->fields.sortValue1;
+    sub_21FFECC(this, 0);
   sortStr1 = item->fields.sortStr1;
+  v10 = *(_QWORD *)&item->fields.index;
+  v11 = *(_OWORD *)&item->fields.sortValue0;
   this->fields.sortStr1 = sortStr1;
   p_sortStr1 = &this->fields.sortStr1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.sortStr1,
+  *(_QWORD *)&this->fields.index = v10;
+  *(_OWORD *)&this->fields.sortValue0 = v11;
+  sortValue1 = item->fields.sortValue1;
+  this->fields.loopIndex = item->fields.loopIndex;
+  this->fields.sortValue1 = sortValue1;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1,
     (int32_t)sortStr1,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -106,9 +120,9 @@ void ListViewItem__Set(ListViewItem_o *this, ListViewItem_o *item, const MethodI
     v7);
   *(_OWORD *)(p_sortStr1 + 1) = *(_OWORD *)&item->fields.sortValue1B;
   p_sortStr1[3] = (struct System_String_o *)item->fields.sortValue2B;
-  v11 = *(struct System_String_o **)&item->fields.basePosition.fields.x;
+  v14 = *(struct System_String_o **)&item->fields.basePosition.fields.x;
   *((_DWORD *)p_sortStr1 + 13) = LODWORD(item->fields.basePosition.fields.z);
-  *(struct System_String_o **)((char *)p_sortStr1 + 44) = v11;
+  *(struct System_String_o **)((char *)p_sortStr1 + 44) = v14;
   p_sortStr1[4] = (struct System_String_o *)item->fields.sortValueLast;
 }
 
@@ -128,32 +142,34 @@ void ListViewItem__SetSortIndex(ListViewItem_o *this, int32_t index, const Metho
 
 bool ListViewItem__SetSortValue(ListViewItem_o *this, ListViewSort_o *sort, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int64_t index; // x8
-  int32_t v10; // w1
+  bool v6; // w6
+  bool v7; // w7
+  int32_t v9; // w1
   struct System_String_o **p_sortStr1; // x19
+  struct System_String_o *v11; // x8
+  bool result; // w0
 
-  if ( (byte_4E78DB8 & 1) == 0 )
+  if ( (byte_5939E07 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78DB8 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939E07 = 1;
   }
-  index = this->fields.index;
-  this->fields.sortValue0 = 0;
-  this->fields.sortValue0B = 0;
-  this->fields.sortValue1 = index;
-  v10 = StringLiteral_1/*""*/;
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
   p_sortStr1 = &this->fields.sortStr1;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_sortStr1, v10, (int32_t)method, v3, v4, v5, v6, v7);
+  v11 = (struct System_String_o *)*((int *)p_sortStr1 - 9);
+  *(p_sortStr1 - 3) = 0;
+  *(p_sortStr1 - 2) = 0;
+  *(p_sortStr1 - 1) = v11;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_sortStr1, v9, (System_String_o *)method, v3, v4, v5, v6, v7);
   *((_WORD *)p_sortStr1 + 20) = 0;
+  result = 1;
   *(_OWORD *)(p_sortStr1 + 3) = 0u;
   *(_OWORD *)(p_sortStr1 + 1) = 0u;
-  return 1;
+  return result;
 }
 
 
@@ -197,7 +213,7 @@ int32_t ListViewItem__SortCompDown(ListViewItem_o *this, ListViewItem_o *item, c
       if ( sortValue1 == v11 )
       {
         sortStr1 = this->fields.sortStr1;
-        if ( !sortStr1 || (v13 = item->fields.sortStr1) == 0 || System_String__Equals_65598092(sortStr1, v13, 0) )
+        if ( !sortStr1 || (v13 = item->fields.sortStr1) == 0 || System_String__Equals_75473208(sortStr1, v13, 0) )
         {
           sortValue1B = v6->fields.sortValue1B;
           v15 = item->fields.sortValue1B;
@@ -226,9 +242,9 @@ int32_t ListViewItem__SortCompDown(ListViewItem_o *this, ListViewItem_o *item, c
         }
         this = (ListViewItem_o *)item->fields.sortStr1;
         if ( this )
-          return System_String__CompareTo_65597136((System_String_o *)this, v6->fields.sortStr1, 0);
+          return System_String__CompareTo_75472312((System_String_o *)this, v6->fields.sortStr1, 0);
 LABEL_18:
-        sub_1D0F30C(this, item);
+        sub_21FFECC(this, item);
       }
     }
   }
@@ -283,7 +299,7 @@ LABEL_13:
   if ( sortValue1 == v11 )
   {
     sortStr1 = this->fields.sortStr1;
-    if ( !sortStr1 || (v14 = item->fields.sortStr1) == 0 || System_String__Equals_65598092(sortStr1, v14, 0) )
+    if ( !sortStr1 || (v14 = item->fields.sortStr1) == 0 || System_String__Equals_75473208(sortStr1, v14, 0) )
     {
       sortValue1B = v6->fields.sortValue1B;
       v16 = item->fields.sortValue1B;
@@ -313,9 +329,9 @@ LABEL_13:
     }
     this = (ListViewItem_o *)v6->fields.sortStr1;
     if ( this )
-      return System_String__CompareTo_65597136((System_String_o *)this, item->fields.sortStr1, 0);
+      return System_String__CompareTo_75472312((System_String_o *)this, item->fields.sortStr1, 0);
 LABEL_21:
-    sub_1D0F30C(this, item);
+    sub_21FFECC(this, item);
   }
 LABEL_16:
   if ( v12 )
@@ -396,10 +412,11 @@ void ListViewItem__set_BasePosition(ListViewItem_o *this, UnityEngine_Vector3_o 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ListViewItem__set_IsSelect(ListViewItem_o *this, bool value, const MethodInfo *method)
 {
   if ( !this )
-    sub_1D0F30C(0, value);
+    sub_21FFECC(0, value);
   this->fields.selectNum = value - 1;
 }
 
@@ -424,17 +441,17 @@ void ListViewItem__set_SelectNum(ListViewItem_o *this, int32_t value, const Meth
 
 void ListViewItem__set_ViewObject(ListViewItem_o *this, ListViewObject_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.viewObject = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.viewObject,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.viewObject,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

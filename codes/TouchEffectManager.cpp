@@ -1,112 +1,117 @@
 void TouchEffectManager___cctor(const MethodInfo *method)
 {
   struct TouchEffectManager_StaticFields *static_fields; // x8
-  System_Collections_Generic_List_object__o *v2; // x19
-  struct TouchEffectManager_StaticFields *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  System_Action_Vector2__o *v10; // x19
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  System_Action_o *v17; // x19
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  struct NguiTouchEffectManager_StaticFields *v24; // x0
-  System_Action_Vector2__o *v25; // x19
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
-  struct NguiTouchEffectManager_StaticFields *v32; // x0
+  System_Collections_Generic_List_CommonParticleControlComponent__c *v2; // x0
+  System_Collections_Generic_List_object__o *v3; // x19
+  struct TouchEffectManager_StaticFields *v4; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  System_Action_Vector2__c *v11; // x0
+  System_Action_Vector2__o *v12; // x19
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  System_Action_o *v19; // x19
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  struct NguiTouchEffectManager_StaticFields *v26; // x0
+  System_Action_Vector2__o *v27; // x19
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
+  struct NguiTouchEffectManager_StaticFields *v34; // x0
 
-  if ( (byte_4E7691D & 1) == 0 )
+  if ( (byte_59378CB & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_Vector2__TypeInfo);
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_CommonParticleControlComponent__TypeInfo);
-    sub_1D0F0B4(&Method_TouchEffectManager_Drag__);
-    sub_1D0F0B4(&Method_TouchEffectManager_Press__);
-    sub_1D0F0B4(&Method_TouchEffectManager_UnPress__);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E7691D = 1;
+    sub_21FFC50(&System_Action_Vector2__TypeInfo);
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_CommonParticleControlComponent__TypeInfo);
+    sub_21FFC50(&Method_TouchEffectManager_Drag__);
+    sub_21FFC50(&Method_TouchEffectManager_Press__);
+    sub_21FFC50(&Method_TouchEffectManager_UnPress__);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378CB = 1;
   }
   static_fields = TouchEffectManager_TypeInfo->static_fields;
+  v2 = System_Collections_Generic_List_CommonParticleControlComponent__TypeInfo;
   *(_QWORD *)&static_fields->CREATE_EFFECT_MAX = 5;
   static_fields->dragCount = -1.0;
-  v2 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_CommonParticleControlComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v2);
   System_Collections_Generic_List_object____ctor(
-    v2,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_CommonParticleControlComponent___ctor__);
-  v3 = TouchEffectManager_TypeInfo->static_fields;
-  v3->effectList = (struct System_Collections_Generic_List_CommonParticleControlComponent__o *)v2;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->effectList, (int32_t)v2, v4, v5, v6, v7, v8, v9);
+    v3,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_CommonParticleControlComponent___ctor__);
+  v4 = TouchEffectManager_TypeInfo->static_fields;
+  v4->effectList = (struct System_Collections_Generic_List_CommonParticleControlComponent__o *)v3;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->effectList, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  v11 = System_Action_Vector2__TypeInfo;
   TouchEffectManager_TypeInfo->static_fields->effectIdx = 0;
-  v10 = (System_Action_Vector2__o *)sub_1D0F300(System_Action_Vector2__TypeInfo);
-  System_Action_Vector2____ctor(v10, 0, Method_TouchEffectManager_Press__, 0);
-  if ( !byte_4E76928 )
+  v12 = (System_Action_Vector2__o *)sub_21FFEBC(v11);
+  System_Action_Vector2____ctor(v12, 0, Method_TouchEffectManager_Press__, 0);
+  if ( !byte_59378E9 )
   {
-    sub_1D0F0B4(&NguiTouchEffectManager_TypeInfo);
-    byte_4E76928 = 1;
+    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
+    byte_59378E9 = 1;
   }
-  NguiTouchEffectManager_TypeInfo->static_fields->pressAction = v10;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)NguiTouchEffectManager_TypeInfo->static_fields,
-    (int32_t)v10,
-    v11,
-    v12,
+  NguiTouchEffectManager_TypeInfo->static_fields->pressAction = v12;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)NguiTouchEffectManager_TypeInfo->static_fields,
+    (int32_t)v12,
     v13,
     v14,
     v15,
-    v16);
-  v17 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v17, 0, Method_TouchEffectManager_UnPress__, 0);
-  if ( !byte_4E76929 )
+    v16,
+    v17,
+    v18);
+  v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v19, 0, Method_TouchEffectManager_UnPress__, 0);
+  if ( !byte_59378EA )
   {
-    sub_1D0F0B4(&NguiTouchEffectManager_TypeInfo);
-    byte_4E76929 = 1;
+    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
+    byte_59378EA = 1;
   }
-  v24 = NguiTouchEffectManager_TypeInfo->static_fields;
-  v24->unPressAction = v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v24->unPressAction, (int32_t)v17, v18, v19, v20, v21, v22, v23);
-  v25 = (System_Action_Vector2__o *)sub_1D0F300(System_Action_Vector2__TypeInfo);
-  System_Action_Vector2____ctor(v25, 0, Method_TouchEffectManager_Drag__, 0);
-  if ( !byte_4E7692A )
+  v26 = NguiTouchEffectManager_TypeInfo->static_fields;
+  v26->unPressAction = v19;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->unPressAction, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+  v27 = (System_Action_Vector2__o *)sub_21FFEBC(System_Action_Vector2__TypeInfo);
+  System_Action_Vector2____ctor(v27, 0, Method_TouchEffectManager_Drag__, 0);
+  if ( !byte_59378EB )
   {
-    sub_1D0F0B4(&NguiTouchEffectManager_TypeInfo);
-    byte_4E7692A = 1;
+    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
+    byte_59378EB = 1;
   }
-  v32 = NguiTouchEffectManager_TypeInfo->static_fields;
-  v32->dragAction = v25;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v32->dragAction, (int32_t)v25, v26, v27, v28, v29, v30, v31);
+  v34 = NguiTouchEffectManager_TypeInfo->static_fields;
+  v34->dragAction = v27;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v34->dragAction, (int32_t)v27, v28, v29, v30, v31, v32, v33);
 }
 
 
 void TouchEffectManager___ctor(TouchEffectManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E76925 & 1) == 0 )
+  const MethodInfo_476EDF0 *v3; // x1
+
+  if ( (byte_59378D3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager___ctor__);
-    byte_4E76925 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager___ctor__);
+    byte_59378D3 = 1;
   }
+  v3 = (const MethodInfo_476EDF0 *)Method_SingletonMonoBehaviour_TouchEffectManager___ctor__;
   this->fields.dragUnitLong = 100.0;
-  SingletonMonoBehaviour_object____ctor(
-    (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3BACB6C *)Method_SingletonMonoBehaviour_TouchEffectManager___ctor__);
+  SingletonMonoBehaviour_object____ctor((SingletonMonoBehaviour_T__o *)this, v3);
 }
 
 
@@ -119,48 +124,51 @@ void TouchEffectManager__CreateLocal(
   float y; // s8
   float x; // s9
   __int64 v8; // x1
-  TouchEffectManager_c *v9; // x0
+  __int64 v9; // x2
+  TouchEffectManager_c *v10; // x0
   struct TouchEffectManager_StaticFields *static_fields; // x8
   System_Collections_Generic_List_object__o *effectList; // x0
-  UnityEngine_Transform_o *v12; // x21
-  float v13; // s10
-  float v14; // s11
+  UnityEngine_Transform_o *v13; // x21
+  float v14; // s10
+  float v15; // s11
   float z; // s12
-  struct TouchEffectManager_StaticFields *v16; // x8
-  TouchEffectManager_c *v17; // x0
-  struct TouchEffectManager_StaticFields *v18; // x8
+  struct TouchEffectManager_StaticFields *v17; // x8
+  __int64 v18; // x1
+  __int64 v19; // x2
+  TouchEffectManager_c *v20; // x0
+  struct TouchEffectManager_StaticFields *v21; // x8
   int32_t CREATE_EFFECT_MAX; // w10
-  int v20; // w9
+  int v23; // w9
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   y = p.fields.y;
   x = p.fields.x;
-  if ( (byte_4E76923 & 1) == 0 )
+  if ( (byte_59378D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E76923 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378D1 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, prefab, method);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)prefab, 0, 0) )
   {
-    v9 = TouchEffectManager_TypeInfo;
-    if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+    v10 = TouchEffectManager_TypeInfo;
+    if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-      v9 = TouchEffectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v8, v9);
+      v10 = TouchEffectManager_TypeInfo;
     }
-    static_fields = v9->static_fields;
+    static_fields = v10->static_fields;
     if ( static_fields->blockCount <= 0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !*(&v10->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v9);
+        j_il2cpp_runtime_class_init_0(v10, v8, v9);
         static_fields = TouchEffectManager_TypeInfo->static_fields;
       }
       effectList = (System_Collections_Generic_List_object__o *)static_fields->effectList;
@@ -169,7 +177,7 @@ void TouchEffectManager__CreateLocal(
       effectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   effectList,
                                                                   static_fields->effectIdx,
-                                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
+                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
       if ( !effectList )
         goto LABEL_27;
       effectList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -182,7 +190,7 @@ void TouchEffectManager__CreateLocal(
                                                                   0);
       if ( !prefab )
         goto LABEL_27;
-      v12 = (UnityEngine_Transform_o *)effectList;
+      v13 = (UnityEngine_Transform_o *)effectList;
       effectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__get_transform(prefab, 0);
       if ( !effectList )
         goto LABEL_27;
@@ -190,54 +198,54 @@ void TouchEffectManager__CreateLocal(
       effectList = (System_Collections_Generic_List_object__o *)this->fields.effectCamera;
       if ( !effectList )
         goto LABEL_27;
-      v13 = localScale.fields.x;
-      v14 = localScale.fields.y;
+      v14 = localScale.fields.x;
+      v15 = localScale.fields.y;
       z = localScale.fields.z;
-      v22.fields.z = 0.0;
-      v22.fields.x = x;
-      v22.fields.y = y;
-      v23 = UnityEngine_Camera__ScreenToWorldPoint_73162832((UnityEngine_Camera_o *)effectList, v22, 0);
-      if ( !v12 )
+      v25.fields.z = 0.0;
+      v25.fields.x = x;
+      v25.fields.y = y;
+      v26 = UnityEngine_Camera__ScreenToWorldPoint_82984924((UnityEngine_Camera_o *)effectList, v25, 0);
+      if ( !v13 )
         goto LABEL_27;
-      UnityEngine_Transform__set_position(v12, v23, 0);
-      if ( !byte_4E70C9F )
+      UnityEngine_Transform__set_position(v13, v26, 0);
+      if ( !byte_5931946 )
       {
-        sub_1D0F0B4(&UnityEngine_Quaternion_TypeInfo);
-        byte_4E70C9F = 1;
+        sub_21FFC50(&UnityEngine_Quaternion_TypeInfo);
+        byte_5931946 = 1;
       }
       UnityEngine_Transform__set_localRotation(
-        v12,
+        v13,
         UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
         0);
-      v24.fields.x = v13;
-      v24.fields.y = v14;
-      v24.fields.z = z;
-      UnityEngine_Transform__set_localScale(v12, v24, 0);
-      v16 = TouchEffectManager_TypeInfo->static_fields;
-      effectList = (System_Collections_Generic_List_object__o *)v16->effectList;
+      v27.fields.x = v14;
+      v27.fields.y = v15;
+      v27.fields.z = z;
+      UnityEngine_Transform__set_localScale(v13, v27, 0);
+      v17 = TouchEffectManager_TypeInfo->static_fields;
+      effectList = (System_Collections_Generic_List_object__o *)v17->effectList;
       if ( !effectList
         || (effectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         effectList,
-                                                                        v16->effectIdx,
-                                                                        (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__)) == 0 )
+                                                                        v17->effectIdx,
+                                                                        (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__)) == 0 )
       {
 LABEL_27:
-        sub_1D0F30C(effectList, v8);
+        sub_21FFECC(effectList, v8);
       }
       CommonParticleControlComponent__particleStart((CommonParticleControlComponent_o *)effectList, 1, 0);
-      v17 = TouchEffectManager_TypeInfo;
-      v18 = TouchEffectManager_TypeInfo->static_fields;
-      CREATE_EFFECT_MAX = v18->CREATE_EFFECT_MAX;
-      v20 = v18->effectIdx + 1;
-      v18->effectIdx = v20;
-      if ( v20 >= CREATE_EFFECT_MAX )
+      v20 = TouchEffectManager_TypeInfo;
+      v21 = TouchEffectManager_TypeInfo->static_fields;
+      CREATE_EFFECT_MAX = v21->CREATE_EFFECT_MAX;
+      v23 = v21->effectIdx + 1;
+      v21->effectIdx = v23;
+      if ( v23 >= CREATE_EFFECT_MAX )
       {
-        if ( !v17->_2.cctor_finished )
+        if ( !*(&v20->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v17);
-          v18 = TouchEffectManager_TypeInfo->static_fields;
+          j_il2cpp_runtime_class_init_0(v20, v18, v19);
+          v21 = TouchEffectManager_TypeInfo->static_fields;
         }
-        v18->effectIdx = 0;
+        v21->effectIdx = 0;
       }
     }
   }
@@ -247,122 +255,122 @@ LABEL_27:
 // local variable allocation has failed, the output may be wrong!
 void TouchEffectManager__Drag(UnityEngine_Vector2_o v, const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x2
   float y; // s8
   float x; // s9
-  __int64 v4; // x0
-  __int64 v5; // x0
-  UnityEngine_Object_o *v6; // x19
-  void *Instance; // x0
-  __int64 v8; // x1
-  TouchEffectManager_c *v9; // x0
+  __int64 v6; // x0
+  __int64 v7; // x0
+  UnityEngine_Object_o *v8; // x19
+  Il2CppObject *Instance; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  TouchEffectManager_c *v12; // x0
   float dragCount; // s10
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
-  float v12; // s11
-  float v13; // s12
-  float v14; // s9
-  float v15; // s8
-  float v16; // s8
-  Il2CppObject *v17; // x19
-  const MethodInfo *v18; // x2
-  UnityEngine_GameObject_o *v19; // x20
-  TouchEffectManager_c *v20; // x0
+  float v15; // s11
+  float v16; // s12
+  const MethodInfo_476E8C0 *v17; // x0
+  float v18; // s8
+  Il2CppObject *v19; // x19
+  const MethodInfo *v20; // x2
+  UnityEngine_GameObject_o *monitor; // x20
+  __int64 v22; // x1
+  __int64 v23; // x2
+  TouchEffectManager_c *v24; // x0
 
   y = v.fields.y;
   x = v.fields.x;
-  if ( (byte_4E76922 & 1) == 0 )
+  if ( (byte_59378D0 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E76922 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_59378D0 = 1;
   }
-  v4 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1CE513C(*(long double *)&v.fields.x);
-  v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1CE513C(*(long double *)&v.fields.x);
-  v6 = **(UnityEngine_Object_o ***)(v5 + 184);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(v6, 0, 0) )
+  v6 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
+  if ( (*(_WORD *)(v6 + 309) & 1) == 0 )
+    v6 = sub_2237AF8(*(long double *)&v.fields.x);
+  v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
+  if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
+    v7 = sub_2237AF8(*(long double *)&v.fields.x);
+  v8 = **(UnityEngine_Object_o ***)(v7 + 184);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v2, v3);
+  if ( !UnityEngine_Object__op_Equality(v8, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
     if ( !Instance )
       goto LABEL_33;
-    if ( *((float *)Instance + 16) > 0.0 )
+    if ( *(float *)&Instance[4].klass > 0.0 )
     {
-      v9 = TouchEffectManager_TypeInfo;
-      if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+      v12 = TouchEffectManager_TypeInfo;
+      if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-        v9 = TouchEffectManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v10, v11);
+        v12 = TouchEffectManager_TypeInfo;
       }
-      dragCount = v9->static_fields->dragCount;
+      dragCount = v12->static_fields->dragCount;
       if ( dragCount >= 0.0 )
       {
-        if ( !v9->_2.cctor_finished )
+        if ( !*(&v12->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v9);
+          j_il2cpp_runtime_class_init_0(v12, v10, v11);
           dragCount = TouchEffectManager_TypeInfo->static_fields->dragCount;
         }
-        if ( !byte_4E70B79 )
+        if ( !byte_5931820 )
         {
-          sub_1D0F0B4(&UnityEngine_Vector2_TypeInfo);
-          byte_4E70B79 = 1;
+          sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+          byte_5931820 = 1;
         }
         static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-        v12 = static_fields->zeroVector.fields.x;
-        v13 = static_fields->zeroVector.fields.y;
-        if ( !byte_4E70B78 )
+        v15 = static_fields->zeroVector.fields.x;
+        v16 = static_fields->zeroVector.fields.y;
+        if ( !byte_593181F )
         {
-          sub_1D0F0B4(&System_Math_TypeInfo);
-          byte_4E70B78 = 1;
+          sub_21FFC50(&System_Math_TypeInfo);
+          byte_593181F = 1;
         }
-        v14 = v12 - x;
-        v15 = v13 - y;
-        if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v16 = dragCount + sqrtf((float)(v14 * v14) + (float)(v15 * v15));
-        TouchEffectManager_TypeInfo->static_fields->dragCount = v16;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+        if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v10, v11);
+        v17 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__;
+        v18 = dragCount
+            + sqrtf((float)((float)(v15 - x) * (float)(v15 - x)) + (float)((float)(v16 - y) * (float)(v16 - y)));
+        TouchEffectManager_TypeInfo->static_fields->dragCount = v18;
+        Instance = SingletonMonoBehaviour_object___get_Instance(v17);
         if ( Instance )
         {
-          if ( v16 <= *((float *)Instance + 16) )
+          if ( v18 <= *(float *)&Instance[4].klass )
             return;
-          v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+          v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
           if ( Instance )
           {
-            v19 = (UnityEngine_GameObject_o *)*((_QWORD *)Instance + 7);
-            Instance = UICamera_TypeInfo;
-            if ( !UICamera_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-              Instance = UICamera_TypeInfo;
-            }
-            if ( v17 )
+            monitor = (UnityEngine_GameObject_o *)Instance[3].monitor;
+            if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v10, v20);
+            if ( v19 )
             {
               TouchEffectManager__CreateLocal(
-                (TouchEffectManager_o *)v17,
-                v19,
-                *(UnityEngine_Vector2_o *)(*((_QWORD *)Instance + 23) + 60LL),
-                v18);
-              v20 = TouchEffectManager_TypeInfo;
-              if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+                (TouchEffectManager_o *)v19,
+                monitor,
+                UICamera_TypeInfo->static_fields->lastTouchPosition,
+                v20);
+              v24 = TouchEffectManager_TypeInfo;
+              if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
               {
-                j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-                v20 = TouchEffectManager_TypeInfo;
+                j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v22, v23);
+                v24 = TouchEffectManager_TypeInfo;
               }
-              v20->static_fields->dragCount = 0.0;
+              v24->static_fields->dragCount = 0.0;
               return;
             }
           }
         }
 LABEL_33:
-        sub_1D0F30C(Instance, v8);
+        sub_21FFECC(Instance, v10);
       }
     }
   }
@@ -372,131 +380,159 @@ LABEL_33:
 // local variable allocation has failed, the output may be wrong!
 void TouchEffectManager__Press(UnityEngine_Vector2_o p, const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x2
   float y; // s8
   float x; // s9
-  __int64 v4; // x0
-  __int64 v5; // x0
-  UnityEngine_Object_o *v6; // x19
+  __int64 v6; // x0
+  __int64 v7; // x0
+  UnityEngine_Object_o *v8; // x19
   Il2CppObject *Instance; // x19
-  Il2CppObject *v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
-  TouchEffectManager_c *v11; // x0
-  UnityEngine_Vector2_o v12; // 0:s0.4,4:s1.4
+  Il2CppObject *v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  TouchEffectManager_c *v15; // x0
+  UnityEngine_Vector2_o v16; // 0:s0.4,4:s1.4
 
   y = p.fields.y;
   x = p.fields.x;
-  if ( (byte_4E76920 & 1) == 0 )
+  if ( (byte_59378CE & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E76920 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378CE = 1;
   }
-  v4 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1CE513C(*(long double *)&p.fields.x);
-  v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1CE513C(*(long double *)&p.fields.x);
-  v6 = **(UnityEngine_Object_o ***)(v5 + 184);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(v6, 0, 0) )
+  v6 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
+  if ( (*(_WORD *)(v6 + 309) & 1) == 0 )
+    v6 = sub_2237AF8(*(long double *)&p.fields.x);
+  v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
+  if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
+    v7 = sub_2237AF8(*(long double *)&p.fields.x);
+  v8 = **(UnityEngine_Object_o ***)(v7 + 184);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v2, v3);
+  if ( !UnityEngine_Object__op_Equality(v8, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-    if ( !v8 || !Instance )
-      sub_1D0F30C(v8, v9);
-    v12.fields.x = x;
-    v12.fields.y = y;
-    TouchEffectManager__CreateLocal((TouchEffectManager_o *)Instance, (UnityEngine_GameObject_o *)v8[3].klass, v12, v10);
-    v11 = TouchEffectManager_TypeInfo;
-    if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    v10 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    if ( !v10 || !Instance )
+      sub_21FFECC(v10, v11);
+    v16.fields.x = x;
+    v16.fields.y = y;
+    TouchEffectManager__CreateLocal(
+      (TouchEffectManager_o *)Instance,
+      (UnityEngine_GameObject_o *)v10[3].klass,
+      v16,
+      v12);
+    v15 = TouchEffectManager_TypeInfo;
+    if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-      v11 = TouchEffectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v13, v14);
+      v15 = TouchEffectManager_TypeInfo;
     }
-    v11->static_fields->dragCount = 0.0;
+    v15->static_fields->dragCount = 0.0;
   }
 }
 
 
 void TouchEffectManager__SetBlock(bool isBlock, const MethodInfo *method)
 {
-  long double v2; // q0
-  __int64 v4; // x0
+  __int64 v2; // x2
+  long double v3; // q0
   __int64 v5; // x0
-  UnityEngine_Object_o *v6; // x20
-  TouchEffectManager_c *v7; // x0
-  struct TouchEffectManager_StaticFields *static_fields; // x9
-  int32_t *p_blockCount; // x8
-  int blockCount; // w21
-  struct TouchEffectManager_StaticFields *v11; // x8
-  int32_t v12; // t1
+  __int64 v6; // x0
+  UnityEngine_Object_o *v7; // x20
+  __int64 v8; // x1
+  __int64 v9; // x2
+  TouchEffectManager_c *v10; // x0
+  int v11; // w8
+  struct TouchEffectManager_StaticFields *static_fields; // x8
+  int v13; // w10
+  int blockCount; // w9
+  int32_t v15; // w9
+  int v16; // w9
   Il2CppObject *Instance; // x0
-  const MethodInfo *v14; // x1
+  const MethodInfo *v18; // x1
 
-  if ( (byte_4E7691F & 1) == 0 )
+  if ( (byte_59378CD & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E7691F = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378CD = 1;
   }
-  v4 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1CE513C(v2);
-  v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1CE513C(v2);
-  v6 = **(UnityEngine_Object_o ***)(v5 + 184);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(v6, 0, 0) )
+  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_TouchEffectManager__getInstance__ + 4);
+  if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
+    v5 = sub_2237AF8(v3);
+  v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
+  if ( (*(_WORD *)(v6 + 309) & 1) == 0 )
+    v6 = sub_2237AF8(v3);
+  v7 = **(UnityEngine_Object_o ***)(v6 + 184);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
+  if ( !UnityEngine_Object__op_Equality(v7, 0, 0) )
   {
-    v7 = TouchEffectManager_TypeInfo;
-    if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-      v7 = TouchEffectManager_TypeInfo;
-    }
-    static_fields = v7->static_fields;
-    p_blockCount = &static_fields->blockCount;
-    blockCount = static_fields->blockCount;
+    v10 = TouchEffectManager_TypeInfo;
+    v11 = *(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1);
     if ( isBlock )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !v11 )
       {
-        j_il2cpp_runtime_class_init_0(v7);
+        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v8, v9);
+        v10 = TouchEffectManager_TypeInfo;
+      }
+      static_fields = v10->static_fields;
+      v13 = *(&v10->_2.cctor_finished + 1);
+      blockCount = static_fields->blockCount;
+      if ( blockCount > 0 )
+      {
+        if ( !v13 )
+        {
+          j_il2cpp_runtime_class_init_0(v10, v8, v9);
+          static_fields = TouchEffectManager_TypeInfo->static_fields;
+          blockCount = static_fields->blockCount;
+        }
+        v15 = blockCount + 1;
+LABEL_23:
+        static_fields->blockCount = v15;
+        return;
+      }
+      if ( !v13 )
+      {
+        j_il2cpp_runtime_class_init_0(v10, v8, v9);
         static_fields = TouchEffectManager_TypeInfo->static_fields;
       }
-      if ( blockCount <= 0 )
-      {
-        static_fields->blockCount = 1;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
-        if ( !Instance )
-          sub_1D0F30C(0, v14);
-        TouchEffectManager__StopLocal((TouchEffectManager_o *)Instance, v14);
-      }
-      else
-      {
-        ++static_fields->blockCount;
-      }
+      static_fields->blockCount = 1;
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_TouchEffectManager__get_Instance__);
+      if ( !Instance )
+        sub_21FFECC(0, v18);
+      TouchEffectManager__StopLocal((TouchEffectManager_o *)Instance, v18);
     }
-    else if ( blockCount >= 1 )
+    else
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !v11 )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v11 = TouchEffectManager_TypeInfo->static_fields;
-        v12 = v11->blockCount;
-        p_blockCount = &v11->blockCount;
-        blockCount = v12;
+        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v8, v9);
+        v10 = TouchEffectManager_TypeInfo;
       }
-      *p_blockCount = blockCount - 1;
+      static_fields = v10->static_fields;
+      v16 = static_fields->blockCount;
+      if ( v16 >= 1 )
+      {
+        if ( !*(&v10->_2.cctor_finished + 1) )
+        {
+          j_il2cpp_runtime_class_init_0(v10, v8, v9);
+          static_fields = TouchEffectManager_TypeInfo->static_fields;
+          v16 = static_fields->blockCount;
+        }
+        v15 = v16 - 1;
+        goto LABEL_23;
+      }
     }
   }
 }
@@ -504,123 +540,124 @@ void TouchEffectManager__SetBlock(bool isBlock, const MethodInfo *method)
 
 void TouchEffectManager__Start(TouchEffectManager_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int *Component_object; // x0
-  __int64 v4; // x8
-  int32_t i; // w23
+  __int64 v5; // x8
+  int32_t i; // w28
   struct TouchEffectManager_StaticFields *static_fields; // x8
   Il2CppObject *tapPrefab; // x20
-  UnityEngine_Component_o *v8; // x20
-  UnityEngine_GameObject_o *v9; // x21
+  UnityEngine_Component_o *v9; // x20
+  UnityEngine_GameObject_o *v10; // x21
   UnityEngine_Component_o *transform; // x0
   int32_t layer; // w0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  TouchEffectManager_c *v18; // x0
-  __int64 v19; // x8
-  _QWORD *v20; // x9
-  __int64 v21; // x10
-  __int64 v22; // x8
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  TouchEffectManager_c *v19; // x0
+  __int64 v20; // x8
+  _QWORD *v21; // x9
+  __int64 v22; // x10
+  __int64 v23; // x8
 
-  if ( (byte_4E7691E & 1) == 0 )
+  if ( (byte_59378CC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommonParticleControlComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Count__);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_14759/*"TouchEffect"*/);
-    byte_4E7691E = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommonParticleControlComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Count__);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_15127/*"TouchEffect"*/);
+    byte_59378CC = 1;
   }
   Component_object = (int *)TouchEffectManager_TypeInfo;
-  if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, method, v2);
     Component_object = (int *)TouchEffectManager_TypeInfo;
   }
-  v4 = *(_QWORD *)(*((_QWORD *)Component_object + 23) + 16LL);
-  if ( !v4 )
+  v5 = *(_QWORD *)(*((_QWORD *)Component_object + 23) + 16LL);
+  if ( !v5 )
 LABEL_30:
-    sub_1D0F30C(Component_object, method);
-  if ( !*(_DWORD *)(v4 + 24) )
+    sub_21FFECC(Component_object, method);
+  if ( !*(_DWORD *)(v5 + 24) )
   {
     for ( i = 0; ; ++i )
     {
-      if ( !Component_object[56] )
+      if ( !Component_object[57] )
       {
-        j_il2cpp_runtime_class_init_0(Component_object);
+        j_il2cpp_runtime_class_init_0(Component_object, method, v2);
         Component_object = (int *)TouchEffectManager_TypeInfo;
       }
       static_fields = (struct TouchEffectManager_StaticFields *)*((_QWORD *)Component_object + 23);
       if ( i >= static_fields->CREATE_EFFECT_MAX )
         break;
       tapPrefab = (Il2CppObject *)this->fields.tapPrefab;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
       Component_object = (int *)UnityEngine_Object__Instantiate_object_(
                                   tapPrefab,
-                                  (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !Component_object )
         goto LABEL_30;
       Component_object = (int *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)Component_object,
-                                  (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommonParticleControlComponent___);
+                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommonParticleControlComponent___);
       if ( !Component_object )
         goto LABEL_30;
-      v8 = (UnityEngine_Component_o *)Component_object;
+      v9 = (UnityEngine_Component_o *)Component_object;
       Component_object = (int *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0);
       if ( !this->fields.effectParent )
         goto LABEL_30;
-      v9 = (UnityEngine_GameObject_o *)Component_object;
+      v10 = (UnityEngine_GameObject_o *)Component_object;
       transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(this->fields.effectParent, 0);
-      GameObjectExtensions__SafeSetParent(v9, transform, 0);
-      Component_object = (int *)UnityEngine_Component__get_gameObject(v8, 0);
+      GameObjectExtensions__SafeSetParent(v10, transform, 0);
+      Component_object = (int *)UnityEngine_Component__get_gameObject(v9, 0);
       if ( !Component_object )
         goto LABEL_30;
-      UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_14759/*"TouchEffect"*/, 0);
+      UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_15127/*"TouchEffect"*/, 0);
       Component_object = (int *)this->fields.effectParent;
       if ( !Component_object )
         goto LABEL_30;
       layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)Component_object, 0);
-      CommonParticleControlComponent__init((CommonParticleControlComponent_o *)v8, layer, 0);
-      v18 = TouchEffectManager_TypeInfo;
-      if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+      CommonParticleControlComponent__init((CommonParticleControlComponent_o *)v9, layer, 0);
+      v19 = TouchEffectManager_TypeInfo;
+      if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-        v18 = TouchEffectManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, method, v13);
+        v19 = TouchEffectManager_TypeInfo;
       }
-      Component_object = (int *)v18->static_fields->effectList;
+      Component_object = (int *)v19->static_fields->effectList;
       if ( !Component_object )
         goto LABEL_30;
-      v19 = *((_QWORD *)Component_object + 2);
-      v20 = Method_System_Collections_Generic_List_CommonParticleControlComponent__Add__;
+      v20 = *((_QWORD *)Component_object + 2);
+      v21 = Method_System_Collections_Generic_List_CommonParticleControlComponent__Add__;
       ++Component_object[7];
-      if ( !v19 )
+      if ( !v20 )
         goto LABEL_30;
-      v21 = Component_object[6];
-      if ( (unsigned int)v21 >= *(_DWORD *)(v19 + 24) )
+      v22 = Component_object[6];
+      if ( (unsigned int)v22 >= *(_DWORD *)(v20 + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Component_object,
-          (Il2CppObject *)v8,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          (Il2CppObject *)v9,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
-        v22 = v19 + 8 * v21;
-        Component_object[6] = v21 + 1;
-        *(_QWORD *)(v22 + 32) = v8;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v22 + 32), (int32_t)v8, v12, v13, v14, v15, v16, v17);
+        v23 = v20 + 8 * v22;
+        Component_object[6] = v22 + 1;
+        *(_QWORD *)(v23 + 32) = v9;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 32), (int32_t)v9, v13, v14, v15, v16, v17, v18);
       }
       Component_object = (int *)TouchEffectManager_TypeInfo;
     }
-    if ( !Component_object[56] )
+    if ( !Component_object[57] )
     {
-      j_il2cpp_runtime_class_init_0(Component_object);
+      j_il2cpp_runtime_class_init_0(Component_object, method, v2);
       static_fields = TouchEffectManager_TypeInfo->static_fields;
     }
     static_fields->effectIdx = 0;
@@ -630,34 +667,35 @@ LABEL_30:
 
 void TouchEffectManager__StopLocal(TouchEffectManager_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t i; // w19
   CommonParticleControlComponent_o *Item; // x0
   System_Collections_Generic_List_object__o *kernelEvent; // x8
 
-  if ( (byte_4E76924 & 1) == 0 )
+  if ( (byte_59378D2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E76924 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378D2 = 1;
   }
   for ( i = 0; ; ++i )
   {
     Item = (CommonParticleControlComponent_o *)TouchEffectManager_TypeInfo;
-    if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+    if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, method, v2);
       Item = (CommonParticleControlComponent_o *)TouchEffectManager_TypeInfo;
     }
     kernelEvent = (System_Collections_Generic_List_object__o *)Item[4].fields.m_CancellationTokenSource->fields._kernelEvent;
     if ( !kernelEvent )
 LABEL_13:
-      sub_1D0F30C(Item, method);
+      sub_21FFECC(Item, method);
     if ( i >= kernelEvent->fields._size )
       break;
-    if ( !LODWORD(Item[5].fields.m_CancellationTokenSource) )
+    if ( !HIDWORD(Item[5].fields.m_CancellationTokenSource) )
     {
-      j_il2cpp_runtime_class_init_0(Item);
+      j_il2cpp_runtime_class_init_0(Item, method, v2);
       kernelEvent = (System_Collections_Generic_List_object__o *)TouchEffectManager_TypeInfo->static_fields->effectList;
       if ( !kernelEvent )
         goto LABEL_13;
@@ -665,7 +703,7 @@ LABEL_13:
     Item = (CommonParticleControlComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                  kernelEvent,
                                                  i,
-                                                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
+                                                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__);
     if ( !Item )
       goto LABEL_13;
     CommonParticleControlComponent__particleAllStop(Item, 1, 0);
@@ -675,18 +713,20 @@ LABEL_13:
 
 void TouchEffectManager__UnPress(const MethodInfo *method)
 {
-  TouchEffectManager_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x2
+  TouchEffectManager_c *v3; // x0
 
-  if ( (byte_4E76921 & 1) == 0 )
+  if ( (byte_59378CF & 1) == 0 )
   {
-    sub_1D0F0B4(&TouchEffectManager_TypeInfo);
-    byte_4E76921 = 1;
+    sub_21FFC50(&TouchEffectManager_TypeInfo);
+    byte_59378CF = 1;
   }
-  v1 = TouchEffectManager_TypeInfo;
-  if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
+  v3 = TouchEffectManager_TypeInfo;
+  if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
-    v1 = TouchEffectManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v1, v2);
+    v3 = TouchEffectManager_TypeInfo;
   }
-  v1->static_fields->dragCount = -1.0;
+  v3->static_fields->dragCount = -1.0;
 }

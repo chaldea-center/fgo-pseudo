@@ -2,48 +2,50 @@ void UseInFsmFuncParam___ctor(UseInFsmFuncParam_o *this, DataVals_o *dataVal, co
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  System_Collections_Generic_HashSet_int__o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  System_Collections_Generic_HashSet_int__c *v7; // x0
+  System_Collections_Generic_HashSet_int__o *v8; // x21
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
   struct System_Collections_Generic_Dictionary_string__int__o *UseInFsmParam; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
 
-  if ( (byte_4E7A10D & 1) == 0 )
+  if ( (byte_593B170 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4E7A10D = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_593B170 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !dataVal )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
+  v7 = System_Collections_Generic_HashSet_int__TypeInfo;
   this->fields.funcType = dataVal->fields.funcType;
-  v7 = (System_Collections_Generic_HashSet_int__o *)sub_1D0F300(System_Collections_Generic_HashSet_int__TypeInfo);
+  v8 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(v7);
   System_Collections_Generic_HashSet_int____ctor(
-    v7,
-    (const MethodInfo_3800770 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-  this->fields.hashTargetId = v7;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.hashTargetId, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    v8,
+    (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+  this->fields.hashTargetId = v8;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.hashTargetId, (int32_t)v8, v9, v10, v11, v12, v13, v14);
   UseInFsmParam = DataVals__GetUseInFsmParam(dataVal, 0);
   this->fields.dictParam = UseInFsmParam;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.dictParam,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.dictParam,
     (int32_t)UseInFsmParam,
-    v15,
     v16,
     v17,
     v18,
     v19,
-    v20);
+    v20,
+    v21);
 }
 
 
@@ -56,20 +58,20 @@ void UseInFsmFuncParam__AddTargetId(
 {
   System_Collections_Generic_HashSet_int__o *hashTargetId; // x0
 
-  if ( (byte_4E7A10E & 1) == 0 )
+  if ( (byte_593B171 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Add__);
-    byte_4E7A10E = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
+    byte_593B171 = 1;
   }
   if ( isFuncSucceed )
   {
     hashTargetId = this->fields.hashTargetId;
     if ( !hashTargetId )
-      sub_1D0F30C(0, isFuncSucceed);
+      sub_21FFECC(0, isFuncSucceed);
     System_Collections_Generic_HashSet_int___Add(
       hashTargetId,
       targetId,
-      (const MethodInfo_3801974 *)Method_System_Collections_Generic_HashSet_int__Add__);
+      (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
   }
 }
 
@@ -84,11 +86,11 @@ bool UseInFsmFuncParam__IsMatch(
 
   v3 = condData;
   v4 = this;
-  if ( (byte_4E7A10F & 1) == 0 )
+  if ( (byte_593B172 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
-    this = (UseInFsmFuncParam_o *)sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    byte_4E7A10F = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+    this = (UseInFsmFuncParam_o *)sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    byte_593B172 = 1;
   }
   if ( !v3 )
     goto LABEL_11;
@@ -103,7 +105,7 @@ bool UseInFsmFuncParam__IsMatch(
     if ( System_Collections_Generic_HashSet_int___Contains(
            (System_Collections_Generic_HashSet_int__o *)this,
            (int32_t)condData,
-           (const MethodInfo_3800E64 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+           (const MethodInfo_4280968 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
     {
 LABEL_8:
       this = (UseInFsmFuncParam_o *)v4->fields.dictParam;
@@ -111,9 +113,9 @@ LABEL_8:
         return System_Collections_Generic_Dictionary_object__int___ContainsKey(
                  (System_Collections_Generic_Dictionary_object__int__o *)this,
                  (Il2CppObject *)v3->fields.ParamName,
-                 (const MethodInfo_35F89D8 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+                 (const MethodInfo_3FC0AE8 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
 LABEL_11:
-      sub_1D0F30C(this, condData);
+      sub_21FFECC(this, condData);
     }
   }
   return 0;
@@ -127,17 +129,19 @@ UseInFsmFuncParam_o *UseInFsmFuncParam__Make(DataVals_o *dataVal, const MethodIn
   const MethodInfo *v4; // x2
 
   v2 = dataVal;
-  if ( (byte_4E7A111 & 1) == 0 )
+  if ( (byte_593B174 & 1) == 0 )
   {
-    dataVal = (DataVals_o *)sub_1D0F0B4(&UseInFsmFuncParam_TypeInfo);
-    byte_4E7A111 = 1;
+    dataVal = (DataVals_o *)sub_21FFC50(&UseInFsmFuncParam_TypeInfo);
+    byte_593B174 = 1;
   }
   if ( !v2 )
-    sub_1D0F30C(dataVal, method);
-  if ( !DataVals__ExistUseInFsmParam(v2, 0) )
-    return 0;
-  v3 = (UseInFsmFuncParam_o *)sub_1D0F300(UseInFsmFuncParam_TypeInfo);
-  UseInFsmFuncParam___ctor(v3, v2, v4);
+    sub_21FFECC(dataVal, method);
+  v3 = 0;
+  if ( DataVals__ExistUseInFsmParam(v2, 0) )
+  {
+    v3 = (UseInFsmFuncParam_o *)sub_21FFEBC(UseInFsmFuncParam_TypeInfo);
+    UseInFsmFuncParam___ctor(v3, v2, v4);
+  }
   return v3;
 }
 
@@ -150,19 +154,19 @@ bool UseInFsmFuncParam__TryGetParamValue(
 {
   struct System_Collections_Generic_Dictionary_string__int__o *dictParam; // x0
 
-  if ( (byte_4E7A110 & 1) == 0 )
+  if ( (byte_593B173 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
-    byte_4E7A110 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
+    byte_593B173 = 1;
   }
   dictParam = this->fields.dictParam;
   if ( !dictParam )
-    sub_1D0F30C(0, value);
+    sub_21FFECC(0, value);
   return System_Collections_Generic_Dictionary_object__int___TryGetValue(
            (System_Collections_Generic_Dictionary_object__int__o *)dictParam,
            (Il2CppObject *)paramName,
            value,
-           (const MethodInfo_35F9FA0 *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
+           (const MethodInfo_3FC241C *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
 }
 
 

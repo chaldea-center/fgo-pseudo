@@ -4,7 +4,6 @@ void DebugBuffSelectCellComponent___ctor(DebugBuffSelectCellComponent_o *this, c
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void DebugBuffSelectCellComponent__Set(
         DebugBuffSelectCellComponent_o *this,
         int32_t id,
@@ -14,63 +13,63 @@ void DebugBuffSelectCellComponent__Set(
         System_Action_int__string__string__int__o *callback,
         const MethodInfo *method)
 {
-  System_String_o *v7; // x7
-  int32_t v14; // w25
+  bool v7; // w7
   System_String_o **p_name; // x26
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  int32_t v15; // w25
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  bool v20; // w6
+  bool v21; // w7
   struct System_Action_int__string__string__int__o **p_callback; // x21
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
   int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v27; // w6
+  bool v28; // w7
   UILabel_o *v29; // x20
   System_String_o *v30; // x0
   System_String_o *v31; // x0
   __int64 v32; // x1
 
-  if ( (byte_4E78C43 & 1) == 0 )
+  if ( (byte_5939C8C & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
-    byte_4E78C43 = 1;
+    sub_21FFC50(&StringLiteral_1532/*":"*/);
+    byte_5939C8C = 1;
   }
-  this->fields.id = id;
-  v14 = (_DWORD)this + 40;
   this->fields.name = name;
   p_name = &this->fields.name;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.name,
+  this->fields.id = id;
+  v15 = (_DWORD)this + 40;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.name,
     (int32_t)name,
-    (int32_t)name,
-    (int32_t)detail,
-    *(System_String_o **)&buffType,
+    name,
+    detail,
+    buffType,
     (int32_t)callback,
-    (int64_t)method,
+    (bool)method,
     v7);
   this->fields.detail = detail;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
   v29 = (UILabel_o *)*(p_callback - 5);
   *((_DWORD *)p_callback - 2) = buffType;
-  v30 = System_Int32__ToString(v14, 0);
-  v31 = System_String__Concat_65601036(v30, (System_String_o *)StringLiteral_1453/*":"*/, *p_name, 0);
+  v30 = System_Int32__ToString(v15, 0);
+  v31 = System_String__Concat_75481624(v30, (System_String_o *)StringLiteral_1532/*":"*/, *p_name, 0);
   if ( !v29 )
-    sub_1D0F30C(v31, v32);
+    sub_21FFECC(v31, v32);
   UILabel__set_text(v29, v31, 0);
 }
 
 
 void DebugBuffSelectCellComponent__Tap(DebugBuffSelectCellComponent_o *this, const MethodInfo *method)
 {
-  struct System_Action_int__string__string__int__o *callback; // x8
+  struct System_Action_int__string__string__int__o *callback; // x9
 
   callback = this->fields.callback;
   if ( callback )

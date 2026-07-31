@@ -1,107 +1,115 @@
 void WarBoardSeSetting___ctor(WarBoardSeSetting_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
   int32_t v10; // w1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   int32_t v17; // w1
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   int32_t v24; // w1
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
   int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  bool v29; // w6
+  bool v30; // w7
   int32_t v31; // w1
-  int32_t v32; // w2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
   int32_t v35; // w5
-  int64_t v36; // x6
-  System_String_o *v37; // x7
+  bool v36; // w6
+  bool v37; // w7
   int32_t v38; // w1
-  int32_t v39; // w2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
   int32_t v42; // w5
-  int64_t v43; // x6
-  System_String_o *v44; // x7
+  bool v43; // w6
+  bool v44; // w7
   int32_t v45; // w1
-  int32_t v46; // w2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
   int32_t v49; // w5
-  int64_t v50; // x6
-  System_String_o *v51; // x7
+  bool v50; // w6
+  bool v51; // w7
   int32_t v52; // w1
-  int32_t v53; // w2
-  int32_t v54; // w3
-  System_String_o *v55; // x4
+  System_String_o *v53; // x2
+  System_String_o *v54; // x3
+  int32_t v55; // w4
   int32_t v56; // w5
-  int64_t v57; // x6
-  System_String_o *v58; // x7
+  bool v57; // w6
+  bool v58; // w7
   int32_t v59; // w1
-  int32_t v60; // w2
-  int32_t v61; // w3
-  System_String_o *v62; // x4
+  System_String_o *v60; // x2
+  System_String_o *v61; // x3
+  int32_t v62; // w4
   int32_t v63; // w5
-  int64_t v64; // x6
-  System_String_o *v65; // x7
+  bool v64; // w6
+  bool v65; // w7
 
-  if ( (byte_4E7526D & 1) == 0 )
+  if ( (byte_59361F4 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17281/*"bas13"*/);
-    sub_1D0F0B4(&StringLiteral_17279/*"bas1"*/);
-    sub_1D0F0B4(&StringLiteral_17232/*"ba20"*/);
-    sub_1D0F0B4(&StringLiteral_17280/*"bas10"*/);
-    sub_1D0F0B4(&StringLiteral_17230/*"ba19"*/);
-    sub_1D0F0B4(&StringLiteral_17238/*"ba30"*/);
-    sub_1D0F0B4(&StringLiteral_17233/*"ba21"*/);
-    sub_1D0F0B4(&StringLiteral_17229/*"ba18"*/);
-    byte_4E7526D = 1;
+    sub_21FFC50(&StringLiteral_17723/*"bas13"*/);
+    sub_21FFC50(&StringLiteral_17721/*"bas1"*/);
+    sub_21FFC50(&StringLiteral_17667/*"ba20"*/);
+    sub_21FFC50(&StringLiteral_17722/*"bas10"*/);
+    sub_21FFC50(&StringLiteral_17665/*"ba19"*/);
+    sub_21FFC50(&StringLiteral_17673/*"ba30"*/);
+    sub_21FFC50(&StringLiteral_17668/*"ba21"*/);
+    sub_21FFC50(&StringLiteral_17664/*"ba18"*/);
+    byte_59361F4 = 1;
   }
-  v9 = StringLiteral_17229/*"ba18"*/;
-  this->fields.SelectSe = (struct System_String_o *)StringLiteral_17229/*"ba18"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.SelectSe, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_17230/*"ba19"*/;
-  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_17230/*"ba19"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.DeselectSe, v10, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_17229/*"ba18"*/;
-  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_17229/*"ba18"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.OpenSimpleInfoSe, v17, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_17232/*"ba20"*/;
-  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_17232/*"ba20"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.OpenDetailInfoSe, v24, v25, v26, v27, v28, v29, v30);
-  v31 = StringLiteral_17233/*"ba21"*/;
-  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_17233/*"ba21"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.CloseDetailInfoSe, v31, v32, v33, v34, v35, v36, v37);
-  v38 = StringLiteral_17238/*"ba30"*/;
-  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_17238/*"ba30"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.HpGaugeAddSe, v38, v39, v40, v41, v42, v43, v44);
-  v45 = StringLiteral_17279/*"bas1"*/;
-  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_17279/*"bas1"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.OnBoardSkillNameInfoSe, v45, v46, v47, v48, v49, v50, v51);
-  v52 = StringLiteral_17280/*"bas10"*/;
-  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_17280/*"bas10"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.OnBoardSkillBuffSe, v52, v53, v54, v55, v56, v57, v58);
-  v59 = StringLiteral_17281/*"bas13"*/;
-  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_17281/*"bas13"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.OnBoardSkillDebuffSe, v59, v60, v61, v62, v63, v64, v65);
+  v9 = StringLiteral_17664/*"ba18"*/;
+  this->fields.SelectSe = (struct System_String_o *)StringLiteral_17664/*"ba18"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.SelectSe, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_17665/*"ba19"*/;
+  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_17665/*"ba19"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.DeselectSe, v10, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_17664/*"ba18"*/;
+  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_17664/*"ba18"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.OpenSimpleInfoSe, v17, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_17667/*"ba20"*/;
+  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_17667/*"ba20"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.OpenDetailInfoSe, v24, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_17668/*"ba21"*/;
+  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_17668/*"ba21"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.CloseDetailInfoSe, v31, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_17673/*"ba30"*/;
+  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_17673/*"ba30"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.HpGaugeAddSe, v38, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_17721/*"bas1"*/;
+  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_17721/*"bas1"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.OnBoardSkillNameInfoSe,
+    v45,
+    v46,
+    v47,
+    v48,
+    v49,
+    v50,
+    v51);
+  v52 = StringLiteral_17722/*"bas10"*/;
+  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_17722/*"bas10"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.OnBoardSkillBuffSe, v52, v53, v54, v55, v56, v57, v58);
+  v59 = StringLiteral_17723/*"bas13"*/;
+  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_17723/*"bas13"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.OnBoardSkillDebuffSe, v59, v60, v61, v62, v63, v64, v65);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }

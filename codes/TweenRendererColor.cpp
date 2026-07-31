@@ -15,8 +15,8 @@ TweenRendererColor_o *TweenRendererColor__Begin(
 {
   float a; // s8
   float b; // s9
-  float g; // s11
-  float r; // s12
+  float g; // s10
+  float r; // s11
   TweenRendererColor_o *v10; // x0
   const MethodInfo *v11; // x1
   TweenRendererColor_o *v12; // x19
@@ -25,17 +25,17 @@ TweenRendererColor_o *TweenRendererColor__Begin(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4E78E72 & 1) == 0 )
+  if ( (byte_5939EC2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenRendererColor___);
-    byte_4E78E72 = 1;
+    sub_21FFC50(&Method_UITweener_Begin_TweenRendererColor___);
+    byte_5939EC2 = 1;
   }
   v10 = (TweenRendererColor_o *)UITweener__Begin_object_(
                                   go,
                                   duration,
-                                  (const MethodInfo_332666C *)Method_UITweener_Begin_TweenRendererColor___);
+                                  (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenRendererColor___);
   if ( !v10 )
-    sub_1D0F30C(0, v11);
+    sub_21FFECC(0, v11);
   v12 = v10;
   v10->fields.from = TweenRendererColor__get_value(v10, v11);
   v12->fields.to.fields.r = r;
@@ -53,55 +53,55 @@ TweenRendererColor_o *TweenRendererColor__Begin(
 
 void TweenRendererColor__Cache(TweenRendererColor_o *this, const MethodInfo *method)
 {
+  const MethodInfo_37ED7E0 *v3; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E78E6F & 1) == 0 )
+  if ( (byte_5939EBF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
-    byte_4E78E6F = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+    byte_5939EBF = 1;
   }
+  v3 = (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___;
   this->fields.mCached = 1;
-  Component_object = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+  Component_object = UnityEngine_Component__GetComponent_object_((UnityEngine_Component_o *)this, v3);
   this->fields.mTweenRenderer = (struct UITweenRenderer_o *)Component_object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.mTweenRenderer,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mTweenRenderer,
     (int32_t)Component_object,
-    v4,
     v5,
     v6,
     v7,
     v8,
-    v9);
+    v9,
+    v10);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void TweenRendererColor__OnUpdate(TweenRendererColor_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
-  bool v4; // nf
-  float v5; // s0
-  UnityEngine_Color_o v6; // q0 OVERLAPPED
+  float v4; // s1
+  UnityEngine_Color_o v5; // q0 OVERLAPPED
   float g; // s1
-  __int64 v8; // kr00_8
+  __int64 v7; // kr00_8
 
-  v4 = factor < 0.0;
-  v5 = fminf(factor, 1.0);
-  if ( v4 )
-    v5 = 0.0;
-  v6 = (UnityEngine_Color_o)vaddq_f32(
+  v4 = 1.0;
+  if ( factor <= 1.0 )
+    v4 = factor;
+  if ( factor < 0.0 )
+    v4 = 0.0;
+  v5 = (UnityEngine_Color_o)vaddq_f32(
                               (float32x4_t)this->fields.from,
-                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v5));
-  g = v6.fields.g;
-  v8 = *(_QWORD *)&v6.fields.b;
-  TweenRendererColor__set_value(this, v6, (const MethodInfo *)isFinished);
+                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4));
+  g = v5.fields.g;
+  v7 = *(_QWORD *)&v5.fields.b;
+  TweenRendererColor__set_value(this, v5, (const MethodInfo *)isFinished);
 }
 
 
@@ -147,21 +147,21 @@ UnityEngine_Color_o TweenRendererColor__get_value(TweenRendererColor_o *this, co
   float v9; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E78E70 & 1) == 0 )
+  if ( (byte_5939EC0 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78E70 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939EC0 = 1;
   }
   if ( !this->fields.mCached )
     TweenRendererColor__Cache(this, method);
   mTweenRenderer = (UnityEngine_Object_o *)this->fields.mTweenRenderer;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mTweenRenderer, 0, 0) )
   {
     v5 = this->fields.mTweenRenderer;
     if ( !v5 )
-      sub_1D0F30C(0, v4);
+      sub_21FFECC(0, v4);
     ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v5->klass->vtable._40_GetTweenColor.methodPtr)(
       v5,
       v5->klass->vtable._40_GetTweenColor.method);
@@ -188,40 +188,41 @@ void TweenRendererColor__set_color(TweenRendererColor_o *this, UnityEngine_Color
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TweenRendererColor__set_value(TweenRendererColor_o *this, UnityEngine_Color_o value, const MethodInfo *method)
 {
-  long double v3; // q8
-  long double v4; // q9
-  long double v5; // q10
+  float a; // s8
+  float b; // s9
+  float g; // s10
+  float r; // s11
   UnityEngine_Object_o *mTweenRenderer; // x20
   __int64 v9; // x1
   struct UITweenRenderer_o *v10; // x0
 
-  v3 = *(long double *)&value.fields.a;
-  v4 = *(long double *)&value.fields.b;
-  v5 = *(long double *)&value.fields.g;
-  if ( (byte_4E78E71 & 1) == 0 )
+  a = value.fields.a;
+  b = value.fields.b;
+  g = value.fields.g;
+  r = value.fields.r;
+  if ( (byte_5939EC1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78E71 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939EC1 = 1;
   }
   if ( !this->fields.mCached )
     TweenRendererColor__Cache(this, method);
   mTweenRenderer = (UnityEngine_Object_o *)this->fields.mTweenRenderer;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mTweenRenderer, 0, 0) )
   {
     v10 = this->fields.mTweenRenderer;
     if ( !v10 )
-      sub_1D0F30C(0, v9);
-    ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *, long double, long double, long double, long double))v10->klass->vtable._39_SetTweenColor.methodPtr)(
+      sub_21FFECC(0, v9);
+    ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *, float, float, float, float))v10->klass->vtable._39_SetTweenColor.methodPtr)(
       v10,
       v10->klass->vtable._39_SetTweenColor.method,
-      *(long double *)&value,
-      v5,
-      v4,
-      v3);
+      r,
+      g,
+      b,
+      a);
   }
 }

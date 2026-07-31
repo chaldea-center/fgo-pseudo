@@ -3,16 +3,16 @@ void WarBoardAIEvalCalcurater___ctor(
         WarBoardAIRoute_PiecePersonality_o *piecePersonality,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.piecePersonalityList = piecePersonality;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)piecePersonality, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)piecePersonality, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -34,7 +34,7 @@ void WarBoardAIEvalCalcurater__AddRatingBaseOffsetValue(
     || (actionTypeIds = trend->fields.actionTypeIds) == 0 )
   {
 LABEL_17:
-    sub_1D0F30C(this, route);
+    sub_21FFECC(this, route);
   }
   max_length = actionTypeIds->max_length;
   if ( (int)max_length >= 1 )
@@ -43,7 +43,7 @@ LABEL_17:
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       this = (WarBoardAIEvalCalcurater_o *)WarBoardActionTrendEntity__GetActionType(
                                              trend,
                                              actionTypeIds->m_Items[v8],
@@ -116,7 +116,7 @@ LABEL_13:
       goto LABEL_13;
     }
 LABEL_18:
-    sub_1D0F30C(this, route);
+    sub_21FFECC(this, route);
   }
 }
 
@@ -129,9 +129,9 @@ void WarBoardAIEvalCalcurater__AddTrendEvalValue(
 {
   int32_t viewPoint; // w8
   float warAttack; // s8
-  float *p_benMove; // x20
+  float *p_benMove; // x21
   float benAttack; // s8
-  float v10; // s8
+  float v9; // s8
 
   if ( !trend )
     goto LABEL_10;
@@ -141,23 +141,23 @@ void WarBoardAIEvalCalcurater__AddTrendEvalValue(
     if ( evalOffsetMagnification )
     {
       benAttack = evalOffsetMagnification->fields.benAttack;
-      evalOffsetMagnification->fields.benAttack = benAttack + WarBoardActionTrendEntity__GetAttackValue(trend, 0);
       p_benMove = &evalOffsetMagnification->fields.benMove;
+      evalOffsetMagnification->fields.benAttack = benAttack + WarBoardActionTrendEntity__GetAttackValue(trend, 0);
       goto LABEL_8;
     }
 LABEL_10:
-    sub_1D0F30C(this, evalOffsetMagnification);
+    sub_21FFECC(this, evalOffsetMagnification);
   }
   if ( viewPoint )
     return;
   if ( !evalOffsetMagnification )
     goto LABEL_10;
   warAttack = evalOffsetMagnification->fields.warAttack;
-  evalOffsetMagnification->fields.warAttack = warAttack + WarBoardActionTrendEntity__GetAttackValue(trend, 0);
   p_benMove = &evalOffsetMagnification->fields.warMove;
+  evalOffsetMagnification->fields.warAttack = warAttack + WarBoardActionTrendEntity__GetAttackValue(trend, 0);
 LABEL_8:
-  v10 = *p_benMove;
-  *p_benMove = v10 + WarBoardActionTrendEntity__GetMoveValue(trend, 0);
+  v9 = *p_benMove;
+  *p_benMove = v9 + WarBoardActionTrendEntity__GetMoveValue(trend, 0);
 }
 
 
@@ -172,7 +172,7 @@ void WarBoardAIEvalCalcurater__CalcRatingOffsetAddCondition(
 
   piecePersonalityList = this->fields.piecePersonalityList;
   if ( !piecePersonalityList )
-    sub_1D0F30C(this, route);
+    sub_21FFECC(this, route);
   WarBoardAIEvalCalcurater__JudgeRatingOffsetAddCondition(
     this,
     route,
@@ -191,101 +191,103 @@ void WarBoardAIEvalCalcurater__CalcRatingOffsetReviewCondition(
   struct WarBoardAIRoute_PiecePersonality_o *piecePersonalityList; // x8
   _BOOL8 v6; // x0
   __int64 v7; // x1
+  WarBoardAIRoute_RouteData_o *v8; // x8
   Il2CppObject *current; // x21
   Il2CppClass *klass; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *dicPutIndexTargetData; // x22
   int64_t TrendKey; // x0
-  const MethodInfo *v12; // x4
-  const MethodInfo *v13; // x3
-  __int64 v14; // x1
-  WarBoardActionTrendEntity_o *v15; // x0
-  __int64 v16; // x1
-  System_Collections_Generic_HashSet_T__o *FutureLookingTrendHashSet; // x0
-  __int64 v18; // x1
-  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-70h] BYREF
+  const MethodInfo *v13; // x4
+  const MethodInfo *v14; // x3
+  __int64 v15; // x1
+  WarBoardActionTrendEntity_o *v16; // x0
+  __int64 v17; // x1
+  System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__o *FutureLookingTrendHashSet; // x0
+  __int64 v19; // x1
+  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *value; // [xsp+48h] [xbp-48h] BYREF
 
   v4 = this;
-  if ( (byte_4E74F39 & 1) == 0 )
+  if ( (byte_5935F3E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__Add__);
-    this = (WarBoardAIEvalCalcurater_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-    byte_4E74F39 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__Add__);
+    this = (WarBoardAIEvalCalcurater_o *)sub_21FFC50(&Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+    byte_5935F3E = 1;
   }
-  memset(&v20, 0, sizeof(v20));
-  value = 0;
   piecePersonalityList = v4->fields.piecePersonalityList;
+  memset(&v21, 0, sizeof(v21));
+  value = 0;
   if ( !piecePersonalityList || (this = (WarBoardAIEvalCalcurater_o *)piecePersonalityList->fields.actionTrandList) == 0 )
-    sub_1D0F30C(this, route);
+    sub_21FFECC(this, route);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v19,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-  v20 = v19;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+  v21 = v20;
+  v20.fields._list = 0;
+  *(_QWORD *)&v20.fields._index = &v21;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v20,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+           &v21,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
     if ( !v6 )
       break;
+    v8 = *route;
+    current = v21.fields._current;
     value = 0;
-    current = v20.fields._current;
-    if ( !*route )
-      sub_1D0F30C(v6, v7);
-    if ( !v20.fields._current )
-      sub_1D0F30C(v6, v7);
-    klass = v20.fields._current[1].klass;
+    if ( !v8 )
+      sub_21FFECC(v6, v7);
+    if ( !v21.fields._current )
+      sub_21FFECC(v6, v7);
+    klass = v21.fields._current[1].klass;
     if ( !klass )
-      sub_1D0F30C(0, v7);
-    dicPutIndexTargetData = (System_Collections_Generic_Dictionary_TKey__TValue__o *)(*route)->fields.dicPutIndexTargetData;
+      sub_21FFECC(0, v7);
+    dicPutIndexTargetData = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v8->fields.dicPutIndexTargetData;
     TrendKey = WarBoardActionTrendEntity__get_TrendKey((WarBoardActionTrendEntity_o *)klass, 0);
     if ( !dicPutIndexTargetData )
-      sub_1D0F30C(TrendKey, TrendKey);
+      sub_21FFECC(TrendKey, TrendKey);
     System_Collections_Generic_Dictionary_long__object___TryGetValue(
       dicPutIndexTargetData,
       TrendKey,
       &value,
-      (const MethodInfo_35DBCE4 *)Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
+      (const MethodInfo_3F9DDCC *)Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
     if ( WarBoardAIEvalCalcurater__JudgeSatisfyingTrend(
            v4,
            *route,
            (WarBoardAIRoute_ActionTrendInfo_o *)current,
            (WarBoardAIRoute_TargetData_o *)value,
-           v12) )
+           v13) )
     {
       WarBoardAIEvalCalcurater__AddRatingBaseOffsetValue(
         v4,
         route,
         (WarBoardActionTrendEntity_o *)current[1].klass,
-        v13);
-      v15 = (WarBoardActionTrendEntity_o *)current[1].klass;
-      if ( !v15 )
-        sub_1D0F30C(0, v14);
-      if ( WarBoardActionTrendEntity__get_HasFutureTrend(v15, 0) )
+        v14);
+      v16 = (WarBoardActionTrendEntity_o *)current[1].klass;
+      if ( !v16 )
+        sub_21FFECC(0, v15);
+      if ( WarBoardActionTrendEntity__get_HasFutureTrend(v16, 0) )
       {
         if ( !*route )
-          sub_1D0F30C(0, v16);
-        FutureLookingTrendHashSet = (System_Collections_Generic_HashSet_T__o *)WarBoardAIRoute_RouteData__get_FutureLookingTrendHashSet(
-                                                                                 *route,
-                                                                                 0);
+          sub_21FFECC(0, v17);
+        FutureLookingTrendHashSet = WarBoardAIRoute_RouteData__get_FutureLookingTrendHashSet(*route, 0);
         if ( !FutureLookingTrendHashSet )
-          sub_1D0F30C(0, v18);
+          sub_21FFECC(0, v19);
         System_Collections_Generic_HashSet_object___Add(
-          FutureLookingTrendHashSet,
+          (System_Collections_Generic_HashSet_object__o *)FutureLookingTrendHashSet,
           current,
-          (const MethodInfo_3807D78 *)Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__Add__);
+          (const MethodInfo_4287934 *)Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__Add__);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v20,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+    &v21,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
 }
 
 
@@ -299,52 +301,53 @@ void WarBoardAIEvalCalcurater__CalcRatingOffsetReviewConditionForFutureActionTre
   _BOOL8 v8; // x0
   __int64 v9; // x1
   System_Collections_Generic_List_object__o *monitor; // x0
-  _BOOL8 v11; // x0
-  __int64 v12; // x1
+  __int128 v11; // q0
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
   WarBoardAIRoute_ActionTrendInfo_o *current; // x22
   Il2CppClass *klass; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *dicPutIndexTargetData; // x23
   int64_t TrendKey; // x0
-  const MethodInfo *v17; // x4
-  _BOOL8 v18; // x0
-  __int64 v19; // x1
-  const MethodInfo *v20; // x3
-  WarBoardAIRoute_RouteData_o *v21; // x8
-  GrandQuestFolderBoardItem_o *p_futureEvalOffsetMag; // x23
-  WarBoardAIRoute_RouteData_EvalOffsetMagnification_o *v23; // x24
+  const MethodInfo *v18; // x4
+  _BOOL8 v19; // x0
+  __int64 v20; // x1
+  const MethodInfo *v21; // x3
+  WarBoardAIRoute_RouteData_o *v22; // x8
+  MissionNaviTransitionBoardItem_o *p_futureEvalOffsetMag; // x23
+  WarBoardAIRoute_RouteData_EvalOffsetMagnification_o *v24; // x24
   _BOOL8 IsAttack; // x0
-  __int64 v25; // x1
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
-  __int64 v32; // x1
-  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+0h] [xbp-C0h] BYREF
-  Il2CppObject *value; // [xsp+18h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+20h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+40h] [xbp-80h] BYREF
+  __int64 v26; // x1
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  __int64 v33; // x1
+  System_Collections_Generic_HashSet_Enumerator_T__o v34; // [xsp+10h] [xbp-C0h] BYREF
+  Il2CppObject *value; // [xsp+28h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+30h] [xbp-A0h] BYREF
+  System_Collections_Generic_HashSet_Enumerator_T__o v37; // [xsp+50h] [xbp-80h] BYREF
 
-  if ( (byte_4E74F3A & 1) == 0 )
+  if ( (byte_5935F3F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
-    sub_1D0F0B4(&WarBoardAIRoute_RouteData_EvalOffsetMagnification_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-    byte_4E74F3A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__get_Current__);
+    sub_21FFC50(&WarBoardAIRoute_RouteData_EvalOffsetMagnification_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+    byte_5935F3F = 1;
   }
-  memset(&v36, 0, sizeof(v36));
-  memset(&v35, 0, sizeof(v35));
-  value = 0;
   FutureLookingTrendHashSet = *route;
-  if ( !*route )
+  memset(&v37, 0, sizeof(v37));
+  memset(&v36, 0, sizeof(v36));
+  value = 0;
+  if ( !FutureLookingTrendHashSet )
     goto LABEL_35;
   if ( !WarBoardAIRoute_RouteData__HasFutureTrend(FutureLookingTrendHashSet, 0) )
     return;
@@ -358,91 +361,95 @@ void WarBoardAIEvalCalcurater__CalcRatingOffsetReviewConditionForFutureActionTre
                                                                0);
   if ( !FutureLookingTrendHashSet )
 LABEL_35:
-    sub_1D0F30C(FutureLookingTrendHashSet, route);
+    sub_21FFECC(FutureLookingTrendHashSet, route);
   System_Collections_Generic_HashSet_object___GetEnumerator(
-    (System_Collections_Generic_HashSet_Enumerator_T__o *)&v33,
-    (System_Collections_Generic_HashSet_T__o *)FutureLookingTrendHashSet,
-    (const MethodInfo_38076FC *)Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-  v36 = v33;
+    &v34,
+    (System_Collections_Generic_HashSet_object__o *)FutureLookingTrendHashSet,
+    (const MethodInfo_42872B8 *)Method_System_Collections_Generic_HashSet_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+  v37 = v34;
   while ( 1 )
   {
     v8 = System_Collections_Generic_HashSet_Enumerator_object___MoveNext(
-           (System_Collections_Generic_HashSet_Enumerator_T__o *)&v36,
-           (const MethodInfo_36CDA18 *)Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+           &v37,
+           (const MethodInfo_40C79B8 *)Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
     if ( !v8 )
       break;
-    if ( !v36.fields._current )
-      sub_1D0F30C(v8, v9);
-    monitor = (System_Collections_Generic_List_object__o *)v36.fields._current[2].monitor;
+    if ( !v37.fields._current )
+      sub_21FFECC(v8, v9);
+    monitor = (System_Collections_Generic_List_object__o *)v37.fields._current[2].monitor;
     if ( !monitor )
-      sub_1D0F30C(0, v9);
+      sub_21FFECC(0, v9);
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v33,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v34,
       monitor,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
-    v35 = v33;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_WarBoardAIRoute_ActionTrendInfo__GetEnumerator__);
+    v11 = *(_OWORD *)&v34.fields._set;
+    v34.fields._set = 0;
+    *(_QWORD *)&v34.fields._index = &v36;
+    *(_OWORD *)&v36.fields._list = v11;
+    v36.fields._current = v34.fields._current;
     while ( 1 )
     {
-      v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v35,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
-      if ( !v11 )
+      v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v36,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__MoveNext__);
+      if ( !v12 )
         break;
-      current = (WarBoardAIRoute_ActionTrendInfo_o *)v35.fields._current;
-      if ( !v35.fields._current )
-        sub_1D0F30C(v11, v12);
-      klass = v35.fields._current[1].klass;
+      current = (WarBoardAIRoute_ActionTrendInfo_o *)v36.fields._current;
+      if ( !v36.fields._current )
+        sub_21FFECC(v12, v13);
+      klass = v36.fields._current[1].klass;
       if ( !klass )
-        sub_1D0F30C(0, v12);
+        sub_21FFECC(0, v13);
       dicPutIndexTargetData = (System_Collections_Generic_Dictionary_TKey__TValue__o *)futureRoute->fields.dicPutIndexTargetData;
       TrendKey = WarBoardActionTrendEntity__get_TrendKey((WarBoardActionTrendEntity_o *)klass, 0);
       if ( !dicPutIndexTargetData )
-        sub_1D0F30C(TrendKey, TrendKey);
+        sub_21FFECC(TrendKey, TrendKey);
       System_Collections_Generic_Dictionary_long__object___TryGetValue(
         dicPutIndexTargetData,
         TrendKey,
         &value,
-        (const MethodInfo_35DBCE4 *)Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
-      v18 = WarBoardAIEvalCalcurater__JudgeSatisfyingTrend(
+        (const MethodInfo_3F9DDCC *)Method_System_Collections_Generic_Dictionary_long__WarBoardAIRoute_TargetData__TryGetValue__);
+      v19 = WarBoardAIEvalCalcurater__JudgeSatisfyingTrend(
               this,
               futureRoute,
               current,
               (WarBoardAIRoute_TargetData_o *)value,
-              v17);
-      if ( v18 )
+              v18);
+      if ( v19 )
       {
-        v21 = *route;
+        v22 = *route;
         if ( !*route )
-          sub_1D0F30C(v18, v19);
-        p_futureEvalOffsetMag = (GrandQuestFolderBoardItem_o *)&v21->fields.futureEvalOffsetMag;
-        if ( !v21->fields.futureEvalOffsetMag )
+          sub_21FFECC(v19, v20);
+        p_futureEvalOffsetMag = (MissionNaviTransitionBoardItem_o *)&v22->fields.futureEvalOffsetMag;
+        if ( !v22->fields.futureEvalOffsetMag )
         {
-          v23 = (WarBoardAIRoute_RouteData_EvalOffsetMagnification_o *)sub_1D0F300(WarBoardAIRoute_RouteData_EvalOffsetMagnification_TypeInfo);
-          WarBoardAIRoute_RouteData_EvalOffsetMagnification___ctor(v23, 0);
+          v24 = (WarBoardAIRoute_RouteData_EvalOffsetMagnification_o *)sub_21FFEBC(WarBoardAIRoute_RouteData_EvalOffsetMagnification_TypeInfo);
+          WarBoardAIRoute_RouteData_EvalOffsetMagnification___ctor(v24, 0);
           IsAttack = WarBoardAIRoute_RouteData__get_IsAttack(futureRoute, 0);
-          if ( !v23 )
-            sub_1D0F30C(IsAttack, v25);
-          v23->fields.isAttack = IsAttack;
-          p_futureEvalOffsetMag->klass = (GrandQuestFolderBoardItem_c *)v23;
-          sub_1D0F058(p_futureEvalOffsetMag, (int32_t)v23, v26, v27, v28, v29, v30, v31);
-          v21 = *route;
+          if ( !v24 )
+            sub_21FFECC(IsAttack, v26);
+          v24->fields.isAttack = IsAttack;
+          p_futureEvalOffsetMag->klass = (MissionNaviTransitionBoardItem_c *)v24;
+          sub_21FFBF4(p_futureEvalOffsetMag, (int32_t)v24, v27, v28, v29, v30, v31, v32);
+          v22 = *route;
           if ( !*route )
-            sub_1D0F30C(v18, v32);
+            sub_21FFECC(v19, v33);
         }
         WarBoardAIEvalCalcurater__AddTrendEvalValue(
-          (WarBoardAIEvalCalcurater_o *)v18,
-          v21->fields.futureEvalOffsetMag,
+          (WarBoardAIEvalCalcurater_o *)v19,
+          v22->fields.futureEvalOffsetMag,
           current->fields._Entity_k__BackingField,
-          v20);
+          v21);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v35,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+      &v36,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
   }
   System_Collections_Generic_HashSet_Enumerator_object___Dispose(
-    (System_Collections_Generic_HashSet_Enumerator_T__o *)&v36,
-    (const MethodInfo_36CDA14 *)Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
+    &v37,
+    (const MethodInfo_40C79B4 *)Method_System_Collections_Generic_HashSet_Enumerator_WarBoardAIRoute_ActionTrendInfo__Dispose__);
 }
 
 
@@ -453,814 +460,839 @@ void WarBoardAIEvalCalcurater__JudgeRatingOffsetAddCondition(
         float avgBeneValue,
         const MethodInfo *method)
 {
-  __int64 v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  WarBoardAIRoute_RouteData_o *v7; // x8
+  __int64 v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
   int32_t current; // w1
-  WarBoardRatingOffsetEntity_o **v17; // x20
+  WarBoardRatingOffsetEntity_o **v18; // x20
+  __int64 v19; // x0
+  __int64 v20; // x1
+  const MethodInfo *v21; // x5
+  WarBoardRatingOffsetEntity_o *v22; // x2
+  _BOOL8 isMaster; // x0
   _BOOL8 HasFlag; // x0
-  __int64 v19; // x1
-  const MethodInfo *v20; // x5
-  WarBoardRatingOffsetEntity_o *v21; // x2
-  char v22; // w8
-  __int64 v23; // x1
-  WarBoardRatingOffsetEntity_o *v24; // x9
+  __int64 v25; // x1
+  WarBoardRatingOffsetEntity_o *v26; // x9
   int32_t attackByLinkedEnemy; // w8
-  struct System_Collections_Generic_Dictionary_uint__int__o *v26; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v27; // x23
-  struct System_Collections_Generic_Dictionary_uint__int__o *v28; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v29; // x23
-  WarBoardPieceData_o *v30; // x0
-  struct WarBoardPieceData_o *v31; // x8
-  struct BattleServantData_o *v32; // x8
-  _BOOL4 v33; // w8
-  WarBoardPieceData_o *v34; // x21
-  float v35; // s0
-  WarBoardRatingOffsetEntity_o *v36; // x8
-  WarBoardPieceData_o *v37; // x0
-  WarBoardPieceData_o *v38; // x0
-  WarBoardPieceData_o *v39; // x0
+  _BOOL8 v28; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *v29; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v30; // x23
+  _BOOL8 v31; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *v32; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v33; // x23
+  WarBoardPieceData_o *v34; // x0
+  _BOOL8 v35; // x0
+  struct WarBoardPieceData_o *v36; // x8
+  struct BattleServantData_o *v37; // x8
+  WarBoardPieceData_o *v38; // x21
+  __int64 v39; // x0
+  float v40; // s0
+  WarBoardRatingOffsetEntity_o *v41; // x8
+  _BOOL8 v42; // x0
+  WarBoardPieceData_o *v43; // x0
+  _BOOL4 Item; // w0
+  _BOOL8 v45; // x0
+  WarBoardPieceData_o *v46; // x0
+  _BOOL8 v47; // x0
+  WarBoardPieceData_o *v48; // x0
+  _BOOL8 v49; // x0
   System_Collections_Generic_Dictionary_int__bool__o *dicMoveByServantGetDesignationItem; // x0
-  System_Collections_Generic_Dictionary_int__bool__o *v41; // x0
-  struct System_Collections_Generic_Dictionary_uint__int__o *v42; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v43; // x23
-  WarBoardPieceData_o *v44; // x0
-  struct WarBoardPieceData_o *v45; // x8
+  _BOOL8 v51; // x0
+  System_Collections_Generic_Dictionary_int__bool__o *v52; // x0
+  _BOOL8 v53; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *v54; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v55; // x23
+  _BOOL8 v56; // x0
+  WarBoardPieceData_o *v57; // x0
+  _BOOL8 v58; // x0
+  struct WarBoardPieceData_o *v59; // x8
   struct BattleServantData_o *battleServant_k__BackingField; // x8
-  WarBoardRatingOffsetEntity_o *v47; // x9
+  WarBoardRatingOffsetEntity_o *v61; // x9
   int32_t np; // w8
-  WarBoardPieceData_o *v49; // x0
+  _BOOL8 v63; // x0
+  WarBoardPieceData_o *v64; // x0
+  _BOOL8 v65; // x0
+  _BOOL8 v66; // x0
   int32_t moveByLinkedEnemy; // w8
-  bool v51; // zf
+  _BOOL8 v68; // x0
+  bool v69; // zf
+  _BOOL8 v70; // x0
+  __int64 v71; // x2
   WarBoardPieceData_o *actionPiece; // x21
-  __int64 v53; // x0
-  __int64 v54; // x1
+  __int64 v73; // x0
+  __int64 v74; // x1
   float BreakPoint; // s0
-  WarBoardPieceData_o *v56; // x0
-  float v57; // s8
-  WarBoardRatingOffsetEntity_o *v58; // x8
-  WarBoardAIRoute_RouteData_o *v59; // x8
-  WarBoardPieceData_o *basePiece; // x21
-  bool v61; // cc
-  WarBoardPieceData_o *v62; // x21
-  __int64 v63; // x0
-  __int64 v64; // x1
-  float v65; // s0
-  WarBoardPieceData_o *v66; // x0
-  WarBoardPieceData_o *v67; // x0
-  WarBoardPieceData_o *v68; // x0
-  WarBoardPieceData_o *v69; // x0
-  WarBoardPieceData_o *v70; // x0
-  WarBoardAIRoute_RouteData_o *v71; // x8
-  struct System_Collections_Generic_Dictionary_uint__int__o *dicUniqueKeyRange; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v73; // x23
-  struct System_Collections_Generic_Dictionary_uint__int__o *v74; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v75; // x23
   WarBoardPieceData_o *v76; // x0
-  WarBoardPieceData_o *v77; // x0
-  System_Collections_Generic_Dictionary_int__bool__o *v78; // x0
-  System_Collections_Generic_Dictionary_int__bool__o *v79; // x0
-  struct System_Collections_Generic_Dictionary_uint__int__o *v80; // x22
-  System_Func_KeyValuePair_uint__int___bool__o *v81; // x23
-  System_Collections_Generic_List_Enumerator_object__o v82; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v83; // [xsp+20h] [xbp-90h] BYREF
+  float v77; // s8
+  _BOOL8 isServant; // x0
+  WarBoardRatingOffsetEntity_o *v79; // x8
+  _BOOL8 v80; // x0
+  WarBoardAIRoute_RouteData_o *v81; // x8
+  WarBoardPieceData_o *basePiece; // x21
+  __int64 v83; // x0
+  bool v84; // cc
+  _BOOL8 v85; // x0
+  __int64 v86; // x2
+  WarBoardPieceData_o *v87; // x21
+  __int64 v88; // x0
+  __int64 v89; // x1
+  float v90; // s0
+  WarBoardPieceData_o *v91; // x0
+  _BOOL8 v92; // x0
+  _BOOL8 v93; // x0
+  _BOOL8 v94; // x0
+  WarBoardPieceData_o *v95; // x0
+  _BOOL8 v96; // x0
+  WarBoardPieceData_o *v97; // x0
+  _BOOL8 v98; // x0
+  WarBoardPieceData_o *v99; // x0
+  _BOOL8 v100; // x0
+  WarBoardPieceData_o *v101; // x0
+  _BOOL8 v102; // x0
+  WarBoardAIRoute_RouteData_o *v103; // x8
+  _BOOL8 v104; // x0
+  _BOOL8 v105; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *dicUniqueKeyRange; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v107; // x23
+  _BOOL8 v108; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *v109; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v110; // x23
+  _BOOL8 v111; // x0
+  _BOOL8 v112; // x0
+  WarBoardPieceData_o *v113; // x0
+  _BOOL8 v114; // x0
+  WarBoardPieceData_o *v115; // x0
+  _BOOL8 v116; // x0
+  System_Collections_Generic_Dictionary_int__bool__o *v117; // x0
+  _BOOL8 v118; // x0
+  System_Collections_Generic_Dictionary_int__bool__o *v119; // x0
+  struct System_Collections_Generic_Dictionary_uint__int__o *v120; // x22
+  System_Func_KeyValuePair_uint__int___bool__o *v121; // x23
+  struct System_Collections_Generic_List_T__o *list; // x19
+  System_Collections_Generic_List_Enumerator_object__o v123; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v124; // [xsp+20h] [xbp-90h] BYREF
 
-  if ( (byte_4E74F3C & 1) == 0 )
+  if ( (byte_5935F41 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__get_Current__);
-    sub_1D0F0B4(&System_Func_KeyValuePair_uint__int___bool__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_WarBoardRatingOffsetEntity__GetEnumerator__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__0__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__1__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__2__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__3__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__4__);
-    sub_1D0F0B4(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__5__);
-    sub_1D0F0B4(&WarBoardAIEvalCalcurater___c__DisplayClass9_0_TypeInfo);
-    this = (WarBoardAIEvalCalcurater_o *)sub_1D0F0B4(&WarBoardAIManager_TypeInfo);
-    byte_4E74F3C = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__get_Current__);
+    sub_21FFC50(&System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_WarBoardRatingOffsetEntity__GetEnumerator__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__0__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__1__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__2__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__3__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__4__);
+    sub_21FFC50(&Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__5__);
+    sub_21FFC50(&WarBoardAIEvalCalcurater___c__DisplayClass9_0_TypeInfo);
+    this = (WarBoardAIEvalCalcurater_o *)sub_21FFC50(&WarBoardAIManager_TypeInfo);
+    byte_5935F41 = 1;
   }
-  memset(&v83, 0, sizeof(v83));
-  if ( !*route || !ratingOffsetList )
-    sub_1D0F30C(this, route);
+  v7 = *route;
+  memset(&v124, 0, sizeof(v124));
+  if ( !v7 || !ratingOffsetList )
+    sub_21FFECC(this, route);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v82,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v123,
     (System_Collections_Generic_List_object__o *)ratingOffsetList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_WarBoardRatingOffsetEntity__GetEnumerator__);
-  v83 = v82;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_WarBoardRatingOffsetEntity__GetEnumerator__);
+  v124 = v123;
+  v123.fields._list = 0;
+  *(_QWORD *)&v123.fields._index = &v124;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v83,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__MoveNext__) )
+            &v124,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__MoveNext__) )
   {
-    v7 = sub_1D0F300(WarBoardAIEvalCalcurater___c__DisplayClass9_0_TypeInfo);
-    WarBoardAIEvalCalcurater___c__DisplayClass9_0___ctor((WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)v7, 0);
-    if ( !v7 )
-      sub_1D0F30C(v8, v9);
-    current = (int32_t)v83.fields._current;
-    *(_QWORD *)(v7 + 16) = v83.fields._current;
-    v17 = (WarBoardRatingOffsetEntity_o **)(v7 + 16);
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), current, v10, v11, v12, v13, v14, v15);
-    v21 = *(WarBoardRatingOffsetEntity_o **)(v7 + 16);
-    if ( !v21 )
-      sub_1D0F30C(HasFlag, v19);
-    v22 = 1;
-    switch ( v21->fields.type )
+    v8 = sub_21FFEBC(WarBoardAIEvalCalcurater___c__DisplayClass9_0_TypeInfo);
+    WarBoardAIEvalCalcurater___c__DisplayClass9_0___ctor((WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)v8, 0);
+    if ( !v8 )
+      sub_21FFECC(v9, v10);
+    current = (int32_t)v124.fields._current;
+    *(_QWORD *)(v8 + 16) = v124.fields._current;
+    v18 = (WarBoardRatingOffsetEntity_o **)(v8 + 16);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 16), current, v11, v12, v13, v14, v15, v16);
+    v22 = *(WarBoardRatingOffsetEntity_o **)(v8 + 16);
+    if ( !v22 )
+      sub_21FFECC(v19, v20);
+    isMaster = 1;
+    switch ( v22->fields.type )
     {
       case 0:
-        break;
+        goto LABEL_228;
       case 1:
         if ( !*route )
-          sub_1D0F30C(0, v19);
+          sub_21FFECC(0, v20);
         HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
         if ( !HasFlag )
-          goto LABEL_227;
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v24 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(HasFlag, v25);
+        v26 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(HasFlag, v25);
         attackByLinkedEnemy = (*route)->fields.attackByLinkedEnemy;
         goto LABEL_159;
       case 2:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v56 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v56 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v24 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v56, v25);
+        v26 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v56, v25);
         attackByLinkedEnemy = (*route)->fields.attackByLinkedAlly;
         goto LABEL_159;
       case 3:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
-        goto LABEL_209;
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
+        break;
       case 4:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
-        goto LABEL_240;
+          sub_21FFECC(0, v25);
+        Item = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
+        goto LABEL_238;
       case 5:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v20);
+        v70 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v70 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v70, v25);
         actionPiece = (*route)->fields.actionPiece;
-        if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
+        if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, v25, v71);
         BreakPoint = WarBoardAIManager__GetBreakPoint(actionPiece, 0);
         if ( !*route )
-          sub_1D0F30C(v53, v54);
-        v56 = (*route)->fields.actionPiece;
-        if ( !v56 )
-          sub_1D0F30C(0, v54);
-        v57 = BreakPoint;
-        HasFlag = WarBoardPieceData__get_isServant(v56, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
-        v58 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        if ( v57 > (float)(v58->fields.value / 100) )
-          goto LABEL_227;
+          sub_21FFECC(v73, v74);
+        v76 = (*route)->fields.actionPiece;
+        if ( !v76 )
+          sub_21FFECC(0, v74);
+        v77 = BreakPoint;
+        isServant = WarBoardPieceData__get_isServant(v76, 0);
+        if ( !isServant )
+          goto LABEL_226;
+        v79 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(isServant, v25);
+        if ( v77 > (float)(v79->fields.value / 100) )
+          goto LABEL_226;
         goto LABEL_153;
       case 6:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v20);
+        v85 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v85 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v62 = (*route)->fields.actionPiece;
-        if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-        v65 = WarBoardAIManager__GetBreakPoint(v62, 0);
+          sub_21FFECC(v85, v25);
+        v87 = (*route)->fields.actionPiece;
+        if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, v25, v86);
+        v90 = WarBoardAIManager__GetBreakPoint(v87, 0);
         if ( !*route )
-          sub_1D0F30C(v63, v64);
-        v66 = (*route)->fields.actionPiece;
-        if ( !v66 )
-          sub_1D0F30C(0, v64);
-        v57 = v65;
-        HasFlag = WarBoardPieceData__get_isServant(v66, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
-        v58 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        if ( v57 >= (float)(v58->fields.value / 100) )
-          goto LABEL_227;
+          sub_21FFECC(v88, v89);
+        v91 = (*route)->fields.actionPiece;
+        if ( !v91 )
+          sub_21FFECC(0, v89);
+        v77 = v90;
+        v92 = WarBoardPieceData__get_isServant(v91, 0);
+        if ( !v92 )
+          goto LABEL_226;
+        v79 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v92, v25);
+        if ( v77 >= (float)(v79->fields.value / 100) )
+          goto LABEL_226;
 LABEL_153:
-        v61 = v57 < (float)(v58->fields.value2 / 100);
+        v84 = v77 < (float)(v79->fields.value2 / 100);
         goto LABEL_202;
       case 7:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v63 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v63 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v49 = (*route)->fields.actionPiece;
-        if ( !v49 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isMaster(v49, 0);
-        goto LABEL_209;
+          sub_21FFECC(v63, v25);
+        v64 = (*route)->fields.actionPiece;
+        if ( !v64 )
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardPieceData__get_isMaster(v64, 0);
+        break;
       case 8:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v96 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v96 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v68 = (*route)->fields.actionPiece;
-        if ( !v68 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isMaster(v68, 0);
-        goto LABEL_240;
+          sub_21FFECC(v96, v25);
+        v97 = (*route)->fields.actionPiece;
+        if ( !v97 )
+          sub_21FFECC(0, v25);
+        Item = WarBoardPieceData__get_isMaster(v97, 0);
+        goto LABEL_238;
       case 9:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v47 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v47 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v39 = (*route)->fields.actionPiece;
-        if ( !v39 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v39, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(v47, v25);
+        v48 = (*route)->fields.actionPiece;
+        if ( !v48 )
+          sub_21FFECC(0, v25);
+        if ( !WarBoardPieceData__get_isServant(v48, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0);
-        goto LABEL_209;
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0);
+        break;
       case 0xA:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v94 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v94 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v67 = (*route)->fields.actionPiece;
-        if ( !v67 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v67, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(v94, v25);
+        v95 = (*route)->fields.actionPiece;
+        if ( !v95 )
+          sub_21FFECC(0, v25);
+        if ( !WarBoardPieceData__get_isServant(v95, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v25);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0);
-        goto LABEL_209;
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0);
+        break;
       case 0xB:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v42 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v42 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v37 = (*route)->fields.actionPiece;
-        if ( !v37 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v37, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(v42, v25);
+        v43 = (*route)->fields.actionPiece;
+        if ( !v43 )
+          sub_21FFECC(0, v25);
+        if ( !WarBoardPieceData__get_isServant(v43, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v25);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v25);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x800000, 0);
-        goto LABEL_209;
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x800000, 0);
+        break;
       case 0xC:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( !HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v20);
+        v45 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( !v45 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v38 = (*route)->fields.actionPiece;
-        if ( !v38 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v38, 0);
-        if ( !HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(v45, v25);
+        v46 = (*route)->fields.actionPiece;
+        if ( !v46 )
+          sub_21FFECC(0, v25);
+        if ( !WarBoardPieceData__get_isServant(v46, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0);
-        if ( HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v25);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 0x40000, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0);
-        if ( HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v25);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 0x80000, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x800000, 0);
-        v22 = !HasFlag;
-        goto LABEL_229;
+          sub_21FFECC(0, v25);
+        Item = WarBoardAIRoute_RouteData__HasFlag(*route, 0x800000, 0);
+        goto LABEL_238;
       case 0xD:
         if ( !*route )
-          sub_1D0F30C(HasFlag, v19);
+          sub_21FFECC(1, v20);
         basePiece = (*route)->fields.basePiece;
-        if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-        v35 = WarBoardAIManager__GetBreakPoint(basePiece, 0);
-        v36 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        if ( v35 <= (float)(v36->fields.value / 100) )
+        if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, v20, v22);
+        v40 = WarBoardAIManager__GetBreakPoint(basePiece, 0);
+        v41 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v83, v25);
+        if ( v40 <= (float)(v41->fields.value / 100) )
           goto LABEL_142;
-        goto LABEL_227;
+        goto LABEL_226;
       case 0xE:
         if ( !*route )
-          sub_1D0F30C(HasFlag, v19);
-        v34 = (*route)->fields.basePiece;
-        if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-        v35 = WarBoardAIManager__GetBreakPoint(v34, 0);
-        v36 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        if ( v35 >= (float)(v36->fields.value / 100) )
-          goto LABEL_227;
+          sub_21FFECC(1, v20);
+        v38 = (*route)->fields.basePiece;
+        if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, v20, v22);
+        v40 = WarBoardAIManager__GetBreakPoint(v38, 0);
+        v41 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v39, v25);
+        if ( v40 >= (float)(v41->fields.value / 100) )
+          goto LABEL_226;
 LABEL_142:
-        v61 = v35 < (float)(v36->fields.value2 / 100);
+        v84 = v40 < (float)(v41->fields.value2 / 100);
         goto LABEL_202;
       case 0xF:
         if ( !*route )
-          sub_1D0F30C(HasFlag, v19);
-        v44 = (*route)->fields.basePiece;
-        if ( !v44 )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardPieceData__get_isServant(v44, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(1, v20);
+        v57 = (*route)->fields.basePiece;
+        if ( !v57 )
+          sub_21FFECC(0, v20);
+        v58 = WarBoardPieceData__get_isServant(v57, 0);
+        if ( !v58 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v45 = (*route)->fields.basePiece;
-        if ( !v45 )
-          sub_1D0F30C(HasFlag, v23);
-        battleServant_k__BackingField = v45->fields._battleServant_k__BackingField;
+          sub_21FFECC(v58, v25);
+        v59 = (*route)->fields.basePiece;
+        if ( !v59 )
+          sub_21FFECC(v58, v25);
+        battleServant_k__BackingField = v59->fields._battleServant_k__BackingField;
         if ( !battleServant_k__BackingField )
-          sub_1D0F30C(HasFlag, v23);
-        v47 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v58, v25);
+        v61 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v58, v25);
         np = battleServant_k__BackingField->fields.np;
         goto LABEL_201;
       case 0x10:
         if ( !*route )
-          sub_1D0F30C(HasFlag, v19);
-        v30 = (*route)->fields.basePiece;
-        if ( !v30 )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardPieceData__get_isServant(v30, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(1, v20);
+        v34 = (*route)->fields.basePiece;
+        if ( !v34 )
+          sub_21FFECC(0, v20);
+        v35 = WarBoardPieceData__get_isServant(v34, 0);
+        if ( !v35 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v31 = (*route)->fields.basePiece;
-        if ( !v31 )
-          sub_1D0F30C(HasFlag, v23);
-        v32 = v31->fields._battleServant_k__BackingField;
-        if ( !v32 )
-          sub_1D0F30C(HasFlag, v23);
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        v33 = v32->fields.np < (*v17)->fields.value;
-        goto LABEL_228;
+          sub_21FFECC(v35, v25);
+        v36 = (*route)->fields.basePiece;
+        if ( !v36 )
+          sub_21FFECC(v35, v25);
+        v37 = v36->fields._battleServant_k__BackingField;
+        if ( !v37 )
+          sub_21FFECC(v35, v25);
+        if ( !*v18 )
+          sub_21FFECC(v35, v25);
+        isMaster = v37->fields.np < (*v18)->fields.value;
+        break;
       case 0x11:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v66 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v66 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v66, v25);
         moveByLinkedEnemy = (*route)->fields.moveByLinkedEnemy;
         goto LABEL_120;
       case 0x12:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        v59 = *route;
+          sub_21FFECC(0, v20);
+        v93 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v93 )
+          goto LABEL_226;
+        v81 = *route;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v24 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v93, v25);
+        v26 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v93, v25);
         goto LABEL_158;
       case 0x13:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        v71 = *route;
+          sub_21FFECC(0, v20);
+        v104 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v104 )
+          goto LABEL_226;
+        v103 = *route;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v47 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v104, v25);
+        v61 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v104, v25);
         goto LABEL_200;
       case 0x14:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v68 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v68 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v68, v25);
         moveByLinkedEnemy = (*route)->fields.moveByLinkedAlly;
 LABEL_120:
-        v51 = moveByLinkedEnemy == 0;
+        v69 = moveByLinkedEnemy == 0;
         goto LABEL_160;
       case 0x15:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        v59 = *route;
+          sub_21FFECC(0, v20);
+        v80 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v80 )
+          goto LABEL_226;
+        v81 = *route;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v24 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v80, v25);
+        v26 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v80, v25);
 LABEL_158:
-        attackByLinkedEnemy = v59->fields.moveByLinkedEnemy;
+        attackByLinkedEnemy = v81->fields.moveByLinkedEnemy;
 LABEL_159:
-        v51 = attackByLinkedEnemy == v24->fields.value;
+        v69 = attackByLinkedEnemy == v26->fields.value;
 LABEL_160:
-        v33 = v51;
-        goto LABEL_228;
+        isMaster = v69;
+        break;
       case 0x16:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        v71 = *route;
+          sub_21FFECC(0, v20);
+        v102 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v102 )
+          goto LABEL_226;
+        v103 = *route;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v47 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v102, v25);
+        v61 = *v18;
+        if ( !*v18 )
+          sub_21FFECC(v102, v25);
 LABEL_200:
-        np = v71->fields.moveByLinkedEnemy;
+        np = v103->fields.moveByLinkedEnemy;
 LABEL_201:
-        v61 = np < v47->fields.value;
+        v84 = np < v61->fields.value;
 LABEL_202:
-        v33 = !v61;
-        goto LABEL_228;
+        isMaster = !v84;
+        break;
       case 0x17:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v105 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v105 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v105, v25);
         dicUniqueKeyRange = (*route)->fields.dicUniqueKeyRange;
-        v73 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+        v107 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
         System_Func_KeyValuePair_uint__int___bool____ctor(
-          v73,
-          (Il2CppObject *)v7,
+          v107,
+          (Il2CppObject *)v8,
           Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__0__,
           0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)dicUniqueKeyRange,
-                    (System_Func_TSource__bool__o *)v73,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        goto LABEL_209;
+        isMaster = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                     (System_Collections_Generic_IEnumerable_TSource__o *)dicUniqueKeyRange,
+                     (System_Func_TSource__bool__o *)v107,
+                     (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        break;
       case 0x18:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v53 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v53 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v42 = (*route)->fields.dicUniqueKeyRange;
-        v43 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+          sub_21FFECC(v53, v25);
+        v54 = (*route)->fields.dicUniqueKeyRange;
+        v55 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
         System_Func_KeyValuePair_uint__int___bool____ctor(
-          v43,
-          (Il2CppObject *)v7,
+          v55,
+          (Il2CppObject *)v8,
           Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__1__,
           0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v42,
-                    (System_Func_TSource__bool__o *)v43,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        goto LABEL_209;
+        isMaster = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                     (System_Collections_Generic_IEnumerable_TSource__o *)v54,
+                     (System_Func_TSource__bool__o *)v55,
+                     (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        break;
       case 0x19:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v49 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v49 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
+          sub_21FFECC(v49, v25);
+        if ( !*v18 )
+          sub_21FFECC(v49, v25);
         dicMoveByServantGetDesignationItem = (*route)->fields.dicMoveByServantGetDesignationItem;
         if ( !dicMoveByServantGetDesignationItem )
-          sub_1D0F30C(0, v23);
-        HasFlag = System_Collections_Generic_Dictionary_int__bool___ContainsKey(
-                    dicMoveByServantGetDesignationItem,
-                    (*v17)->fields.value,
-                    (const MethodInfo_3599A08 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
-        if ( !HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v25);
+        v51 = System_Collections_Generic_Dictionary_int__bool___ContainsKey(
+                dicMoveByServantGetDesignationItem,
+                (*v18)->fields.value,
+                (const MethodInfo_3F55D94 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
+        if ( !v51 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        v41 = (*route)->fields.dicMoveByServantGetDesignationItem;
-        if ( !v41 )
-          sub_1D0F30C(0, v23);
-        HasFlag = System_Collections_Generic_Dictionary_int__bool___get_Item(
-                    v41,
-                    (*v17)->fields.value,
-                    (const MethodInfo_3599764 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
-        goto LABEL_209;
+          sub_21FFECC(v51, v25);
+        if ( !*v18 )
+          sub_21FFECC(v51, v25);
+        v52 = (*route)->fields.dicMoveByServantGetDesignationItem;
+        if ( !v52 )
+          sub_21FFECC(0, v25);
+        isMaster = System_Collections_Generic_Dictionary_int__bool___get_Item(
+                     v52,
+                     (*v18)->fields.value,
+                     (const MethodInfo_3F55AF8 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
+        break;
       case 0x1A:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v116 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v116 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        v78 = (*route)->fields.dicMoveByServantGetDesignationItem;
-        if ( !v78 )
-          sub_1D0F30C(0, v23);
-        HasFlag = System_Collections_Generic_Dictionary_int__bool___ContainsKey(
-                    v78,
-                    (*v17)->fields.value,
-                    (const MethodInfo_3599A08 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
-        if ( !HasFlag )
-          goto LABEL_241;
+          sub_21FFECC(v116, v25);
+        if ( !*v18 )
+          sub_21FFECC(v116, v25);
+        v117 = (*route)->fields.dicMoveByServantGetDesignationItem;
+        if ( !v117 )
+          sub_21FFECC(0, v25);
+        v118 = System_Collections_Generic_Dictionary_int__bool___ContainsKey(
+                 v117,
+                 (*v18)->fields.value,
+                 (const MethodInfo_3F55D94 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
+        if ( !v118 )
+          goto LABEL_239;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        v79 = (*route)->fields.dicMoveByServantGetDesignationItem;
-        if ( !v79 )
-          sub_1D0F30C(0, v23);
-        HasFlag = System_Collections_Generic_Dictionary_int__bool___get_Item(
-                    v79,
-                    (*v17)->fields.value,
-                    (const MethodInfo_3599764 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
-        goto LABEL_240;
+          sub_21FFECC(v118, v25);
+        if ( !*v18 )
+          sub_21FFECC(v118, v25);
+        v119 = (*route)->fields.dicMoveByServantGetDesignationItem;
+        if ( !v119 )
+          sub_21FFECC(0, v25);
+        Item = System_Collections_Generic_Dictionary_int__bool___get_Item(
+                 v119,
+                 (*v18)->fields.value,
+                 (const MethodInfo_3F55AF8 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
+        goto LABEL_238;
       case 0x1B:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v20);
+        v28 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v28 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v26 = (*route)->fields.dicUniqueKeyRange;
-        v27 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+          sub_21FFECC(v28, v25);
+        v29 = (*route)->fields.dicUniqueKeyRange;
+        v30 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
         System_Func_KeyValuePair_uint__int___bool____ctor(
-          v27,
-          (Il2CppObject *)v7,
+          v30,
+          (Il2CppObject *)v8,
           Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__2__,
           0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v26,
-                    (System_Func_TSource__bool__o *)v27,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        if ( HasFlag )
-          goto LABEL_214;
+        v31 = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                (System_Collections_Generic_IEnumerable_TSource__o *)v29,
+                (System_Func_TSource__bool__o *)v30,
+                (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        if ( v31 )
+          goto LABEL_213;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v28 = (*route)->fields.dicUniqueKeyRange;
-        v29 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+          sub_21FFECC(v31, v25);
+        v32 = (*route)->fields.dicUniqueKeyRange;
+        v33 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
         System_Func_KeyValuePair_uint__int___bool____ctor(
-          v29,
-          (Il2CppObject *)v7,
+          v33,
+          (Il2CppObject *)v8,
           Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__3__,
           0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v28,
-                    (System_Func_TSource__bool__o *)v29,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        goto LABEL_244;
+        isMaster = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                     (System_Collections_Generic_IEnumerable_TSource__o *)v32,
+                     (System_Func_TSource__bool__o *)v33,
+                     (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        break;
       case 0x1C:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_214;
+          sub_21FFECC(0, v20);
+        v108 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v108 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v74 = (*route)->fields.dicUniqueKeyRange;
-        v75 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+          sub_21FFECC(v108, v25);
+        v109 = (*route)->fields.dicUniqueKeyRange;
+        v110 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
         System_Func_KeyValuePair_uint__int___bool____ctor(
-          v75,
-          (Il2CppObject *)v7,
+          v110,
+          (Il2CppObject *)v8,
           Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__4__,
           0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v74,
-                    (System_Func_TSource__bool__o *)v75,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        if ( HasFlag )
-          goto LABEL_214;
-        if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v80 = (*route)->fields.dicUniqueKeyRange;
-        v81 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_1D0F300(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
-        System_Func_KeyValuePair_uint__int___bool____ctor(
-          v81,
-          (Il2CppObject *)v7,
-          Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__5__,
-          0);
-        HasFlag = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v80,
-                    (System_Func_TSource__bool__o *)v81,
-                    (const MethodInfo_325E2BC *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
-        goto LABEL_244;
-      case 0x1D:
-        if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
-        if ( !HasFlag )
-          goto LABEL_227;
-        if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v76 = (*route)->fields.basePiece;
-        if ( !v76 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v76, 0);
-        if ( HasFlag )
-          goto LABEL_241;
-        if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v77 = (*route)->fields.actionPiece;
-        if ( !v77 )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardPieceData__get_isServant(v77, 0);
-        goto LABEL_209;
-      case 0x1E:
-        if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
-        if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
-        if ( HasFlag )
+        v111 = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                 (System_Collections_Generic_IEnumerable_TSource__o *)v109,
+                 (System_Func_TSource__bool__o *)v110,
+                 (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        if ( v111 )
+        {
+LABEL_213:
+          isMaster = 0;
+        }
+        else
         {
           if ( !*route )
-            sub_1D0F30C(HasFlag, v23);
-          v69 = (*route)->fields.basePiece;
-          if ( !v69 )
-            sub_1D0F30C(0, v23);
-          HasFlag = WarBoardPieceData__get_isServant(v69, 0);
-          if ( HasFlag )
+            sub_21FFECC(v111, v25);
+          v120 = (*route)->fields.dicUniqueKeyRange;
+          v121 = (System_Func_KeyValuePair_uint__int___bool__o *)sub_21FFEBC(System_Func_KeyValuePair_uint__int___bool__TypeInfo);
+          System_Func_KeyValuePair_uint__int___bool____ctor(
+            v121,
+            (Il2CppObject *)v8,
+            Method_WarBoardAIEvalCalcurater___c__DisplayClass9_0__JudgeRatingOffsetAddCondition_b__5__,
+            0);
+          isMaster = System_Linq_Enumerable__Any_KeyValuePair_uint__int__(
+                       (System_Collections_Generic_IEnumerable_TSource__o *)v120,
+                       (System_Func_TSource__bool__o *)v121,
+                       (const MethodInfo_3833C94 *)Method_System_Linq_Enumerable_Any_KeyValuePair_uint__int____);
+        }
+        break;
+      case 0x1D:
+        if ( !*route )
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
+        if ( !*route )
+          sub_21FFECC(0, v25);
+        v112 = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
+        if ( !v112 )
+          goto LABEL_226;
+        if ( !*route )
+          sub_21FFECC(v112, v25);
+        v113 = (*route)->fields.basePiece;
+        if ( !v113 )
+          sub_21FFECC(0, v25);
+        v114 = WarBoardPieceData__get_isServant(v113, 0);
+        if ( v114 )
+          goto LABEL_239;
+        if ( !*route )
+          sub_21FFECC(v114, v25);
+        v115 = (*route)->fields.actionPiece;
+        if ( !v115 )
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardPieceData__get_isServant(v115, 0);
+        break;
+      case 0x1E:
+        if ( !*route )
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
+        if ( !*route )
+          sub_21FFECC(0, v25);
+        v98 = WarBoardAIRoute_RouteData__HasFlag(*route, 0x4000000, 0);
+        if ( v98 )
+        {
+          if ( !*route )
+            sub_21FFECC(v98, v25);
+          v99 = (*route)->fields.basePiece;
+          if ( !v99 )
+            sub_21FFECC(0, v25);
+          v100 = WarBoardPieceData__get_isServant(v99, 0);
+          if ( v100 )
           {
-LABEL_227:
-            v33 = 0;
+LABEL_226:
+            isMaster = 0;
           }
           else
           {
             if ( !*route )
-              sub_1D0F30C(HasFlag, v23);
-            v70 = (*route)->fields.actionPiece;
-            if ( !v70 )
-              sub_1D0F30C(0, v23);
-            HasFlag = WarBoardPieceData__get_isServant(v70, 0);
-LABEL_240:
-            v33 = !HasFlag;
+              sub_21FFECC(v100, v25);
+            v101 = (*route)->fields.actionPiece;
+            if ( !v101 )
+              sub_21FFECC(0, v25);
+            Item = WarBoardPieceData__get_isServant(v101, 0);
+LABEL_238:
+            isMaster = !Item;
           }
         }
         else
         {
-LABEL_241:
-          v33 = 1;
+LABEL_239:
+          isMaster = 1;
         }
-        goto LABEL_228;
+        break;
       case 0x1F:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        v65 = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
+        if ( v65 )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(HasFlag, v23);
-        v33 = (*route)->fields.moveByLinkedItem > 0;
-        goto LABEL_228;
+          sub_21FFECC(v65, v25);
+        isMaster = (*route)->fields.moveByLinkedItem > 0;
+        break;
       case 0x20:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-          goto LABEL_227;
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
         if ( !*route )
-          sub_1D0F30C(0, v23);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x10000000, 0);
-LABEL_209:
-        v33 = HasFlag;
-LABEL_228:
-        v22 = v33;
-        goto LABEL_229;
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x10000000, 0);
+        break;
       case 0x21:
         if ( !*route )
-          sub_1D0F30C(0, v19);
-        HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0);
-        if ( HasFlag )
-        {
-LABEL_214:
-          v22 = 0;
-        }
-        else
-        {
-          if ( !*route )
-            sub_1D0F30C(0, v23);
-          HasFlag = WarBoardAIRoute_RouteData__HasFlag(*route, 0x200000000LL, 0);
-LABEL_244:
-          v22 = HasFlag;
-        }
-LABEL_229:
-        v21 = *v17;
-        if ( !*v17 )
-          sub_1D0F30C(HasFlag, v23);
-        return;
-      default:
-        v22 = 0;
+          sub_21FFECC(0, v20);
+        if ( WarBoardAIRoute_RouteData__HasFlag(*route, 2, 0) )
+          goto LABEL_226;
+        if ( !*route )
+          sub_21FFECC(0, v25);
+        isMaster = WarBoardAIRoute_RouteData__HasFlag(*route, 0x200000000LL, 0);
         break;
+      default:
+        isMaster = 0;
+        goto LABEL_228;
     }
+    v22 = *v18;
+    if ( !*v18 )
+      sub_21FFECC(isMaster, v25);
+LABEL_228:
     WarBoardAIEvalCalcurater__AddRatingOffsetAddCondition(
-      (WarBoardAIEvalCalcurater_o *)HasFlag,
+      (WarBoardAIEvalCalcurater_o *)isMaster,
       route,
-      v21,
-      v22 & 1,
-      v21->fields.category,
-      v20);
+      v22,
+      isMaster,
+      v22->fields.category,
+      v21);
   }
+  list = v123.fields._list;
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v83,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__Dispose__);
+    *(System_Collections_Generic_List_Enumerator_object__o **)&v123.fields._index,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingOffsetEntity__Dispose__);
+  if ( list )
+    sub_21FFEC4(list);
 }
 
 
@@ -1286,7 +1318,7 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrend(
     || (this = (WarBoardAIEvalCalcurater_o *)WarBoardAIRoute_ActionTrendInfo__get_ConditionEntityArray(actionTrend, 0)) == 0 )
   {
 LABEL_21:
-    sub_1D0F30C(this, route);
+    sub_21FFECC(this, route);
   }
   klass = (int)this[1].klass;
   v9 = this;
@@ -1346,7 +1378,7 @@ LABEL_17:
         goto LABEL_19;
     }
 LABEL_20:
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
 LABEL_19:
   LOBYTE(this) = 0;
@@ -1364,171 +1396,192 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
 {
   bool v10; // zf
   bool v11; // zf
-  int64_t v12; // x1
+  WarBoardAIRoute_RouteData_o *v12; // x0
   int64_t v13; // x1
-  WarBoardPieceData_o *detourRoute; // x0
-  bool isMaster; // w0
+  WarBoardAIRoute_RouteData_o *v14; // x0
+  int64_t v15; // x1
   int32_t isMoveByMasterAndEnemyRange; // w8
   int32_t isMoveByServantAndEnemyRange; // w8
   int32_t isMoveByServantAndMasterRange; // w8
+  bool isMaster; // w0
+  bool v20; // cc
+  WarBoardPieceData_o *targetPiece; // x20
+  WarBoardPieceData_o *v22; // x19
+  int32_t v24; // w8
+  struct System_Int32_array *v25; // x8
+  WarBoardPieceData_o *v26; // x20
+  WarBoardPieceData_o *v27; // x21
+  WarBoardPieceData_o *v28; // x0
+  int32_t v29; // w9
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
+  int32_t v31; // w19
+  bool v32; // cc
+  _BOOL4 isAround; // w8
+  bool v34; // cc
+  WarBoardPieceData_o *v35; // x0
+  _BOOL4 ExistEnemyOnBaseRoute_k__BackingField; // w8
+  WarBoardPieceData_o *v37; // x20
+  WarBoardPieceData_o *v38; // x19
+  int32_t attackCountOnThisTurn; // w8
+  WarBoardPieceData_o *v40; // x20
+  WarBoardPieceData_o *v41; // x19
   WarBoardPieceData_o *actionPiece; // x20
   WarBoardPieceData_o *basePiece; // x21
-  WarBoardPieceData_o *v21; // x20
-  WarBoardPieceData_o *v22; // x21
+  WarBoardPieceData_o *v44; // x20
+  WarBoardPieceData_o *v45; // x19
   int32_t actionCountOnThisTurn; // w8
-  int32_t attackCountOnThisTurn; // w8
-  int32_t v25; // w8
-  WarBoardPieceData_o *targetPiece; // x20
-  WarBoardPieceData_o *v27; // x19
-  WarBoardPieceData_o *v28; // x20
-  WarBoardPieceData_o *v29; // x19
-  _BOOL4 isAround; // w8
-  _BOOL4 ExistEnemyOnBaseRoute_k__BackingField; // w8
-  int32_t v32; // w19
-  bool v33; // cc
-  System_Collections_Generic_IEnumerable_TSource__o *v34; // x0
-  int32_t v35; // w19
-  bool v36; // cc
-  struct System_Int32_array *v37; // x8
-  struct System_Int32_array *v38; // x8
-  struct System_Int32_array *v39; // x8
-  int32_t v40; // w9
+  System_Collections_Generic_IEnumerable_TSource__o *detourRoute; // x0
+  int32_t v48; // w19
   int32_t actionIndex; // w9
-  bool v42; // cc
-  WarBoardPieceData_o *v43; // x20
-  WarBoardPieceData_o *v44; // x19
-  WarBoardPieceData_o *v45; // x20
-  WarBoardPieceData_o *v46; // x19
-  struct System_Int32_array *v47; // x8
-  struct System_Int32_array *v48; // x8
-  struct System_Int32_array *v49; // x8
-  struct System_Int32_array *v50; // x8
-  struct System_Int32_array *v51; // x8
-  int32_t v53; // [xsp+4h] [xbp-3Ch] BYREF
-  int32_t value[2]; // [xsp+8h] [xbp-38h] BYREF
+  WarBoardPieceData_o *v50; // x0
+  WarBoardPieceData_o *v51; // x0
+  int32_t value; // [xsp+4h] [xbp-3Ch] BYREF
+  int32_t v53[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E74F3B & 1) == 0 )
+  if ( (byte_5935F40 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Count_int___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Contains__);
-    this = (WarBoardAIEvalCalcurater_o *)sub_1D0F0B4(&WarBoardAIManager_TypeInfo);
-    byte_4E74F3B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Count_int___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
+    this = (WarBoardAIEvalCalcurater_o *)sub_21FFC50(&WarBoardAIManager_TypeInfo);
+    byte_5935F40 = 1;
   }
-  *(_QWORD *)value = 0;
-  v53 = 0;
+  *(_QWORD *)v53 = 0;
+  value = 0;
   switch ( condType )
   {
     case 1:
       if ( !route )
         goto LABEL_414;
-      v12 = 16;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 16;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 2:
       if ( !route )
         goto LABEL_414;
-      v13 = 16;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 16;
+      goto LABEL_411;
     case 3:
       if ( !route )
         goto LABEL_414;
-      v12 = 64;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 64;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 4:
       if ( !route )
         goto LABEL_414;
-      v13 = 64;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 64;
+      goto LABEL_411;
     case 5:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x4000000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x4000000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 6:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x4000000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x4000000;
+      goto LABEL_411;
     case 7:
       if ( !route )
         goto LABEL_414;
-      v12 = 1024;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 1024;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 8:
       if ( !route )
         goto LABEL_414;
-      v13 = 1024;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 1024;
+      goto LABEL_411;
     case 9:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x8000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x8000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 10:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x8000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x8000000000LL;
+      goto LABEL_411;
     case 11:
       if ( !route )
         goto LABEL_414;
-      v12 = 2048;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 2048;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 12:
       if ( !route )
         goto LABEL_414;
-      v13 = 2048;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 2048;
+      goto LABEL_411;
     case 13:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x4000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x4000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 14:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x4000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x4000000000LL;
+      goto LABEL_411;
     case 15:
       if ( !route )
         goto LABEL_414;
-      v12 = 256;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 256;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 16:
       if ( !route )
         goto LABEL_414;
-      v13 = 256;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 256;
+      goto LABEL_411;
     case 17:
       if ( !route )
         goto LABEL_414;
-      v12 = 512;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 512;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 18:
       if ( !route )
         goto LABEL_414;
-      v13 = 512;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 512;
+      goto LABEL_411;
     case 19:
       if ( !route )
         goto LABEL_414;
-      v12 = 4096;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 4096;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 20:
       if ( !route )
         goto LABEL_414;
-      v13 = 4096;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 4096;
+      goto LABEL_411;
     case 21:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x2000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x2000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 22:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x2000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x2000;
+      goto LABEL_411;
     case 23:
       if ( !route )
         goto LABEL_414;
@@ -1537,11 +1590,10 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
       this = (WarBoardAIEvalCalcurater_o *)route->fields.listExistDesignationItem;
       if ( !this )
         goto LABEL_414;
-      LOBYTE(detourRoute) = System_Collections_Generic_List_int___Contains(
-                              (System_Collections_Generic_List_int__o *)this,
-                              condition->fields.value,
-                              (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__);
-      return (unsigned __int8)detourRoute & 1;
+      return System_Collections_Generic_List_int___Contains(
+               (System_Collections_Generic_List_int__o *)this,
+               condition->fields.value,
+               (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
     case 24:
       if ( !route )
         goto LABEL_414;
@@ -1553,83 +1605,83 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
       isMaster = System_Collections_Generic_List_int___Contains(
                    (System_Collections_Generic_List_int__o *)this,
                    condition->fields.value,
-                   (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__);
-      goto LABEL_360;
+                   (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
+      goto LABEL_412;
     case 25:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByMasterAndEnemyRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 26:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByMasterAndEnemyRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 27:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByMasterAndEnemyRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 28:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndEnemyRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 29:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndEnemyRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 30:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndEnemyRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 31:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndMasterRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 32:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndMasterRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 33:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndMasterRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 34:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndClassAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 35:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndClassAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 36:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndClassAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 37:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndClassDisAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 38:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndClassDisAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 39:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndClassDisAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 40:
       if ( !route )
         goto LABEL_414;
@@ -1641,11 +1693,11 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
       if ( !System_Collections_Generic_Dictionary_int__Int32Enum___TryGetValue(
               (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
               condition->fields.value,
-              &value[1],
-              (const MethodInfo_35A3A40 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
-        goto LABEL_353;
-      isMoveByMasterAndEnemyRange = value[1];
-      goto LABEL_397;
+              &v53[1],
+              (const MethodInfo_3F64190 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
+        goto LABEL_380;
+      isMoveByMasterAndEnemyRange = v53[1];
+      goto LABEL_393;
     case 41:
       if ( !route )
         goto LABEL_414;
@@ -1657,11 +1709,11 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
       if ( !System_Collections_Generic_Dictionary_int__Int32Enum___TryGetValue(
               (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
               condition->fields.value,
-              value,
-              (const MethodInfo_35A3A40 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
-        goto LABEL_353;
-      isMoveByServantAndEnemyRange = value[0];
-      goto LABEL_400;
+              v53,
+              (const MethodInfo_3F64190 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
+        goto LABEL_380;
+      isMoveByServantAndEnemyRange = v53[0];
+      goto LABEL_396;
     case 42:
       if ( !route )
         goto LABEL_414;
@@ -1673,669 +1725,685 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrendCondition(
       if ( !System_Collections_Generic_Dictionary_int__Int32Enum___TryGetValue(
               (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
               condition->fields.value,
-              &v53,
-              (const MethodInfo_35A3A40 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
-        goto LABEL_353;
-      isMoveByServantAndMasterRange = v53;
-      goto LABEL_403;
+              &value,
+              (const MethodInfo_3F64190 *)Method_System_Collections_Generic_Dictionary_int__WarBoardAIRoute_DistanceType__TryGetValue__) )
+        goto LABEL_380;
+      isMoveByServantAndMasterRange = value;
+      goto LABEL_344;
     case 43:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x4000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x4000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 44:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x4000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x4000;
+      goto LABEL_411;
     case 45:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x8000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x8000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 46:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x8000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x8000;
+      goto LABEL_411;
     case 47:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x10000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x10000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 48:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x10000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x10000;
+      goto LABEL_411;
     case 49:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x20000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x20000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 50:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x20000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x20000;
+      goto LABEL_411;
     case 51:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndAttackAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 52:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndAttackAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 53:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndAttackAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 54:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndAttackDisAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 55:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndAttackDisAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 56:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndAttackDisAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 57:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndDefenseAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 58:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndDefenseAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 59:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndDefenseAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 60:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndDefenseDisAdvantageServantRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 61:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndDefenseDisAdvantageServantRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 62:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndDefenseDisAdvantageServantRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 63:
       if ( !route )
         goto LABEL_414;
-      v12 = 128;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 128;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 64:
       if ( !route )
         goto LABEL_414;
-      v13 = 128;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 128;
+      goto LABEL_411;
     case 65:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByServantAndEnemyMasterRange;
-      goto LABEL_397;
+      goto LABEL_393;
     case 66:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByServantAndEnemyMasterRange;
-      goto LABEL_400;
+      goto LABEL_396;
     case 67:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByServantAndEnemyMasterRange;
-      goto LABEL_403;
+      goto LABEL_344;
     case 68:
       if ( !route )
         goto LABEL_414;
       actionPiece = route->fields.actionPiece;
       if ( !actionPiece )
-        goto LABEL_353;
+        goto LABEL_380;
       basePiece = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
       if ( !WarBoardAIManager__IsEnemyPiece(basePiece, actionPiece, 0) )
-        goto LABEL_353;
+        goto LABEL_380;
       this = (WarBoardAIEvalCalcurater_o *)route->fields.actionPiece;
       if ( !this )
         goto LABEL_414;
-      LOBYTE(detourRoute) = WarBoardPieceData__get_isMaster((WarBoardPieceData_o *)this, 0);
-      return (unsigned __int8)detourRoute & 1;
+      return WarBoardPieceData__get_isMaster((WarBoardPieceData_o *)this, 0);
     case 69:
       if ( !route )
         goto LABEL_414;
-      v21 = route->fields.actionPiece;
-      if ( !v21 )
-        goto LABEL_353;
-      v22 = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-      if ( !WarBoardAIManager__IsEnemyPiece(v22, v21, 0) )
-        goto LABEL_353;
+      v26 = route->fields.actionPiece;
+      if ( !v26 )
+        goto LABEL_380;
+      v27 = route->fields.basePiece;
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
+      if ( !WarBoardAIManager__IsEnemyPiece(v27, v26, 0) )
+        goto LABEL_380;
       this = (WarBoardAIEvalCalcurater_o *)route->fields.actionPiece;
       if ( !this )
         goto LABEL_414;
       isMaster = WarBoardPieceData__get_isMaster((WarBoardPieceData_o *)this, 0);
-      goto LABEL_360;
+      goto LABEL_412;
     case 70:
       if ( !route )
         goto LABEL_414;
-      detourRoute = route->fields.basePiece;
-      if ( !detourRoute )
-        return (unsigned __int8)detourRoute & 1;
-      this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_ActionType(detourRoute, 0);
+      v51 = route->fields.basePiece;
+      if ( !v51 )
+        goto LABEL_380;
+      this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_ActionType(v51, 0);
       if ( !condition )
         goto LABEL_414;
-LABEL_368:
+LABEL_367:
       v11 = (_DWORD)this == condition->fields.value;
-      goto LABEL_404;
+      goto LABEL_397;
     case 71:
       if ( !route || !condition )
         goto LABEL_414;
       actionCountOnThisTurn = route->fields.actionCountOnThisTurn;
-      goto LABEL_263;
+      goto LABEL_358;
     case 72:
       if ( !route || !condition )
         goto LABEL_414;
       attackCountOnThisTurn = route->fields.actionCountOnThisTurn;
-      goto LABEL_268;
+      goto LABEL_334;
     case 73:
       if ( !route || !condition )
         goto LABEL_414;
-      v25 = route->fields.actionCountOnThisTurn;
-      goto LABEL_273;
+      v24 = route->fields.actionCountOnThisTurn;
+      goto LABEL_153;
     case 74:
     case 127:
       v10 = targetData == 0;
-      goto LABEL_315;
+      goto LABEL_350;
     case 75:
     case 128:
       v11 = targetData == 0;
-      goto LABEL_404;
+      goto LABEL_397;
     case 76:
       if ( !targetData )
-        goto LABEL_353;
+        goto LABEL_380;
       targetPiece = targetData->fields.targetPiece;
       if ( !targetPiece )
-        goto LABEL_353;
+        goto LABEL_380;
       if ( !route )
         goto LABEL_414;
-      v27 = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-      LOBYTE(detourRoute) = WarBoardAIManager__IsEnemyPiece(v27, targetPiece, 0);
-      return (unsigned __int8)detourRoute & 1;
+      v22 = route->fields.basePiece;
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
+      return WarBoardAIManager__IsEnemyPiece(v22, targetPiece, 0);
     case 77:
       if ( !targetData )
-        goto LABEL_353;
-      v28 = targetData->fields.targetPiece;
-      if ( !v28 )
-        goto LABEL_303;
+        goto LABEL_380;
+      v40 = targetData->fields.targetPiece;
+      if ( !v40 )
+        goto LABEL_260;
       if ( !route )
         goto LABEL_414;
-      v29 = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-      isMaster = WarBoardAIManager__IsEnemyPiece(v29, v28, 0);
-      goto LABEL_360;
+      v41 = route->fields.basePiece;
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
+      isMaster = WarBoardAIManager__IsEnemyPiece(v41, v40, 0);
+      goto LABEL_412;
     case 78:
       if ( !targetData )
-        goto LABEL_353;
+        goto LABEL_380;
       isAround = targetData->fields.isAround;
-      goto LABEL_246;
+      goto LABEL_349;
     case 79:
       if ( !targetData )
-        goto LABEL_353;
+        goto LABEL_380;
       ExistEnemyOnBaseRoute_k__BackingField = targetData->fields.isAround;
-      goto LABEL_249;
+      goto LABEL_265;
     case 80:
       if ( !targetData )
-        goto LABEL_353;
-      goto LABEL_215;
+        goto LABEL_380;
+      goto LABEL_295;
     case 81:
-      if ( !targetData )
-        goto LABEL_353;
-      goto LABEL_221;
+      if ( targetData )
+        goto LABEL_219;
+      goto LABEL_380;
     case 82:
       if ( !targetData )
-        goto LABEL_353;
-      goto LABEL_227;
+        goto LABEL_380;
+      goto LABEL_343;
     case 83:
       if ( !targetData )
-        goto LABEL_353;
-      detourRoute = (WarBoardPieceData_o *)targetData->fields.detourRoute;
+        goto LABEL_380;
+      detourRoute = (System_Collections_Generic_IEnumerable_TSource__o *)targetData->fields.detourRoute;
       if ( !detourRoute )
-        return (unsigned __int8)detourRoute & 1;
-      v32 = System_Linq_Enumerable__Count_int_(
-              (System_Collections_Generic_IEnumerable_TSource__o *)detourRoute,
-              (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
+        goto LABEL_380;
+      v48 = System_Linq_Enumerable__Count_int_(
+              detourRoute,
+              (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
       this = (WarBoardAIEvalCalcurater_o *)System_Linq_Enumerable__Count_int_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)targetData->fields.baseRoute,
-                                             (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
+                                             (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
       if ( !condition )
         goto LABEL_414;
-      v33 = v32 - (int)this <= condition->fields.value;
-      goto LABEL_380;
+      v32 = v48 - (int)this <= condition->fields.value;
+      goto LABEL_155;
     case 84:
       if ( !targetData )
-        goto LABEL_353;
-      v34 = (System_Collections_Generic_IEnumerable_TSource__o *)targetData->fields.detourRoute;
-      if ( !v34 )
-        goto LABEL_303;
-      v35 = System_Linq_Enumerable__Count_int_(
-              v34,
-              (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
+        goto LABEL_380;
+      v30 = (System_Collections_Generic_IEnumerable_TSource__o *)targetData->fields.detourRoute;
+      if ( !v30 )
+        goto LABEL_260;
+      v31 = System_Linq_Enumerable__Count_int_(
+              v30,
+              (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
       this = (WarBoardAIEvalCalcurater_o *)System_Linq_Enumerable__Count_int_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)targetData->fields.baseRoute,
-                                             (const MethodInfo_326F26C *)Method_System_Linq_Enumerable_Count_int___);
+                                             (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
       if ( !condition )
         goto LABEL_414;
-      v36 = v35 - (int)this <= condition->fields.value;
-LABEL_256:
-      LOBYTE(detourRoute) = !v36;
-      return (unsigned __int8)detourRoute & 1;
+      v20 = v31 - (int)this <= condition->fields.value;
+LABEL_128:
+      LOBYTE(v25) = !v20;
+      return (unsigned __int8)v25 & 1;
     case 85:
       if ( !targetData )
-        goto LABEL_353;
-      v37 = targetData->fields.detourRoute;
-      if ( !v37 )
-        goto LABEL_353;
-      if ( LODWORD(v37->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      if ( v37->m_Items[1] != route->fields.actionIndex )
-        goto LABEL_353;
-LABEL_215:
+      if ( v25->m_Items[1] != route->fields.actionIndex )
+        goto LABEL_380;
+LABEL_295:
       isMoveByMasterAndEnemyRange = targetData->fields.moveByDistanceType;
-      goto LABEL_397;
+      goto LABEL_393;
     case 86:
       if ( !targetData )
-        goto LABEL_353;
-      v38 = targetData->fields.detourRoute;
-      if ( !v38 )
-        goto LABEL_353;
-      if ( LODWORD(v38->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      if ( v38->m_Items[1] != route->fields.actionIndex )
-        goto LABEL_353;
-LABEL_221:
+      if ( v25->m_Items[1] != route->fields.actionIndex )
+        goto LABEL_380;
+LABEL_219:
       isMoveByServantAndEnemyRange = targetData->fields.moveByDistanceType;
-      goto LABEL_400;
+      goto LABEL_396;
     case 87:
       if ( !targetData )
-        goto LABEL_353;
-      v39 = targetData->fields.detourRoute;
-      if ( !v39 )
-        goto LABEL_353;
-      if ( LODWORD(v39->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      if ( v39->m_Items[1] != route->fields.actionIndex )
-        goto LABEL_353;
-LABEL_227:
+      if ( v25->m_Items[1] != route->fields.actionIndex )
+        goto LABEL_380;
+LABEL_343:
       isMoveByServantAndMasterRange = targetData->fields.moveByDistanceType;
-      goto LABEL_403;
+      goto LABEL_344;
     case 88:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x20000000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x20000000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 89:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x20000000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x20000000;
+      goto LABEL_411;
     case 90:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x40000000;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x40000000;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 91:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x40000000;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x40000000;
+      goto LABEL_411;
     case 92:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x80000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x80000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 93:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x80000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x80000000LL;
+      goto LABEL_411;
     case 94:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x100000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x100000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 95:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x100000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x100000000LL;
+      goto LABEL_411;
     case 96:
       if ( !targetData )
-        goto LABEL_353;
+        goto LABEL_380;
       isAround = targetData->fields._ExistEnemyOnBaseRoute_k__BackingField;
-LABEL_246:
+LABEL_349:
       v10 = !isAround;
-      goto LABEL_315;
+      goto LABEL_350;
     case 97:
       if ( !targetData )
-        goto LABEL_353;
+        goto LABEL_380;
       ExistEnemyOnBaseRoute_k__BackingField = targetData->fields._ExistEnemyOnBaseRoute_k__BackingField;
-LABEL_249:
+LABEL_265:
       v11 = !ExistEnemyOnBaseRoute_k__BackingField;
-      goto LABEL_404;
+      goto LABEL_397;
     case 98:
       if ( !route || !condition )
         goto LABEL_414;
-      v40 = condition->fields.value;
-      v25 = route->fields.EnemyRangeMin - 1;
-      goto LABEL_274;
+      v29 = condition->fields.value;
+      v24 = route->fields.EnemyRangeMin - 1;
+      goto LABEL_154;
     case 99:
       if ( !route || !condition )
         goto LABEL_414;
-      v36 = route->fields.EnemyRangeMin - 1 <= condition->fields.value;
-      goto LABEL_256;
+      v20 = route->fields.EnemyRangeMin - 1 <= condition->fields.value;
+      goto LABEL_128;
     case 100:
       if ( !route )
         goto LABEL_414;
       this = (WarBoardAIEvalCalcurater_o *)WarBoardAIRoute_RouteData__HasFlag(route, 2, 0);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_353;
+        goto LABEL_380;
       if ( !condition )
         goto LABEL_414;
       actionCountOnThisTurn = route->fields.attackCountOnThisTurn;
-LABEL_263:
+LABEL_358:
       actionIndex = condition->fields.value;
-      goto LABEL_309;
+      goto LABEL_359;
     case 101:
       if ( !route )
         goto LABEL_414;
       this = (WarBoardAIEvalCalcurater_o *)WarBoardAIRoute_RouteData__HasFlag(route, 2, 0);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_353;
+        goto LABEL_380;
       if ( !condition )
         goto LABEL_414;
       attackCountOnThisTurn = route->fields.attackCountOnThisTurn;
-LABEL_268:
-      v42 = attackCountOnThisTurn < condition->fields.value;
-LABEL_373:
-      LOBYTE(detourRoute) = !v42;
-      return (unsigned __int8)detourRoute & 1;
+LABEL_334:
+      v34 = attackCountOnThisTurn < condition->fields.value;
+      goto LABEL_335;
     case 102:
       if ( !route )
         goto LABEL_414;
       this = (WarBoardAIEvalCalcurater_o *)WarBoardAIRoute_RouteData__HasFlag(route, 2, 0);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_353;
+        goto LABEL_380;
       if ( !condition )
         goto LABEL_414;
-      v25 = route->fields.attackCountOnThisTurn;
-LABEL_273:
-      v40 = condition->fields.value;
-LABEL_274:
-      v33 = v25 <= v40;
-LABEL_380:
-      LOBYTE(detourRoute) = v33;
-      return (unsigned __int8)detourRoute & 1;
+      v24 = route->fields.attackCountOnThisTurn;
+LABEL_153:
+      v29 = condition->fields.value;
+LABEL_154:
+      v32 = v24 <= v29;
+      goto LABEL_155;
     case 103:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x400000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x400000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 104:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x400000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x400000000LL;
+      goto LABEL_411;
     case 105:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x800000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x800000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 106:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x800000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x800000000LL;
+      goto LABEL_411;
     case 107:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x1000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x1000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 108:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x1000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x1000000000LL;
+      goto LABEL_411;
     case 109:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x2000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x2000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 110:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x2000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x2000000000LL;
+      goto LABEL_411;
     case 111:
       if ( !targetData )
-        goto LABEL_353;
-      v43 = targetData->fields.targetPiece;
-      if ( !v43 )
-        goto LABEL_353;
+        goto LABEL_380;
+      v37 = targetData->fields.targetPiece;
+      if ( !v37 )
+        goto LABEL_380;
       if ( !route )
         goto LABEL_414;
-      v44 = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-      LOBYTE(detourRoute) = WarBoardAIManager__IsAllyPiece(v44, v43, 0);
-      return (unsigned __int8)detourRoute & 1;
+      v38 = route->fields.basePiece;
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
+      return WarBoardAIManager__IsAllyPiece(v38, v37, 0);
     case 112:
       if ( !targetData )
-        goto LABEL_353;
-      v45 = targetData->fields.targetPiece;
-      if ( !v45 )
-        goto LABEL_303;
+        goto LABEL_380;
+      v44 = targetData->fields.targetPiece;
+      if ( !v44 )
+        goto LABEL_260;
       if ( !route )
         goto LABEL_414;
-      v46 = route->fields.basePiece;
-      if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-      isMaster = WarBoardAIManager__IsAllyPiece(v46, v45, 0);
-      goto LABEL_360;
+      v45 = route->fields.basePiece;
+      if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, route, condition);
+      isMaster = WarBoardAIManager__IsAllyPiece(v45, v44, 0);
+      goto LABEL_412;
     case 113:
       if ( !targetData )
-        goto LABEL_353;
-      v47 = targetData->fields.detourRoute;
-      if ( !v47 )
-        goto LABEL_353;
-      if ( LODWORD(v47->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      actionCountOnThisTurn = v47->m_Items[1];
+      actionCountOnThisTurn = v25->m_Items[1];
       actionIndex = route->fields.actionIndex;
-LABEL_309:
+LABEL_359:
       v11 = actionCountOnThisTurn == actionIndex;
-      goto LABEL_404;
+      goto LABEL_397;
     case 114:
       if ( !targetData )
-        goto LABEL_353;
-      v48 = targetData->fields.detourRoute;
-      if ( !v48 )
-        goto LABEL_353;
-      if ( LODWORD(v48->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      v10 = v48->m_Items[1] == route->fields.actionIndex;
-LABEL_315:
-      LOBYTE(detourRoute) = !v10;
-      return (unsigned __int8)detourRoute & 1;
+      v10 = v25->m_Items[1] == route->fields.actionIndex;
+LABEL_350:
+      LOBYTE(v25) = !v10;
+      return (unsigned __int8)v25 & 1;
     case 115:
       if ( !route )
         goto LABEL_414;
-      detourRoute = route->fields.basePiece;
-      if ( !detourRoute )
-        return (unsigned __int8)detourRoute & 1;
-      v11 = WarBoardPieceData__get_ActionType(detourRoute, 0) == 1;
-      goto LABEL_404;
+      v28 = route->fields.basePiece;
+      if ( !v28 )
+        goto LABEL_380;
+      v11 = WarBoardPieceData__get_ActionType(v28, 0) == 1;
+      goto LABEL_397;
     case 116:
       if ( !route )
         goto LABEL_414;
-      detourRoute = route->fields.basePiece;
-      if ( !detourRoute )
-        return (unsigned __int8)detourRoute & 1;
-      v11 = WarBoardPieceData__get_ActionType(detourRoute, 0) == 2;
-      goto LABEL_404;
+      v50 = route->fields.basePiece;
+      if ( !v50 )
+        goto LABEL_380;
+      v11 = WarBoardPieceData__get_ActionType(v50, 0) == 2;
+      goto LABEL_397;
     case 117:
       if ( !route )
         goto LABEL_414;
-      detourRoute = route->fields.basePiece;
-      if ( !detourRoute )
-        return (unsigned __int8)detourRoute & 1;
-      v11 = WarBoardPieceData__get_ActionType(detourRoute, 0) == 3;
-      goto LABEL_404;
+      v35 = route->fields.basePiece;
+      if ( !v35 )
+        goto LABEL_380;
+      v11 = WarBoardPieceData__get_ActionType(v35, 0) == 3;
+      goto LABEL_397;
     case 118:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x10000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x10000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 119:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x10000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x10000000000LL;
+      goto LABEL_411;
     case 120:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x20000000000LL;
-      goto LABEL_356;
+      v12 = route;
+      v13 = 0x20000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 121:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x20000000000LL;
-      goto LABEL_359;
+      v14 = route;
+      v15 = 0x20000000000LL;
+      goto LABEL_411;
     case 122:
       if ( !targetData )
-        goto LABEL_353;
-      v49 = targetData->fields.detourRoute;
-      if ( !v49 )
-        goto LABEL_353;
-      if ( LODWORD(v49->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      if ( v49->m_Items[1] != route->fields.actionIndex )
-        goto LABEL_353;
+      if ( v25->m_Items[1] != route->fields.actionIndex )
+        goto LABEL_380;
       isMoveByMasterAndEnemyRange = targetData->fields.detourMoveByDistanceType;
-LABEL_397:
-      v11 = isMoveByMasterAndEnemyRange == 1;
-      goto LABEL_404;
+      goto LABEL_393;
     case 123:
       if ( !targetData )
-        goto LABEL_353;
-      v50 = targetData->fields.detourRoute;
-      if ( !v50 )
-        goto LABEL_353;
-      if ( LODWORD(v50->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
         goto LABEL_415;
       if ( !route )
         goto LABEL_414;
-      if ( v50->m_Items[1] != route->fields.actionIndex )
-        goto LABEL_353;
+      if ( v25->m_Items[1] != route->fields.actionIndex )
+        goto LABEL_380;
       isMoveByServantAndEnemyRange = targetData->fields.detourMoveByDistanceType;
-LABEL_400:
-      v11 = isMoveByServantAndEnemyRange == 3;
-      goto LABEL_404;
+      goto LABEL_396;
     case 124:
       if ( !targetData )
-        goto LABEL_353;
-      v51 = targetData->fields.detourRoute;
-      if ( !v51 )
-        goto LABEL_353;
-      if ( LODWORD(v51->max_length) <= 1 )
+        goto LABEL_380;
+      v25 = targetData->fields.detourRoute;
+      if ( !v25 )
+        return (unsigned __int8)v25 & 1;
+      if ( (v25->max_length & 0xFFFFFFFE) == 0 )
 LABEL_415:
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       if ( !route )
         goto LABEL_414;
-      if ( v51->m_Items[1] == route->fields.actionIndex )
+      if ( v25->m_Items[1] == route->fields.actionIndex )
       {
         isMoveByServantAndMasterRange = targetData->fields.detourMoveByDistanceType;
-LABEL_403:
+LABEL_344:
         v11 = isMoveByServantAndMasterRange == 2;
-LABEL_404:
-        LOBYTE(detourRoute) = v11;
+LABEL_397:
+        LOBYTE(v25) = v11;
       }
       else
       {
-LABEL_353:
-        LOBYTE(detourRoute) = 0;
+LABEL_380:
+        LOBYTE(v25) = 0;
       }
-      return (unsigned __int8)detourRoute & 1;
+      return (unsigned __int8)v25 & 1;
     case 125:
       if ( !route )
         goto LABEL_414;
-      v12 = 0x40000000000LL;
-LABEL_356:
-      LOBYTE(detourRoute) = WarBoardAIRoute_RouteData__HasFlag(route, v12, 0);
-      return (unsigned __int8)detourRoute & 1;
+      v12 = route;
+      v13 = 0x40000000000LL;
+      return WarBoardAIRoute_RouteData__HasFlag(v12, v13, 0);
     case 126:
       if ( !route )
         goto LABEL_414;
-      v13 = 0x40000000000LL;
-LABEL_359:
-      isMaster = WarBoardAIRoute_RouteData__HasFlag(route, v13, 0);
-      goto LABEL_360;
+      v14 = route;
+      v15 = 0x40000000000LL;
+LABEL_411:
+      isMaster = WarBoardAIRoute_RouteData__HasFlag(v14, v15, 0);
+      goto LABEL_412;
     case 129:
       if ( !condition )
         goto LABEL_414;
-      LOBYTE(detourRoute) = WarBoardAiTrendCondJudger__TargetRangeUnder(targetData, condition->fields.value, 0);
-      return (unsigned __int8)detourRoute & 1;
+      return WarBoardAiTrendCondJudger__TargetRangeUnder(targetData, condition->fields.value, 0);
     case 130:
       if ( !condition )
         goto LABEL_414;
       isMaster = WarBoardAiTrendCondJudger__TargetRangeUnder(targetData, condition->fields.value, 0);
-      goto LABEL_360;
+      goto LABEL_412;
     case 131:
-      if ( route )
-      {
-        this = (WarBoardAIEvalCalcurater_o *)route->fields.basePiece;
-        if ( this )
-        {
-          this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_survivalTurn((WarBoardPieceData_o *)this, 0);
-          if ( condition )
-            goto LABEL_368;
-        }
-      }
-      goto LABEL_414;
+      if ( !route )
+        goto LABEL_414;
+      this = (WarBoardAIEvalCalcurater_o *)route->fields.basePiece;
+      if ( !this )
+        goto LABEL_414;
+      this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_survivalTurn((WarBoardPieceData_o *)this, 0);
+      if ( !condition )
+        goto LABEL_414;
+      goto LABEL_367;
     case 132:
       if ( !route )
         goto LABEL_414;
@@ -2345,8 +2413,10 @@ LABEL_359:
       this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_survivalTurn((WarBoardPieceData_o *)this, 0);
       if ( !condition )
         goto LABEL_414;
-      v42 = (int)this < condition->fields.value;
-      goto LABEL_373;
+      v34 = (int)this < condition->fields.value;
+LABEL_335:
+      LOBYTE(v25) = !v34;
+      return (unsigned __int8)v25 & 1;
     case 133:
       if ( !route )
         goto LABEL_414;
@@ -2356,75 +2426,78 @@ LABEL_359:
       this = (WarBoardAIEvalCalcurater_o *)WarBoardPieceData__get_survivalTurn((WarBoardPieceData_o *)this, 0);
       if ( !condition )
         goto LABEL_414;
-      v33 = (int)this <= condition->fields.value;
-      goto LABEL_380;
+      v32 = (int)this <= condition->fields.value;
+LABEL_155:
+      LOBYTE(v25) = v32;
+      return (unsigned __int8)v25 & 1;
     case 134:
       if ( !route )
         goto LABEL_414;
-      LOBYTE(detourRoute) = WarBoardAIRoute_RouteData__get_notAction(route, 0);
-      return (unsigned __int8)detourRoute & 1;
+      return WarBoardAIRoute_RouteData__get_notAction(route, 0);
     case 135:
       if ( !route )
         goto LABEL_414;
       isMaster = WarBoardAIRoute_RouteData__get_notAction(route, 0);
-      goto LABEL_360;
+      goto LABEL_412;
     case 136:
-      if ( !route )
-        goto LABEL_414;
-      this = (WarBoardAIEvalCalcurater_o *)route->fields.baseSquare;
-      if ( !this )
-        goto LABEL_414;
-      goto LABEL_410;
+      if ( route )
+      {
+        this = (WarBoardAIEvalCalcurater_o *)route->fields.baseSquare;
+        if ( this )
+          return WarBoardSquareData__IsFlag((WarBoardSquareData_o *)this, 1, 0);
+      }
+      goto LABEL_414;
     case 137:
       if ( !route )
         goto LABEL_414;
       this = (WarBoardAIEvalCalcurater_o *)route->fields.baseSquare;
       if ( !this )
         goto LABEL_414;
-      goto LABEL_413;
+      goto LABEL_193;
     case 138:
-      LOBYTE(detourRoute) = WarBoardAiTrendCondJudger__IsReplaceTarget(route, targetData, 0);
-      return (unsigned __int8)detourRoute & 1;
+      return WarBoardAiTrendCondJudger__IsReplaceTarget(route, targetData, 0);
     case 139:
       isMaster = WarBoardAiTrendCondJudger__IsReplaceTarget(route, targetData, 0);
-      goto LABEL_360;
+      goto LABEL_412;
     case 140:
       if ( !route )
         goto LABEL_414;
       isMoveByMasterAndEnemyRange = route->fields.isMoveByOutOfWarningArea;
+LABEL_393:
+      v11 = isMoveByMasterAndEnemyRange == 1;
       goto LABEL_397;
     case 141:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndEnemyRange = route->fields.isMoveByOutOfWarningArea;
-      goto LABEL_400;
+LABEL_396:
+      v11 = isMoveByServantAndEnemyRange == 3;
+      goto LABEL_397;
     case 142:
       if ( !route )
         goto LABEL_414;
       isMoveByServantAndMasterRange = route->fields.isMoveByOutOfWarningArea;
-      goto LABEL_403;
+      goto LABEL_344;
     case 143:
       if ( !route )
         goto LABEL_414;
       this = (WarBoardAIEvalCalcurater_o *)route->fields.actionSquare;
       if ( !this )
         goto LABEL_414;
-LABEL_410:
-      LOBYTE(detourRoute) = WarBoardSquareData__IsFlag((WarBoardSquareData_o *)this, 1, 0);
-      return (unsigned __int8)detourRoute & 1;
+      return WarBoardSquareData__IsFlag((WarBoardSquareData_o *)this, 1, 0);
     case 144:
       if ( !route || (this = (WarBoardAIEvalCalcurater_o *)route->fields.actionSquare) == 0 )
 LABEL_414:
-        sub_1D0F30C(this, route);
-LABEL_413:
+        sub_21FFECC(this, route);
+LABEL_193:
       isMaster = WarBoardSquareData__IsFlag((WarBoardSquareData_o *)this, 1, 0);
-LABEL_360:
-      LOBYTE(detourRoute) = !isMaster;
-      return (unsigned __int8)detourRoute & 1;
+LABEL_412:
+      LOBYTE(v25) = !isMaster;
+      return (unsigned __int8)v25 & 1;
     default:
-LABEL_303:
-      LOBYTE(detourRoute) = 1;
-      return (unsigned __int8)detourRoute & 1;
+LABEL_260:
+      LOBYTE(v25) = 1;
+      return (unsigned __int8)v25 & 1;
   }
 }
 
@@ -2448,14 +2521,14 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F3E & 1) == 0 )
+  if ( (byte_5935F43 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F3E = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F43 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return value - 1 == ratingOffset->fields.value;
 }
 
@@ -2471,14 +2544,14 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F3F & 1) == 0 )
+  if ( (byte_5935F44 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F3F = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F44 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return value - 1 >= ratingOffset->fields.value;
 }
 
@@ -2494,14 +2567,14 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F40 & 1) == 0 )
+  if ( (byte_5935F45 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F40 = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F45 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return ratingOffset->fields.value2 >= value - 1;
 }
 
@@ -2517,14 +2590,14 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F41 & 1) == 0 )
+  if ( (byte_5935F46 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F41 = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F46 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return value - 1 == ratingOffset->fields.value;
 }
 
@@ -2540,14 +2613,14 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F42 & 1) == 0 )
+  if ( (byte_5935F47 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F42 = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F47 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return ratingOffset->fields.value2 >= value - 1;
 }
 
@@ -2563,13 +2636,13 @@ bool WarBoardAIEvalCalcurater___c__DisplayClass9_0___JudgeRatingOffsetAddConditi
 
   value = x.fields.value;
   v4 = this;
-  if ( (byte_4E74F43 & 1) == 0 )
+  if ( (byte_5935F48 & 1) == 0 )
   {
-    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
-    byte_4E74F43 = 1;
+    this = (WarBoardAIEvalCalcurater___c__DisplayClass9_0_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_uint__int__get_Value__);
+    byte_5935F48 = 1;
   }
   ratingOffset = v4->fields.ratingOffset;
   if ( !ratingOffset )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(this, x);
+    sub_21FFECC(this, x);
   return value - 1 >= ratingOffset->fields.value;
 }

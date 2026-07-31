@@ -1,33 +1,33 @@
 void BuyStorageConfirmDialogComponent___ctor(BuyStorageConfirmDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E735CA & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_593451E & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E735CA = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_593451E = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
 void BuyStorageConfirmDialogComponent__CallOnClose(BuyStorageConfirmDialogComponent_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_Action_o *onClose; // x19
-  GrandQuestFolderBoardItem_o *p_onClose; // x0
 
   onClose = this->fields.onClose;
   if ( onClose )
   {
-    p_onClose = (GrandQuestFolderBoardItem_o *)&this->fields.onClose;
-    p_onClose->klass = 0;
-    sub_1D0F058(p_onClose, 0, v2, v3, v4, v5, v6, v7);
+    this->fields.onClose = 0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClose, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))onClose->fields.invoke_impl)(
       onClose->fields.method_code,
       onClose->fields.method);
@@ -40,22 +40,22 @@ void BuyStorageConfirmDialogComponent__CallOnMenuSelect(
         int32_t buyCount,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_onMenuSelect; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_onMenuSelect; // x0
   struct System_Action_int__o *v9; // x20
   struct System_Action_int__o *onMenuSelect; // t1
 
   onMenuSelect = this->fields.onMenuSelect;
-  p_onMenuSelect = (GrandQuestFolderBoardItem_o *)&this->fields.onMenuSelect;
+  p_onMenuSelect = (MissionNaviTransitionBoardItem_o *)&this->fields.onMenuSelect;
   v9 = onMenuSelect;
   if ( onMenuSelect )
   {
     p_onMenuSelect->klass = 0;
-    sub_1D0F058(p_onMenuSelect, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_21FFBF4(p_onMenuSelect, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)buyCount,
@@ -68,42 +68,44 @@ void BuyStorageConfirmDialogComponent__Close(BuyStorageConfirmDialogComponent_o 
 {
   const MethodInfo *v2; // x2
 
-  BuyStorageConfirmDialogComponent__Close_36212688(this, 0, v2);
+  BuyStorageConfirmDialogComponent__Close_41745188(this, 0, v2);
 }
 
 
-void BuyStorageConfirmDialogComponent__Close_36212688(
+void BuyStorageConfirmDialogComponent__Close_41745188(
         BuyStorageConfirmDialogComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  System_Action_o *v10; // x20
+  bool v6; // w6
+  bool v7; // w7
+  System_Action_c *v10; // x0
+  System_Action_o *v11; // x20
 
-  if ( (byte_4E735C5 & 1) == 0 )
+  if ( (byte_5934519 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_BuyStorageConfirmDialogComponent_EndClose__);
-    byte_4E735C5 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_BuyStorageConfirmDialogComponent_EndClose__);
+    byte_5934519 = 1;
   }
   this->fields.onClose = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onClose,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onClose,
     (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
+  v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_BuyStorageConfirmDialogComponent_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
+  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_BuyStorageConfirmDialogComponent_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
 
 
@@ -127,55 +129,67 @@ int32_t BuyStorageConfirmDialogComponent__GetCurrencyImageId(
         ShopEntity_o *shopEntity,
         const MethodInfo *method)
 {
-  int32_t result; // w0
+  int32_t payType; // w8
   struct System_Int32_array *itemIds; // x8
 
-  if ( (byte_4E735C1 & 1) == 0 )
+  if ( (byte_5934515 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    this = (BuyStorageConfirmDialogComponent_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E735C1 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    this = (BuyStorageConfirmDialogComponent_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934515 = 1;
   }
   if ( !shopEntity )
-LABEL_16:
-    sub_1D0F30C(this, shopEntity);
-  result = 18;
-  switch ( shopEntity->fields.payType )
+    goto LABEL_24;
+  payType = shopEntity->fields.payType;
+  if ( payType > 7 )
   {
-    case 4:
-      return 7;
-    case 6:
-    case 0xB:
-      this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !this )
-        goto LABEL_16;
+    if ( payType <= 9 )
+    {
+      if ( payType == 8 )
+        return 16;
+      else
+        return 17;
+    }
+    if ( payType == 10 )
+      return 18;
+    if ( payType != 11 )
+      return 0;
+    goto LABEL_15;
+  }
+  if ( payType > 5 )
+  {
+    if ( payType != 6 )
+      return 0;
+LABEL_15:
+    this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( this )
+    {
       this = (BuyStorageConfirmDialogComponent_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)this,
-                                                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
       itemIds = shopEntity->fields.itemIds;
-      if ( !itemIds )
-        goto LABEL_16;
-      if ( !LODWORD(itemIds->max_length) )
-        sub_1D0F314(this);
-      if ( !this )
-        goto LABEL_16;
-      this = (BuyStorageConfirmDialogComponent_o *)DataMasterBase_object__object__int___GetEntity(
-                                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                                     itemIds->m_Items[0],
-                                                     (const MethodInfo_3535B7C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      if ( !this )
-        goto LABEL_16;
-      return (int32_t)this->fields.basePanelList;
-    case 8:
-      return 16;
-    case 9:
-      return 17;
-    case 0xA:
-      return result;
-    default:
-      return 0;
+      if ( itemIds )
+      {
+        if ( !LODWORD(itemIds->max_length) )
+          sub_21FFED4(this);
+        if ( this )
+        {
+          this = (BuyStorageConfirmDialogComponent_o *)DataMasterBase_object__object__int___GetEntity(
+                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+                                                         itemIds->m_Items[0],
+                                                         (const MethodInfo_3EDD388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+          if ( this )
+            return (int32_t)this->fields.basePanelList;
+        }
+      }
+    }
+LABEL_24:
+    sub_21FFECC(this, shopEntity);
   }
+  if ( payType != 4 )
+    return 0;
+  return 7;
 }
 
 
@@ -184,78 +198,87 @@ System_String_o *BuyStorageConfirmDialogComponent__GetCurrencyItemName(
         ShopEntity_o *shopEntity,
         const MethodInfo *method)
 {
+  int32_t payType; // w8
+  __int64 *v5; // x8
   struct System_Int32_array *itemIds; // x8
-  System_String_o *result; // x0
-  __int64 *v6; // x8
 
-  if ( (byte_4E735C0 & 1) == 0 )
+  if ( (byte_5934514 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_12538/*"STONE_FRAGMENTS_NEED_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_1950/*"ANONYMOUS_NEED_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_11118/*"RARE_PRI_NEED_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_8637/*"MANA_NEED_INFO"*/);
-    this = (BuyStorageConfirmDialogComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E735C0 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_12857/*"STONE_FRAGMENTS_NEED_INFO"*/);
+    sub_21FFC50(&StringLiteral_2033/*"ANONYMOUS_NEED_INFO"*/);
+    sub_21FFC50(&StringLiteral_11416/*"RARE_PRI_NEED_INFO"*/);
+    sub_21FFC50(&StringLiteral_8885/*"MANA_NEED_INFO"*/);
+    this = (BuyStorageConfirmDialogComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934514 = 1;
   }
   if ( !shopEntity )
-LABEL_25:
-    sub_1D0F30C(this, shopEntity);
-  switch ( shopEntity->fields.payType )
+    goto LABEL_31;
+  payType = shopEntity->fields.payType;
+  if ( payType > 8 )
   {
-    case 4:
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_8637/*"MANA_NEED_INFO"*/;
-      goto LABEL_24;
-    case 6:
-    case 0xB:
-      this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !this )
-        goto LABEL_25;
+    if ( payType == 9 )
+    {
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, shopEntity, method);
+      v5 = &StringLiteral_2033/*"ANONYMOUS_NEED_INFO"*/;
+      return LocalizationManager__Get((System_String_o *)*v5, 0);
+    }
+    if ( payType == 10 )
+    {
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, shopEntity, method);
+      v5 = &StringLiteral_11416/*"RARE_PRI_NEED_INFO"*/;
+      return LocalizationManager__Get((System_String_o *)*v5, 0);
+    }
+    if ( payType != 11 )
+      return (System_String_o *)StringLiteral_1/*""*/;
+    goto LABEL_14;
+  }
+  if ( payType == 4 )
+  {
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, shopEntity, method);
+    v5 = &StringLiteral_8885/*"MANA_NEED_INFO"*/;
+    return LocalizationManager__Get((System_String_o *)*v5, 0);
+  }
+  if ( payType == 6 )
+  {
+LABEL_14:
+    this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( this )
+    {
       this = (BuyStorageConfirmDialogComponent_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)this,
-                                                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
       itemIds = shopEntity->fields.itemIds;
-      if ( !itemIds )
-        goto LABEL_25;
-      if ( !LODWORD(itemIds->max_length) )
-        sub_1D0F314(this);
-      if ( !this )
-        goto LABEL_25;
-      this = (BuyStorageConfirmDialogComponent_o *)DataMasterBase_object__object__int___GetEntity(
-                                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                                     itemIds->m_Items[0],
-                                                     (const MethodInfo_3535B7C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      if ( !this )
-        goto LABEL_25;
-      result = (System_String_o *)this->fields.m_CancellationTokenSource;
-      break;
-    case 8:
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_12538/*"STONE_FRAGMENTS_NEED_INFO"*/;
-      goto LABEL_24;
-    case 9:
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_1950/*"ANONYMOUS_NEED_INFO"*/;
-      goto LABEL_24;
-    case 0xA:
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_11118/*"RARE_PRI_NEED_INFO"*/;
-LABEL_24:
-      result = LocalizationManager__Get((System_String_o *)*v6, 0);
-      break;
-    default:
-      result = (System_String_o *)StringLiteral_1/*""*/;
-      break;
+      if ( itemIds )
+      {
+        if ( !LODWORD(itemIds->max_length) )
+          sub_21FFED4(this);
+        if ( this )
+        {
+          this = (BuyStorageConfirmDialogComponent_o *)DataMasterBase_object__object__int___GetEntity(
+                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+                                                         itemIds->m_Items[0],
+                                                         (const MethodInfo_3EDD388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+          if ( this )
+            return (System_String_o *)this->fields.m_CancellationTokenSource;
+        }
+      }
+    }
+LABEL_31:
+    sub_21FFECC(this, shopEntity);
   }
-  return result;
+  if ( payType != 8 )
+    return (System_String_o *)StringLiteral_1/*""*/;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, shopEntity, method);
+  v5 = &StringLiteral_12857/*"STONE_FRAGMENTS_NEED_INFO"*/;
+  return LocalizationManager__Get((System_String_o *)*v5, 0);
 }
 
 
@@ -266,96 +289,91 @@ System_String_o *BuyStorageConfirmDialogComponent__GetItemNumText(
         const MethodInfo *method)
 {
   unsigned int payType; // w8
+  __int64 v7; // x2
   Il2CppObject *MasterData_object; // x20
   struct System_Int32_array *itemIds; // x8
-  int32_t m_CancellationTokenSource_high; // w19
-  LocalizationManager_c *v10; // x0
+  int32_t mana; // w19
+  LocalizationManager_c *v11; // x0
 
-  if ( (byte_4E735C2 & 1) == 0 )
+  if ( (byte_5934516 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    this = (BuyStorageConfirmDialogComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E735C2 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (BuyStorageConfirmDialogComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934516 = 1;
   }
   if ( !shopEntity )
-    goto LABEL_29;
-  payType = shopEntity->fields.payType;
-  if ( payType <= 0xB )
-  {
-    if ( ((1 << payType) & 0xB40) != 0 )
-    {
-      this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( this )
-      {
-        MasterData_object = DataManager__GetMasterData_object_(
-                              (DataManager_o *)this,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserItemMaster___);
-        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4E710BF )
-        {
-          sub_1D0F0B4(&NetworkManager_TypeInfo);
-          byte_4E710BF = 1;
-        }
-        this = (BuyStorageConfirmDialogComponent_o *)NetworkManager_TypeInfo;
-        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          this = (BuyStorageConfirmDialogComponent_o *)NetworkManager_TypeInfo;
-        }
-        itemIds = shopEntity->fields.itemIds;
-        if ( itemIds )
-        {
-          if ( !LODWORD(itemIds->max_length) )
-            sub_1D0F314(this);
-          if ( MasterData_object )
-          {
-            this = (BuyStorageConfirmDialogComponent_o *)UserItemMaster__GetEntityDefinitely(
-                                                           (UserItemMaster_o *)MasterData_object,
-                                                           *(_QWORD *)&this->fields.closeBtnLabel->fields.updateAnchors,
-                                                           itemIds->m_Items[0],
-                                                           0);
-            if ( this )
-            {
-              m_CancellationTokenSource_high = HIDWORD(this->fields.m_CancellationTokenSource);
-              if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              {
-                v10 = LocalizationManager_TypeInfo;
-LABEL_26:
-                j_il2cpp_runtime_class_init_0(v10);
-              }
-              return LocalizationManager__GetNumberFormat(m_CancellationTokenSource_high, 0);
-            }
-          }
-        }
-      }
 LABEL_29:
-      sub_1D0F30C(this, shopEntity);
-    }
+    sub_21FFECC(this, shopEntity);
+  payType = shopEntity->fields.payType;
+  if ( payType > 0xB )
+    return (System_String_o *)StringLiteral_1/*""*/;
+  if ( ((1 << payType) & 0xB40) == 0 )
+  {
     if ( payType == 4 )
     {
       if ( !userGameEntity )
         goto LABEL_29;
-      v10 = LocalizationManager_TypeInfo;
-      m_CancellationTokenSource_high = userGameEntity->fields.mana;
-LABEL_25:
-      if ( !v10->_2.cctor_finished )
-        goto LABEL_26;
-      return LocalizationManager__GetNumberFormat(m_CancellationTokenSource_high, 0);
+      v11 = LocalizationManager_TypeInfo;
+      mana = userGameEntity->fields.mana;
+LABEL_26:
+      if ( !*(&v11->_2.cctor_finished + 1) )
+        goto LABEL_27;
+      return LocalizationManager__GetNumberFormat(mana, 0);
     }
     if ( payType == 10 )
     {
       if ( !userGameEntity )
         goto LABEL_29;
-      v10 = LocalizationManager_TypeInfo;
-      m_CancellationTokenSource_high = userGameEntity->fields.rarePri;
-      goto LABEL_25;
+      v11 = LocalizationManager_TypeInfo;
+      mana = userGameEntity->fields.rarePri;
+      goto LABEL_26;
     }
+    return (System_String_o *)StringLiteral_1/*""*/;
   }
-  return (System_String_o *)StringLiteral_1/*""*/;
+  this = (BuyStorageConfirmDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !this )
+    goto LABEL_29;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)this,
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, shopEntity, v7);
+  if ( !byte_5931D52 )
+  {
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
+  }
+  this = (BuyStorageConfirmDialogComponent_o *)NetworkManager_TypeInfo;
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+  {
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, shopEntity, v7);
+    this = (BuyStorageConfirmDialogComponent_o *)NetworkManager_TypeInfo;
+  }
+  itemIds = shopEntity->fields.itemIds;
+  if ( !itemIds )
+    goto LABEL_29;
+  if ( !LODWORD(itemIds->max_length) )
+    sub_21FFED4(this);
+  if ( !MasterData_object )
+    goto LABEL_29;
+  this = (BuyStorageConfirmDialogComponent_o *)UserItemMaster__GetEntityDefinitely(
+                                                 (UserItemMaster_o *)MasterData_object,
+                                                 *(_QWORD *)&this->fields.closeBtnLabel->fields.updateAnchors,
+                                                 itemIds->m_Items[0],
+                                                 0);
+  if ( !this )
+    goto LABEL_29;
+  mana = HIDWORD(this->fields.m_CancellationTokenSource);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+  {
+    v11 = LocalizationManager_TypeInfo;
+LABEL_27:
+    j_il2cpp_runtime_class_init_0(v11, shopEntity, userGameEntity);
+  }
+  return LocalizationManager__GetNumberFormat(mana, 0);
 }
 
 
@@ -369,10 +387,10 @@ void BuyStorageConfirmDialogComponent__Init(BuyStorageConfirmDialogComponent_o *
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4E735BE & 1) == 0 )
+  if ( (byte_5934512 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E735BE = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934512 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -434,7 +452,7 @@ void BuyStorageConfirmDialogComponent__Init(BuyStorageConfirmDialogComponent_o *
         (titleLabel = (UILabel_o *)this->fields.notification) == 0) )
   {
 LABEL_20:
-    sub_1D0F30C(titleLabel, method);
+    sub_21FFECC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.buyCount = 1;
@@ -442,6 +460,7 @@ LABEL_20:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BuyStorageConfirmDialogComponent__NotificationDialogOpen(
         BuyStorageConfirmDialogComponent_o *this,
         int32_t kind,
@@ -455,8 +474,8 @@ void BuyStorageConfirmDialogComponent__NotificationDialogOpen(
   if ( !this->fields.state )
   {
     if ( !item )
-      sub_1D0F30C(this, kind);
-    BuyStorageConfirmDialogComponent__Open_36209000(
+      sub_21FFECC(this, *(_QWORD *)&kind);
+    BuyStorageConfirmDialogComponent__Open_41741384(
       this,
       kind,
       2,
@@ -476,18 +495,18 @@ void BuyStorageConfirmDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E735C7 & 1) == 0 )
+  if ( (byte_593451B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BuyStorageConfirmDialogComponent_OnClickCancel__);
-    byte_4E735C7 = 1;
+    sub_21FFC50(&Method_BuyStorageConfirmDialogComponent_OnClickCancel__);
+    byte_593451B = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_BuyStorageConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_BuyStorageConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_BuyStorageConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_BuyStorageConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     BuyStorageConfirmDialogComponent__CallOnMenuSelect(this, 0, v5);
   }
@@ -500,18 +519,18 @@ void BuyStorageConfirmDialogComponent__OnClickClose(BuyStorageConfirmDialogCompo
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E735C8 & 1) == 0 )
+  if ( (byte_593451C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BuyStorageConfirmDialogComponent_OnClickClose__);
-    byte_4E735C8 = 1;
+    sub_21FFC50(&Method_BuyStorageConfirmDialogComponent_OnClickClose__);
+    byte_593451C = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_BuyStorageConfirmDialogComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_BuyStorageConfirmDialogComponent_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_BuyStorageConfirmDialogComponent_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_BuyStorageConfirmDialogComponent_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     BuyStorageConfirmDialogComponent__CallOnMenuSelect(this, 0, v5);
   }
@@ -526,18 +545,18 @@ void BuyStorageConfirmDialogComponent__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E735C6 & 1) == 0 )
+  if ( (byte_593451A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BuyStorageConfirmDialogComponent_OnClickDecide__);
-    byte_4E735C6 = 1;
+    sub_21FFC50(&Method_BuyStorageConfirmDialogComponent_OnClickDecide__);
+    byte_593451A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_BuyStorageConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_BuyStorageConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_BuyStorageConfirmDialogComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_BuyStorageConfirmDialogComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.decideSe, 0, 0);
     BuyStorageConfirmDialogComponent__CallOnMenuSelect(this, this->fields.buyCount, v5);
   }
@@ -550,22 +569,23 @@ void BuyStorageConfirmDialogComponent__OnEnable(BuyStorageConfirmDialogComponent
   UnityEngine_Transform_o *v4; // x0
   UnityEngine_Transform_o *v5; // x0
 
-  if ( (byte_4E735C9 & 1) == 0 )
+  if ( (byte_593451D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_4700/*"ConfirmWindow/ResultInfo/CloseButton"*/);
-    sub_1D0F0B4(&StringLiteral_4699/*"ConfirmWindow/Notification/CloseButton"*/);
-    sub_1D0F0B4(&StringLiteral_4698/*"ConfirmWindow/ConfirmInfo/CancelButton"*/);
-    byte_4E735C9 = 1;
+    sub_21FFC50(&StringLiteral_4825/*"ConfirmWindow/ResultInfo/CloseButton"*/);
+    sub_21FFC50(&StringLiteral_4824/*"ConfirmWindow/Notification/CloseButton"*/);
+    sub_21FFC50(&StringLiteral_4823/*"ConfirmWindow/ConfirmInfo/CancelButton"*/);
+    byte_593451D = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_4698/*"ConfirmWindow/ConfirmInfo/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_4823/*"ConfirmWindow/ConfirmInfo/CancelButton"*/, 0);
   v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46335372(v4, (System_String_o *)StringLiteral_4700/*"ConfirmWindow/ResultInfo/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51910300(v4, (System_String_o *)StringLiteral_4825/*"ConfirmWindow/ResultInfo/CloseButton"*/, 0);
   v5 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46335372(v5, (System_String_o *)StringLiteral_4699/*"ConfirmWindow/Notification/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51910300(v5, (System_String_o *)StringLiteral_4824/*"ConfirmWindow/Notification/CloseButton"*/, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BuyStorageConfirmDialogComponent__Open(
         BuyStorageConfirmDialogComponent_o *this,
         int32_t kind,
@@ -580,8 +600,8 @@ void BuyStorageConfirmDialogComponent__Open(
   {
     this->fields.buyCount = buyCount;
     if ( !item )
-      sub_1D0F30C(this, kind);
-    BuyStorageConfirmDialogComponent__Open_36209000(
+      sub_21FFECC(this, *(_QWORD *)&kind);
+    BuyStorageConfirmDialogComponent__Open_41741384(
       this,
       kind,
       0,
@@ -593,7 +613,7 @@ void BuyStorageConfirmDialogComponent__Open(
 }
 
 
-void BuyStorageConfirmDialogComponent__Open_36209000(
+void BuyStorageConfirmDialogComponent__Open_41741384(
         BuyStorageConfirmDialogComponent_o *this,
         int32_t kind,
         int32_t type,
@@ -605,48 +625,53 @@ void BuyStorageConfirmDialogComponent__Open_36209000(
   UISprite_o *itemImage; // x24
   BuyStorageConfirmDialogComponent_o *v14; // x0
   const MethodInfo *v15; // x2
+  __int64 v16; // x1
+  __int64 v17; // x2
   int32_t CurrencyImageId; // w25
   UserGameEntity_o *SelfUserGame; // x0
   UILabel_o *itemNum; // x25
-  UserGameEntity_o *v19; // x24
-  const MethodInfo *v20; // x3
+  UserGameEntity_o *v21; // x24
+  const MethodInfo *v22; // x3
   System_String_o *ItemNumText; // x0
-  __int64 v22; // x1
-  const MethodInfo *v23; // x6
-  System_Action_o *v24; // x20
+  __int64 v24; // x1
+  const MethodInfo *v25; // x6
+  System_Action_c *v26; // x0
+  System_Action_o *v27; // x20
 
-  if ( (byte_4E735BF & 1) == 0 )
+  if ( (byte_5934513 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_BuyStorageConfirmDialogComponent_EndOpen__);
-    byte_4E735BF = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_BuyStorageConfirmDialogComponent_EndOpen__);
+    byte_5934513 = 1;
   }
   BuyStorageConfirmDialogComponent__SetObjectsOnInit(this, kind, type, onMenuSelect, (const MethodInfo *)shopEntity);
   itemImage = this->fields.itemImage;
   CurrencyImageId = BuyStorageConfirmDialogComponent__GetCurrencyImageId(v14, shopEntity, v15);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v16, v17);
   AtlasManager__SetItem(itemImage, CurrencyImageId, 0);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   itemNum = this->fields.itemNum;
-  v19 = SelfUserGame;
+  v21 = SelfUserGame;
   ItemNumText = BuyStorageConfirmDialogComponent__GetItemNumText(
                   (BuyStorageConfirmDialogComponent_o *)SelfUserGame,
                   shopEntity,
                   SelfUserGame,
-                  v20);
+                  v22);
   if ( !itemNum )
-    sub_1D0F30C(ItemNumText, v22);
+    sub_21FFECC(ItemNumText, v24);
   UILabel__set_text(itemNum, ItemNumText, 0);
-  BuyStorageConfirmDialogComponent__SetMessageLabels(this, kind, type, notificationType, shopEntity, v19, v23);
+  BuyStorageConfirmDialogComponent__SetMessageLabels(this, kind, type, notificationType, shopEntity, v21, v25);
+  v26 = System_Action_TypeInfo;
   this->fields.state = 1;
-  v24 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_BuyStorageConfirmDialogComponent_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0, 0);
+  v27 = (System_Action_o *)sub_21FFEBC(v26);
+  System_Action___ctor(v27, (Il2CppObject *)this, Method_BuyStorageConfirmDialogComponent_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BuyStorageConfirmDialogComponent__ResultOpenDialog(
         BuyStorageConfirmDialogComponent_o *this,
         int32_t kind,
@@ -659,8 +684,8 @@ void BuyStorageConfirmDialogComponent__ResultOpenDialog(
   if ( !this->fields.state )
   {
     if ( !item )
-      sub_1D0F30C(this, kind);
-    BuyStorageConfirmDialogComponent__Open_36209000(
+      sub_21FFECC(this, *(_QWORD *)&kind);
+    BuyStorageConfirmDialogComponent__Open_41741384(
       this,
       kind,
       1,
@@ -687,64 +712,65 @@ void BuyStorageConfirmDialogComponent__SetMessageLabels(
   const MethodInfo *v14; // x6
   System_String_o *v15; // x0
   __int64 v16; // x1
-  int32_t v17; // w20
+  __int64 v17; // x2
+  int32_t v18; // w20
   int32_t setNum; // w27
   int32_t buyCount; // w28
   UILabel_o *titleLabel; // x26
-  __int64 *v21; // x8
-  int32_t v22; // w22
+  __int64 *v22; // x8
+  int32_t v23; // w22
   UILabel_o *messageLabel; // x24
-  __int64 *v24; // x8
+  __int64 *v25; // x8
+  int32_t v26; // w8
+  UILabel_o *v27; // x21
+  __int64 *v28; // x8
   UILabel_o *notificationMessage; // x20
-  __int64 *v26; // x8
-  int32_t v27; // w8
-  UILabel_o *v28; // x21
-  __int64 *v29; // x8
-  System_String_o *v30; // x25
+  __int64 *v30; // x8
+  System_String_o *v31; // x25
   int32_t Price; // w0
   Il2CppObject *NumberFormat; // x21
-  Il2CppObject *v33; // x0
+  Il2CppObject *v34; // x0
   UILabel_o *nowNumLabel; // x21
-  System_String_o *v35; // x23
-  Il2CppObject *v36; // x0
+  System_String_o *v36; // x23
+  Il2CppObject *v37; // x0
   UILabel_o *afterNumLabel; // x20
-  System_String_o *v38; // x21
-  Il2CppObject *v39; // x0
+  System_String_o *v39; // x21
+  Il2CppObject *v40; // x0
   UILabel_o *nowNumTextLabel; // x20
   UILabel_o *afterNumTextLabel; // x20
   UILabel_o *decideBtnLabel; // x20
-  UILabel_o *closeBtnLabel; // x19
   __int64 *v44; // x8
-  System_String_o *v45; // x22
-  Il2CppObject *v46; // x0
+  UILabel_o *cancelBtnLabel; // x19
+  System_String_o *v46; // x22
+  Il2CppObject *v47; // x0
   UILabel_o *resultAfterNumLabel; // x21
-  System_String_o *v48; // x22
-  Il2CppObject *v49; // x0
+  System_String_o *v49; // x22
+  Il2CppObject *v50; // x0
   UILabel_o *resultAfterNumTextLabel; // x20
-  int32_t v51; // [xsp+8h] [xbp-68h] BYREF
-  int32_t v52; // [xsp+Ch] [xbp-64h] BYREF
+  UILabel_o *closeBtnLabel; // x19
+  int32_t v53; // [xsp+8h] [xbp-68h] BYREF
+  int32_t v54; // [xsp+Ch] [xbp-64h] BYREF
   int32_t max[2]; // [xsp+18h] [xbp-58h] BYREF
 
   v12 = this;
-  if ( (byte_4E735C3 & 1) == 0 )
+  if ( (byte_5934517 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_11802/*"SERVANT_EQUIP_STORAGE_PURCHASE_RESULT"*/);
-    sub_1D0F0B4(&StringLiteral_12580/*"STORAGE_SHOP_NOTIFICATION"*/);
-    sub_1D0F0B4(&StringLiteral_11803/*"SERVANT_EQUIP_STORAGE_PURCHASE_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_12175/*"SERVANT_STORAGE_PURCHASE_RESULT"*/);
-    sub_1D0F0B4(&StringLiteral_11810/*"SERVANT_FRAME_PURCHASE_INFO1"*/);
-    sub_1D0F0B4(&StringLiteral_12581/*"STORAGE_SHOP_SOLD_OUT"*/);
-    sub_1D0F0B4(&StringLiteral_11811/*"SERVANT_FRAME_PURCHASE_INFO2"*/);
-    sub_1D0F0B4(&StringLiteral_11807/*"SERVANT_FRAME_PURCHASE_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_12176/*"SERVANT_STORAGE_PURCHASE_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_12173/*"SERVANT_STORAGE_PURCHASE_MESSAGE"*/);
-    sub_1D0F0B4(&StringLiteral_11808/*"SERVANT_FRAME_PURCHASE_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_11809/*"SERVANT_FRAME_PURCHASE_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_11801/*"SERVANT_EQUIP_STORAGE_PURCHASE_MESSAGE"*/);
-    this = (BuyStorageConfirmDialogComponent_o *)sub_1D0F0B4(&StringLiteral_12174/*"SERVANT_STORAGE_PURCHASE_NUM"*/);
-    byte_4E735C3 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_12117/*"SERVANT_EQUIP_STORAGE_PURCHASE_RESULT"*/);
+    sub_21FFC50(&StringLiteral_12899/*"STORAGE_SHOP_NOTIFICATION"*/);
+    sub_21FFC50(&StringLiteral_12118/*"SERVANT_EQUIP_STORAGE_PURCHASE_TITLE"*/);
+    sub_21FFC50(&StringLiteral_12493/*"SERVANT_STORAGE_PURCHASE_RESULT"*/);
+    sub_21FFC50(&StringLiteral_12125/*"SERVANT_FRAME_PURCHASE_INFO1"*/);
+    sub_21FFC50(&StringLiteral_12900/*"STORAGE_SHOP_SOLD_OUT"*/);
+    sub_21FFC50(&StringLiteral_12126/*"SERVANT_FRAME_PURCHASE_INFO2"*/);
+    sub_21FFC50(&StringLiteral_12122/*"SERVANT_FRAME_PURCHASE_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_12494/*"SERVANT_STORAGE_PURCHASE_TITLE"*/);
+    sub_21FFC50(&StringLiteral_12491/*"SERVANT_STORAGE_PURCHASE_MESSAGE"*/);
+    sub_21FFC50(&StringLiteral_12123/*"SERVANT_FRAME_PURCHASE_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_12124/*"SERVANT_FRAME_PURCHASE_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_12116/*"SERVANT_EQUIP_STORAGE_PURCHASE_MESSAGE"*/);
+    this = (BuyStorageConfirmDialogComponent_o *)sub_21FFC50(&StringLiteral_12492/*"SERVANT_STORAGE_PURCHASE_NUM"*/);
+    byte_5934517 = 1;
   }
   *(_QWORD *)max = 0;
   CurrencyItemName = (BuyStorageConfirmDialogComponent_o *)BuyStorageConfirmDialogComponent__GetCurrencyItemName(
@@ -753,8 +779,8 @@ void BuyStorageConfirmDialogComponent__SetMessageLabels(
                                                              *(const MethodInfo **)&type);
   BuyStorageConfirmDialogComponent__SetStorageNum(CurrencyItemName, kind, shopEntity, userGameEntity, &max[1], max, v14);
   if ( !shopEntity )
-    goto LABEL_66;
-  v17 = max[1];
+    goto LABEL_67;
+  v18 = max[1];
   setNum = shopEntity->fields.setNum;
   buyCount = v12->fields.buyCount;
   if ( kind )
@@ -762,20 +788,20 @@ void BuyStorageConfirmDialogComponent__SetMessageLabels(
     if ( kind != 1 )
       goto LABEL_14;
     titleLabel = v12->fields.titleLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = &StringLiteral_11803/*"SERVANT_EQUIP_STORAGE_PURCHASE_TITLE"*/;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+    v22 = &StringLiteral_12118/*"SERVANT_EQUIP_STORAGE_PURCHASE_TITLE"*/;
   }
   else
   {
     titleLabel = v12->fields.titleLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = &StringLiteral_12176/*"SERVANT_STORAGE_PURCHASE_TITLE"*/;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+    v22 = &StringLiteral_12494/*"SERVANT_STORAGE_PURCHASE_TITLE"*/;
   }
-  v15 = LocalizationManager__Get((System_String_o *)*v21, 0);
+  v15 = LocalizationManager__Get((System_String_o *)*v22, 0);
   if ( !titleLabel )
-    goto LABEL_66;
+    goto LABEL_67;
   UILabel__set_text(titleLabel, v15, 0);
 LABEL_14:
   if ( type == 2 )
@@ -783,154 +809,161 @@ LABEL_14:
     if ( notificationType == 2 )
     {
       notificationMessage = v12->fields.notificationMessage;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v26 = &StringLiteral_12580/*"STORAGE_SHOP_NOTIFICATION"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+      v30 = &StringLiteral_12899/*"STORAGE_SHOP_NOTIFICATION"*/;
     }
     else
     {
       if ( notificationType != 1 )
       {
-LABEL_50:
+LABEL_63:
         closeBtnLabel = v12->fields.closeBtnLabel;
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        goto LABEL_62;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12123/*"SERVANT_FRAME_PURCHASE_CLOSE"*/, 0);
+        if ( closeBtnLabel )
+        {
+          UILabel__set_text(closeBtnLabel, v15, 0);
+          return;
+        }
+        goto LABEL_67;
       }
       notificationMessage = v12->fields.notificationMessage;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v26 = &StringLiteral_12581/*"STORAGE_SHOP_SOLD_OUT"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+      v30 = &StringLiteral_12900/*"STORAGE_SHOP_SOLD_OUT"*/;
     }
-    v15 = LocalizationManager__Get((System_String_o *)*v26, 0);
+    v15 = LocalizationManager__Get((System_String_o *)*v30, 0);
     if ( !notificationMessage )
-      goto LABEL_66;
+      goto LABEL_67;
     UILabel__set_text(notificationMessage, v15, 0);
-    goto LABEL_50;
+    goto LABEL_63;
   }
   if ( type != 1 )
   {
     if ( type )
       return;
-    v22 = v17 + buyCount * setNum;
+    v23 = v18 + buyCount * setNum;
     if ( kind )
     {
       if ( kind != 1 )
       {
 LABEL_39:
         nowNumTextLabel = v12->fields.nowNumTextLabel;
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11810/*"SERVANT_FRAME_PURCHASE_INFO1"*/, 0);
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12125/*"SERVANT_FRAME_PURCHASE_INFO1"*/, 0);
         if ( nowNumTextLabel )
         {
           UILabel__set_text(nowNumTextLabel, v15, 0);
           afterNumTextLabel = v12->fields.afterNumTextLabel;
-          v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11811/*"SERVANT_FRAME_PURCHASE_INFO2"*/, 0);
+          v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12126/*"SERVANT_FRAME_PURCHASE_INFO2"*/, 0);
           if ( afterNumTextLabel )
           {
             UILabel__set_text(afterNumTextLabel, v15, 0);
             decideBtnLabel = v12->fields.decideBtnLabel;
-            v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11809/*"SERVANT_FRAME_PURCHASE_DECIDE"*/, 0);
+            v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12124/*"SERVANT_FRAME_PURCHASE_DECIDE"*/, 0);
             if ( decideBtnLabel )
             {
               UILabel__set_text(decideBtnLabel, v15, 0);
-              closeBtnLabel = v12->fields.cancelBtnLabel;
-              v44 = &StringLiteral_11807/*"SERVANT_FRAME_PURCHASE_CANCEL"*/;
-              goto LABEL_63;
+              v44 = &StringLiteral_12122/*"SERVANT_FRAME_PURCHASE_CANCEL"*/;
+              cancelBtnLabel = v12->fields.cancelBtnLabel;
+              goto LABEL_55;
             }
           }
         }
-LABEL_66:
-        sub_1D0F30C(v15, v16);
+LABEL_67:
+        sub_21FFECC(v15, v16);
       }
       messageLabel = v12->fields.messageLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v24 = &StringLiteral_11801/*"SERVANT_EQUIP_STORAGE_PURCHASE_MESSAGE"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+      v25 = &StringLiteral_12116/*"SERVANT_EQUIP_STORAGE_PURCHASE_MESSAGE"*/;
     }
     else
     {
       messageLabel = v12->fields.messageLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v24 = &StringLiteral_12173/*"SERVANT_STORAGE_PURCHASE_MESSAGE"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+      v25 = &StringLiteral_12491/*"SERVANT_STORAGE_PURCHASE_MESSAGE"*/;
     }
-    v30 = LocalizationManager__Get((System_String_o *)*v24, 0);
+    v31 = LocalizationManager__Get((System_String_o *)*v25, 0);
     Price = ShopEntity__GetPrice(shopEntity, 0);
     NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v12->fields.buyCount * Price, 0);
-    v52 = max[0];
-    v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-    v15 = System_String__Format_65604148(v30, (Il2CppObject *)CurrencyItemName, NumberFormat, v33, 0);
+    v54 = max[0];
+    v34 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v54);
+    v15 = System_String__Format_75484644(v31, (Il2CppObject *)CurrencyItemName, NumberFormat, v34, 0);
     if ( !messageLabel )
-      goto LABEL_66;
+      goto LABEL_67;
     UILabel__set_text(messageLabel, v15, 0);
     nowNumLabel = v12->fields.nowNumLabel;
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12174/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
-    v36 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v17, 0);
-    v15 = System_String__Format(v35, v36, 0);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12492/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
+    v37 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v18, 0);
+    v15 = System_String__Format(v36, v37, 0);
     if ( !nowNumLabel )
-      goto LABEL_66;
+      goto LABEL_67;
     UILabel__set_text(nowNumLabel, v15, 0);
     afterNumLabel = v12->fields.afterNumLabel;
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12174/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
-    v39 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v22, 0);
-    v15 = System_String__Format(v38, v39, 0);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_12492/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
+    v40 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v23, 0);
+    v15 = System_String__Format(v39, v40, 0);
     if ( !afterNumLabel )
-      goto LABEL_66;
+      goto LABEL_67;
     UILabel__set_text(afterNumLabel, v15, 0);
     goto LABEL_39;
   }
-  v27 = v12->fields.kind;
-  if ( v27 == 1 )
+  v26 = v12->fields.kind;
+  if ( v26 == 1 )
   {
-    v28 = v12->fields.messageLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v29 = &StringLiteral_11802/*"SERVANT_EQUIP_STORAGE_PURCHASE_RESULT"*/;
-    goto LABEL_55;
+    v27 = v12->fields.messageLabel;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+    v28 = &StringLiteral_12117/*"SERVANT_EQUIP_STORAGE_PURCHASE_RESULT"*/;
   }
+  else
+  {
+    if ( v26 )
+      goto LABEL_51;
+    v27 = v12->fields.messageLabel;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+    v28 = &StringLiteral_12493/*"SERVANT_STORAGE_PURCHASE_RESULT"*/;
+  }
+  v46 = LocalizationManager__Get((System_String_o *)*v28, 0);
+  v54 = max[0];
+  v47 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v54);
+  v15 = System_String__Format(v46, v47, 0);
   if ( !v27 )
-  {
-    v28 = v12->fields.messageLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v29 = &StringLiteral_12175/*"SERVANT_STORAGE_PURCHASE_RESULT"*/;
-LABEL_55:
-    v45 = LocalizationManager__Get((System_String_o *)*v29, 0);
-    v52 = max[0];
-    v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-    v15 = System_String__Format(v45, v46, 0);
-    if ( !v28 )
-      goto LABEL_66;
-    UILabel__set_text(v28, v15, 0);
-    resultAfterNumLabel = v12->fields.resultAfterNumLabel;
-    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12174/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
-    v51 = v17;
-    v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
-    v15 = System_String__Format(v48, v49, 0);
-    if ( !resultAfterNumLabel )
-      goto LABEL_66;
-    UILabel__set_text(resultAfterNumLabel, v15, 0);
-  }
+    goto LABEL_67;
+  UILabel__set_text(v27, v15, 0);
+  resultAfterNumLabel = v12->fields.resultAfterNumLabel;
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12492/*"SERVANT_STORAGE_PURCHASE_NUM"*/, 0);
+  v53 = v18;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v53);
+  v15 = System_String__Format(v49, v50, 0);
+  if ( !resultAfterNumLabel )
+    goto LABEL_67;
+  UILabel__set_text(resultAfterNumLabel, v15, 0);
+LABEL_51:
   resultAfterNumTextLabel = v12->fields.resultAfterNumTextLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11810/*"SERVANT_FRAME_PURCHASE_INFO1"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12125/*"SERVANT_FRAME_PURCHASE_INFO1"*/, 0);
   if ( !resultAfterNumTextLabel )
-    goto LABEL_66;
+    goto LABEL_67;
   UILabel__set_text(resultAfterNumTextLabel, v15, 0);
-  closeBtnLabel = v12->fields.closeBtnLabel;
-LABEL_62:
-  v44 = &StringLiteral_11808/*"SERVANT_FRAME_PURCHASE_CLOSE"*/;
-LABEL_63:
+  v44 = &StringLiteral_12123/*"SERVANT_FRAME_PURCHASE_CLOSE"*/;
+  cancelBtnLabel = v12->fields.closeBtnLabel;
+LABEL_55:
   v15 = LocalizationManager__Get((System_String_o *)*v44, 0);
-  if ( !closeBtnLabel )
-    goto LABEL_66;
-  UILabel__set_text(closeBtnLabel, v15, 0);
+  if ( !cancelBtnLabel )
+    goto LABEL_67;
+  UILabel__set_text(cancelBtnLabel, v15, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BuyStorageConfirmDialogComponent__SetObjectsOnInit(
         BuyStorageConfirmDialogComponent_o *this,
         int32_t kind,
@@ -939,19 +972,19 @@ void BuyStorageConfirmDialogComponent__SetObjectsOnInit(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v11; // x1
 
   this->fields.kind = kind;
   this->fields.onMenuSelect = onMenuSelect;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onMenuSelect,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onMenuSelect,
     (int32_t)onMenuSelect,
-    type,
-    (int32_t)onMenuSelect,
-    (System_String_o *)method,
+    *(System_String_o **)&type,
+    (System_String_o *)onMenuSelect,
+    (int32_t)method,
     v5,
     v6,
     v7);
@@ -977,7 +1010,7 @@ void BuyStorageConfirmDialogComponent__SetObjectsOnInit(
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
 LABEL_10:
-    sub_1D0F30C(gameObject, v11);
+    sub_21FFECC(gameObject, v11);
   }
   UnityEngine_GameObject__SetActive(gameObject, type != 2, 0);
   this->fields.decideSe = 8 * (type == 0);
@@ -996,57 +1029,57 @@ void BuyStorageConfirmDialogComponent__SetStorageNum(
 {
   BalanceConfig_c *v12; // x0
   struct BalanceConfig_StaticFields *v13; // x8
+  int32_t setNum; // w9
+  int32_t limitNum; // w10
   int32_t UserServantEquipStorageMax; // w8
   struct BalanceConfig_StaticFields *static_fields; // x8
-  int32_t v16; // w8
+  int32_t v18; // w8
 
-  if ( (byte_4E735C4 & 1) == 0 )
+  if ( (byte_5934518 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    byte_4E735C4 = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    byte_5934518 = 1;
   }
   if ( kind == 1 )
   {
     v12 = BalanceConfig_TypeInfo;
-    if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v12 = BalanceConfig_TypeInfo;
-    }
+    if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *(_QWORD *)&kind, shopEntity);
     if ( userGameEntity )
     {
-      static_fields = v12->static_fields;
+      static_fields = BalanceConfig_TypeInfo->static_fields;
       *now = userGameEntity->fields.svtEquipStorageAdjust + static_fields->UserServantEquipStorageMax;
       if ( shopEntity )
       {
+        setNum = shopEntity->fields.setNum;
+        limitNum = shopEntity->fields.limitNum;
         UserServantEquipStorageMax = static_fields->UserServantEquipStorageMax;
         goto LABEL_15;
       }
     }
 LABEL_18:
-    sub_1D0F30C(v12, *(_QWORD *)&kind);
+    sub_21FFECC(v12, *(_QWORD *)&kind);
   }
   if ( kind )
   {
-    v16 = 0;
+    v18 = 0;
     *now = 0;
     goto LABEL_17;
   }
   v12 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v12 = BalanceConfig_TypeInfo;
-  }
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *(_QWORD *)&kind, shopEntity);
   if ( !userGameEntity )
     goto LABEL_18;
-  v13 = v12->static_fields;
+  v13 = BalanceConfig_TypeInfo->static_fields;
   *now = userGameEntity->fields.svtStorageAdjust + v13->UserServantStorageMax;
   if ( !shopEntity )
     goto LABEL_18;
+  setNum = shopEntity->fields.setNum;
+  limitNum = shopEntity->fields.limitNum;
   UserServantEquipStorageMax = v13->UserServantStorageMax;
 LABEL_15:
-  v16 = UserServantEquipStorageMax + shopEntity->fields.limitNum * shopEntity->fields.setNum;
+  v18 = UserServantEquipStorageMax + limitNum * setNum;
 LABEL_17:
-  *max = v16;
+  *max = v18;
 }

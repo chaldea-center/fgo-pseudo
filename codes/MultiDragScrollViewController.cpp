@@ -55,7 +55,7 @@ void MultiDragScrollViewController__OnDrag(
         return;
       }
 LABEL_15:
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
   }
 }
@@ -71,7 +71,7 @@ void MultiDragScrollViewController__OnDragStart(MultiDragScrollViewController_o 
     || (UnityEngine_Behaviour__set_enabled(horizontalDrag, !this->fields._StopDragHorizontally_k__BackingField, 0),
         (horizontalDrag = (UnityEngine_Behaviour_o *)this->fields.verticalDrag) == 0) )
   {
-    sub_1D0F30C(horizontalDrag, method);
+    sub_21FFECC(horizontalDrag, method);
   }
   UnityEngine_Behaviour__set_enabled(horizontalDrag, !this->fields._StopDragVertically_k__BackingField, 0);
 }
@@ -95,10 +95,10 @@ void MultiDragScrollViewController__OnPress(
   struct UIDragScrollView_o *v14; // x8
   struct UIScrollView_o *v15; // x8
 
-  if ( (byte_4E78E4C & 1) == 0 )
+  if ( (byte_5939E9C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78E4C = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939E9C = 1;
   }
   if ( !isPressed )
   {
@@ -124,8 +124,8 @@ void MultiDragScrollViewController__OnPress(
     if ( !scrollView )
       goto LABEL_25;
     centerOnChild = (UnityEngine_Object_o *)scrollView->fields.centerOnChild;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isPressed);
     horizontalDrag = (struct UIDragScrollView_o *)UnityEngine_Object__op_Inequality(centerOnChild, 0, 0);
     if ( ((unsigned __int8)horizontalDrag & 1) != 0 )
     {
@@ -149,8 +149,8 @@ void MultiDragScrollViewController__OnPress(
     if ( !v12 )
       goto LABEL_25;
     v13 = (UnityEngine_Object_o *)v12->fields.centerOnChild;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isPressed);
     horizontalDrag = (struct UIDragScrollView_o *)UnityEngine_Object__op_Inequality(v13, 0, 0);
     if ( ((unsigned __int8)horizontalDrag & 1) != 0 )
     {
@@ -171,7 +171,7 @@ void MultiDragScrollViewController__OnPress(
         }
       }
 LABEL_25:
-      sub_1D0F30C(horizontalDrag, isPressed);
+      sub_21FFECC(horizontalDrag, isPressed);
     }
   }
 }

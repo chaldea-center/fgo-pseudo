@@ -1,22 +1,24 @@
 void EventInfoShipProgressDrawComponent___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
+  int32_t v7; // w1
 
-  if ( (byte_4E793B2 & 1) == 0 )
+  if ( (byte_593A45D & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_10917/*"ProgressShipData_"*/);
-    byte_4E793B2 = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent_TypeInfo);
+    sub_21FFC50(&StringLiteral_11209/*"ProgressShipData_"*/);
+    byte_593A45D = 1;
   }
-  EventInfoShipProgressDrawComponent_TypeInfo->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = (struct System_String_o *)StringLiteral_10917/*"ProgressShipData_"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)EventInfoShipProgressDrawComponent_TypeInfo->static_fields,
-    StringLiteral_10917/*"ProgressShipData_"*/,
+  v7 = StringLiteral_11209/*"ProgressShipData_"*/;
+  EventInfoShipProgressDrawComponent_TypeInfo->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = (struct System_String_o *)StringLiteral_11209/*"ProgressShipData_"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)EventInfoShipProgressDrawComponent_TypeInfo->static_fields,
+    v7,
     v1,
     v2,
     v3,
@@ -26,184 +28,204 @@ void EventInfoShipProgressDrawComponent___cctor(const MethodInfo *method)
 }
 
 
+void EventInfoShipProgressDrawComponent___ctor(EventInfoShipProgressDrawComponent_o *this, const MethodInfo *method)
+{
+  EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
+}
+
+
 void EventInfoShipProgressDrawComponent__Awake(EventInfoShipProgressDrawComponent_o *this, const MethodInfo *method)
 {
-  struct Custom2dSplineMesh_array *progressPathMesh; // x8
-  int max_length; // w8
-  int v4; // w9
-
-  progressPathMesh = this->fields.progressPathMesh;
-  if ( !progressPathMesh )
-    sub_1D0F30C(this, method);
-  max_length = progressPathMesh->max_length;
-  v4 = -1;
-  do
-    ++v4;
-  while ( v4 < max_length );
+  if ( !this->fields.progressPathMesh )
+    sub_21FFECC(this, method);
 }
 
 
 void EventInfoShipProgressDrawComponent__DeleteContinueData(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  int v2; // w8
   Il2CppObject *Master_object; // x0
-  __int64 v2; // x1
-  System_Collections_ObjectModel_Collection_T__o *monitor; // x19
-  DataMasterBase_TMaster__TEntity__PKType__o *v4; // x20
-  __int64 v5; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
+  __int64 v4; // x1
+  System_Collections_ObjectModel_Collection_T__o *monitor; // x20
+  DataMasterBase_TMaster__TEntity__PKType__o *v6; // x19
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x0
+  __int64 v8; // x1
+  System_Collections_Generic_IEnumerator_T__o *v9; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v8; // x9
-  int32_t *p_offset; // x10
-  __int64 v10; // x0
-  System_Collections_Generic_IEnumerator_T__c *v11; // x8
-  __int64 v12; // x9
-  int32_t *v13; // x10
+  __int64 v11; // x9
+  int *p_offset; // x10
+  __int64 v13; // x0
   __int64 v14; // x0
-  __int64 v15; // x0
-  __int64 v16; // x1
-  int32_t v17; // w2
-  __int64 v18; // x1
-  EventInfoShipProgressDrawComponent_c *v19; // x0
-  System_String_o *SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA; // x21
-  System_String_o *v21; // x1
-  System_String_o *v22; // x0
-  System_Collections_Generic_IEnumerator_T__c *v23; // x8
-  __int64 v24; // x9
-  int32_t *v25; // x10
-  __int64 v26; // x0
-  Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v28; // [xsp+1Ch] [xbp-44h] BYREF
+  __int64 v15; // x1
+  System_Collections_Generic_IEnumerator_T__o *v16; // x20
+  System_Collections_Generic_IEnumerator_T__c *v17; // x8
+  __int64 v18; // x9
+  int *v19; // x10
+  __int64 v20; // x0
+  int32_t v21; // w2
+  EventInfoShipProgressDrawComponent_c *v22; // x0
+  System_String_o *SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA; // x20
+  System_String_o *v24; // x1
+  System_String_o *v25; // x0
+  System_Collections_Generic_IEnumerator_T__o *v26; // x20
+  System_Collections_Generic_IEnumerator_T__c *v27; // x8
+  __int64 v28; // x9
+  int *v29; // x10
+  __int64 v30; // x0
+  Il2CppObject *entity; // [xsp+10h] [xbp-50h] BYREF
+  int32_t v32; // [xsp+1Ch] [xbp-44h] BYREF
+  System_Collections_Generic_IEnumerator_T__o *v33; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4E793AF & 1) == 0 )
+  if ( (byte_593A45A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventEntity__GetEnumerator__);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_EventMaster__EventEntity__int__getEntityList__);
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent_TypeInfo);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_EventEntity__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    byte_4E793AF = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventEntity__GetEnumerator__);
+    sub_21FFC50(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_EventMaster__EventEntity__int__getEntityList__);
+    sub_21FFC50(&EventInfoShipProgressDrawComponent_TypeInfo);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_EventEntity__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    byte_593A45A = 1;
   }
-  v28 = 0;
+  v33 = 0;
+  v2 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
+  v32 = 0;
   entity = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventMaster___);
+  if ( !v2 )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v1);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object
     || (monitor = (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].monitor,
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventDetailMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventDetailMaster___),
         !monitor) )
   {
-    sub_1D0F30C(Master_object, v2);
+    sub_21FFECC(Master_object, v4);
   }
-  v4 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+  v6 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  monitor,
-                 (const MethodInfo_34CD418 *)Method_System_Collections_ObjectModel_Collection_EventEntity__GetEnumerator__);
+                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_EventEntity__GetEnumerator__);
+  v33 = Enumerator;
   if ( !Enumerator )
-    sub_1D0F30C(0, v5);
+LABEL_32:
+    sub_21FFECC(Enumerator, v8);
+  v9 = Enumerator;
   while ( 1 )
   {
-    klass = Enumerator->klass;
-    v8 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    klass = v9->klass;
+    v11 = *(unsigned __int16 *)&v9->klass->_2.rank;
+    if ( *(_WORD *)&v9->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v8;
+        --v11;
         p_offset += 4;
-        if ( !v8 )
-          goto LABEL_12;
+        if ( !v11 )
+          goto LABEL_13;
       }
-      v10 = (__int64)&klass->vtable[*p_offset];
+      v13 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
-LABEL_12:
-      v10 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_13:
+      v13 = sub_2237E2C(v9, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v10)(
-            Enumerator,
-            *(_QWORD *)(v10 + 8))
-        & 1) == 0 )
+    v14 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
+            v9,
+            *(_QWORD *)(v13 + 8));
+    if ( (v14 & 1) == 0 )
       break;
-    v11 = Enumerator->klass;
-    v12 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    v16 = v33;
+    if ( !v33 )
+      sub_21FFECC(v14, v15);
+    v17 = v33->klass;
+    v18 = *(unsigned __int16 *)&v33->klass->_2.rank;
+    if ( *(_WORD *)&v33->klass->_2.rank )
     {
-      v13 = &v11->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_EventEntity__c **)v13 - 1) != System_Collections_Generic_IEnumerator_EventEntity__TypeInfo )
+      v19 = &v17->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_EventEntity__c **)v19 - 1) != System_Collections_Generic_IEnumerator_EventEntity__TypeInfo )
       {
-        --v12;
-        v13 += 4;
-        if ( !v12 )
-          goto LABEL_19;
+        --v18;
+        v19 += 4;
+        if ( !v18 )
+          goto LABEL_21;
       }
-      v14 = (__int64)&v11->vtable[*v13];
+      v20 = (__int64)&v17->vtable[*v19];
     }
     else
     {
-LABEL_19:
-      v14 = sub_1CE5430(Enumerator, System_Collections_Generic_IEnumerator_EventEntity__TypeInfo, 0);
+LABEL_21:
+      v20 = sub_2237E2C(v33, System_Collections_Generic_IEnumerator_EventEntity__TypeInfo, 0);
     }
-    v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
-            Enumerator,
-            *(_QWORD *)(v14 + 8));
-    if ( v15 )
+    Enumerator = (System_Collections_Generic_IEnumerator_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
+                                                                  v16,
+                                                                  *(_QWORD *)(v20 + 8));
+    if ( Enumerator )
     {
-      v17 = *(_DWORD *)(v15 + 16);
-      v28 = v17;
-      if ( !v4 )
-        sub_1D0F30C(v15, v16);
-      if ( DataMasterBase_object__object__int___TryGetEntity(
-             v4,
-             &entity,
-             v17,
-             (const MethodInfo_3535BC8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+      v21 = (int32_t)Enumerator[1].klass;
+      v32 = v21;
+      if ( !v6 )
+        sub_21FFECC(Enumerator, v8);
+      Enumerator = (System_Collections_Generic_IEnumerator_T__o *)DataMasterBase_object__object__int___TryGetEntity(
+                                                                    v6,
+                                                                    &entity,
+                                                                    v21,
+                                                                    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+      if ( ((unsigned __int8)Enumerator & 1) != 0 )
       {
         if ( !entity )
-          sub_1D0F30C(0, v18);
-        if ( EventDetailEntity__IsEventRiverProgress((EventDetailEntity_o *)entity, 0) )
+          sub_21FFECC(0, v8);
+        Enumerator = (System_Collections_Generic_IEnumerator_T__o *)EventDetailEntity__IsEventRiverProgress(
+                                                                      (EventDetailEntity_o *)entity,
+                                                                      0);
+        if ( ((unsigned __int8)Enumerator & 1) != 0 )
         {
-          v19 = EventInfoShipProgressDrawComponent_TypeInfo;
-          if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
+          v22 = EventInfoShipProgressDrawComponent_TypeInfo;
+          if ( !*(&EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished + 1) )
           {
-            j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo);
-            v19 = EventInfoShipProgressDrawComponent_TypeInfo;
+            j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo, v8);
+            v22 = EventInfoShipProgressDrawComponent_TypeInfo;
           }
-          SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v19->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
-          v21 = System_Int32__ToString((int32_t)&v28, 0);
-          v22 = System_String__Concat_65562772(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v21, 0);
-          UnityEngine_PlayerPrefs__DeleteKey(v22, 0);
+          SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v22->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
+          v24 = System_Int32__ToString((int32_t)&v32, 0);
+          v25 = System_String__Concat_75438412(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v24, 0);
+          UnityEngine_PlayerPrefs__DeleteKey(v25, 0);
         }
       }
     }
+    v9 = v33;
+    if ( !v33 )
+      goto LABEL_32;
   }
-  v23 = Enumerator->klass;
-  v24 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-  if ( *(_WORD *)&Enumerator->klass->_2.rank )
+  v26 = v33;
+  if ( v33 )
   {
-    v25 = &v23->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
+    v27 = v33->klass;
+    v28 = *(unsigned __int16 *)&v33->klass->_2.rank;
+    if ( *(_WORD *)&v33->klass->_2.rank )
     {
-      --v24;
-      v25 += 4;
-      if ( !v24 )
-        goto LABEL_33;
+      v29 = &v27->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v29 - 1) != System_IDisposable_TypeInfo )
+      {
+        --v28;
+        v29 += 4;
+        if ( !v28 )
+          goto LABEL_38;
+      }
+      v30 = (__int64)&v27->vtable[*v29];
     }
-    v26 = (__int64)&v23->vtable[*v25];
+    else
+    {
+LABEL_38:
+      v30 = sub_2237E2C(v33, System_IDisposable_TypeInfo, 0);
+    }
+    (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8));
   }
-  else
-  {
-LABEL_33:
-    v26 = sub_1CE5430(Enumerator, System_IDisposable_TypeInfo, 0);
-  }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
 }
 
 
@@ -215,31 +237,31 @@ System_Collections_IEnumerator_o *EventInfoShipProgressDrawComponent__EasingMove
         const MethodInfo *method)
 {
   __int64 v9; // x21
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  bool v14; // w6
+  bool v15; // w7
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  bool v20; // w6
+  bool v21; // w7
 
-  if ( (byte_4E793AB & 1) == 0 )
+  if ( (byte_593A456 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo);
-    byte_4E793AB = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo);
+    byte_593A456 = 1;
   }
-  v9 = sub_1D0F300(EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo);
+  v9 = sub_21FFEBC(EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v9 + 48) = endAction;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)endAction, v16, v17, v18, v19, v20, v21);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 48), (int32_t)endAction, v16, v17, v18, v19, v20, v21);
   *(float *)(v9 + 40) = moveRate;
   *(float *)(v9 + 44) = endRate;
   return (System_Collections_IEnumerator_o *)v9;
@@ -257,20 +279,20 @@ bool EventInfoShipProgressDrawComponent__HasSaveData(
   System_String_o *v6; // x0
 
   v2 = (int)this;
-  if ( (byte_4E793B0 & 1) == 0 )
+  if ( (byte_593A45B & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent_TypeInfo);
-    byte_4E793B0 = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent_TypeInfo);
+    byte_593A45B = 1;
   }
   v3 = EventInfoShipProgressDrawComponent_TypeInfo;
-  if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo, method);
     v3 = EventInfoShipProgressDrawComponent_TypeInfo;
   }
   SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v3->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
   v5 = System_Int32__ToString(v2 + 124, 0);
-  v6 = System_String__Concat_65562772(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0);
+  v6 = System_String__Concat_75438412(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0);
   return UnityEngine_PlayerPrefs__HasKey(v6, 0);
 }
 
@@ -286,30 +308,29 @@ void EventInfoShipProgressDrawComponent__LoadProgressData(
   System_String_o *String; // x20
   void *IsNullOrEmpty; // x0
   __int64 v9; // x1
-  int v10; // w8
-  void *v11; // x20
-  float v12; // s8
-  int v13; // w21
-  __int64 v14; // x0
-  float v15; // s9
-  float v16; // s10
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  float v10; // s8
+  int v11; // w21
+  System_String_o **v12; // x20
+  __int64 v13; // x0
+  float v14; // s9
+  float v15; // s10
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793AE & 1) == 0 )
+  if ( (byte_593A459 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E793AE = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593A459 = 1;
   }
   v3 = EventInfoShipProgressDrawComponent_TypeInfo;
-  if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo, method);
     v3 = EventInfoShipProgressDrawComponent_TypeInfo;
   }
   SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v3->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
   v5 = System_Int32__ToString((int)this + 124, 0);
-  v6 = System_String__Concat_65562772(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0);
+  v6 = System_String__Concat_75438412(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0);
   String = UnityEngine_PlayerPrefs__GetString(v6, (System_String_o *)StringLiteral_1/*""*/, 0);
   IsNullOrEmpty = (void *)System_String__IsNullOrEmpty(String, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
@@ -319,48 +340,45 @@ void EventInfoShipProgressDrawComponent__LoadProgressData(
     IsNullOrEmpty = System_String__Split(String, 0x3Au, 0, 0);
     if ( !IsNullOrEmpty )
       goto LABEL_19;
-    v10 = *((_DWORD *)IsNullOrEmpty + 6);
-    v11 = IsNullOrEmpty;
-    v12 = 0.0;
-    if ( v10 < 1 )
+    v10 = 0.0;
+    v11 = *((_DWORD *)IsNullOrEmpty + 6);
+    v12 = (System_String_o **)IsNullOrEmpty;
+    if ( v11 < 1 )
     {
-      v16 = 0.0;
       v15 = 0.0;
+      v14 = 0.0;
+      goto LABEL_16;
     }
-    else
+    v14 = System_Single__Parse(*((System_String_o **)IsNullOrEmpty + 4), 0);
+    if ( v11 == 1 )
     {
-      v13 = v10 & ~(v10 >> 31);
-      v15 = System_Single__Parse(*((System_String_o **)IsNullOrEmpty + 4), 0);
-      if ( v13 < 2 )
-      {
-        v16 = 0.0;
-      }
-      else
-      {
-        if ( *((_DWORD *)v11 + 6) <= 1u )
-          goto LABEL_20;
-        v16 = System_Single__Parse(*((System_String_o **)v11 + 5), 0);
-        if ( v13 < 3 )
-          goto LABEL_16;
-        if ( *((_DWORD *)v11 + 6) <= 2u )
-LABEL_20:
-          sub_1D0F314(v14);
-        v12 = System_Single__Parse(*((System_String_o **)v11 + 6), 0);
-      }
+      v15 = 0.0;
+      goto LABEL_16;
     }
+    if ( ((_DWORD)v12[3] & 0xFFFFFFFE) != 0 )
+    {
+      v15 = System_Single__Parse(v12[5], 0);
+      if ( v11 == 2 )
+        goto LABEL_16;
+      if ( *((_DWORD *)v12 + 6) > 2u )
+      {
+        v10 = System_Single__Parse(v12[6], 0);
 LABEL_16:
-    IsNullOrEmpty = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-    if ( IsNullOrEmpty )
-    {
-      v17.fields.z = 0.0;
-      v17.fields.x = v15;
-      v17.fields.y = v16;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v17, 0);
-      this->fields.startRate = v12;
-      return;
-    }
+        IsNullOrEmpty = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+        if ( IsNullOrEmpty )
+        {
+          v16.fields.z = 0.0;
+          v16.fields.x = v14;
+          v16.fields.y = v15;
+          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v16, 0);
+          this->fields.startRate = v10;
+          return;
+        }
 LABEL_19:
-    sub_1D0F30C(IsNullOrEmpty, v9);
+        sub_21FFECC(IsNullOrEmpty, v9);
+      }
+    }
+    sub_21FFED4(v13);
   }
 }
 
@@ -369,15 +387,15 @@ void EventInfoShipProgressDrawComponent__OnDestroy(
         EventInfoShipProgressDrawComponent_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.progressPathMesh = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.progressPathMesh, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.progressPathMesh, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -392,17 +410,17 @@ void EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(
   System_String_o *name; // x1
 
   v2 = this;
-  if ( (byte_4E793AC & 1) == 0 )
+  if ( (byte_593A457 & 1) == 0 )
   {
-    this = (EventInfoShipProgressDrawComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793AC = 1;
+    this = (EventInfoShipProgressDrawComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A457 = 1;
   }
   progressShipAnim = v2->fields.progressShipAnim;
   if ( !progressShipAnim )
     goto LABEL_11;
   m_Clip = (UnityEngine_Object_o *)progressShipAnim->fields.m_Clip;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   this = (EventInfoShipProgressDrawComponent_o *)UnityEngine_Object__op_Inequality(m_Clip, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
@@ -413,12 +431,12 @@ void EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(
       if ( this )
       {
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-        SimpleAnimation__Play_68509268(v5, name, 0);
+        SimpleAnimation__Play_78338864(v5, name, 0);
         return;
       }
     }
 LABEL_11:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
 }
 
@@ -434,50 +452,50 @@ void EventInfoShipProgressDrawComponent__PlayProgressShipMoveAnim(
   struct SimpleAnimation_o *v7; // x21
   System_String_o *name; // x0
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x8
-  __int64 TotalPoint; // x23
-  __int64 NextPoint; // x22
-  float v12; // s0
+  __int64 TotalPoint; // x22
+  __int64 NextPoint; // x23
+  __int64 v12; // x1
+  float v13; // s8
   float startRate; // s9
-  float v14; // s8
-  int32_t targetFrameRate; // w0
-  const MethodInfo *v16; // x2
-  float moveAnimTime; // s11
-  int v18; // w21
+  const MethodInfo *v15; // x2
+  float moveAnimTime; // s10
+  int v17; // w21
+  struct EventInfoPointRiverProgressControl_o *pointRiverProgressCtr; // x8
   System_Collections_IEnumerator_o *v19; // x0
   const MethodInfo *v20; // x1
 
   v4 = this;
-  if ( (byte_4E793AA & 1) == 0 )
+  if ( (byte_593A455 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    this = (EventInfoShipProgressDrawComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793AA = 1;
+    sub_21FFC50(&UnityEngine_Application_TypeInfo);
+    sub_21FFC50(&System_Math_TypeInfo);
+    this = (EventInfoShipProgressDrawComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A455 = 1;
   }
   if ( v4->fields.progressData )
   {
     progressShipAnim = v4->fields.progressShipAnim;
     if ( !progressShipAnim )
-      goto LABEL_23;
+      goto LABEL_24;
     m_Clip = (UnityEngine_Object_o *)progressShipAnim->fields.m_Clip;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, endAction);
     this = (EventInfoShipProgressDrawComponent_o *)UnityEngine_Object__op_Inequality(m_Clip, 0, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       v7 = v4->fields.progressShipAnim;
       if ( !v7 )
-        goto LABEL_23;
+        goto LABEL_24;
       this = (EventInfoShipProgressDrawComponent_o *)v7->fields.m_Clip;
       if ( !this )
-        goto LABEL_23;
+        goto LABEL_24;
       name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
       this = (EventInfoShipProgressDrawComponent_o *)SimpleAnimation__IsPlaying(v7, name, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         this = (EventInfoShipProgressDrawComponent_o *)v4->fields.progressShipAnim;
         if ( !this )
-          goto LABEL_23;
+          goto LABEL_24;
         SimpleAnimation__Stop((SimpleAnimation_o *)this, 0);
       }
     }
@@ -486,36 +504,39 @@ void EventInfoShipProgressDrawComponent__PlayProgressShipMoveAnim(
     {
       TotalPoint = progressData->fields.TotalPoint;
       NextPoint = progressData->fields.NextPoint;
-      if ( !System_Math_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v12 = System_Math__Min_67085112((float)TotalPoint / (float)NextPoint, 1.0, 0);
+      if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, endAction);
+      v13 = System_Math__Min_76940336((float)TotalPoint / (float)NextPoint, 1.0, 0);
       startRate = v4->fields.startRate;
-      v14 = v12;
-      if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-      targetFrameRate = UnityEngine_Application__get_targetFrameRate(0);
+      if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v12);
+      this = (EventInfoShipProgressDrawComponent_o *)UnityEngine_Application__get_targetFrameRate(0);
       moveAnimTime = v4->fields.moveAnimTime;
-      v18 = targetFrameRate;
-      if ( v14 < 1.0 )
-        goto LABEL_21;
-      this = (EventInfoShipProgressDrawComponent_o *)v4->fields.pointRiverProgressCtr;
-      if ( this )
+      v17 = (int)this;
+      if ( v13 < 1.0 )
+        goto LABEL_22;
+      pointRiverProgressCtr = v4->fields.pointRiverProgressCtr;
+      if ( pointRiverProgressCtr )
       {
-        EventInfoPointRiverProgressControl__SetMaskPanelActive((EventInfoPointRiverProgressControl_o *)this, 1, 0);
-LABEL_21:
-        v19 = EventInfoShipProgressDrawComponent__EasingMove(
-                v4,
-                endAction,
-                v14,
-                (float)(v14 - startRate) / (float)(moveAnimTime * (float)v18),
-                v16);
-        UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)v4, v19, 0);
-        EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(v4, v20);
-        return;
+        this = (EventInfoShipProgressDrawComponent_o *)pointRiverProgressCtr->fields.maskPanel;
+        if ( this )
+        {
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+LABEL_22:
+          v19 = EventInfoShipProgressDrawComponent__EasingMove(
+                  v4,
+                  endAction,
+                  v13,
+                  (float)(v13 - startRate) / (float)(moveAnimTime * (float)v17),
+                  v15);
+          UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)v4, v19, 0);
+          EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(v4, v20);
+          return;
+        }
       }
     }
-LABEL_23:
-    sub_1D0F30C(this, endAction);
+LABEL_24:
+    sub_21FFECC(this, endAction);
   }
 }
 
@@ -528,27 +549,29 @@ System_Collections_IEnumerator_o *EventInfoShipProgressDrawComponent__PlayProgre
 {
   bool v7; // w22
   __int64 v8; // x20
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_4E793AD & 1) == 0 )
+  if ( (byte_593A458 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo);
-    byte_4E793AD = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo);
+    byte_593A458 = 1;
   }
-  v7 = isWait;
-  v8 = sub_1D0F300(EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo);
+  v7 = isFadeIn;
+  v8 = sub_21FFEBC(EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   *(_DWORD *)(v8 + 16) = 0;
   *(_QWORD *)(v8 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)this, v9, v10, v11, v12, v13, v14);
-  *(_BYTE *)(v8 + 40) = isFadeIn;
-  *(_BYTE *)(v8 + 41) = v7;
-  return (System_Collections_IEnumerator_o *)v8;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 32), (int32_t)this, v9, v10, v11, v12, v13, v14);
+  *(_BYTE *)(v8 + 40) = v7;
+  result = (System_Collections_IEnumerator_o *)v8;
+  *(_BYTE *)(v8 + 41) = isWait;
+  return result;
 }
 
 
@@ -557,11 +580,11 @@ void EventInfoShipProgressDrawComponent__ResetShip(
         EventInfoPointRiverProgressControl_ProgressData_o *progressData_,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct EventInfoPointRiverProgressControl_ProgressData_o **p_progressData; // x20
   Custom2dSplineMesh_o *v10; // x0
   __int64 v11; // x1
@@ -584,10 +607,10 @@ void EventInfoShipProgressDrawComponent__ResetShip(
 
   this->fields.progressData = progressData_;
   p_progressData = &this->fields.progressData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.progressData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.progressData,
     (int32_t)progressData_,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -622,12 +645,12 @@ void EventInfoShipProgressDrawComponent__ResetShip(
     || (v19 = this->fields.progressPathMesh) == 0 )
   {
 LABEL_14:
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   }
   v20 = v18->fields.ReleaseScenarioIndex;
   if ( (unsigned int)v20 >= LODWORD(v19->max_length) )
 LABEL_15:
-    sub_1D0F314(v10);
+    sub_21FFED4(v10);
   v10 = v19->m_Items[v20];
   if ( !v10 )
     goto LABEL_14;
@@ -654,58 +677,58 @@ void EventInfoShipProgressDrawComponent__SaveProgressData(
   float v6; // s0
   System_String_o *v7; // x0
   System_String_o *v8; // x0
-  EventInfoShipProgressDrawComponent_c *v9; // x0
+  __int64 v9; // x1
+  EventInfoShipProgressDrawComponent_c *v10; // x0
   System_String_o *SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA; // x21
-  System_String_o *v11; // x0
-  System_String_o *v12; // x19
-  System_String_o *v13; // x0
+  System_String_o *v12; // x0
+  System_String_o *v13; // x19
+  System_String_o *v14; // x0
   float startRate; // [xsp+Ch] [xbp-44h] BYREF
-  float x; // [xsp+10h] [xbp-40h] BYREF
-  _DWORD v16[15]; // [xsp+14h] [xbp-3Ch] BYREF
+  UnityEngine_Vector3_o v16[5]; // [xsp+10h] [xbp-40h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793B1 & 1) == 0 )
+  if ( (byte_593A45C & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoShipProgressDrawComponent_TypeInfo);
-    sub_1D0F0B4(&System_Text_StringBuilder_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
-    byte_4E793B1 = 1;
+    sub_21FFC50(&EventInfoShipProgressDrawComponent_TypeInfo);
+    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
+    sub_21FFC50(&StringLiteral_1532/*":"*/);
+    byte_593A45C = 1;
   }
+  v16[0].fields.z = 0.0;
+  *(_QWORD *)&v16[0].fields.x = 0;
   startRate = 0.0;
-  v3 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
+  v3 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v3, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
-        x = localPosition.fields.x,
-        v16[0] = LODWORD(localPosition.fields.y),
-        v16[1] = LODWORD(localPosition.fields.z),
-        transform = (UnityEngine_Transform_o *)System_Single__ToString(localPosition.fields.x, (const MethodInfo *)&x),
+        v16[0] = localPosition,
+        transform = (UnityEngine_Transform_o *)System_Single__ToString(localPosition.fields.x, (const MethodInfo *)v16),
         !v3) )
   {
-    sub_1D0F30C(transform, v5);
+    sub_21FFECC(transform, v5);
   }
-  System_Text_StringBuilder__Append_65646732(v3, (System_String_o *)transform, 0);
-  System_Text_StringBuilder__Append_65646732(v3, (System_String_o *)StringLiteral_1453/*":"*/, 0);
-  v7 = System_Single__ToString(v6, (const MethodInfo *)v16);
-  System_Text_StringBuilder__Append_65646732(v3, v7, 0);
-  System_Text_StringBuilder__Append_65646732(v3, (System_String_o *)StringLiteral_1453/*":"*/, 0);
+  System_Text_StringBuilder__Append_75521760(v3, (System_String_o *)transform, 0);
+  System_Text_StringBuilder__Append_75521760(v3, (System_String_o *)StringLiteral_1532/*":"*/, 0);
+  v7 = System_Single__ToString(v6, (const MethodInfo *)&v16[0].fields.y);
+  System_Text_StringBuilder__Append_75521760(v3, v7, 0);
+  System_Text_StringBuilder__Append_75521760(v3, (System_String_o *)StringLiteral_1532/*":"*/, 0);
   startRate = this->fields.startRate;
   v8 = System_Single__ToString(startRate, (const MethodInfo *)&startRate);
-  System_Text_StringBuilder__Append_65646732(v3, v8, 0);
-  v9 = EventInfoShipProgressDrawComponent_TypeInfo;
-  if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
+  System_Text_StringBuilder__Append_75521760(v3, v8, 0);
+  v10 = EventInfoShipProgressDrawComponent_TypeInfo;
+  if ( !*(&EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo);
-    v9 = EventInfoShipProgressDrawComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo, v9);
+    v10 = EventInfoShipProgressDrawComponent_TypeInfo;
   }
-  SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v9->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
-  v11 = System_Int32__ToString((int)this + 124, 0);
-  v12 = System_String__Concat_65562772(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v11, 0);
-  v13 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
+  SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v10->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
+  v12 = System_Int32__ToString((int)this + 124, 0);
+  v13 = System_String__Concat_75438412(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v12, 0);
+  v14 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
                              v3,
                              v3->klass->vtable._3_ToString.method);
-  UnityEngine_PlayerPrefs__SetString(v12, v13, 0);
+  UnityEngine_PlayerPrefs__SetString(v13, v14, 0);
 }
 
 
@@ -719,11 +742,12 @@ void EventInfoShipProgressDrawComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoShipProgressDrawComponent__Setup(
         EventInfoShipProgressDrawComponent_o *this,
         EventInfoPointRiverProgressControl_o *inputPointRiverProgressCtr,
@@ -732,172 +756,171 @@ void EventInfoShipProgressDrawComponent__Setup(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct EventInfoPointRiverProgressControl_o **p_pointRiverProgressCtr; // x22
+  __int64 v13; // x1
   UnityEngine_Object_o *pointRiverProgressCtr; // x23
-  Custom2dSplineMesh_o *v14; // x0
-  __int64 v15; // x1
-  int32_t v16; // w2
-  char v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  Custom2dSplineMesh_o *v15; // x0
+  __int64 v16; // x1
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x1
-  struct EventInfoPointRiverProgressControl_ProgressData_o **p_progressData; // x22
   const MethodInfo *v24; // x1
   struct EventInfoPointRiverProgressControl_ProgressData_o *v25; // x8
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v26; // x8
   __int64 TotalPoint; // x20
   __int64 NextPoint; // x21
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v29; // x9
-  struct Custom2dSplineMesh_array *progressPathMesh; // x8
-  __int64 ReleaseScenarioIndex; // x9
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v32; // x9
-  struct Custom2dSplineMesh_array *v33; // x8
-  __int64 v34; // x9
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v35; // x9
-  struct Custom2dSplineMesh_array *v36; // x8
-  __int64 v37; // x9
+  float v28; // s0
+  struct Custom2dSplineMesh_array *progressPathMesh; // x9
+  __int64 ReleaseScenarioIndex; // x8
+  struct EventInfoPointRiverProgressControl_ProgressData_o *v31; // x9
+  struct Custom2dSplineMesh_array *v32; // x8
+  __int64 v33; // x9
+  struct EventInfoPointRiverProgressControl_ProgressData_o *v34; // x9
+  struct Custom2dSplineMesh_array *v35; // x8
+  __int64 v36; // x9
   float x; // s8
   float y; // s9
   float z; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v42; // x1
+  const MethodInfo *v41; // x1
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793A9 & 1) == 0 )
+  if ( (byte_593A454 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E793A9 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_593A454 = 1;
   }
   this->fields.pointRiverProgressCtr = inputPointRiverProgressCtr;
   p_pointRiverProgressCtr = &this->fields.pointRiverProgressCtr;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.pointRiverProgressCtr,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.pointRiverProgressCtr,
     (int32_t)inputPointRiverProgressCtr,
-    inputEventId,
-    isReset,
-    (System_String_o *)method,
+    *(System_String_o **)&inputEventId,
+    (System_String_o *)isReset,
+    (int32_t)method,
     v5,
     v6,
     v7);
   pointRiverProgressCtr = (UnityEngine_Object_o *)this->fields.pointRiverProgressCtr;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v14 = (Custom2dSplineMesh_o *)UnityEngine_Object__op_Equality(pointRiverProgressCtr, 0, 0);
-  if ( ((unsigned __int8)v14 & 1) != 0 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+  v15 = (Custom2dSplineMesh_o *)UnityEngine_Object__op_Equality(pointRiverProgressCtr, 0, 0);
+  if ( ((unsigned __int8)v15 & 1) != 0 )
     return;
   if ( !*p_pointRiverProgressCtr )
-    goto LABEL_40;
+    goto LABEL_41;
   progressData = (*p_pointRiverProgressCtr)->fields.progressData;
   if ( !progressData )
     return;
   this->fields.progressData = progressData;
-  p_progressData = &this->fields.progressData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.progressData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.progressData,
     (int32_t)progressData,
-    v16,
     v17,
     v18,
     v19,
     v20,
-    v21);
+    v21,
+    v22);
   this->fields.eventId = inputEventId;
   EventInfoShipProgressDrawComponent__LoadProgressData(this, v24);
   v25 = this->fields.progressData;
   if ( isReset )
   {
     if ( !v25 )
-      goto LABEL_40;
-    goto LABEL_25;
-  }
-  if ( !v25 )
-    goto LABEL_40;
-  if ( !v25->fields.IsFreeQuestClear )
-  {
-LABEL_25:
-    if ( v25->fields.OldTotalPoint == v25->fields.TotalPoint )
-      this->fields.startRate = 0.0;
+      goto LABEL_41;
     goto LABEL_27;
   }
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E761EE )
+  if ( !v25 )
+    goto LABEL_41;
+  if ( !v25->fields.IsFreeQuestClear )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E761EE = 1;
-  }
-  v14 = (Custom2dSplineMesh_o *)TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v14 = (Custom2dSplineMesh_o *)TerminalPramsManager_TypeInfo;
-  }
-  if ( !*(_BYTE *)(*(_QWORD *)&v14->fields.vtxIdx + 482LL) )
-  {
-    v26 = *p_progressData;
-    if ( !*p_progressData )
-      goto LABEL_40;
-    TotalPoint = v26->fields.TotalPoint;
-    NextPoint = v26->fields.NextPoint;
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    this->fields.startRate = System_Math__Min_67085112((float)TotalPoint / (float)NextPoint, 1.0, 0);
-  }
 LABEL_27:
-  v29 = this->fields.progressData;
-  if ( !v29 )
-    goto LABEL_40;
+    if ( v25->fields.OldTotalPoint == v25->fields.TotalPoint )
+      this->fields.startRate = 0.0;
+    goto LABEL_29;
+  }
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v16);
+  if ( !byte_5937192 )
+  {
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5937192 = 1;
+  }
+  v15 = (Custom2dSplineMesh_o *)TerminalPramsManager_TypeInfo;
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+  {
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v16);
+    v15 = (Custom2dSplineMesh_o *)TerminalPramsManager_TypeInfo;
+  }
+  v25 = this->fields.progressData;
+  if ( !*(_BYTE *)(*(_QWORD *)&v15->fields.vtxIdx + 498LL) )
+  {
+    if ( !v25 )
+      goto LABEL_41;
+    TotalPoint = v25->fields.TotalPoint;
+    NextPoint = v25->fields.NextPoint;
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16);
+    v28 = System_Math__Min_76940336((float)TotalPoint / (float)NextPoint, 1.0, 0);
+    v25 = this->fields.progressData;
+    this->fields.startRate = v28;
+  }
+  if ( !v25 )
+    goto LABEL_41;
+LABEL_29:
   progressPathMesh = this->fields.progressPathMesh;
   if ( !progressPathMesh )
-    goto LABEL_40;
-  ReleaseScenarioIndex = v29->fields.ReleaseScenarioIndex;
+    goto LABEL_41;
+  ReleaseScenarioIndex = v25->fields.ReleaseScenarioIndex;
   if ( (unsigned int)ReleaseScenarioIndex >= LODWORD(progressPathMesh->max_length) )
+LABEL_42:
+    sub_21FFED4(v15);
+  v15 = progressPathMesh->m_Items[ReleaseScenarioIndex];
+  if ( !v15 )
     goto LABEL_41;
-  v14 = progressPathMesh->m_Items[ReleaseScenarioIndex];
-  if ( !v14 )
-    goto LABEL_40;
-  Custom2dSplineMesh__CreateMesh(v14, 0);
-  v32 = this->fields.progressData;
+  Custom2dSplineMesh__CreateMesh(v15, 0);
+  v31 = this->fields.progressData;
+  if ( !v31 )
+    goto LABEL_41;
+  v32 = this->fields.progressPathMesh;
   if ( !v32 )
-    goto LABEL_40;
-  v33 = this->fields.progressPathMesh;
-  if ( !v33 )
-    goto LABEL_40;
-  v34 = v32->fields.ReleaseScenarioIndex;
-  if ( (unsigned int)v34 >= LODWORD(v33->max_length) )
     goto LABEL_41;
-  v14 = v33->m_Items[v34];
-  if ( !v14
-    || (Custom2dSplineMesh__SetPathRate(v14, this->fields.startRate, 0), (v35 = this->fields.progressData) == 0)
-    || (v36 = this->fields.progressPathMesh) == 0 )
+  v33 = v31->fields.ReleaseScenarioIndex;
+  if ( (unsigned int)v33 >= LODWORD(v32->max_length) )
+    goto LABEL_42;
+  v15 = v32->m_Items[v33];
+  if ( !v15
+    || (Custom2dSplineMesh__SetPathRate(v15, this->fields.startRate, 0), (v34 = this->fields.progressData) == 0)
+    || (v35 = this->fields.progressPathMesh) == 0 )
   {
-LABEL_40:
-    sub_1D0F30C(v14, v15);
-  }
-  v37 = v35->fields.ReleaseScenarioIndex;
-  if ( (unsigned int)v37 >= LODWORD(v36->max_length) )
 LABEL_41:
-    sub_1D0F314(v14);
-  v14 = v36->m_Items[v37];
-  if ( !v14 )
-    goto LABEL_40;
-  PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(v14, this->fields.startRate, 0);
+    sub_21FFECC(v15, v16);
+  }
+  v36 = v34->fields.ReleaseScenarioIndex;
+  if ( (unsigned int)v36 >= LODWORD(v35->max_length) )
+    goto LABEL_42;
+  v15 = v35->m_Items[v36];
+  if ( !v15 )
+    goto LABEL_41;
+  PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(v15, this->fields.startRate, 0);
   x = PointAsWorldFlatten.fields.x;
   y = PointAsWorldFlatten.fields.y;
   z = PointAsWorldFlatten.fields.z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v44.fields.x = x;
-  v44.fields.y = y;
-  v44.fields.z = z;
-  GameObjectExtensions__SetPosition(gameObject, v44, 0);
-  EventInfoShipProgressDrawComponent__SaveProgressData(this, v42);
+  v43.fields.x = x;
+  v43.fields.y = y;
+  v43.fields.z = z;
+  GameObjectExtensions__SetPosition(gameObject, v43, 0);
+  EventInfoShipProgressDrawComponent__SaveProgressData(this, v41);
 }
 
 
@@ -919,39 +942,41 @@ bool EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   struct EventInfoShipProgressDrawComponent_o *_4__this; // x20
   int v5; // w21
   int32_t i_5__2; // w8
-  EventInfoPointRiverProgressControl_o *targetFrameRate; // x0
+  UnityEngine_GameObject_o *targetFrameRate; // x0
   __int64 v8; // x1
   float v9; // s0
-  int v10; // w8
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x9
   struct Custom2dSplineMesh_array *progressPathMesh; // x8
   __int64 ReleaseScenarioIndex; // x9
-  Il2CppClass **v14; // x8
-  Custom2dSplineMesh_o *v15; // x21
+  Il2CppClass **v13; // x8
+  Custom2dSplineMesh_o *v14; // x21
   float x; // s8
   float y; // s9
   float z; // s10
-  float v19; // s11
-  float v20; // s12
-  float v21; // s13
-  bool v22; // w22
-  UITweener_o *v23; // x23
+  float v18; // s11
+  float v19; // s12
+  float v20; // s13
+  bool v21; // w22
+  UITweener_o *v22; // x23
+  float deltaTime; // s0
+  float startRate; // s0
   Il2CppObject **p__2__current; // x19
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  const MethodInfo *v31; // x1
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  struct EventInfoPointRiverProgressControl_o *pointRiverProgressCtr; // x8
+  const MethodInfo *v33; // x1
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793B3 & 1) == 0 )
+  if ( (byte_593A45E & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    byte_4E793B3 = 1;
+    sub_21FFC50(&UnityEngine_Application_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    byte_593A45E = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -967,27 +992,27 @@ bool EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
     if ( _1__state )
       return 0;
     v5 = 0;
-    this->fields.__1__state = -1;
     this->fields._i_5__2 = 0;
+    this->fields.__1__state = -1;
   }
-  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  targetFrameRate = (EventInfoPointRiverProgressControl_o *)UnityEngine_Application__get_targetFrameRate(0);
+  if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_Application__get_targetFrameRate(0);
   if ( !_4__this )
 LABEL_25:
-    sub_1D0F30C(targetFrameRate, v8);
+    sub_21FFECC(targetFrameRate, v8);
   v9 = _4__this->fields.moveAnimTime * (float)(int)targetFrameRate;
-  v10 = (int)v9;
-  if ( v9 == INFINITY )
-    v10 = 0x80000000;
-  if ( v5 >= v10 )
+  if ( v9 == INFINITY || v5 >= (int)v9 )
   {
-    targetFrameRate = _4__this->fields.pointRiverProgressCtr;
+    pointRiverProgressCtr = _4__this->fields.pointRiverProgressCtr;
     _4__this->fields.startRate = this->fields.endRate;
+    if ( !pointRiverProgressCtr )
+      goto LABEL_25;
+    targetFrameRate = pointRiverProgressCtr->fields.maskPanel;
     if ( !targetFrameRate )
       goto LABEL_25;
-    EventInfoPointRiverProgressControl__SetMaskPanelActive(targetFrameRate, 0, 0);
-    EventInfoShipProgressDrawComponent__SaveProgressData(_4__this, v31);
+    UnityEngine_GameObject__SetActive(targetFrameRate, 0, 0);
+    EventInfoShipProgressDrawComponent__SaveProgressData(_4__this, v33);
     ActionExtensions__Call(this->fields.endAction, 0);
     return 0;
   }
@@ -999,56 +1024,56 @@ LABEL_25:
     goto LABEL_25;
   ReleaseScenarioIndex = progressData->fields.ReleaseScenarioIndex;
   if ( (unsigned int)ReleaseScenarioIndex >= LODWORD(progressPathMesh->max_length) )
-    sub_1D0F314(targetFrameRate);
-  v14 = &progressPathMesh->obj.klass + ReleaseScenarioIndex;
-  v15 = (Custom2dSplineMesh_o *)v14[4];
-  if ( !v15 )
+    sub_21FFED4(targetFrameRate);
+  v13 = &progressPathMesh->obj.klass + ReleaseScenarioIndex;
+  v14 = (Custom2dSplineMesh_o *)v13[4];
+  if ( !v14 )
     goto LABEL_25;
   PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(
-                          (Custom2dSplineMesh_o *)v14[4],
+                          (Custom2dSplineMesh_o *)v13[4],
                           _4__this->fields.startRate,
                           0);
   x = PointAsWorldFlatten.fields.x;
   y = PointAsWorldFlatten.fields.y;
   z = PointAsWorldFlatten.fields.z;
-  v34 = Custom2dSplineMesh__GetPointAsWorldFlatten(v15, _4__this->fields.startRate + this->fields.moveRate, 0);
-  v19 = v34.fields.x;
-  v20 = v34.fields.y;
-  v21 = v34.fields.z;
-  targetFrameRate = (EventInfoPointRiverProgressControl_o *)UnityEngine_Component__get_transform(
-                                                              (UnityEngine_Component_o *)_4__this,
-                                                              0);
+  v36 = Custom2dSplineMesh__GetPointAsWorldFlatten(v14, _4__this->fields.startRate + this->fields.moveRate, 0);
+  v18 = v36.fields.x;
+  v19 = v36.fields.y;
+  v20 = v36.fields.z;
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                                  (UnityEngine_Component_o *)_4__this,
+                                                  0);
   if ( !targetFrameRate )
     goto LABEL_25;
-  targetFrameRate = (EventInfoPointRiverProgressControl_o *)UnityEngine_Component__get_gameObject(
-                                                              (UnityEngine_Component_o *)targetFrameRate,
-                                                              0);
+  targetFrameRate = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetFrameRate, 0);
   if ( !targetFrameRate )
     goto LABEL_25;
-  targetFrameRate = (EventInfoPointRiverProgressControl_o *)UnityEngine_GameObject__AddComponent_object_(
-                                                              (UnityEngine_GameObject_o *)targetFrameRate,
-                                                              (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
+                                                  targetFrameRate,
+                                                  (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !targetFrameRate )
     goto LABEL_25;
-  v22 = 1;
-  v23 = (UITweener_o *)targetFrameRate;
-  *(float *)&targetFrameRate->fields.maskPanel = x;
-  *((float *)&targetFrameRate->fields.maskPanel + 1) = y;
-  *(float *)&targetFrameRate->fields.userEventPointMaster = z;
-  *((float *)&targetFrameRate->fields.userEventPointMaster + 1) = v19;
-  LOBYTE(targetFrameRate->fields.eventUiValueEntityList) = 1;
-  *(float *)&targetFrameRate->fields.eventUiEntity = v20;
-  *((float *)&targetFrameRate->fields.eventUiEntity + 1) = v21;
-  *(float *)&targetFrameRate->fields.assetData2 = UnityEngine_Time__get_deltaTime(0);
-  v23->fields.method = 0;
-  UITweener__PlayForward(v23, 0);
-  Custom2dSplineMesh__SetPathRate(v15, _4__this->fields.startRate, 0);
-  _4__this->fields.startRate = _4__this->fields.startRate + this->fields.moveRate;
+  v21 = 1;
+  v22 = (UITweener_o *)targetFrameRate;
+  *(float *)&targetFrameRate[5].monitor = x;
+  *((float *)&targetFrameRate[5].monitor + 1) = y;
+  LOBYTE(targetFrameRate[6].monitor) = 1;
+  *(float *)&targetFrameRate[5].fields.m_CachedPtr = z;
+  *((float *)&targetFrameRate[5].fields.m_CachedPtr + 1) = v18;
+  *(float *)&targetFrameRate[6].klass = v19;
+  *((float *)&targetFrameRate[6].klass + 1) = v20;
+  deltaTime = UnityEngine_Time__get_deltaTime(0);
+  v22->fields.method = 0;
+  v22->fields.duration = deltaTime;
+  UITweener__PlayForward(v22, 0);
+  Custom2dSplineMesh__SetPathRate(v14, _4__this->fields.startRate, 0);
+  startRate = _4__this->fields.startRate;
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p__2__current, 0, v25, v26, v27, v28, v29, v30);
+  _4__this->fields.startRate = startRate + *((float *)p__2__current + 4);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v26, v27, v28, v29, v30, v31);
   *((_DWORD *)p__2__current - 2) = 1;
-  return v22;
+  return v21;
 }
 
 
@@ -1068,11 +1093,11 @@ void __noreturn EventInfoShipProgressDrawComponent__EasingMove_d__13__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_EventInfoShipProgressDrawComponent__EasingMove_d__13_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_EventInfoShipProgressDrawComponent__EasingMove_d__13_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 
@@ -1109,144 +1134,144 @@ bool EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15__MoveNe
   EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *v2; // x19
   int32_t _1__state; // w8
   struct EventInfoShipProgressDrawComponent_o *_4__this; // x20
-  Il2CppObject *Component_object; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  _BOOL4 isFadeIn; // w22
+  __int64 v5; // x1
+  EventInfoUISlideAnimation_o *Component_object; // x21
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  _BOOL4 v13; // w22
   float x; // s8
-  float y; // s10
-  float z; // s9
-  const MethodInfo *v16; // x3
-  float v17; // s11
-  float v18; // s10
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
+  float y; // s9
+  float z; // s10
+  _BOOL4 isFadeIn; // w8
+  const MethodInfo **v18; // x8
+  float v19; // s10
+  float v20; // s9
+  MissionNaviTransitionBoardItem_o *p__2__current; // x19
   bool result; // w0
-  System_String_o **v21; // x8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4E793B4 & 1) == 0 )
+  if ( (byte_593A45F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23899/*"ship_fade_out"*/);
-    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)sub_1D0F0B4(&StringLiteral_23898/*"ship_fade_in"*/);
-    byte_4E793B4 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_24611/*"ship_fade_out"*/);
+    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)sub_21FFC50(&StringLiteral_24610/*"ship_fade_in"*/);
+    byte_593A45F = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
+    isFadeIn = v2->fields.isFadeIn;
     v2->fields.__1__state = -1;
-    goto LABEL_22;
+    if ( isFadeIn )
+      v18 = (const MethodInfo **)&StringLiteral_24610/*"ship_fade_in"*/;
+    else
+      v18 = (const MethodInfo **)&StringLiteral_24611/*"ship_fade_out"*/;
+    if ( !_4__this )
+      goto LABEL_33;
+    goto LABEL_30;
   }
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      goto LABEL_29;
+      goto LABEL_33;
     this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)_4__this->fields.progressShipAnim;
     if ( !this )
-      goto LABEL_29;
+      goto LABEL_33;
     SimpleAnimation__Stop((SimpleAnimation_o *)this, 0);
-    Component_object = UnityEngine_Component__GetComponent_object_(
-                         (UnityEngine_Component_o *)_4__this,
-                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Object__op_Inequality(
-                                                                                      (UnityEngine_Object_o *)Component_object,
-                                                                                      0,
-                                                                                      0);
-    if ( ((unsigned __int8)this & 1) != 0 )
+    Component_object = (EventInfoUISlideAnimation_o *)UnityEngine_Component__GetComponent_object_(
+                                                        (UnityEngine_Component_o *)_4__this,
+                                                        (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     {
-      isFadeIn = v2->fields.isFadeIn;
+      v13 = v2->fields.isFadeIn;
       this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_transform(
                                                                                         (UnityEngine_Component_o *)_4__this,
                                                                                         0);
-      if ( !this )
-        goto LABEL_29;
-      localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-      x = localPosition.fields.x;
-      if ( isFadeIn )
+      if ( v13 )
       {
+        if ( !this )
+          goto LABEL_33;
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+        x = localPosition.fields.x;
         y = localPosition.fields.y;
         z = localPosition.fields.z;
         this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_gameObject(
                                                                                           (UnityEngine_Component_o *)_4__this,
                                                                                           0);
         if ( !Component_object )
-          goto LABEL_29;
-        GameObjectExtensions__SetLocalPosition_37343316(
+          goto LABEL_33;
+        GameObjectExtensions__SetLocalPosition_42876224(
           (UnityEngine_GameObject_o *)this,
           x,
-          y - *((float *)&Component_object[3].monitor + 1),
+          y - Component_object->fields.slideOutPosition.fields.y,
           z,
           0);
       }
       else
       {
+        if ( !this )
+          goto LABEL_33;
+        LODWORD(x) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
         this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_transform(
                                                                                           (UnityEngine_Component_o *)_4__this,
                                                                                           0);
         if ( !this )
-          goto LABEL_29;
-        v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-        if ( !Component_object )
-          goto LABEL_29;
-        v17 = *((float *)&Component_object[3].monitor + 1);
-        v18 = v23.fields.y;
-        this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_transform(
-                                                                                          (UnityEngine_Component_o *)_4__this,
-                                                                                          0);
-        if ( !this )
-          goto LABEL_29;
+          goto LABEL_33;
         v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-        z = v24.fields.z;
-        y = v18 + v17;
+        if ( !Component_object )
+          goto LABEL_33;
+        v19 = Component_object->fields.slideOutPosition.fields.y;
+        v20 = v24.fields.y;
+        this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_transform(
+                                                                                          (UnityEngine_Component_o *)_4__this,
+                                                                                          0);
+        if ( !this )
+          goto LABEL_33;
+        v25 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+        y = v20 + v19;
+        z = v25.fields.z;
       }
-      v25.fields.x = x;
-      v25.fields.y = y;
-      v25.fields.z = z;
-      EventInfoUISlideAnimation__StartSlideAnim_45828200(
-        (EventInfoUISlideAnimation_o *)Component_object,
-        0,
-        v25,
-        isFadeIn,
-        v16);
+      v26.fields.x = x;
+      v26.fields.y = y;
+      v26.fields.z = z;
+      EventInfoUISlideAnimation__StartSlideAnim_52554468(Component_object, 0, v26, v13, 0);
     }
     if ( v2->fields.isWait )
     {
       v2->fields.__2__current = 0;
-      p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1D0F058(p__2__current, 0, v6, v7, v8, v9, v10, v11);
+      p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
+      sub_21FFBF4(p__2__current, 0, v7, v8, v9, v10, v11, v12);
       result = 1;
-      LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
+      p__2__current[-1].fields._BoardType_k__BackingField = 1;
       return result;
     }
-LABEL_22:
     if ( v2->fields.isFadeIn )
-      v21 = (System_String_o **)&StringLiteral_23898/*"ship_fade_in"*/;
+      v18 = (const MethodInfo **)&StringLiteral_24610/*"ship_fade_in"*/;
     else
-      v21 = (System_String_o **)&StringLiteral_23899/*"ship_fade_out"*/;
-    if ( _4__this )
+      v18 = (const MethodInfo **)&StringLiteral_24611/*"ship_fade_out"*/;
+LABEL_30:
+    method = *v18;
+    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)_4__this->fields.progressShipAnim;
+    if ( this )
     {
-      this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)_4__this->fields.progressShipAnim;
-      if ( this )
-      {
-        SimpleAnimation__Play_68509268((SimpleAnimation_o *)this, *v21, 0);
-        return 0;
-      }
+      SimpleAnimation__Play_78338864((SimpleAnimation_o *)this, (System_String_o *)method, 0);
+      return 0;
     }
-LABEL_29:
-    sub_1D0F30C(this, method);
+LABEL_33:
+    sub_21FFECC(this, method);
   }
   return 0;
 }
@@ -1268,11 +1293,11 @@ void __noreturn EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

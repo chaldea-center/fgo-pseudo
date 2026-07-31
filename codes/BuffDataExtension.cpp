@@ -31,15 +31,15 @@ void BuffDataExtension_GeneralParamAccessorsBase__Assertion(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4E754A8 & 1) == 0 )
+  if ( (byte_593642E & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Diagnostics_StackFrame_TypeInfo);
-    byte_4E754A8 = 1;
+    sub_21FFC50(&System_Diagnostics_StackFrame_TypeInfo);
+    byte_593642E = 1;
   }
-  v4 = (System_Diagnostics_StackFrame_o *)sub_1D0F300(System_Diagnostics_StackFrame_TypeInfo);
-  System_Diagnostics_StackFrame___ctor_66864304(v4, stackBackCount, 1, 0);
+  v4 = (System_Diagnostics_StackFrame_o *)sub_21FFEBC(System_Diagnostics_StackFrame_TypeInfo);
+  System_Diagnostics_StackFrame___ctor_76571628(v4, stackBackCount, 1, 0);
   if ( !v4 )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   ((void (__fastcall *)(System_Diagnostics_StackFrame_o *, const MethodInfo *))v4->klass->vtable._7_GetMethod.methodPtr)(
     v4,
     v4->klass->vtable._7_GetMethod.method);
@@ -59,17 +59,17 @@ void BuffDataExtension_GeneralParamAccessorsBase__SetGeneralParams(
         System_Int32_array *inputGeneralParams,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.generalParams = inputGeneralParams;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)inputGeneralParams,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -94,19 +94,23 @@ System_Int32_array *BuffDataExtension_GeneralParamContinueFunction__MakeGeneralP
   __int64 Param; // x0
   __int64 v5; // x1
   __int64 v6; // x20
+  int v7; // w8
+  System_Int32_array *result; // x0
 
-  if ( (byte_4E754AA & 1) == 0 )
+  if ( (byte_5936430 & 1) == 0 )
   {
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E754AA = 1;
+    sub_21FFC50(&int___TypeInfo);
+    byte_5936430 = 1;
   }
-  Param = sub_1D0F15C(int___TypeInfo, 1);
+  Param = sub_21FFD10(int___TypeInfo, 1);
   if ( !dataVals || (v6 = Param, Param = DataVals__GetParam(dataVals, 154, 0, 0), !v6) )
-    sub_1D0F30C(Param, v5);
+    sub_21FFECC(Param, v5);
   if ( !*(_DWORD *)(v6 + 24) )
-    sub_1D0F314(Param);
-  *(_DWORD *)(v6 + 32) = Param;
-  return (System_Int32_array *)v6;
+    sub_21FFED4(Param);
+  v7 = Param;
+  result = (System_Int32_array *)v6;
+  *(_DWORD *)(v6 + 32) = v7;
+  return result;
 }
 
 
@@ -114,14 +118,14 @@ bool BuffDataExtension_GeneralParamContinueFunction__get_NotExecFunctionIfKeepAl
         BuffDataExtension_GeneralParamContinueFunction_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E754A9 & 1) == 0 )
+  if ( (byte_593642F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_IndexValue_int____80375232);
-    byte_4E754A9 = 1;
+    sub_21FFC50(&Method_BasicHelper_IndexValue_int____91487608);
+    byte_593642F = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.generalParams,
            0,
            0,
-           (const MethodInfo_323D408 *)Method_BasicHelper_IndexValue_int____80375232) > 0;
+           (const MethodInfo_37E1834 *)Method_BasicHelper_IndexValue_int____91487608) > 0;
 }

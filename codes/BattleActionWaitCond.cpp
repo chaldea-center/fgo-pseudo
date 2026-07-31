@@ -69,20 +69,25 @@ void BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___ctor(
         System_Int32_array *cameraIds,
         const MethodInfo *method)
 {
-  BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  v4 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v4->fields._addUniqueCameraIds = cameraIds;
-  v4 = (BattleActionWaitCond_UntilAddUniqueCameraLoadComplete_o *)((char *)v4 + 24);
-  *(_DWORD *)&v4[-1].fields._isLoading = 1114636288;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v4, (int32_t)cameraIds, v5, v6, v7, v8, v9, v10);
+  this->fields._addUniqueCameraIds = cameraIds;
+  this->fields.limit = 60.0;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._addUniqueCameraIds,
+    (int32_t)cameraIds,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -102,53 +107,55 @@ void BattleActionWaitCond_UntilAddUniqueCameraLoadComplete__ProcBeforeWait(
   __int64 v5; // x20
   BattlePerformance_o *v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  BattlePerformance_o *v20; // x19
-  System_Action_o *v21; // x21
+  bool v18; // w6
+  bool v19; // w7
+  System_Action_c *v20; // x0
+  BattlePerformance_o *v21; // x21
+  System_Action_o *v22; // x19
 
-  if ( (byte_4E7A02B & 1) == 0 )
+  if ( (byte_593AF2C & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0__ProcBeforeWait_b__0__);
-    sub_1D0F0B4(&BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0_TypeInfo);
-    byte_4E7A02B = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0__ProcBeforeWait_b__0__);
+    sub_21FFC50(&BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0_TypeInfo);
+    byte_593AF2C = 1;
   }
-  v5 = sub_1D0F300(BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0_TypeInfo);
+  v5 = sub_21FFEBC(BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_7;
   *(_QWORD *)(v5 + 16) = perf;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)perf, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)perf, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
   v6 = *(BattlePerformance_o **)(v5 + 16);
   if ( !v6
     || (BattlePerformance__SetOverwriteAddUniqueCamera(v6, this->fields._addUniqueCameraIds, 1, 0),
+        v20 = System_Action_TypeInfo,
+        v21 = *(BattlePerformance_o **)(v5 + 16),
         this->fields._isLoading = 1,
-        v20 = *(BattlePerformance_o **)(v5 + 16),
-        v21 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo),
+        v22 = (System_Action_o *)sub_21FFEBC(v20),
         System_Action___ctor(
-          v21,
+          v22,
           (Il2CppObject *)v5,
           Method_BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0__ProcBeforeWait_b__0__,
           0),
-        !v20) )
+        !v21) )
   {
 LABEL_7:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
-  BattlePerformance__LoadOverwriteAddUniqueCamera(v20, v21, 0);
+  BattlePerformance__LoadOverwriteAddUniqueCamera(v21, v22, 0);
 }
 
 
@@ -169,7 +176,7 @@ void BattleActionWaitCond_UntilAddUniqueCameraLoadComplete___c__DisplayClass5_0_
 
   perf = this->fields.perf;
   if ( !perf || (BattlePerformance__UpdateFieldCameraFsm(perf, 0), (_4__this = this->fields.__4__this) == 0) )
-    sub_1D0F30C(perf, method);
+    sub_21FFECC(perf, method);
   _4__this->fields._isLoading = 0;
 }
 
@@ -179,20 +186,25 @@ void BattleActionWaitCond_UntilChangeModelLoadComplete___ctor(
         System_Collections_Generic_List_BattleActionData_ChangeModelActionData__o *inChangeModelList,
         const MethodInfo *method)
 {
-  BattleActionWaitCond_UntilChangeModelLoadComplete_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  v4 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v4->fields.changeModelList = inChangeModelList;
-  v4 = (BattleActionWaitCond_UntilChangeModelLoadComplete_o *)((char *)v4 + 24);
-  LODWORD(v4[-1].fields.changeModelList) = 1092616192;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v4, (int32_t)inChangeModelList, v5, v6, v7, v8, v9, v10);
+  this->fields.changeModelList = inChangeModelList;
+  this->fields.limit = 10.0;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.changeModelList,
+    (int32_t)inChangeModelList,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -200,13 +212,13 @@ bool BattleActionWaitCond_UntilChangeModelLoadComplete__IsWaitCond(
         BattleActionWaitCond_UntilChangeModelLoadComplete_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E7A028 & 1) == 0 )
+  if ( (byte_593AF29 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantAssetLoadManager_TypeInfo);
-    byte_4E7A028 = 1;
+    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
+    byte_593AF29 = 1;
   }
-  if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
+  if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, method);
   return ServantAssetLoadManager__checkLoad(0);
 }
 
@@ -216,72 +228,77 @@ void BattleActionWaitCond_UntilChangeModelLoadComplete__ProcBeforeWait(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
+  System_Collections_ICollection_o *changeModelList; // x0
   struct System_Collections_Generic_List_BattleActionData_ChangeModelActionData__o *IsNullOrEmpty; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
   BattleData_o *data; // x19
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
   Il2CppObject *current; // x22
   BattleServantData_o *ServantData; // x0
-  BattleServantData_o *v12; // x20
+  BattleServantData_o *v13; // x20
   ChangeModelData_o *ChangeModelData_k__BackingField; // x21
-  ServantAssetArgs_o *v14; // x22
+  ServantAssetArgs_o *v15; // x22
+  __int64 v16; // x1
   _BOOL4 isForceAppearance; // w26
-  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4E7A029 & 1) == 0 )
+  if ( (byte_593AF2A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
-    sub_1D0F0B4(&ServantAssetArgs_TypeInfo);
-    sub_1D0F0B4(&ServantAssetLoadManager_TypeInfo);
-    byte_4E7A029 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
+    sub_21FFC50(&ServantAssetArgs_TypeInfo);
+    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
+    byte_593AF2A = 1;
   }
-  memset(&v17, 0, sizeof(v17));
-  IsNullOrEmpty = (struct System_Collections_Generic_List_BattleActionData_ChangeModelActionData__o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.changeModelList, 0);
+  changeModelList = (System_Collections_ICollection_o *)this->fields.changeModelList;
+  memset(&v19, 0, sizeof(v19));
+  IsNullOrEmpty = (struct System_Collections_Generic_List_BattleActionData_ChangeModelActionData__o *)BasicHelper__IsNullOrEmpty(changeModelList, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
     if ( !perf || (IsNullOrEmpty = this->fields.changeModelList) == 0 )
-      sub_1D0F30C(IsNullOrEmpty, v6);
+      sub_21FFECC(IsNullOrEmpty, v7);
     data = perf->fields.data;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v18,
       (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
-    v17 = v16;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
+    v19 = v18;
+    v18.fields._list = 0;
+    *(_QWORD *)&v18.fields._index = &v19;
     while ( 1 )
     {
-      v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-             &v17,
-             (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
-      if ( !v8 )
+      v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+             &v19,
+             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
+      if ( !v9 )
         break;
-      current = v17.fields._current;
-      if ( !v17.fields._current )
-        sub_1D0F30C(v8, v9);
+      current = v19.fields._current;
+      if ( !v19.fields._current )
+        sub_21FFECC(v9, v10);
       if ( !data )
-        sub_1D0F30C(v8, v9);
-      ServantData = BattleData__getServantData(data, (int32_t)v17.fields._current[2].klass, 0);
-      v12 = ServantData;
+        sub_21FFECC(v9, v10);
+      ServantData = BattleData__getServantData(data, (int32_t)v19.fields._current[3].klass, 0);
+      v13 = ServantData;
       if ( ServantData )
       {
         ChangeModelData_k__BackingField = ServantData->fields._ChangeModelData_k__BackingField;
-        BattleServantData__SetChangeModelData(ServantData, (ChangeModelData_o *)current[2].monitor, 0);
-        v14 = (ServantAssetArgs_o *)sub_1D0F300(ServantAssetArgs_TypeInfo);
-        ServantAssetArgs___ctor(v14, v12, 0);
-        isForceAppearance = v12->fields.isForceAppearance;
-        if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-        ServantAssetLoadManager__preloadBattleActor(v14, isForceAppearance, 0);
-        BattleServantData__SetChangeModelData(v12, ChangeModelData_k__BackingField, 0);
+        BattleServantData__SetChangeModelData(ServantData, (ChangeModelData_o *)current[3].monitor, 0);
+        v15 = (ServantAssetArgs_o *)sub_21FFEBC(ServantAssetArgs_TypeInfo);
+        ServantAssetArgs___ctor(v15, v13, 0);
+        isForceAppearance = v13->fields.isForceAppearance;
+        if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v16);
+        ServantAssetLoadManager__preloadBattleActor(v15, isForceAppearance, 0);
+        BattleServantData__SetChangeModelData(v13, ChangeModelData_k__BackingField, 0);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v17,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
+      &v19,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
   }
 }
 
@@ -291,20 +308,17 @@ void BattleActionWaitCond_UntilSideEffectInvisible___ctor(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  BattleActionWaitCond_UntilSideEffectInvisible_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  v4 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v4->fields.perf = perf;
-  v4 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)((char *)v4 + 24);
-  LODWORD(v4[-1].fields.perf) = 1067450368;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v4, (int32_t)perf, v5, v6, v7, v8, v9, v10);
+  this->fields.perf = perf;
+  this->fields.limit = 1.25;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.perf, (int32_t)perf, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -316,7 +330,7 @@ bool BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }
 
@@ -338,7 +352,7 @@ bool BattleActionWaitCond_WaitFinishMovie__IsWait(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return perf->fields._IsPlayingMovie_k__BackingField;
 }
 
@@ -348,14 +362,22 @@ void BattleActionWaitCond_WaitFinishMovie__ProcBeforeWait(
         BattlePerformance_o *inPerf,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.perf = inPerf;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)inPerf, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)inPerf,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -364,20 +386,25 @@ void BattleActionWaitCond_WaitLoadMovieComplete___ctor(
         System_String_o *inMovieName,
         const MethodInfo *method)
 {
-  BattleActionWaitCond_WaitLoadMovieComplete_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  v4 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v4->fields.movieName = inMovieName;
-  v4 = (BattleActionWaitCond_WaitLoadMovieComplete_o *)((char *)v4 + 24);
-  *(_DWORD *)&v4[-1].fields.isLoaded = 1092616192;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v4, (int32_t)inMovieName, v5, v6, v7, v8, v9, v10);
+  this->fields.movieName = inMovieName;
+  this->fields.limit = 10.0;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.movieName,
+    (int32_t)inMovieName,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -394,28 +421,30 @@ void BattleActionWaitCond_WaitLoadMovieComplete__ProcBeforeWait(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
+  System_Action_bool__c *v5; // x0
   System_String_o *movieName; // x21
-  System_Action_bool__o *v6; // x22
-  __int64 v7; // x0
-  __int64 v8; // x1
+  System_Action_bool__o *v7; // x22
+  __int64 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4E7A02A & 1) == 0 )
+  if ( (byte_593AF2B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_bool__TypeInfo);
-    sub_1D0F0B4(&Method_BattleActionWaitCond_WaitLoadMovieComplete__ProcBeforeWait_b__5_0__);
-    byte_4E7A02A = 1;
+    sub_21FFC50(&System_Action_bool__TypeInfo);
+    sub_21FFC50(&Method_BattleActionWaitCond_WaitLoadMovieComplete__ProcBeforeWait_b__5_0__);
+    byte_593AF2B = 1;
   }
-  this->fields.isLoaded = 0;
+  v5 = System_Action_bool__TypeInfo;
   movieName = this->fields.movieName;
-  v6 = (System_Action_bool__o *)sub_1D0F300(System_Action_bool__TypeInfo);
+  this->fields.isLoaded = 0;
+  v7 = (System_Action_bool__o *)sub_21FFEBC(v5);
   System_Action_bool____ctor(
-    v6,
+    v7,
     (Il2CppObject *)this,
     Method_BattleActionWaitCond_WaitLoadMovieComplete__ProcBeforeWait_b__5_0__,
     0);
   if ( !perf )
-    sub_1D0F30C(v7, v8);
-  BattlePerformance__LoadMovie(perf, movieName, v6, 0);
+    sub_21FFECC(v8, v9);
+  BattlePerformance__LoadMovie(perf, movieName, v7, 0);
 }
 
 

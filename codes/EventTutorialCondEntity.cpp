@@ -1,13 +1,13 @@
 void EventTutorialCondEntity___ctor(EventTutorialCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7786A & 1) == 0 )
+  if ( (byte_5938960 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E7786A = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938960 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventTutorialCondEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4E77869 & 1) == 0 )
+  if ( (byte_593895F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4E77869 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_593895F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            flagType,
            num,
            idx,
-           (const MethodInfo_324DC90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

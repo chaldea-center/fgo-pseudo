@@ -16,15 +16,23 @@ void SyncTransformComponent__setChild(
         UnityEngine_Transform_o *trans,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v9; // x1
 
   this->fields.child = trans;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.child,
+    (int32_t)trans,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v9);
 }
@@ -42,14 +50,14 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E76C64 & 1) == 0 )
+  if ( (byte_5937C06 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C64 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937C06 = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Implicit(child, 0) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.child;
@@ -92,7 +100,7 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
       || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v8) )
     {
 LABEL_20:
-      sub_1D0F30C(gameObject, v4);
+      sub_21FFECC(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v8, localScale, 0);
   }

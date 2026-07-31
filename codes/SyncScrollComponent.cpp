@@ -1,25 +1,25 @@
 void SyncScrollComponent___ctor(SyncScrollComponent_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E78E62 & 1) == 0 )
+  if ( (byte_5939EB2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_SyncScrollComponent_ScrollSet__TypeInfo);
-    byte_4E78E62 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_SyncScrollComponent_ScrollSet__TypeInfo);
+    byte_5939EB2 = 1;
   }
-  v3 = (System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *)sub_1D0F300(System_Collections_Generic_List_SyncScrollComponent_ScrollSet__TypeInfo);
+  v3 = (System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *)sub_21FFEBC(System_Collections_Generic_List_SyncScrollComponent_ScrollSet__TypeInfo);
   System_Collections_Generic_List_SyncScrollComponent_ScrollSet____ctor(
     v3,
-    (const MethodInfo_3A17BD4 *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet___ctor__);
+    (const MethodInfo_450A1D8 *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet___ctor__);
   this->fields.targetScrolls = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.targetScrolls, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.targetScrolls, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -30,100 +30,110 @@ void SyncScrollComponent__AddTarget(
         UIScrollBar_o *scrollBar,
         const MethodInfo *method)
 {
-  _BOOL8 v7; // x0
-  SyncScrollComponent_ScrollSet_o v8; // x1 OVERLAPPED
+  __int64 v7; // x1
+  _BOOL8 v8; // x0
+  SyncScrollComponent_ScrollSet_o v9; // x1 OVERLAPPED
   System_Collections_Generic_List_EventDelegate__o *onChange; // x22
-  EventDelegate_Callback_o *v10; // x23
+  EventDelegate_Callback_o *v11; // x23
+  __int64 v12; // x1
   struct System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *targetScrolls; // x21
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
   struct SyncScrollComponent_ScrollSet_array *items; // x8
-  _QWORD *v30; // x9
+  _QWORD *v32; // x9
   __int64 size; // x10
-  GrandQuestFolderBoardItem_o *v32; // x0
-  SyncScrollComponent_ScrollSet_o v33; // [xsp+0h] [xbp-40h] BYREF
+  Il2CppObject *v34; // x0
+  SyncScrollComponent_ScrollSet_o v35; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4E78E60 & 1) == 0 )
+  if ( (byte_5939EB0 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Add__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SyncScrollComponent_OnScrollBar__);
-    byte_4E78E60 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Add__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SyncScrollComponent_OnScrollBar__);
+    byte_5939EB0 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v35.fields.scrollView = 0;
+  v35.fields.scrollBar = 0;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, scrollView);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scrollView, 0, 0) )
   {
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scrollBar, 0, 0);
-    if ( !v7 )
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+    v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scrollBar, 0, 0);
+    if ( !v8 )
     {
       if ( !scrollBar )
         goto LABEL_18;
       onChange = scrollBar->fields.onChange;
-      v10 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
-      EventDelegate_Callback___ctor(v10, (Il2CppObject *)this, Method_SyncScrollComponent_OnScrollBar__, 0);
-      if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Add(onChange, v10, 0);
+      v11 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+      EventDelegate_Callback___ctor(v11, (Il2CppObject *)this, Method_SyncScrollComponent_OnScrollBar__, 0);
+      if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v12);
+      EventDelegate__Add(onChange, v11, 0);
       targetScrolls = this->fields.targetScrolls;
-      v33.fields.scrollView = scrollView;
-      v33.fields.scrollBar = 0;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v33, (int32_t)scrollView, v12, v13, v14, v15, v16, v17);
-      v33.fields.scrollBar = scrollBar;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&v33.fields.scrollBar,
+      v35.fields.scrollView = scrollView;
+      v35.fields.scrollBar = 0;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v35, (int32_t)scrollView, v14, v15, v16, v17, v18, v19);
+      v35.fields.scrollBar = scrollBar;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&v35.fields.scrollBar,
         (int32_t)scrollBar,
-        v18,
-        v19,
         v20,
         v21,
         v22,
-        v23);
+        v23,
+        v24,
+        v25);
       if ( !targetScrolls
-        || (v8 = v33,
-            items = targetScrolls->fields._items,
-            v30 = Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Add__,
+        || (items = targetScrolls->fields._items,
+            v9 = v35,
+            v32 = Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Add__,
             ++targetScrolls->fields._version,
             !items) )
       {
 LABEL_18:
-        sub_1D0F30C(v7, v8.fields.scrollView);
+        sub_21FFECC(v8, v9.fields.scrollView);
       }
       size = targetScrolls->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_SyncScrollComponent_ScrollSet___AddWithResize(
           targetScrolls,
-          v8,
-          *(const MethodInfo_3A18454 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          v9,
+          *(const MethodInfo_450AA84 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
       }
       else
       {
-        v32 = (GrandQuestFolderBoardItem_o *)(&items->obj + size);
+        v34 = &items->obj + size;
         targetScrolls->fields._size = size + 1;
-        v32->fields.sortValue0 = (int64_t)v8.fields.scrollView;
-        v32 = (GrandQuestFolderBoardItem_o *)((char *)v32 + 32);
-        v32->monitor = v8.fields.scrollBar;
-        sub_1D0F058(v32, 0, (int32_t)v8.fields.scrollBar, v24, v25, v26, v27, v28);
+        v34[2] = (Il2CppObject)v9;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v34[2],
+          0,
+          (System_String_o *)v9.fields.scrollBar,
+          v26,
+          v27,
+          v28,
+          v29,
+          v30);
       }
     }
   }
@@ -132,116 +142,126 @@ LABEL_18:
 
 void SyncScrollComponent__OnDestroy(SyncScrollComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *targetScrolls; // x0
-  UnityEngine_Object_o *v5; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  System_Collections_ICollection_o *targetScrolls; // x0
+  __int64 v4; // x1
+  System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *v5; // x0
+  __int64 v6; // x1
+  UnityEngine_Object_o *v7; // x20
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
   System_Collections_Generic_List_EventDelegate__o *monitor; // x20
-  EventDelegate_Callback_o *v9; // x21
-  struct System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *v10; // x8
+  EventDelegate_Callback_o *v11; // x21
+  __int64 v12; // x1
+  struct System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *v13; // x8
   int32_t size; // w2
-  int v12; // w9
-  _OWORD v13[2]; // [xsp+0h] [xbp-90h] BYREF
-  __int128 v14; // [xsp+20h] [xbp-70h] BYREF
+  int v15; // w9
+  _OWORD v16[2]; // [xsp+0h] [xbp-90h] BYREF
+  __int128 v17; // [xsp+20h] [xbp-70h] BYREF
   UnityEngine_Object_o *x[2]; // [xsp+30h] [xbp-60h]
 
-  if ( (byte_4E78E5F & 1) == 0 )
+  if ( (byte_5939EAF & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__get_Current__);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SyncScrollComponent_OnScrollBar__);
-    byte_4E78E5F = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__get_Current__);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SyncScrollComponent_OnScrollBar__);
+    byte_5939EAF = 1;
   }
-  v14 = 0u;
+  targetScrolls = (System_Collections_ICollection_o *)this->fields.targetScrolls;
+  v17 = 0u;
   *(_OWORD *)x = 0u;
-  if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.targetScrolls, 0) )
+  if ( !BasicHelper__IsNullOrEmpty(targetScrolls, 0) )
   {
-    targetScrolls = this->fields.targetScrolls;
-    if ( !targetScrolls )
+    v5 = this->fields.targetScrolls;
+    if ( !v5 )
       goto LABEL_19;
     System_Collections_Generic_List_SyncScrollComponent_ScrollSet___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)v13,
-      targetScrolls,
-      (const MethodInfo_3A18FAC *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
-    v14 = v13[0];
-    *(_OWORD *)x = v13[1];
+      (System_Collections_Generic_List_Enumerator_T__o *)v16,
+      v5,
+      (const MethodInfo_450B5A8 *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
+    v17 = v16[0];
+    *(_OWORD *)x = v16[1];
+    *(_QWORD *)&v16[0] = 0;
+    *((_QWORD *)&v16[0] + 1) = &v17;
     while ( System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet___MoveNext(
-              (System_Collections_Generic_List_Enumerator_T__o *)&v14,
-              (const MethodInfo_36E0DE4 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__) )
+              (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+              (const MethodInfo_4110F10 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__) )
     {
-      v5 = x[1];
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v6 = UnityEngine_Object__op_Inequality(v5, 0, 0);
-      if ( v6 )
+      v7 = x[1];
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+      v8 = UnityEngine_Object__op_Inequality(v7, 0, 0);
+      if ( v8 )
       {
-        if ( !v5 )
-          sub_1D0F30C(v6, v7);
-        monitor = (System_Collections_Generic_List_EventDelegate__o *)v5[4].monitor;
-        v9 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
-        EventDelegate_Callback___ctor(v9, (Il2CppObject *)this, Method_SyncScrollComponent_OnScrollBar__, 0);
-        if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Remove(monitor, v9, 0);
+        if ( !v7 )
+          sub_21FFECC(v8, v9);
+        monitor = (System_Collections_Generic_List_EventDelegate__o *)v7[4].monitor;
+        v11 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+        EventDelegate_Callback___ctor(v11, (Il2CppObject *)this, Method_SyncScrollComponent_OnScrollBar__, 0);
+        if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v12);
+        EventDelegate__Remove(monitor, v11, 0);
       }
     }
     System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet___Dispose(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v14,
-      (const MethodInfo_36E0DE0 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
-    v10 = this->fields.targetScrolls;
-    if ( !v10 )
+      (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+      (const MethodInfo_4110F0C *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
+    v13 = this->fields.targetScrolls;
+    if ( !v13 )
 LABEL_19:
-      sub_1D0F30C(targetScrolls, v3);
-    size = v10->fields._size;
-    v12 = v10->fields._version + 1;
-    v10->fields._size = 0;
-    v10->fields._version = v12;
+      sub_21FFECC(v5, v4);
+    size = v13->fields._size;
+    v15 = v13->fields._version + 1;
+    v13->fields._size = 0;
+    v13->fields._version = v15;
     if ( size >= 1 )
-      System_Array__Clear((System_Array_o *)v10->fields._items, 0, size, 0);
+      System_Array__Clear((System_Array_o *)v13->fields._items, 0, size, 0);
   }
 }
 
 
 void SyncScrollComponent__OnScrollBar(SyncScrollComponent_o *this, const MethodInfo *method)
 {
+  _BOOL4 ignoreCallbacks; // w8
+  __int64 v4; // x1
   struct UIProgressBar_o *current; // x8
   __int64 naturalAligment; // x11
-  UnityEngine_Object_o *v5; // x20
-  __int64 v6; // x1
+  UnityEngine_Object_o *v7; // x20
+  __int64 v8; // x1
   System_Collections_Generic_List_SyncScrollComponent_ScrollSet__o *targetScrolls; // x0
-  __int128 v8; // kr00_16
-  _BOOL8 v9; // x0
   __int64 v10; // x1
-  __int64 v11; // x0
-  __int64 v12; // x1
-  float value; // s0
+  __int128 v11; // kr00_16
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
   __int64 v14; // x0
   __int64 v15; // x1
-  _OWORD v16[2]; // [xsp+0h] [xbp-80h] BYREF
-  __int128 v17; // [xsp+20h] [xbp-60h] BYREF
-  __int128 v18; // [xsp+30h] [xbp-50h]
+  float value; // s0
+  __int64 v17; // x0
+  __int64 v18; // x1
+  _OWORD v19[2]; // [xsp+0h] [xbp-80h] BYREF
+  __int128 v20; // [xsp+20h] [xbp-60h] BYREF
+  __int128 v21; // [xsp+30h] [xbp-50h]
 
-  if ( (byte_4E78E61 & 1) == 0 )
+  if ( (byte_5939EB1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&UIProgressBar_TypeInfo);
-    sub_1D0F0B4(&UIScrollBar_TypeInfo);
-    byte_4E78E61 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UIProgressBar_TypeInfo);
+    sub_21FFC50(&UIScrollBar_TypeInfo);
+    byte_5939EB1 = 1;
   }
-  v17 = 0u;
-  v18 = 0u;
-  if ( !this->fields.ignoreCallbacks
+  ignoreCallbacks = this->fields.ignoreCallbacks;
+  v20 = 0u;
+  v21 = 0u;
+  if ( !ignoreCallbacks
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.targetScrolls, 0) )
   {
     current = UIProgressBar_TypeInfo->static_fields->current;
@@ -250,52 +270,54 @@ void SyncScrollComponent__OnScrollBar(SyncScrollComponent_o *this, const MethodI
           current->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
     {
       if ( (UIScrollBar_c *)current->klass->_2.typeHierarchy[naturalAligment - 1] == UIScrollBar_TypeInfo )
-        v5 = (UnityEngine_Object_o *)UIProgressBar_TypeInfo->static_fields->current;
+        v7 = (UnityEngine_Object_o *)UIProgressBar_TypeInfo->static_fields->current;
       else
-        v5 = 0;
+        v7 = 0;
     }
     else
     {
-      v5 = 0;
+      v7 = 0;
     }
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality(v5, 0, 0) )
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
+    if ( !UnityEngine_Object__op_Equality(v7, 0, 0) )
     {
       targetScrolls = this->fields.targetScrolls;
       this->fields.ignoreCallbacks = 1;
       if ( !targetScrolls )
-        sub_1D0F30C(0, v6);
+        sub_21FFECC(0, v8);
       System_Collections_Generic_List_SyncScrollComponent_ScrollSet___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)v16,
+        (System_Collections_Generic_List_Enumerator_T__o *)v19,
         targetScrolls,
-        (const MethodInfo_3A18FAC *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
-      v17 = v16[0];
-      v18 = v16[1];
+        (const MethodInfo_450B5A8 *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
+      v20 = v19[0];
+      v21 = v19[1];
+      *(_QWORD *)&v19[0] = 0;
+      *((_QWORD *)&v19[0] + 1) = &v20;
       while ( System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet___MoveNext(
-                (System_Collections_Generic_List_Enumerator_T__o *)&v17,
-                (const MethodInfo_36E0DE4 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__) )
+                (System_Collections_Generic_List_Enumerator_T__o *)&v20,
+                (const MethodInfo_4110F10 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__) )
       {
-        v8 = v18;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v9 = UnityEngine_Object__op_Inequality(*((UnityEngine_Object_o **)&v8 + 1), v5, 0);
-        if ( v9 )
+        v11 = v21;
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
+        v12 = UnityEngine_Object__op_Inequality(*((UnityEngine_Object_o **)&v11 + 1), v7, 0);
+        if ( v12 )
         {
-          if ( !v5 )
-            sub_1D0F30C(v9, v10);
-          value = UIProgressBar__get_value((UIProgressBar_o *)v5, 0);
-          if ( !*((_QWORD *)&v8 + 1) )
-            sub_1D0F30C(v11, v12);
-          UIProgressBar__set_value(*((UIProgressBar_o **)&v8 + 1), value, 0);
-          if ( !(_QWORD)v8 )
-            sub_1D0F30C(v14, v15);
-          UIScrollView__OnScrollBar((UIScrollView_o *)v8, 0);
+          if ( !v7 )
+            sub_21FFECC(v12, v13);
+          value = UIProgressBar__get_value((UIProgressBar_o *)v7, 0);
+          if ( !*((_QWORD *)&v11 + 1) )
+            sub_21FFECC(v14, v15);
+          UIProgressBar__set_value(*((UIProgressBar_o **)&v11 + 1), value, 0);
+          if ( !(_QWORD)v11 )
+            sub_21FFECC(v17, v18);
+          UIScrollView__OnScrollBar((UIScrollView_o *)v11, 0);
         }
       }
       System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet___Dispose(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v17,
-        (const MethodInfo_36E0DE0 *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
+        (System_Collections_Generic_List_Enumerator_T__o *)&v20,
+        (const MethodInfo_4110F0C *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__Dispose__);
       this->fields.ignoreCallbacks = 0;
     }
   }
@@ -317,7 +339,7 @@ void SyncScrollComponent__Start(SyncScrollComponent_o *this, const MethodInfo *m
   {
     scrolls = this->fields.scrolls;
     if ( !scrolls )
-      sub_1D0F30C(IsNullOrEmpty, v4);
+      sub_21FFECC(IsNullOrEmpty, v4);
     max_length = scrolls->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -326,7 +348,7 @@ void SyncScrollComponent__Start(SyncScrollComponent_o *this, const MethodInfo *m
       do
       {
         if ( v8 >= (unsigned int)max_length )
-          sub_1D0F314(IsNullOrEmpty);
+          sub_21FFED4(IsNullOrEmpty);
         SyncScrollComponent__AddTarget(this, (UIScrollView_o *)*(p_scrollBar - 1), *p_scrollBar, v5);
         LODWORD(max_length) = scrolls->max_length;
         ++v8;

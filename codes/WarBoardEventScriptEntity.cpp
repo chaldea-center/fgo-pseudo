@@ -1,27 +1,27 @@
 void WarBoardEventScriptEntity___ctor(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78857 & 1) == 0 )
+  if ( (byte_5939899 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78857 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5939899 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardEventScriptEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4E78856 & 1) == 0 )
+  if ( (byte_5939898 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E78856 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5939898 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,12 +39,12 @@ System_Int32_array *WarBoardEventScriptEntity__GetActionTypes(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E78843 & 1) == 0 )
+  if ( (byte_5939885 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_16885/*"actionType"*/);
-    byte_4E78843 = 1;
+    sub_21FFC50(&StringLiteral_17298/*"actionType"*/);
+    byte_5939885 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16885/*"actionType"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_17298/*"actionType"*/, 0);
 }
 
 
@@ -52,37 +52,31 @@ System_Int32_array_array *WarBoardEventScriptEntity__GetActorEffectPieceIndex(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
+  System_Collections_Generic_Dictionary_string__object__o *script; // x0
   System_Int32_array_array *resValue; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E78854 & 1) == 0 )
+  if ( (byte_5939896 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_16891/*"actorEffectPieceIndex"*/);
-    byte_4E78854 = 1;
+    sub_21FFC50(&StringLiteral_17304/*"actorEffectPieceIndex"*/);
+    byte_5939896 = 1;
   }
+  script = this->fields.script;
   resValue = 0;
-  if ( EntityScriptUtil__TryGet2DimensionalIntArray(
-         this->fields.script,
-         (System_String_o *)StringLiteral_16891/*"actorEffectPieceIndex"*/,
-         &resValue,
-         0) )
-  {
+  if ( EntityScriptUtil__TryGet2DimensionalIntArray(script, (System_String_o *)StringLiteral_17304/*"actorEffectPieceIndex"*/, &resValue, 0) )
     return resValue;
-  }
   else
-  {
     return 0;
-  }
 }
 
 
 System_Int32_array *WarBoardEventScriptEntity__GetAiIds(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78844 & 1) == 0 )
+  if ( (byte_5939886 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_16966/*"aiId"*/);
-    byte_4E78844 = 1;
+    sub_21FFC50(&StringLiteral_17383/*"aiId"*/);
+    byte_5939886 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16966/*"aiId"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_17383/*"aiId"*/, 0);
 }
 
 
@@ -92,15 +86,15 @@ System_String_o *WarBoardEventScriptEntity__GetAnimationName(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884B & 1) == 0 )
+  if ( (byte_593988D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17031/*"animationName"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7884B = 1;
+    sub_21FFC50(&StringLiteral_17461/*"animationName"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593988D = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_17031/*"animationName"*/,
+           (System_String_o *)StringLiteral_17461/*"animationName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -110,12 +104,12 @@ int32_t WarBoardEventScriptEntity__GetBossIdx(WarBoardEventScriptEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78838 & 1) == 0 )
+  if ( (byte_593987A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17611/*"bossIdx"*/);
-    byte_4E78838 = 1;
+    sub_21FFC50(&StringLiteral_18073/*"bossIdx"*/);
+    byte_593987A = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17611/*"bossIdx"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18073/*"bossIdx"*/, -1, v2);
 }
 
 
@@ -123,12 +117,12 @@ int32_t WarBoardEventScriptEntity__GetBossProcessType(WarBoardEventScriptEntity_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78851 & 1) == 0 )
+  if ( (byte_5939893 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17612/*"bossProcessType"*/);
-    byte_4E78851 = 1;
+    sub_21FFC50(&StringLiteral_18074/*"bossProcessType"*/);
+    byte_5939893 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17612/*"bossProcessType"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18074/*"bossProcessType"*/, -1, v2);
 }
 
 
@@ -136,12 +130,12 @@ int32_t WarBoardEventScriptEntity__GetBreakPointDamageType(WarBoardEventScriptEn
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78840 & 1) == 0 )
+  if ( (byte_5939882 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15783/*"WarBoardBreakPointDamage"*/);
-    byte_4E78840 = 1;
+    sub_21FFC50(&StringLiteral_16160/*"WarBoardBreakPointDamage"*/);
+    byte_5939882 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15783/*"WarBoardBreakPointDamage"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_16160/*"WarBoardBreakPointDamage"*/, -1, v2);
 }
 
 
@@ -149,12 +143,12 @@ int32_t WarBoardEventScriptEntity__GetChangeWinCondition(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78852 & 1) == 0 )
+  if ( (byte_5939894 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_18094/*"changeWinCondition"*/);
-    byte_4E78852 = 1;
+    sub_21FFC50(&StringLiteral_18572/*"changeWinCondition"*/);
+    byte_5939894 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18094/*"changeWinCondition"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18572/*"changeWinCondition"*/, -1, v2);
 }
 
 
@@ -163,12 +157,12 @@ System_String_o *WarBoardEventScriptEntity__GetEffect(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  if ( (byte_4E78834 & 1) == 0 )
+  if ( (byte_5939876 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_19191/*"effect"*/);
-    byte_4E78834 = 1;
+    sub_21FFC50(&StringLiteral_19701/*"effect"*/);
+    byte_5939876 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19191/*"effect"*/, defVal, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19701/*"effect"*/, defVal, 0);
 }
 
 
@@ -176,12 +170,12 @@ int32_t WarBoardEventScriptEntity__GetEffectId(WarBoardEventScriptEntity_o *this
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78832 & 1) == 0 )
+  if ( (byte_5939874 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_19240/*"effectId"*/);
-    byte_4E78832 = 1;
+    sub_21FFC50(&StringLiteral_19750/*"effectId"*/);
+    byte_5939874 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19240/*"effectId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19750/*"effectId"*/, -1, v2);
 }
 
 
@@ -189,12 +183,12 @@ System_Int32_array *WarBoardEventScriptEntity__GetEffectIds(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E78833 & 1) == 0 )
+  if ( (byte_5939875 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_19241/*"effectIds"*/);
-    byte_4E78833 = 1;
+    sub_21FFC50(&StringLiteral_19751/*"effectIds"*/);
+    byte_5939875 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_19241/*"effectIds"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_19751/*"effectIds"*/, 0);
 }
 
 
@@ -202,12 +196,12 @@ int32_t WarBoardEventScriptEntity__GetForceId(WarBoardEventScriptEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7883B & 1) == 0 )
+  if ( (byte_593987D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_19920/*"forceId"*/);
-    byte_4E7883B = 1;
+    sub_21FFC50(&StringLiteral_20443/*"forceId"*/);
+    byte_593987D = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19920/*"forceId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20443/*"forceId"*/, -1, v2);
 }
 
 
@@ -215,12 +209,12 @@ int32_t WarBoardEventScriptEntity__GetGroupId(WarBoardEventScriptEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7883A & 1) == 0 )
+  if ( (byte_593987C & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20279/*"groupId"*/);
-    byte_4E7883A = 1;
+    sub_21FFC50(&StringLiteral_20812/*"groupId"*/);
+    byte_593987C = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20279/*"groupId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20812/*"groupId"*/, -1, v2);
 }
 
 
@@ -234,23 +228,21 @@ int32_t WarBoardEventScriptEntity__GetIntFromScript(
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
-  __int64 v11; // x3
-  WarBoardEventScriptEntity_o *v13; // x0
-  const MethodInfo *v14; // x1
+  WarBoardEventScriptEntity_o *v12; // x0
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4E78836 & 1) == 0 )
+  if ( (byte_5939878 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1D0F0B4(&long_TypeInfo);
-    byte_4E78836 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_5939878 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -259,14 +251,14 @@ int32_t WarBoardEventScriptEntity__GetIntFromScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_1D0F30C(Item, v8);
+    sub_21FFECC(Item, v8);
   }
-  if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11);
-  sub_1D0F6A8(Item);
-  return WarBoardEventScriptEntity__GetSkillId(v13, v14);
+  if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_594C090 + 64) )
+    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, qword_594C090, v10);
+  sub_220024C(Item, qword_594C090, v10);
+  return WarBoardEventScriptEntity__GetSkillId(v12, v13);
 }
 
 
@@ -274,12 +266,12 @@ bool WarBoardEventScriptEntity__GetIsIncludeDeadPiece(WarBoardEventScriptEntity_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78850 & 1) == 0 )
+  if ( (byte_5939892 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21326/*"isIncludeDeadPiece"*/);
-    byte_4E78850 = 1;
+    sub_21FFC50(&StringLiteral_21901/*"isIncludeDeadPiece"*/);
+    byte_5939892 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21326/*"isIncludeDeadPiece"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21901/*"isIncludeDeadPiece"*/, -1, v2) == 1;
 }
 
 
@@ -287,12 +279,12 @@ bool WarBoardEventScriptEntity__GetIsPlaySkillSe(WarBoardEventScriptEntity_o *th
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78855 & 1) == 0 )
+  if ( (byte_5939897 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21348/*"isPlaySkillSe"*/);
-    byte_4E78855 = 1;
+    sub_21FFC50(&StringLiteral_21926/*"isPlaySkillSe"*/);
+    byte_5939897 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21348/*"isPlaySkillSe"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21926/*"isPlaySkillSe"*/, -1, v2) == 1;
 }
 
 
@@ -300,12 +292,12 @@ int32_t WarBoardEventScriptEntity__GetIsStop(WarBoardEventScriptEntity_o *this, 
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884C & 1) == 0 )
+  if ( (byte_593988E & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21368/*"isStop"*/);
-    byte_4E7884C = 1;
+    sub_21FFC50(&StringLiteral_21949/*"isStop"*/);
+    byte_593988E = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21368/*"isStop"*/, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21949/*"isStop"*/, 0, v2);
 }
 
 
@@ -313,12 +305,12 @@ bool WarBoardEventScriptEntity__GetNoActorEffect(WarBoardEventScriptEntity_o *th
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884F & 1) == 0 )
+  if ( (byte_5939891 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22674/*"noActorEffect"*/);
-    byte_4E7884F = 1;
+    sub_21FFC50(&StringLiteral_23316/*"noActorEffect"*/);
+    byte_5939891 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22674/*"noActorEffect"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23316/*"noActorEffect"*/, -1, v2) == 1;
 }
 
 
@@ -326,12 +318,12 @@ bool WarBoardEventScriptEntity__GetNoMoveLastPieceCamera(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78849 & 1) == 0 )
+  if ( (byte_593988B & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22680/*"noMoveLastPieceCamera"*/);
-    byte_4E78849 = 1;
+    sub_21FFC50(&StringLiteral_23322/*"noMoveLastPieceCamera"*/);
+    byte_593988B = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22680/*"noMoveLastPieceCamera"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23322/*"noMoveLastPieceCamera"*/, -1, v2) == 1;
 }
 
 
@@ -339,12 +331,12 @@ bool WarBoardEventScriptEntity__GetNoMoveTargetCamera(WarBoardEventScriptEntity_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78848 & 1) == 0 )
+  if ( (byte_593988A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22681/*"noMoveTargetCamera"*/);
-    byte_4E78848 = 1;
+    sub_21FFC50(&StringLiteral_23323/*"noMoveTargetCamera"*/);
+    byte_593988A = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22681/*"noMoveTargetCamera"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23323/*"noMoveTargetCamera"*/, -1, v2) == 1;
 }
 
 
@@ -352,15 +344,15 @@ System_String_o *WarBoardEventScriptEntity__GetObjectName(WarBoardEventScriptEnt
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884A & 1) == 0 )
+  if ( (byte_593988C & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22796/*"objectName"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7884A = 1;
+    sub_21FFC50(&StringLiteral_23443/*"objectName"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593988C = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22796/*"objectName"*/,
+           (System_String_o *)StringLiteral_23443/*"objectName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -372,15 +364,15 @@ System_String_o *WarBoardEventScriptEntity__GetOverlayEffectMessage(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78847 & 1) == 0 )
+  if ( (byte_5939889 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22963/*"overlayEffectMessage"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78847 = 1;
+    sub_21FFC50(&StringLiteral_23615/*"overlayEffectMessage"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939889 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22963/*"overlayEffectMessage"*/,
+           (System_String_o *)StringLiteral_23615/*"overlayEffectMessage"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -392,15 +384,15 @@ System_String_o *WarBoardEventScriptEntity__GetOverlayEffectPrefabName(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78846 & 1) == 0 )
+  if ( (byte_5939888 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_22964/*"overlayEffectPrefabName"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78846 = 1;
+    sub_21FFC50(&StringLiteral_23616/*"overlayEffectPrefabName"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939888 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22964/*"overlayEffectPrefabName"*/,
+           (System_String_o *)StringLiteral_23616/*"overlayEffectPrefabName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -410,12 +402,12 @@ System_Int32_array *WarBoardEventScriptEntity__GetPieceIndex(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E78842 & 1) == 0 )
+  if ( (byte_5939884 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23154/*"pieceIndex"*/);
-    byte_4E78842 = 1;
+    sub_21FFC50(&StringLiteral_23819/*"pieceIndex"*/);
+    byte_5939884 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23154/*"pieceIndex"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23819/*"pieceIndex"*/, 0);
 }
 
 
@@ -423,12 +415,12 @@ System_Int32_array *WarBoardEventScriptEntity__GetPieceIndexes(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E7882E & 1) == 0 )
+  if ( (byte_5939870 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23156/*"pieceIndexes"*/);
-    byte_4E7882E = 1;
+    sub_21FFC50(&StringLiteral_23821/*"pieceIndexes"*/);
+    byte_5939870 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23156/*"pieceIndexes"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23821/*"pieceIndexes"*/, 0);
 }
 
 
@@ -436,12 +428,12 @@ int32_t WarBoardEventScriptEntity__GetPlayAfterCurrentAnim(WarBoardEventScriptEn
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884D & 1) == 0 )
+  if ( (byte_593988F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23171/*"playAfterCurrentAnim"*/);
-    byte_4E7884D = 1;
+    sub_21FFC50(&StringLiteral_23838/*"playAfterCurrentAnim"*/);
+    byte_593988F = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23171/*"playAfterCurrentAnim"*/, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23838/*"playAfterCurrentAnim"*/, 0, v2);
 }
 
 
@@ -449,15 +441,15 @@ System_String_o *WarBoardEventScriptEntity__GetSeName(WarBoardEventScriptEntity_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78835 & 1) == 0 )
+  if ( (byte_5939877 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23706/*"seName"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78835 = 1;
+    sub_21FFC50(&StringLiteral_24402/*"seName"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939877 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_23706/*"seName"*/,
+           (System_String_o *)StringLiteral_24402/*"seName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -467,12 +459,12 @@ int32_t WarBoardEventScriptEntity__GetSkillId(WarBoardEventScriptEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78830 & 1) == 0 )
+  if ( (byte_5939872 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23987/*"skillId"*/);
-    byte_4E78830 = 1;
+    sub_21FFC50(&StringLiteral_24709/*"skillId"*/);
+    byte_5939872 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23987/*"skillId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24709/*"skillId"*/, -1, v2);
 }
 
 
@@ -480,12 +472,12 @@ int32_t WarBoardEventScriptEntity__GetSkillLv(WarBoardEventScriptEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78831 & 1) == 0 )
+  if ( (byte_5939873 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23989/*"skillLv"*/);
-    byte_4E78831 = 1;
+    sub_21FFC50(&StringLiteral_24711/*"skillLv"*/);
+    byte_5939873 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23989/*"skillLv"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24711/*"skillLv"*/, -1, v2);
 }
 
 
@@ -493,12 +485,12 @@ int32_t WarBoardEventScriptEntity__GetSquareIndex(WarBoardEventScriptEntity_o *t
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7882F & 1) == 0 )
+  if ( (byte_5939871 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24101/*"squareIndex"*/);
-    byte_4E7882F = 1;
+    sub_21FFC50(&StringLiteral_24831/*"squareIndex"*/);
+    byte_5939871 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24101/*"squareIndex"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24831/*"squareIndex"*/, -1, v2);
 }
 
 
@@ -508,42 +500,43 @@ System_Int32_array *WarBoardEventScriptEntity__GetSquareIndexGroup(
 {
   const MethodInfo *v2; // x3
   int32_t IntFromScript; // w0
-  int32_t v5; // w19
+  __int64 v5; // x1
+  int32_t v6; // w19
   Il2CppObject *Master_object; // x20
   System_Collections_Generic_List_int__o *Instance; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4E78841 & 1) == 0 )
+  if ( (byte_5939883 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_24104/*"squareIndexGroup"*/);
-    byte_4E78841 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_24834/*"squareIndexGroup"*/);
+    byte_5939883 = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24104/*"squareIndexGroup"*/, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24834/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
     return 0;
-  v5 = IntFromScript;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  v6 = IntFromScript;
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || !Master_object
     || (Instance = WarBoardSquareIndexGroupMaster__GetStageList(
                      (WarBoardSquareIndexGroupMaster_o *)Master_object,
-                     v5,
+                     v6,
                      HIDWORD(Instance[10].fields._items),
-                     v9)) == 0 )
+                     v10)) == 0 )
   {
-    sub_1D0F30C(Instance, v8);
+    sub_21FFECC(Instance, v9);
   }
   return System_Collections_Generic_List_int___ToArray(
            Instance,
-           (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -553,43 +546,44 @@ System_Int32_array *WarBoardEventScriptEntity__GetSquareIndexes(
 {
   const MethodInfo *v2; // x3
   int32_t IntFromScript; // w0
-  int32_t v5; // w20
+  __int64 v5; // x1
+  int32_t v6; // w20
   Il2CppObject *Master_object; // x19
   System_Collections_Generic_List_int__o *Instance; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4E7883E & 1) == 0 )
+  if ( (byte_5939880 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_24104/*"squareIndexGroup"*/);
-    sub_1D0F0B4(&StringLiteral_24106/*"squareIndexes"*/);
-    byte_4E7883E = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_24834/*"squareIndexGroup"*/);
+    sub_21FFC50(&StringLiteral_24836/*"squareIndexes"*/);
+    byte_5939880 = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24104/*"squareIndexGroup"*/, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24834/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
-    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_24106/*"squareIndexes"*/, 0);
-  v5 = IntFromScript;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_24836/*"squareIndexes"*/, 0);
+  v6 = IntFromScript;
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || !Master_object
     || (Instance = WarBoardSquareIndexGroupMaster__GetStageList(
                      (WarBoardSquareIndexGroupMaster_o *)Master_object,
-                     v5,
+                     v6,
                      HIDWORD(Instance[10].fields._items),
-                     v9)) == 0 )
+                     v10)) == 0 )
   {
-    sub_1D0F30C(Instance, v8);
+    sub_21FFECC(Instance, v9);
   }
   return System_Collections_Generic_List_int___ToArray(
            Instance,
-           (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -600,20 +594,21 @@ System_Int32_array *WarBoardEventScriptEntity__GetSquareIndicesGreedily(
   System_Collections_ICollection_o *SquareIndexes; // x20
   const MethodInfo *v4; // x1
   int32_t SquareIndex; // w0
-  long double inited; // q0
-  int32_t v7; // w19
-  __int64 v8; // x0
-  __int64 v9; // x1
-  _QWORD *v10; // x19
-  __int64 v11; // x8
-  __int64 v12; // x0
+  __int64 v6; // x1
+  long double v7; // q0
+  int32_t v8; // w19
+  __int64 v9; // x0
+  __int64 v10; // x1
+  _QWORD *v11; // x19
+  __int64 v12; // x8
   __int64 v13; // x0
+  __int64 v14; // x0
 
-  if ( (byte_4E7883F & 1) == 0 )
+  if ( (byte_5939881 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Empty_int___);
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E7883F = 1;
+    sub_21FFC50(&Method_System_Array_Empty_int___);
+    sub_21FFC50(&int___TypeInfo);
+    byte_5939881 = 1;
   }
   SquareIndexes = (System_Collections_ICollection_o *)WarBoardEventScriptEntity__GetSquareIndexes(this, method);
   if ( BasicHelper__IsNullOrEmpty(SquareIndexes, 0) )
@@ -621,33 +616,33 @@ System_Int32_array *WarBoardEventScriptEntity__GetSquareIndicesGreedily(
     SquareIndex = WarBoardEventScriptEntity__GetSquareIndex(this, v4);
     if ( SquareIndex < 1 )
     {
-      v10 = Method_System_Array_Empty_int___;
-      v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-      if ( !v11 )
+      v11 = Method_System_Array_Empty_int___;
+      v12 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+      if ( !v12 )
       {
-        sub_1CE5198(Method_System_Array_Empty_int___);
-        v11 = v10[7];
+        sub_2237B54(Method_System_Array_Empty_int___);
+        v12 = v11[7];
       }
-      v12 = *(_QWORD *)(v11 + 16);
-      if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-        v12 = sub_1CE513C(inited);
-      if ( !*(_DWORD *)(v12 + 224) )
-        inited = j_il2cpp_runtime_class_init_0(v12);
-      v13 = *(_QWORD *)(v10[7] + 16LL);
-      if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-        v13 = sub_1CE513C(inited);
-      return **(System_Int32_array ***)(v13 + 184);
+      v13 = *(_QWORD *)(v12 + 16);
+      if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
+        v13 = sub_2237AF8(v7);
+      if ( !*(_DWORD *)(v13 + 228) )
+        *(__n128 *)&v7 = j_il2cpp_runtime_class_init_0(v13, v6);
+      v14 = *(_QWORD *)(v11[7] + 16LL);
+      if ( (*(_WORD *)(v14 + 309) & 1) == 0 )
+        v14 = sub_2237AF8(v7);
+      return **(System_Int32_array ***)(v14 + 184);
     }
     else
     {
-      v7 = SquareIndex;
-      v8 = sub_1D0F15C(int___TypeInfo, 1);
-      if ( !v8 )
-        sub_1D0F30C(0, v9);
-      SquareIndexes = (System_Collections_ICollection_o *)v8;
-      if ( !*(_DWORD *)(v8 + 24) )
-        sub_1D0F314(v8);
-      *(_DWORD *)(v8 + 32) = v7;
+      v8 = SquareIndex;
+      v9 = sub_21FFD10(int___TypeInfo, 1);
+      if ( !v9 )
+        sub_21FFECC(0, v10);
+      SquareIndexes = (System_Collections_ICollection_o *)v9;
+      if ( !*(_DWORD *)(v9 + 24) )
+        sub_21FFED4(v9);
+      *(_DWORD *)(v9 + 32) = v8;
     }
   }
   return (System_Int32_array *)SquareIndexes;
@@ -660,12 +655,12 @@ int32_t WarBoardEventScriptEntity__GetStageReinforcementsId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78845 & 1) == 0 )
+  if ( (byte_5939887 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23485/*"reinforcements"*/);
-    byte_4E78845 = 1;
+    sub_21FFC50(&StringLiteral_24165/*"reinforcements"*/);
+    byte_5939887 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23485/*"reinforcements"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24165/*"reinforcements"*/, -1, v2);
 }
 
 
@@ -673,12 +668,12 @@ int32_t WarBoardEventScriptEntity__GetStatus(WarBoardEventScriptEntity_o *this, 
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E78839 & 1) == 0 )
+  if ( (byte_593987B & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24162/*"status"*/);
-    byte_4E78839 = 1;
+    sub_21FFC50(&StringLiteral_24896/*"status"*/);
+    byte_593987B = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24162/*"status"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24896/*"status"*/, -1, v2);
 }
 
 
@@ -692,48 +687,48 @@ System_String_o *WarBoardEventScriptEntity__GetStringFromScript(
   __int64 v8; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *v9; // x0
   Il2CppObject *Item; // x0
-  WarBoardEventScriptEntity_o *v12; // x0
-  const MethodInfo *v13; // x1
+  __int64 v11; // x2
+  WarBoardEventScriptEntity_o *v13; // x0
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4E78837 & 1) == 0 )
+  if ( (byte_5939879 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1D0F0B4(&string_TypeInfo);
-    byte_4E78837 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_5939879 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
   v9 = this->fields.script;
   if ( !v9 )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v9,
            (Il2CppObject *)key,
-           (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   defVal = (System_String_o *)Item;
-  if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
+  if ( !Item || Item->klass == (Il2CppClass *)qword_594C0B8 )
     return defVal;
-  sub_1D0F6A8(Item);
-  return (System_String_o *)WarBoardEventScriptEntity__GetBossIdx(v12, v13);
+  sub_220024C(Item, qword_594C0B8, v11);
+  return (System_String_o *)WarBoardEventScriptEntity__GetBossIdx(v13, v14);
 }
 
 
 float WarBoardEventScriptEntity__GetTargetAllCameraSize(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78853 & 1) == 0 )
+  if ( (byte_5939895 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24485/*"targetAllCameraSize"*/);
-    byte_4E78853 = 1;
+    sub_21FFC50(&StringLiteral_25222/*"targetAllCameraSize"*/);
+    byte_5939895 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_24485/*"targetAllCameraSize"*/, 0.0, 0);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25222/*"targetAllCameraSize"*/, 0.0, 0);
 }
 
 
@@ -742,23 +737,23 @@ System_String_o *WarBoardEventScriptEntity__GetUiType(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  if ( (byte_4E7883C & 1) == 0 )
+  if ( (byte_593987E & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24750/*"type"*/);
-    byte_4E7883C = 1;
+    sub_21FFC50(&StringLiteral_25511/*"type"*/);
+    byte_593987E = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24750/*"type"*/, defVal, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_25511/*"type"*/, defVal, 0);
 }
 
 
 bool WarBoardEventScriptEntity__IsDisp(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7883D & 1) == 0 )
+  if ( (byte_593987F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_18942/*"disp"*/);
-    byte_4E7883D = 1;
+    sub_21FFC50(&StringLiteral_19447/*"disp"*/);
+    byte_593987F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18942/*"disp"*/, 1, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19447/*"disp"*/, 1, 0) == 1;
 }
 
 
@@ -766,10 +761,10 @@ bool WarBoardEventScriptEntity__IsUseHoldReinforcements(WarBoardEventScriptEntit
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E7884E & 1) == 0 )
+  if ( (byte_5939890 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21374/*"isUseHoldReinforcements"*/);
-    byte_4E7884E = 1;
+    sub_21FFC50(&StringLiteral_21955/*"isUseHoldReinforcements"*/);
+    byte_5939890 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21374/*"isUseHoldReinforcements"*/, -1, v2) > 0;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21955/*"isUseHoldReinforcements"*/, -1, v2) > 0;
 }

@@ -13,24 +13,23 @@ void TermObjectSwitchEffectSubComponent__RecvParam(
   __int64 naturalAligment; // x10
   Il2CppObject *v6; // x8
   struct UnityEngine_GameObject_array *switchObjectList; // x9
-  int max_length; // w22
-  void *monitor; // x8
-  __int64 v10; // x9
-  int32_t v11; // w20
-  int32_t v12; // w21
-  int v13; // w20
-  unsigned int v14; // w21
-  struct UnityEngine_GameObject_array *v15; // x8
-  unsigned int v16; // w20
-  struct UnityEngine_GameObject_array *v17; // x8
+  il2cpp_array_size_t max_length; // x22
+  int *monitor; // x8
+  int32_t v10; // w20
+  int32_t v11; // w21
+  __int64 v12; // x20
+  int v13; // w21
+  struct UnityEngine_GameObject_array *v14; // x8
+  __int64 v15; // x20
+  struct UnityEngine_GameObject_array *v16; // x8
 
   v4 = this;
-  if ( (byte_4E78D92 & 1) == 0 )
+  if ( (byte_5939DE1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1D0F0B4(&RaceResultEffectParam_TypeInfo);
-    this = (TermObjectSwitchEffectSubComponent_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E78D92 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_21FFC50(&RaceResultEffectParam_TypeInfo);
+    this = (TermObjectSwitchEffectSubComponent_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5939DE1 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -47,72 +46,69 @@ void TermObjectSwitchEffectSubComponent__RecvParam(
   }
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
-    goto LABEL_31;
+    goto LABEL_30;
   max_length = switchObjectList->max_length;
   if ( !v6 )
-    goto LABEL_24;
-  monitor = v6[1].monitor;
-  if ( !monitor )
-    goto LABEL_24;
-  v10 = *((_QWORD *)monitor + 3);
-  if ( !v10 || (int)v10 <= 1 )
-    goto LABEL_24;
-  v11 = *((_DWORD *)monitor + 8);
-  v12 = *((_DWORD *)monitor + 10);
-  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    goto LABEL_23;
+  monitor = (int *)v6[1].monitor;
+  if ( !monitor || monitor[6] <= 1 )
+    goto LABEL_23;
+  v10 = monitor[8];
+  v11 = monitor[10];
+  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
-    goto LABEL_31;
+    goto LABEL_30;
   this = (TermObjectSwitchEffectSubComponent_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( !this )
-    goto LABEL_31;
-  this = (TermObjectSwitchEffectSubComponent_o *)EventRaceMaster__GetTermIndex((EventRaceMaster_o *)this, v11, v12, 0);
+    goto LABEL_30;
+  this = (TermObjectSwitchEffectSubComponent_o *)EventRaceMaster__GetTermIndex((EventRaceMaster_o *)this, v10, v11, 0);
   if ( ((unsigned int)this & 0x80000000) == 0 )
   {
-    if ( max_length >= 1 )
+    if ( (int)max_length >= 1 )
     {
+      v12 = 0;
       v13 = (int)this;
-      v14 = 0;
       while ( 1 )
       {
-        v15 = v4->fields.switchObjectList;
-        if ( !v15 )
+        v14 = v4->fields.switchObjectList;
+        if ( !v14 )
+          goto LABEL_30;
+        if ( (unsigned int)v12 >= LODWORD(v14->max_length) )
           goto LABEL_31;
-        if ( v14 >= LODWORD(v15->max_length) )
-          goto LABEL_32;
-        this = (TermObjectSwitchEffectSubComponent_o *)v15->m_Items[v14];
+        this = (TermObjectSwitchEffectSubComponent_o *)v14->m_Items[v12];
         if ( !this )
-          goto LABEL_31;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v13 == v14++, 0);
-        if ( max_length == v14 )
+          goto LABEL_30;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v13 == (_DWORD)v12++, 0);
+        if ( (_DWORD)max_length == (_DWORD)v12 )
           return;
       }
     }
   }
   else
   {
-LABEL_24:
-    if ( max_length >= 1 )
+LABEL_23:
+    if ( (int)max_length >= 1 )
     {
-      v16 = 0;
+      v15 = 0;
       while ( 1 )
       {
-        v17 = v4->fields.switchObjectList;
-        if ( !v17 )
+        v16 = v4->fields.switchObjectList;
+        if ( !v16 )
           break;
-        if ( v16 >= LODWORD(v17->max_length) )
-LABEL_32:
-          sub_1D0F314(this);
-        this = (TermObjectSwitchEffectSubComponent_o *)v17->m_Items[v16];
+        if ( (unsigned int)v15 >= LODWORD(v16->max_length) )
+LABEL_31:
+          sub_21FFED4(this);
+        this = (TermObjectSwitchEffectSubComponent_o *)v16->m_Items[v15];
         if ( !this )
           break;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-        if ( max_length == ++v16 )
+        if ( (_DWORD)max_length == (_DWORD)++v15 )
           return;
       }
-LABEL_31:
-      sub_1D0F30C(this, param);
+LABEL_30:
+      sub_21FFECC(this, param);
     }
   }
 }

@@ -1,14 +1,14 @@
 void CombineQpSvtEquipMaster___ctor(CombineQpSvtEquipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77466 & 1) == 0 )
+  if ( (byte_5938434 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
-    byte_4E77466 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
+    byte_5938434 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    118,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
+    119,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ CombineQpSvtEquipEntity_o *CombineQpSvtEquipMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77464 & 1) == 0 )
+  if ( (byte_5938432 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
-    byte_4E77464 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
+    byte_5938432 = 1;
   }
   PK = (Il2CppObject *)CombineQpSvtEquipEntity__CreatePK(rarity, lv, *(const MethodInfo **)&lv);
   return (CombineQpSvtEquipEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_353AADC *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
+                                        (const MethodInfo_3EE2044 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool CombineQpSvtEquipMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77465 & 1) == 0 )
+  if ( (byte_5938433 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
-    byte_4E77465 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
+    byte_5938433 = 1;
   }
   PK = (Il2CppObject *)CombineQpSvtEquipEntity__CreatePK(rarity, lv, *(const MethodInfo **)&rarity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
 }

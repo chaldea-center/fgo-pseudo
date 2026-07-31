@@ -13,7 +13,7 @@ void TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, const MethodInf
   widget = this->fields.widget;
   *(_QWORD *)&this->fields.toggleNum = 1;
   if ( !widget )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))widget->klass->vtable._8_set_alpha.methodPtr)(
     widget,
     widget->klass->vtable._8_set_alpha.method,
@@ -29,23 +29,28 @@ void TimeSyncAlphaSwitcher__SetAlphaBlink(
         float time,
         const MethodInfo *method)
 {
-  float toggleFreqRate; // s1
-  float delay; // s3
-  float v8; // s8
+  float delay; // s1
+  float toggleFreqRate; // s2
+  float v10; // s8
   float v11; // s0
-  int v12; // w8
+  int v12; // w9
   int32_t v13; // w8
 
   toggleFreqRate = this->fields.toggleFreqRate;
   delay = this->fields.delay;
   this->fields._SyncReferenceTime_k__BackingField = time;
-  v8 = (float)(delay + time) / (float)(toggleFreqRate * 3.1416);
   this->fields.toggleNum = num;
-  v11 = fmodf(v8, 1.0);
-  v12 = (int)v8;
-  if ( v8 == INFINITY )
+  v10 = (float)(delay + time) / (float)(toggleFreqRate * 3.1416);
+  v11 = fmodf(v10, 1.0);
+  v12 = (int)v10;
+  if ( v10 == INFINITY )
+    v13 = -2147483647;
+  else
+    v13 = v12 + 1;
+  if ( v10 == INFINITY )
     v12 = 0x80000000;
-  v13 = v12 + (v11 > 0.5);
+  if ( v11 <= 0.5 )
+    v13 = v12;
   this->fields._firstFreqCount_k__BackingField = v13;
   this->fields.toggleIndex = (v13 + index) % num;
 }
@@ -73,8 +78,9 @@ void TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const Met
   struct UIWidget_o *widget; // x20
   float v14; // s8
   float v15; // s0
-  int v16; // w8
-  float v17; // s0
+  int v16; // w9
+  bool v17; // zf
+  signed int v18; // w8
 
   if ( this->fields.toggleNum >= 2 )
   {
@@ -97,14 +103,17 @@ void TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const Met
         {
           v15 = *(float *)&v4 / (float)(this->fields.toggleFreqRate * 3.1416);
           v16 = (int)v15;
-          if ( v15 == INFINITY )
-            v16 = 0x80000000;
+          v17 = v15 == INFINITY;
+          *(_QWORD *)&v4 = 0;
+          if ( v17 )
+            v18 = 0x80000000;
+          else
+            v18 = v16;
+          if ( v18 % this->fields.toggleNum == this->fields.toggleIndex )
+            *(float *)&v4 = 1.0;
           methodPtr = (void (__fastcall *)(long double))widget->klass->vtable._8_set_alpha.methodPtr;
-          v17 = 0.0;
-          if ( v16 % this->fields.toggleNum == this->fields.toggleIndex )
-            v17 = 1.0;
-          *(float *)&v4 = v14 * v17;
-          goto LABEL_15;
+          *(float *)&v4 = v14 * *(float *)&v4;
+          goto LABEL_16;
         }
       }
     }
@@ -113,16 +122,16 @@ void TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const Met
       v6 = this->fields.widget;
       if ( v6 )
       {
-        LODWORD(v4) = 0;
-        methodPtr = (void (__fastcall *)(long double))v6->klass->vtable._8_set_alpha.methodPtr;
+        *(_QWORD *)&v4 = 0;
         if ( this->fields.toggleIndex == firstFreqCount_k__BackingField % this->fields.toggleNum )
           *(float *)&v4 = 1.0;
-LABEL_15:
+        methodPtr = (void (__fastcall *)(long double))v6->klass->vtable._8_set_alpha.methodPtr;
+LABEL_16:
         methodPtr(v4);
         return;
       }
     }
-    sub_1D0F30C(v6, v3);
+    sub_21FFECC(v6, v3);
   }
 }
 

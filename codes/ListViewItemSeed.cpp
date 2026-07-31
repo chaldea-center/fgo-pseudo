@@ -13,48 +13,50 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
 {
   ListViewItemSeed_o *v4; // x19
   float y; // s8
-  float v6; // s1
-  float v7; // s2
-  float v8; // s0
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
   float x; // s8
+  float v10; // s0
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4E78DB9 & 1) == 0 )
+  if ( (byte_5939E08 & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_4E78DB9 = 1;
+    this = (ListViewItemSeed_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_5939E08 = 1;
   }
   if ( !obj )
     goto LABEL_9;
   this = (ListViewItemSeed_o *)UnityEngine_GameObject__GetComponent_object_(
                                  obj,
-                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !v4->fields.arrangement )
   {
     if ( this )
     {
       x = v4->fields.arrangementPich.fields.x;
-      v8 = x - COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
-      v6 = 0.0;
+      v10 = COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
       v7 = 0.0;
+      v6 = x - v10;
+      v8 = 0.0;
       goto LABEL_10;
     }
 LABEL_9:
-    sub_1D0F30C(this, obj);
+    sub_21FFECC(this, obj);
   }
   if ( !this )
     goto LABEL_9;
   y = v4->fields.arrangementPich.fields.y;
   size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-  v6 = y - size.fields.y;
-  v7 = 10.0;
-  v8 = 0.0;
+  v6 = 0.0;
+  v7 = y - size.fields.y;
+  v8 = 10.0;
 LABEL_10:
-  result.fields.z = v7;
-  result.fields.y = v6;
-  result.fields.x = v8;
+  result.fields.z = v8;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 
@@ -76,7 +78,7 @@ UnityEngine_Vector3_o ListViewItemSeed__GetLocalPosition(
         Position = ListViewItemSeed__GetPosition(this, index, v7),
         !transform) )
   {
-    sub_1D0F30C(parent, *(_QWORD *)&index);
+    sub_21FFECC(parent, *(_QWORD *)&index);
   }
   return UnityEngine_Transform__InverseTransformPoint(transform, Position, 0);
 }
@@ -86,8 +88,8 @@ UnityEngine_Vector3_o ListViewItemSeed__GetPosition(ListViewItemSeed_o *this, in
 {
   float x; // s0
   int v5; // w8
-  float v6; // s9
-  float v7; // s8
+  float v6; // s8
+  float v7; // s9
   float y; // s0
   int v9; // w8
   UnityEngine_Transform_o *transform; // x0
@@ -97,31 +99,31 @@ UnityEngine_Vector3_o ListViewItemSeed__GetPosition(ListViewItemSeed_o *this, in
   {
     x = this->fields.arrangementVolume.fields.x;
     v5 = (int)x;
-    if ( x == INFINITY )
-      v5 = 0x80000000;
-    if ( v5 <= 1 )
+    if ( (int)x <= 1 )
       v5 = 1;
-    v6 = (float)(index % v5) + (float)((float)(v5 - 1) * -0.5);
-    v7 = (float)(index / v5);
+    if ( x == INFINITY )
+      v5 = 1;
+    v6 = (float)(index / v5);
+    v7 = (float)(index % v5) + (float)((float)(v5 - 1) * -0.5);
   }
   else
   {
     y = this->fields.arrangementVolume.fields.y;
     v9 = (int)y;
-    if ( y == INFINITY )
-      v9 = 0x80000000;
-    if ( v9 <= 1 )
+    if ( (int)y <= 1 )
       v9 = 1;
-    v7 = (float)(index % v9) + (float)((float)(v9 - 1) * -0.5);
-    v6 = (float)(index / v9);
+    if ( y == INFINITY )
+      v9 = 1;
+    v7 = (float)(index / v9);
+    v6 = (float)(index % v9) + (float)((float)(v9 - 1) * -0.5);
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1D0F30C(0, v11);
-  return UnityEngine_Transform__TransformPoint_73386264(
+    sub_21FFECC(0, v11);
+  return UnityEngine_Transform__TransformPoint_83283144(
            transform,
-           v6 * this->fields.arrangementPich.fields.x,
-           v7 * this->fields.arrangementPich.fields.y,
+           v7 * this->fields.arrangementPich.fields.x,
+           v6 * this->fields.arrangementPich.fields.y,
            0.0,
            0);
 }
@@ -143,10 +145,10 @@ void ListViewItemSeed__SetTransform(
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4E78DBA & 1) == 0 )
+  if ( (byte_5939E09 & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_1D0F0B4(&StringLiteral_12972/*"SetBaseTransform"*/);
-    byte_4E78DBA = 1;
+    this = (ListViewItemSeed_o *)sub_21FFC50(&StringLiteral_13297/*"SetBaseTransform"*/);
+    byte_5939E09 = 1;
   }
   if ( !obj )
     goto LABEL_10;
@@ -165,8 +167,8 @@ void ListViewItemSeed__SetTransform(
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0), !v10) )
   {
 LABEL_10:
-    sub_1D0F30C(this, obj);
+    sub_21FFECC(this, obj);
   }
   UnityEngine_Transform__set_localScale(v10, localScale, 0);
-  UnityEngine_GameObject__SendMessage_73340852(obj, (System_String_o *)StringLiteral_12972/*"SetBaseTransform"*/, 0);
+  UnityEngine_GameObject__SendMessage_83224792(obj, (System_String_o *)StringLiteral_13297/*"SetBaseTransform"*/, 0);
 }

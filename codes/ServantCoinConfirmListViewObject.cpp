@@ -1,9 +1,9 @@
 void ServantCoinConfirmListViewObject___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E79E80 & 1) == 0 )
+  if ( (byte_593B85C & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantCoinConfirmListViewObject_TypeInfo);
-    byte_4E79E80 = 1;
+    sub_21FFC50(&ServantCoinConfirmListViewObject_TypeInfo);
+    byte_593B85C = 1;
   }
   LODWORD(ServantCoinConfirmListViewObject_TypeInfo->static_fields->ICON_SCALE) = (struct ServantCoinConfirmListViewObject_StaticFields)1061075026;
 }
@@ -11,13 +11,13 @@ void ServantCoinConfirmListViewObject___cctor(const MethodInfo *method)
 
 void ServantCoinConfirmListViewObject___ctor(ServantCoinConfirmListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E79E7F & 1) == 0 )
+  if ( (byte_593B85B & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    byte_4E79E7F = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    byte_593B85B = 1;
   }
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method);
   ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
@@ -27,28 +27,28 @@ void ServantCoinConfirmListViewObject__Awake(ServantCoinConfirmListViewObject_o 
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E79E7C & 1) == 0 )
+  if ( (byte_593B858 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantCoinConfirmListViewItemDraw___);
-    byte_4E79E7C = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantCoinConfirmListViewItemDraw___);
+    byte_593B858 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantCoinConfirmListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantCoinConfirmListViewItemDraw___);
   this->fields.itemDraw = (struct ServantCoinConfirmListViewItemDraw_o *)Component_object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
     v7,
@@ -65,46 +65,45 @@ void ServantCoinConfirmListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   ServantCoinConfirmListViewObject_o *v10; // x19
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   ServantCoinConfirmListViewObject_o *v17; // x22
   UnityEngine_Transform_o *transform; // x21
-  ServantCoinConfirmListViewObject_c *v19; // x8
-  ServantCoinConfirmListViewObject_o *v20; // x21
+  ServantCoinConfirmListViewObject_o *v19; // x21
   UnityEngine_GameObject_o *parent; // x8
-  ServantCoinConfirmListViewObject_o *v22; // x20
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  ServantCoinConfirmListViewObject_o *v21; // x20
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v10 = this;
-  if ( (byte_4E79E7D & 1) == 0 )
+  if ( (byte_593B859 & 1) == 0 )
   {
-    this = (ServantCoinConfirmListViewObject_o *)sub_1D0F0B4(&ServantCoinConfirmListViewObject_TypeInfo);
-    byte_4E79E7D = 1;
+    this = (ServantCoinConfirmListViewObject_o *)sub_21FFC50(&ServantCoinConfirmListViewObject_TypeInfo);
+    byte_593B859 = 1;
   }
   if ( !item )
     goto LABEL_16;
   item->fields.viewObject = (struct ListViewObject_o *)v10;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&item->fields.viewObject,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&item->fields.viewObject,
     (int32_t)v10,
-    (int32_t)seed,
-    (int32_t)method,
+    (System_String_o *)seed,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
     v7);
   v10->fields.linkItem = item;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v10->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
   this = (ServantCoinConfirmListViewObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v10, 0);
   if ( !seed )
     goto LABEL_16;
@@ -131,28 +130,24 @@ void ServantCoinConfirmListViewObject__SetItem(
     goto LABEL_16;
   UnityEngine_Transform__set_localRotation(transform, localRotation, 0);
   this = (ServantCoinConfirmListViewObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v10, 0);
-  v19 = ServantCoinConfirmListViewObject_TypeInfo;
-  v20 = this;
-  if ( !ServantCoinConfirmListViewObject_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ServantCoinConfirmListViewObject_TypeInfo);
-    v19 = ServantCoinConfirmListViewObject_TypeInfo;
-  }
-  if ( !v20 )
+  v19 = this;
+  if ( !*(&ServantCoinConfirmListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ServantCoinConfirmListViewObject_TypeInfo, item);
+  if ( !v19 )
     goto LABEL_16;
-  LODWORD(v23.fields.x) = LODWORD(v19->static_fields->ICON_SCALE);
-  v23.fields.y = v23.fields.x;
-  v23.fields.z = v23.fields.x;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v20, v23, 0);
+  LODWORD(v22.fields.x) = LODWORD(ServantCoinConfirmListViewObject_TypeInfo->static_fields->ICON_SCALE);
+  v22.fields.y = v22.fields.x;
+  v22.fields.z = v22.fields.x;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v19, v22, 0);
   this = (ServantCoinConfirmListViewObject_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
   parent = seed->fields.parent;
   if ( !parent
-    || (v22 = this, this = (ServantCoinConfirmListViewObject_o *)UnityEngine_GameObject__get_layer(parent, 0), !v22) )
+    || (v21 = this, this = (ServantCoinConfirmListViewObject_o *)UnityEngine_GameObject__get_layer(parent, 0), !v21) )
   {
 LABEL_16:
-    sub_1D0F30C(this, item);
+    sub_21FFECC(this, item);
   }
-  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v22, (int32_t)this, 0);
+  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v21, (int32_t)this, 0);
   ListViewObject__SetVisible((ListViewObject_o *)v10, 1, 0);
   ((void (__fastcall *)(ServantCoinConfirmListViewObject_o *, __int64, const MethodInfo *))v10->klass->vtable._9_SetInput.methodPtr)(
     v10,
@@ -166,16 +161,17 @@ void ServantCoinConfirmListViewObject__SetupDisp(ServantCoinConfirmListViewObjec
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
   struct ListViewItem_o *v5; // x20
+  __int64 v6; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  ServantCoinConfirmListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
+  ServantCoinConfirmListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4E79E7E & 1) == 0 )
+  if ( (byte_593B85A & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&ServantCoinConfirmListViewItem_TypeInfo);
-    byte_4E79E7E = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&ServantCoinConfirmListViewItem_TypeInfo);
+    byte_593B85A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -193,13 +189,13 @@ void ServantCoinConfirmListViewObject__SetupDisp(ServantCoinConfirmListViewObjec
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, v5 != 0, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1D0F30C(0, v7);
-    ServantCoinConfirmListViewItemDraw__SetItem(v9, (ServantCoinConfirmListViewItem_o *)v5, v8);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_21FFECC(0, v8);
+    ServantCoinConfirmListViewItemDraw__SetItem(v10, (ServantCoinConfirmListViewItem_o *)v5, v9);
   }
 }

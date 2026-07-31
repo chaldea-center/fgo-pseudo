@@ -16,26 +16,26 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
   UnityEngine_Object_o *frameSprite; // x20
   UnityEngine_Object_o *maskSprite; // x20
 
-  if ( (byte_4E76C25 & 1) == 0 )
+  if ( (byte_5937BC6 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C25 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937BC6 = 1;
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.strengthStatusSprite;
     if ( !v5 )
       goto LABEL_36;
     gameObject = UnityEngine_Component__get_gameObject(v5, 0);
-    GameObjectExtensions__SetLocalPosition_37343212(gameObject, 21.0, -21.0, 0);
+    GameObjectExtensions__SetLocalPosition_42876120(gameObject, 21.0, -21.0, 0);
     v5 = (UnityEngine_Component_o *)this->fields.strengthStatusSprite;
     if ( !v5 )
       goto LABEL_36;
     v7 = UnityEngine_Component__get_gameObject(v5, 0);
-    GameObjectExtensions__SetLocalScale_37345280(v7, 1.0, 1.0, 0);
+    GameObjectExtensions__SetLocalScale_42878188(v7, 1.0, 1.0, 0);
     v5 = (UnityEngine_Component_o *)this->fields.strengthStatusSprite;
     if ( !v5 )
       goto LABEL_36;
@@ -46,8 +46,8 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
     UIWidget__set_height((UIWidget_o *)v5, 12, 0);
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(baseSprite, 0, 0) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.baseSprite;
@@ -60,8 +60,8 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
     UIWidget__set_height((UIWidget_o *)v5, 44, 0);
   }
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.skillIconSprite;
@@ -74,8 +74,8 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
     UIWidget__set_height((UIWidget_o *)v5, 40, 0);
   }
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.frameSprite;
@@ -88,8 +88,8 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
     UIWidget__set_height((UIWidget_o *)v5, 44, 0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -104,7 +104,7 @@ void SkillIconComponent__AdjustUI(SkillIconComponent_o *this, const MethodInfo *
       }
     }
 LABEL_36:
-    sub_1D0F30C(v5, v4);
+    sub_21FFECC(v5, v4);
   }
 }
 
@@ -112,25 +112,27 @@ LABEL_36:
 void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *method)
 {
   UISprite_o *skillIconSprite; // x0
+  __int64 v4; // x1
   UnityEngine_Object_o *frameSprite; // x20
   UnityEngine_Object_o *iconLabel; // x20
   UnityEngine_Object_o *strengthStatusSprite; // x20
   UnityEngine_Object_o *skillStrengthStatus; // x20
+  __int64 v9; // x1
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_Object_o *maskSprite; // x20
 
-  if ( (byte_4E76C1E & 1) == 0 )
+  if ( (byte_5937BBF & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C1E = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937BBF = 1;
   }
   skillIconSprite = this->fields.skillIconSprite;
   if ( !skillIconSprite )
     goto LABEL_33;
   UISprite__set_spriteName(skillIconSprite, 0, 0);
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     skillIconSprite = this->fields.frameSprite;
@@ -139,8 +141,8 @@ void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *met
     UISprite__set_spriteName(skillIconSprite, 0, 0);
   }
   iconLabel = (UnityEngine_Object_o *)this->fields.iconLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(iconLabel, 0, 0) )
   {
     skillIconSprite = (UISprite_o *)this->fields.iconLabel;
@@ -149,8 +151,8 @@ void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *met
     UIIconLabel__Clear((UIIconLabel_o *)skillIconSprite, 0);
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     skillIconSprite = this->fields.strengthStatusSprite;
@@ -159,8 +161,8 @@ void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *met
     UISprite__set_spriteName(skillIconSprite, 0, 0);
   }
   skillStrengthStatus = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(skillStrengthStatus, 0, 0) )
   {
     skillIconSprite = (UISprite_o *)this->fields.skillStrengthStatus;
@@ -169,13 +171,13 @@ void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *met
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)skillIconSprite,
                                            0);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(gameObject, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+    UnityEngine_Object__Destroy_83246496(gameObject, 0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     skillIconSprite = this->fields.maskSprite;
@@ -191,7 +193,7 @@ void SkillIconComponent__Clear(SkillIconComponent_o *this, const MethodInfo *met
       }
     }
 LABEL_33:
-    sub_1D0F30C(skillIconSprite, method);
+    sub_21FFECC(skillIconSprite, method);
   }
 }
 
@@ -200,34 +202,35 @@ void SkillIconComponent__Set(SkillIconComponent_o *this, int32_t skillId, const 
 {
   const MethodInfo *v3; // x5
 
-  SkillIconComponent__Set_42472220(this, skillId, 0, 0, 0, v3);
+  SkillIconComponent__Set_48035484(this, skillId, 0, 0, 0, v3);
 }
 
 
 void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *method)
 {
   UISprite_o *skillIconSprite; // x20
+  __int64 v4; // x1
   UnityEngine_Object_o *frameSprite; // x20
-  __int64 v5; // x1
+  __int64 v6; // x1
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *iconLabel; // x20
   UnityEngine_Object_o *strengthStatusSprite; // x20
   UnityEngine_Object_o *skillStrengthStatus; // x20
   UnityEngine_Object_o *maskSprite; // x20
 
-  if ( (byte_4E76C22 & 1) == 0 )
+  if ( (byte_5937BC3 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C22 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937BC3 = 1;
   }
   skillIconSprite = this->fields.skillIconSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method);
   AtlasManager__SetHideSkillIcon(skillIconSprite, 0);
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     gameObject = this->fields.frameSprite;
@@ -236,8 +239,8 @@ void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *m
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   iconLabel = (UnityEngine_Object_o *)this->fields.iconLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(iconLabel, 0, 0) )
   {
     gameObject = (UISprite_o *)this->fields.iconLabel;
@@ -246,8 +249,8 @@ void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *m
     UIIconLabel__Clear((UIIconLabel_o *)gameObject, 0);
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     gameObject = this->fields.strengthStatusSprite;
@@ -256,8 +259,8 @@ void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *m
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   skillStrengthStatus = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(skillStrengthStatus, 0, 0) )
   {
     gameObject = (UISprite_o *)this->fields.skillStrengthStatus;
@@ -269,8 +272,8 @@ void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *m
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     gameObject = this->fields.maskSprite;
@@ -284,7 +287,7 @@ void SkillIconComponent__SetHide(SkillIconComponent_o *this, const MethodInfo *m
       }
     }
 LABEL_33:
-    sub_1D0F30C(gameObject, v5);
+    sub_21FFECC(gameObject, v6);
   }
 }
 
@@ -309,14 +312,14 @@ void SkillIconComponent__SetInvalidColor(
   b = invalidColor.fields.b;
   g = invalidColor.fields.g;
   r = invalidColor.fields.r;
-  if ( (byte_4E76C24 & 1) == 0 )
+  if ( (byte_5937BC5 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C24 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937BC5 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(baseSprite, 0, 0) )
   {
     v10 = (UIWidget_o *)this->fields.baseSprite;
@@ -329,8 +332,8 @@ void SkillIconComponent__SetInvalidColor(
     UIWidget__set_color(v10, v12, 0);
   }
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
   {
     v10 = (UIWidget_o *)this->fields.skillIconSprite;
@@ -344,7 +347,7 @@ void SkillIconComponent__SetInvalidColor(
       return;
     }
 LABEL_14:
-    sub_1D0F30C(v10, v9);
+    sub_21FFECC(v10, v9);
   }
 }
 
@@ -358,35 +361,37 @@ void SkillIconComponent__SetMask(SkillIconComponent_o *this, bool enabled, const
   if ( !maskSprite
     || (maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0)) == 0 )
   {
-    sub_1D0F30C(maskSprite, enabled);
+    sub_21FFECC(maskSprite, enabled);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, enabled, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SkillIconComponent__SetSpecifyIconId(SkillIconComponent_o *this, int32_t iconId, const MethodInfo *method)
 {
   UISprite_o *skillIconSprite; // x21
+  __int64 v6; // x1
   UnityEngine_Object_o *frameSprite; // x20
-  __int64 v7; // x1
+  __int64 v8; // x1
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *iconLabel; // x20
   UnityEngine_Object_o *strengthStatusSprite; // x20
   UnityEngine_Object_o *maskSprite; // x20
 
-  if ( (byte_4E76C23 & 1) == 0 )
+  if ( (byte_5937BC4 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C23 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937BC4 = 1;
   }
   skillIconSprite = this->fields.skillIconSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&iconId);
   AtlasManager__SetSkillIconSpecifyIconId(skillIconSprite, iconId, 0);
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     gameObject = this->fields.frameSprite;
@@ -395,8 +400,8 @@ void SkillIconComponent__SetSpecifyIconId(SkillIconComponent_o *this, int32_t ic
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   iconLabel = (UnityEngine_Object_o *)this->fields.iconLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   if ( UnityEngine_Object__op_Inequality(iconLabel, 0, 0) )
   {
     gameObject = (UISprite_o *)this->fields.iconLabel;
@@ -405,8 +410,8 @@ void SkillIconComponent__SetSpecifyIconId(SkillIconComponent_o *this, int32_t ic
     UIIconLabel__Clear((UIIconLabel_o *)gameObject, 0);
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     gameObject = this->fields.strengthStatusSprite;
@@ -415,8 +420,8 @@ void SkillIconComponent__SetSpecifyIconId(SkillIconComponent_o *this, int32_t ic
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     gameObject = this->fields.maskSprite;
@@ -430,11 +435,12 @@ void SkillIconComponent__SetSpecifyIconId(SkillIconComponent_o *this, int32_t ic
       }
     }
 LABEL_27:
-    sub_1D0F30C(gameObject, v7);
+    sub_21FFECC(gameObject, v8);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SkillIconComponent__SetStrengthStatus(
         SkillIconComponent_o *this,
         int32_t strengthStatus,
@@ -444,29 +450,31 @@ void SkillIconComponent__SetStrengthStatus(
   UnityEngine_Object_o *strengthStatusSprite; // x22
   __int64 v8; // x1
   void *gameObject; // x0
+  __int64 v10; // x1
   struct ServantSkillStrengthStatus_o **p_skillStrengthStatus; // x22
   UnityEngine_Object_o *skillStrengthStatus; // x23
-  UnityEngine_Object_o *v12; // x23
-  System_String_o *v13; // x23
+  __int64 v13; // x1
+  UnityEngine_Object_o *v14; // x23
+  System_String_o *v15; // x23
   UnityEngine_Transform_o *parent; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
 
-  if ( (byte_4E76C21 & 1) == 0 )
+  if ( (byte_5937BC2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&ServantSkillStrengthStatus_TypeInfo);
-    byte_4E76C21 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&ServantSkillStrengthStatus_TypeInfo);
+    byte_5937BC2 = 1;
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&strengthStatus);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     gameObject = this->fields.strengthStatusSprite;
@@ -478,49 +486,49 @@ void SkillIconComponent__SetStrengthStatus(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
         p_skillStrengthStatus = &this->fields.skillStrengthStatus;
         skillStrengthStatus = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
         if ( UnityEngine_Object__op_Inequality(skillStrengthStatus, 0, 0) )
         {
           gameObject = *p_skillStrengthStatus;
           if ( !*p_skillStrengthStatus )
             goto LABEL_23;
-          v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_73359484(v12, 0);
+          v14 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+          UnityEngine_Object__Destroy_83246496(v14, 0);
         }
         gameObject = ServantSkillStrengthStatus_TypeInfo;
-        if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
+        if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
+          j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v8);
           gameObject = ServantSkillStrengthStatus_TypeInfo;
         }
         if ( this->fields.strengthStatusSprite )
         {
-          v13 = (System_String_o *)**((_QWORD **)gameObject + 23);
+          v15 = (System_String_o *)**((_QWORD **)gameObject + 23);
           gameObject = UnityEngine_Component__get_transform(
                          (UnityEngine_Component_o *)this->fields.strengthStatusSprite,
                          0);
           if ( gameObject )
           {
             parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)gameObject, 0);
-            gameObject = BaseMonoBehaviour__createObject_42553664((BaseMonoBehaviour_o *)this, v13, parent, 0, 0);
+            gameObject = BaseMonoBehaviour__createObject_48121252((BaseMonoBehaviour_o *)this, v15, parent, 0, 0);
             if ( gameObject )
             {
               Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)gameObject,
-                                   (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
               *p_skillStrengthStatus = (struct ServantSkillStrengthStatus_o *)Component_object;
-              sub_1D0F058(
-                (GrandQuestFolderBoardItem_o *)&this->fields.skillStrengthStatus,
+              sub_21FFBF4(
+                (MissionNaviTransitionBoardItem_o *)&this->fields.skillStrengthStatus,
                 (int32_t)Component_object,
-                v16,
-                v17,
                 v18,
                 v19,
                 v20,
-                v21);
+                v21,
+                v22,
+                v23);
               gameObject = *p_skillStrengthStatus;
               if ( *p_skillStrengthStatus )
               {
@@ -538,13 +546,13 @@ void SkillIconComponent__SetStrengthStatus(
       }
     }
 LABEL_23:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SkillIconComponent__Set_42472220(
+void SkillIconComponent__Set_48035484(
         SkillIconComponent_o *this,
         int32_t skillId,
         int32_t skillLv,
@@ -553,32 +561,35 @@ void SkillIconComponent__Set_42472220(
         const MethodInfo *method)
 {
   UISprite_o *skillIconSprite; // x24
+  __int64 v12; // x1
   UnityEngine_Object_o *frameSprite; // x23
-  __int64 v13; // x1
+  __int64 v14; // x1
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *iconLabel; // x23
   UnityEngine_Object_o *strengthStatusSprite; // x23
+  __int64 v18; // x1
   struct ServantSkillStrengthStatus_o **p_skillStrengthStatus; // x23
   UnityEngine_Object_o *skillStrengthStatus; // x24
-  UnityEngine_Object_o *v19; // x24
+  __int64 v21; // x1
+  UnityEngine_Object_o *v22; // x24
   System_String_o *klass; // x24
   UnityEngine_Transform_o *parent; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
   UnityEngine_Object_o *maskSprite; // x21
 
-  if ( (byte_4E76C1F & 1) == 0 )
+  if ( (byte_5937BC0 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&ServantSkillStrengthStatus_TypeInfo);
-    byte_4E76C1F = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&ServantSkillStrengthStatus_TypeInfo);
+    byte_5937BC0 = 1;
   }
   if ( skillId <= 0 )
   {
@@ -586,73 +597,79 @@ void SkillIconComponent__Set_42472220(
     return;
   }
   skillIconSprite = this->fields.skillIconSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&skillId);
   AtlasManager__SetSkillIcon(skillIconSprite, skillId, 0);
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     gameObject = this->fields.frameSprite;
     if ( !gameObject )
-      goto LABEL_45;
+      goto LABEL_46;
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   iconLabel = (UnityEngine_Object_o *)this->fields.iconLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   if ( UnityEngine_Object__op_Inequality(iconLabel, 0, 0) )
   {
     gameObject = (UISprite_o *)this->fields.iconLabel;
-    if ( !gameObject )
-      goto LABEL_45;
     if ( skillLv < 1 )
+    {
+      if ( !gameObject )
+        goto LABEL_46;
       UIIconLabel__Clear((UIIconLabel_o *)gameObject, 0);
+    }
     else
-      UIIconLabel__Set_42477084((UIIconLabel_o *)gameObject, 2, skillLv, 0, 0, 0, 0, 0, 0, 0, 0);
+    {
+      if ( !gameObject )
+        goto LABEL_46;
+      UIIconLabel__Set_48040364((UIIconLabel_o *)gameObject, 2, skillLv, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     gameObject = this->fields.strengthStatusSprite;
     if ( !gameObject )
-      goto LABEL_45;
+      goto LABEL_46;
     gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !gameObject )
-      goto LABEL_45;
+      goto LABEL_46;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
     p_skillStrengthStatus = &this->fields.skillStrengthStatus;
     skillStrengthStatus = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
     if ( UnityEngine_Object__op_Inequality(skillStrengthStatus, 0, 0) )
     {
       gameObject = (UISprite_o *)*p_skillStrengthStatus;
       if ( !*p_skillStrengthStatus )
-        goto LABEL_45;
-      v19 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(v19, 0);
+        goto LABEL_46;
+      v22 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
+      UnityEngine_Object__Destroy_83246496(v22, 0);
     }
     gameObject = (UISprite_o *)ServantSkillStrengthStatus_TypeInfo;
-    if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
+    if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
+      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v14);
       gameObject = (UISprite_o *)ServantSkillStrengthStatus_TypeInfo;
     }
     if ( !this->fields.strengthStatusSprite )
-      goto LABEL_45;
+      goto LABEL_46;
     klass = (System_String_o *)gameObject->fields.onChange->klass;
     gameObject = (UISprite_o *)UnityEngine_Component__get_transform(
                                  (UnityEngine_Component_o *)this->fields.strengthStatusSprite,
                                  0);
     if ( !gameObject
       || (parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)gameObject, 0),
-          (gameObject = (UISprite_o *)BaseMonoBehaviour__createObject_42553664(
+          (gameObject = (UISprite_o *)BaseMonoBehaviour__createObject_48121252(
                                         (BaseMonoBehaviour_o *)this,
                                         klass,
                                         parent,
@@ -660,21 +677,21 @@ void SkillIconComponent__Set_42472220(
                                         0)) == 0)
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)gameObject,
-                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___),
+                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___),
           *p_skillStrengthStatus = (struct ServantSkillStrengthStatus_o *)Component_object,
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&this->fields.skillStrengthStatus,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&this->fields.skillStrengthStatus,
             (int32_t)Component_object,
-            v23,
-            v24,
-            v25,
             v26,
             v27,
-            v28),
+            v28,
+            v29,
+            v30,
+            v31),
           (gameObject = (UISprite_o *)*p_skillStrengthStatus) == 0) )
     {
-LABEL_45:
-      sub_1D0F30C(gameObject, v13);
+LABEL_46:
+      sub_21FFECC(gameObject, v14);
     }
     ServantSkillStrengthStatus__SetVertical(
       (ServantSkillStrengthStatus_o *)gameObject,
@@ -684,8 +701,8 @@ LABEL_45:
       0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     gameObject = this->fields.maskSprite;
@@ -698,12 +715,12 @@ LABEL_45:
         return;
       }
     }
-    goto LABEL_45;
+    goto LABEL_46;
   }
 }
 
 
-void SkillIconComponent__Set_42473032(
+void SkillIconComponent__Set_48036300(
         SkillIconComponent_o *this,
         int32_t skillId,
         int32_t skillLv,
@@ -711,11 +728,11 @@ void SkillIconComponent__Set_42473032(
 {
   const MethodInfo *v4; // x5
 
-  SkillIconComponent__Set_42472220(this, skillId, skillLv, 0, 0, v4);
+  SkillIconComponent__Set_48035484(this, skillId, skillLv, 0, 0, v4);
 }
 
 
-void SkillIconComponent__Set_42473044(
+void SkillIconComponent__Set_48036312(
         SkillIconComponent_o *this,
         int32_t skillId,
         int32_t skillLv,
@@ -724,12 +741,12 @@ void SkillIconComponent__Set_42473044(
 {
   const MethodInfo *v5; // x6
 
-  SkillIconComponent__Set_42473060(this, skillId, skillLv, 0, 0, info, v5);
+  SkillIconComponent__Set_48036328(this, skillId, skillLv, 0, 0, info, v5);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SkillIconComponent__Set_42473060(
+void SkillIconComponent__Set_48036328(
         SkillIconComponent_o *this,
         int32_t skillId,
         int32_t skillLv,
@@ -739,32 +756,35 @@ void SkillIconComponent__Set_42473060(
         const MethodInfo *method)
 {
   UISprite_o *skillIconSprite; // x25
+  __int64 v14; // x1
   UnityEngine_Object_o *frameSprite; // x24
-  __int64 v15; // x1
+  __int64 v16; // x1
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *iconLabel; // x24
   UnityEngine_Object_o *strengthStatusSprite; // x23
+  __int64 v20; // x1
   struct ServantSkillStrengthStatus_o **p_skillStrengthStatus; // x23
   UnityEngine_Object_o *skillStrengthStatus; // x24
-  UnityEngine_Object_o *v21; // x24
+  __int64 v23; // x1
+  UnityEngine_Object_o *v24; // x24
   System_String_o *klass; // x24
   UnityEngine_Transform_o *parent; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
   UnityEngine_Object_o *maskSprite; // x21
 
-  if ( (byte_4E76C20 & 1) == 0 )
+  if ( (byte_5937BC1 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&ServantSkillStrengthStatus_TypeInfo);
-    byte_4E76C20 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&ServantSkillStrengthStatus_TypeInfo);
+    byte_5937BC1 = 1;
   }
   if ( skillId <= 0 )
   {
@@ -772,82 +792,89 @@ void SkillIconComponent__Set_42473060(
     return;
   }
   skillIconSprite = this->fields.skillIconSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&skillId);
   AtlasManager__SetSkillIcon(skillIconSprite, skillId, 0);
   frameSprite = (UnityEngine_Object_o *)this->fields.frameSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   if ( UnityEngine_Object__op_Inequality(frameSprite, 0, 0) )
   {
     gameObject = this->fields.frameSprite;
     if ( !gameObject )
-      goto LABEL_48;
+      goto LABEL_49;
     UISprite__set_spriteName(gameObject, 0, 0);
   }
   iconLabel = (UnityEngine_Object_o *)this->fields.iconLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
   if ( UnityEngine_Object__op_Inequality(iconLabel, 0, 0) )
   {
-    gameObject = (UISprite_o *)this->fields.iconLabel;
     if ( info )
     {
+      gameObject = (UISprite_o *)this->fields.iconLabel;
       if ( !gameObject )
-        goto LABEL_48;
+        goto LABEL_49;
       UIIconLabel__Set((UIIconLabel_o *)gameObject, info, 0);
     }
     else
     {
-      if ( !gameObject )
-        goto LABEL_48;
+      gameObject = (UISprite_o *)this->fields.iconLabel;
       if ( skillLv < 1 )
+      {
+        if ( !gameObject )
+          goto LABEL_49;
         UIIconLabel__Clear((UIIconLabel_o *)gameObject, 0);
+      }
       else
-        UIIconLabel__Set_42477084((UIIconLabel_o *)gameObject, 2, skillLv, 0, 0, 0, 0, 0, 0, 0, 0);
+      {
+        if ( !gameObject )
+          goto LABEL_49;
+        UIIconLabel__Set_48040364((UIIconLabel_o *)gameObject, 2, skillLv, 0, 0, 0, 0, 0, 0, 0, 0);
+      }
     }
   }
   strengthStatusSprite = (UnityEngine_Object_o *)this->fields.strengthStatusSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
   if ( UnityEngine_Object__op_Inequality(strengthStatusSprite, 0, 0) )
   {
     gameObject = this->fields.strengthStatusSprite;
     if ( !gameObject )
-      goto LABEL_48;
+      goto LABEL_49;
     gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !gameObject )
-      goto LABEL_48;
+      goto LABEL_49;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
     p_skillStrengthStatus = &this->fields.skillStrengthStatus;
     skillStrengthStatus = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
     if ( UnityEngine_Object__op_Inequality(skillStrengthStatus, 0, 0) )
     {
       gameObject = (UISprite_o *)*p_skillStrengthStatus;
       if ( !*p_skillStrengthStatus )
-        goto LABEL_48;
-      v21 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(v21, 0);
+        goto LABEL_49;
+      v24 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+      UnityEngine_Object__Destroy_83246496(v24, 0);
     }
     gameObject = (UISprite_o *)ServantSkillStrengthStatus_TypeInfo;
-    if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
+    if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
+      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v16);
       gameObject = (UISprite_o *)ServantSkillStrengthStatus_TypeInfo;
     }
     if ( !this->fields.strengthStatusSprite )
-      goto LABEL_48;
+      goto LABEL_49;
     klass = (System_String_o *)gameObject->fields.onChange->klass;
     gameObject = (UISprite_o *)UnityEngine_Component__get_transform(
                                  (UnityEngine_Component_o *)this->fields.strengthStatusSprite,
                                  0);
     if ( !gameObject
       || (parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)gameObject, 0),
-          (gameObject = (UISprite_o *)BaseMonoBehaviour__createObject_42553664(
+          (gameObject = (UISprite_o *)BaseMonoBehaviour__createObject_48121252(
                                         (BaseMonoBehaviour_o *)this,
                                         klass,
                                         parent,
@@ -855,21 +882,21 @@ void SkillIconComponent__Set_42473060(
                                         0)) == 0)
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)gameObject,
-                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___),
+                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___),
           *p_skillStrengthStatus = (struct ServantSkillStrengthStatus_o *)Component_object,
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&this->fields.skillStrengthStatus,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&this->fields.skillStrengthStatus,
             (int32_t)Component_object,
-            v25,
-            v26,
-            v27,
             v28,
             v29,
-            v30),
+            v30,
+            v31,
+            v32,
+            v33),
           (gameObject = (UISprite_o *)*p_skillStrengthStatus) == 0) )
     {
-LABEL_48:
-      sub_1D0F30C(gameObject, v15);
+LABEL_49:
+      sub_21FFECC(gameObject, v16);
     }
     ServantSkillStrengthStatus__SetVertical(
       (ServantSkillStrengthStatus_o *)gameObject,
@@ -879,8 +906,8 @@ LABEL_48:
       0);
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0, 0) )
   {
     gameObject = this->fields.maskSprite;
@@ -893,6 +920,6 @@ LABEL_48:
         return;
       }
     }
-    goto LABEL_48;
+    goto LABEL_49;
   }
 }

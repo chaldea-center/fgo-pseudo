@@ -1,9 +1,9 @@
 void EventInfoPassiveSkillChangeDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E78AD4 & 1) == 0 )
+  if ( (byte_59399A5 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoPassiveSkillChangeDialog_TypeInfo);
-    byte_4E78AD4 = 1;
+    sub_21FFC50(&EventInfoPassiveSkillChangeDialog_TypeInfo);
+    byte_59399A5 = 1;
   }
   EventInfoPassiveSkillChangeDialog_TypeInfo->static_fields->InvalidSkillId = -1;
 }
@@ -11,38 +11,41 @@ void EventInfoPassiveSkillChangeDialog___cctor(const MethodInfo *method)
 
 void EventInfoPassiveSkillChangeDialog___ctor(EventInfoPassiveSkillChangeDialog_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_Collections_Generic_List_EventInfoPassiveSkillComponent__c *v3; // x0
+  System_Collections_Generic_List_object__o *v4; // x20
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  __int64 v11; // x1
 
-  if ( (byte_4E78AD3 & 1) == 0 )
+  if ( (byte_59399A4 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_EventInfoPassiveSkillComponent__TypeInfo);
-    byte_4E78AD3 = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_EventInfoPassiveSkillComponent__TypeInfo);
+    byte_59399A4 = 1;
   }
+  v3 = System_Collections_Generic_List_EventInfoPassiveSkillComponent__TypeInfo;
   *(_QWORD *)&this->fields.selectedSkillId = -1;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventInfoPassiveSkillComponent__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v3);
   System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent___ctor__);
-  this->fields.eventInfoPassiveSkillList = (struct System_Collections_Generic_List_EventInfoPassiveSkillComponent__o *)v3;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.eventInfoPassiveSkillList,
-    (int32_t)v3,
     v4,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent___ctor__);
+  this->fields.eventInfoPassiveSkillList = (struct System_Collections_Generic_List_EventInfoPassiveSkillComponent__o *)v4;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.eventInfoPassiveSkillList,
+    (int32_t)v4,
     v5,
     v6,
     v7,
     v8,
-    v9);
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+    v9,
+    v10);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, v11);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -61,21 +64,21 @@ void EventInfoPassiveSkillChangeDialog__OnChangeSkill(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4E78ACF & 1) == 0 )
+  if ( (byte_59399A0 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog__OnChangeSkill_b__16_0__);
-    byte_4E78ACF = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog__OnChangeSkill_b__16_0__);
+    byte_59399A0 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__;
     if ( (*((_BYTE *)Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoPassiveSkillChangeDialog_OnChangeSkill__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoPassiveSkillChangeDialog__OnChangeSkill_b__16_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -88,21 +91,21 @@ void EventInfoPassiveSkillChangeDialog__OnClose(EventInfoPassiveSkillChangeDialo
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4E78AD0 & 1) == 0 )
+  if ( (byte_59399A1 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog_OnClose__);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog__OnClose_b__17_0__);
-    byte_4E78AD0 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog_OnClose__);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog__OnClose_b__17_0__);
+    byte_59399A1 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoPassiveSkillChangeDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoPassiveSkillChangeDialog_OnClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_EventInfoPassiveSkillChangeDialog_OnClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoPassiveSkillChangeDialog_OnClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoPassiveSkillChangeDialog__OnClose_b__17_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -117,25 +120,26 @@ void EventInfoPassiveSkillChangeDialog__OnSelectSkill(
 {
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
+  __int64 v7; // x1
   UnityEngine_Object_o *changeButton; // x21
-  __int64 v8; // x1
+  __int64 v9; // x1
   System_Collections_Generic_List_object__o *eventInfoPassiveSkillList; // x0
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
-  __int64 v12; // x9
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-38h] BYREF
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // x9
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E78AD2 & 1) == 0 )
+  if ( (byte_59399A3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__get_Current__);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78AD2 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__get_Current__);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59399A3 = 1;
   }
-  memset(&v13, 0, sizeof(v13));
+  memset(&v14, 0, sizeof(v14));
   if ( EventInfoPassiveSkillChangeDialog__get_CanChange(this, *(const MethodInfo **)&skillId)
     && BaseDialog__IsInputState((BaseDialog_o *)this, 0)
     && this->fields.defaultSkillId != skillId
@@ -143,13 +147,13 @@ void EventInfoPassiveSkillChangeDialog__OnSelectSkill(
   {
     v5 = Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__;
     if ( (*((_BYTE *)Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1D0F0CC(Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
+      v5 = (_QWORD *)sub_21FFC68(Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
+    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-    this->fields.selectedSkillId = skillId;
     changeButton = (UnityEngine_Object_o *)this->fields.changeButton;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    this->fields.selectedSkillId = skillId;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Inequality(changeButton, 0, 0) )
     {
       eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)this->fields.changeButton;
@@ -164,33 +168,33 @@ void EventInfoPassiveSkillChangeDialog__OnSelectSkill(
     if ( eventInfoPassiveSkillList )
     {
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v14,
         eventInfoPassiveSkillList,
-        (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
+        (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
       while ( 1 )
       {
-        v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v13,
-                (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
-        if ( !v10 )
+        v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v14,
+                (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
+        if ( !v11 )
           break;
-        if ( !v13.fields._current )
-          sub_1D0F30C(v10, v11);
-        v12 = *(__int64 *)((char *)&v13.fields._current->klass + (unsigned __int64)&qword_48);
-        if ( v12 )
-          LODWORD(v12) = *(_DWORD *)(v12 + 16);
+        if ( !v14.fields._current )
+          sub_21FFECC(v11, v12);
+        v13 = *(__int64 *)((char *)&v14.fields._current->klass + (unsigned __int64)&qword_48);
+        if ( v13 )
+          LODWORD(v13) = *(_DWORD *)(v13 + 16);
         GameObjectHelper__SetActiveSafely(
-          *(UnityEngine_GameObject_o **)((char *)&v13.fields._current->klass + (unsigned __int64)&dword_40),
-          (_DWORD)v12 == skillId,
+          *(UnityEngine_GameObject_o **)((char *)&v14.fields._current->klass + (unsigned __int64)&dword_40),
+          (_DWORD)v13 == skillId,
           0);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v13,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
+        &v14,
+        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
       return;
     }
 LABEL_24:
-    sub_1D0F30C(eventInfoPassiveSkillList, v8);
+    sub_21FFECC(eventInfoPassiveSkillList, v9);
   }
 }
 
@@ -203,40 +207,50 @@ void EventInfoPassiveSkillChangeDialog__Open(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  const MethodInfo *v18; // x3
+  bool v16; // w6
+  bool v17; // w7
+  __int64 v18; // x1
+  const MethodInfo *v19; // x3
   int32_t itemId; // w1
   int32_t *p_skillId; // x8
-  EventInfoPassiveSkillChangeDialog_c *v21; // x0
-  UnityEngine_Object_o *changeButton; // x20
+  EventInfoPassiveSkillChangeDialog_c *v22; // x0
   __int64 v23; // x1
-  struct UICommonButton_o *v24; // x0
+  UnityEngine_Object_o *changeButton; // x20
+  __int64 v25; // x1
+  struct UICommonButton_o *v26; // x0
 
-  if ( (byte_4E78ACE & 1) == 0 )
+  if ( (byte_593999F & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoPassiveSkillChangeDialog_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78ACE = 1;
+    sub_21FFC50(&EventInfoPassiveSkillChangeDialog_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593999F = 1;
   }
   this->fields.onChangeSkill = inOnChangeSkill;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onChangeSkill,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onChangeSkill,
     (int32_t)inOnChangeSkill,
-    (int32_t)inOnChangeSkill,
-    (int32_t)inOnCancel,
-    (System_String_o *)method,
+    (System_String_o *)inOnChangeSkill,
+    (System_String_o *)inOnCancel,
+    (int32_t)method,
     v5,
     v6,
     v7);
   this->fields.onCancel = inOnCancel;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onCancel, (int32_t)inOnCancel, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onCancel,
+    (int32_t)inOnCancel,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   BaseDialog__Init((BaseDialog_o *)this, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
   if ( eventItemUsedInfo )
@@ -246,32 +260,33 @@ void EventInfoPassiveSkillChangeDialog__Open(
   }
   else
   {
-    v21 = EventInfoPassiveSkillChangeDialog_TypeInfo;
-    if ( !EventInfoPassiveSkillChangeDialog_TypeInfo->_2.cctor_finished )
+    v22 = EventInfoPassiveSkillChangeDialog_TypeInfo;
+    if ( !*(&EventInfoPassiveSkillChangeDialog_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(EventInfoPassiveSkillChangeDialog_TypeInfo);
-      v21 = EventInfoPassiveSkillChangeDialog_TypeInfo;
+      j_il2cpp_runtime_class_init_0(EventInfoPassiveSkillChangeDialog_TypeInfo, v18);
+      v22 = EventInfoPassiveSkillChangeDialog_TypeInfo;
     }
-    p_skillId = &v21->static_fields->InvalidSkillId;
+    p_skillId = &v22->static_fields->InvalidSkillId;
     itemId = 0;
   }
-  EventInfoPassiveSkillChangeDialog__SetupSkill(this, itemId, *p_skillId, v18);
+  EventInfoPassiveSkillChangeDialog__SetupSkill(this, itemId, *p_skillId, v19);
   changeButton = (UnityEngine_Object_o *)this->fields.changeButton;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
   if ( UnityEngine_Object__op_Inequality(changeButton, 0, 0) )
   {
-    v24 = this->fields.changeButton;
-    if ( !v24 )
-      sub_1D0F30C(0, v23);
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, const MethodInfo *))v24->klass->vtable._5_set_isEnabled.methodPtr)(
-      v24,
+    v26 = this->fields.changeButton;
+    if ( !v26 )
+      sub_21FFECC(0, v25);
+    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, const MethodInfo *))v26->klass->vtable._5_set_isEnabled.methodPtr)(
+      v26,
       0,
-      v24->klass->vtable._5_set_isEnabled.method);
+      v26->klass->vtable._5_set_isEnabled.method);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoPassiveSkillChangeDialog__SetupSkill(
         EventInfoPassiveSkillChangeDialog_o *this,
         int32_t itemId,
@@ -279,166 +294,172 @@ void EventInfoPassiveSkillChangeDialog__SetupSkill(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *eventInfoPassiveSkillPrefab; // x22
+  __int64 v8; // x1
   UnityEngine_Object_o *eventInfoPassiveSkillParent; // x22
-  __int64 v9; // x1
+  __int64 v10; // x1
   System_Collections_Generic_List_object__o *eventInfoPassiveSkillList; // x0
-  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
   UnityEngine_Object_o *gameObject; // x22
-  struct System_Collections_Generic_List_EventInfoPassiveSkillComponent__o *v13; // x8
+  struct System_Collections_Generic_List_EventInfoPassiveSkillComponent__o *v15; // x8
   int32_t size; // w2
-  int v15; // w9
+  int v17; // w9
   System_Int32_array *SkillList; // x0
+  __int64 v19; // x1
   il2cpp_array_size_t max_length; // x8
-  System_Int32_array *v18; // x20
-  unsigned __int64 v19; // x27
-  int32_t v20; // w22
-  UnityEngine_Transform_o *v21; // x21
-  Il2CppObject *v22; // x23
-  UnityEngine_Object_o *v23; // x23
+  System_Int32_array *v21; // x20
+  unsigned __int64 v22; // x27
+  Il2CppObject *v23; // x21
+  UnityEngine_Transform_o *v24; // x23
+  int32_t v25; // w22
+  UnityEngine_Object_o *v26; // x23
   Il2CppObject *Component_object; // x21
-  Il2CppObject *v25; // x23
+  __int64 v28; // x1
+  Il2CppObject *v29; // x23
   int32_t defaultSkillId; // w29
-  System_Action_int__o *v27; // x24
-  const MethodInfo *v28; // x4
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
+  System_Action_int__o *v31; // x24
+  const MethodInfo *v32; // x4
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v36; // x9
-  __int64 v37; // x10
-  Il2CppClass **v38; // x8
-  System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+20h] [xbp-80h] BYREF
+  _QWORD *v40; // x9
+  __int64 v41; // x10
+  Il2CppClass **v42; // x8
+  System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-80h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-68h] BYREF
 
-  if ( (byte_4E78AD1 & 1) == 0 )
+  if ( (byte_59399A2 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_int__TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__get_Current__);
-    sub_1D0F0B4(&Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassiveSkillComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78AD1 = 1;
+    sub_21FFC50(&System_Action_int__TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__get_Current__);
+    sub_21FFC50(&Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassiveSkillComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59399A2 = 1;
   }
-  entity = 0;
-  memset(&v40, 0, sizeof(v40));
   eventInfoPassiveSkillPrefab = (UnityEngine_Object_o *)this->fields.eventInfoPassiveSkillPrefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  entity = 0;
+  memset(&v44, 0, sizeof(v44));
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&itemId);
   if ( !UnityEngine_Object__op_Equality(eventInfoPassiveSkillPrefab, 0, 0) )
   {
     eventInfoPassiveSkillParent = (UnityEngine_Object_o *)this->fields.eventInfoPassiveSkillParent;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
     if ( !UnityEngine_Object__op_Equality(eventInfoPassiveSkillParent, 0, 0) )
     {
       eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoPassiveSkillList;
       if ( !eventInfoPassiveSkillList )
         goto LABEL_48;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v39,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v43,
         eventInfoPassiveSkillList,
-        (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
-      v40 = v39;
+        (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__GetEnumerator__);
+      v44 = v43;
+      v43.fields._list = 0;
+      *(_QWORD *)&v43.fields._index = &v44;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v40,
-                (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__) )
+                &v44,
+                (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__MoveNext__) )
       {
-        if ( !v40.fields._current )
-          sub_1D0F30C(0, v11);
+        if ( !v44.fields._current )
+          sub_21FFECC(0, v12);
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                               (UnityEngine_Component_o *)v40.fields._current,
+                                               (UnityEngine_Component_o *)v44.fields._current,
                                                0);
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_73359484(gameObject, 0);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+        UnityEngine_Object__Destroy_83246496(gameObject, 0);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v40,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
-      v13 = this->fields.eventInfoPassiveSkillList;
-      if ( !v13 )
+        &v44,
+        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassiveSkillComponent__Dispose__);
+      v15 = this->fields.eventInfoPassiveSkillList;
+      if ( !v15 )
         goto LABEL_48;
-      size = v13->fields._size;
-      v15 = v13->fields._version + 1;
-      v13->fields._size = 0;
-      v13->fields._version = v15;
+      size = v15->fields._size;
+      v17 = v15->fields._version + 1;
+      v15->fields._size = 0;
+      v15->fields._version = v17;
       if ( size >= 1 )
-        System_Array__Clear((System_Array_o *)v13->fields._items, 0, size, 0);
+        System_Array__Clear((System_Array_o *)v15->fields._items, 0, size, 0);
       this->fields.selectedSkillId = currentSkillId;
       this->fields.defaultSkillId = currentSkillId;
-      if ( !DataManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ItemMaster___);
+      if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v10);
+      eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
       if ( !eventInfoPassiveSkillList )
         goto LABEL_48;
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)eventInfoPassiveSkillList,
               &entity,
               itemId,
-              (const MethodInfo_3535BC8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+              (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
         return;
       eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)entity;
       if ( !entity )
 LABEL_48:
-        sub_1D0F30C(eventInfoPassiveSkillList, v9);
+        sub_21FFECC(eventInfoPassiveSkillList, v10);
       SkillList = ItemEntity__GetSkillList((ItemEntity_o *)entity, 0);
       if ( SkillList )
       {
         max_length = SkillList->max_length;
-        v18 = SkillList;
+        v21 = SkillList;
         if ( (int)max_length >= 1 )
         {
-          v19 = 0;
+          v22 = 0;
           while ( 1 )
           {
-            if ( v19 >= (unsigned int)max_length )
-              sub_1D0F314(SkillList);
-            v20 = v18->m_Items[v19];
-            v22 = (Il2CppObject *)this->fields.eventInfoPassiveSkillPrefab;
-            v21 = this->fields.eventInfoPassiveSkillParent;
-            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__Instantiate_object__53335036(
-                                                                                       v22,
-                                                                                       v21,
-                                                                                       (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+            if ( v22 >= (unsigned int)max_length )
+              sub_21FFED4(SkillList);
+            v23 = (Il2CppObject *)this->fields.eventInfoPassiveSkillPrefab;
+            v24 = this->fields.eventInfoPassiveSkillParent;
+            v25 = v21->m_Items[v22];
+            if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
+            eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__Instantiate_object__59506996(
+                                                                                       v23,
+                                                                                       v24,
+                                                                                       (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
             if ( !eventInfoPassiveSkillList )
               goto LABEL_48;
-            v23 = (UnityEngine_Object_o *)eventInfoPassiveSkillList;
+            v26 = (UnityEngine_Object_o *)eventInfoPassiveSkillList;
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)eventInfoPassiveSkillList,
-                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassiveSkillComponent___);
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassiveSkillComponent___);
             if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
               break;
-            if ( !DataManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
+            if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v28);
+            eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
             if ( !eventInfoPassiveSkillList )
               goto LABEL_48;
-            v25 = DataMasterBase_object__object__int___GetEntity(
+            v29 = DataMasterBase_object__object__int___GetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)eventInfoPassiveSkillList,
-                    v20,
-                    (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                    v25,
+                    (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
             BasicHelper__SetActiveSafely((UnityEngine_Component_o *)Component_object, 1, 0);
             defaultSkillId = this->fields.defaultSkillId;
-            v27 = (System_Action_int__o *)sub_1D0F300(System_Action_int__TypeInfo);
+            v31 = (System_Action_int__o *)sub_21FFEBC(System_Action_int__TypeInfo);
             System_Action_int____ctor(
-              v27,
+              v31,
               (Il2CppObject *)this,
               (intptr_t)Method_EventInfoPassiveSkillChangeDialog_OnSelectSkill__,
               0);
@@ -446,48 +467,48 @@ LABEL_48:
               goto LABEL_48;
             EventInfoPassiveSkillComponent__Setup(
               (EventInfoPassiveSkillComponent_o *)Component_object,
-              (SkillEntity_o *)v25,
-              v20 == defaultSkillId,
-              v27,
-              v28);
+              (SkillEntity_o *)v29,
+              v25 == defaultSkillId,
+              v31,
+              v32);
             eventInfoPassiveSkillList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoPassiveSkillList;
             if ( !eventInfoPassiveSkillList )
               goto LABEL_48;
             items = eventInfoPassiveSkillList->fields._items;
-            v36 = Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Add__;
+            v40 = Method_System_Collections_Generic_List_EventInfoPassiveSkillComponent__Add__;
             ++eventInfoPassiveSkillList->fields._version;
             if ( !items )
               goto LABEL_48;
-            v37 = eventInfoPassiveSkillList->fields._size;
-            if ( (unsigned int)v37 >= LODWORD(items->max_length) )
+            v41 = eventInfoPassiveSkillList->fields._size;
+            if ( (unsigned int)v41 >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 eventInfoPassiveSkillList,
                 Component_object,
-                *(const MethodInfo_395C410 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
             }
             else
             {
-              v38 = &items->obj.klass + v37;
-              eventInfoPassiveSkillList->fields._size = v37 + 1;
-              v38[4] = (Il2CppClass *)Component_object;
-              sub_1D0F058(
-                (GrandQuestFolderBoardItem_o *)(v38 + 4),
+              v42 = &items->obj.klass + v41;
+              eventInfoPassiveSkillList->fields._size = v41 + 1;
+              v42[4] = (Il2CppClass *)Component_object;
+              sub_21FFBF4(
+                (MissionNaviTransitionBoardItem_o *)(v42 + 4),
                 (int32_t)Component_object,
-                v29,
-                v30,
-                v31,
-                v32,
                 v33,
-                v34);
+                v34,
+                v35,
+                v36,
+                v37,
+                v38);
             }
-            LODWORD(max_length) = v18->max_length;
-            if ( (__int64)++v19 >= (int)max_length )
+            LODWORD(max_length) = v21->max_length;
+            if ( (__int64)++v22 >= (int)max_length )
               return;
           }
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_73359484(v23, 0);
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
+          UnityEngine_Object__Destroy_83246496(v26, 0);
         }
       }
     }
@@ -499,22 +520,23 @@ void EventInfoPassiveSkillChangeDialog___OnChangeSkill_b__16_0(
         EventInfoPassiveSkillChangeDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4E78AD5 & 1) == 0 )
+  if ( (byte_59399A6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78AD5 = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_int___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59399A6 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_73359484(gameObject, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  UnityEngine_Object__Destroy_83246496(gameObject, 0);
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.onChangeSkill,
     this->fields.selectedSkillId,
-    (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_36CDE6C *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -522,17 +544,18 @@ void EventInfoPassiveSkillChangeDialog___OnClose_b__17_0(
         EventInfoPassiveSkillChangeDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4E78AD6 & 1) == 0 )
+  if ( (byte_59399A7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78AD6 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59399A7 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_73359484(gameObject, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  UnityEngine_Object__Destroy_83246496(gameObject, 0);
   ActionExtensions__Call(this->fields.onCancel, 0);
 }
 
@@ -544,16 +567,16 @@ bool EventInfoPassiveSkillChangeDialog__get_CanChange(
   EventInfoPassiveSkillChangeDialog_c *v3; // x0
   int32_t defaultSkillId; // w19
 
-  if ( (byte_4E78ACD & 1) == 0 )
+  if ( (byte_593999E & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoPassiveSkillChangeDialog_TypeInfo);
-    byte_4E78ACD = 1;
+    sub_21FFC50(&EventInfoPassiveSkillChangeDialog_TypeInfo);
+    byte_593999E = 1;
   }
   v3 = EventInfoPassiveSkillChangeDialog_TypeInfo;
   defaultSkillId = this->fields.defaultSkillId;
-  if ( !EventInfoPassiveSkillChangeDialog_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoPassiveSkillChangeDialog_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoPassiveSkillChangeDialog_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoPassiveSkillChangeDialog_TypeInfo, method);
     v3 = EventInfoPassiveSkillChangeDialog_TypeInfo;
   }
   return defaultSkillId != v3->static_fields->InvalidSkillId;

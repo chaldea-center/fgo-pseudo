@@ -13,7 +13,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupUseSprite(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     (UnityEngine_Component_o *)itemDraw->fields.useSprite,
@@ -28,43 +28,49 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
         CharaGraphListViewItemBase_o *item,
         const MethodInfo *method)
 {
-  CharaGraphListViewItemDraw_o *v5; // x21
+  CharaGraphListViewItemDraw_o *v5; // x20
   CharaGraphListViewItemDrawPatternDefault_o *v6; // x23
   bool v7; // w24
   __int64 naturalAligment; // x10
   CharaGraphListViewItemBase_o *v9; // x26
+  __int64 v10; // x2
   int64_t sortValue2B; // x8
-  char v11; // w9
-  __int64 v12; // x27
-  __int64 v13; // x10
-  unsigned __int64 v14; // x11
+  char v12; // w9
+  __int64 v13; // x19
+  __int64 v14; // x10
+  unsigned __int64 v15; // x11
   UILabel_o *warningLabel3; // x22
-  System_String_o *v16; // x0
-  System_String_o *v17; // x23
-  System_String_o *v18; // x0
-  struct UILabel_o *v19; // x8
+  System_String_o *v17; // x0
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_String_o *v20; // x23
+  System_String_o *v21; // x0
+  struct UILabel_o *v22; // x8
   int32_t mWidth; // w22
-  struct UILabel_o *v21; // x8
+  struct UILabel_o *v24; // x8
+  __int64 v25; // x2
   UILabel_o *warningLabel4; // x22
   UILabel_o *warningLabel2; // x22
-  System_String_o *v24; // x0
-  CharaGraphListViewItemDrawPatternDefault_o *v25; // [xsp+0h] [xbp-70h]
-  int v26; // [xsp+Ch] [xbp-64h] BYREF
+  System_String_o *v28; // x0
+  bool v29; // w2
+  bool v30; // w2
+  CharaGraphListViewItemDrawPatternDefault_o *v31; // [xsp+0h] [xbp-70h]
+  int v32; // [xsp+Ch] [xbp-64h] BYREF
 
   v5 = itemDraw;
   v6 = (CharaGraphListViewItemDrawPatternDefault_o *)this;
-  if ( (byte_4E7220E & 1) == 0 )
+  if ( (byte_593320B & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&CharaGraphGrandEquipListViewItem_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_43/*"\n"*/);
-    sub_1D0F0B4(&StringLiteral_7087/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1D0F0B4(&StringLiteral_5549/*"EQUIP_GRAPH_USE"*/);
-    byte_4E7220E = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&CharaGraphGrandEquipListViewItem_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_43/*"\n"*/);
+    sub_21FFC50(&StringLiteral_7291/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_21FFC50(&StringLiteral_5680/*"EQUIP_GRAPH_USE"*/);
+    byte_593320B = 1;
   }
-  v26 = 0;
+  v32 = 0;
   if ( !item )
     goto LABEL_36;
   v7 = item->fields._IsUse_k__BackingField && !item->fields._IsBase_k__BackingField;
@@ -116,33 +122,33 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
     sortValue2B = v9[1].fields.sortValue2B;
     if ( sortValue2B )
     {
-      v25 = v6;
-      v11 = 0;
-      v12 = 4;
+      v31 = v6;
+      v12 = 0;
+      v13 = 4;
       while ( 1 )
       {
-        v13 = *(_QWORD *)(sortValue2B + 32);
-        if ( !v13 )
+        v14 = *(_QWORD *)(sortValue2B + 32);
+        if ( !v14 )
           goto LABEL_36;
-        v14 = *(unsigned int *)(v13 + 24);
-        if ( v12 - 4 >= (int)v14 )
+        v15 = *(unsigned int *)(v14 + 24);
+        if ( v13 - 4 >= (int)v15 )
           break;
-        if ( v12 - 4 >= v14 )
-          sub_1D0F314(this);
-        if ( *(_QWORD *)(v13 + 8 * v12) == v9[1].fields.sortValueLast )
+        if ( v13 - 4 >= v15 )
+          sub_21FFED4(this);
+        if ( *(_QWORD *)(v14 + 8 * v13) == v9[1].fields.sortValueLast )
         {
           warningLabel3 = v5->fields.warningLabel3;
           if ( v7 )
           {
-            v26 = v12 - 3;
-            v16 = System_Int32__ToString((int32_t)&v26, 0);
-            v17 = System_String__Concat_65562772((System_String_o *)StringLiteral_7087/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
-            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v18 = LocalizationManager__Get(v17, 0);
-            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_65562772(
+            v32 = v13 - 3;
+            v17 = System_Int32__ToString((int32_t)&v32, 0);
+            v20 = System_String__Concat_75438412((System_String_o *)StringLiteral_7291/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v17, 0);
+            if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
+            v21 = LocalizationManager__Get(v20, 0);
+            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_75438412(
                                                                       (System_String_o *)StringLiteral_43/*"\n"*/,
-                                                                      v18,
+                                                                      v21,
                                                                       0);
             itemDraw = (CharaGraphListViewItemDraw_o *)this;
           }
@@ -154,34 +160,34 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
             goto LABEL_36;
           UILabel__set_text(warningLabel3, (System_String_o *)itemDraw, 0);
           sortValue2B = v9[1].fields.sortValue2B;
-          v11 = 1;
+          v12 = 1;
         }
-        ++v12;
+        ++v13;
         if ( !sortValue2B )
           goto LABEL_36;
       }
-      v6 = v25;
-      if ( (v11 & 1) != 0 )
+      v6 = v31;
+      if ( (v12 & 1) != 0 )
       {
-        v19 = v5->fields.warningLabel3;
-        if ( !v19 )
+        v22 = v5->fields.warningLabel3;
+        if ( !v22 )
           goto LABEL_36;
-        mWidth = v19->fields.mWidth;
+        mWidth = v22->fields.mWidth;
         this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)BalanceConfig_TypeInfo;
-        if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+        if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, itemDraw, v10);
           this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)BalanceConfig_TypeInfo;
         }
-        if ( mWidth > *((_DWORD *)this[11].monitor + 325) )
+        if ( mWidth > *((_DWORD *)this[11].monitor + 327) )
         {
-          v21 = v5->fields.warningLabel3;
-          if ( v21 )
+          v24 = v5->fields.warningLabel3;
+          if ( v24 )
           {
             this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)v5->fields.warningLabel4;
             if ( this )
             {
-              UILabel__set_text((UILabel_o *)this, v21->fields.mText, 0);
+              UILabel__set_text((UILabel_o *)this, v24->fields.mText, 0);
               this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)v5->fields.warningLabel4;
               if ( this )
               {
@@ -193,8 +199,8 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
                   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
                   this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)BalanceConfig_TypeInfo;
                   warningLabel4 = v5->fields.warningLabel4;
-                  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
-                    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+                  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
+                    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, itemDraw, v25);
                   if ( warningLabel4 )
                   {
                     UILabel__SetCondensedScale(
@@ -209,7 +215,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
             }
           }
 LABEL_36:
-          sub_1D0F30C(this, itemDraw);
+          sub_21FFECC(this, itemDraw);
         }
         this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)v5->fields.warningLabel3;
         if ( !this )
@@ -227,11 +233,11 @@ LABEL_53:
   warningLabel2 = v5->fields.warningLabel2;
   if ( v7 )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5549/*"EQUIP_GRAPH_USE"*/, 0);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_65562772(
-                                                              v24,
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, itemDraw, v10);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5680/*"EQUIP_GRAPH_USE"*/, 0);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_75438412(
+                                                              v28,
                                                               (System_String_o *)StringLiteral_43/*"\n"*/,
                                                               0);
     itemDraw = (CharaGraphListViewItemDraw_o *)this;
@@ -243,14 +249,8 @@ LABEL_53:
   if ( !warningLabel2 )
     goto LABEL_36;
   UILabel__set_text(warningLabel2, (System_String_o *)itemDraw, 0);
-  CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v6,
-    (UnityEngine_Component_o *)v5->fields.maskSprite2,
-    v7 && item->fields._IsUse_k__BackingField,
-    0);
-  CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v6,
-    (UnityEngine_Component_o *)v5->fields.warningLabel2,
-    v7 && item->fields._IsUse_k__BackingField,
-    0);
+  v29 = item->fields._IsUse_k__BackingField && v7;
+  CharaGraphListViewItemDrawPatternDefault__SetActive(v6, (UnityEngine_Component_o *)v5->fields.maskSprite2, v29, 0);
+  v30 = item->fields._IsUse_k__BackingField && v7;
+  CharaGraphListViewItemDrawPatternDefault__SetActive(v6, (UnityEngine_Component_o *)v5->fields.warningLabel2, v30, 0);
 }

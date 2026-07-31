@@ -5,111 +5,126 @@ void BattleSetupInfo___ctor(BattleSetupInfo_o *this, const MethodInfo *method)
 }
 
 
-void BattleSetupInfo___ctor_42953520(
+void BattleSetupInfo___ctor_48530436(
         BattleSetupInfo_o *this,
         BattleSetupInfo_BattleSetupSaveInfo_o *saveInfo,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
+  bool isQuestNew; // w9
+  __int128 v14; // q0
+  int32_t questPhase; // w8
+  __int128 v16; // q1
+  bool battleBefore; // w9
   struct System_String_o *demoInfo; // x1
-  const MethodInfo *v14; // x1
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x2
+  const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x2
+  const MethodInfo *v21; // x2
   struct System_String_o *choiceRandomLimitCounts; // x1
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   struct System_String_o *choiceTransformRandomLimitCounts; // x1
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  __int64 v30; // d0
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
   struct System_Int32_array *useRewardAddItemIds; // x1
+  __int128 v38; // q0
   struct System_Int32_array **p_useRewardAddItemIds; // x20
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
 
   this->fields.needFirstOpenAutoOrganizationConfirmDialog = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveInfo )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
+  isQuestNew = saveInfo->fields.isQuestNew;
   *(_QWORD *)&this->fields.warId = *(_QWORD *)&saveInfo->fields.warId;
-  this->fields.questPhase = saveInfo->fields.questPhase;
-  *(_OWORD *)&this->fields.deckId = *(_OWORD *)&saveInfo->fields.deckId;
-  *(_OWORD *)&this->fields.followerClassId = *(_OWORD *)&saveInfo->fields.followerClassId;
+  v14 = *(_OWORD *)&saveInfo->fields.deckId;
+  questPhase = saveInfo->fields.questPhase;
+  this->fields.isQuestNew = isQuestNew;
+  *(_OWORD *)&this->fields.deckId = v14;
+  this->fields.questPhase = questPhase;
+  v16 = *(_OWORD *)&saveInfo->fields.followerClassId;
   this->fields.userEquipId = saveInfo->fields.userEquipId;
-  this->fields.isQuestNew = saveInfo->fields.isQuestNew;
-  this->fields.isScriptBeforePartySelect = saveInfo->fields.isScriptBeforePartySelect;
-  this->fields.isChildFollower = saveInfo->fields.isChildFollower;
-  this->fields.eventId = saveInfo->fields.eventId;
-  this->fields.battleBefore = saveInfo->fields.battleBefore;
-  this->fields.isBefore = saveInfo->fields.isBefore;
+  *(_OWORD *)&this->fields.followerClassId = v16;
+  *(_WORD *)&this->fields.isScriptBeforePartySelect = *(_WORD *)&saveInfo->fields.isScriptBeforePartySelect;
+  battleBefore = saveInfo->fields.battleBefore;
   demoInfo = saveInfo->fields.demoInfo;
+  this->fields.eventId = saveInfo->fields.eventId;
+  LOBYTE(questPhase) = saveInfo->fields.isBefore;
+  this->fields.battleBefore = battleBefore;
+  this->fields.isBefore = questPhase;
   this->fields.demoInfo = demoInfo;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.demoInfo, (int32_t)demoInfo, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.demoInfo, (int32_t)demoInfo, v7, v8, v9, v10, v11, v12);
   *(_QWORD *)&this->fields.selectedBranchIdx = *(_QWORD *)&saveInfo->fields.selectedBranchIdx;
   this->fields.originQuestId = saveInfo->fields.originQuestId;
-  BattleSetupInfo__SetEventUpValues(this, v14);
-  BattleSetupInfo__SetRestriction(this, 0, v15);
-  BattleSetupInfo__SetSelectableQuests(this, 0, v16);
-  this->fields.followrRandomLimitCount = saveInfo->fields.followrRandomLimitCount;
+  BattleSetupInfo__SetEventUpValues(this, v19);
+  BattleSetupInfo__SetRestriction(this, 0, v20);
+  BattleSetupInfo__SetSelectableQuests(this, 0, v21);
   choiceRandomLimitCounts = saveInfo->fields.choiceRandomLimitCounts;
+  this->fields.followrRandomLimitCount = saveInfo->fields.followrRandomLimitCount;
   this->fields.choiceRandomLimitCounts = choiceRandomLimitCounts;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.choiceRandomLimitCounts,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.choiceRandomLimitCounts,
     (int32_t)choiceRandomLimitCounts,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
-  *(_OWORD *)&this->fields.followerSpoilerProtectionLimitCount = *(_OWORD *)&saveInfo->fields.followerSpoilerProtectionLimitCount;
-  *(_QWORD *)&this->fields.followerCommandCardLimitCount = *(_QWORD *)&saveInfo->fields.followerCommandCardLimitCount;
-  choiceTransformRandomLimitCounts = saveInfo->fields.choiceTransformRandomLimitCounts;
-  this->fields.choiceTransformRandomLimitCounts = choiceTransformRandomLimitCounts;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.choiceTransformRandomLimitCounts,
-    (int32_t)choiceTransformRandomLimitCounts,
+    v23,
+    v24,
     v25,
     v26,
     v27,
-    v28,
-    v29,
-    v30);
-  *(_OWORD *)&this->fields.followerTransformSpoilerProtectionLimitCount = *(_OWORD *)&saveInfo->fields.followerTransformSpoilerProtectionLimitCount;
-  this->fields.followerTransformCommandCardLimitCount = saveInfo->fields.followerTransformCommandCardLimitCount;
-  this->fields.isScriptBeforeWarBoard = saveInfo->fields.isScriptBeforeWarBoard;
-  *(_QWORD *)&this->fields.recommendSupportIdx = *(_QWORD *)&saveInfo->fields.recommendSupportIdx;
-  this->fields.campaignItemId = saveInfo->fields.campaignItemId;
-  useRewardAddItemIds = saveInfo->fields.useRewardAddItemIds;
-  this->fields.useRewardAddItemIds = useRewardAddItemIds;
-  p_useRewardAddItemIds = &this->fields.useRewardAddItemIds;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)p_useRewardAddItemIds,
-    (int32_t)useRewardAddItemIds,
+    v28);
+  choiceTransformRandomLimitCounts = saveInfo->fields.choiceTransformRandomLimitCounts;
+  *(_OWORD *)&this->fields.followerSpoilerProtectionLimitCount = *(_OWORD *)&saveInfo->fields.followerSpoilerProtectionLimitCount;
+  v30 = *(_QWORD *)&saveInfo->fields.followerCommandCardLimitCount;
+  this->fields.choiceTransformRandomLimitCounts = choiceTransformRandomLimitCounts;
+  *(_QWORD *)&this->fields.followerCommandCardLimitCount = v30;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.choiceTransformRandomLimitCounts,
+    (int32_t)choiceTransformRandomLimitCounts,
+    v31,
+    v32,
     v33,
     v34,
     v35,
-    v36,
-    v37,
-    v38);
+    v36);
+  useRewardAddItemIds = saveInfo->fields.useRewardAddItemIds;
+  v38 = *(_OWORD *)&saveInfo->fields.followerTransformSpoilerProtectionLimitCount;
+  this->fields.useRewardAddItemIds = useRewardAddItemIds;
+  p_useRewardAddItemIds = &this->fields.useRewardAddItemIds;
+  *(_OWORD *)(p_useRewardAddItemIds - 5) = v38;
+  *((_DWORD *)p_useRewardAddItemIds - 6) = saveInfo->fields.followerTransformCommandCardLimitCount;
+  *(_QWORD *)&v38 = *(_QWORD *)&saveInfo->fields.recommendSupportIdx;
+  *((_BYTE *)p_useRewardAddItemIds - 20) = saveInfo->fields.isScriptBeforeWarBoard;
+  *(p_useRewardAddItemIds - 2) = (struct System_Int32_array *)v38;
+  *((_DWORD *)p_useRewardAddItemIds - 2) = saveInfo->fields.campaignItemId;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)p_useRewardAddItemIds,
+    (int32_t)useRewardAddItemIds,
+    v40,
+    v41,
+    v42,
+    v43,
+    v44,
+    v45);
   *((_DWORD *)p_useRewardAddItemIds + 2) = saveInfo->fields.restartWave;
 }
 
@@ -128,36 +143,38 @@ BattleSetupInfo_o *BattleSetupInfo__ConvertBattleSetupInfo(
   bool v15; // w0
   Il2CppObject *Instance; // x0
   __int64 v17; // x1
+  const MethodInfo_476E8C0 *v18; // x0
   Il2CppObject *MasterData_object; // x21
-  const MethodInfo *v19; // x1
   const MethodInfo *v20; // x1
-  const MethodInfo *v21; // x2
+  const MethodInfo *v21; // x1
   const MethodInfo *v22; // x2
-  int32_t v23; // w1
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
-  int32_t v30; // w1
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  const MethodInfo *v23; // x2
+  void *v24; // x1
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  void *v31; // x1
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  BattleSetupInfo_o *result; // x0
 
-  if ( (byte_4E77128 & 1) == 0 )
+  if ( (byte_59380ED & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleSetupInfo_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestGroupMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E77128 = 1;
+    sub_21FFC50(&BattleSetupInfo_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59380ED = 1;
   }
-  v14 = sub_1D0F300(BattleSetupInfo_TypeInfo);
+  v14 = sub_21FFEBC(BattleSetupInfo_TypeInfo);
   *(_BYTE *)(v14 + 237) = 1;
   System_Object___ctor((Il2CppObject *)v14, 0);
   *(_DWORD *)(v14 + 16) = warId;
@@ -170,44 +187,48 @@ BattleSetupInfo_o *BattleSetupInfo__ConvertBattleSetupInfo(
   }
   else
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( !Instance )
       goto LABEL_10;
     v15 = clsQuestCheck__mfCheck_IsQuestNew((clsQuestCheck_o *)Instance, qId, 0);
   }
-  *(_QWORD *)(v14 + 40) = 0;
-  *(_QWORD *)(v14 + 48) = 0;
-  *(_QWORD *)(v14 + 56) = 0;
   *(_BYTE *)(v14 + 72) = v15;
   *(_BYTE *)(v14 + 73) = isScriptBeforePartySelect;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  *(_QWORD *)(v14 + 48) = 0;
+  *(_QWORD *)(v14 + 56) = 0;
+  v18 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  *(_QWORD *)(v14 + 40) = 0;
+  Instance = SingletonMonoBehaviour_object___get_Instance(v18);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestGroupMaster___),
-        Instance = (Il2CppObject *)BattleSetupInfo__TargetQuestId((BattleSetupInfo_o *)v14, v19),
+                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestGroupMaster___),
+        Instance = (Il2CppObject *)BattleSetupInfo__TargetQuestId((BattleSetupInfo_o *)v14, v20),
         !MasterData_object) )
   {
 LABEL_10:
-    sub_1D0F30C(Instance, v17);
+    sub_21FFECC(Instance, v17);
   }
   *(_DWORD *)(v14 + 76) = QuestGroupMaster__GetEventId((QuestGroupMaster_o *)MasterData_object, (int32_t)Instance, 0);
-  BattleSetupInfo__SetEventUpValues((BattleSetupInfo_o *)v14, v20);
-  BattleSetupInfo__SetRestriction((BattleSetupInfo_o *)v14, 1, v21);
-  BattleSetupInfo__SetSelectableQuests((BattleSetupInfo_o *)v14, 0, v22);
+  BattleSetupInfo__SetEventUpValues((BattleSetupInfo_o *)v14, v21);
+  BattleSetupInfo__SetRestriction((BattleSetupInfo_o *)v14, 1, v22);
+  BattleSetupInfo__SetSelectableQuests((BattleSetupInfo_o *)v14, 0, v23);
+  v24 = StringLiteral_1/*""*/;
   *(_DWORD *)(v14 + 136) = 0;
-  v23 = StringLiteral_1/*""*/;
-  *(_QWORD *)(v14 + 144) = StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v14 + 144), v23, v24, v25, v26, v27, v28, v29);
-  *(_OWORD *)(v14 + 152) = 0u;
+  *(_QWORD *)(v14 + 144) = v24;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 144), (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_1/*""*/;
+  *(_QWORD *)(v14 + 152) = 0;
+  *(_QWORD *)(v14 + 160) = 0;
   *(_QWORD *)(v14 + 168) = 0;
-  v30 = StringLiteral_1/*""*/;
-  *(_QWORD *)(v14 + 176) = StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v14 + 176), v30, v31, v32, v33, v34, v35, v36);
-  *(_OWORD *)(v14 + 184) = 0u;
+  *(_QWORD *)(v14 + 176) = v31;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 176), (int32_t)v31, v32, v33, v34, v35, v36, v37);
+  *(_QWORD *)(v14 + 184) = 0;
+  *(_QWORD *)(v14 + 192) = 0;
+  result = (BattleSetupInfo_o *)v14;
   *(_DWORD *)(v14 + 200) = 0;
   *(_BYTE *)(v14 + 204) = isScriptBeforeWarBoard;
-  return (BattleSetupInfo_o *)v14;
+  return result;
 }
 
 
@@ -218,84 +239,116 @@ BattleSetupInfo_BattleSetupSaveInfo_o *BattleSetupInfo__GetInfoForSave(
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
+  bool isQuestNew; // w9
+  __int128 v13; // q0
+  int32_t questPhase; // w8
+  __int128 v15; // q1
+  bool battleBefore; // w9
   struct System_String_o *demoInfo; // x1
   struct System_String_o *choiceRandomLimitCounts; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
   struct System_String_o *choiceTransformRandomLimitCounts; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  __int64 v26; // d0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
   struct System_Int32_array *useRewardAddItemIds; // x1
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  int32_t followerTransformCommandCardLimitCount; // w8
+  __int64 v35; // d0
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
   BattleSetupInfo_BattleSetupSaveInfo_o *result; // x0
 
-  if ( (byte_4E77124 & 1) == 0 )
+  if ( (byte_59380E9 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
-    byte_4E77124 = 1;
+    sub_21FFC50(&BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
+    byte_59380E9 = 1;
   }
-  v3 = sub_1D0F300(BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
+  v3 = sub_21FFEBC(BattleSetupInfo_BattleSetupSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
+  isQuestNew = this->fields.isQuestNew;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.warId;
-  *(_DWORD *)(v3 + 24) = this->fields.questPhase;
-  *(_OWORD *)(v3 + 32) = *(_OWORD *)&this->fields.deckId;
-  *(_OWORD *)(v3 + 48) = *(_OWORD *)&this->fields.followerClassId;
+  v13 = *(_OWORD *)&this->fields.deckId;
+  questPhase = this->fields.questPhase;
+  *(_BYTE *)(v3 + 72) = isQuestNew;
+  *(_OWORD *)(v3 + 32) = v13;
+  *(_DWORD *)(v3 + 24) = questPhase;
+  v15 = *(_OWORD *)&this->fields.followerClassId;
   *(_QWORD *)(v3 + 64) = this->fields.userEquipId;
-  *(_BYTE *)(v3 + 72) = this->fields.isQuestNew;
-  *(_BYTE *)(v3 + 73) = this->fields.isScriptBeforePartySelect;
-  *(_BYTE *)(v3 + 74) = this->fields.isChildFollower;
-  *(_DWORD *)(v3 + 76) = this->fields.eventId;
-  *(_BYTE *)(v3 + 80) = this->fields.battleBefore;
-  *(_BYTE *)(v3 + 81) = this->fields.isBefore;
+  *(_OWORD *)(v3 + 48) = v15;
+  *(_WORD *)(v3 + 73) = *(_WORD *)&this->fields.isScriptBeforePartySelect;
+  battleBefore = this->fields.battleBefore;
   demoInfo = this->fields.demoInfo;
+  *(_DWORD *)(v3 + 76) = this->fields.eventId;
+  LOBYTE(questPhase) = this->fields.isBefore;
+  *(_BYTE *)(v3 + 80) = battleBefore;
+  *(_BYTE *)(v3 + 81) = questPhase;
   *(_QWORD *)(v3 + 88) = demoInfo;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 88), (int32_t)demoInfo, v6, v7, v8, v9, v10, v11);
-  *(_OWORD *)(v3 + 96) = *(_OWORD *)&this->fields.selectedBranchIdx;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 88), (int32_t)demoInfo, v6, v7, v8, v9, v10, v11);
   choiceRandomLimitCounts = this->fields.choiceRandomLimitCounts;
+  *(_OWORD *)(v3 + 96) = *(_OWORD *)&this->fields.selectedBranchIdx;
   *(_QWORD *)(v3 + 112) = choiceRandomLimitCounts;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 112), (int32_t)choiceRandomLimitCounts, v14, v15, v16, v17, v18, v19);
-  *(_OWORD *)(v3 + 120) = *(_OWORD *)&this->fields.followerSpoilerProtectionLimitCount;
-  *(_QWORD *)(v3 + 136) = *(_QWORD *)&this->fields.followerCommandCardLimitCount;
-  choiceTransformRandomLimitCounts = this->fields.choiceTransformRandomLimitCounts;
-  *(_QWORD *)(v3 + 144) = choiceTransformRandomLimitCounts;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)(v3 + 144),
-    (int32_t)choiceTransformRandomLimitCounts,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)(v3 + 112),
+    (int32_t)choiceRandomLimitCounts,
+    v19,
+    v20,
     v21,
     v22,
     v23,
-    v24,
-    v25,
-    v26);
-  *(_OWORD *)(v3 + 152) = *(_OWORD *)&this->fields.followerTransformSpoilerProtectionLimitCount;
-  *(_DWORD *)(v3 + 168) = this->fields.followerTransformCommandCardLimitCount;
-  *(_BYTE *)(v3 + 172) = this->fields.isScriptBeforeWarBoard;
-  *(_QWORD *)(v3 + 176) = *(_QWORD *)&this->fields.recommendSupportIdx;
-  *(_DWORD *)(v3 + 184) = this->fields.campaignItemId;
+    v24);
+  choiceTransformRandomLimitCounts = this->fields.choiceTransformRandomLimitCounts;
+  *(_OWORD *)(v3 + 120) = *(_OWORD *)&this->fields.followerSpoilerProtectionLimitCount;
+  v26 = *(_QWORD *)&this->fields.followerCommandCardLimitCount;
+  *(_QWORD *)(v3 + 144) = choiceTransformRandomLimitCounts;
+  *(_QWORD *)(v3 + 136) = v26;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)(v3 + 144),
+    (int32_t)choiceTransformRandomLimitCounts,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32);
   useRewardAddItemIds = this->fields.useRewardAddItemIds;
+  *(_OWORD *)(v3 + 152) = *(_OWORD *)&this->fields.followerTransformSpoilerProtectionLimitCount;
+  followerTransformCommandCardLimitCount = this->fields.followerTransformCommandCardLimitCount;
   *(_QWORD *)(v3 + 192) = useRewardAddItemIds;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 192), (int32_t)useRewardAddItemIds, v28, v29, v30, v31, v32, v33);
+  *(_DWORD *)(v3 + 168) = followerTransformCommandCardLimitCount;
+  v35 = *(_QWORD *)&this->fields.recommendSupportIdx;
+  *(_BYTE *)(v3 + 172) = this->fields.isScriptBeforeWarBoard;
+  *(_QWORD *)(v3 + 176) = v35;
+  *(_DWORD *)(v3 + 184) = this->fields.campaignItemId;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)(v3 + 192),
+    (int32_t)useRewardAddItemIds,
+    v36,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41);
   result = (BattleSetupInfo_BattleSetupSaveInfo_o *)v3;
   *(_DWORD *)(v3 + 188) = this->fields.restartWave;
   return result;
@@ -308,40 +361,39 @@ void BattleSetupInfo__SetEventUpValues(BattleSetupInfo_o *this, const MethodInfo
   __int64 v4; // x1
   Il2CppObject *Entity; // x0
   const MethodInfo *v6; // x1
-  int32_t v7; // w0
+  int32_t v7; // w22
   int32_t questPhase; // w20
   int32_t eventId; // w21
-  int32_t v10; // w22
-  EventUpValSetupInfo_o *v11; // x23
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  EventUpValSetupInfo_o *v10; // x23
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E77125 & 1) == 0 )
+  if ( (byte_59380EA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1D0F0B4(&EventUpValSetupInfo_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E77125 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_21FFC50(&EventUpValSetupInfo_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59380EA = 1;
   }
   if ( this->fields.eventId >= 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
+                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
     {
-      sub_1D0F30C(Instance, v4);
+      sub_21FFECC(Instance, v4);
     }
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                this->fields.eventId,
-               (const MethodInfo_3535B7C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+               (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
     if ( Entity )
     {
       if ( EventDetailEntity__IsBonusSkill((EventDetailEntity_o *)Entity, 0) )
@@ -349,19 +401,18 @@ void BattleSetupInfo__SetEventUpValues(BattleSetupInfo_o *this, const MethodInfo
         v7 = BattleSetupInfo__TargetQuestId(this, v6);
         questPhase = this->fields.questPhase;
         eventId = this->fields.eventId;
-        v10 = v7;
-        v11 = (EventUpValSetupInfo_o *)sub_1D0F300(EventUpValSetupInfo_TypeInfo);
-        EventUpValSetupInfo___ctor(v11, v10, questPhase, eventId, 0);
-        this->fields.eventUpValSetupInfo = v11;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.eventUpValSetupInfo,
-          (int32_t)v11,
+        v10 = (EventUpValSetupInfo_o *)sub_21FFEBC(EventUpValSetupInfo_TypeInfo);
+        EventUpValSetupInfo___ctor(v10, v7, questPhase, eventId, 0);
+        this->fields.eventUpValSetupInfo = v10;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.eventUpValSetupInfo,
+          (int32_t)v10,
+          v11,
           v12,
           v13,
           v14,
           v15,
-          v16,
-          v17);
+          v16);
       }
     }
   }
@@ -377,33 +428,33 @@ void BattleSetupInfo__SetRestriction(BattleSetupInfo_o *this, bool isResetDeck, 
   int32_t v8; // w23
   QuestRestrictionInfo_o *v9; // x24
   QuestRestrictionInfo_o **p_questRestrictionInfo; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   UserGameEntity_o *SelfUserGame; // x0
   __int64 v18; // x1
   UserGameEntity_o *v19; // x20
   int64_t ActiveUserEquipId; // x0
   int64_t activeDeckId; // x8
 
-  if ( (byte_4E77126 & 1) == 0 )
+  if ( (byte_59380EB & 1) == 0 )
   {
-    sub_1D0F0B4(&QuestRestrictionInfo_TypeInfo);
-    byte_4E77126 = 1;
+    sub_21FFC50(&QuestRestrictionInfo_TypeInfo);
+    byte_59380EB = 1;
   }
   eventId = this->fields.eventId;
   v6 = BattleSetupInfo__TargetQuestId(this, (const MethodInfo *)isResetDeck);
   questPhase = this->fields.questPhase;
   v8 = v6;
-  v9 = (QuestRestrictionInfo_o *)sub_1D0F300(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_44765680(v9, eventId, v8, questPhase, 0);
+  v9 = (QuestRestrictionInfo_o *)sub_21FFEBC(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_50438788(v9, eventId, v8, questPhase, 0);
   this->fields.questRestrictionInfo = v9;
   p_questRestrictionInfo = &this->fields.questRestrictionInfo;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.questRestrictionInfo,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.questRestrictionInfo,
     (int32_t)v9,
     v11,
     v12,
@@ -462,45 +513,55 @@ LABEL_15:
       }
     }
 LABEL_19:
-    sub_1D0F30C(SelfUserGame, v18);
+    sub_21FFECC(SelfUserGame, v18);
   }
 }
 
 
 void BattleSetupInfo__SetSelectableQuests(BattleSetupInfo_o *this, bool isIncludeTempData, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  const MethodInfo_476E8C0 *v10; // x0
   DataManager_o *Instance; // x0
-  __int64 v11; // x1
+  __int64 v12; // x1
   struct System_Int32_array *SelectableQuests; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E77127 & 1) == 0 )
+  if ( (byte_59380EC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E77127 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59380EC = 1;
   }
   this->fields.selectableQuestIds = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.selectableQuestIds, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.selectableQuestIds,
+    0,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v10 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.selectableRouteQuestId = 0;
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v10);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   if ( !QuestPhaseMaster__TryGetEntity(
@@ -514,19 +575,19 @@ void BattleSetupInfo__SetSelectableQuests(BattleSetupInfo_o *this, bool isInclud
   if ( !entity
     || (SelectableQuests = QuestPhaseEntity__GetSelectableQuests(entity, 0),
         this->fields.selectableQuestIds = SelectableQuests,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.selectableQuestIds,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.selectableQuestIds,
           (int32_t)SelectableQuests,
-          v13,
           v14,
           v15,
           v16,
           v17,
-          v18),
+          v18,
+          v19),
         (Instance = (DataManager_o *)entity) == 0) )
   {
 LABEL_10:
-    sub_1D0F30C(Instance, v11);
+    sub_21FFECC(Instance, v12);
   }
   this->fields.selectableRouteQuestId = QuestPhaseEntity__GetQuestPhaseSelectRoute(entity, isIncludeTempData, 0);
 }
@@ -561,7 +622,7 @@ int32_t BattleSetupInfo__TargetQuestId(BattleSetupInfo_o *this, const MethodInfo
     if ( (int)selectedBranchIdx < max_length )
     {
       if ( (unsigned int)selectedBranchIdx >= max_length )
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       p_questId = &selectableQuestIds->m_Items[selectedBranchIdx];
       return *p_questId;
     }

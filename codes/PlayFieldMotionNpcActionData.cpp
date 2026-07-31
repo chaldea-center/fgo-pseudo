@@ -1,15 +1,16 @@
+// local variable allocation has failed, the output may be wrong!
 void PlayFieldMotionNpcActionData___ctor(
         PlayFieldMotionNpcActionData_o *this,
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4E7A013 & 1) == 0 )
+  if ( (byte_593AF13 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleActionData_TypeInfo);
-    byte_4E7A013 = 1;
+    sub_21FFC50(&BattleActionData_TypeInfo);
+    byte_593AF13 = 1;
   }
-  if ( !BattleActionData_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
+  if ( !*(&BattleActionData_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo, *(_QWORD *)&targetId);
   BattleActionData___ctor((BattleActionData_o *)this, 0);
   this->fields.targetId = targetId;
 }
@@ -20,41 +21,42 @@ void PlayFieldMotionNpcActionData__PreActionProcess(
         BattleData_o *data,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *targetObject; // x22
   BattlePerformance_o *perf; // x0
-  __int64 v7; // x1
-  struct UnityEngine_GameObject_o *ServantGameObject; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  __int64 v8; // x1
+  struct UnityEngine_GameObject_o *ServantGameObject; // x1
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E7A014 & 1) == 0 )
+  if ( (byte_593AF14 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7A014 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593AF14 = 1;
   }
   BattleActionData__PreActionProcess((BattleActionData_o *)this, data, 0);
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   perf = (BattlePerformance_o *)UnityEngine_Object__op_Equality(targetObject, 0, 0);
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
     if ( !data || (perf = data->fields.perf) == 0 )
-      sub_1D0F30C(perf, v7);
+      sub_21FFECC(perf, v8);
     ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0);
     this->fields.targetObject = ServantGameObject;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.targetObject,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.targetObject,
       (int32_t)ServantGameObject,
-      v9,
       v10,
       v11,
       v12,
       v13,
-      v14);
+      v14,
+      v15);
   }
 }

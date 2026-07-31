@@ -1,6 +1,6 @@
 void BattleFieldParamComponent___ctor(BattleFieldParamComponent_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.RAID_POSITION.fields.x = xmmword_D35710;
+  *(_OWORD *)&this->fields.RAID_POSITION.fields.x = xmmword_E93240;
   *(_QWORD *)&this->fields.WAR_BOARD_POSITION.fields.y = 3260022784LL;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
@@ -16,16 +16,16 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
   struct BattleInfoData_o *battleInfo; // x9
   struct BattleRaidInfo_array *raidInfo; // x9
   BattleInfoData_o *v10; // x8
+  EventRaidMaster_o *v11; // x20
   int32_t eventId; // w21
-  EventRaidMaster_o *v12; // x20
   struct BattleFieldEnvironmentData_o *v13; // x8
   struct BattleFieldEnvironmentData_o *v14; // x8
 
-  if ( (byte_4E7ACB5 & 1) == 0 )
+  if ( (byte_593BD23 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7ACB5 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593BD23 = 1;
   }
   if ( this->fields.data )
   {
@@ -34,10 +34,10 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
     {
       root = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)root, 0);
       v4 = (UnityEngine_Transform_o *)root;
-      if ( !byte_4E70C99 )
+      if ( !byte_5931940 )
       {
-        root = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-        byte_4E70C99 = 1;
+        root = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+        byte_5931940 = 1;
       }
       if ( v4 )
       {
@@ -63,21 +63,21 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
                   root = QuestEntity__HasFlag((QuestEntity_o *)root, 0x2000000, 0);
                   if ( (root & 1) == 0 )
                   {
-                    root = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                    root = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                     if ( !root )
                       goto LABEL_34;
                     root = (__int64)DataManager__GetMasterData_object_(
                                       (DataManager_o *)root,
-                                      (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+                                      (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaidMaster___);
                     v10 = battle_ent->fields.battleInfo;
                     if ( !v10 )
                       goto LABEL_34;
+                    v11 = (EventRaidMaster_o *)root;
                     eventId = battle_ent->fields.eventId;
-                    v12 = (EventRaidMaster_o *)root;
                     root = BattleInfoData__getRaidId(v10, 0);
-                    if ( !v12 )
+                    if ( !v11 )
                       goto LABEL_34;
-                    root = (__int64)EventRaidMaster__GetEntity(v12, eventId, root, 0);
+                    root = (__int64)EventRaidMaster__GetEntity(v11, eventId, root, 0);
                     if ( root )
                     {
                       v13 = this->fields.data;
@@ -137,7 +137,7 @@ LABEL_32:
       }
     }
 LABEL_34:
-    sub_1D0F30C(root, method);
+    sub_21FFECC(root, method);
   }
 }
 
@@ -154,30 +154,38 @@ void BattleFieldParamComponent__SetData(
         BattleFieldEnvironmentData_o *data,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   struct BattlePerformance_o *Perf_k__BackingField; // x1
   const MethodInfo *v19; // x1
 
   this->fields.data = data;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)data, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.data,
+    (int32_t)data,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   if ( !data )
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   Perf_k__BackingField = data->fields._Perf_k__BackingField;
   this->fields.perf = Perf_k__BackingField;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.perf,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.perf,
     (int32_t)Perf_k__BackingField,
     v12,
     v13,
@@ -191,26 +199,27 @@ void BattleFieldParamComponent__SetData(
 
 void BattleFieldParamComponent__SetTouch(BattleFieldParamComponent_o *this, bool flg, const MethodInfo *method)
 {
+  __int64 v5; // x1
   Il2CppObject *Component_object; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4E7ACB4 & 1) == 0 )
+  if ( (byte_593BD22 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7ACB4 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BD22 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( v6 )
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( v7 )
   {
     if ( !Component_object )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v7, v8);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, flg, 0);
   }
 }
@@ -241,7 +250,7 @@ void BattleFieldParamComponent__ShowFieldConf(BattleFieldParamComponent_o *this,
   v5 = v4->fields.perf;
   if ( !v5 || (statusPerf = v5->fields.statusPerf) == 0 || (masterPerf = statusPerf->fields.masterPerf) == 0 )
 LABEL_11:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   if ( BattlePerformanceMaster__IsCloseFieldConf(statusPerf->fields.masterPerf, 0) )
     BattlePerformanceMaster__ShowFieldConf(masterPerf, 0);
 }
@@ -269,7 +278,7 @@ void BattleFieldParamComponent__UpdateView(BattleFieldParamComponent_o *this, co
       }
     }
 LABEL_7:
-    sub_1D0F30C(root, method);
+    sub_21FFECC(root, method);
   }
   BattleFieldParamComponent__SetTouch(this, 0, v2);
   root = this->fields.root;
@@ -289,21 +298,21 @@ void BattleFieldParamComponent__updateBuffIcon(
   __int64 v7; // x1
   BattleServantShowBuffComponent_o *v8; // x20
 
-  if ( (byte_4E7ACB6 & 1) == 0 )
+  if ( (byte_593BD24 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7ACB6 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BD24 = 1;
   }
   showBuffComponent = (UnityEngine_Object_o *)this->fields.showBuffComponent;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, buffData);
   ShowServantParam = (BattleBuffData_ShowBuffData_array *)UnityEngine_Object__op_Equality(showBuffComponent, 0, 0);
   if ( ((unsigned __int8)ShowServantParam & 1) == 0 )
   {
     if ( !buffData
       || (v8 = this->fields.showBuffComponent, ShowServantParam = BattleBuffData__getShowServantParam(buffData, 0), !v8) )
     {
-      sub_1D0F30C(ShowServantParam, v7);
+      sub_21FFECC(ShowServantParam, v7);
     }
     BattleServantShowBuffComponent__setBuffList(v8, ShowServantParam, 0);
   }

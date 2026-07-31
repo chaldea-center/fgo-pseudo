@@ -8,16 +8,16 @@ void FamilyBuffLinkageIdGenerator___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !servantData || (BuffData = BattleServantData__get_BuffData(servantData, 0)) == 0 )
-    sub_1D0F30C(BuffData, v6);
+    sub_21FFECC(BuffData, v6);
   this->fields.current = BattleBuffData__GetFamilyLinkageIdMax(BuffData, 0);
 }
 
 
 int32_t FamilyBuffLinkageIdGenerator__Next(FamilyBuffLinkageIdGenerator_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w8
+  int32_t result; // w0
 
-  v2 = this->fields.current + 1;
-  this->fields.current = v2;
-  return v2;
+  result = this->fields.current + 1;
+  this->fields.current = result;
+  return result;
 }

@@ -1,28 +1,28 @@
 void WarBoardPartySkillEntity___ctor(WarBoardPartySkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78882 & 1) == 0 )
+  if ( (byte_59398C4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78882 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59398C4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardPartySkillEntity__CreatePK(int32_t id, int32_t target, int32_t num, const MethodInfo *method)
 {
-  if ( (byte_4E78880 & 1) == 0 )
+  if ( (byte_59398C2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E78880 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59398C2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            target,
            num,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -39,22 +39,22 @@ SkillEntity_o *WarBoardPartySkillEntity__GetSkillEntity(WarBoardPartySkillEntity
   Il2CppObject *Master_object; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E78881 & 1) == 0 )
+  if ( (byte_59398C3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    byte_4E78881 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    byte_59398C3 = 1;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return (SkillEntity_o *)DataMasterBase_object__object__int___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                             this->fields.skillId,
-                            (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                            (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
 }
 
 
@@ -64,5 +64,10 @@ bool WarBoardPartySkillEntity__IsMatch(
         int32_t checkTarget,
         const MethodInfo *method)
 {
-  return this->fields.id == checkId && (this->fields.target == checkTarget || this->fields.target == 0);
+  int32_t target; // w8
+
+  if ( this->fields.id != checkId )
+    return 0;
+  target = this->fields.target;
+  return target == checkTarget || target == 0;
 }

@@ -1,27 +1,27 @@
 void UserPrivilegeEntity___ctor(UserPrivilegeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E785E6 & 1) == 0 )
+  if ( (byte_5939621 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E785E6 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5939621 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserPrivilegeEntity__CreatePK(int64_t userId, int32_t privilegeId, const MethodInfo *method)
 {
-  if ( (byte_4E785E5 & 1) == 0 )
+  if ( (byte_5939620 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E785E5 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_5939620 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            privilegeId,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -46,31 +46,37 @@ bool UserPrivilegeEntity__IsValidPeriod(
         int64_t nowTime,
         const MethodInfo *method)
 {
+  DataManager_c *v9; // x0
+  int v10; // w8
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
+  __int64 v12; // x1
+  int64_t startedAt; // x8
+  Il2CppObject *v15; // x9
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E785E4 & 1) == 0 )
+  if ( (byte_593961F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_PrivilegeMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E785E4 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_PrivilegeMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593961F = 1;
   }
+  v9 = DataManager_TypeInfo;
   entity = 0;
+  v10 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   *startAt = 0;
   *endAt = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_PrivilegeMaster___);
+  if ( !v10 )
+    j_il2cpp_runtime_class_init_0(v9, startAt);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_PrivilegeMaster___);
   if ( !Master_object )
     goto LABEL_18;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           this->fields.privilegeId,
-          (const MethodInfo_3535BC8 *)Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__) )
+          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
@@ -78,15 +84,17 @@ bool UserPrivilegeEntity__IsValidPeriod(
   Master_object = (Il2CppObject *)PrivilegeEntity__IsNoTimeLimit((PrivilegeEntity_o *)entity, 0);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
     return 1;
-  *startAt = this->fields.startedAt;
-  if ( !entity )
+  startedAt = this->fields.startedAt;
+  v15 = entity;
+  *startAt = startedAt;
+  if ( !v15 )
 LABEL_18:
-    sub_1D0F30C(Master_object, v10);
-  *endAt = (int64_t)entity[1].monitor + this->fields.startedAt;
+    sub_21FFECC(Master_object, v12);
+  *endAt = (int64_t)v15[1].monitor + startedAt;
   if ( !nowTime )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v12);
     nowTime = NetworkManager__getTime(0);
   }
   if ( *startAt > nowTime )

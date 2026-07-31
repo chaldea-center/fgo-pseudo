@@ -8,35 +8,33 @@ void RecommendSupportQuestBoardListViewItem___ctor(
         System_String_o *svtName,
         const MethodInfo *method)
 {
-  RecommendSupportQuestBoardListViewItem_o *v12; // x23
-  bool v13; // w24
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  RecommendSupportQuestBoardListViewItem_o *v13; // x24
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
+  bool v18; // w6
+  bool v19; // w7
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
   const MethodInfo *v26; // x1
   bool v27; // w0
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
   int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  bool v32; // w6
+  bool v33; // w7
 
-  v12 = this;
-  v13 = isSetting;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
-  v12->fields._QuestFolderInfo_k__BackingField = folderInfo;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v12->fields._QuestFolderInfo_k__BackingField,
+  v13 = this;
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  v13->fields._QuestFolderInfo_k__BackingField = folderInfo;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v13->fields._QuestFolderInfo_k__BackingField,
     (int32_t)folderInfo,
     v14,
     v15,
@@ -44,9 +42,9 @@ void RecommendSupportQuestBoardListViewItem___ctor(
     v17,
     v18,
     v19);
-  v12->fields._QuestInfo_k__BackingField = questInfo;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v12->fields._QuestInfo_k__BackingField,
+  v13->fields._QuestInfo_k__BackingField = questInfo;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v13->fields._QuestInfo_k__BackingField,
     (int32_t)questInfo,
     v20,
     v21,
@@ -54,13 +52,13 @@ void RecommendSupportQuestBoardListViewItem___ctor(
     v23,
     v24,
     v25);
-  v27 = RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(v12, v26);
-  v12->fields._SettingSvtName_k__BackingField = svtName;
-  v12 = (RecommendSupportQuestBoardListViewItem_o *)((char *)v12 + 144);
-  LOBYTE(v12[-1].fields._SettingSvtName_k__BackingField) = v27;
-  BYTE1(v12[-1].fields._SettingSvtName_k__BackingField) = v13;
-  HIDWORD(v12[-1].fields._SettingSvtName_k__BackingField) = selectIndex;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v12, (int32_t)svtName, v28, v29, v30, v31, v32, v33);
+  v27 = RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(v13, v26);
+  v13->fields._SettingSvtName_k__BackingField = svtName;
+  v13 = (RecommendSupportQuestBoardListViewItem_o *)((char *)v13 + 144);
+  BYTE1(v13[-1].fields._SettingSvtName_k__BackingField) = isSetting;
+  LOBYTE(v13[-1].fields._SettingSvtName_k__BackingField) = v27;
+  HIDWORD(v13[-1].fields._SettingSvtName_k__BackingField) = selectIndex;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)svtName, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -68,64 +66,67 @@ bool RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(
         RecommendSupportQuestBoardListViewItem_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
+  struct RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *QuestInfo_k__BackingField; // x8
   Il2CppObject *Master_object; // x20
   int64_t Instance; // x0
-  const MethodInfo *v5; // x1
-  struct RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *QuestInfo_k__BackingField; // x8
+  const MethodInfo *v7; // x1
+  struct RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *v8; // x8
   struct QuestEntity_o *questEntity; // x9
-  int32_t phase; // w21
   int32_t id; // w20
-  QuestRestrictionInfo_o *v10; // x19
-  Il2CppObject *v11; // x20
+  int32_t phase; // w21
+  QuestRestrictionInfo_o *v12; // x19
+  Il2CppObject *v13; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E7339E & 1) == 0 )
+  if ( (byte_593437E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1D0F0B4(&QuestRestrictionInfo_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4E7339E = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_21FFC50(&QuestRestrictionInfo_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_593437E = 1;
   }
+  QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
   entity = 0;
-  if ( !this->fields._QuestInfo_k__BackingField )
+  if ( !QuestInfo_k__BackingField )
     return 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
-    || (Instance = RecommendSupportSelectControl__get_SelectServantId((RecommendSupportSelectControl_o *)Instance, v5),
+    || (Instance = RecommendSupportSelectControl__get_SelectServantId((RecommendSupportSelectControl_o *)Instance, v7),
         !Master_object) )
   {
 LABEL_16:
-    sub_1D0F30C(Instance, v5);
+    sub_21FFECC(Instance, v7);
   }
   Instance = DataMasterBase_object__object__long___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                &entity,
                Instance,
-               (const MethodInfo_3538378 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+               (const MethodInfo_3EDFA34 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   if ( (Instance & 1) == 0 )
     return 0;
-  QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
-  if ( !QuestInfo_k__BackingField )
+  v8 = this->fields._QuestInfo_k__BackingField;
+  if ( !v8 )
     goto LABEL_16;
-  questEntity = QuestInfo_k__BackingField->fields.questEntity;
+  questEntity = v8->fields.questEntity;
   if ( !questEntity )
     goto LABEL_16;
-  phase = QuestInfo_k__BackingField->fields.phase;
   id = questEntity->fields.id;
-  v10 = (QuestRestrictionInfo_o *)sub_1D0F300(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_44765680(v10, 0, id, phase, 0);
-  v11 = entity;
+  phase = v8->fields.phase;
+  v12 = (QuestRestrictionInfo_o *)sub_21FFEBC(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_50438788(v12, 0, id, phase, 0);
+  v13 = entity;
   if ( !entity )
     goto LABEL_16;
   Instance = (int64_t)UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)entity, 0, 0);
   if ( !Instance )
     goto LABEL_16;
-  return UserServantEntity__getQuestRestriction((UserServantEntity_o *)v11, v10, *(_DWORD *)(Instance + 24), 2, 0);
+  return UserServantEntity__getQuestRestriction((UserServantEntity_o *)v13, v12, *(_DWORD *)(Instance + 24), 2, 0);
 }
 
 
@@ -138,17 +139,17 @@ bool RecommendSupportQuestBoardListViewItem__IsGrandEnableSupport(
   struct RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *QuestInfo_k__BackingField; // x8
   struct QuestEntity_o *questEntity; // x9
 
-  if ( (byte_4E7339F & 1) == 0 )
+  if ( (byte_593437F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4E7339F = 1;
+    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_593437F = 1;
   }
   if ( !this->fields._QuestInfo_k__BackingField )
     return 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
   if ( !QuestInfo_k__BackingField || (questEntity = QuestInfo_k__BackingField->fields.questEntity) == 0 || !Instance )
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   return PartyOrganizationUtility__IsSupportGrandEnableQuest(
            (PartyOrganizationUtility_o *)Instance,
            questEntity->fields.id,

@@ -8,9 +8,9 @@ int64_t VaildGachaInfo__CloseAt(VaildGachaInfo_o *this, const MethodInfo *method
 {
   __int64 v2; // x8
 
-  v2 = 136;
-  if ( this->fields.isPrivilege )
-    v2 = 152;
+  v2 = 152;
+  if ( !this->fields.isPrivilege )
+    v2 = 136;
   return *(int64_t *)((char *)&this->klass + v2);
 }
 

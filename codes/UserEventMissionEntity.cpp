@@ -1,27 +1,27 @@
 void UserEventMissionEntity___ctor(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E784E3 & 1) == 0 )
+  if ( (byte_593951D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E784E3 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_593951D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventMissionEntity__CreatePK(int64_t userId, int32_t missionId, const MethodInfo *method)
 {
-  if ( (byte_4E784E1 & 1) == 0 )
+  if ( (byte_593951B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E784E1 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_593951B = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -36,21 +36,22 @@ System_String_o *UserEventMissionEntity__CreatePrimaryKey(UserEventMissionEntity
 bool UserEventMissionEntity__IsTodayMissionData(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
   int64_t TodayStartTime; // x0
+  __int64 v4; // x1
   int64_t updatedAt; // x19
 
-  if ( (byte_4E784E2 & 1) == 0 )
+  if ( (byte_593951C & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E784E2 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593951C = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   TodayStartTime = NetworkManager__getTodayStartTime(0);
   updatedAt = this->fields.updatedAt;
   if ( TodayStartTime > updatedAt )
     return 0;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
   return updatedAt < NetworkManager__getNextDayStartTime(0);
 }
 

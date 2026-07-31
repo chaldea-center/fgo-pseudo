@@ -1,27 +1,27 @@
 void UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7857B & 1) == 0 )
+  if ( (byte_59395B6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E7857B = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59395B6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4E7857A & 1) == 0 )
+  if ( (byte_59395B5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E7857A = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_59395B5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -44,7 +44,7 @@ System_String_o *UserGachaHistoryEntity__ToString(UserGachaHistoryEntity_o *this
          this->fields.num,
          0);
   if ( !v2 )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return v2->fields.name;
 }
 
@@ -53,30 +53,31 @@ System_String_o *UserGachaHistoryEntity__get_CreatedAtToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_createdAtString; // x19
+  MissionNaviTransitionBoardItem_o *p_createdAtString; // x19
+  __int64 v4; // x1
   int64_t createdAt; // x20
   System_String_o *DateTime; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
 
-  if ( (byte_4E78578 & 1) == 0 )
+  if ( (byte_59395B3 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E78578 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_59395B3 = 1;
   }
-  p_createdAtString = (GrandQuestFolderBoardItem_o *)&this->fields.createdAtString;
+  p_createdAtString = (MissionNaviTransitionBoardItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0) )
   {
     createdAt = this->fields.createdAt;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
     DateTime = LocalizationManager__GetDateTime(createdAt, 0);
-    p_createdAtString->klass = (GrandQuestFolderBoardItem_c *)DateTime;
-    sub_1D0F058(p_createdAtString, (int32_t)DateTime, v6, v7, v8, v9, v10, v11);
+    p_createdAtString->klass = (MissionNaviTransitionBoardItem_c *)DateTime;
+    sub_21FFBF4(p_createdAtString, (int32_t)DateTime, v7, v8, v9, v10, v11, v12);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -84,55 +85,63 @@ System_String_o *UserGachaHistoryEntity__get_CreatedAtToString(
 
 System_String_o *UserGachaHistoryEntity__get_TitleToString(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  System_String_o **p_titleString; // x19
-  System_String_o *v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  MissionNaviTransitionBoardItem_o *p_titleString; // x19
+  __int64 v4; // x1
+  System_String_o *v5; // x0
+  System_String_o *v6; // x1
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
   int32_t gachaExtraGiftBonusType; // w8
-  System_String_o *v12; // x1
-  __int64 *v13; // x8
+  LocalizationManager_c *v14; // x0
+  __int64 *v15; // x20
 
-  if ( (byte_4E78579 & 1) == 0 )
+  if ( (byte_59395B4 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_12600/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/);
-    sub_1D0F0B4(&StringLiteral_12611/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_12625/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
-    byte_4E78579 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_12920/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/);
+    sub_21FFC50(&StringLiteral_12931/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
+    sub_21FFC50(&StringLiteral_12945/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
+    byte_59395B4 = 1;
   }
-  p_titleString = &this->fields.titleString;
+  p_titleString = (MissionNaviTransitionBoardItem_o *)&this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0) )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12611/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12931/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0);
     gachaExtraGiftBonusType = this->fields.gachaExtraGiftBonusType;
     if ( gachaExtraGiftBonusType == 3 )
     {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v13 = &StringLiteral_12600/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/;
+      v14 = LocalizationManager_TypeInfo;
+      v15 = &StringLiteral_12920/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/;
+      if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        goto LABEL_10;
     }
     else
     {
-      v12 = v4;
+      v6 = v5;
       if ( gachaExtraGiftBonusType != 2 )
       {
-LABEL_15:
-        *p_titleString = v12;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.titleString, (int32_t)v12, v5, v6, v7, v8, v9, v10);
-        return *p_titleString;
+LABEL_11:
+        p_titleString->klass = (MissionNaviTransitionBoardItem_c *)v6;
+        sub_21FFBF4(p_titleString, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+        return (System_String_o *)p_titleString->klass;
       }
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v13 = &StringLiteral_12625/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v14 = LocalizationManager_TypeInfo;
+      v15 = &StringLiteral_12945/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      {
+LABEL_10:
+        v6 = LocalizationManager__Get((System_String_o *)*v15, 0);
+        goto LABEL_11;
+      }
     }
-    v12 = LocalizationManager__Get((System_String_o *)*v13, 0);
-    goto LABEL_15;
+    j_il2cpp_runtime_class_init_0(v14, v6);
+    goto LABEL_10;
   }
-  return *p_titleString;
+  return (System_String_o *)p_titleString->klass;
 }

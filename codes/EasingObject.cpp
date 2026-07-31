@@ -35,11 +35,11 @@ void EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_50455556(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_55916512(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void EasingObject__Play_50455556(
+void EasingObject__Play_55916512(
         EasingObject_o *this,
         float from,
         float to,
@@ -51,36 +51,36 @@ void EasingObject__Play_50455556(
         const MethodInfo *method)
 {
   float v15; // s10
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  struct System_Action_o **p_mProcessAct; // x22
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
+  bool v20; // w6
+  bool v21; // w7
+  struct System_Action_o **p_mProcessAct; // x21
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
   int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v27; // w6
+  bool v28; // w7
   struct System_Action_o *v29; // x8
 
   this->fields._IsMoving_k__BackingField = 1;
-  this->fields.mFrom = from;
-  this->fields.mTo = to;
   if ( sec <= 0.0 )
     v15 = 0.0001;
   else
     v15 = sec;
+  this->fields.mFrom = from;
+  this->fields.mTo = to;
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v15;
   this->fields.mEndAct = endAct;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17, v18, v19, v20, v21);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17, v18, v19, v20, v21);
   this->fields.mProcessAct = procAct;
   p_mProcessAct = &this->fields.mProcessAct;
   *((float *)p_mProcessAct - 6) = from;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_mProcessAct, (int32_t)procAct, v23, v24, v25, v26, v27, v28);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_mProcessAct, (int32_t)procAct, v23, v24, v25, v26, v27, v28);
   v29 = *p_mProcessAct;
   *((_DWORD *)p_mProcessAct + 4) = easingType;
   *((float *)p_mProcessAct - 3) = delay;
@@ -137,12 +137,11 @@ void EasingObject__Update(EasingObject_o *this, const MethodInfo *method)
   float mStartTime; // s8
   float mDelay; // s9
   const MethodInfo *v5; // x1
-  float v6; // s3
-  float v7; // s2
-  bool v8; // nf
-  float v9; // s3
-  float v10; // s8
-  float v11; // s0
+  float v6; // s0
+  float v7; // s1
+  float v8; // s0
+  float v9; // s8
+  float v10; // s0
   struct System_Action_o *mProcessAct; // x8
   struct System_Action_o *mEndAct; // x8
 
@@ -155,23 +154,26 @@ void EasingObject__Update(EasingObject_o *this, const MethodInfo *method)
     {
       v6 = (float)(UnityEngine_Time__get_time(0) - (float)(this->fields.mStartTime + this->fields.mDelay))
          / this->fields.mTime;
-      v7 = 0.0;
-      v8 = v6 < 0.0;
-      v9 = fminf(v6, 1.0);
-      if ( !v8 )
-        v7 = v9;
-      if ( this->fields.mIsSkip )
-        v10 = 1.0;
+      if ( v6 <= 1.0 )
+        v7 = v6;
       else
-        v10 = v7;
-      v11 = Easing__Func_50454380(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+        v7 = 1.0;
+      if ( v6 >= 0.0 )
+        v8 = v7;
+      else
+        v8 = 0.0;
+      if ( this->fields.mIsSkip )
+        v9 = 1.0;
+      else
+        v9 = v8;
+      v10 = Easing__Func_55915380(this->fields.mFrom, this->fields.mTo, v9, this->fields.mEasingType, v5);
       mProcessAct = this->fields.mProcessAct;
-      this->fields.mNow = v11;
+      this->fields.mNow = v10;
       if ( mProcessAct )
         ((void (__fastcall *)(intptr_t, intptr_t))mProcessAct->fields.invoke_impl)(
           mProcessAct->fields.method_code,
           mProcessAct->fields.method);
-      if ( v10 >= 1.0 )
+      if ( v9 >= 1.0 )
       {
         mEndAct = this->fields.mEndAct;
         this->fields._IsMoving_k__BackingField = 0;

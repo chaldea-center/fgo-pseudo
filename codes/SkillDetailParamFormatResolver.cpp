@@ -1,42 +1,44 @@
 void SkillDetailParamFormatResolver___cctor(const MethodInfo *method)
 {
   System_Text_RegularExpressions_Regex_o *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   System_Collections_Generic_Dictionary_TKey__TValue__o *v8; // x19
   Il2CppObject *v9; // x20
   __int64 v10; // x0
   __int64 v11; // x1
   Il2CppObject *v12; // x20
-  Il2CppObject *v13; // x20
+  const MethodInfo_3F34960 *v13; // x3
+  Il2CppObject *v14; // x20
+  const MethodInfo_3F34960 *v15; // x3
   struct SkillDetailParamFormatResolver_StaticFields *static_fields; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
 
-  if ( (byte_4E78BC3 & 1) == 0 )
+  if ( (byte_5939C0E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
-    sub_1D0F0B4(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16261/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/);
-    byte_4E78BC3 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
+    sub_21FFC50(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    sub_21FFC50(&StringLiteral_16658/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/);
+    byte_5939C0E = 1;
   }
-  v1 = (System_Text_RegularExpressions_Regex_o *)sub_1D0F300(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_72085836(v1, (System_String_o *)StringLiteral_16261/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/, 8, 0);
+  v1 = (System_Text_RegularExpressions_Regex_o *)sub_21FFEBC(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_81846648(v1, (System_String_o *)StringLiteral_16658/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/, 8, 0);
   SkillDetailParamFormatResolver_TypeInfo->static_fields->ParamFormatRegex = v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)SkillDetailParamFormatResolver_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)SkillDetailParamFormatResolver_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -44,47 +46,41 @@ void SkillDetailParamFormatResolver___cctor(const MethodInfo *method)
     v5,
     v6,
     v7);
-  v8 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1D0F300(System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TypeInfo);
+  v8 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TypeInfo);
   System_Collections_Generic_Dictionary_char__object____ctor(
     v8,
-    (const MethodInfo_3561EB4 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData___ctor__);
-  v9 = (Il2CppObject *)sub_1D0F300(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
+    (const MethodInfo_3F33FAC *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData___ctor__);
+  v9 = (Il2CppObject *)sub_21FFEBC(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
   System_Object___ctor(v9, 0);
   v9[1].klass = (Il2CppClass *)(&dword_0 + 1);
   if ( !v8 )
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   System_Collections_Generic_Dictionary_char__object___Add(
     v8,
     0x64u,
     v9,
-    (const MethodInfo_3562888 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
-  v12 = (Il2CppObject *)sub_1D0F300(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
+    (const MethodInfo_3F34960 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
+  v12 = (Il2CppObject *)sub_21FFEBC(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
   System_Object___ctor(v12, 0);
+  v13 = (const MethodInfo_3F34960 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__;
   v12[1].klass = (Il2CppClass *)(byte_9 + 1);
-  System_Collections_Generic_Dictionary_char__object___Add(
-    v8,
-    0x6Du,
-    v12,
-    (const MethodInfo_3562888 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
-  v13 = (Il2CppObject *)sub_1D0F300(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
-  System_Object___ctor(v13, 0);
-  v13[1].klass = (Il2CppClass *)(&qword_60 + 4);
-  System_Collections_Generic_Dictionary_char__object___Add(
-    v8,
-    0x79u,
-    v13,
-    (const MethodInfo_3562888 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__);
+  System_Collections_Generic_Dictionary_char__object___Add(v8, 0x6Du, v12, v13);
+  v14 = (Il2CppObject *)sub_21FFEBC(SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
+  System_Object___ctor(v14, 0);
+  v15 = (const MethodInfo_3F34960 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__Add__;
+  v14[1].klass = (Il2CppClass *)(&qword_60 + 4);
+  System_Collections_Generic_Dictionary_char__object___Add(v8, 0x79u, v14, v15);
   static_fields = SkillDetailParamFormatResolver_TypeInfo->static_fields;
   static_fields->NumericFormatDict = (struct System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__o *)v8;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&static_fields->NumericFormatDict,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->NumericFormatDict,
     (int32_t)v8,
-    v15,
-    v16,
     v17,
     v18,
     v19,
-    v20);
+    v20,
+    v21,
+    v22);
 }
 
 
@@ -96,60 +92,61 @@ System_String_o *SkillDetailParamFormatResolver__Apply(
   __int64 v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  SkillDetailParamFormatResolver_c *v20; // x0
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
+  SkillDetailParamFormatResolver_c *v21; // x0
   System_Text_RegularExpressions_Regex_o *ParamFormatRegex; // x21
-  System_Text_RegularExpressions_MatchEvaluator_o *v22; // x22
+  System_Text_RegularExpressions_MatchEvaluator_o *v23; // x22
 
-  if ( (byte_4E78BBE & 1) == 0 )
+  if ( (byte_5939C09 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    sub_1D0F0B4(&Method_SkillDetailParamFormatResolver___c__DisplayClass11_0__Apply_g__Evaluator_0__);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25756/*"{{"*/);
-    byte_4E78BBE = 1;
+    sub_21FFC50(&System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    sub_21FFC50(&Method_SkillDetailParamFormatResolver___c__DisplayClass11_0__Apply_g__Evaluator_0__);
+    sub_21FFC50(&SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_26581/*"{{"*/);
+    byte_5939C09 = 1;
   }
-  v5 = sub_1D0F300(SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo);
+  v5 = sub_21FFEBC(SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_QWORD *)(v5 + 24) = skillLvEntity;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)skillLvEntity, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)skillLvEntity, v8, v9, v10, v11, v12, v13);
   if ( !detailText )
     goto LABEL_11;
-  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_25756/*"{{"*/, 0) )
+  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_26581/*"{{"*/, 0) )
   {
     *(_QWORD *)(v5 + 16) = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), 0, v14, v15, v16, v17, v18, v19);
-    v20 = SkillDetailParamFormatResolver_TypeInfo;
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), 0, v14, v15, v16, v17, v18, v19);
+    v21 = SkillDetailParamFormatResolver_TypeInfo;
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      v20 = SkillDetailParamFormatResolver_TypeInfo;
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v20);
+      v21 = SkillDetailParamFormatResolver_TypeInfo;
     }
-    ParamFormatRegex = v20->static_fields->ParamFormatRegex;
-    v22 = (System_Text_RegularExpressions_MatchEvaluator_o *)sub_1D0F300(System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
+    ParamFormatRegex = v21->static_fields->ParamFormatRegex;
+    v23 = (System_Text_RegularExpressions_MatchEvaluator_o *)sub_21FFEBC(System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
     System_Text_RegularExpressions_MatchEvaluator___ctor(
-      v22,
+      v23,
       (Il2CppObject *)v5,
       Method_SkillDetailParamFormatResolver___c__DisplayClass11_0__Apply_g__Evaluator_0__,
       0);
     if ( ParamFormatRegex )
-      return System_Text_RegularExpressions_Regex__Replace_72082992(ParamFormatRegex, detailText, v22, 0);
+      return System_Text_RegularExpressions_Regex__Replace_81843808(ParamFormatRegex, detailText, v23, 0);
 LABEL_11:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
   return detailText;
 }
@@ -163,52 +160,53 @@ System_String_o *SkillDetailParamFormatResolver__ApplyGivenValues(
   __int64 v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  SkillDetailParamFormatResolver_c *v14; // x0
+  bool v12; // w6
+  bool v13; // w7
+  __int64 v14; // x1
+  SkillDetailParamFormatResolver_c *v15; // x0
   System_Text_RegularExpressions_Regex_o *ParamFormatRegex; // x21
-  System_Text_RegularExpressions_MatchEvaluator_o *v16; // x22
+  System_Text_RegularExpressions_MatchEvaluator_o *v17; // x22
 
-  if ( (byte_4E78BBF & 1) == 0 )
+  if ( (byte_5939C0A & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    sub_1D0F0B4(&Method_SkillDetailParamFormatResolver___c__DisplayClass12_0__ApplyGivenValues_g__Evaluator_0__);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25756/*"{{"*/);
-    byte_4E78BBF = 1;
+    sub_21FFC50(&System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    sub_21FFC50(&Method_SkillDetailParamFormatResolver___c__DisplayClass12_0__ApplyGivenValues_g__Evaluator_0__);
+    sub_21FFC50(&SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_26581/*"{{"*/);
+    byte_5939C0A = 1;
   }
-  v5 = sub_1D0F300(SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_21FFEBC(SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_QWORD *)(v5 + 16) = values;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)values, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)values, v8, v9, v10, v11, v12, v13);
   if ( !detailText )
     goto LABEL_11;
-  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_25756/*"{{"*/, 0) )
+  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_26581/*"{{"*/, 0) )
   {
-    v14 = SkillDetailParamFormatResolver_TypeInfo;
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+    v15 = SkillDetailParamFormatResolver_TypeInfo;
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      v14 = SkillDetailParamFormatResolver_TypeInfo;
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v14);
+      v15 = SkillDetailParamFormatResolver_TypeInfo;
     }
-    ParamFormatRegex = v14->static_fields->ParamFormatRegex;
-    v16 = (System_Text_RegularExpressions_MatchEvaluator_o *)sub_1D0F300(System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
+    ParamFormatRegex = v15->static_fields->ParamFormatRegex;
+    v17 = (System_Text_RegularExpressions_MatchEvaluator_o *)sub_21FFEBC(System_Text_RegularExpressions_MatchEvaluator_TypeInfo);
     System_Text_RegularExpressions_MatchEvaluator___ctor(
-      v16,
+      v17,
       (Il2CppObject *)v5,
       Method_SkillDetailParamFormatResolver___c__DisplayClass12_0__ApplyGivenValues_g__Evaluator_0__,
       0);
     if ( ParamFormatRegex )
-      return System_Text_RegularExpressions_Regex__Replace_72082992(ParamFormatRegex, detailText, v16, 0);
+      return System_Text_RegularExpressions_Regex__Replace_81843808(ParamFormatRegex, detailText, v17, 0);
 LABEL_11:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
   return detailText;
 }
@@ -227,11 +225,10 @@ void SkillDetailParamFormatResolver__AssertFailed(
   int32_t lv; // [xsp+18h] [xbp-28h] BYREF
   int32_t skillId; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E78BC2 & 1) == 0 )
+  if ( (byte_5939C0D & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_13079/*"SkillId({0}),Lv({1}),DetailId({2})"*/);
-    byte_4E78BC2 = 1;
+    sub_21FFC50(&StringLiteral_13411/*"SkillId({0}),Lv({1}),DetailId({2})"*/);
+    byte_5939C0D = 1;
   }
   if ( matchObj )
   {
@@ -241,12 +238,12 @@ void SkillDetailParamFormatResolver__AssertFailed(
       if ( Value )
       {
         skillId = ent->fields.skillId;
-        v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &skillId);
+        v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &skillId);
         lv = ent->fields.lv;
-        v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
+        v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &lv);
         skillDetailId = ent->fields.skillDetailId;
-        v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &skillDetailId);
-        System_String__Format_65604148((System_String_o *)StringLiteral_13079/*"SkillId({0}),Lv({1}),DetailId({2})"*/, v6, v7, v8, 0);
+        v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &skillDetailId);
+        System_String__Format_75484644((System_String_o *)StringLiteral_13411/*"SkillId({0}),Lv({1}),DetailId({2})"*/, v6, v7, v8, 0);
       }
     }
   }
@@ -269,19 +266,19 @@ bool SkillDetailParamFormatResolver__TryGetFuncIndex(
   if ( !rawString )
     goto LABEL_13;
   v5 = funcIndex;
+  v6 = rawString;
   if ( rawString->fields._stringLength == 1 )
   {
-    v6 = rawString;
     v7 = v5;
     goto LABEL_4;
   }
   funcIndex = (int32_t *)System_String__Split(rawString, 0x5Fu, 0, 0);
   if ( !funcIndex )
 LABEL_13:
-    sub_1D0F30C(funcIndex, endFuncIndex);
+    sub_21FFECC(funcIndex, endFuncIndex);
   v8 = funcIndex;
   if ( !funcIndex[6] )
-    sub_1D0F314(funcIndex);
+    sub_21FFED4(funcIndex);
   if ( !System_Int32__TryParse(*((System_String_o **)funcIndex + 4), v5, 0) )
     return 0;
   if ( v8[6] < 2 )
@@ -307,50 +304,51 @@ bool SkillDetailParamFormatResolver__TryGetFuncParamValue(
         DataVals_o *vals,
         const MethodInfo *method)
 {
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  System_String_o *v14; // x19
-  SkillDetailParamFormatResolver_c *v15; // x8
+  __int64 v8; // x1
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x19
+  SkillDetailParamFormatResolver_c *v16; // x8
   struct SkillDetailParamFormatResolver_StaticFields *static_fields; // x0
 
-  if ( (byte_4E78BC0 & 1) == 0 )
+  if ( (byte_5939C0B & 1) == 0 )
   {
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16289/*"]が取れませんでした"*/);
-    sub_1D0F0B4(&StringLiteral_24342/*"svalsから["*/);
-    byte_4E78BC0 = 1;
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    sub_21FFC50(&StringLiteral_16689/*"]が取れませんでした"*/);
+    sub_21FFC50(&StringLiteral_25078/*"svalsから["*/);
+    byte_5939C0B = 1;
   }
   *value = 0;
   if ( vals )
   {
     if ( DataVals__TryGetParamByValsKey(vals, valsKeyStr, value, 0) )
       return 1;
-    v14 = System_String__Concat_65601036(
-            (System_String_o *)StringLiteral_24342/*"svalsから["*/,
+    v15 = System_String__Concat_75481624(
+            (System_String_o *)StringLiteral_25078/*"svalsから["*/,
             valsKeyStr,
-            (System_String_o *)StringLiteral_16289/*"]が取れませんでした"*/,
+            (System_String_o *)StringLiteral_16689/*"]が取れませんでした"*/,
             0);
-    v15 = SkillDetailParamFormatResolver_TypeInfo;
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+    v16 = SkillDetailParamFormatResolver_TypeInfo;
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      v15 = SkillDetailParamFormatResolver_TypeInfo;
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v8);
+      v16 = SkillDetailParamFormatResolver_TypeInfo;
     }
-    static_fields = v15->static_fields;
-    static_fields->evaluationErrorMessage = v14;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->evaluationErrorMessage,
-      (int32_t)v14,
-      v8,
+    static_fields = v16->static_fields;
+    static_fields->evaluationErrorMessage = v15;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&static_fields->evaluationErrorMessage,
+      (int32_t)v15,
       v9,
       v10,
       v11,
       v12,
-      v13);
+      v13,
+      v14);
   }
   return 0;
 }
@@ -364,168 +362,178 @@ bool SkillDetailParamFormatResolver__TryGetNumericFormat(
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *Chars; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *monitor; // x22
-  bool v9; // w21
-  uint16_t v10; // w0
-  __int64 v11; // x19
-  __int64 v12; // x0
-  __int64 *v13; // x8
+  System_String_o *v9; // x0
+  bool v10; // w19
+  uint16_t v11; // w0
+  unsigned int v12; // w8
+  __int64 v13; // x19
   Il2CppObject *v14; // x2
   Il2CppObject *v15; // x1
-  SkillDetailParamFormatResolver_c *v16; // x0
+  __int64 *v16; // x8
+  SkillDetailParamFormatResolver_c *v17; // x0
+  __int64 v18; // x1
   System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *Keys; // x20
-  SkillDetailParamFormatResolver___c_c *v18; // x8
+  SkillDetailParamFormatResolver___c_c *v20; // x8
+  struct SkillDetailParamFormatResolver___c_StaticFields *static_fields; // x9
   System_Func_T__TResult__o *_9__15_0; // x22
-  System_String_o *v20; // x21
-  Il2CppObject *v21; // x23
-  struct SkillDetailParamFormatResolver___c_StaticFields *static_fields; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  System_Collections_Generic_IEnumerable_string__o *v29; // x0
-  System_String_o *v30; // x20
-  __int64 v31; // x0
-  System_String_o *v32; // x0
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  SkillDetailParamFormatResolver_c *v39; // x8
-  System_String_o *v40; // x19
-  struct SkillDetailParamFormatResolver_StaticFields *v41; // x0
-  int v43; // [xsp+4h] [xbp-4Ch] BYREF
-  int v44; // [xsp+8h] [xbp-48h] BYREF
-  uint16_t v45; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v23; // x21
+  Il2CppObject *v24; // x23
+  struct SkillDetailParamFormatResolver___c_StaticFields *v25; // x0
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  System_Collections_Generic_IEnumerable_string__o *v32; // x0
+  System_String_o *v33; // x20
+  System_String_o *v34; // x0
+  __int64 v35; // x1
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  SkillDetailParamFormatResolver_c *v42; // x8
+  System_String_o *v43; // x19
+  struct SkillDetailParamFormatResolver_StaticFields *v44; // x0
+  int v46; // [xsp+4h] [xbp-4Ch] BYREF
+  int v47; // [xsp+8h] [xbp-48h] BYREF
+  uint16_t v48; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4E78BC1 & 1) == 0 )
+  if ( (byte_5939C0C & 1) == 0 )
   {
-    sub_1D0F0B4(&char_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__get_Keys__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Select_char__string___);
-    sub_1D0F0B4(&System_Func_char__string__TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    sub_1D0F0B4(&Method_SkillDetailParamFormatResolver___c__TryGetNumericFormat_b__15_0__);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver___c_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_26004/*"指定可能な少数点以下の桁数は({0}～{1})です"*/);
-    sub_1D0F0B4(&StringLiteral_26018/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/);
-    sub_1D0F0B4(&StringLiteral_810/*","*/);
-    byte_4E78BC1 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TryGetValue__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__get_Keys__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Select_char__string___);
+    sub_21FFC50(&System_Func_char__string__TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    sub_21FFC50(&Method_SkillDetailParamFormatResolver___c__TryGetNumericFormat_b__15_0__);
+    sub_21FFC50(&SkillDetailParamFormatResolver___c_TypeInfo);
+    sub_21FFC50(&StringLiteral_26830/*"指定可能な少数点以下の桁数は({0}～{1})です"*/);
+    sub_21FFC50(&StringLiteral_26844/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/);
+    sub_21FFC50(&StringLiteral_869/*","*/);
+    byte_5939C0C = 1;
   }
-  *fractionalDigit = 0;
   Chars = (System_Collections_Generic_Dictionary_TKey__TValue__o *)SkillDetailParamFormatResolver_TypeInfo;
-  if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+  *fractionalDigit = 0;
+  if ( !HIDWORD(Chars[2].fields._values) )
   {
-    j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
+    j_il2cpp_runtime_class_init_0(Chars, fractionalDigit);
     Chars = (System_Collections_Generic_Dictionary_TKey__TValue__o *)SkillDetailParamFormatResolver_TypeInfo;
   }
   if ( !formatKey )
-    goto LABEL_26;
+    goto LABEL_27;
   monitor = (System_Collections_Generic_Dictionary_TKey__TValue__o *)Chars[2].fields._entries->obj.monitor;
   Chars = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_String__get_Chars(formatKey, 0, 0);
   if ( !monitor )
-    goto LABEL_26;
+    goto LABEL_27;
   if ( !System_Collections_Generic_Dictionary_char__object___TryGetValue(
           monitor,
           (uint16_t)Chars,
           (Il2CppObject **)numericFormatData,
-          (const MethodInfo_35640D0 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TryGetValue__) )
+          (const MethodInfo_3F364CC *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__TryGetValue__) )
   {
-    v16 = SkillDetailParamFormatResolver_TypeInfo;
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+    v17 = SkillDetailParamFormatResolver_TypeInfo;
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      v16 = SkillDetailParamFormatResolver_TypeInfo;
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, fractionalDigit);
+      v17 = SkillDetailParamFormatResolver_TypeInfo;
     }
-    Chars = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v16->static_fields->NumericFormatDict;
+    Chars = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v17->static_fields->NumericFormatDict;
     if ( Chars )
     {
       Keys = System_Collections_Generic_Dictionary_char__object___get_Keys(
                Chars,
-               (const MethodInfo_3562548 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__get_Keys__);
-      v18 = SkillDetailParamFormatResolver___c_TypeInfo;
-      if ( !SkillDetailParamFormatResolver___c_TypeInfo->_2.cctor_finished )
+               (const MethodInfo_3F34608 *)Method_System_Collections_Generic_Dictionary_char__SkillDetailParamFormatResolver_NumericFormatData__get_Keys__);
+      v20 = SkillDetailParamFormatResolver___c_TypeInfo;
+      if ( !*(&SkillDetailParamFormatResolver___c_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver___c_TypeInfo);
-        v18 = SkillDetailParamFormatResolver___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver___c_TypeInfo, v18);
+        v20 = SkillDetailParamFormatResolver___c_TypeInfo;
       }
-      _9__15_0 = (System_Func_T__TResult__o *)v18->static_fields->__9__15_0;
-      v20 = (System_String_o *)StringLiteral_810/*","*/;
+      static_fields = v20->static_fields;
+      _9__15_0 = (System_Func_T__TResult__o *)static_fields->__9__15_0;
+      v23 = (System_String_o *)StringLiteral_869/*","*/;
       if ( !_9__15_0 )
       {
-        if ( !v18->_2.cctor_finished )
+        if ( !*(&v20->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v18);
-          v18 = SkillDetailParamFormatResolver___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v20, v18);
+          static_fields = SkillDetailParamFormatResolver___c_TypeInfo->static_fields;
         }
-        v21 = (Il2CppObject *)v18->static_fields->__9;
-        _9__15_0 = (System_Func_T__TResult__o *)sub_1D0F300(System_Func_char__string__TypeInfo);
+        v24 = (Il2CppObject *)static_fields->__9;
+        _9__15_0 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_char__string__TypeInfo);
         System_Func_char__object____ctor(
           _9__15_0,
-          v21,
+          v24,
           Method_SkillDetailParamFormatResolver___c__TryGetNumericFormat_b__15_0__,
           0);
-        static_fields = SkillDetailParamFormatResolver___c_TypeInfo->static_fields;
-        static_fields->__9__15_0 = (struct System_Func_char__string__o *)_9__15_0;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&static_fields->__9__15_0,
+        v25 = SkillDetailParamFormatResolver___c_TypeInfo->static_fields;
+        v25->__9__15_0 = (struct System_Func_char__string__o *)_9__15_0;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v25->__9__15_0,
           (int32_t)_9__15_0,
-          v23,
-          v24,
-          v25,
           v26,
           v27,
-          v28);
+          v28,
+          v29,
+          v30,
+          v31);
       }
-      v29 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_char__object_(
+      v32 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_char__object_(
                                                                   (System_Collections_Generic_IEnumerable_TSource__o *)Keys,
                                                                   (System_Func_TSource__TResult__o *)_9__15_0,
-                                                                  (const MethodInfo_3282A44 *)Method_System_Linq_Enumerable_Select_char__string___);
-      v30 = System_String__Join_65605364(v20, v29, 0);
-      v45 = System_String__get_Chars(formatKey, 0, 0);
-      v31 = j_il2cpp_value_box_0(char_TypeInfo, &v45);
-      v13 = &StringLiteral_26018/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/;
-      v15 = (Il2CppObject *)v31;
-      v14 = (Il2CppObject *)v30;
-      goto LABEL_21;
+                                                                  (const MethodInfo_3859A1C *)Method_System_Linq_Enumerable_Select_char__string___);
+      v33 = System_String__Join_75485788(v23, v32, 0);
+      v48 = System_String__get_Chars(formatKey, 0, 0);
+      v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C0B0, &v48);
+      v14 = (Il2CppObject *)v33;
+      v16 = &StringLiteral_26844/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/;
+      goto LABEL_22;
     }
-LABEL_26:
-    sub_1D0F30C(Chars, fractionalDigit);
+LABEL_27:
+    sub_21FFECC(Chars, fractionalDigit);
   }
   if ( formatKey->fields._stringLength < 2 )
     return 1;
-  v9 = 1;
-  v10 = System_String__get_Chars(formatKey, 1, 0);
-  *fractionalDigit = v10 - 48;
-  if ( (unsigned __int16)(v10 - 49) >= 3u )
+  v9 = formatKey;
+  v10 = 1;
+  v11 = System_String__get_Chars(v9, 1, 0);
+  v12 = v11 - 48;
+  *fractionalDigit = v12;
+  if ( v11 < 0x31u || v12 >= 4 )
   {
-    v44 = 1;
-    v11 = j_il2cpp_value_box_0(int_TypeInfo, &v44);
-    v43 = 3;
-    v12 = j_il2cpp_value_box_0(int_TypeInfo, &v43);
-    v13 = &StringLiteral_26004/*"指定可能な少数点以下の桁数は({0}～{1})です"*/;
-    v14 = (Il2CppObject *)v12;
-    v15 = (Il2CppObject *)v11;
-LABEL_21:
-    v32 = System_String__Format_65604080((System_String_o *)*v13, v15, v14, 0);
-    v39 = SkillDetailParamFormatResolver_TypeInfo;
-    v40 = v32;
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+    v47 = 1;
+    v13 = j_il2cpp_value_box_0(qword_594C070, &v47);
+    v46 = 3;
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v46);
+    v15 = (Il2CppObject *)v13;
+    v16 = &StringLiteral_26830/*"指定可能な少数点以下の桁数は({0}～{1})です"*/;
+LABEL_22:
+    v34 = System_String__Format_75484576((System_String_o *)*v16, v15, v14, 0);
+    v42 = SkillDetailParamFormatResolver_TypeInfo;
+    v43 = v34;
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      v39 = SkillDetailParamFormatResolver_TypeInfo;
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v35);
+      v42 = SkillDetailParamFormatResolver_TypeInfo;
     }
-    v41 = v39->static_fields;
-    v41->evaluationErrorMessage = v40;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v41->evaluationErrorMessage, (int32_t)v40, v33, v34, v35, v36, v37, v38);
+    v44 = v42->static_fields;
+    v44->evaluationErrorMessage = v43;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&v44->evaluationErrorMessage,
+      (int32_t)v43,
+      v36,
+      v37,
+      v38,
+      v39,
+      v40,
+      v41);
     return 0;
   }
-  return v9;
+  return v10;
 }
 
 
@@ -534,19 +542,20 @@ void SkillDetailParamFormatResolver_DataValsHierarchyCache___ctor(
         SkillLvEntity_o *skillLvEntity,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SkillLvEntity_k__BackingField = skillLvEntity;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)skillLvEntity, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)skillLvEntity, v5, v6, v7, v8, v9, v10);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
         SkillDetailParamFormatResolver_DataValsHierarchyCache_o *this,
         int32_t funcIndex,
@@ -555,8 +564,8 @@ DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v12; // x1
   System_Object_array *RootSkillValsArray; // x0
   const MethodInfo *v14; // x1
@@ -569,53 +578,52 @@ DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
   Il2CppObject *v21; // x23
   Il2CppObject *v22; // x0
   System_String_o *v23; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
   int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  bool v28; // w6
+  bool v29; // w7
   System_Object_array *v30; // x0
   Il2CppObject *v32; // x0
   System_String_o *v33; // x0
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
   int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
+  bool v38; // w6
+  bool v39; // w7
   int v40; // [xsp+Ch] [xbp-44h] BYREF
   int v41; // [xsp+18h] [xbp-38h] BYREF
   int v42; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E78BC8 & 1) == 0 )
+  if ( (byte_5939C12 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_IndexValue_DataVals___);
-    sub_1D0F0B4(&Method_BasicHelper_IsValidIndex_DataVals___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__DataVals____ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25721/*"{0}_{1})に該当する効果が存在しません"*/);
-    sub_1D0F0B4(&StringLiteral_25742/*"{0}番目の効果が存在しません"*/);
-    byte_4E78BC8 = 1;
+    sub_21FFC50(&Method_BasicHelper_IndexValue_DataVals___);
+    sub_21FFC50(&Method_BasicHelper_IsValidIndex_DataVals___);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__DataVals____ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
+    sub_21FFC50(&StringLiteral_26545/*"{0}_{1})に該当する効果が存在しません"*/);
+    sub_21FFC50(&StringLiteral_26567/*"{0}番目の効果が存在しません"*/);
+    byte_5939C12 = 1;
   }
   *errorMessage = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)errorMessage,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)errorMessage,
     0,
-    endFuncIndex,
-    (int32_t)errorMessage,
-    (System_String_o *)method,
+    *(System_String_o **)&endFuncIndex,
+    (System_String_o *)errorMessage,
+    (int32_t)method,
     v5,
     v6,
     v7);
   RootSkillValsArray = (System_Object_array *)SkillDetailParamFormatResolver_DataValsHierarchyCache__get_RootSkillValsArray(
                                                 this,
                                                 v12);
-  if ( BasicHelper__IsValidIndex_object__52680860(
+  if ( BasicHelper__IsValidIndex_object__58596384(
          RootSkillValsArray,
          funcIndex,
-         (const MethodInfo_323D89C *)Method_BasicHelper_IsValidIndex_DataVals___) )
+         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_DataVals___) )
   {
     if ( (endFuncIndex & 0x80000000) == 0 )
     {
@@ -627,7 +635,7 @@ DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
       if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
               EndSkillValsDict,
               funcIndex,
-              (const MethodInfo_35A83FC *)Method_System_Collections_Generic_Dictionary_int__DataVals____ContainsKey__) )
+              (const MethodInfo_3F68EFC *)Method_System_Collections_Generic_Dictionary_int__DataVals____ContainsKey__) )
       {
         SkillDetailParamFormatResolver_DataValsHierarchyCache__RegisterEndSkillVals(this, funcIndex, v18);
         EndSkillValsDict = (System_Collections_Generic_Dictionary_int__object__o *)SkillDetailParamFormatResolver_DataValsHierarchyCache__get_EndSkillValsDict(
@@ -638,19 +646,19 @@ DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
         Item = (System_Object_array *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                         EndSkillValsDict,
                                         funcIndex,
-                                        (const MethodInfo_35A8168 *)Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
-        if ( !BasicHelper__IsValidIndex_object__52680860(
+                                        (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
+        if ( !BasicHelper__IsValidIndex_object__58596384(
                 Item,
                 endFuncIndex,
-                (const MethodInfo_323D89C *)Method_BasicHelper_IsValidIndex_DataVals___) )
+                (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_DataVals___) )
         {
           v41 = funcIndex + 1;
-          v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41);
+          v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v41);
           v40 = endFuncIndex + 1;
-          v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40);
-          v23 = System_String__Format_65604080((System_String_o *)StringLiteral_25721/*"{0}_{1})に該当する効果が存在しません"*/, v21, v22, 0);
+          v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v40);
+          v23 = System_String__Format_75484576((System_String_o *)StringLiteral_26545/*"{0}_{1})に該当する効果が存在しません"*/, v21, v22, 0);
           *errorMessage = v23;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)errorMessage, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)errorMessage, (int32_t)v23, v24, v25, v26, v27, v28, v29);
         }
       }
       EndSkillValsDict = (System_Collections_Generic_Dictionary_int__object__o *)SkillDetailParamFormatResolver_DataValsHierarchyCache__get_EndSkillValsDict(
@@ -661,15 +669,15 @@ DataVals_o *SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
         v30 = (System_Object_array *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                        EndSkillValsDict,
                                        funcIndex,
-                                       (const MethodInfo_35A8168 *)Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
+                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__);
         return (DataVals_o *)BasicHelper__IndexValue_object_(
                                v30,
                                endFuncIndex,
                                0,
-                               (const MethodInfo_323D4EC *)Method_BasicHelper_IndexValue_DataVals___);
+                               (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_DataVals___);
       }
 LABEL_17:
-      sub_1D0F30C(EndSkillValsDict, v16);
+      sub_21FFECC(EndSkillValsDict, v16);
     }
     EndSkillValsDict = (System_Collections_Generic_Dictionary_int__object__o *)SkillDetailParamFormatResolver_DataValsHierarchyCache__get_RootSkillValsArray(
                                                                                  this,
@@ -677,21 +685,22 @@ LABEL_17:
     if ( !EndSkillValsDict )
       goto LABEL_17;
     if ( LODWORD(EndSkillValsDict->fields._entries) <= funcIndex )
-      sub_1D0F314(EndSkillValsDict);
+      sub_21FFED4(EndSkillValsDict);
     return (DataVals_o *)*((_QWORD *)&EndSkillValsDict->fields._count + funcIndex);
   }
   else
   {
     v42 = funcIndex + 1;
-    v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42);
-    v33 = System_String__Format((System_String_o *)StringLiteral_25742/*"{0}番目の効果が存在しません"*/, v32, 0);
+    v32 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v42);
+    v33 = System_String__Format((System_String_o *)StringLiteral_26567/*"{0}番目の効果が存在しません"*/, v32, 0);
     *errorMessage = v33;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)errorMessage, (int32_t)v33, v34, v35, v36, v37, v38, v39);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)errorMessage, (int32_t)v33, v34, v35, v36, v37, v38, v39);
     return 0;
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SkillDetailParamFormatResolver_DataValsHierarchyCache__RegisterEndSkillVals(
         SkillDetailParamFormatResolver_DataValsHierarchyCache_o *this,
         int32_t funcIndex,
@@ -704,23 +713,23 @@ void SkillDetailParamFormatResolver_DataValsHierarchyCache__RegisterEndSkillVals
   DataVals_array *EndSkillValsArrayFromRootValsForDisplay; // x21
   const MethodInfo *v10; // x1
 
-  if ( (byte_4E78BC9 & 1) == 0 )
+  if ( (byte_5939C13 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_FunctionMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__DataVals____set_Item__);
-    byte_4E78BC9 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__DataVals____set_Item__);
+    byte_5939C13 = 1;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_FunctionMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&funcIndex);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_FunctionMaster___);
   RootSkillValsArray = (System_Collections_Generic_Dictionary_int__object__o *)SkillDetailParamFormatResolver_DataValsHierarchyCache__get_RootSkillValsArray(
                                                                                  this,
                                                                                  v6);
   if ( !RootSkillValsArray )
     goto LABEL_10;
   if ( LODWORD(RootSkillValsArray->fields._entries) <= funcIndex )
-    sub_1D0F314(RootSkillValsArray);
+    sub_21FFED4(RootSkillValsArray);
   if ( !Master_object
     || (EndSkillValsArrayFromRootValsForDisplay = FunctionMaster__GetEndSkillValsArrayFromRootValsForDisplay(
                                                     (FunctionMaster_o *)Master_object,
@@ -731,13 +740,13 @@ void SkillDetailParamFormatResolver_DataValsHierarchyCache__RegisterEndSkillVals
                                                                                         v10)) == 0) )
   {
 LABEL_10:
-    sub_1D0F30C(RootSkillValsArray, v8);
+    sub_21FFECC(RootSkillValsArray, v8);
   }
   System_Collections_Generic_Dictionary_int__object___set_Item(
     RootSkillValsArray,
     funcIndex,
     &EndSkillValsArrayFromRootValsForDisplay->obj,
-    (const MethodInfo_35A81F4 *)Method_System_Collections_Generic_Dictionary_int__DataVals____set_Item__);
+    (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__DataVals____set_Item__);
 }
 
 
@@ -745,33 +754,33 @@ System_Collections_Generic_Dictionary_int__DataVals____o *SkillDetailParamFormat
         SkillDetailParamFormatResolver_DataValsHierarchyCache_o *this,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_endSkillValsDict; // x19
+  MissionNaviTransitionBoardItem_o *p_endSkillValsDict; // x19
   System_Collections_Generic_Dictionary_int__object__o *v4; // x20
   struct System_Collections_Generic_Dictionary_int__DataVals____o *endSkillValsDict; // t1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E78BC7 & 1) == 0 )
+  if ( (byte_5939C11 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__DataVals_____ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_int__DataVals____TypeInfo);
-    byte_4E78BC7 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__DataVals_____ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_int__DataVals____TypeInfo);
+    byte_5939C11 = 1;
   }
   endSkillValsDict = this->fields.endSkillValsDict;
-  p_endSkillValsDict = (GrandQuestFolderBoardItem_o *)&this->fields.endSkillValsDict;
+  p_endSkillValsDict = (MissionNaviTransitionBoardItem_o *)&this->fields.endSkillValsDict;
   v4 = (System_Collections_Generic_Dictionary_int__object__o *)endSkillValsDict;
   if ( !endSkillValsDict )
   {
-    v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_int__DataVals____TypeInfo);
+    v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__DataVals____TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v4,
-      (const MethodInfo_35A7834 *)Method_System_Collections_Generic_Dictionary_int__DataVals_____ctor__);
-    p_endSkillValsDict->klass = (GrandQuestFolderBoardItem_c *)v4;
-    sub_1D0F058(p_endSkillValsDict, (int32_t)v4, v6, v7, v8, v9, v10, v11);
+      (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__DataVals_____ctor__);
+    p_endSkillValsDict->klass = (MissionNaviTransitionBoardItem_c *)v4;
+    sub_21FFBF4(p_endSkillValsDict, (int32_t)v4, v6, v7, v8, v9, v10, v11);
   }
   return (System_Collections_Generic_Dictionary_int__DataVals____o *)v4;
 }
@@ -781,26 +790,26 @@ DataVals_array *SkillDetailParamFormatResolver_DataValsHierarchyCache__get_RootS
         SkillDetailParamFormatResolver_DataValsHierarchyCache_o *this,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_rootSkillValsArray; // x19
+  MissionNaviTransitionBoardItem_o *p_rootSkillValsArray; // x19
   DataVals_array *rootSkillValsArray; // x20
   SkillLvEntity_o *SkillLvEntity_k__BackingField; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  p_rootSkillValsArray = (GrandQuestFolderBoardItem_o *)&this->fields.rootSkillValsArray;
+  p_rootSkillValsArray = (MissionNaviTransitionBoardItem_o *)&this->fields.rootSkillValsArray;
   rootSkillValsArray = this->fields.rootSkillValsArray;
   if ( !rootSkillValsArray )
   {
     SkillLvEntity_k__BackingField = this->fields._SkillLvEntity_k__BackingField;
     if ( !SkillLvEntity_k__BackingField )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
     rootSkillValsArray = SkillLvEntity__GetSetTypeDataValArray(SkillLvEntity_k__BackingField, 0);
-    p_rootSkillValsArray->klass = (GrandQuestFolderBoardItem_c *)rootSkillValsArray;
-    sub_1D0F058(p_rootSkillValsArray, (int32_t)rootSkillValsArray, v5, v6, v7, v8, v9, v10);
+    p_rootSkillValsArray->klass = (MissionNaviTransitionBoardItem_c *)rootSkillValsArray;
+    sub_21FFBF4(p_rootSkillValsArray, (int32_t)rootSkillValsArray, v5, v6, v7, v8, v9, v10);
   }
   return rootSkillValsArray;
 }
@@ -837,38 +846,39 @@ System_String_o *SkillDetailParamFormatResolver_NumericFormatData__ConvertValueT
   System_String_o *v9; // x0
   double v10; // d0
   System_String_o *v11; // x0
-  const MethodInfo *v12; // x1
-  System_String_o *v13; // x20
-  System_String_o *SuffixStr; // x0
-  int32_t v16; // [xsp+8h] [xbp-38h] BYREF
-  int v17; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v12; // x20
+  System_String_o *PercentStr; // x1
+  int32_t v15; // [xsp+8h] [xbp-38h] BYREF
+  int v16; // [xsp+Ch] [xbp-34h] BYREF
   System_String_o format; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4E78BC6 & 1) == 0 )
+  if ( (byte_5939C10 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20086/*"f{0}"*/);
-    byte_4E78BC6 = 1;
+    sub_21FFC50(&StringLiteral_20611/*"f{0}"*/);
+    byte_5939C10 = 1;
   }
   format.klass = 0;
-  v17 = 0;
   shiftDigit = this->fields.shiftDigit;
+  v16 = 0;
   if ( fractionalDigit < 1 )
   {
-    v17 = value / shiftDigit;
-    v11 = System_Int32__ToString((int32_t)&v17, 0);
+    v16 = value / shiftDigit;
+    v11 = System_Int32__ToString((int32_t)&v16, 0);
   }
   else
   {
+    v15 = fractionalDigit;
     *(double *)&format.klass = (double)value / (double)shiftDigit;
-    v16 = fractionalDigit;
-    v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-    v9 = System_String__Format((System_String_o *)StringLiteral_20086/*"f{0}"*/, v8, 0);
-    v11 = System_Double__ToString_66981968(v10, &format, (const MethodInfo *)v9);
+    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v15);
+    v9 = System_String__Format((System_String_o *)StringLiteral_20611/*"f{0}"*/, v8, 0);
+    v11 = System_Double__ToString_76835484(v10, &format, (const MethodInfo *)v9);
   }
-  v13 = v11;
-  SuffixStr = SkillDetailParamFormatResolver_NumericFormatData__GetSuffixStr(this, v12);
-  return System_String__Concat_65562772(v13, SuffixStr, 0);
+  v12 = v11;
+  if ( this->fields.suffixType == 1 )
+    PercentStr = SkillDetailParamFormatResolver_NumericFormatData__get_PercentStr((const MethodInfo *)v11);
+  else
+    PercentStr = **(System_String_o ***)(qword_594C0B8 + 184);
+  return System_String__Concat_75438412(v12, PercentStr, 0);
 }
 
 
@@ -876,54 +886,47 @@ System_String_o *SkillDetailParamFormatResolver_NumericFormatData__GetSuffixStr(
         SkillDetailParamFormatResolver_NumericFormatData_o *this,
         const MethodInfo *method)
 {
-  SkillDetailParamFormatResolver_NumericFormatData_o *v2; // x19
-
-  v2 = this;
-  if ( (byte_4E78BC5 & 1) == 0 )
-  {
-    this = (SkillDetailParamFormatResolver_NumericFormatData_o *)sub_1D0F0B4(&string_TypeInfo);
-    byte_4E78BC5 = 1;
-  }
-  if ( v2->fields.suffixType == 1 )
+  if ( this->fields.suffixType == 1 )
     return SkillDetailParamFormatResolver_NumericFormatData__get_PercentStr((const MethodInfo *)this);
   else
-    return string_TypeInfo->static_fields->Empty;
+    return **(System_String_o ***)(qword_594C0B8 + 184);
 }
 
 
 System_String_o *SkillDetailParamFormatResolver_NumericFormatData__get_PercentStr(const MethodInfo *method)
 {
+  __int64 v1; // x1
   struct System_String_o *percentStr; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
+  int32_t v6; // w5
+  bool v7; // w6
+  bool v8; // w7
 
-  if ( (byte_4E78BC4 & 1) == 0 )
+  if ( (byte_5939C0F & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6659/*"FUNC_VALUE_PERCENT"*/);
-    byte_4E78BC4 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo);
+    sub_21FFC50(&StringLiteral_6860/*"FUNC_VALUE_PERCENT"*/);
+    byte_5939C0F = 1;
   }
   percentStr = SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields->percentStr;
   if ( !percentStr )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    percentStr = LocalizationManager__Get((System_String_o *)StringLiteral_6659/*"FUNC_VALUE_PERCENT"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v1);
+    percentStr = LocalizationManager__Get((System_String_o *)StringLiteral_6860/*"FUNC_VALUE_PERCENT"*/, 0);
     SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields->percentStr = percentStr;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields,
       (int32_t)percentStr,
-      v2,
       v3,
       v4,
       v5,
       v6,
-      v7);
+      v7,
+      v8);
   }
   return percentStr;
 }
@@ -932,23 +935,23 @@ System_String_o *SkillDetailParamFormatResolver_NumericFormatData__get_PercentSt
 void SkillDetailParamFormatResolver___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E78BCA & 1) == 0 )
+  if ( (byte_5939C14 & 1) == 0 )
   {
-    sub_1D0F0B4(&SkillDetailParamFormatResolver___c_TypeInfo);
-    byte_4E78BCA = 1;
+    sub_21FFC50(&SkillDetailParamFormatResolver___c_TypeInfo);
+    byte_5939C14 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(SkillDetailParamFormatResolver___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(SkillDetailParamFormatResolver___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SkillDetailParamFormatResolver___c_TypeInfo->static_fields->__9 = (struct SkillDetailParamFormatResolver___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)SkillDetailParamFormatResolver___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)SkillDetailParamFormatResolver___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -965,21 +968,17 @@ void SkillDetailParamFormatResolver___c___ctor(SkillDetailParamFormatResolver___
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *SkillDetailParamFormatResolver___c___TryGetNumericFormat_b__15_0(
         SkillDetailParamFormatResolver___c_o *this,
         uint16_t x,
         const MethodInfo *method)
 {
-  uint16_t v4; // [xsp+Ch] [xbp-14h] BYREF
+  uint16_t v4; // [xsp+Ch] [xbp-4h] BYREF
 
   v4 = x;
-  if ( (byte_4E78BCB & 1) == 0 )
-  {
-    sub_1D0F0B4(&char_TypeInfo);
-    byte_4E78BCB = 1;
-  }
-  if ( !char_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(char_TypeInfo);
+  if ( !*(_DWORD *)(qword_594C0B0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_594C0B0, x);
   return System_Char__ToString((uint16_t)&v4, 0);
 }
 
@@ -997,79 +996,84 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass11_0___Apply_g_
         System_Text_RegularExpressions_Match_o *matchObj,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  struct SkillDetailParamFormatResolver_DataValsHierarchyCache_o *dataValsHierarchyCache; // x8
   SkillDetailParamFormatResolver___c__DisplayClass11_0_Fields *p_fields; // x20
   struct SkillLvEntity_o *skillLvEntity; // x22
-  __int64 v12; // x23
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  SkillDetailParamFormatResolver_c *v25; // x0
+  __int64 v13; // x23
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  SkillDetailParamFormatResolver_c *v26; // x0
   struct SkillDetailParamFormatResolver_StaticFields *static_fields; // x0
   System_Text_RegularExpressions_GroupCollection_o *Item; // x0
-  __int64 v28; // x1
-  System_Text_RegularExpressions_GroupCollection_o *v29; // x21
+  __int64 v29; // x1
+  System_Text_RegularExpressions_GroupCollection_o *v30; // x21
   System_String_o *Value; // x0
-  const MethodInfo *v31; // x3
   const MethodInfo *v32; // x3
-  System_String_o *v33; // x22
-  const MethodInfo *v34; // x4
-  SkillDetailParamFormatResolver_DataValsHierarchyCache_o *dataValsHierarchyCache; // x23
-  int32_t v36; // w20
-  int32_t v37; // w22
-  DataVals_o *v38; // x0
-  DataVals_o *v39; // x20
-  const MethodInfo *v40; // x3
-  System_String_o *v41; // x21
-  const MethodInfo *v42; // x3
+  __int64 v33; // x1
+  const MethodInfo *v34; // x3
+  System_String_o *v35; // x22
+  const MethodInfo *v36; // x4
+  SkillDetailParamFormatResolver_DataValsHierarchyCache_o *v37; // x20
+  int32_t v38; // w22
+  int32_t v39; // w23
+  DataVals_o *v40; // x0
+  DataVals_o *v41; // x20
+  __int64 v42; // x1
+  const MethodInfo *v43; // x3
+  System_String_o *v44; // x21
+  const MethodInfo *v45; // x3
   int32_t funcIndex[2]; // [xsp+0h] [xbp-50h] BYREF
   SkillDetailParamFormatResolver_NumericFormatData_o *numericFormatData; // [xsp+8h] [xbp-48h] BYREF
   int32_t fractionalDigit[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E78BCC & 1) == 0 )
+  if ( (byte_5939C15 & 1) == 0 )
   {
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_DataValsHierarchyCache_TypeInfo);
-    sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    byte_4E78BCC = 1;
+    sub_21FFC50(&SkillDetailParamFormatResolver_DataValsHierarchyCache_TypeInfo);
+    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    byte_5939C15 = 1;
   }
-  *(_QWORD *)funcIndex = 0;
+  *(_QWORD *)fractionalDigit = 0;
   numericFormatData = 0;
   p_fields = &this->fields;
-  if ( !this->fields.dataValsHierarchyCache )
+  dataValsHierarchyCache = this->fields.dataValsHierarchyCache;
+  *(_QWORD *)funcIndex = 0;
+  if ( !dataValsHierarchyCache )
   {
     skillLvEntity = this->fields.skillLvEntity;
-    v12 = sub_1D0F300(SkillDetailParamFormatResolver_DataValsHierarchyCache_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v12, 0);
-    *(_QWORD *)(v12 + 16) = skillLvEntity;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v12 + 16), (int32_t)skillLvEntity, v13, v14, v15, v16, v17, v18);
-    this->fields.dataValsHierarchyCache = (struct SkillDetailParamFormatResolver_DataValsHierarchyCache_o *)v12;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, v12, v19, v20, v21, v22, v23, v24);
+    v13 = sub_21FFEBC(SkillDetailParamFormatResolver_DataValsHierarchyCache_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v13, 0);
+    *(_QWORD *)(v13 + 16) = skillLvEntity;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)skillLvEntity, v14, v15, v16, v17, v18, v19);
+    this->fields.dataValsHierarchyCache = (struct SkillDetailParamFormatResolver_DataValsHierarchyCache_o *)v13;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v13, v20, v21, v22, v23, v24, v25);
   }
-  v25 = SkillDetailParamFormatResolver_TypeInfo;
-  if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
+  v26 = SkillDetailParamFormatResolver_TypeInfo;
+  if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-    v25 = SkillDetailParamFormatResolver_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, matchObj);
+    v26 = SkillDetailParamFormatResolver_TypeInfo;
   }
-  static_fields = v25->static_fields;
+  static_fields = v26->static_fields;
   static_fields->evaluationErrorMessage = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&static_fields->evaluationErrorMessage,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->evaluationErrorMessage,
     0,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -1084,7 +1088,7 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass11_0___Apply_g_
   numericFormatData = 0;
   if ( !Item )
     goto LABEL_27;
-  v29 = Item;
+  v30 = Item;
   Item = (System_Text_RegularExpressions_GroupCollection_o *)System_Text_RegularExpressions_GroupCollection__get_Item(
                                                                Item,
                                                                1,
@@ -1092,46 +1096,46 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass11_0___Apply_g_
   if ( !Item )
     goto LABEL_27;
   Value = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)Item, 0);
-  if ( SkillDetailParamFormatResolver__TryGetFuncIndex(&funcIndex[1], funcIndex, Value, v31) )
+  if ( SkillDetailParamFormatResolver__TryGetFuncIndex(&funcIndex[1], funcIndex, Value, v32) )
   {
     Item = (System_Text_RegularExpressions_GroupCollection_o *)System_Text_RegularExpressions_GroupCollection__get_Item(
-                                                                 v29,
+                                                                 v30,
                                                                  3,
                                                                  0);
     if ( !Item )
       goto LABEL_27;
-    v33 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)Item, 0);
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-    if ( SkillDetailParamFormatResolver__TryGetNumericFormat(&numericFormatData, &fractionalDigit[1], v33, v32) )
+    v35 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)Item, 0);
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v33);
+    if ( SkillDetailParamFormatResolver__TryGetNumericFormat(&numericFormatData, &fractionalDigit[1], v35, v34) )
     {
       Item = (System_Text_RegularExpressions_GroupCollection_o *)SkillDetailParamFormatResolver_TypeInfo;
-      dataValsHierarchyCache = p_fields->dataValsHierarchyCache;
-      v37 = funcIndex[0];
-      v36 = funcIndex[1];
-      if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-      if ( !dataValsHierarchyCache )
+      v37 = p_fields->dataValsHierarchyCache;
+      v39 = funcIndex[0];
+      v38 = funcIndex[1];
+      if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v29);
+      if ( !v37 )
         goto LABEL_27;
-      v38 = SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
-              dataValsHierarchyCache,
-              v36,
+      v40 = SkillDetailParamFormatResolver_DataValsHierarchyCache__Get(
               v37,
+              v38,
+              v39,
               &SkillDetailParamFormatResolver_TypeInfo->static_fields->evaluationErrorMessage,
-              v34);
-      if ( v38 )
+              v36);
+      if ( v40 )
       {
-        v39 = v38;
+        v41 = v40;
         Item = (System_Text_RegularExpressions_GroupCollection_o *)System_Text_RegularExpressions_GroupCollection__get_Item(
-                                                                     v29,
+                                                                     v30,
                                                                      2,
                                                                      0);
         if ( !Item )
           goto LABEL_27;
-        v41 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)Item, 0);
-        if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-        if ( SkillDetailParamFormatResolver__TryGetFuncParamValue(fractionalDigit, v41, v39, v40) )
+        v44 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)Item, 0);
+        if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v42);
+        if ( SkillDetailParamFormatResolver__TryGetFuncParamValue(fractionalDigit, v44, v41, v43) )
         {
           Item = (System_Text_RegularExpressions_GroupCollection_o *)numericFormatData;
           if ( numericFormatData )
@@ -1139,9 +1143,9 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass11_0___Apply_g_
                      numericFormatData,
                      fractionalDigit[0],
                      fractionalDigit[1],
-                     v42);
+                     v45);
 LABEL_27:
-          sub_1D0F30C(Item, v28);
+          sub_21FFECC(Item, v29);
         }
       }
     }
@@ -1165,23 +1169,26 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass12_0___ApplyGiv
 {
   SkillDetailParamFormatResolver___c__DisplayClass12_0_o *v4; // x20
   SkillDetailParamFormatResolver___c__DisplayClass12_0_o *v5; // x21
-  const MethodInfo *v6; // x3
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
   System_String_o *Value; // x22
-  const MethodInfo *v8; // x3
-  System_String_o *v9; // x21
+  __int64 v9; // x1
   const MethodInfo *v10; // x3
+  System_String_o *v11; // x21
+  const MethodInfo *v12; // x3
   struct System_Int32_array *values; // x8
   int32_t endFuncIndex[2]; // [xsp+8h] [xbp-48h] BYREF
   SkillDetailParamFormatResolver_NumericFormatData_o *numericFormatData; // [xsp+10h] [xbp-40h] BYREF
   int32_t fractionalDigit; // [xsp+1Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_4E78BCD & 1) == 0 )
+  if ( (byte_5939C16 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_IsValidIndex_int___);
-    this = (SkillDetailParamFormatResolver___c__DisplayClass12_0_o *)sub_1D0F0B4(&SkillDetailParamFormatResolver_TypeInfo);
-    byte_4E78BCD = 1;
+    sub_21FFC50(&Method_BasicHelper_IsValidIndex_int___);
+    this = (SkillDetailParamFormatResolver___c__DisplayClass12_0_o *)sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
+    byte_5939C16 = 1;
   }
+  fractionalDigit = 0;
   *(_QWORD *)endFuncIndex = 0;
   numericFormatData = 0;
   if ( !matchObj )
@@ -1202,13 +1209,13 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass12_0___ApplyGiv
   if ( !this )
     goto LABEL_20;
   Value = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)this, 0);
-  if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
-  if ( SkillDetailParamFormatResolver__TryGetFuncIndex(&endFuncIndex[1], endFuncIndex, Value, v6)
+  if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v6);
+  if ( SkillDetailParamFormatResolver__TryGetFuncIndex(&endFuncIndex[1], endFuncIndex, Value, v7)
     && BasicHelper__IsValidIndex_int_(
          v4->fields.values,
          endFuncIndex[1],
-         (const MethodInfo_323D838 *)Method_BasicHelper_IsValidIndex_int___) )
+         (const MethodInfo_37E1BBC *)Method_BasicHelper_IsValidIndex_int___) )
   {
     this = (SkillDetailParamFormatResolver___c__DisplayClass12_0_o *)System_Text_RegularExpressions_GroupCollection__get_Item(
                                                                        (System_Text_RegularExpressions_GroupCollection_o *)v5,
@@ -1216,31 +1223,31 @@ System_String_o *SkillDetailParamFormatResolver___c__DisplayClass12_0___ApplyGiv
                                                                        0);
     if ( !this )
       goto LABEL_20;
-    v9 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)this, 0);
-    if ( !SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo);
+    v11 = System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)this, 0);
+    if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(SkillDetailParamFormatResolver_TypeInfo, v9);
     this = (SkillDetailParamFormatResolver___c__DisplayClass12_0_o *)SkillDetailParamFormatResolver__TryGetNumericFormat(
                                                                        &numericFormatData,
                                                                        &fractionalDigit,
-                                                                       v9,
-                                                                       v8);
+                                                                       v11,
+                                                                       v10);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       values = v4->fields.values;
       if ( values )
       {
         if ( endFuncIndex[1] >= LODWORD(values->max_length) )
-          sub_1D0F314(this);
+          sub_21FFED4(this);
         this = (SkillDetailParamFormatResolver___c__DisplayClass12_0_o *)numericFormatData;
         if ( numericFormatData )
           return SkillDetailParamFormatResolver_NumericFormatData__ConvertValueToStr(
                    numericFormatData,
                    values->m_Items[endFuncIndex[1]],
                    fractionalDigit,
-                   v10);
+                   v12);
       }
 LABEL_20:
-      sub_1D0F30C(this, matchObj);
+      sub_21FFECC(this, matchObj);
     }
   }
   return System_Text_RegularExpressions_Capture__get_Value((System_Text_RegularExpressions_Capture_o *)matchObj, 0);

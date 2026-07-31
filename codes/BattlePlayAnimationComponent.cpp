@@ -16,10 +16,10 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent__GetSaveDa
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4E7AEA7 & 1) == 0 )
+  if ( (byte_593BF14 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattlePlayAnimationComponent_SaveData_TypeInfo);
-    byte_4E7AEA7 = 1;
+    sub_21FFC50(&BattlePlayAnimationComponent_SaveData_TypeInfo);
+    byte_593BF14 = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
@@ -30,12 +30,12 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent__GetSaveDa
   if ( !v5 )
     return 0;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)v5;
-  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_1D0F300(BattlePlayAnimationComponent_SaveData_TypeInfo);
+  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_21FFEBC(BattlePlayAnimationComponent_SaveData_TypeInfo);
   BattlePlayAnimationComponent_SaveData___ctor(v7, v8);
   WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !v7 )
 LABEL_9:
-    sub_1D0F30C(WrapAnimation, v4);
+    sub_21FFECC(WrapAnimation, v4);
   BattlePlayAnimationComponent_SaveData__Init(v7, WrapAnimation, v6, v9);
   return v7;
 }
@@ -56,26 +56,23 @@ bool BattlePlayAnimationComponent__IsSave(BattlePlayAnimationComponent_o *this, 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BattlePlayAnimationComponent__PlayAnimation(
         BattlePlayAnimationComponent_o *this,
         System_String_o *animName,
         float timeline,
         const MethodInfo *method)
 {
-  long double v4; // q8
   WrapBattleBaseAnimation_o *WrapAnimation; // x0
   __int64 v7; // x1
 
-  v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_1D0F30C(0, v7);
-  ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, const MethodInfo *, long double))WrapAnimation->klass->vtable._4_PlayAnimation.methodPtr)(
+    sub_21FFECC(0, v7);
+  ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, const MethodInfo *, float))WrapAnimation->klass->vtable._4_PlayAnimation.methodPtr)(
     WrapAnimation,
     animName,
     WrapAnimation->klass->vtable._4_PlayAnimation.method,
-    v4);
+    timeline);
 }
 
 
@@ -101,12 +98,12 @@ WrapBattleBaseAnimation_o *BattlePlayAnimationComponent__get_WrapAnimation(
   struct WrapBattleBaseAnimation_o **p_wrapAnimation; // x19
   struct WrapBattleBaseAnimation_o *wrapAnimation; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
   p_wrapAnimation = &this->fields._wrapAnimation;
   wrapAnimation = this->fields._wrapAnimation;
@@ -115,7 +112,7 @@ WrapBattleBaseAnimation_o *BattlePlayAnimationComponent__get_WrapAnimation(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7, v8, v9, v10, v11);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7, v8, v9, v10, v11);
   }
   return wrapAnimation;
 }
@@ -125,32 +122,32 @@ void BattlePlayAnimationComponent_SaveData___ctor(
         BattlePlayAnimationComponent_SaveData_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
   int32_t v10; // w1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E7AEA8 & 1) == 0 )
+  if ( (byte_593BF15 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7AEA8 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593BF15 = 1;
   }
-  v9 = StringLiteral_1/*""*/;
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_1/*""*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v10 = (int)StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.animName, v10, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.animName, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -161,36 +158,44 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent_SaveData__
         WrapBattleBaseAnimation_SimpleData_o *data,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   struct System_String_o *animName; // x1
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)objName,
-    (int32_t)data,
-    (int32_t)method,
+    (System_String_o *)data,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
     v7);
   if ( !data )
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   animName = data->fields.animName;
   this->fields.animName = animName;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.animName, (int32_t)animName, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.animName,
+    (int32_t)animName,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   result = this;
   this->fields.timeline = data->fields.timeline;
   return result;

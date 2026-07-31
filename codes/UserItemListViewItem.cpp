@@ -1,57 +1,65 @@
 void UserItemListViewItem___ctor(UserItemListViewItem_o *this, UserItemData_o *usrItemData, const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   Il2CppObject *Master_object; // x0
   __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
   struct System_String_o *name; // x1
-  struct ItemEntity_o **p_itemEntity; // x20
+  int32_t itemId; // w8
+  __int64 v21; // x1
+  __int64 v22; // x2
+  DataManager_c *v23; // x0
+  int v24; // w9
+  struct ItemEntity_o *itemEntity; // x8
 
-  if ( (byte_4E725C6 & 1) == 0 )
+  if ( (byte_59334F3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    byte_4E725C6 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    byte_59334F3 = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.itemData = usrItemData;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemData, (int32_t)usrItemData, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.itemData, (int32_t)usrItemData, v5, v6, v7, v8, v9, v10);
   if ( !usrItemData )
     goto LABEL_11;
-  this->fields.itemId = usrItemData->fields.itemId;
-  *(int32x2_t *)&this->fields.dispPriority = vrev64_s32(*(int32x2_t *)&usrItemData->fields.type);
   name = usrItemData->fields.name;
+  itemId = usrItemData->fields.itemId;
   this->fields.itemName = name;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemName, (int32_t)name, v13, v14, v15, v16, v17, v18);
+  this->fields.itemId = itemId;
+  *(int32x2_t *)&this->fields.dispPriority = vrev64_s32(*(int32x2_t *)&usrItemData->fields.type);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.itemName, (int32_t)name, v13, v14, v15, v16, v17, v18);
+  v23 = DataManager_TypeInfo;
+  v24 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   this->fields.itemNum = usrItemData->fields.num;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ItemMaster___);
+  if ( !v24 )
+    j_il2cpp_runtime_class_init_0(v23, v21, v22);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_11;
-  p_itemEntity = &this->fields.itemEntity;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     (Il2CppObject **)&this->fields.itemEntity,
                                     this->fields.itemId,
-                                    (const MethodInfo_3535BC8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
-  if ( !*p_itemEntity )
+  itemEntity = this->fields.itemEntity;
+  if ( !itemEntity )
 LABEL_11:
-    sub_1D0F30C(Master_object, v12);
-  this->fields.itemLostTime = (*p_itemEntity)->fields.endedAt;
+    sub_21FFECC(Master_object, v12);
+  this->fields.itemLostTime = itemEntity->fields.endedAt;
 }
 
 
@@ -63,12 +71,12 @@ void UserItemListViewItem__Finalize(UserItemListViewItem_o *this, const MethodIn
 
 bool UserItemListViewItem__SetSortValue(UserItemListViewItem_o *this, ListViewSort_o *sort, const MethodInfo *method)
 {
-  int64_t dispPriority; // x9
   bool result; // w0
+  int64_t dispPriority; // x9
 
+  result = 1;
   dispPriority = this->fields.dispPriority;
   *(_WORD *)&this->fields.isTermination = 0;
-  result = 1;
   this->fields.sortValue1 = dispPriority;
   return result;
 }

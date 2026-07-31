@@ -5,7 +5,7 @@ void WarBoardUnPlayEventData___ctor(WarBoardUnPlayEventData_o *this, const Metho
 }
 
 
-void WarBoardUnPlayEventData___ctor_39486224(
+void WarBoardUnPlayEventData___ctor_45043848(
         WarBoardUnPlayEventData_o *this,
         int32_t id,
         int32_t scriptId,
@@ -17,7 +17,7 @@ void WarBoardUnPlayEventData___ctor_39486224(
 }
 
 
-void WarBoardUnPlayEventData___ctor_39486268(
+void WarBoardUnPlayEventData___ctor_45043892(
         WarBoardUnPlayEventData_o *this,
         WarBoardUnPlayEventData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -27,7 +27,7 @@ void WarBoardUnPlayEventData___ctor_39486268(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   this->fields = (WarBoardUnPlayEventData_Fields)saveData->fields;
 }
 
@@ -66,7 +66,7 @@ void WarBoardUnPlayEventData_SaveData___ctor(WarBoardUnPlayEventData_SaveData_o 
 }
 
 
-void WarBoardUnPlayEventData_SaveData___ctor_39486352(
+void WarBoardUnPlayEventData_SaveData___ctor_45043976(
         WarBoardUnPlayEventData_SaveData_o *this,
         WarBoardUnPlayEventData_o *eventData,
         const MethodInfo *method)
@@ -76,6 +76,6 @@ void WarBoardUnPlayEventData_SaveData___ctor_39486352(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !eventData )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   this->fields = (WarBoardUnPlayEventData_SaveData_Fields)eventData->fields;
 }

@@ -4,38 +4,40 @@ void BattleSkillDropInfo___ctor(
         DataVals_o *baseVals,
         const MethodInfo *method)
 {
-  FunctionEntity_o *funcEnt; // x0
+  __int64 Param; // x0
   __int64 v8; // x1
-  struct BattleSkillDropInfo_JsonConvertData_o **p_data; // x20
+  FunctionEntity_o *funcEnt; // x8
+  struct BattleSkillDropInfo_JsonConvertData_o *data; // x8
 
-  if ( (byte_4E7A520 & 1) == 0 )
+  if ( (byte_593B581 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
-    byte_4E7A520 = 1;
+    sub_21FFC50(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+    byte_593B581 = 1;
   }
   DropInfo___ctor((DropInfo_o *)this, 0);
   this->fields.dropperUniqueId = uniqueId;
   if ( !baseVals )
     goto LABEL_9;
   this->fields._SkillId_k__BackingField = DataVals__GetParam(baseVals, 3, 0, 0);
-  this->fields._SkillLv_k__BackingField = DataVals__GetParam(baseVals, 4, 0, 0);
+  Param = DataVals__GetParam(baseVals, 4, 0, 0);
   funcEnt = baseVals->fields.funcEnt;
+  this->fields._SkillLv_k__BackingField = Param;
   if ( !funcEnt )
     goto LABEL_9;
-  p_data = &this->fields.data;
-  funcEnt = (FunctionEntity_o *)FunctionEntity__TryGetBattleSkillDropInfoDict(funcEnt, &this->fields.data, 0);
-  if ( ((unsigned __int8)funcEnt & 1) != 0 )
+  Param = FunctionEntity__TryGetBattleSkillDropInfoDict(funcEnt, &this->fields.data, 0);
+  if ( (Param & 1) != 0 )
   {
-    if ( *p_data )
+    data = this->fields.data;
+    if ( data )
     {
       this->fields.effectType = EnumUtility__CastToEnum_Int32Enum_(
-                                  (*p_data)->fields.dropEffectType,
+                                  data->fields.dropEffectType,
                                   0,
-                                  (const MethodInfo_32562DC *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+                                  (const MethodInfo_382E5C0 *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1D0F30C(funcEnt, v8);
+    sub_21FFECC(Param, v8);
   }
 LABEL_8:
   this->fields.rarity = 1000;
@@ -48,17 +50,17 @@ void BattleSkillDropInfo__SetBattleMoveObject(
         BattleMoveObject_o *moveObject,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._BattleMoveObject_k__BackingField = moveObject;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)moveObject,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -147,17 +149,17 @@ void BattleSkillDropInfo__set_BattleMoveObject(
         BattleMoveObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._BattleMoveObject_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

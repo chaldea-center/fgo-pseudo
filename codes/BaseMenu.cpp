@@ -1,11 +1,11 @@
 void BaseMenu___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E71034 & 1) == 0 )
+  if ( (byte_5931CC8 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseMenu_TypeInfo);
-    byte_4E71034 = 1;
+    sub_21FFC50(&BaseMenu_TypeInfo);
+    byte_5931CC8 = 1;
   }
-  *BaseMenu_TypeInfo->static_fields = (struct BaseMenu_StaticFields)xmmword_D35AD0;
+  *BaseMenu_TypeInfo->static_fields = (struct BaseMenu_StaticFields)xmmword_E93E40;
 }
 
 
@@ -17,41 +17,50 @@ void BaseMenu___ctor(BaseMenu_o *this, const MethodInfo *method)
 
 void BaseMenu__Close(BaseMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x2
+  UnityEngine_Object_c *v7; // x0
   UnityEngine_Object_o *baseWindow; // x20
-  const MethodInfo *v6; // x1
+  const MethodInfo *v9; // x1
+  __int64 v10; // x2
   UnityEngine_Object_o *closeTransform; // x20
   UnityEngine_GameObject_o *transform; // x0
-  UnityEngine_Transform_o *v9; // x20
-  UnityEngine_GameObject_o *v10; // x20
+  UnityEngine_Transform_o *v13; // x20
+  __int64 v14; // x1
+  __int64 v15; // x2
   float x; // s8
   float y; // s9
-  BaseMenu_c *v13; // x0
   float z; // s10
-  TweenPosition_o *v15; // x20
+  UnityEngine_GameObject_o *v19; // x20
+  BaseMenu_c *v20; // x0
+  __int64 v21; // x1
+  __int64 v22; // x2
+  TweenPosition_o *v23; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v17; // x1
+  __int64 v25; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4E71033 & 1) == 0 )
+  if ( (byte_5931CC7 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseMenu_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6046/*"EndCloseBaseDialog"*/);
-    byte_4E71033 = 1;
+    sub_21FFC50(&BaseMenu_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_6228/*"EndCloseBaseDialog"*/);
+    byte_5931CC7 = 1;
   }
   this->fields.baseCallbackFunc = callback;
-  sub_1D0F058(&this->fields.baseCallbackFunc, callback);
+  sub_21FFBF4(&this->fields.baseCallbackFunc, callback);
+  v7 = UnityEngine_Object_TypeInfo;
   *(_WORD *)&this->fields.isOpen = 0;
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&v7->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v7, v5, v6);
   if ( UnityEngine_Object__op_Inequality(baseWindow, 0, 0) )
   {
     closeTransform = (UnityEngine_Object_o *)this->fields.closeTransform;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
     if ( UnityEngine_Object__op_Inequality(closeTransform, 0, 0) )
     {
       transform = this->fields.baseWindow;
@@ -63,43 +72,43 @@ void BaseMenu__Close(BaseMenu_o *this, System_Action_o *callback, const MethodIn
       transform = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0);
       if ( !this->fields.closeTransform )
         goto LABEL_24;
-      v9 = (UnityEngine_Transform_o *)transform;
+      v13 = (UnityEngine_Transform_o *)transform;
       position = UnityEngine_Transform__get_position(this->fields.closeTransform, 0);
-      if ( !v9 )
+      if ( !v13 )
         goto LABEL_24;
-      v19 = UnityEngine_Transform__InverseTransformPoint(v9, position, 0);
-      v10 = this->fields.baseWindow;
-      x = v19.fields.x;
-      y = v19.fields.y;
-      v13 = BaseMenu_TypeInfo;
-      z = v19.fields.z;
-      if ( !BaseMenu_TypeInfo->_2.cctor_finished )
+      v27 = UnityEngine_Transform__InverseTransformPoint(v13, position, 0);
+      x = v27.fields.x;
+      y = v27.fields.y;
+      z = v27.fields.z;
+      v19 = this->fields.baseWindow;
+      v20 = BaseMenu_TypeInfo;
+      if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
-        v13 = BaseMenu_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, v14, v15);
+        v20 = BaseMenu_TypeInfo;
       }
-      v20.fields.x = x;
-      v20.fields.y = y;
-      v20.fields.z = z;
-      v15 = TweenPosition__Begin(v10, v13->static_fields->CLOSE_MOVE_TIME, v20, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v15, 0, 0);
+      v28.fields.x = x;
+      v28.fields.y = y;
+      v28.fields.z = z;
+      v23 = TweenPosition__Begin(v19, v20->static_fields->CLOSE_MOVE_TIME, v28, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21, v22);
+      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0, 0);
       if ( ((unsigned __int8)transform & 1) != 0 )
       {
-        if ( v15 )
+        if ( v23 )
         {
-          v15->fields.method = 3;
+          v23->fields.method = 3;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          v15->fields.eventReceiver = gameObject;
-          sub_1D0F058(&v15->fields.eventReceiver, gameObject);
-          v17 = StringLiteral_6046/*"EndCloseBaseDialog"*/;
-          v15->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6046/*"EndCloseBaseDialog"*/;
-          sub_1D0F058(&v15->fields.callWhenFinished, v17);
+          v23->fields.eventReceiver = gameObject;
+          sub_21FFBF4(&v23->fields.eventReceiver, gameObject);
+          v25 = StringLiteral_6228/*"EndCloseBaseDialog"*/;
+          v23->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6228/*"EndCloseBaseDialog"*/;
+          sub_21FFBF4(&v23->fields.callWhenFinished, v25);
           return;
         }
 LABEL_24:
-        sub_1D0F30C(transform, v6);
+        sub_21FFECC(transform, v9);
       }
       transform = this->fields.baseWindow;
       if ( !transform )
@@ -110,7 +119,7 @@ LABEL_24:
       UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, this->fields.basePosition, 0);
     }
   }
-  BaseMenu__EndCloseBaseDialog(this, v6);
+  BaseMenu__EndCloseBaseDialog(this, v9);
 }
 
 
@@ -127,7 +136,7 @@ void BaseMenu__EndCloseBaseDialog(BaseMenu_o *this, const MethodInfo *method)
   if ( baseCallbackFunc )
   {
     *p_baseCallbackFunc = 0;
-    sub_1D0F058(p_baseCallbackFunc, 0);
+    sub_21FFBF4(p_baseCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -146,7 +155,7 @@ void BaseMenu__EndOpenBaseDialog(BaseMenu_o *this, const MethodInfo *method)
   if ( baseCallbackFunc )
   {
     *p_baseCallbackFunc = 0;
-    sub_1D0F058(p_baseCallbackFunc, 0);
+    sub_21FFBF4(p_baseCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -154,23 +163,29 @@ void BaseMenu__EndOpenBaseDialog(BaseMenu_o *this, const MethodInfo *method)
 
 void BaseMenu__Init(BaseMenu_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *baseWindow; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
   UnityEngine_GameObject_o *transform; // x0
-  UnityEngine_Object_o *v6; // x20
+  __int64 v7; // x1
+  __int64 v8; // x2
+  UnityEngine_Object_c *v9; // x0
+  UnityEngine_Object_o *v10; // x20
+  __int64 v11; // x1
+  __int64 v12; // x2
   UnityEngine_Object_o *closeTransform; // x20
-  UnityEngine_Transform_o *v8; // x8
-  UnityEngine_Transform_o *v9; // x19
+  UnityEngine_Transform_o *v14; // x8
+  UnityEngine_Transform_o *v15; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E71031 & 1) == 0 )
+  if ( (byte_5931CC5 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E71031 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5931CC5 = 1;
   }
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(baseWindow, 0, 0) && !this->fields.isBasePosition )
   {
     transform = this->fields.baseWindow;
@@ -186,36 +201,37 @@ void BaseMenu__Init(BaseMenu_o *this, const MethodInfo *method)
   if ( !transform )
     goto LABEL_22;
   UnityEngine_GameObject__SetActive(transform, 0, 0);
+  v9 = UnityEngine_Object_TypeInfo;
   *(_WORD *)&this->fields.isOpen = 0;
+  v10 = (UnityEngine_Object_o *)this->fields.baseWindow;
   this->fields.isSelected = 0;
-  v6 = (UnityEngine_Object_o *)this->fields.baseWindow;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v6, 0, 0) )
+  if ( !*(&v9->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v9, v7, v8);
+  if ( UnityEngine_Object__op_Inequality(v10, 0, 0) )
   {
     closeTransform = (UnityEngine_Object_o *)this->fields.closeTransform;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
     if ( UnityEngine_Object__op_Inequality(closeTransform, 0, 0) )
     {
       transform = this->fields.baseWindow;
       if ( transform )
       {
         transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
-        v8 = this->fields.closeTransform;
-        if ( v8 )
+        v14 = this->fields.closeTransform;
+        if ( v14 )
         {
-          v9 = (UnityEngine_Transform_o *)transform;
-          position = UnityEngine_Transform__get_position(v8, 0);
-          if ( v9 )
+          v15 = (UnityEngine_Transform_o *)transform;
+          position = UnityEngine_Transform__get_position(v14, 0);
+          if ( v15 )
           {
-            UnityEngine_Transform__set_position(v9, position, 0);
+            UnityEngine_Transform__set_position(v15, position, 0);
             return;
           }
         }
       }
 LABEL_22:
-      sub_1D0F30C(transform, v4);
+      sub_21FFECC(transform, v5);
     }
   }
 }
@@ -225,39 +241,48 @@ void BaseMenu__Open(BaseMenu_o *this, System_Action_o *callback, const MethodInf
 {
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x2
+  UnityEngine_Object_c *v9; // x0
   UnityEngine_Object_o *baseWindow; // x20
+  __int64 v11; // x2
   UnityEngine_Object_o *closeTransform; // x20
-  char v9; // w21
-  UnityEngine_Transform_o *v10; // x20
-  UnityEngine_GameObject_o *v11; // x20
-  BaseMenu_c *v12; // x0
+  bool v13; // w8
+  UnityEngine_Transform_o *v14; // x20
+  __int64 v15; // x1
+  __int64 v16; // x2
+  UnityEngine_GameObject_o *v17; // x20
+  BaseMenu_c *v18; // x0
   struct UnityEngine_Vector3_o *p_basePosition; // x21
   float *p_y; // x23
   float *p_z; // x24
-  TweenPosition_o *v16; // x20
-  UnityEngine_GameObject_o *v17; // x0
-  __int64 v18; // x1
+  __int64 v22; // x1
+  __int64 v23; // x2
+  TweenPosition_o *v24; // x20
+  UnityEngine_GameObject_o *v25; // x0
+  __int64 v26; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E71032 & 1) == 0 )
+  if ( (byte_5931CC6 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseMenu_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6078/*"EndOpenBaseDialog"*/);
-    byte_4E71032 = 1;
+    sub_21FFC50(&BaseMenu_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_6260/*"EndOpenBaseDialog"*/);
+    byte_5931CC6 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_31;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.baseCallbackFunc = callback;
-  sub_1D0F058(&this->fields.baseCallbackFunc, callback);
+  sub_21FFBF4(&this->fields.baseCallbackFunc, callback);
+  v9 = UnityEngine_Object_TypeInfo;
   *(_WORD *)&this->fields.isOpen = 1;
-  this->fields.isSelected = 0;
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  this->fields.isSelected = 0;
+  if ( !*(&v9->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v9, v7, v8);
   if ( UnityEngine_Object__op_Inequality(baseWindow, 0, 0) )
   {
     if ( !this->fields.isBasePosition )
@@ -272,52 +297,51 @@ void BaseMenu__Open(BaseMenu_o *this, System_Action_o *callback, const MethodInf
       this->fields.basePosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
     }
     closeTransform = (UnityEngine_Object_o *)this->fields.closeTransform;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(closeTransform, 0, 0);
-    if ( !this->fields.baseWindow )
-LABEL_31:
-      sub_1D0F30C(gameObject, v6);
-    v9 = (char)gameObject;
-    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(this->fields.baseWindow, 0);
-    v10 = (UnityEngine_Transform_o *)gameObject;
-    if ( (v9 & 1) != 0 )
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v11);
+    v13 = UnityEngine_Object__op_Inequality(closeTransform, 0, 0);
+    gameObject = this->fields.baseWindow;
+    if ( v13 )
     {
-      gameObject = (UnityEngine_GameObject_o *)this->fields.closeTransform;
       if ( !gameObject )
         goto LABEL_31;
-      position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
-      if ( !v10 )
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
+      if ( !this->fields.closeTransform )
         goto LABEL_31;
-      UnityEngine_Transform__set_position(v10, position, 0);
-      v11 = this->fields.baseWindow;
-      v12 = BaseMenu_TypeInfo;
-      if ( !BaseMenu_TypeInfo->_2.cctor_finished )
+      v14 = (UnityEngine_Transform_o *)gameObject;
+      position = UnityEngine_Transform__get_position(this->fields.closeTransform, 0);
+      if ( !v14 )
+        goto LABEL_31;
+      UnityEngine_Transform__set_position(v14, position, 0);
+      v17 = this->fields.baseWindow;
+      v18 = BaseMenu_TypeInfo;
+      if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
-        v12 = BaseMenu_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, v15, v16);
+        v18 = BaseMenu_TypeInfo;
       }
       p_basePosition = &this->fields.basePosition;
       p_y = &this->fields.basePosition.fields.y;
       p_z = &this->fields.basePosition.fields.z;
-      v16 = TweenPosition__Begin(v11, v12->static_fields->OPEN_MOVE_TIME, this->fields.basePosition, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v16, 0, 0);
+      v24 = TweenPosition__Begin(v17, v18->static_fields->OPEN_MOVE_TIME, this->fields.basePosition, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v24, 0, 0);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
-        if ( v16 )
+        if ( v24 )
         {
-          v16->fields.method = 3;
-          v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          v16->fields.eventReceiver = v17;
-          sub_1D0F058(&v16->fields.eventReceiver, v17);
-          v18 = StringLiteral_6078/*"EndOpenBaseDialog"*/;
-          v16->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6078/*"EndOpenBaseDialog"*/;
-          sub_1D0F058(&v16->fields.callWhenFinished, v18);
+          v24->fields.method = 3;
+          v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v24->fields.eventReceiver = v25;
+          sub_21FFBF4(&v24->fields.eventReceiver, v25);
+          v26 = StringLiteral_6260/*"EndOpenBaseDialog"*/;
+          v24->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6260/*"EndOpenBaseDialog"*/;
+          sub_21FFBF4(&v24->fields.callWhenFinished, v26);
           return;
         }
-        goto LABEL_31;
+LABEL_31:
+        sub_21FFECC(gameObject, v6);
       }
       gameObject = this->fields.baseWindow;
       if ( !gameObject )
@@ -325,20 +349,22 @@ LABEL_31:
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_31;
-      v10 = (UnityEngine_Transform_o *)gameObject;
     }
     else
     {
+      if ( !gameObject )
+        goto LABEL_31;
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_31;
       p_z = &this->fields.basePosition.fields.z;
       p_basePosition = &this->fields.basePosition;
       p_y = &this->fields.basePosition.fields.y;
     }
-    v20.fields.z = *p_z;
-    v20.fields.y = *p_y;
-    v20.fields.x = p_basePosition->fields.x;
-    UnityEngine_Transform__set_localPosition(v10, v20, 0);
+    v28.fields.z = *p_z;
+    v28.fields.y = *p_y;
+    v28.fields.x = p_basePosition->fields.x;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v28, 0);
   }
   BaseMenu__EndOpenBaseDialog(this, v6);
 }
@@ -351,7 +377,7 @@ bool BaseMenu__get_IsBusy(BaseMenu_o *this, const MethodInfo *method)
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 

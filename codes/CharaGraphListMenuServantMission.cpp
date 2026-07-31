@@ -13,33 +13,33 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
   __int64 v6; // x21
   CharaGraphSortOwnerBase_o *v7; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   struct CharaGraphSortOwnerBase_o *SortOwner_k__BackingField; // x1
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
 
-  if ( (byte_4E735B6 & 1) == 0 )
+  if ( (byte_593450A & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaGraphListViewPatternServantMission_TypeInfo);
-    byte_4E735B6 = 1;
+    sub_21FFC50(&CharaGraphListViewPatternServantMission_TypeInfo);
+    byte_593450A = 1;
   }
-  v6 = sub_1D0F300(CharaGraphListViewPatternServantMission_TypeInfo);
+  v6 = sub_21FFEBC(CharaGraphListViewPatternServantMission_TypeInfo);
   CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)(v6 + 16),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)(v6 + 16),
           (int32_t)SortOwner_k__BackingField,
           v9,
           v10,
@@ -49,8 +49,8 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
           v14),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)(v6 + 24),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)(v6 + 24),
           (int32_t)RootInfo_k__BackingField,
           v17,
           v18,
@@ -60,7 +60,7 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
           v22),
         (v7 = this->fields._SortOwner_k__BackingField) == 0) )
   {
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   }
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v6;

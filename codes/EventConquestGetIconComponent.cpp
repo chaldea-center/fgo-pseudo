@@ -1,12 +1,14 @@
 void EventConquestGetIconComponent___ctor(EventConquestGetIconComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E71601 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_59323B6 & 1) == 0 )
   {
-    sub_1D0F0B4(&ItemIconComponent_TypeInfo);
-    byte_4E71601 = 1;
+    sub_21FFC50(&ItemIconComponent_TypeInfo);
+    byte_59323B6 = 1;
   }
-  if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
+  if ( !*(&ItemIconComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo, method, v2);
   ItemIconComponent___ctor((ItemIconComponent_o *)this, 0);
 }
 
@@ -21,51 +23,53 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
 {
   UnityEngine_Object_o *possessionCounterLabel; // x23
   System_Text_StringBuilder_o *v10; // x23
-  System_String_o *v11; // x24
+  __int64 v11; // x1
+  __int64 v12; // x2
+  System_String_o *v13; // x24
   Il2CppObject *transform; // x0
-  __int64 v13; // x1
+  __int64 v15; // x1
   UILabel_o *counterLabel; // x22
-  System_Text_StringBuilder_o *v15; // x22
-  System_String_o *v16; // x23
-  float v17; // s1 OVERLAPPED
-  float v18; // s0
-  float v19; // s3
-  float v20; // s2
-  UILabel_o *v21; // x20
+  System_Text_StringBuilder_o *v17; // x22
+  System_String_o *v18; // x23
+  float v19; // s1 OVERLAPPED
+  float v20; // s3
+  float v21; // s0
+  float v22; // s2
+  UILabel_o *v23; // x20
+  __int64 v24; // x1
+  __int64 v25; // x2
   UILabel_o *possessionNameLabel; // x20
   unsigned int localScale; // s0
-  float v24; // s8
-  int64_t v25; // [xsp+8h] [xbp-68h] BYREF
-  int32_t v26; // [xsp+1Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  float v28; // s8
+  int64_t v29; // [xsp+8h] [xbp-68h] BYREF
+  int32_t v30; // [xsp+1Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E71600 & 1) == 0 )
+  if ( (byte_59323B5 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&long_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&System_Text_StringBuilder_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5621/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/);
-    sub_1D0F0B4(&StringLiteral_5622/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/);
-    sub_1D0F0B4(&StringLiteral_5627/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/);
-    byte_4E71600 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
+    sub_21FFC50(&StringLiteral_5752/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/);
+    sub_21FFC50(&StringLiteral_5753/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/);
+    sub_21FFC50(&StringLiteral_5758/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/);
+    byte_59323B5 = 1;
   }
   possessionCounterLabel = (UnityEngine_Object_o *)this->fields.possessionCounterLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, posCount, *(_QWORD *)&getCount);
   if ( !UnityEngine_Object__op_Equality(possessionCounterLabel, 0, 0) )
   {
-    v10 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
+    v10 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v10, 0);
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5627/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, 0);
-    v26 = getCount;
-    transform = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v12);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5758/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, 0);
+    v30 = getCount;
+    transform = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v30);
     if ( !v10 )
       goto LABEL_24;
-    System_Text_StringBuilder__AppendFormat(v10, v11, transform, 0);
+    System_Text_StringBuilder__AppendFormat(v10, v13, transform, 0);
     counterLabel = this->fields.counterLabel;
     transform = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v10->klass->vtable._3_ToString.methodPtr)(
                                   v10,
@@ -73,53 +77,53 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
     if ( !counterLabel )
       goto LABEL_24;
     UILabel__set_text(counterLabel, (System_String_o *)transform, 0);
-    v15 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
-    System_Text_StringBuilder___ctor(v15, 0);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5622/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, 0);
-    v25 = posCount;
-    transform = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v25);
-    if ( !v15 )
+    v17 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v17, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5753/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, 0);
+    v29 = posCount;
+    transform = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v29);
+    if ( !v17 )
       goto LABEL_24;
-    System_Text_StringBuilder__AppendFormat(v15, v16, transform, 0);
+    System_Text_StringBuilder__AppendFormat(v17, v18, transform, 0);
     transform = (Il2CppObject *)this->fields.possessionCounterLabel;
-    v17 = 0.0;
-    if ( !isMax )
-      v17 = 1.0;
     if ( !transform )
       goto LABEL_24;
-    v18 = 1.0;
     v19 = 1.0;
-    v20 = v17;
-    UIWidget__set_color((UIWidget_o *)transform, *(UnityEngine_Color_o *)(&v17 - 1), 0);
-    v21 = this->fields.possessionCounterLabel;
-    transform = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v15->klass->vtable._3_ToString.methodPtr)(
-                                  v15,
-                                  v15->klass->vtable._3_ToString.method);
-    if ( !v21 )
+    v20 = 1.0;
+    if ( isMax )
+      v19 = 0.0;
+    v21 = 1.0;
+    v22 = v19;
+    UIWidget__set_color((UIWidget_o *)transform, *(UnityEngine_Color_o *)(&v19 - 1), 0);
+    v23 = this->fields.possessionCounterLabel;
+    transform = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v17->klass->vtable._3_ToString.methodPtr)(
+                                  v17,
+                                  v17->klass->vtable._3_ToString.method);
+    if ( !v23 )
       goto LABEL_24;
-    UILabel__set_text(v21, (System_String_o *)transform, 0);
+    UILabel__set_text(v23, (System_String_o *)transform, 0);
     transform = (Il2CppObject *)this->fields.possessionCounterLabel;
     if ( !transform )
       goto LABEL_24;
     UILabel__SetCondensedScale((UILabel_o *)transform, this->fields.possesionCouterLabelMaxWidth, 0, 0);
     possessionNameLabel = this->fields.possessionNameLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    transform = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5621/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24, v25);
+    transform = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5752/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, 0);
     if ( !possessionNameLabel
       || (UILabel__set_text(possessionNameLabel, (System_String_o *)transform, 0),
           (transform = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
       || (localScale = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0),
           (transform = (Il2CppObject *)this->fields.possessionLabelBG) == 0)
-      || (v24 = *(float *)&localScale,
+      || (v28 = *(float *)&localScale,
           (transform = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0) )
     {
 LABEL_24:
-      sub_1D0F30C(transform, v13);
+      sub_21FFECC(transform, v15);
     }
-    v27.fields.x = 1.0 / v24;
-    v27.fields.y = 1.0 / v24;
-    v27.fields.z = 1.0 / v24;
-    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v27, 0);
+    v31.fields.x = 1.0 / v28;
+    v31.fields.y = 1.0 / v28;
+    v31.fields.z = 1.0 / v28;
+    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v31, 0);
   }
 }

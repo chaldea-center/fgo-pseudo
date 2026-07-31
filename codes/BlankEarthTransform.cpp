@@ -34,13 +34,13 @@ void BlankEarthTransform___ctor(
   this->fields.blankEarthRotation.fields.y = v12;
   this->fields.blankEarthRotation.fields.z = v11;
   this->fields.blankEarthRotation.fields.w = v10;
+  this->fields.earthRootRotation.fields.z = z;
   this->fields.earthRootRotation.fields.x = v9;
   this->fields.earthRootRotation.fields.y = y;
-  this->fields.earthRootRotation.fields.z = z;
+  this->fields.earthRootRotation.fields.w = w;
   *(_QWORD *)&this->fields.earthRootLocalPosition.fields.x = *(_QWORD *)&totalAng;
   this->fields.earthRootLocalPosition.fields.z = v16;
   *(_QWORD *)&this->fields.earthRootLocalScale.fields.x = v17;
-  this->fields.earthRootRotation.fields.w = w;
   this->fields.earthRootLocalScale.fields.z = v18;
   this->fields.totalAngle = v19;
 }
@@ -48,30 +48,32 @@ void BlankEarthTransform___ctor(
 
 void BlankEarthTransform__Reset(BlankEarthTransform_o *this, const MethodInfo *method)
 {
-  UnityEngine_Vector3_c *v3; // x8
+  int v3; // w10
+  UnityEngine_Vector3_c *v4; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float z; // s1
-  struct UnityEngine_Vector3_StaticFields *v6; // x8
-  float v7; // s1
+  struct UnityEngine_Vector3_StaticFields *v7; // x8
+  float v8; // s1
 
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
-  v3 = UnityEngine_Vector3_TypeInfo;
+  v3 = (unsigned __int8)byte_5931945;
+  v4 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.earthRootLocalPosition.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.earthRootLocalPosition.fields.z = z;
-  if ( !byte_4E70C9E )
+  if ( !v3 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    v3 = UnityEngine_Vector3_TypeInfo;
-    byte_4E70C9E = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    v4 = UnityEngine_Vector3_TypeInfo;
+    byte_5931945 = 1;
   }
-  v6 = v3->static_fields;
-  v7 = v6->oneVector.fields.z;
-  *(_QWORD *)&this->fields.earthRootLocalScale.fields.x = *(_QWORD *)&v6->oneVector.fields.x;
-  this->fields.earthRootLocalScale.fields.z = v7;
+  v7 = v4->static_fields;
+  v8 = v7->oneVector.fields.z;
+  *(_QWORD *)&this->fields.earthRootLocalScale.fields.x = *(_QWORD *)&v7->oneVector.fields.x;
+  this->fields.earthRootLocalScale.fields.z = v8;
 }

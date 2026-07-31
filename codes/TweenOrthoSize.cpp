@@ -17,17 +17,17 @@ TweenOrthoSize_o *TweenOrthoSize__Begin(
   TweenOrthoSize_o *v9; // x19
   const MethodInfo *v10; // x2
 
-  if ( (byte_4E7BFD0 & 1) == 0 )
+  if ( (byte_593CF19 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenOrthoSize___);
-    byte_4E7BFD0 = 1;
+    sub_21FFC50(&Method_UITweener_Begin_TweenOrthoSize___);
+    byte_593CF19 = 1;
   }
   v7 = (TweenOrthoSize_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_332666C *)Method_UITweener_Begin_TweenOrthoSize___);
+                             (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenOrthoSize___);
   if ( !v7 )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   v9 = v7;
   v7->fields.from = TweenOrthoSize__get_value(v7, v8);
   v9->fields.to = to;
@@ -66,29 +66,37 @@ UnityEngine_Camera_o *TweenOrthoSize__get_cachedCamera(TweenOrthoSize_o *this, c
 {
   UnityEngine_Object_o *mCam; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7BFCF & 1) == 0 )
+  if ( (byte_593CF18 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFCF = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF18 = 1;
   }
   mCam = (UnityEngine_Object_o *)this->fields.mCam;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(mCam, 0, 0) )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Camera___);
     this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mCam, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
+      (int32_t)Component_object,
+      v5,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10);
   }
   return this->fields.mCam;
 }
@@ -108,7 +116,7 @@ float TweenOrthoSize__get_value(TweenOrthoSize_o *this, const MethodInfo *method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return UnityEngine_Camera__get_orthographicSize(cachedCamera, 0);
 }
 
@@ -127,6 +135,6 @@ void TweenOrthoSize__set_value(TweenOrthoSize_o *this, float value, const Method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   UnityEngine_Camera__set_orthographicSize(cachedCamera, value, 0);
 }

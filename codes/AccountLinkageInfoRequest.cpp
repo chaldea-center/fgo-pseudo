@@ -6,15 +6,17 @@ void AccountLinkageInfoRequest___ctor(AccountLinkageInfoRequest_o *this, const M
 
 void AccountLinkageInfoRequest__beginRequest(AccountLinkageInfoRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E790D4 & 1) == 0 )
+  __int64 v3; // x1
+
+  if ( (byte_593A128 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E790D4 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593A128 = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, 0);
   RequestBase__WriteParameter((RequestBase_o *)this, 0);
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v3);
   NetworkManager__RequestStart((RequestBase_o *)this, 0);
 }
 
@@ -23,16 +25,16 @@ System_String_o *AccountLinkageInfoRequest__getURL(AccountLinkageInfoRequest_o *
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E790D3 & 1) == 0 )
+  if ( (byte_593A127 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16870/*"accountLinkageAnx/info"*/);
-    byte_4E790D3 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_17283/*"accountLinkageAnx/info"*/);
+    byte_593A127 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_16870/*"accountLinkageAnx/info"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_17283/*"accountLinkageAnx/info"*/, 0);
 }
 
 
@@ -45,38 +47,35 @@ void AccountLinkageInfoRequest__requestCompleted(
   ResponseData_o *v5; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x20
   __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x22
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 *v12; // x8
-  AccountLinkageInfoRequest_o *v13; // x0
-  const MethodInfo *v14; // x1
+  __int64 v8; // x1
+  __int64 v9; // x23
+  bool *v10; // x0
+  __int64 *v11; // x8
+  AccountLinkageInfoRequest_o *v12; // x0
+  const MethodInfo *v13; // x1
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4E790D5 & 1) == 0 )
+  if ( (byte_593A129 & 1) == 0 )
   {
-    sub_1D0F0B4(&AccountLinkageParams_TypeInfo);
-    sub_1D0F0B4(&bool_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1D0F0B4(&long_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_17032/*"aniplexPlusServerError"*/);
-    sub_1D0F0B4(&StringLiteral_22751/*"notificationType"*/);
-    this = (AccountLinkageInfoRequest_o *)sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E790D5 = 1;
+    sub_21FFC50(&AccountLinkageParams_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_17462/*"aniplexPlusServerError"*/);
+    sub_21FFC50(&StringLiteral_23398/*"notificationType"*/);
+    this = (AccountLinkageInfoRequest_o *)sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A129 = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !LODWORD(responseList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v5 = responseList->m_Items[0];
   if ( !v5 )
     goto LABEL_15;
-  this = (AccountLinkageInfoRequest_o *)ResponseData__checkError_45600864(v5, 0);
+  this = (AccountLinkageInfoRequest_o *)ResponseData__checkError_51190916(v5, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    v12 = &StringLiteral_22648/*"ng"*/;
+    v11 = &StringLiteral_23290/*"ng"*/;
     goto LABEL_14;
   }
   success = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.success;
@@ -84,34 +83,33 @@ void AccountLinkageInfoRequest__requestCompleted(
     goto LABEL_15;
   this = (AccountLinkageInfoRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                           success,
-                                          (Il2CppObject *)StringLiteral_22751/*"notificationType"*/,
-                                          (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                          (Il2CppObject *)StringLiteral_23398/*"notificationType"*/,
+                                          (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !this )
     goto LABEL_15;
-  if ( this->klass->_1.element_class != long_TypeInfo->_1.element_class )
+  v8 = qword_594C090;
+  if ( this->klass->_1.element_class != *(Il2CppClass **)(qword_594C090 + 64) )
     goto LABEL_17;
-  v9 = *(_QWORD *)j_il2cpp_object_unbox_0(this, long_TypeInfo, v7, v8);
+  v9 = *(_QWORD *)j_il2cpp_object_unbox_0(this, qword_594C090, v7);
   this = (AccountLinkageInfoRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                           success,
-                                          (Il2CppObject *)StringLiteral_17032/*"aniplexPlusServerError"*/,
-                                          (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                          (Il2CppObject *)StringLiteral_17462/*"aniplexPlusServerError"*/,
+                                          (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   AccountLinkageParams_TypeInfo->static_fields->notificationType = v9;
   if ( !this )
 LABEL_15:
-    sub_1D0F30C(this, responseList);
-  if ( this->klass->_1.element_class == bool_TypeInfo->_1.element_class )
+    sub_21FFECC(this, responseList);
+  v8 = qword_594C050;
+  if ( this->klass->_1.element_class == *(Il2CppClass **)(qword_594C050 + 64) )
   {
-    AccountLinkageParams_TypeInfo->static_fields->isAniplexPlusServerError = *(_BYTE *)j_il2cpp_object_unbox_0(
-                                                                                         this,
-                                                                                         bool_TypeInfo,
-                                                                                         v10,
-                                                                                         v11);
-    v12 = &StringLiteral_22821/*"ok"*/;
+    v10 = (bool *)j_il2cpp_object_unbox_0(this, qword_594C050, v7);
+    v11 = &StringLiteral_23468/*"ok"*/;
+    AccountLinkageParams_TypeInfo->static_fields->isAniplexPlusServerError = *v10;
 LABEL_14:
-    RequestBase__completed(v4, (System_String_o *)*v12, 0);
+    RequestBase__completed(v4, (System_String_o *)*v11, 0);
     return;
   }
 LABEL_17:
-  sub_1D0F6A8(this);
-  AccountLinkageInfoRequest___ctor(v13, v14);
+  sub_220024C(this, v8, v7);
+  AccountLinkageInfoRequest___ctor(v12, v13);
 }

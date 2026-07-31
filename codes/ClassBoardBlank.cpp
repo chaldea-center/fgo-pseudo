@@ -9,8 +9,8 @@ int32_t ClassBoardBlank__GetConnectType(
         System_Collections_Generic_List_IClassBoardSquareModel__o *linkSquares,
         const MethodInfo *method)
 {
-  int32_t size; // w21
-  int32_t v5; // w22
+  int32_t size; // w20
+  int32_t v5; // w21
   _BOOL8 v6; // x0
   __int64 v7; // x1
   Il2CppObject *current; // x19
@@ -26,36 +26,38 @@ int32_t ClassBoardBlank__GetConnectType(
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4E7B34B & 1) == 0 )
+  if ( (byte_593C3D3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
-    sub_1D0F0B4(&IClassBoardSquareModel_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
-    this = (ClassBoardBlank_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
-    byte_4E7B34B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__get_Current__);
+    sub_21FFC50(&IClassBoardSquareModel_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+    this = (ClassBoardBlank_o *)sub_21FFC50(&Method_System_Collections_Generic_List_IClassBoardSquareModel__get_Count__);
+    byte_593C3D3 = 1;
   }
   memset(&v20, 0, sizeof(v20));
   if ( !linkSquares )
-    sub_1D0F30C(this, linkSquares);
+    sub_21FFECC(this, linkSquares);
   size = linkSquares->fields._size;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)linkSquares,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_IClassBoardSquareModel__GetEnumerator__);
   v5 = 0;
   v20 = v19;
+  v19.fields._list = 0;
+  *(_QWORD *)&v19.fields._index = &v20;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v20,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__MoveNext__);
     if ( !v6 )
       break;
     current = v20.fields._current;
     if ( !v20.fields._current )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     klass = v20.fields._current->klass;
     v10 = *(unsigned __int16 *)&v20.fields._current->klass->_2.rank;
     if ( *(_WORD *)&v20.fields._current->klass->_2.rank )
@@ -73,7 +75,7 @@ int32_t ClassBoardBlank__GetConnectType(
     else
     {
 LABEL_11:
-      v12 = sub_1CE5430(v20.fields._current, IClassBoardSquareModel_TypeInfo, 5);
+      v12 = sub_2237E2C(v20.fields._current, IClassBoardSquareModel_TypeInfo, 5);
     }
     if ( ((*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v12)(current, *(_QWORD *)(v12 + 8)) & 1) != 0 )
     {
@@ -98,14 +100,14 @@ LABEL_11:
       else
       {
 LABEL_18:
-        v16 = sub_1CE5430(current, IClassBoardSquareModel_TypeInfo, 15);
+        v16 = sub_2237E2C(current, IClassBoardSquareModel_TypeInfo, 15);
       }
       v5 += (*(__int64 (__fastcall **)(Il2CppObject *, _QWORD, _QWORD))v16)(current, 0, *(_QWORD *)(v16 + 8)) & 1;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_IClassBoardSquareModel__Dispose__);
   if ( v5 < size )
     v17 = 1;
   else
@@ -125,7 +127,7 @@ void ClassBoardBlank__PlayClickedSe(ClassBoardBlank_o *this, const MethodInfo *m
 
 void ClassBoardBlank__PlayTransition(ClassBoardBlank_o *this, bool isQuick, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v5; // x21
+  System_Collections_Generic_List_object__o *v5; // x22
   __int64 v6; // x0
   __int64 v7; // x1
   struct IClassBoardSquareModel_o *SquareModel_k__BackingField; // x21
@@ -139,21 +141,22 @@ void ClassBoardBlank__PlayTransition(ClassBoardBlank_o *this, bool isQuick, cons
   __int64 v16; // x8
   System_Collections_Generic_List_IClassBoardSquareModel__o *linkSquares; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E7B349 & 1) == 0 )
+  if ( (byte_593C3D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&IClassBoardSquareModel_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    byte_4E7B349 = 1;
+    sub_21FFC50(&IClassBoardSquareModel_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    byte_593C3D1 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  linkSquares = 0;
+  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-  linkSquares = (System_Collections_Generic_List_IClassBoardSquareModel__o *)v5;
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
   SquareModel_k__BackingField = this->fields._SquareModel_k__BackingField;
+  linkSquares = (System_Collections_Generic_List_IClassBoardSquareModel__o *)v5;
   if ( !SquareModel_k__BackingField )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   klass = SquareModel_k__BackingField->klass;
   v10 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -171,16 +174,16 @@ void ClassBoardBlank__PlayTransition(ClassBoardBlank_o *this, bool isQuick, cons
   else
   {
 LABEL_8:
-    v12 = sub_1CE5430(this->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 17);
+    v12 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 17);
   }
   v13 = (ClassBoardBlank_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, System_Collections_Generic_List_IClassBoardSquareModel__o **, _QWORD))v12)(
                                SquareModel_k__BackingField,
                                &linkSquares,
                                *(_QWORD *)(v12 + 8));
   ConnectType = ClassBoardBlank__GetConnectType(v13, linkSquares, v14);
-  v16 = 120;
-  if ( (unsigned int)(ConnectType - 1) >= 2 )
-    v16 = 128;
+  v16 = 128;
+  if ( (unsigned int)(ConnectType - 1) < 2 )
+    v16 = 120;
   ClassBoardSquare__PlaySimpleAnimation(
     (ClassBoardSquare_o *)this,
     *(System_String_o **)((char *)&this->klass + v16),
@@ -195,7 +198,7 @@ void ClassBoardBlank__UpdateDraw(
         System_Nullable_AcquireFlag__o handoverFlag,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v4; // x20
+  System_Collections_Generic_List_object__o *v4; // x21
   __int64 v5; // x0
   __int64 v6; // x1
   struct IClassBoardSquareModel_o *SquareModel_k__BackingField; // x20
@@ -208,21 +211,22 @@ void ClassBoardBlank__UpdateDraw(
   int32_t ConnectType; // w0
   System_Collections_Generic_List_IClassBoardSquareModel__o *linkSquares; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E7B34A & 1) == 0 )
+  if ( (byte_593C3D2 & 1) == 0 )
   {
-    sub_1D0F0B4(&IClassBoardSquareModel_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    byte_4E7B34A = 1;
+    sub_21FFC50(&IClassBoardSquareModel_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    byte_593C3D2 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  linkSquares = 0;
+  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-  linkSquares = (System_Collections_Generic_List_IClassBoardSquareModel__o *)v4;
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
   SquareModel_k__BackingField = this->fields._SquareModel_k__BackingField;
+  linkSquares = (System_Collections_Generic_List_IClassBoardSquareModel__o *)v4;
   if ( !SquareModel_k__BackingField )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   klass = SquareModel_k__BackingField->klass;
   v9 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -240,7 +244,7 @@ void ClassBoardBlank__UpdateDraw(
   else
   {
 LABEL_8:
-    v11 = sub_1CE5430(this->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 17);
+    v11 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 17);
   }
   v12 = (ClassBoardBlank_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, System_Collections_Generic_List_IClassBoardSquareModel__o **, _QWORD))v11)(
                                SquareModel_k__BackingField,

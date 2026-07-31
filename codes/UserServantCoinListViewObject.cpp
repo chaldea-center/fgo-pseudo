@@ -1,12 +1,14 @@
 void UserServantCoinListViewObject___ctor(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E72BAD & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5933BA6 & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    byte_4E72BAD = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    byte_5933BA6 = 1;
   }
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
   ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
@@ -16,28 +18,28 @@ void UserServantCoinListViewObject__Awake(UserServantCoinListViewObject_o *this,
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E72BA0 & 1) == 0 )
+  if ( (byte_5933B99 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewItemDraw___);
-    byte_4E72BA0 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewItemDraw___);
+    byte_5933B99 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewItemDraw___);
   this->fields.itemDraw = (struct UserServantCoinListViewItemDraw_o *)Component_object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
     v7,
@@ -59,22 +61,22 @@ UnityEngine_GameObject_o *UserServantCoinListViewObject__CreateDragObject(
   UserServantCoinListViewObject_o *v7; // x20
   const MethodInfo *v8; // x1
 
-  if ( (byte_4E72BA5 & 1) == 0 )
+  if ( (byte_5933B9E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
-    byte_4E72BA5 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+    byte_5933B9E = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___)) == 0) )
+                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___)) == 0) )
   {
-    sub_1D0F30C(DragObject, v4);
+    sub_21FFECC(DragObject, v4);
   }
   v7 = (UserServantCoinListViewObject_o *)DragObject;
-  UserServantCoinListViewObject__Init_35014172((UserServantCoinListViewObject_o *)DragObject, 2, 0, 0.0, v6);
+  UserServantCoinListViewObject__Init_40604720((UserServantCoinListViewObject_o *)DragObject, 2, 0, 0.0, v6);
   UserServantCoinListViewObject__SetupDisp(v7, v8);
   return v5;
 }
@@ -82,47 +84,50 @@ UnityEngine_GameObject_o *UserServantCoinListViewObject__CreateDragObject(
 
 void UserServantCoinListViewObject__EventExitMove(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *dragObject; // x20
-  const MethodInfo *v4; // x1
+  const MethodInfo *v5; // x1
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Transform_o *parent; // x20
-  UnityEngine_GameObject_o *v7; // x20
-  ListViewObject_c *v8; // x0
-  float v9; // s8
-  float v10; // s10
-  float v11; // s9
-  UnityEngine_GameObject_o *v12; // x20
+  __int64 v8; // x1
+  __int64 v9; // x2
+  UnityEngine_GameObject_o *v10; // x20
+  ListViewObject_c *v11; // x0
+  float v12; // s8
+  float v13; // s9
+  float v14; // s10
+  UnityEngine_GameObject_o *v15; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  int32_t v20; // w1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  int32_t v23; // w1
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4E72BAA & 1) == 0 )
+  if ( (byte_5933BA3 & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6282/*"EventExitMove2"*/);
-    byte_4E72BAA = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_6465/*"EventExitMove2"*/);
+    byte_5933BA3 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(dragObject, 0, 0) )
   {
-    UserServantCoinListViewObject__EventMoveEnd(this, v4);
+    UserServantCoinListViewObject__EventMoveEnd(this, v5);
   }
   else
   {
@@ -139,59 +144,60 @@ void UserServantCoinListViewObject__EventExitMove(UserServantCoinListViewObject_
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
     if ( !parent )
       goto LABEL_15;
-    v28 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-    v7 = this->fields.dragObject;
-    v8 = ListViewObject_TypeInfo;
-    v9 = v28.fields.x + 1000.0;
-    v10 = v28.fields.y + 0.0;
-    v11 = v28.fields.z + 0.0;
-    if ( !ListViewObject_TypeInfo->_2.cctor_finished )
+    v31 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+    v10 = this->fields.dragObject;
+    v11 = ListViewObject_TypeInfo;
+    v12 = v31.fields.x + 1000.0;
+    v13 = v31.fields.y + 0.0;
+    v14 = v31.fields.z + 0.0;
+    if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-      v8 = ListViewObject_TypeInfo;
+      j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v8, v9);
+      v11 = ListViewObject_TypeInfo;
     }
-    v29.fields.x = v9;
-    v29.fields.y = v10;
-    v29.fields.z = v11;
-    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v29, 0);
+    v32.fields.x = v12;
+    v32.fields.y = v13;
+    v32.fields.z = v14;
+    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v10, v11->static_fields->BASE_MOVE_TIME, v32, 0);
     if ( !transform )
 LABEL_15:
-      sub_1D0F30C(transform, v4);
-    v12 = transform;
+      sub_21FFECC(transform, v5);
+    v15 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v12[3].monitor = gameObject;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
-    v20 = StringLiteral_6282/*"EventExitMove2"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_6282/*"EventExitMove2"*/;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v12[3].fields, v20, v21, v22, v23, v24, v25, v26);
+    v15[3].monitor = gameObject;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[3].monitor, (int32_t)gameObject, v17, v18, v19, v20, v21, v22);
+    v23 = StringLiteral_6465/*"EventExitMove2"*/;
+    v15[3].fields.m_CachedPtr = StringLiteral_6465/*"EventExitMove2"*/;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[3].fields, v23, v24, v25, v26, v27, v28, v29);
   }
 }
 
 
 void UserServantCoinListViewObject__EventExitMove2(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *dragObject; // x21
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  const MethodInfo *v10; // x1
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4E72BAB & 1) == 0 )
+  if ( (byte_5933BA4 & 1) == 0 )
   {
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    byte_4E72BAB = 1;
+    sub_21FFC50(&NGUITools_TypeInfo);
+    byte_5933BA4 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
-  if ( !NGUITools_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
+  if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, method, v2);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, 0, v4, v5, v6, v7, v8, v9);
-  UserServantCoinListViewObject__EventMoveEnd(this, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v5, v6, v7, v8, v9, v10);
+  UserServantCoinListViewObject__EventMoveEnd(this, v11);
 }
 
 
@@ -201,41 +207,43 @@ void UserServantCoinListViewObject__EventExitStart(
         const MethodInfo *method)
 {
   struct UnityEngine_GameObject_o *v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   const MethodInfo *v12; // x1
   UnityEngine_GameObject_o *dragObject; // x0
+  __int64 v14; // x1
+  __int64 v15; // x2
   Il2CppObject *Component_object; // x20
-  const MethodInfo *v15; // x3
+  const MethodInfo *v17; // x3
 
-  if ( (byte_4E72BA9 & 1) == 0 )
+  if ( (byte_5933BA2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6281/*"EventExitMove"*/);
-    byte_4E72BA9 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_6464/*"EventExitMove"*/);
+    byte_5933BA2 = 1;
   }
-  this->fields.isBusy = 1;
   this->fields.dispMode = 0;
+  this->fields.isBusy = 1;
   UserServantCoinListViewObject__SetupDisp(this, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
   v5 = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UserServantCoinListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
                                              (UnityEngine_Object_o *)Component_object,
                                              0,
@@ -247,11 +255,11 @@ void UserServantCoinListViewObject__EventExitStart(
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1D0F30C(dragObject, v12);
-  UserServantCoinListViewObject__Init_35014172((UserServantCoinListViewObject_o *)Component_object, 2, 0, 0.0, v15);
+    sub_21FFECC(dragObject, v12);
+  UserServantCoinListViewObject__Init_40604720((UserServantCoinListViewObject_o *)Component_object, 2, 0, 0.0, v17);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6281/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6464/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -261,35 +269,37 @@ void UserServantCoinListViewObject__EventIntoMove(UserServantCoinListViewObject_
 {
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Transform_o *parent; // x20
-  ListViewObject_c *v5; // x0
-  UnityEngine_GameObject_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x2
   float x; // s8
   float y; // s9
+  ListViewObject_c *v9; // x0
   float z; // s10
-  UnityEngine_GameObject_o *v10; // x20
+  UnityEngine_GameObject_o *v11; // x20
+  UnityEngine_GameObject_o *v12; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w1
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  int32_t v20; // w1
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4E72BA7 & 1) == 0 )
+  if ( (byte_5933BA0 & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6293/*"EventIntoMove2"*/);
-    byte_4E72BA7 = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    sub_21FFC50(&StringLiteral_6480/*"EventIntoMove2"*/);
+    byte_5933BA0 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -304,62 +314,64 @@ void UserServantCoinListViewObject__EventIntoMove(UserServantCoinListViewObject_
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !parent )
     goto LABEL_11;
-  v26 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-  v5 = ListViewObject_TypeInfo;
-  v6 = this->fields.dragObject;
-  x = v26.fields.x;
-  y = v26.fields.y;
-  z = v26.fields.z;
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
+  v28 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+  x = v28.fields.x;
+  y = v28.fields.y;
+  v9 = ListViewObject_TypeInfo;
+  z = v28.fields.z;
+  v11 = this->fields.dragObject;
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-    v5 = ListViewObject_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v5, v6);
+    v9 = ListViewObject_TypeInfo;
   }
-  v27.fields.x = x;
-  v27.fields.y = y;
-  v27.fields.z = z;
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v27, 0);
+  v29.fields.x = x;
+  v29.fields.y = y;
+  v29.fields.z = z;
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v11, v9->static_fields->BASE_MOVE_TIME, v29, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1D0F30C(dragObject, method);
-  v10 = dragObject;
+    sub_21FFECC(dragObject, method);
+  v12 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v10[3].monitor = gameObject;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13, v14, v15, v16, v17);
-  v18 = StringLiteral_6293/*"EventIntoMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6293/*"EventIntoMove2"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v10[3].fields, v18, v19, v20, v21, v22, v23, v24);
+  v12[3].monitor = gameObject;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
+  v20 = StringLiteral_6480/*"EventIntoMove2"*/;
+  v12[3].fields.m_CachedPtr = StringLiteral_6480/*"EventIntoMove2"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12[3].fields, v20, v21, v22, v23, v24, v25, v26);
 }
 
 
 void UserServantCoinListViewObject__EventIntoMove2(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x2
   UnityEngine_Object_o *dragObject; // x21
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
-  const MethodInfo *v11; // x1
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4E72BA8 & 1) == 0 )
+  if ( (byte_5933BA1 & 1) == 0 )
   {
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    byte_4E72BA8 = 1;
+    sub_21FFC50(&NGUITools_TypeInfo);
+    byte_5933BA1 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
   UserServantCoinListViewObject__SetupDisp(this, v3);
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
-  if ( !NGUITools_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
+  if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v4, v5);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, 0, v5, v6, v7, v8, v9, v10);
-  UserServantCoinListViewObject__EventMoveEnd(this, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v7, v8, v9, v10, v11, v12);
+  UserServantCoinListViewObject__EventMoveEnd(this, v13);
 }
 
 
@@ -370,26 +382,26 @@ void UserServantCoinListViewObject__EventIntoStart(
 {
   struct UnityEngine_GameObject_o *v5; // x0
   struct UnityEngine_GameObject_o **p_dragObject; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   __int64 v13; // x1
   UnityEngine_GameObject_o *dragObject; // x0
   const MethodInfo *v15; // x3
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E72BA6 & 1) == 0 )
+  if ( (byte_5933B9F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
-    sub_1D0F0B4(&StringLiteral_6292/*"EventIntoMove"*/);
-    byte_4E72BA6 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+    sub_21FFC50(&StringLiteral_6479/*"EventIntoMove"*/);
+    byte_5933B9F = 1;
   }
-  this->fields.isBusy = 1;
   this->fields.dispMode = 0;
+  this->fields.isBusy = 1;
   UserServantCoinListViewObject__SetupDisp(this, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
   v5 = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UserServantCoinListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
@@ -397,27 +409,27 @@ void UserServantCoinListViewObject__EventIntoStart(
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___)) == 0
-    || (UserServantCoinListViewObject__Init_35014172((UserServantCoinListViewObject_o *)dragObject, 2, 0, 0.0, v15),
+                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___)) == 0
+    || (UserServantCoinListViewObject__Init_40604720((UserServantCoinListViewObject_o *)dragObject, 2, 0, 0.0, v15),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v17 = UnityEngine_Transform__TransformPoint_73386264((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v17 = UnityEngine_Transform__TransformPoint_83283144((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1D0F30C(dragObject, v13);
+    sub_21FFECC(dragObject, v13);
   }
   UnityEngine_Transform__set_position(transform, v17, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6292/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6479/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -425,25 +437,25 @@ void UserServantCoinListViewObject__EventIntoStart(
 
 void UserServantCoinListViewObject__EventMoveEnd(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_callbackFunc; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_callbackFunc; // x0
   struct System_Action_o *v9; // x19
   struct System_Action_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+  p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
   v9 = callbackFunc;
-  LOBYTE(p_callbackFunc[-1].fields._ClosedMessage_k__BackingField) = 0;
-  HIDWORD(p_callbackFunc[-1].fields._ClosedMessage_k__BackingField) = 1;
+  LOBYTE(p_callbackFunc[-1].fields._BoardType_k__BackingField) = 0;
+  *(&p_callbackFunc[-1].fields._BoardType_k__BackingField + 1) = 1;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1D0F058(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -457,129 +469,146 @@ void UserServantCoinListViewObject__Init(
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
 {
-  struct ListViewItem_o *linkItem; // x8
+  struct ListViewItem_o *linkItem; // x9
+  ListViewItem_c *klass; // x9
   __int64 naturalAligment; // x10
-  int32_t v12; // w24
+  int32_t v13; // w24
   int32_t dispMode; // w22
   int32_t state; // w23
   UnityEngine_Transform_o *transform; // x0
-  __int64 v16; // x1
-  GrandQuestFolderBoardItem_o *p_callbackFunc; // x21
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  const MethodInfo *v24; // x1
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  int32_t v31; // w9
+  __int64 v17; // x1
+  MissionNaviTransitionBoardItem_o *p_callbackFunc; // x21
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  const MethodInfo *v25; // x1
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
   int32_t v32; // w8
-  GrandQuestFolderBoardItem_c *klass; // x19
+  int32_t v33; // w9
+  MissionNaviTransitionBoardItem_c *v34; // x19
 
-  if ( (byte_4E72BA2 & 1) == 0 )
+  if ( (byte_5933B9B & 1) == 0 )
   {
-    sub_1D0F0B4(&UserServantCoinListViewItem_TypeInfo);
-    byte_4E72BA2 = 1;
+    sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
+    byte_5933B9B = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
-    && (naturalAligment = UserServantCoinListViewItem_TypeInfo->_2.naturalAligment,
-        linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
+    && (klass = linkItem->klass,
+        naturalAligment = UserServantCoinListViewItem_TypeInfo->_2.naturalAligment,
+        klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
   {
-    if ( (UserServantCoinListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == UserServantCoinListViewItem_TypeInfo )
-      v12 = initMode;
+    if ( (UserServantCoinListViewItem_c *)klass->_2.typeHierarchy[naturalAligment - 1] == UserServantCoinListViewItem_TypeInfo )
+      v13 = initMode;
     else
-      v12 = 0;
+      v13 = 0;
   }
   else
   {
-    v12 = 0;
+    v13 = 0;
   }
   dispMode = this->fields.dispMode;
   state = this->fields.state;
-  ListViewObject__SetVisible((ListViewObject_o *)this, v12 != 0, 0);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v13 != 0, 0);
   ((void (__fastcall *)(UserServantCoinListViewObject_o *, bool, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
     this,
-    v12 == 3,
+    v13 == 3,
     this->klass->vtable._9_SetInput.method);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1D0F30C(transform, v16);
+    sub_21FFECC(transform, v17);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
-  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
-    v18,
     v19,
     v20,
     v21,
     v22,
-    v23);
-  v31 = 1;
-  v32 = v12;
-  switch ( v12 )
+    v23,
+    v24);
+  if ( v13 <= 2 )
   {
-    case 0:
-    case 2:
-      goto LABEL_15;
-    case 1:
-      v32 = v12;
-      goto LABEL_14;
-    case 3:
-      v32 = 2;
-LABEL_14:
-      v31 = v12;
-LABEL_15:
-      this->fields.dispMode = v32;
-      this->fields.state = v31;
-      goto LABEL_16;
-    case 4:
-      this->fields.dispMode = 2;
-      this->fields.state = 1;
-      goto LABEL_20;
-    case 5:
+    v32 = 1;
+    if ( !v13 )
+    {
+      v33 = 0;
+LABEL_27:
+      this->fields.dispMode = v33;
+      this->fields.state = v32;
+      goto LABEL_28;
+    }
+    if ( v13 != 1 )
+    {
+      v33 = v13;
+      if ( v13 != 2 )
+        goto LABEL_28;
+      goto LABEL_27;
+    }
+    v33 = 1;
+LABEL_26:
+    v32 = v13;
+    goto LABEL_27;
+  }
+  if ( v13 > 4 )
+  {
+    if ( v13 == 5 )
+    {
       this->fields.dispMode = 0;
       this->fields.state = 2;
-      UserServantCoinListViewObject__EventIntoStart(this, delay, v24);
+      UserServantCoinListViewObject__EventIntoStart(this, delay, v25);
       return;
-    case 7:
+    }
+    if ( v13 == 7 )
+    {
       this->fields.dispMode = 2;
       this->fields.state = 2;
-      UserServantCoinListViewObject__EventExitStart(this, delay, v24);
+      UserServantCoinListViewObject__EventExitStart(this, delay, v25);
       return;
-    default:
-LABEL_16:
-      if ( !state || dispMode != this->fields.dispMode )
-LABEL_20:
-        UserServantCoinListViewObject__SetupDisp(this, v24);
-      klass = p_callbackFunc->klass;
-      if ( p_callbackFunc->klass )
-      {
-        p_callbackFunc->klass = 0;
-        sub_1D0F058(p_callbackFunc, 0, v25, v26, v27, v28, v29, v30);
-        ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
-          klass->_1.element_class,
-          *(_QWORD *)&klass->_1.byval_arg.bits);
-      }
-      return;
+    }
+LABEL_28:
+    if ( state && dispMode == this->fields.dispMode )
+      goto LABEL_31;
+    goto LABEL_30;
+  }
+  if ( v13 == 3 )
+  {
+    v33 = 2;
+    goto LABEL_26;
+  }
+  this->fields.dispMode = 2;
+  this->fields.state = 1;
+LABEL_30:
+  UserServantCoinListViewObject__SetupDisp(this, v25);
+LABEL_31:
+  v34 = p_callbackFunc->klass;
+  if ( p_callbackFunc->klass )
+  {
+    p_callbackFunc->klass = 0;
+    sub_21FFBF4(p_callbackFunc, 0, v26, v27, v28, v29, v30, v31);
+    ((void (__fastcall *)(Il2CppClass *, _QWORD))v34->_1.namespaze)(
+      v34->_1.element_class,
+      *(_QWORD *)&v34->_1.byval_arg.bits);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void UserServantCoinListViewObject__Init_35014172(
+void UserServantCoinListViewObject__Init_40604720(
         UserServantCoinListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -588,10 +617,10 @@ void UserServantCoinListViewObject__Init_35014172(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   UserServantCoinListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -604,59 +633,62 @@ void UserServantCoinListViewObject__OnClickSelect(UserServantCoinListViewObject_
   __int64 v5; // x1
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4E72BAC & 1) == 0 )
+  if ( (byte_5933BA5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UserServantCoinListViewObject_OnClickSelect__);
-    sub_1D0F0B4(&StringLiteral_9985/*"OnClickSelectListView"*/);
-    byte_4E72BAC = 1;
+    sub_21FFC50(&Method_UserServantCoinListViewObject_OnClickSelect__);
+    sub_21FFC50(&StringLiteral_10254/*"OnClickSelectListView"*/);
+    byte_5933BA5 = 1;
   }
   if ( this->fields.linkItem )
   {
     v3 = Method_UserServantCoinListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_UserServantCoinListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_UserServantCoinListViewObject_OnClickSelect__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_UserServantCoinListViewObject_OnClickSelect__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1D0F30C(0, v5);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9985/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
+      sub_21FFECC(0, v5);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10254/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
 
 void UserServantCoinListViewObject__OnDestroy(UserServantCoinListViewObject_o *this, const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  __int64 v2; // x2
+  MissionNaviTransitionBoardItem_o *p_dragObject; // x19
+  UnityEngine_Object_o *v5; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
+  __int64 v7; // x1
+  __int64 v8; // x2
   UnityEngine_Object_o *klass; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E72BA1 & 1) == 0 )
+  if ( (byte_5933B9A & 1) == 0 )
   {
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72BA1 = 1;
+    sub_21FFC50(&NGUITools_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933B9A = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
+  p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
+  v5 = (UnityEngine_Object_o *)dragObject;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
+  if ( UnityEngine_Object__op_Inequality(v5, 0, 0) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
-    if ( !NGUITools_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
+    if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1D0F058(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -666,27 +698,29 @@ void UserServantCoinListViewObject__SetInput(
         bool isInput,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  UserServantCoinListViewItem_o *v6; // x1
-  const MethodInfo *v7; // x3
-  UserServantCoinListViewItemDraw_o *v8; // x0
+  UserServantCoinListViewItem_o *v8; // x1
+  const MethodInfo *v9; // x3
+  UserServantCoinListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4E72BA4 & 1) == 0 )
+  if ( (byte_5933B9D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&UserServantCoinListViewItem_TypeInfo);
-    byte_4E72BA4 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
+    byte_5933B9D = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v8 = this->fields.itemDraw;
-    if ( !v8 )
-      sub_1D0F30C(0, v6);
-    UserServantCoinListViewItemDraw__SetInput(v8, v6, 0, v7);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_21FFECC(0, v8);
+    UserServantCoinListViewItemDraw__SetInput(v10, v8, 0, v9);
   }
 }
 
@@ -697,7 +731,7 @@ void UserServantCoinListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_45188780((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
@@ -707,16 +741,18 @@ void UserServantCoinListViewObject__SetupDisp(UserServantCoinListViewObject_o *t
   struct ListViewItem_o *linkItem; // x20
   __int64 naturalAligment; // x10
   bool v5; // w1
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  UserServantCoinListViewItemDraw_o *v9; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
+  UserServantCoinListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4E72BA3 & 1) == 0 )
+  if ( (byte_5933B9C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&UserServantCoinListViewItem_TypeInfo);
-    byte_4E72BA3 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
+    byte_5933B9C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -734,14 +770,14 @@ LABEL_7:
 LABEL_8:
   ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1D0F30C(0, v7);
-    UserServantCoinListViewItemDraw__SetItem(v9, (UserServantCoinListViewItem_o *)linkItem, this->fields.dispMode, v8);
+    v11 = this->fields.itemDraw;
+    if ( !v11 )
+      sub_21FFECC(0, v9);
+    UserServantCoinListViewItemDraw__SetItem(v11, (UserServantCoinListViewItem_o *)linkItem, this->fields.dispMode, v10);
   }
 }
 
@@ -755,16 +791,18 @@ void UserServantCoinListViewObject__add_callbackFunc(
   System_Delegate_o *v6; // x21
   struct System_Action_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  UserServantCoinListViewObject_o *v11; // x0
-  System_Action_o *v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  UserServantCoinListViewObject_o *v13; // x0
+  System_Action_o *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4E72B9E & 1) == 0 )
+  if ( (byte_5933B97 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    byte_4E72B9E = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    byte_5933B97 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -777,14 +815,14 @@ void UserServantCoinListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  v11 = (UserServantCoinListViewObject_o *)sub_1D0F6A8(v8);
-  UserServantCoinListViewObject__remove_callbackFunc(v11, v12, v13);
+  v13 = (UserServantCoinListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  UserServantCoinListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
 
@@ -797,15 +835,17 @@ void UserServantCoinListViewObject__remove_callbackFunc(
   System_Delegate_o *v6; // x21
   struct System_Action_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  UserServantCoinListViewObject_o *v11; // x0
-  const MethodInfo *v12; // x1
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  UserServantCoinListViewObject_o *v13; // x0
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4E72B9F & 1) == 0 )
+  if ( (byte_5933B98 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    byte_4E72B9F = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    byte_5933B98 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -818,12 +858,12 @@ void UserServantCoinListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  v11 = (UserServantCoinListViewObject_o *)sub_1D0F6A8(v8);
-  UserServantCoinListViewObject__Awake(v11, v12);
+  v13 = (UserServantCoinListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  UserServantCoinListViewObject__Awake(v13, v14);
 }

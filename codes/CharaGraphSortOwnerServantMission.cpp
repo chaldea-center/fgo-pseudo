@@ -1,23 +1,23 @@
 void CharaGraphSortOwnerServantMission___ctor(CharaGraphSortOwnerServantMission_o *this, const MethodInfo *method)
 {
   CharaGraphSortManageUnitSvtCollection_o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E735BA & 1) == 0 )
+  if ( (byte_593450E & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaGraphSortManageUnitServantMission_TypeInfo);
-    byte_4E735BA = 1;
+    sub_21FFC50(&CharaGraphSortManageUnitServantMission_TypeInfo);
+    byte_593450E = 1;
   }
-  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1D0F300(CharaGraphSortManageUnitServantMission_TypeInfo);
+  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_21FFEBC(CharaGraphSortManageUnitServantMission_TypeInfo);
   CharaGraphSortManageUnitSvtCollection___ctor(v3, 0);
   this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
     v5,
@@ -41,12 +41,12 @@ System_String_o *CharaGraphSortOwnerServantMission__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E735B9 & 1) == 0 )
+  if ( (byte_593450D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_4435/*"CharaGraphSort_SvtMission_"*/);
-    byte_4E735B9 = 1;
+    sub_21FFC50(&StringLiteral_4558/*"CharaGraphSort_SvtMission_"*/);
+    byte_593450D = 1;
   }
-  return (System_String_o *)StringLiteral_4435/*"CharaGraphSort_SvtMission_"*/;
+  return (System_String_o *)StringLiteral_4558/*"CharaGraphSort_SvtMission_"*/;
 }
 
 
@@ -55,17 +55,17 @@ void CharaGraphSortOwnerServantMission__set_ServantCollectionSortManageUnit(
         CharaGraphSortManageUnitBase_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ServantCollectionSortManageUnit_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

@@ -1,12 +1,12 @@
 void BattleUserServantData___ctor(BattleUserServantData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77132 & 1) == 0 )
+  if ( (byte_59380F7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UserServantEntity_TypeInfo);
-    byte_4E77132 = 1;
+    sub_21FFC50(&UserServantEntity_TypeInfo);
+    byte_59380F7 = 1;
   }
-  if ( !UserServantEntity_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UserServantEntity_TypeInfo);
+  if ( !*(&UserServantEntity_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UserServantEntity_TypeInfo, method);
   UserServantEntity___ctor((UserServantEntity_o *)this, 0);
 }
 
@@ -22,11 +22,11 @@ SimpleSkillData_array *BattleUserServantData__GetAddPassiveSkillArray(
   System_Int32_array *v7; // x19
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4E7712D & 1) == 0 )
+  if ( (byte_59380F2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Repeat_int___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4E7712D = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Repeat_int___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_59380F2 = 1;
   }
   AddPassiveSkill = BattleUserServantData__getAddPassiveSkill(this, method);
   addPassiveLvs = this->fields.addPassiveLvs;
@@ -34,14 +34,14 @@ SimpleSkillData_array *BattleUserServantData__GetAddPassiveSkillArray(
   if ( !addPassiveLvs )
   {
     if ( !AddPassiveSkill )
-      sub_1D0F30C(0, v4);
+      sub_21FFECC(0, v4);
     v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Repeat_int_(
                                                                 1,
                                                                 AddPassiveSkill->max_length,
-                                                                (const MethodInfo_327FC4C *)Method_System_Linq_Enumerable_Repeat_int___);
+                                                                (const MethodInfo_3856330 *)Method_System_Linq_Enumerable_Repeat_int___);
     AddPassiveSkill = System_Linq_Enumerable__ToArray_int_(
                         v8,
-                        (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
+                        (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
     addPassiveLvs = AddPassiveSkill;
   }
   return BattleUserServantData__MakeSimpleSkillArray((BattleUserServantData_o *)AddPassiveSkill, v7, addPassiveLvs, v5);
@@ -72,7 +72,7 @@ SimpleSkillData_array *BattleUserServantData__GetClassBoardSkillArray(
   __int64 id; // x1
   struct AddSkillData_array *classBoardAddPassiveSkills; // x21
   int max_length; // w8
-  unsigned int v10; // w22
+  unsigned int v10; // w23
   AddSkillData_o *v11; // x24
   struct System_Int32_array *items; // x8
   _QWORD *v13; // x9
@@ -84,28 +84,28 @@ SimpleSkillData_array *BattleUserServantData__GetClassBoardSkillArray(
   BattleUserServantData_o *v19; // x0
   const MethodInfo *v20; // x3
 
-  if ( (byte_4E77131 & 1) == 0 )
+  if ( (byte_59380F6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E77131 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_59380F6 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.classBoardAddPassiveSkills, 0) )
     return 0;
-  v4 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
-  v5 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+  v5 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v5,
-    (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
   classBoardAddPassiveSkills = this->fields.classBoardAddPassiveSkills;
   if ( !classBoardAddPassiveSkills )
 LABEL_24:
-    sub_1D0F30C(v6, id);
+    sub_21FFECC(v6, id);
   max_length = classBoardAddPassiveSkills->max_length;
   if ( max_length >= 1 )
   {
@@ -113,14 +113,14 @@ LABEL_24:
     do
     {
       if ( v10 >= max_length )
-        sub_1D0F314(v6);
+        sub_21FFED4(v6);
       v11 = classBoardAddPassiveSkills->m_Items[v10];
       if ( !v11 )
         goto LABEL_24;
       if ( !v4 )
         goto LABEL_24;
-      id = (unsigned int)v11->fields.id;
       items = v4->fields._items;
+      id = (unsigned int)v11->fields.id;
       v13 = Method_System_Collections_Generic_List_int__Add__;
       ++v4->fields._version;
       if ( !items )
@@ -131,7 +131,7 @@ LABEL_24:
         System_Collections_Generic_List_int___AddWithResize(
           v4,
           id,
-          *(const MethodInfo_393F3EC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_4433138 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
       {
@@ -140,8 +140,8 @@ LABEL_24:
       }
       if ( !v5 )
         goto LABEL_24;
-      id = (unsigned int)v11->fields.lv;
       v15 = v5->fields._items;
+      id = (unsigned int)v11->fields.lv;
       v16 = Method_System_Collections_Generic_List_int__Add__;
       ++v5->fields._version;
       if ( !v15 )
@@ -152,7 +152,7 @@ LABEL_24:
         System_Collections_Generic_List_int___AddWithResize(
           v5,
           id,
-          *(const MethodInfo_393F3EC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          *(const MethodInfo_4433138 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       }
       else
       {
@@ -167,13 +167,13 @@ LABEL_24:
     goto LABEL_24;
   v6 = System_Collections_Generic_List_int___ToArray(
          v4,
-         (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+         (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !v5 )
     goto LABEL_24;
   v18 = v6;
   v19 = (BattleUserServantData_o *)System_Collections_Generic_List_int___ToArray(
                                      v5,
-                                     (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                     (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
   return BattleUserServantData__MakeSimpleSkillArray(v19, v18, (System_Int32_array *)v19, v20);
 }
 
@@ -187,11 +187,11 @@ SimpleSkillData_array *BattleUserServantData__GetClassPassiveSkillArray(
   BattleUserServantData_o *v5; // x0
   const MethodInfo *v6; // x3
 
-  if ( (byte_4E7712F & 1) == 0 )
+  if ( (byte_59380F4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Repeat_int___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4E7712F = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Repeat_int___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_59380F4 = 1;
   }
   classPassive = this->fields.classPassive;
   if ( !classPassive )
@@ -199,10 +199,10 @@ SimpleSkillData_array *BattleUserServantData__GetClassPassiveSkillArray(
   v4 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Repeat_int_(
                                                               1,
                                                               classPassive->max_length,
-                                                              (const MethodInfo_327FC4C *)Method_System_Linq_Enumerable_Repeat_int___);
+                                                              (const MethodInfo_3856330 *)Method_System_Linq_Enumerable_Repeat_int___);
   v5 = (BattleUserServantData_o *)System_Linq_Enumerable__ToArray_int_(
                                     v4,
-                                    (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                    (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
   return BattleUserServantData__MakeSimpleSkillArray(v5, classPassive, (System_Int32_array *)v5, v6);
 }
 
@@ -249,12 +249,13 @@ SimpleSkillData_array *BattleUserServantData__MakeSimpleSkillArray(
   int32_t v11; // w2
   SimpleSkillData_o v12; // x0
   __int64 v13; // x1
-  __int64 v15; // [xsp+8h] [xbp-48h] BYREF
+  unsigned __int64 v14; // x9
+  __int64 v16; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E77130 & 1) == 0 )
+  if ( (byte_59380F5 & 1) == 0 )
   {
-    sub_1D0F0B4(&SimpleSkillData___TypeInfo);
-    byte_4E77130 = 1;
+    sub_21FFC50(&SimpleSkillData___TypeInfo);
+    byte_59380F5 = 1;
   }
   v6 = 0;
   if ( skillIds )
@@ -262,7 +263,7 @@ SimpleSkillData_array *BattleUserServantData__MakeSimpleSkillArray(
     if ( skillLvs )
     {
       max_length = skillIds->max_length;
-      v8 = sub_1D0F15C(SimpleSkillData___TypeInfo, (unsigned int)max_length);
+      v8 = sub_21FFD10(SimpleSkillData___TypeInfo, (unsigned int)max_length);
       v6 = v8;
       if ( (int)max_length >= 1 )
       {
@@ -273,15 +274,16 @@ SimpleSkillData_array *BattleUserServantData__MakeSimpleSkillArray(
             goto LABEL_13;
           v10 = skillIds->m_Items[v9];
           v11 = skillLvs->m_Items[v9];
-          v12 = (SimpleSkillData_o)&v15;
-          v15 = 0;
+          v12 = (SimpleSkillData_o)&v16;
+          v16 = 0;
           SimpleSkillData___ctor(v12, v10, v11, 0);
           if ( !v6 )
-            sub_1D0F30C(v8, v13);
+            sub_21FFECC(v8, v13);
           if ( v9 >= *(unsigned int *)(v6 + 24) )
 LABEL_13:
-            sub_1D0F314(v8);
-          *(_QWORD *)(v6 + 32 + 8 * v9++) = v15;
+            sub_21FFED4(v8);
+          v14 = v6 + 8 * v9++;
+          *(_QWORD *)(v14 + 32) = v16;
         }
         while ( (unsigned int)max_length != v9 );
       }
@@ -301,17 +303,17 @@ System_Int32_array *BattleUserServantData__getAddPassiveSkill(BattleUserServantD
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4E7712C & 1) == 0 )
+  if ( (byte_59380F1 & 1) == 0 )
   {
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E7712C = 1;
+    sub_21FFC50(&int___TypeInfo);
+    byte_59380F1 = 1;
   }
   result = this->fields.addPassive;
   if ( !result )
   {
     result = this->fields.passiveSkill;
     if ( !result )
-      return (System_Int32_array *)sub_1D0F15C(int___TypeInfo, 0);
+      return (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
   }
   return result;
 }
@@ -324,44 +326,53 @@ System_Int64_array *BattleUserServantData__getBattleEquipTargetList(
   System_Int64_array *result; // x0
   int32_t grandSvt; // w20
   BalanceConfig_c *v5; // x0
-  __int64 v6; // x9
-  __int64 v7; // x1
+  int v6; // w8
+  int32_t *p_GrandSvtEquipMax; // x8
+  __int64 v8; // x1
   unsigned int max_length; // w8
 
-  if ( (byte_4E7712E & 1) == 0 )
+  if ( (byte_59380F3 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&long___TypeInfo);
-    byte_4E7712E = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&long___TypeInfo);
+    byte_59380F3 = 1;
   }
   result = this->fields.equipTargetIds;
   if ( !result )
   {
     grandSvt = this->fields.grandSvt;
     v5 = BalanceConfig_TypeInfo;
-    if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v5 = BalanceConfig_TypeInfo;
-    }
-    v6 = 48;
+    v6 = *(&BalanceConfig_TypeInfo->_2.cctor_finished + 1);
     if ( grandSvt == 1 )
-      v6 = 52;
-    result = (System_Int64_array *)sub_1D0F15C(
-                                     long___TypeInfo,
-                                     *(unsigned int *)((char *)&v5->static_fields->CriticalRateToAddByQuickFirstBonus
-                                                     + v6));
+    {
+      if ( !v6 )
+      {
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
+        v5 = BalanceConfig_TypeInfo;
+      }
+      p_GrandSvtEquipMax = &v5->static_fields->GrandSvtEquipMax;
+    }
+    else
+    {
+      if ( !v6 )
+      {
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
+        v5 = BalanceConfig_TypeInfo;
+      }
+      p_GrandSvtEquipMax = &v5->static_fields->SvtEquipMax;
+    }
+    result = (System_Int64_array *)sub_21FFD10(long___TypeInfo, (unsigned int)*p_GrandSvtEquipMax);
     if ( !result )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v8);
     max_length = result->max_length;
     if ( !max_length )
-      goto LABEL_15;
+      goto LABEL_18;
     result->m_Items[0] = this->fields.equipTargetId1;
     if ( grandSvt != 1 )
       return result;
-    if ( max_length <= 1 || (result->m_Items[1] = this->fields.equipTargetId2, max_length == 2) )
-LABEL_15:
-      sub_1D0F314(result);
+    if ( max_length == 1 || (result->m_Items[1] = this->fields.equipTargetId2, max_length <= 2) )
+LABEL_18:
+      sub_21FFED4(result);
     result->m_Items[2] = this->fields.equipTargetId3;
   }
   return result;
@@ -375,84 +386,88 @@ System_Int32_array *BattleUserServantData__getBattleSkillIdList(
   System_Collections_Generic_List_int__o *v3; // x19
   __int64 v4; // x0
   __int64 skillId1; // x1
-  struct System_Int32_array *items; // x9
-  _QWORD *v7; // x8
+  struct System_Int32_array *items; // x8
+  _QWORD *v7; // x9
   __int64 size; // x10
   __int64 v9; // x10
   __int64 v10; // x10
   struct AddSkillInfoData_array *addSkills; // x20
   il2cpp_array_size_t max_length; // x8
   __int64 v13; // x22
-  AddSkillInfoData_o *v14; // x9
+  AddSkillInfoData_o *v14; // x10
   struct System_Int32_array *v15; // x9
   _QWORD *v16; // x10
   __int64 v17; // x11
 
-  if ( (byte_4E7712A & 1) == 0 )
+  if ( (byte_59380EF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E7712A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_59380EF = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !v3 )
-    goto LABEL_27;
-  skillId1 = (unsigned int)this->fields.skillId1;
+    goto LABEL_25;
   items = v3->fields._items;
+  skillId1 = (unsigned int)this->fields.skillId1;
   v7 = Method_System_Collections_Generic_List_int__Add__;
   ++v3->fields._version;
   if ( !items )
-    goto LABEL_27;
+    goto LABEL_25;
   size = v3->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       v3,
       skillId1,
-      *(const MethodInfo_393F3EC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
-    v7 = Method_System_Collections_Generic_List_int__Add__;
+      *(const MethodInfo_4433138 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
     items = v3->fields._items;
+    v7 = Method_System_Collections_Generic_List_int__Add__;
+    skillId1 = (unsigned int)this->fields.skillId2;
+    ++v3->fields._version;
+    if ( !items )
+      goto LABEL_25;
   }
   else
   {
     v3->fields._size = size + 1;
     items->m_Items[size] = skillId1;
+    LODWORD(skillId1) = this->fields.skillId2;
+    ++v3->fields._version;
   }
-  skillId1 = (unsigned int)this->fields.skillId2;
-  ++v3->fields._version;
-  if ( !items )
-    goto LABEL_27;
   v9 = v3->fields._size;
   if ( (unsigned int)v9 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       v3,
       skillId1,
-      *(const MethodInfo_393F3EC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
-    v7 = Method_System_Collections_Generic_List_int__Add__;
+      *(const MethodInfo_4433138 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
     items = v3->fields._items;
+    v7 = Method_System_Collections_Generic_List_int__Add__;
+    skillId1 = (unsigned int)this->fields.skillId3;
+    ++v3->fields._version;
+    if ( !items )
+      goto LABEL_25;
   }
   else
   {
     v3->fields._size = v9 + 1;
     items->m_Items[v9] = skillId1;
+    skillId1 = (unsigned int)this->fields.skillId3;
+    ++v3->fields._version;
   }
-  skillId1 = (unsigned int)this->fields.skillId3;
-  ++v3->fields._version;
-  if ( !items )
-    goto LABEL_27;
   v10 = v3->fields._size;
   if ( (unsigned int)v10 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       v3,
       skillId1,
-      *(const MethodInfo_393F3EC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_4433138 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
@@ -469,12 +484,12 @@ System_Int32_array *BattleUserServantData__getBattleSkillIdList(
       while ( 1 )
       {
         if ( (unsigned int)v13 >= (unsigned int)max_length )
-          sub_1D0F314(v4);
+          sub_21FFED4(v4);
         v14 = addSkills->m_Items[v13];
         if ( !v14 )
           break;
-        skillId1 = (unsigned int)v14->fields.skillId;
         v15 = v3->fields._items;
+        skillId1 = (unsigned int)v14->fields.skillId;
         v16 = Method_System_Collections_Generic_List_int__Add__;
         ++v3->fields._version;
         if ( !v15 )
@@ -485,7 +500,7 @@ System_Int32_array *BattleUserServantData__getBattleSkillIdList(
           System_Collections_Generic_List_int___AddWithResize(
             v3,
             skillId1,
-            *(const MethodInfo_393F3EC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_4433138 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           max_length = addSkills->max_length;
         }
         else
@@ -496,15 +511,15 @@ System_Int32_array *BattleUserServantData__getBattleSkillIdList(
         if ( (int)++v13 >= (int)max_length )
           return System_Collections_Generic_List_int___ToArray(
                    v3,
-                   (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+                   (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
       }
-LABEL_27:
-      sub_1D0F30C(v4, skillId1);
+LABEL_25:
+      sub_21FFECC(v4, skillId1);
     }
   }
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -512,33 +527,34 @@ int32_t BattleUserServantData__getBattleSvtId(BattleUserServantData_o *this, con
 {
   __int64 v3; // x20
   __int64 v4; // x21
+  __int64 v5; // x1
   int32_t result; // w0
-  __int64 v6; // x19
-  __int64 v7; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
+  __int64 v7; // x19
+  __int64 v8; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
-  if ( (byte_4E77129 & 1) == 0 )
+  if ( (byte_59380EE & 1) == 0 )
   {
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4E77129 = 1;
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_59380EE = 1;
   }
-  v4 = *(_QWORD *)&this->fields.dispLimitCount.fields.currentCryptoKey;
-  v3 = *(_QWORD *)&this->fields.dispLimitCount.fields.fakeValue;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v8.fields.currentCryptoKey = v4;
-  *(_QWORD *)&v8.fields.fakeValue = v3;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v8, 0) == 1
+  v3 = *(_QWORD *)&this->fields.dispLimitCount.fields.currentCryptoKey;
+  v4 = *(_QWORD *)&this->fields.dispLimitCount.fields.fakeValue;
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+  *(_QWORD *)&v9.fields.currentCryptoKey = v3;
+  *(_QWORD *)&v9.fields.fakeValue = v4;
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v9, 0) == 1
     || (result = this->fields.overwriteSvtId, result <= 0) )
   {
-    v7 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
-    v6 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v9.fields.currentCryptoKey = v7;
-    *(_QWORD *)&v9.fields.fakeValue = v6;
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v9, 0);
+    v8 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
+    v7 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    *(_QWORD *)&v10.fields.currentCryptoKey = v8;
+    *(_QWORD *)&v10.fields.fakeValue = v7;
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v10, 0);
   }
   return result;
 }
@@ -557,66 +573,64 @@ System_Int32_array *BattleUserServantData__getSkillLevelList(BattleUserServantDa
   const MethodInfo *v5; // x1
   System_Int32_array *BattleSkillIdList; // x0
   __int64 v7; // x1
-  int32_t size; // w8
-  int v9; // w20
+  int v8; // w20
+  _QWORD *v9; // x8
   struct System_Int32_array *items; // x9
-  _QWORD *v11; // x10
+  __int64 size; // x10
 
-  if ( (byte_4E7712B & 1) == 0 )
+  if ( (byte_59380F0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor___80319440);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E7712B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor___91427360);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_59380F0 = 1;
   }
   SkillLevelList = (System_Collections_Generic_IEnumerable_T__o *)UserServantEntity__getSkillLevelList(
                                                                     (UserServantEntity_o *)this,
                                                                     0);
-  v4 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_60026048(
+  v4 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_71510500(
     v4,
     SkillLevelList,
-    (const MethodInfo_393ECC0 *)Method_System_Collections_Generic_List_int___ctor___80319440);
+    (const MethodInfo_44329E4 *)Method_System_Collections_Generic_List_int___ctor___91427360);
   BattleSkillIdList = BattleUserServantData__getBattleSkillIdList(this, v5);
   if ( !BattleSkillIdList || !v4 )
-    goto LABEL_12;
-  size = v4->fields._size;
-  v9 = LODWORD(BattleSkillIdList->max_length) - size;
-  if ( v9 < 1 )
-    return System_Collections_Generic_List_int___ToArray(
-             v4,
-             (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
-  items = v4->fields._items;
-  v11 = Method_System_Collections_Generic_List_int__Add__;
-  ++v4->fields._version;
-  if ( !items )
-LABEL_12:
-    sub_1D0F30C(BattleSkillIdList, v7);
-  while ( 1 )
+    goto LABEL_13;
+  v8 = LODWORD(BattleSkillIdList->max_length) - v4->fields._size;
+  if ( v8 >= 1 )
   {
-    if ( (unsigned int)size >= LODWORD(items->max_length) )
+    v9 = Method_System_Collections_Generic_List_int__Add__;
+    while ( 1 )
     {
-      System_Collections_Generic_List_int___AddWithResize(
-        v4,
-        1,
-        *(const MethodInfo_393F3EC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      items = v4->fields._items;
+      ++v4->fields._version;
+      if ( !items )
+        break;
+      size = v4->fields._size;
+      if ( (unsigned int)size >= LODWORD(items->max_length) )
+      {
+        System_Collections_Generic_List_int___AddWithResize(
+          v4,
+          1,
+          *(const MethodInfo_4433138 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+        v9 = Method_System_Collections_Generic_List_int__Add__;
+      }
+      else
+      {
+        v4->fields._size = size + 1;
+        items->m_Items[size] = 1;
+      }
+      if ( !--v8 )
+        return System_Collections_Generic_List_int___ToArray(
+                 v4,
+                 (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
-    else
-    {
-      v4->fields._size = size + 1;
-      items->m_Items[size] = 1;
-    }
-    if ( !--v9 )
-      return System_Collections_Generic_List_int___ToArray(
-               v4,
-               (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
-    size = v4->fields._size;
-    items = v4->fields._items;
-    v11 = Method_System_Collections_Generic_List_int__Add__;
-    ++v4->fields._version;
-    if ( !items )
-      goto LABEL_12;
+LABEL_13:
+    sub_21FFECC(BattleSkillIdList, v7);
   }
+  return System_Collections_Generic_List_int___ToArray(
+           v4,
+           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }

@@ -1,176 +1,188 @@
 void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const MethodInfo *method)
 {
-  struct System_Int32_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  ServantLeaderInfo_o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  Il2CppClass *v3; // x0
+  struct System_Int32_array *v4; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  ServantLeaderInfo_o *v11; // x20
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
 
-  if ( (byte_4E7861C & 1) == 0 )
+  if ( (byte_5939657 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    sub_1D0F0B4(&int___TypeInfo);
-    sub_1D0F0B4(&ServantLeaderInfo_TypeInfo);
-    byte_4E7861C = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    sub_21FFC50(&int___TypeInfo);
+    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
+    byte_5939657 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+  v3 = int___TypeInfo;
   *(_QWORD *)&this->fields.idx = 0;
   this->fields.questPhase = 0;
-  v3 = (struct System_Int32_array *)sub_1D0F15C(int___TypeInfo, 0);
-  this->fields.adviceMessageIds = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (ServantLeaderInfo_o *)sub_1D0F300(ServantLeaderInfo_TypeInfo);
-  ServantLeaderInfo___ctor(v10, 0);
-  this->fields.userSvtLeaderInfo = v10;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.userSvtLeaderInfo,
-    (int32_t)v10,
-    v11,
+  v4 = (struct System_Int32_array *)sub_21FFD10(v3, 0);
+  this->fields.adviceMessageIds = v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
+  ServantLeaderInfo___ctor(v11, 0);
+  this->fields.userSvtLeaderInfo = v11;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.userSvtLeaderInfo,
+    (int32_t)v11,
     v12,
     v13,
     v14,
     v15,
-    v16);
+    v16,
+    v17);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     0,
-    v17,
     v18,
     v19,
     v20,
     v21,
-    v22);
+    v22,
+    v23);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     0,
-    v23,
     v24,
     v25,
     v26,
     v27,
-    v28);
+    v28,
+    v29);
 }
 
 
-void UserRecommendSupportEntity___ctor_44492564(
+void UserRecommendSupportEntity___ctor_50078128(
         UserRecommendSupportEntity_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  struct System_Int32_array *v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  ServantLeaderInfo_o *v12; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  Il2CppClass *v5; // x0
+  struct System_Int32_array *v6; // x0
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  ServantLeaderInfo_o *v13; // x20
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
 
-  if ( (byte_4E7861D & 1) == 0 )
+  if ( (byte_5939658 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    sub_1D0F0B4(&int___TypeInfo);
-    sub_1D0F0B4(&ServantLeaderInfo_TypeInfo);
-    byte_4E7861D = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    sub_21FFC50(&int___TypeInfo);
+    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
+    byte_5939658 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+  v5 = int___TypeInfo;
   this->fields.questId = 0;
   this->fields.questPhase = 0;
   this->fields.idx = index + 1;
-  v5 = (struct System_Int32_array *)sub_1D0F15C(int___TypeInfo, 0);
-  this->fields.adviceMessageIds = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
-  v12 = (ServantLeaderInfo_o *)sub_1D0F300(ServantLeaderInfo_TypeInfo);
-  ServantLeaderInfo___ctor(v12, 0);
-  this->fields.userSvtLeaderInfo = v12;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.userSvtLeaderInfo,
-    (int32_t)v12,
-    v13,
+  v6 = (struct System_Int32_array *)sub_21FFD10(v5, 0);
+  this->fields.adviceMessageIds = v6;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds,
+    (int32_t)v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
+  v13 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
+  ServantLeaderInfo___ctor(v13, 0);
+  this->fields.userSvtLeaderInfo = v13;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.userSvtLeaderInfo,
+    (int32_t)v13,
     v14,
     v15,
     v16,
     v17,
-    v18);
+    v18,
+    v19);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     0,
-    v19,
     v20,
     v21,
     v22,
     v23,
-    v24);
+    v24,
+    v25);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     0,
-    v25,
     v26,
     v27,
     v28,
     v29,
-    v30);
+    v30,
+    v31);
 }
 
 
 System_String_o *UserRecommendSupportEntity__CreatePK(int64_t userId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4E7861B & 1) == 0 )
+  if ( (byte_5939656 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E7861B = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_5939656 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            idx,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -186,79 +198,76 @@ System_String_o *UserRecommendSupportEntity__CreatePrimaryKey(
 
 int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_3A85C84 *v2; // x3
+  const MethodInfo_45B1ABC *v2; // x3
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   struct EquipTargetInfo_o *equipTarget1; // x8
-  __int128 v6; // q0
-  __int128 v7; // q1
-  int v8; // w9
-  __int128 v9; // q0
-  __int128 v10; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+0h] [xbp-110h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v13; // [xsp+20h] [xbp-F0h] BYREF
-  __int128 v14; // [xsp+40h] [xbp-D0h]
-  __int128 v15; // [xsp+50h] [xbp-C0h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+60h] [xbp-B0h]
-  _OWORD v17[3]; // [xsp+80h] [xbp-90h] BYREF
-  _BYTE v18[39]; // [xsp+B0h] [xbp-60h] BYREF
-  __int64 v19; // [xsp+D8h] [xbp-38h]
-  System_Nullable_T__o v20; // 0:x0.16
+  __int128 v6; // q2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+0h] [xbp-140h] BYREF
+  __int128 v9; // [xsp+20h] [xbp-120h]
+  __int128 v10; // [xsp+30h] [xbp-110h]
+  _OWORD v11[3]; // [xsp+40h] [xbp-100h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+70h] [xbp-D0h] BYREF
+  _OWORD v13[2]; // [xsp+90h] [xbp-B0h] BYREF
+  __int128 v14; // [xsp+B0h] [xbp-90h]
+  _OWORD v15[2]; // [xsp+C0h] [xbp-80h] BYREF
+  _BYTE v16[39]; // [xsp+E0h] [xbp-60h] BYREF
+  __int64 v17; // [xsp+108h] [xbp-38h]
+  System_Nullable_T__o v18; // 0:x0.16
 
-  v19 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4E7861E & 1) == 0 )
+  v17 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
+  if ( (byte_5939659 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_ObscuredLong___ctor__);
-    sub_1D0F0B4(&Method_System_Nullable_ObscuredLong__get_HasValue__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4E7861E = 1;
+    sub_21FFC50(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_ObscuredLong___ctor__);
+    sub_21FFC50(&Method_System_Nullable_ObscuredLong__get_HasValue__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5939659 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
+  v14 = 0u;
+  memset(v15, 0, 23);
+  memset(v16, 0, sizeof(v16));
+  memset(&v12, 0, sizeof(v12));
   if ( userSvtLeaderInfo && (equipTarget1 = userSvtLeaderInfo->fields.equipTarget1) != 0 )
   {
-    v6 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey;
-    v7 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue;
-    *(_QWORD *)&v20.fields.hasValue = v17;
-    v20.fields.value = (Il2CppObject *)v18;
-    memset(v17, 0, 40);
-    v14 = v6;
-    v15 = v7;
-    *(_OWORD *)v18 = v6;
-    *(_OWORD *)&v18[16] = v7;
+    v6 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue;
+    *(_QWORD *)&v18.fields.hasValue = v11;
+    v9 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey;
+    v10 = v6;
+    v18.fields.value = (Il2CppObject *)v13;
+    v13[0] = v9;
+    v13[1] = v6;
+    memset(v11, 0, 40);
     System_Nullable_ObscuredLong____ctor(
-      v20,
+      v18,
       (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)Method_System_Nullable_ObscuredLong___ctor__,
       v2);
-    v8 = LOBYTE(v17[0]);
-    *(_QWORD *)&v18[31] = *(_QWORD *)&v17[2];
-    *(_OWORD *)v18 = *(_OWORD *)((char *)v17 + 1);
-    v17[0] = *(_OWORD *)((char *)v17 + 1);
-    v17[1] = *(_OWORD *)((char *)&v17[1] + 1);
-    *(_OWORD *)&v18[16] = v17[1];
-    *(_QWORD *)((char *)&v17[1] + 15) = *(_QWORD *)&v18[31];
-    if ( v8 )
+    *(_QWORD *)((char *)v15 + 15) = *(_QWORD *)&v11[2];
+    v14 = *(_OWORD *)((char *)v11 + 1);
+    v15[0] = *(_OWORD *)((char *)&v11[1] + 1);
+    *(_OWORD *)v16 = *(_OWORD *)((char *)v11 + 1);
+    *(_OWORD *)&v16[16] = *(_OWORD *)((char *)&v11[1] + 1);
+    *(_QWORD *)&v16[31] = *(_QWORD *)((char *)v15 + 15);
+    if ( LOBYTE(v11[0]) )
     {
-      v9 = *(_OWORD *)((char *)v17 + 7);
-      v10 = *(_OWORD *)((char *)&v17[1] + 7);
+      v12 = *(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)&v16[7];
       goto LABEL_11;
     }
   }
   else
   {
-    memset(v18, 0, sizeof(v18));
+    v14 = 0u;
+    memset(v15, 0, 23);
+    memset(v16, 0, sizeof(v16));
   }
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v13, 0, 0);
-  v9 = *(_OWORD *)&v13.fields.currentCryptoKey;
-  v10 = *(_OWORD *)&v13.fields.fakeValue;
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v12, 0, 0);
 LABEL_11:
-  *(_OWORD *)&v16.fields.currentCryptoKey = v9;
-  *(_OWORD *)&v16.fields.fakeValue = v10;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v12 = v16;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v12, 0);
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+  v8 = v12;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v8, 0);
 }
 
 
@@ -295,17 +304,17 @@ void UserRecommendSupportEntity__set_UserRecommendSupportInfo(
         UserRecommendSupportInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._UserRecommendSupportInfo_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -319,17 +328,17 @@ void UserRecommendSupportEntity__set_UserServantEntity(
         UserServantEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

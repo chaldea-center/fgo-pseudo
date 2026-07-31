@@ -10,24 +10,32 @@ DropInfo_o *BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  bool isRateUp; // w8
   DropInfo_o *result; // x0
+  bool isAdd; // w10
+  int32x2_t v9; // d0
+  int32_t rarity; // w8
 
-  if ( (byte_4E7A1A2 & 1) == 0 )
+  if ( (byte_593B205 & 1) == 0 )
   {
-    sub_1D0F0B4(&DropInfo_TypeInfo);
-    byte_4E7A1A2 = 1;
+    sub_21FFC50(&DropInfo_TypeInfo);
+    byte_593B205 = 1;
   }
-  v3 = sub_1D0F300(DropInfo_TypeInfo);
+  v3 = sub_21FFEBC(DropInfo_TypeInfo);
   DropInfo___ctor((DropInfo_o *)v3, 0);
   if ( !v3 )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
+  isRateUp = this->fields.isRateUp;
   result = (DropInfo_o *)v3;
+  isAdd = this->fields.isAdd;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
-  *(int32x2_t *)(v3 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
-  *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
+  v9.n64_u64[0] = *(unsigned __int64 *)&this->fields.limitCount;
+  *(_BYTE *)(v3 + 40) = isRateUp;
+  *(_BYTE *)(v3 + 52) = isAdd;
+  *(int32x2_t *)(v3 + 24) = vrev64_s32(v9);
+  rarity = this->fields.rarity;
   *(_DWORD *)(v3 + 44) = this->fields.originalNum;
-  *(_DWORD *)(v3 + 36) = this->fields.rarity;
-  *(_BYTE *)(v3 + 52) = this->fields.isAdd;
+  *(_DWORD *)(v3 + 36) = rarity;
   return result;
 }
 
@@ -80,8 +88,8 @@ int32_t BattleDropItem__getOriginalNum(BattleDropItem_o *this, const MethodInfo 
 
 int32_t BattleDropItem__getTotalNum(BattleDropItem_o *this, const MethodInfo *method)
 {
-  int originalNum; // w9
-  int32_t num; // w8
+  int32_t originalNum; // w8
+  int32_t num; // w9
 
   originalNum = this->fields.originalNum;
   num = this->fields.num;
@@ -90,10 +98,7 @@ int32_t BattleDropItem__getTotalNum(BattleDropItem_o *this, const MethodInfo *me
     originalNum = this->fields.num;
     this->fields.originalNum = num;
   }
-  if ( num - originalNum <= 0 )
-    return originalNum;
-  else
-    return num;
+  return ((num - originalNum) & ~((num - originalNum) >> 31)) + originalNum;
 }
 
 
@@ -121,20 +126,27 @@ bool BattleDropItem__isBonusAdd(BattleDropItem_o *this, const MethodInfo *method
 
 void BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info, const MethodInfo *method)
 {
-  int32_t num; // w8
+  int v3; // w9
+  int originalNum; // w8
+  bool isRateUp; // w9
+  int32_t rarity; // w8
+  bool isAdd; // w9
 
   if ( !info )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&info->fields.type;
-  this->fields.limitCount = info->fields.limitCount;
-  num = info->fields.num;
-  this->fields.num = num;
-  this->fields.isRateUp = info->fields.isRateUp;
-  if ( info->fields.originalNum > 0 )
-    num = info->fields.originalNum;
-  this->fields.originalNum = num;
-  this->fields.rarity = info->fields.rarity;
-  this->fields.isAdd = info->fields.isAdd;
+  v3 = *(_QWORD *)&info->fields.num;
+  *(int32x2_t *)&this->fields.limitCount = vrev64_s32(*(int32x2_t *)&info->fields.num);
+  originalNum = info->fields.originalNum;
+  if ( originalNum <= 0 )
+    originalNum = v3;
+  isRateUp = info->fields.isRateUp;
+  this->fields.originalNum = originalNum;
+  rarity = info->fields.rarity;
+  this->fields.isRateUp = isRateUp;
+  isAdd = info->fields.isAdd;
+  this->fields.rarity = rarity;
+  this->fields.isAdd = isAdd;
 }
 
 

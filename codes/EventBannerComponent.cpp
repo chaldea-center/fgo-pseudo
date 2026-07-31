@@ -1,25 +1,25 @@
 void EventBannerComponent___ctor(EventBannerComponent_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E76A67 & 1) == 0 )
+  if ( (byte_5937AA3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4E76A67 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_5937AA3 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.bannerList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.bannerList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bannerList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -29,50 +29,52 @@ void EventBannerComponent__ClearBanner(EventBannerComponent_o *this, const Metho
   void *gameObject; // x0
   __int64 v4; // x1
   int32_t v5; // w20
+  int32_t v6; // w2
+  __int64 v7; // x1
   Il2CppObject *Item; // x21
-  int32_t v7; // w2
-  int v8; // w8
+  int v9; // w8
 
-  if ( (byte_4E76A65 & 1) == 0 )
+  if ( (byte_5937AA1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76A65 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937AA1 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0),
         (gameObject = this->fields.bannerList) == 0) )
   {
-LABEL_14:
-    sub_1D0F30C(gameObject, v4);
+LABEL_11:
+    sub_21FFECC(gameObject, v4);
   }
   if ( *((int *)gameObject + 6) >= 1 )
   {
     v5 = 0;
-    do
+    while ( 1 )
     {
+      v6 = *((_DWORD *)gameObject + 6);
+      if ( v5 >= v6 )
+        break;
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)gameObject,
                v5,
-               (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)Item, 0);
+               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+      UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Item, 0);
       gameObject = this->fields.bannerList;
-      if ( !gameObject )
-        goto LABEL_14;
-      v7 = *((_DWORD *)gameObject + 6);
       ++v5;
+      if ( !gameObject )
+        goto LABEL_11;
     }
-    while ( v5 < v7 );
-    v8 = *((_DWORD *)gameObject + 7) + 1;
+    v9 = *((_DWORD *)gameObject + 7) + 1;
     *((_DWORD *)gameObject + 6) = 0;
-    *((_DWORD *)gameObject + 7) = v8;
-    if ( v7 >= 1 )
-      System_Array__Clear(*((System_Array_o **)gameObject + 2), 0, v7, 0);
+    *((_DWORD *)gameObject + 7) = v9;
+    if ( v6 >= 1 )
+      System_Array__Clear(*((System_Array_o **)gameObject + 2), 0, v6, 0);
   }
 }
 
@@ -90,31 +92,31 @@ void EventBannerComponent__SetBanner(EventBannerComponent_o *this, const MethodI
   UnityEngine_Transform_o *transform; // x0
   UnityEngine_GameObject_o *v12; // x22
   UnityEngine_Transform_o *v13; // x24
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   __int64 v20; // x8
   _QWORD *v21; // x9
   __int64 v22; // x10
   __int64 v23; // x8
 
-  if ( (byte_4E76A66 & 1) == 0 )
+  if ( (byte_5937AA2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E76A66 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5937AA2 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventMaster___);
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_27;
   EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 6, 1, 0, 0);
@@ -132,7 +134,7 @@ void EventBannerComponent__SetBanner(EventBannerComponent_o *this, const MethodI
       while ( 1 )
       {
         if ( (unsigned int)v8 >= max_length )
-          sub_1D0F314(Instance);
+          sub_21FFED4(Instance);
         v9 = EnableEntityList->m_Items[v8];
         if ( !v9 )
           break;
@@ -154,17 +156,17 @@ void EventBannerComponent__SetBanner(EventBannerComponent_o *this, const MethodI
           v12 = (UnityEngine_GameObject_o *)Instance;
           Instance = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
           v13 = (UnityEngine_Transform_o *)Instance;
-          if ( !byte_4E70C9E )
+          if ( !byte_5931945 )
           {
-            Instance = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-            byte_4E70C9E = 1;
+            Instance = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+            byte_5931945 = 1;
           }
           if ( !v13 )
             break;
           UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
           Instance = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                 v12,
-                                (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
+                                (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
           if ( !Instance )
             break;
           BannerComponent__SetBanner((BannerComponent_o *)Instance, v9, 0);
@@ -182,14 +184,14 @@ void EventBannerComponent__SetBanner(EventBannerComponent_o *this, const MethodI
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)Instance,
               (Il2CppObject *)v12,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
           }
           else
           {
             v23 = v20 + 8 * v22;
             *(_DWORD *)(Instance + 24) = v22 + 1;
             *(_QWORD *)(v23 + 32) = v12;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v23 + 32), (int32_t)v12, v14, v15, v16, v17, v18, v19);
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 32), (int32_t)v12, v14, v15, v16, v17, v18, v19);
           }
         }
         max_length = EnableEntityList->max_length;
@@ -197,7 +199,7 @@ void EventBannerComponent__SetBanner(EventBannerComponent_o *this, const MethodI
           goto LABEL_24;
       }
 LABEL_27:
-      sub_1D0F30C(Instance, v4);
+      sub_21FFECC(Instance, v4);
     }
 LABEL_24:
     Instance = (__int64)this->fields.bannerGrid;

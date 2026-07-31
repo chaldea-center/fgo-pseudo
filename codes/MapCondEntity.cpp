@@ -1,27 +1,27 @@
 void MapCondEntity___ctor(MapCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77B6B & 1) == 0 )
+  if ( (byte_5938B80 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77B6B = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938B80 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MapCondEntity__CreatePK(int32_t id, int32_t mapId, const MethodInfo *method)
 {
-  if ( (byte_4E77B69 & 1) == 0 )
+  if ( (byte_5938B7E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E77B69 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5938B7E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            mapId,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,34 +44,32 @@ bool MapCondEntity__IsCondAboutQuestClear(
   if ( !questId )
     return 0;
   condType = this->fields.condType;
-  switch ( condType )
+  if ( condType != 57 )
   {
-    case 57:
-      return this->fields.condTargetId == questId;
-    case 46:
+    if ( condType == 46 )
       return this->fields.condTargetId == questId && this->fields.condNum == phase;
-    case 1:
-      return this->fields.condTargetId == questId;
+    if ( condType != 1 )
+      return 0;
   }
-  return 0;
+  return this->fields.condTargetId == questId;
 }
 
 
 bool MapCondEntity__IsOpen(MapCondEntity_o *this, const MethodInfo *method)
 {
-  int32_t condTargetId; // w20
-  int32_t condType; // w21
+  int32_t condType; // w20
+  int32_t condTargetId; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4E77B6A & 1) == 0 )
+  if ( (byte_5938B7F & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E77B6A = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_5938B7F = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsOpen(condType, condTargetId, condNum, 0, 0, 0);
 }

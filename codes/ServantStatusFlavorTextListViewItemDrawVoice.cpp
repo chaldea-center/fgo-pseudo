@@ -23,11 +23,12 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetCvName(
 
   cvRangeLabel = this->fields.cvRangeLabel;
   if ( !cvRangeLabel )
-    sub_1D0F30C(0, cvName);
+    sub_21FFECC(0, cvName);
   UIRangeLabel__Set(cvRangeLabel, cvName, 0, 1, 0, 0, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
         ServantStatusFlavorTextListViewItemDrawVoice_o *this,
         ServantStatusListViewItem_o *item,
@@ -47,12 +48,12 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
   System_String_o *voice; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *illust; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4E73D25 & 1) == 0 )
+  if ( (byte_59349AB & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_12118/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_12117/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
-    byte_4E73D25 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_12436/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
+    sub_21FFC50(&StringLiteral_12435/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
+    byte_59349AB = 1;
   }
   illust = 0;
   voice = 0;
@@ -61,14 +62,14 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
   if ( item && mode )
   {
     illustTitleLabel = this->fields.illustTitleLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12118/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isOpen);
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12436/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0);
     if ( !illustTitleLabel )
       goto LABEL_13;
     UILabel__set_text(illustTitleLabel, illustRangeLabel, 0);
     cvTitleLabel = this->fields.cvTitleLabel;
-    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12117/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0);
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12435/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0);
     if ( !cvTitleLabel
       || (UILabel__set_text(cvTitleLabel, illustRangeLabel, 0),
           ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v15),
@@ -77,7 +78,7 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
           (illustRangeLabel = (System_String_o *)this->fields.cvRangeLabel) == 0) )
     {
 LABEL_13:
-      sub_1D0F30C(illustRangeLabel, v13);
+      sub_21FFECC(illustRangeLabel, v13);
     }
     UIRangeLabel__Set((UIRangeLabel_o *)illustRangeLabel, voice, 0, 1, 0, 0, 0);
   }

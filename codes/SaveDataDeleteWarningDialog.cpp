@@ -1,12 +1,14 @@
 void SaveDataDeleteWarningDialog___ctor(SaveDataDeleteWarningDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E71ADA & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_59326FC & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E71ADA = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_59326FC = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -17,17 +19,17 @@ void SaveDataDeleteWarningDialog__OnClickCancel(SaveDataDeleteWarningDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   struct SaveDataDeleteWarningDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E71AD9 & 1) == 0 )
+  if ( (byte_59326FB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SaveDataDeleteWarningDialog_OnClickCancel__);
-    byte_4E71AD9 = 1;
+    sub_21FFC50(&Method_SaveDataDeleteWarningDialog_OnClickCancel__);
+    byte_59326FB = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteWarningDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SaveDataDeleteWarningDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteWarningDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteWarningDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -45,17 +47,17 @@ void SaveDataDeleteWarningDialog__OnClickDecide(SaveDataDeleteWarningDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   struct SaveDataDeleteWarningDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E71AD8 & 1) == 0 )
+  if ( (byte_59326FA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SaveDataDeleteWarningDialog_OnClickDecide__);
-    byte_4E71AD8 = 1;
+    sub_21FFC50(&Method_SaveDataDeleteWarningDialog_OnClickDecide__);
+    byte_59326FA = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteWarningDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_SaveDataDeleteWarningDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SaveDataDeleteWarningDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteWarningDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -71,13 +73,13 @@ void SaveDataDeleteWarningDialog__OnEnable(SaveDataDeleteWarningDialog_o *this, 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4E71AD7 & 1) == 0 )
+  if ( (byte_59326F9 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4E71AD7 = 1;
+    sub_21FFC50(&StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_59326F9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15854/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -87,16 +89,22 @@ void SaveDataDeleteWarningDialog__Open(
         const MethodInfo *method)
 {
   UIButtonColor_o *decideButtonColor; // x0
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor )
     goto LABEL_5;
-  v6.fields.r = 1.0;
-  v6.fields.g = 1.0;
-  v6.fields.b = 1.0;
-  v6.fields.a = 1.0;
-  UIButtonColor__set_defaultColor(decideButtonColor, v6, 0);
+  v12.fields.r = 1.0;
+  v12.fields.g = 1.0;
+  v12.fields.b = 1.0;
+  v12.fields.a = 1.0;
+  UIButtonColor__set_defaultColor(decideButtonColor, v12, 0);
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor
     || (((void (__fastcall *)(UIButtonColor_o *, _QWORD, __int64, const MethodInfo *))decideButtonColor->klass->vtable._14_SetState.methodPtr)(
@@ -107,14 +115,14 @@ void SaveDataDeleteWarningDialog__Open(
         (decideButtonColor = this->fields.decideButtonColor) == 0) )
   {
 LABEL_5:
-    sub_1D0F30C(decideButtonColor, func);
+    sub_21FFECC(decideButtonColor, func);
   }
   ((void (__fastcall *)(UIButtonColor_o *, __int64, const MethodInfo *))decideButtonColor->klass->vtable._5_set_isEnabled.methodPtr)(
     decideButtonColor,
     1,
     decideButtonColor->klass->vtable._5_set_isEnabled.method);
   this->fields.clickFunc = func;
-  sub_1D0F058(&this->fields.clickFunc, func);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v6, v7, v8, v9, v10, v11);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
 
@@ -125,28 +133,40 @@ void SaveDataDeleteWarningDialog_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(&this->fields.m_target, object);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    (System_String_o *)method,
+    (System_String_o *)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v10, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -154,9 +174,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B34A18;
+  this->fields.invoke_impl = (intptr_t)sub_1FECE3C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B349D0;
+  this->fields.extra_arg = (intptr_t)sub_1FECDF4;
 }
 
 
@@ -167,18 +187,13 @@ System_IAsyncResult_o *SaveDataDeleteWarningDialog_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4E71ADB & 1) == 0 )
-  {
-    sub_1D0F0B4(&bool_TypeInfo);
-    byte_4E71ADB = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -187,7 +202,7 @@ void SaveDataDeleteWarningDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

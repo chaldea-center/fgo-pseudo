@@ -1,4 +1,4 @@
 __int64 mono_class_num_methods()
 {
-  return sub_1D18384();
+  return sub_226043C();
 }

@@ -1,13 +1,13 @@
 void BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77351 & 1) == 0 )
+  if ( (byte_593831E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77351 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_593831E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,12 +22,12 @@ int32_t BlankEarthSpotEntity__GetGrandBaseOffsetX(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734E & 1) == 0 )
+  if ( (byte_593831B & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20253/*"grandBaseOffsetX"*/);
-    byte_4E7734E = 1;
+    sub_21FFC50(&StringLiteral_20786/*"grandBaseOffsetX"*/);
+    byte_593831B = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20253/*"grandBaseOffsetX"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20786/*"grandBaseOffsetX"*/, defaultValue, 0);
 }
 
 
@@ -36,12 +36,12 @@ int32_t BlankEarthSpotEntity__GetGrandBaseOffsetY(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734F & 1) == 0 )
+  if ( (byte_593831C & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20254/*"grandBaseOffsetY"*/);
-    byte_4E7734F = 1;
+    sub_21FFC50(&StringLiteral_20787/*"grandBaseOffsetY"*/);
+    byte_593831C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20254/*"grandBaseOffsetY"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20787/*"grandBaseOffsetY"*/, defaultValue, 0);
 }
 
 
@@ -50,12 +50,12 @@ float BlankEarthSpotEntity__GetGrandBaseScale(
         float defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E77350 & 1) == 0 )
+  if ( (byte_593831D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20255/*"grandBaseScale"*/);
-    byte_4E77350 = 1;
+    sub_21FFC50(&StringLiteral_20788/*"grandBaseScale"*/);
+    byte_593831D = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_20255/*"grandBaseScale"*/, defaultValue, 0);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_20788/*"grandBaseScale"*/, defaultValue, 0);
 }
 
 
@@ -64,12 +64,12 @@ int32_t BlankEarthSpotEntity__GetGrandClassIconId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E77349 & 1) == 0 )
+  if ( (byte_5938316 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20256/*"grandClassIconId"*/);
-    byte_4E77349 = 1;
+    sub_21FFC50(&StringLiteral_20789/*"grandClassIconId"*/);
+    byte_5938316 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20256/*"grandClassIconId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20789/*"grandClassIconId"*/, defaultValue, 0);
 }
 
 
@@ -78,12 +78,12 @@ int32_t BlankEarthSpotEntity__GetGrandFaceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734C & 1) == 0 )
+  if ( (byte_5938319 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20257/*"grandFaceId"*/);
-    byte_4E7734C = 1;
+    sub_21FFC50(&StringLiteral_20790/*"grandFaceId"*/);
+    byte_5938319 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20257/*"grandFaceId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20790/*"grandFaceId"*/, defaultValue, 0);
 }
 
 
@@ -92,12 +92,12 @@ int32_t BlankEarthSpotEntity__GetGrandImageId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734A & 1) == 0 )
+  if ( (byte_5938317 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20259/*"grandImageId"*/);
-    byte_4E7734A = 1;
+    sub_21FFC50(&StringLiteral_20792/*"grandImageId"*/);
+    byte_5938317 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20259/*"grandImageId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20792/*"grandImageId"*/, defaultValue, 0);
 }
 
 
@@ -106,12 +106,12 @@ int32_t BlankEarthSpotEntity__GetGrandLimitCount(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734B & 1) == 0 )
+  if ( (byte_5938318 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20260/*"grandLimitCount"*/);
-    byte_4E7734B = 1;
+    sub_21FFC50(&StringLiteral_20793/*"grandLimitCount"*/);
+    byte_5938318 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20260/*"grandLimitCount"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20793/*"grandLimitCount"*/, defaultValue, 0);
 }
 
 
@@ -120,12 +120,12 @@ int32_t BlankEarthSpotEntity__GetGrandOffsetX(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4E7734D & 1) == 0 )
+  if ( (byte_593831A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20261/*"grandOffsetX"*/);
-    byte_4E7734D = 1;
+    sub_21FFC50(&StringLiteral_20794/*"grandOffsetX"*/);
+    byte_593831A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20261/*"grandOffsetX"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20794/*"grandOffsetX"*/, defaultValue, 0);
 }
 
 
@@ -147,26 +147,27 @@ bool BlankEarthSpotEntity__IsHiddenOnBlankEarth(BlankEarthSpotEntity_o *this, co
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool BlankEarthSpotEntity__IsOpenForQAA(
         BlankEarthSpotEntity_o *this,
         int32_t beforeClearQuestId,
         bool isCheckResetFlag,
         const MethodInfo *method)
 {
-  int32_t condTargetId; // w22
-  int32_t condTargetType; // w23
+  int32_t condTargetType; // w22
+  int32_t condTargetId; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4E77348 & 1) == 0 )
+  if ( (byte_5938315 & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E77348 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_5938315 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
   condTargetNum = this->fields.condTargetNum;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
   return CondType__IsOpenExcludeBeforeClearQuest(
            condTargetType,
            condTargetId,

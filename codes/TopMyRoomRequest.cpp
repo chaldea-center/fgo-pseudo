@@ -8,93 +8,93 @@ void TopMyRoomRequest__beginRequest(
   TopMyRoomRequest_o *v6; // x22
   unsigned __int64 v7; // x26
   System_Int32_array *v8; // x19
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   TopMyRoomRequest_o *v15; // x21
   int32_t v16; // w1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
+  bool v21; // w6
+  bool v22; // w7
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
   int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v27; // w6
+  bool v28; // w7
   int32_t v29; // w1
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
   int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
-  int32_t v36; // w2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
+  bool v34; // w6
+  bool v35; // w7
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
   int32_t v39; // w5
-  int64_t v40; // x6
-  System_String_o *v41; // x7
+  bool v40; // w6
+  bool v41; // w7
   int32_t v42; // w1
-  GrandQuestFolderBoardItem_o *p_fields; // x0
-  int32_t v44; // w2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
+  MissionNaviTransitionBoardItem_o *p_fields; // x0
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
   int32_t v47; // w5
-  int64_t v48; // x6
-  System_String_o *v49; // x7
-  int32_t v50; // w2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
+  bool v48; // w6
+  bool v49; // w7
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
   int32_t v53; // w5
-  int64_t v54; // x6
-  System_String_o *v55; // x7
+  bool v54; // w6
+  bool v55; // w7
   int32_t v56; // w1
-  int32_t v57; // w2
-  int32_t v58; // w3
-  System_String_o *v59; // x4
+  System_String_o *v57; // x2
+  System_String_o *v58; // x3
+  int32_t v59; // w4
   int32_t v60; // w5
-  int64_t v61; // x6
-  System_String_o *v62; // x7
-  int32_t v63; // w2
-  int32_t v64; // w3
-  System_String_o *v65; // x4
+  bool v61; // w6
+  bool v62; // w7
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
   int32_t v66; // w5
-  int64_t v67; // x6
-  System_String_o *v68; // x7
+  bool v67; // w6
+  bool v68; // w7
   int32_t v69; // w1
-  int32_t v70; // w2
-  int32_t v71; // w3
-  System_String_o *v72; // x4
+  System_String_o *v70; // x2
+  System_String_o *v71; // x3
+  int32_t v72; // w4
   int32_t v73; // w5
-  int64_t v74; // x6
-  System_String_o *v75; // x7
+  bool v74; // w6
+  bool v75; // w7
   System_String_o *v76; // x0
   const MethodInfo *v77; // x3
   const MethodInfo *v78; // x1
   RequestBase_o *v79; // [xsp+8h] [xbp-68h]
 
   v4 = this;
-  if ( (byte_4E792D1 & 1) == 0 )
+  if ( (byte_593A325 & 1) == 0 )
   {
-    sub_1D0F0B4(&string___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_859/*",["*/);
-    sub_1D0F0B4(&StringLiteral_810/*","*/);
-    sub_1D0F0B4(&StringLiteral_25229/*"voicePlayedList"*/);
-    sub_1D0F0B4(&StringLiteral_16009/*"["*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    this = (TopMyRoomRequest_o *)sub_1D0F0B4(&StringLiteral_16262/*"]"*/);
-    byte_4E792D1 = 1;
+    sub_21FFC50(&string___TypeInfo);
+    sub_21FFC50(&StringLiteral_922/*",["*/);
+    sub_21FFC50(&StringLiteral_869/*","*/);
+    sub_21FFC50(&StringLiteral_26032/*"voicePlayedList"*/);
+    sub_21FFC50(&StringLiteral_16395/*"["*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    this = (TopMyRoomRequest_o *)sub_21FFC50(&StringLiteral_16659/*"]"*/);
+    byte_593A325 = 1;
   }
   if ( !voicePlayedList )
 LABEL_33:
-    sub_1D0F30C(this, voicePlayedList);
+    sub_21FFECC(this, voicePlayedList);
   v79 = (RequestBase_o *)v4;
   max_length = voicePlayedList->max_length;
   v6 = (TopMyRoomRequest_o *)StringLiteral_1/*""*/;
@@ -108,23 +108,23 @@ LABEL_33:
       {
         if ( System_String__IsNullOrEmpty((System_String_o *)v6, 0) )
         {
-          this = (TopMyRoomRequest_o *)sub_1D0F15C(string___TypeInfo, 5);
+          this = (TopMyRoomRequest_o *)sub_21FFD10(string___TypeInfo, 5);
           if ( !this )
             goto LABEL_33;
           v15 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
-          v16 = StringLiteral_16009/*"["*/;
-          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16009/*"["*/;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.paramString, v16, v9, v10, v11, v12, v13, v14);
+          v16 = StringLiteral_16395/*"["*/;
+          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16395/*"["*/;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.paramString, v16, v9, v10, v11, v12, v13, v14);
           if ( !LODWORD(v8->max_length) )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 32, 0);
-          if ( LODWORD(v15->fields.paramInteger) <= 1 )
+          if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFE) == 0 )
             break;
           *(_QWORD *)&v15->fields.shouldShowConnect = this;
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&v15->fields.shouldShowConnect,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&v15->fields.shouldShowConnect,
             (int32_t)this,
             v17,
             v18,
@@ -134,33 +134,33 @@ LABEL_33:
             v22);
           if ( LODWORD(v15->fields.paramInteger) <= 2 )
             break;
-          v29 = StringLiteral_810/*","*/;
-          v15[1].klass = (TopMyRoomRequest_c *)StringLiteral_810/*","*/;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15[1], v29, v23, v24, v25, v26, v27, v28);
-          if ( LODWORD(v8->max_length) <= 1 )
+          v29 = StringLiteral_869/*","*/;
+          v15[1].klass = (TopMyRoomRequest_c *)StringLiteral_869/*","*/;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1], v29, v23, v24, v25, v26, v27, v28);
+          if ( (v8->max_length & 0xFFFFFFFE) == 0 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
-          if ( LODWORD(v15->fields.paramInteger) <= 3 )
+          if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFC) == 0 )
             break;
           v15[1].monitor = this;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15[1].monitor, (int32_t)this, v30, v31, v32, v33, v34, v35);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, (int32_t)this, v30, v31, v32, v33, v34, v35);
           if ( LODWORD(v15->fields.paramInteger) <= 4 )
             break;
-          v42 = StringLiteral_16262/*"]"*/;
-          v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_16262/*"]"*/;
-          p_fields = (GrandQuestFolderBoardItem_o *)&v15[1].fields;
+          v42 = StringLiteral_16659/*"]"*/;
+          v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_16659/*"]"*/;
+          p_fields = (MissionNaviTransitionBoardItem_o *)&v15[1].fields;
         }
         else
         {
-          this = (TopMyRoomRequest_o *)sub_1D0F15C(string___TypeInfo, 6);
+          this = (TopMyRoomRequest_o *)sub_21FFD10(string___TypeInfo, 6);
           if ( !this )
             goto LABEL_33;
           v15 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
           this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v6;
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&this->fields.paramString,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&this->fields.paramString,
             (int32_t)v6,
             v44,
             v45,
@@ -168,53 +168,61 @@ LABEL_33:
             v47,
             v48,
             v49);
-          if ( LODWORD(v15->fields.paramInteger) <= 1 )
+          if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFE) == 0 )
             break;
-          v56 = StringLiteral_859/*",["*/;
-          *(_QWORD *)&v15->fields.shouldShowConnect = StringLiteral_859/*",["*/;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->fields.shouldShowConnect, v56, v50, v51, v52, v53, v54, v55);
+          v56 = StringLiteral_922/*",["*/;
+          *(_QWORD *)&v15->fields.shouldShowConnect = StringLiteral_922/*",["*/;
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&v15->fields.shouldShowConnect,
+            v56,
+            v50,
+            v51,
+            v52,
+            v53,
+            v54,
+            v55);
           if ( !LODWORD(v8->max_length) )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 32, 0);
           if ( LODWORD(v15->fields.paramInteger) <= 2 )
             break;
           v15[1].klass = (TopMyRoomRequest_c *)this;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15[1], (int32_t)this, v57, v58, v59, v60, v61, v62);
-          if ( LODWORD(v15->fields.paramInteger) <= 3 )
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1], (int32_t)this, v57, v58, v59, v60, v61, v62);
+          if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFC) == 0 )
             break;
-          v69 = StringLiteral_810/*","*/;
-          v15[1].monitor = (void *)StringLiteral_810/*","*/;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15[1].monitor, v69, v63, v64, v65, v66, v67, v68);
-          if ( LODWORD(v8->max_length) <= 1 )
+          v69 = StringLiteral_869/*","*/;
+          v15[1].monitor = (void *)StringLiteral_869/*","*/;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, v69, v63, v64, v65, v66, v67, v68);
+          if ( (v8->max_length & 0xFFFFFFFE) == 0 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
           if ( LODWORD(v15->fields.paramInteger) <= 4 )
             break;
           v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)this;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15[1].fields, (int32_t)this, v70, v71, v72, v73, v74, v75);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].fields, (int32_t)this, v70, v71, v72, v73, v74, v75);
           if ( LODWORD(v15->fields.paramInteger) <= 5 )
             break;
-          v42 = StringLiteral_16262/*"]"*/;
-          v15[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16262/*"]"*/;
-          p_fields = (GrandQuestFolderBoardItem_o *)&v15[1].fields.paramInteger;
+          v42 = StringLiteral_16659/*"]"*/;
+          v15[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16659/*"]"*/;
+          p_fields = (MissionNaviTransitionBoardItem_o *)&v15[1].fields.paramInteger;
         }
-        sub_1D0F058(p_fields, v42, v36, v37, v38, v39, v40, v41);
-        this = (TopMyRoomRequest_o *)System_String__Concat_65603304((System_String_array *)v15, 0);
+        sub_21FFBF4(p_fields, v42, v36, v37, v38, v39, v40, v41);
+        this = (TopMyRoomRequest_o *)System_String__Concat_75483816((System_String_array *)v15, 0);
         v6 = this;
       }
       LODWORD(max_length) = voicePlayedList->max_length;
       if ( (__int64)++v7 >= (int)max_length )
         goto LABEL_31;
     }
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
 LABEL_31:
-  v76 = System_String__Concat_65601036(
-          (System_String_o *)StringLiteral_16009/*"["*/,
+  v76 = System_String__Concat_75481624(
+          (System_String_o *)StringLiteral_16395/*"["*/,
           (System_String_o *)v6,
-          (System_String_o *)StringLiteral_16262/*"]"*/,
+          (System_String_o *)StringLiteral_16659/*"]"*/,
           0);
-  RequestBase__addField_45601604(v79, (System_String_o *)StringLiteral_25229/*"voicePlayedList"*/, v76, v77);
+  RequestBase__addField_51187332(v79, (System_String_o *)StringLiteral_26032/*"voicePlayedList"*/, v76, v77);
   RequestBase__beginRequest(v79, v78);
 }
 
@@ -223,16 +231,16 @@ System_String_o *TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, const Method
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E792D0 & 1) == 0 )
+  if ( (byte_593A324 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_18032/*"card/voice"*/);
-    byte_4E792D0 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_18507/*"card/voice"*/);
+    byte_593A324 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_18032/*"card/voice"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18507/*"card/voice"*/, 0);
 }
 
 
@@ -246,29 +254,29 @@ void TopMyRoomRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4E792D2 & 1) == 0 )
+  if ( (byte_593A326 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E792D2 = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A326 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(5, responseList, 0);
   if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22821/*"ok"*/;
+    v8 = &StringLiteral_23468/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22648/*"ng"*/;
+    v8 = &StringLiteral_23290/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

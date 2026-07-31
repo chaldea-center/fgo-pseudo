@@ -12,72 +12,78 @@ void GrandServantListSelectObject__AddServantTouchPress(
   Il2CppObject *v4; // x19
   System_Collections_Generic_List_EventDelegate__o *onClick; // x20
   EventDelegate_Callback_o *v6; // x21
+  __int64 v7; // x1
+  __int64 v8; // x2
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4E72282 & 1) == 0 )
+  if ( (byte_593327F & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    this = (GrandServantListSelectObject_o *)sub_1D0F0B4(&Method_GrandServantListSelectObject_OnClickServant__);
-    byte_4E72282 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    this = (GrandServantListSelectObject_o *)sub_21FFC50(&Method_GrandServantListSelectObject_OnClickServant__);
+    byte_593327F = 1;
   }
   if ( !touchPress )
-    sub_1D0F30C(this, touchPress);
+    sub_21FFECC(this, touchPress);
   onClick = touchPress->fields.onClick;
-  v6 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+  v6 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v6, v4, Method_GrandServantListSelectObject_OnClickServant__, 0);
-  if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_50659024(onClick, v6, 0);
+  if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v7, v8);
+  EventDelegate__Set_56117672(onClick, v6, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandServantListSelectObject__Initialize(
         GrandServantListSelectObject_o *this,
         PlayMakerFSM_o *fsm,
         int32_t grandGraphId,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   EventDelegate_o *v11; // x0
   __int64 v12; // x1
   struct UITouchPress_o *servantTouchPress; // x8
   System_Collections_Generic_List_EventDelegate__o *onClick; // x20
   EventDelegate_Callback_o *v15; // x21
-  struct UITouchPress_o *v16; // x8
+  __int64 v16; // x1
+  __int64 v17; // x2
+  struct UITouchPress_o *v18; // x8
   System_Collections_Generic_List_EventDelegate__o *onLongPress; // x20
-  EventDelegate_Callback_o *v18; // x21
-  const MethodInfo *v19; // x2
+  EventDelegate_Callback_o *v20; // x21
+  const MethodInfo *v21; // x2
   struct UITouchPress_array *equipTouchPresses; // x8
-  __int64 v21; // x24
-  int max_length; // w9
-  unsigned int v23; // w20
-  __int64 v24; // x8
-  System_Collections_Generic_List_EventDelegate__o *v25; // x21
-  EventDelegate_Callback_o *v26; // x22
-  const MethodInfo *v27; // x2
-  struct UITouchPress_array *v28; // x8
-  __int64 v29; // x8
-  System_Collections_Generic_List_EventDelegate__o *v30; // x21
-  EventDelegate_Callback_o *v31; // x0
+  int32_t v23; // w20
+  int32_t max_length; // w9
+  UITouchPress_o *v25; // x8
+  System_Collections_Generic_List_EventDelegate__o *v26; // x21
+  __int64 v27; // x1
+  __int64 v28; // x2
+  EventDelegate_Callback_o *v29; // x22
+  const MethodInfo *v30; // x2
+  struct UITouchPress_array *v31; // x8
+  UITouchPress_o *v32; // x8
+  System_Collections_Generic_List_EventDelegate__o *v33; // x21
+  EventDelegate_Callback_o *v34; // x0
 
-  if ( (byte_4E72281 & 1) == 0 )
+  if ( (byte_593327E & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_GrandServantListSelectObject_OnClickServant__);
-    sub_1D0F0B4(&Method_GrandServantListSelectObject_OnLongPressServant__);
-    byte_4E72281 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&Method_GrandServantListSelectObject_OnClickServant__);
+    sub_21FFC50(&Method_GrandServantListSelectObject_OnLongPressServant__);
+    byte_593327E = 1;
   }
   this->fields.fsm = fsm;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.fsm,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.fsm,
     (int32_t)fsm,
-    grandGraphId,
-    (int32_t)method,
+    *(System_String_o **)&grandGraphId,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
@@ -87,57 +93,56 @@ void GrandServantListSelectObject__Initialize(
   if ( !servantTouchPress )
     goto LABEL_18;
   onClick = servantTouchPress->fields.onClick;
-  v15 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v15, (Il2CppObject *)this, Method_GrandServantListSelectObject_OnClickServant__, 0);
-  if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  v11 = EventDelegate__Set_50659024(onClick, v15, 0);
-  v16 = this->fields.servantTouchPress;
-  if ( !v16
-    || (onLongPress = v16->fields.onLongPress,
-        v18 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo),
+  if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v16, v17);
+  v11 = EventDelegate__Set_56117672(onClick, v15, 0);
+  v18 = this->fields.servantTouchPress;
+  if ( !v18
+    || (onLongPress = v18->fields.onLongPress,
+        v20 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
-          v18,
+          v20,
           (Il2CppObject *)this,
           Method_GrandServantListSelectObject_OnLongPressServant__,
           0),
-        v11 = EventDelegate__Set_50659024(onLongPress, v18, 0),
+        v11 = EventDelegate__Set_56117672(onLongPress, v20, 0),
         (equipTouchPresses = this->fields.equipTouchPresses) == 0) )
   {
 LABEL_18:
-    sub_1D0F30C(v11, v12);
+    sub_21FFECC(v11, v12);
   }
-  v21 = 4;
+  v23 = 0;
   while ( 1 )
   {
     max_length = equipTouchPresses->max_length;
-    v23 = v21 - 4;
-    if ( (int)v21 - 4 >= max_length )
-      break;
     if ( v23 >= max_length )
+      break;
+    if ( v23 >= (unsigned int)max_length )
       goto LABEL_20;
-    v24 = *((_QWORD *)&equipTouchPresses->obj.klass + v21);
-    if ( v24 )
+    v25 = equipTouchPresses->m_Items[v23];
+    if ( v25 )
     {
-      v25 = *(System_Collections_Generic_List_EventDelegate__o **)(v24 + 32);
-      v26 = GrandServantListSelectObject___Initialize_g__CreateOnClickEquip_4_0(this, v23, v19);
-      if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      v11 = EventDelegate__Set_50659024(v25, v26, 0);
-      v28 = this->fields.equipTouchPresses;
-      if ( v28 )
+      v26 = v25->fields.onClick;
+      v29 = GrandServantListSelectObject___Initialize_g__CreateOnClickEquip_4_0(this, v23, v21);
+      if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v27, v28);
+      v11 = EventDelegate__Set_56117672(v26, v29, 0);
+      v31 = this->fields.equipTouchPresses;
+      if ( v31 )
       {
-        if ( v23 >= LODWORD(v28->max_length) )
+        if ( (unsigned int)v23 >= LODWORD(v31->max_length) )
 LABEL_20:
-          sub_1D0F314(v11);
-        v29 = *((_QWORD *)&v28->obj.klass + v21);
-        if ( v29 )
+          sub_21FFED4(v11);
+        v32 = v31->m_Items[v23];
+        if ( v32 )
         {
-          v30 = *(System_Collections_Generic_List_EventDelegate__o **)(v29 + 48);
-          v31 = GrandServantListSelectObject___Initialize_g__CreateOnLongPressEquip_4_1(this, v23, v27);
-          v11 = EventDelegate__Set_50659024(v30, v31, 0);
+          v33 = v32->fields.onLongPress;
+          v34 = GrandServantListSelectObject___Initialize_g__CreateOnLongPressEquip_4_1(this, v23, v30);
+          v11 = EventDelegate__Set_56117672(v33, v34, 0);
           equipTouchPresses = this->fields.equipTouchPresses;
-          ++v21;
+          ++v23;
           if ( equipTouchPresses )
             continue;
         }
@@ -155,13 +160,13 @@ void GrandServantListSelectObject__OnClickEquip(
 {
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E72285 & 1) == 0 )
+  if ( (byte_5933282 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_3489/*"CLICK_EQUIP"*/);
-    byte_4E72285 = 1;
+    sub_21FFC50(&StringLiteral_3588/*"CLICK_EQUIP"*/);
+    byte_5933282 = 1;
   }
   GrandServantListSelectObject__SetEquipIndex(this, index, method);
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3489/*"CLICK_EQUIP"*/, v5);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3588/*"CLICK_EQUIP"*/, v5);
 }
 
 
@@ -169,12 +174,12 @@ void GrandServantListSelectObject__OnClickServant(GrandServantListSelectObject_o
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4E72283 & 1) == 0 )
+  if ( (byte_5933280 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_3516/*"CLICK_SERVANT"*/);
-    byte_4E72283 = 1;
+    sub_21FFC50(&StringLiteral_3615/*"CLICK_SERVANT"*/);
+    byte_5933280 = 1;
   }
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3516/*"CLICK_SERVANT"*/, v2);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_3615/*"CLICK_SERVANT"*/, v2);
 }
 
 
@@ -185,13 +190,13 @@ void GrandServantListSelectObject__OnLongPressEquip(
 {
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E72286 & 1) == 0 )
+  if ( (byte_5933283 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_8433/*"LONG_PRESS_EQUIP"*/);
-    byte_4E72286 = 1;
+    sub_21FFC50(&StringLiteral_8668/*"LONG_PRESS_EQUIP"*/);
+    byte_5933283 = 1;
   }
   GrandServantListSelectObject__SetEquipIndex(this, index, method);
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8433/*"LONG_PRESS_EQUIP"*/, v5);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8668/*"LONG_PRESS_EQUIP"*/, v5);
 }
 
 
@@ -199,12 +204,12 @@ void GrandServantListSelectObject__OnLongPressServant(GrandServantListSelectObje
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4E72284 & 1) == 0 )
+  if ( (byte_5933281 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_8434/*"LONG_PRESS_SERVANT"*/);
-    byte_4E72284 = 1;
+    sub_21FFC50(&StringLiteral_8669/*"LONG_PRESS_SERVANT"*/);
+    byte_5933281 = 1;
   }
-  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8434/*"LONG_PRESS_SERVANT"*/, v2);
+  GrandServantListSelectObject__SendEvent(this, (System_String_o *)StringLiteral_8669/*"LONG_PRESS_SERVANT"*/, v2);
 }
 
 
@@ -216,16 +221,17 @@ void GrandServantListSelectObject__SendEvent(
   UnityEngine_Object_o *fsm; // x21
   __int64 v6; // x1
   PlayMakerFSM_o *m_CancellationTokenSource; // x0
+  PlayMakerFSM_o *v8; // x8
 
-  if ( (byte_4E72287 & 1) == 0 )
+  if ( (byte_5933284 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_11705/*"SELECT_GRAND_GRAPH_ID"*/);
-    byte_4E72287 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_12020/*"SELECT_GRAND_GRAPH_ID"*/);
+    byte_5933284 = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, eventName, method);
   if ( UnityEngine_Object__op_Inequality(fsm, 0, 0) )
   {
     m_CancellationTokenSource = this->fields.fsm;
@@ -234,18 +240,20 @@ void GrandServantListSelectObject__SendEvent(
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)m_CancellationTokenSource[1].fields.m_CancellationTokenSource) == 0
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                           (HutongGames_PlayMaker_FsmVariables_o *)m_CancellationTokenSource,
-                                                          (System_String_o *)StringLiteral_11705/*"SELECT_GRAND_GRAPH_ID"*/,
+                                                          (System_String_o *)StringLiteral_12020/*"SELECT_GRAND_GRAPH_ID"*/,
                                                           0)) == 0
-      || (LODWORD(m_CancellationTokenSource->fields.addEventHandlers) = this->fields.grandGraphId,
-          (m_CancellationTokenSource = this->fields.fsm) == 0) )
+      || (v8 = this->fields.fsm,
+          LODWORD(m_CancellationTokenSource->fields.addEventHandlers) = this->fields.grandGraphId,
+          !v8) )
     {
-      sub_1D0F30C(m_CancellationTokenSource, v6);
+      sub_21FFECC(m_CancellationTokenSource, v6);
     }
-    PlayMakerFSM__SendEvent(m_CancellationTokenSource, eventName, 0);
+    PlayMakerFSM__SendEvent(v8, eventName, 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandServantListSelectObject__SetEquipIndex(
         GrandServantListSelectObject_o *this,
         int32_t index,
@@ -255,15 +263,15 @@ void GrandServantListSelectObject__SetEquipIndex(
   __int64 v6; // x1
   PlayMakerFSM_o *m_CancellationTokenSource; // x0
 
-  if ( (byte_4E72288 & 1) == 0 )
+  if ( (byte_5933285 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_11696/*"SELECT_EQUIP_INDEX"*/);
-    byte_4E72288 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_12011/*"SELECT_EQUIP_INDEX"*/);
+    byte_5933285 = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&index, method);
   if ( UnityEngine_Object__op_Inequality(fsm, 0, 0) )
   {
     m_CancellationTokenSource = this->fields.fsm;
@@ -272,10 +280,10 @@ void GrandServantListSelectObject__SetEquipIndex(
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)m_CancellationTokenSource[1].fields.m_CancellationTokenSource) == 0
       || (m_CancellationTokenSource = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                           (HutongGames_PlayMaker_FsmVariables_o *)m_CancellationTokenSource,
-                                                          (System_String_o *)StringLiteral_11696/*"SELECT_EQUIP_INDEX"*/,
+                                                          (System_String_o *)StringLiteral_12011/*"SELECT_EQUIP_INDEX"*/,
                                                           0)) == 0 )
     {
-      sub_1D0F30C(m_CancellationTokenSource, v6);
+      sub_21FFECC(m_CancellationTokenSource, v6);
     }
     LODWORD(m_CancellationTokenSource->fields.addEventHandlers) = index;
   }
@@ -290,35 +298,37 @@ EventDelegate_Callback_o *GrandServantListSelectObject___Initialize_g__CreateOnC
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  EventDelegate_Callback_o *v14; // x19
+  bool v12; // w6
+  bool v13; // w7
+  EventDelegate_Callback_c *v14; // x0
+  EventDelegate_Callback_o *v15; // x19
 
-  if ( (byte_4E72289 & 1) == 0 )
+  if ( (byte_5933286 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&Method_GrandServantListSelectObject___c__DisplayClass4_0__Initialize_b__2__);
-    sub_1D0F0B4(&GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
-    byte_4E72289 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&Method_GrandServantListSelectObject___c__DisplayClass4_0__Initialize_b__2__);
+    sub_21FFC50(&GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
+    byte_5933286 = 1;
   }
-  v5 = sub_1D0F300(GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
+  v5 = sub_21FFEBC(GrandServantListSelectObject___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  v14 = EventDelegate_Callback_TypeInfo;
   *(_DWORD *)(v5 + 16) = index;
-  v14 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_21FFEBC(v14);
   EventDelegate_Callback___ctor(
-    v14,
+    v15,
     (Il2CppObject *)v5,
     Method_GrandServantListSelectObject___c__DisplayClass4_0__Initialize_b__2__,
     0);
-  return v14;
+  return v15;
 }
 
 
@@ -330,35 +340,37 @@ EventDelegate_Callback_o *GrandServantListSelectObject___Initialize_g__CreateOnL
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  EventDelegate_Callback_o *v14; // x19
+  bool v12; // w6
+  bool v13; // w7
+  EventDelegate_Callback_c *v14; // x0
+  EventDelegate_Callback_o *v15; // x19
 
-  if ( (byte_4E7228A & 1) == 0 )
+  if ( (byte_5933287 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&Method_GrandServantListSelectObject___c__DisplayClass4_1__Initialize_b__3__);
-    sub_1D0F0B4(&GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
-    byte_4E7228A = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&Method_GrandServantListSelectObject___c__DisplayClass4_1__Initialize_b__3__);
+    sub_21FFC50(&GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
+    byte_5933287 = 1;
   }
-  v5 = sub_1D0F300(GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
+  v5 = sub_21FFEBC(GrandServantListSelectObject___c__DisplayClass4_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  v14 = EventDelegate_Callback_TypeInfo;
   *(_DWORD *)(v5 + 16) = index;
-  v14 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_21FFEBC(v14);
   EventDelegate_Callback___ctor(
-    v14,
+    v15,
     (Il2CppObject *)v5,
     Method_GrandServantListSelectObject___c__DisplayClass4_1__Initialize_b__3__,
     0);
-  return v14;
+  return v15;
 }
 
 
@@ -377,7 +389,7 @@ void GrandServantListSelectObject___c__DisplayClass4_0___Initialize_b__2(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   GrandServantListSelectObject__OnClickEquip(this->fields.__4__this, this->fields.index, v2);
 }
 
@@ -397,6 +409,6 @@ void GrandServantListSelectObject___c__DisplayClass4_1___Initialize_b__3(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   GrandServantListSelectObject__OnLongPressEquip(this->fields.__4__this, this->fields.index, v2);
 }

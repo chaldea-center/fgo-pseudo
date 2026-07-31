@@ -1,27 +1,27 @@
 void UserSupportDeckEntity___ctor(UserSupportDeckEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7876F & 1) == 0 )
+  if ( (byte_59397B3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E7876F = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59397B3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserSupportDeckEntity__CreatePK(int64_t userId, int32_t supportDeckId, const MethodInfo *method)
 {
-  if ( (byte_4E7876E & 1) == 0 )
+  if ( (byte_59397B2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E7876E = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_59397B2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            supportDeckId,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

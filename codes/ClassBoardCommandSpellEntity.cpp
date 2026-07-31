@@ -1,13 +1,13 @@
 void ClassBoardCommandSpellEntity___ctor(ClassBoardCommandSpellEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77417 & 1) == 0 )
+  if ( (byte_59383E5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77417 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59383E5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ClassBoardCommandSpellEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4E77416 & 1) == 0 )
+  if ( (byte_59383E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E77416 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59383E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            commandSpellId,
            lv,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -46,88 +46,89 @@ System_Int32_array *ClassBoardCommandSpellEntity__GetDispValFromClassBoardComman
         const MethodInfo *method)
 {
   struct System_Int32_array *funcIds; // x23
-  DataVals_array *SetTypeDataValArray; // x21
-  System_Collections_Generic_List_int__o *v7; // x20
+  DataVals_array *SetTypeDataValArray; // x20
+  System_Collections_Generic_List_int__o *v7; // x21
+  __int64 v8; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
-  FunctionMaster_o *v10; // x22
-  unsigned __int64 v11; // x24
+  __int64 v10; // x1
+  FunctionMaster_o *v11; // x22
+  unsigned __int64 v12; // x24
   struct System_Int32_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
 
-  if ( (byte_4E77413 & 1) == 0 )
+  if ( (byte_59383E1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_FunctionMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E77413 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_59383E1 = 1;
   }
   funcIds = this->fields.funcIds;
   SetTypeDataValArray = ClassBoardCommandSpellEntity__GetSetTypeDataValArray(
                           this,
                           (const MethodInfo *)classStatisticsInfos);
-  v7 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+  v7 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v7,
-    (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_FunctionMaster___);
+    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v8);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_FunctionMaster___);
   if ( !funcIds )
     goto LABEL_19;
   if ( SLODWORD(funcIds->max_length) >= 1 )
   {
-    v10 = (FunctionMaster_o *)Master_object;
-    v11 = 0;
+    v11 = (FunctionMaster_o *)Master_object;
+    v12 = 0;
     while ( SetTypeDataValArray )
     {
-      if ( v11 >= LODWORD(SetTypeDataValArray->max_length) )
-        sub_1D0F314(Master_object);
-      if ( !v10 )
+      if ( v12 >= LODWORD(SetTypeDataValArray->max_length) )
+        sub_21FFED4(Master_object);
+      if ( !v11 )
         break;
       Master_object = (Il2CppObject *)FunctionMaster__GetDispValFromFunc(
-                                        v10,
-                                        SetTypeDataValArray->m_Items[v11],
+                                        v11,
+                                        SetTypeDataValArray->m_Items[v12],
                                         3,
                                         classStatisticsInfos,
                                         0);
       if ( !v7 )
         break;
       items = v7->fields._items;
-      v13 = Method_System_Collections_Generic_List_int__Add__;
+      v14 = Method_System_Collections_Generic_List_int__Add__;
       ++v7->fields._version;
       if ( !items )
         break;
       size = v7->fields._size;
-      v9 = (unsigned int)Master_object;
+      v10 = (unsigned int)Master_object;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_int___AddWithResize(
           v7,
           (int32_t)Master_object,
-          *(const MethodInfo_393F3EC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_4433138 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
       }
       else
       {
         v7->fields._size = size + 1;
         items->m_Items[size] = (int)Master_object;
       }
-      if ( (__int64)++v11 >= SLODWORD(funcIds->max_length) )
+      if ( (__int64)++v12 >= SLODWORD(funcIds->max_length) )
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1D0F30C(Master_object, v9);
+    sub_21FFECC(Master_object, v10);
   }
 LABEL_17:
   if ( !v7 )
     goto LABEL_19;
   return System_Collections_Generic_List_int___ToArray(
            v7,
-           (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -137,59 +138,60 @@ System_Int32_array *ClassBoardCommandSpellEntity__GetEffectIdArray(
 {
   System_Collections_Generic_HashSet_int__o *v3; // x19
   const MethodInfo *v4; // x1
+  __int64 v5; // x1
   DataVals_array *SetTypeDataValArray; // x20
   Il2CppObject *Master_object; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
   int max_length; // w8
-  DataMasterBase_TMaster__TEntity__PKType__o *v9; // x21
-  unsigned int v10; // w22
+  DataMasterBase_TMaster__TEntity__PKType__o *v10; // x21
+  unsigned int v11; // w24
   int32_t GrandEffectId; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E77415 & 1) == 0 )
+  if ( (byte_59383E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_AuraEffectMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4E77415 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_AuraEffectMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_59383E3 = 1;
   }
   entity = 0;
-  v3 = (System_Collections_Generic_HashSet_int__o *)sub_1D0F300(System_Collections_Generic_HashSet_int__TypeInfo);
+  v3 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v3,
-    (const MethodInfo_3800770 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   SetTypeDataValArray = ClassBoardCommandSpellEntity__GetSetTypeDataValArray(this, v4);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_AuraEffectMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_AuraEffectMaster___);
   if ( !SetTypeDataValArray )
     goto LABEL_19;
   max_length = SetTypeDataValArray->max_length;
   if ( max_length >= 1 )
   {
-    v9 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
-    v10 = 0;
+    v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v10 >= max_length )
-        sub_1D0F314(Master_object);
-      Master_object = (Il2CppObject *)SetTypeDataValArray->m_Items[v10];
+      if ( v11 >= max_length )
+        sub_21FFED4(Master_object);
+      Master_object = (Il2CppObject *)SetTypeDataValArray->m_Items[v11];
       if ( !Master_object )
         break;
       Master_object = (Il2CppObject *)DataVals__GetClassIconAuraEffectId((DataVals_o *)Master_object, 0);
       if ( (_DWORD)Master_object )
       {
-        if ( !v9 )
+        if ( !v10 )
           break;
         Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
-                                          v9,
+                                          v10,
                                           &entity,
                                           (int32_t)Master_object,
-                                          (const MethodInfo_3535BC8 *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
+                                          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           if ( !entity )
@@ -199,28 +201,28 @@ System_Int32_array *ClassBoardCommandSpellEntity__GetEffectIdArray(
           Master_object = (Il2CppObject *)System_Collections_Generic_HashSet_int___Add(
                                             v3,
                                             HIDWORD(entity[1].klass),
-                                            (const MethodInfo_3801974 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                            (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
           if ( !entity )
             break;
           GrandEffectId = ConstantMaster__GetGrandEffectId(HIDWORD(entity[1].klass), 0);
           Master_object = (Il2CppObject *)System_Collections_Generic_HashSet_int___Add(
                                             v3,
                                             GrandEffectId,
-                                            (const MethodInfo_3801974 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                            (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
         }
       }
       max_length = SetTypeDataValArray->max_length;
-      if ( (int)++v10 >= max_length )
+      if ( (int)++v11 >= max_length )
         return System_Linq_Enumerable__ToArray_int_(
                  (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-                 (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
+                 (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
     }
 LABEL_19:
-    sub_1D0F30C(Master_object, v7);
+    sub_21FFECC(Master_object, v8);
   }
   return System_Linq_Enumerable__ToArray_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-           (const MethodInfo_328FC50 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -235,20 +237,20 @@ DataVals_array *ClassBoardCommandSpellEntity__GetSetTypeDataValArray(
   DataVals_array *DataValsList; // x0
   __int64 v8; // x1
 
-  if ( (byte_4E77414 & 1) == 0 )
+  if ( (byte_59383E2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_FunctionMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E77414 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_59383E2 = 1;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_FunctionMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_FunctionMaster___);
   funcIds = this->fields.funcIds;
   v5 = (FunctionMaster_o *)Master_object;
   DataValsList = ClassBoardCommandSpellEntity__getDataValsList(this, v6);
   if ( !v5 )
-    sub_1D0F30C(DataValsList, v8);
+    sub_21FFECC(DataValsList, v8);
   return FunctionMaster__GetSetTypeDataValArray(v5, funcIds, DataValsList, 0);
 }
 
@@ -268,57 +270,58 @@ DataVals_array *ClassBoardCommandSpellEntity__getDataValsList(
   unsigned __int64 v11; // x26
   System_String_o *v12; // x22
   DataVals_o *v13; // x21
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  DataVals_o *v20; // x20
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  __int64 v28; // x0
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
+  DataVals_o *v21; // x20
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v29; // x0
 
-  if ( (byte_4E77412 & 1) == 0 )
+  if ( (byte_59383E0 & 1) == 0 )
   {
-    sub_1D0F0B4(&DataVals___TypeInfo);
-    sub_1D0F0B4(&DataVals_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E77412 = 1;
+    sub_21FFC50(&DataVals___TypeInfo);
+    sub_21FFC50(&DataVals_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59383E0 = 1;
   }
   svals = this->fields.svals;
   if ( !svals )
   {
-    v7 = sub_1D0F15C(DataVals___TypeInfo, 1);
-    v20 = (DataVals_o *)sub_1D0F300(DataVals_TypeInfo);
-    DataVals___ctor(v20, (System_String_o *)StringLiteral_1/*""*/, 0);
+    v7 = sub_21FFD10(DataVals___TypeInfo, 1);
+    v21 = (DataVals_o *)sub_21FFEBC(DataVals_TypeInfo);
+    DataVals___ctor(v21, (System_String_o *)StringLiteral_1/*""*/, 0);
     if ( v7 )
     {
-      if ( v20 )
+      if ( v21 )
       {
-        v4 = sub_1D0F1F0(v20, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+        v4 = sub_21FFDA4(v21, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
         if ( !v4 )
         {
 LABEL_21:
-          v28 = sub_1D0F330(v4);
-          sub_1D0F1DC(v28, 0);
+          v29 = sub_21FFEF0(v4, v20);
+          sub_21FFD90(v29, 0);
         }
       }
       if ( !*(_DWORD *)(v7 + 24) )
 LABEL_20:
-        sub_1D0F314(v4);
-      *(_QWORD *)(v7 + 32) = v20;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)v20, v21, v22, v23, v24, v25, v26);
+        sub_21FFED4(v4);
+      *(_QWORD *)(v7 + 32) = v21;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)v21, v22, v23, v24, v25, v26, v27);
       return (DataVals_array *)v7;
     }
 LABEL_13:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
-  v4 = sub_1D0F15C(DataVals___TypeInfo, LODWORD(svals->max_length));
+  v4 = sub_21FFD10(DataVals___TypeInfo, LODWORD(svals->max_length));
   v6 = this->fields.svals;
   if ( !v6 )
     goto LABEL_13;
@@ -334,20 +337,20 @@ LABEL_13:
     if ( v11 >= max_length_low )
       goto LABEL_20;
     v12 = (System_String_o *)*((_QWORD *)&v6->obj.klass + v8);
-    v13 = (DataVals_o *)sub_1D0F300(DataVals_TypeInfo);
+    v13 = (DataVals_o *)sub_21FFEBC(DataVals_TypeInfo);
     DataVals___ctor(v13, v12, 0);
     if ( v7 )
     {
       if ( v13 )
       {
-        v4 = sub_1D0F1F0(v13, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+        v4 = sub_21FFDA4(v13, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
         if ( !v4 )
           goto LABEL_21;
       }
       if ( v11 >= *(unsigned int *)(v7 + 24) )
         goto LABEL_20;
       *(_QWORD *)(v7 + 8 * v8) = v13;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + v9), (int32_t)v13, v14, v15, v16, v17, v18, v19);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + v9), (int32_t)v13, v14, v15, v16, v17, v18, v19);
       v6 = this->fields.svals;
       ++v8;
       v9 += 8;

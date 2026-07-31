@@ -1,13 +1,13 @@
 void EventBoostItemUsedEntity___ctor(EventBoostItemUsedEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77564 & 1) == 0 )
+  if ( (byte_5938535 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E77564 = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_5938535 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -22,9 +22,9 @@ UsedCount_o *EventBoostItemUsedEntity__GetUsedCount(
         int64_t userId,
         const MethodInfo *method)
 {
-  struct UsedCount_array *usedCount; // x8
-  il2cpp_array_size_t max_length; // x9
-  int v5; // w10
+  struct UsedCount_array *usedCount; // x9
+  il2cpp_array_size_t max_length; // x8
+  UsedCount_o **i; // x9
   UsedCount_o *result; // x0
 
   usedCount = this->fields.usedCount;
@@ -33,15 +33,15 @@ UsedCount_o *EventBoostItemUsedEntity__GetUsedCount(
   max_length = usedCount->max_length;
   if ( !max_length || (int)max_length < 1 )
     return 0;
-  v5 = 0;
-  while ( 1 )
+  for ( i = usedCount->m_Items; ; ++i )
   {
-    result = usedCount->m_Items[v5];
-    if ( !result )
-      sub_1D0F30C(0, userId);
+    result = *i;
+    if ( !*i )
+      sub_21FFECC(0, userId);
     if ( result->fields.userId == userId )
       break;
-    if ( (_DWORD)max_length == ++v5 )
+    LODWORD(max_length) = max_length - 1;
+    if ( !(_DWORD)max_length )
       return 0;
   }
   return result;

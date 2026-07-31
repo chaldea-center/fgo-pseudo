@@ -1,25 +1,25 @@
 void BattleServantSnapShotGroupBase___ctor(BattleServantSnapShotGroupBase_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_LinkedList_T__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E7A715 & 1) == 0 )
+  if ( (byte_593B684 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
-    byte_4E7A715 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
+    sub_21FFC50(&System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
+    byte_593B684 = 1;
   }
-  v3 = (System_Collections_Generic_LinkedList_T__o *)sub_1D0F300(System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
+  v3 = (System_Collections_Generic_LinkedList_T__o *)sub_21FFEBC(System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
   System_Collections_Generic_LinkedList_object____ctor(
     v3,
-    (const MethodInfo_38C16F0 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
+    (const MethodInfo_437BF10 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
   this->fields._SnapShotLinkedList_k__BackingField = (struct System_Collections_Generic_LinkedList_BattleServantSnapShot__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -28,19 +28,19 @@ void BattleServantSnapShotGroupBase__Clear(BattleServantSnapShotGroupBase_o *thi
 {
   System_Collections_Generic_LinkedList_T__o *SnapShotLinkedList_k__BackingField; // x0
 
-  if ( (byte_4E7A714 & 1) == 0 )
+  if ( (byte_593B683 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__get_Count__);
-    byte_4E7A714 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__get_Count__);
+    byte_593B683 = 1;
   }
   SnapShotLinkedList_k__BackingField = (System_Collections_Generic_LinkedList_T__o *)this->fields._SnapShotLinkedList_k__BackingField;
   if ( !SnapShotLinkedList_k__BackingField )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   if ( SnapShotLinkedList_k__BackingField->fields.count >= 1 )
     System_Collections_Generic_LinkedList_object___Clear(
       SnapShotLinkedList_k__BackingField,
-      (const MethodInfo_38C1960 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
+      (const MethodInfo_437C204 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
 }
 
 

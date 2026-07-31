@@ -7,39 +7,42 @@ void CriFsInstallRequestLegacy___ctor(
         int32_t installBufferSize,
         const MethodInfo *method)
 {
-  CriFsInstaller_o *v13; // x24
-  const MethodInfo *v14; // x1
-  __int64 v15; // x1
-  const MethodInfo *v16; // x5
+  CriFsInstaller_c *v13; // x0
+  CriFsInstaller_o *v14; // x24
+  const MethodInfo *v15; // x1
+  __int64 v16; // x1
+  const MethodInfo *v17; // x5
   CriFsInstaller_o *installer; // x0
-  const MethodInfo *v18; // x2
+  __int64 v19; // x1
+  const MethodInfo *v20; // x2
 
-  if ( (byte_4E70852 & 1) == 0 )
+  if ( (byte_59314FA & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&CriFsInstaller_TypeInfo);
-    byte_4E70852 = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&CriFsInstaller_TypeInfo);
+    byte_59314FA = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._sourcePath_k__BackingField = srcPath;
-  sub_1D0F058(&this->fields._sourcePath_k__BackingField, srcPath);
+  sub_21FFBF4(&this->fields._sourcePath_k__BackingField, srcPath);
   this->fields._destinationPath_k__BackingField = dstPath;
-  sub_1D0F058(&this->fields._destinationPath_k__BackingField, dstPath);
+  sub_21FFBF4(&this->fields._destinationPath_k__BackingField, dstPath);
   this->fields._doneDelegate_k__BackingField = doneDelegate;
-  sub_1D0F058(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  sub_21FFBF4(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  v13 = CriFsInstaller_TypeInfo;
   this->fields._progress_k__BackingField = 0.0;
-  v13 = (CriFsInstaller_o *)sub_1D0F300(CriFsInstaller_TypeInfo);
-  CriFsInstaller___ctor(v13, v14);
-  this->fields.installer = v13;
-  sub_1D0F058(&this->fields.installer, v13);
+  v14 = (CriFsInstaller_o *)sub_21FFEBC(v13);
+  CriFsInstaller___ctor(v14, v15);
+  this->fields.installer = v14;
+  sub_21FFBF4(&this->fields.installer, v14);
   installer = this->fields.installer;
   if ( !installer )
-    sub_1D0F30C(0, v15);
-  CriFsInstaller__Copy(installer, srcBinder, srcPath, dstPath, installBufferSize, v16);
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v18);
+    sub_21FFECC(0, v16);
+  CriFsInstaller__Copy(installer, srcBinder, srcPath, dstPath, installBufferSize, v17);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v19, v20);
+  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v20);
 }
 
 
@@ -50,13 +53,13 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
   struct CriFsInstaller_o **p_installer; // x19
   struct CriFsInstaller_o *installer; // t1
 
-  if ( (byte_4E70854 & 1) == 0 )
+  if ( (byte_59314FC & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    byte_4E70854 = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    byte_59314FC = 1;
   }
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
   CriDisposableObjectManager__Unregister((CriDisposable_o *)this, (const MethodInfo *)disposing);
   installer = this->fields.installer;
   p_installer = &this->fields.installer;
@@ -67,65 +70,86 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
       v4,
       v4->klass->vtable._5_Dispose.method);
     *p_installer = 0;
-    sub_1D0F058(p_installer, 0);
+    sub_21FFBF4(p_installer, 0);
   }
 }
 
 
 void CriFsInstallRequestLegacy__Stop(CriFsInstallRequestLegacy_o *this, const MethodInfo *method)
 {
-  CriFsInstaller_o *installer; // x0
+  struct CriFsInstaller_o *installer; // x8
+  intptr_t handle; // x0
 
   installer = this->fields.installer;
   if ( installer )
-    CriFsInstaller__Stop(installer, method);
+  {
+    handle = installer->fields.handle;
+    if ( handle )
+      CriFsInstaller__criFsInstaller_Stop(handle, method);
+  }
 }
 
 
 void CriFsInstallRequestLegacy__Update(CriFsInstallRequestLegacy_o *this, const MethodInfo *method)
 {
-  CriFsInstaller_o *installer; // x0
+  const MethodInfo *v2; // x2
+  struct CriFsInstaller_o *installer; // x8
   struct CriFsInstaller_o **p_installer; // x20
-  const MethodInfo *v5; // x1
-  float Progress; // s0
-  CriFsInstaller_o *v7; // x0
-  int32_t Status; // w0
+  intptr_t handle; // x0
+  struct CriFsInstaller_o *v7; // x0
+  intptr_t v8; // x0
   __int64 v9; // x1
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
+  float progress; // [xsp+8h] [xbp-18h] BYREF
+  int32_t status; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4E70853 & 1) == 0 )
+  if ( (byte_59314FB & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6203/*"Error occurred."*/);
-    byte_4E70853 = 1;
+    sub_21FFC50(&StringLiteral_6385/*"Error occurred."*/);
+    byte_59314FB = 1;
   }
   p_installer = &this->fields.installer;
   installer = this->fields.installer;
   if ( installer )
   {
-    Progress = CriFsInstaller__GetProgress(installer, method);
-    v7 = this->fields.installer;
-    this->fields._progress_k__BackingField = Progress;
-    if ( !v7 )
-      goto LABEL_12;
-    Status = CriFsInstaller__GetStatus(v7, v5);
-    if ( Status == 1 )
-      return;
-    if ( Status == 3 )
+    handle = installer->fields.handle;
+    progress = 0.0;
+    if ( handle )
     {
-      this->fields._progress_k__BackingField = -1.0;
-      v9 = StringLiteral_6203/*"Error occurred."*/;
-      this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6203/*"Error occurred."*/;
-      sub_1D0F058(&this->fields._error_k__BackingField, v9);
+      v7 = (struct CriFsInstaller_o *)CriFsInstaller__criFsInstaller_GetProgress(handle, &progress, v2);
+      installer = this->fields.installer;
+      this->fields._progress_k__BackingField = progress;
+      if ( !installer )
+LABEL_16:
+        sub_21FFECC(v7, method);
+    }
+    else
+    {
+      this->fields._progress_k__BackingField = 0.0;
+    }
+    v8 = installer->fields.handle;
+    status = 0;
+    if ( v8 )
+    {
+      CriFsInstaller__criFsInstaller_GetStatus(v8, &status, v2);
+      if ( status == 1 )
+        return;
+      if ( status == 3 )
+      {
+        v9 = StringLiteral_6385/*"Error occurred."*/;
+        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6385/*"Error occurred."*/;
+        this->fields._progress_k__BackingField = -1.0;
+        sub_21FFBF4(&this->fields._error_k__BackingField, v9);
+      }
     }
     v7 = *p_installer;
     if ( !*p_installer )
-LABEL_12:
-      sub_1D0F30C(v7, v5);
-    ((void (__fastcall *)(CriFsInstaller_o *, const MethodInfo *))v7->klass->vtable._5_Dispose.methodPtr)(
+      goto LABEL_16;
+    ((void (__fastcall *)(struct CriFsInstaller_o *, const MethodInfo *))v7->klass->vtable._5_Dispose.methodPtr)(
       v7,
       v7->klass->vtable._5_Dispose.method);
     this->fields.installer = 0;
-    sub_1D0F058(&this->fields.installer, 0);
+    sub_21FFBF4(&this->fields.installer, 0);
     doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
     this->fields._isDone_k__BackingField = 1;
     if ( doneDelegate_k__BackingField )

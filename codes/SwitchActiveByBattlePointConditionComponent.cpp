@@ -17,7 +17,7 @@ bool SwitchActiveByBattlePointConditionComponent__IsSatisfyCond(
   _BOOL8 v6; // x0
 
   if ( !actor || (v4 = this, (this = (SwitchActiveByBattlePointConditionComponent_o *)actor->fields.battleSvtData) == 0) )
-    sub_1D0F30C(this, data);
+    sub_21FFECC(this, data);
   BattlePointData = BattleServantData__GetBattlePointData((BattleServantData_o *)this, v4->fields.BattlePointKeyId, 0);
   if ( BattlePointData )
     LOBYTE(v6) = BattleUtility__IsSatisfyValueCond(

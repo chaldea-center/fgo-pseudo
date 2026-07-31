@@ -4,18 +4,18 @@ void EventRaidDefeatedEffectInfo___ctor(
         const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_int__object__o *v5; // x21
-  GrandQuestFolderBoardItem_o *p_fields; // x19
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  MissionNaviTransitionBoardItem_o *p_fields; // x19
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   System_String_o *IsNullOrEmpty; // x0
   __int64 v14; // x1
   int klass; // w8
   System_String_o *v16; // x20
-  int i; // w23
+  int i; // w27
   System_String_array *v18; // x22
   System_Collections_Generic_List_int__o *v19; // x21
   il2cpp_array_size_t v20; // x8
@@ -27,28 +27,28 @@ void EventRaidDefeatedEffectInfo___ctor(
   __int64 size; // x10
   int32_t result[2]; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4E748BD & 1) == 0 )
+  if ( (byte_5935839 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E748BD = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5935839 = 1;
   }
   *(_QWORD *)result = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v5,
-    (const MethodInfo_35A7834 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
   this->fields.playedEffectList = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v5;
-  p_fields = (GrandQuestFolderBoardItem_o *)&this->fields;
-  sub_1D0F058(p_fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
+  sub_21FFBF4(p_fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   if ( !strInfo || (IsNullOrEmpty = (System_String_o *)System_String__Split(strInfo, 0x3Bu, 0, 0)) == 0 )
-LABEL_32:
-    sub_1D0F30C(IsNullOrEmpty, v14);
+LABEL_31:
+    sub_21FFECC(IsNullOrEmpty, v14);
   klass = (int)IsNullOrEmpty[1].klass;
   v16 = IsNullOrEmpty;
   if ( klass >= 1 )
@@ -56,36 +56,36 @@ LABEL_32:
     for ( i = 0; i < klass; ++i )
     {
       if ( i >= (unsigned int)klass )
-        goto LABEL_31;
+        goto LABEL_32;
       IsNullOrEmpty = (System_String_o *)*((_QWORD *)&v16[1].monitor + i);
       if ( !IsNullOrEmpty )
-        goto LABEL_32;
+        goto LABEL_31;
       v18 = System_String__Split(IsNullOrEmpty, 0x3Au, 0, 0);
       result[1] = 0;
-      v19 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+      v19 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v19,
-        (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
       if ( !v18 )
-        goto LABEL_32;
-      if ( !LODWORD(v18->max_length) )
         goto LABEL_31;
+      if ( !LODWORD(v18->max_length) )
+        goto LABEL_32;
       IsNullOrEmpty = (System_String_o *)System_Int32__TryParse(v18->m_Items[0], &result[1], 0);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
-        if ( LODWORD(v18->max_length) <= 1 )
-          goto LABEL_31;
+        if ( (v18->max_length & 0xFFFFFFFE) == 0 )
+          goto LABEL_32;
         IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(v18->m_Items[1], 0);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
         {
-          if ( LODWORD(v18->max_length) <= 1 )
-            goto LABEL_31;
+          if ( (v18->max_length & 0xFFFFFFFE) == 0 )
+            goto LABEL_32;
           IsNullOrEmpty = v18->m_Items[1];
           if ( !IsNullOrEmpty )
-            goto LABEL_32;
+            goto LABEL_31;
           IsNullOrEmpty = (System_String_o *)System_String__Split(IsNullOrEmpty, 0x2Cu, 0, 0);
           if ( !IsNullOrEmpty )
-            goto LABEL_32;
+            goto LABEL_31;
           v20 = (il2cpp_array_size_t)IsNullOrEmpty[1].klass;
           v21 = IsNullOrEmpty;
           if ( (int)v20 >= 1 )
@@ -99,20 +99,20 @@ LABEL_32:
               if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
               {
                 if ( !v19 )
-                  goto LABEL_32;
-                v14 = (unsigned int)result[0];
+                  goto LABEL_31;
                 items = v19->fields._items;
+                v14 = (unsigned int)result[0];
                 v25 = Method_System_Collections_Generic_List_int__Add__;
                 ++v19->fields._version;
                 if ( !items )
-                  goto LABEL_32;
+                  goto LABEL_31;
                 size = v19->fields._size;
                 if ( (unsigned int)size >= LODWORD(items->max_length) )
                 {
                   System_Collections_Generic_List_int___AddWithResize(
                     v19,
                     v14,
-                    *(const MethodInfo_393F3EC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+                    *(const MethodInfo_4433138 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
                 }
                 else
                 {
@@ -124,19 +124,19 @@ LABEL_32:
               if ( (__int64)++v22 >= (int)v20 )
                 goto LABEL_27;
             }
-LABEL_31:
-            sub_1D0F314(IsNullOrEmpty);
+LABEL_32:
+            sub_21FFED4(IsNullOrEmpty);
           }
         }
 LABEL_27:
         IsNullOrEmpty = (System_String_o *)p_fields->klass;
         if ( !p_fields->klass )
-          goto LABEL_32;
+          goto LABEL_31;
         System_Collections_Generic_Dictionary_int__object___Add(
           (System_Collections_Generic_Dictionary_int__object__o *)IsNullOrEmpty,
           result[1],
           (Il2CppObject *)v19,
-          (const MethodInfo_35A8208 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+          (const MethodInfo_3F68D08 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
       }
       klass = (int)v16[1].klass;
     }
@@ -156,86 +156,92 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
   System_String_o *v8; // x0
   System_Text_StringBuilder_o *appended; // x0
   __int64 v10; // x1
-  char v11; // w20
-  System_String_o *v12; // x1
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v14; // [xsp+18h] [xbp-D8h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v15; // [xsp+40h] [xbp-B0h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v16; // [xsp+60h] [xbp-90h] BYREF
-  __int64 v17; // [xsp+98h] [xbp-58h] BYREF
+  __int128 v11; // q0
+  char v12; // w20
+  System_String_o *v13; // x1
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v15; // [xsp+10h] [xbp-E0h] BYREF
+  int32_t v16; // [xsp+3Ch] [xbp-B4h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v17; // [xsp+40h] [xbp-B0h] BYREF
+  int key; // [xsp+5Ch] [xbp-94h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v19; // [xsp+60h] [xbp-90h] BYREF
 
-  if ( (byte_4E748BE & 1) == 0 )
+  if ( (byte_593583A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1D0F0B4(&System_Text_StringBuilder_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
-    sub_1D0F0B4(&StringLiteral_1488/*";"*/);
-    sub_1D0F0B4(&StringLiteral_810/*","*/);
-    byte_4E748BE = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__);
+    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
+    sub_21FFC50(&StringLiteral_1532/*":"*/);
+    sub_21FFC50(&StringLiteral_1567/*";"*/);
+    sub_21FFC50(&StringLiteral_869/*","*/);
+    byte_593583A = 1;
   }
-  v17 = 0;
-  memset(&v16, 0, sizeof(v16));
-  memset(&v15, 0, sizeof(v15));
-  v3 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
+  key = 0;
+  memset(&v17, 0, sizeof(v17));
+  memset(&v19, 0, sizeof(v19));
+  v16 = 0;
+  v3 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v3, 0);
   playedEffectList = this->fields.playedEffectList;
   if ( !playedEffectList )
     goto LABEL_18;
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
-    &v14,
+    &v15,
     (System_Collections_Generic_Dictionary_int__object__o *)playedEffectList,
-    (const MethodInfo_35A8640 *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
-  v16 = v14;
+    (const MethodInfo_3F69144 *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
+  v19 = v15;
   while ( System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
-            &v16,
-            (const MethodInfo_36F21C8 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__) )
+            &v19,
+            (const MethodInfo_41249BC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__) )
   {
-    current = v16.fields._current;
-    HIDWORD(v17) = v16.fields._current.fields.key;
-    v7 = System_Int32__ToString((int32_t)&v17 + 4, 0);
-    v8 = System_String__Concat_65562772(v7, (System_String_o *)StringLiteral_1453/*":"*/, 0);
+    current = v19.fields._current;
+    key = (int)v19.fields._current.fields.key;
+    v7 = System_Int32__ToString((int32_t)&key, 0);
+    v8 = System_String__Concat_75438412(v7, (System_String_o *)StringLiteral_1532/*":"*/, 0);
     if ( !v3 )
-      sub_1D0F30C(v8, v8);
-    appended = System_Text_StringBuilder__Append_65646732(v3, v8, 0);
+      sub_21FFECC(v8, v8);
+    appended = System_Text_StringBuilder__Append_75521760(v3, v8, 0);
     if ( !current.fields.value )
-      sub_1D0F30C(appended, v10);
+      sub_21FFECC(appended, v10);
     System_Collections_Generic_List_int___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       (System_Collections_Generic_List_int__o *)current.fields.value,
-      (const MethodInfo_393FEC0 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-    v11 = 0;
-    *(_OWORD *)&v15.fields._list = *(_OWORD *)&v14.fields._dictionary;
-    *(_QWORD *)&v15.fields._current = v14.fields._current.fields.key;
+      (const MethodInfo_4433BE8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    v11 = *(_OWORD *)&v15.fields._dictionary;
+    v12 = 0;
+    v15.fields._dictionary = 0;
+    *(_QWORD *)&v15.fields._version = &v17;
+    *(_OWORD *)&v17.fields._list = v11;
+    *(_QWORD *)&v17.fields._current = v15.fields._current.fields.key;
     while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-              &v15,
-              (const MethodInfo_36CA170 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+              &v17,
+              (const MethodInfo_40C2130 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
-      LODWORD(v17) = v15.fields._current;
-      if ( (v11 & 1) != 0 )
-        System_Text_StringBuilder__Append_65646732(v3, (System_String_o *)StringLiteral_810/*","*/, 0);
-      v12 = System_Int32__ToString((int32_t)&v17, 0);
-      v11 = 1;
-      System_Text_StringBuilder__Append_65646732(v3, v12, 0);
+      v16 = v17.fields._current;
+      if ( (v12 & 1) != 0 )
+        System_Text_StringBuilder__Append_75521760(v3, (System_String_o *)StringLiteral_869/*","*/, 0);
+      v13 = System_Int32__ToString((int32_t)&v16, 0);
+      v12 = 1;
+      System_Text_StringBuilder__Append_75521760(v3, v13, 0);
     }
     System_Collections_Generic_List_Enumerator_int___Dispose(
-      &v15,
-      (const MethodInfo_36CA16C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    System_Text_StringBuilder__Append_65646732(v3, (System_String_o *)StringLiteral_1488/*";"*/, 0);
+      &v17,
+      (const MethodInfo_40C212C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    System_Text_StringBuilder__Append_75521760(v3, (System_String_o *)StringLiteral_1567/*";"*/, 0);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
-    &v16,
-    (const MethodInfo_36F22EC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
+    &v19,
+    (const MethodInfo_4124AE0 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
   if ( !v3 )
 LABEL_18:
-    sub_1D0F30C(playedEffectList, v4);
+    sub_21FFECC(playedEffectList, v4);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
                               v3,
                               v3->klass->vtable._3_ToString.method);

@@ -7,22 +7,23 @@ void CharaGraphGrandEquipListViewItem___ctor(
         GrandServantListSlotData_o *grandSvtSlotData,
         const MethodInfo *method)
 {
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
   __int64 v19; // x0
   __int64 v20; // x1
-  __int128 v21; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-60h]
+  __int64 v21; // x2
+  __int128 v22; // q1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4E721FD & 1) == 0 )
+  if ( (byte_59331FA & 1) == 0 )
   {
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4E721FD = 1;
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_59331FA = 1;
   }
   CharaGraphEquipListViewItem___ctor(
     (CharaGraphEquipListViewItem_o *)this,
@@ -32,8 +33,8 @@ void CharaGraphGrandEquipListViewItem___ctor(
     partyUserServantList,
     0);
   this->fields.grandServantData = grandSvtSlotData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.grandServantData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.grandServantData,
     (int32_t)grandSvtSlotData,
     v13,
     v14,
@@ -42,12 +43,12 @@ void CharaGraphGrandEquipListViewItem___ctor(
     v17,
     v18);
   if ( !userSvtEntity )
-    sub_1D0F30C(v19, v20);
-  v21 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v23.fields.fakeValue = v21;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v22 = v23;
-  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v22, 0);
+    sub_21FFECC(v19, v20);
+  v22 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  *(_OWORD *)&v24.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v24.fields.fakeValue = v22;
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v20, v21);
+  v23 = v24;
+  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v23, 0);
 }

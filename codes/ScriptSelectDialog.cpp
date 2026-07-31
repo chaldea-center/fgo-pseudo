@@ -2,14 +2,14 @@ void ScriptSelectDialog___ctor(ScriptSelectDialog_o *this, const MethodInfo *met
 {
   __int64 v3; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   __int64 v11; // x20
-  __int64 v12; // x8
+  unsigned int v12; // w8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x10
   float z; // s1
   struct UnityEngine_Vector3_StaticFields *v15; // x10
@@ -18,67 +18,67 @@ void ScriptSelectDialog___ctor(ScriptSelectDialog_o *this, const MethodInfo *met
   float v18; // s1
   struct UnityEngine_Vector3_StaticFields *v19; // x9
   float v20; // s1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   unsigned int v27; // w8
 
-  if ( (byte_4E796F5 & 1) == 0 )
+  if ( (byte_593A71E & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector2___TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Vector3___TypeInfo);
-    byte_4E796F5 = 1;
+    sub_21FFC50(&UnityEngine_Vector2___TypeInfo);
+    sub_21FFC50(&UnityEngine_Vector3___TypeInfo);
+    byte_593A71E = 1;
   }
-  v3 = sub_1D0F15C(UnityEngine_Vector3___TypeInfo, 6);
+  v3 = sub_21FFD10(UnityEngine_Vector3___TypeInfo, 6);
   v11 = v3;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    v3 = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    v3 = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   if ( !v11 )
     goto LABEL_21;
-  v12 = *(_QWORD *)(v11 + 24);
-  if ( !(_DWORD)v12 )
+  v12 = *(_DWORD *)(v11 + 24);
+  if ( !v12 )
     goto LABEL_20;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)(v11 + 32) = *(_QWORD *)&static_fields->zeroVector.fields.x;
   *(float *)(v11 + 40) = z;
-  if ( (_DWORD)v12 == 1 )
+  if ( (v12 & 0xFFFFFFFE) == 0 )
     goto LABEL_20;
   v15 = UnityEngine_Vector3_TypeInfo->static_fields;
   v16 = v15->zeroVector.fields.z;
   *(_QWORD *)(v11 + 44) = *(_QWORD *)&v15->zeroVector.fields.x;
   *(float *)(v11 + 52) = v16;
-  if ( (unsigned int)v12 <= 2 )
+  if ( v12 <= 2 )
     goto LABEL_20;
   v17 = UnityEngine_Vector3_TypeInfo->static_fields;
   v18 = v17->zeroVector.fields.z;
   *(_QWORD *)(v11 + 56) = *(_QWORD *)&v17->zeroVector.fields.x;
   *(float *)(v11 + 64) = v18;
-  if ( (unsigned int)v12 <= 3
+  if ( v12 == 3
     || (v19 = UnityEngine_Vector3_TypeInfo->static_fields,
         v20 = v19->zeroVector.fields.z,
         *(_QWORD *)(v11 + 68) = *(_QWORD *)&v19->zeroVector.fields.x,
         *(float *)(v11 + 76) = v20,
-        (_DWORD)v12 == 4)
-    || (*(_DWORD *)(v11 + 88) = 0, *(_QWORD *)(v11 + 80) = 0x41B0000000000000LL, (unsigned int)v12 <= 5) )
+        v12 == 4)
+    || (*(_DWORD *)(v11 + 88) = 0, *(_QWORD *)(v11 + 80) = 0x41B0000000000000LL, v12 <= 5) )
   {
 LABEL_20:
-    sub_1D0F314(v3);
+    sub_21FFED4(v3);
   }
   *(_QWORD *)(v11 + 92) = 0x41B0000000000000LL;
   *(_DWORD *)(v11 + 100) = 0;
   this->fields.BASE_VIEW_POSITIONS = (struct UnityEngine_Vector3_array *)v11;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.BASE_VIEW_POSITIONS, v11, v5, v6, v7, v8, v9, v10);
-  v3 = sub_1D0F15C(UnityEngine_Vector2___TypeInfo, 6);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.BASE_VIEW_POSITIONS, v11, v5, v6, v7, v8, v9, v10);
+  v3 = sub_21FFD10(UnityEngine_Vector2___TypeInfo, 6);
   if ( !v3 )
 LABEL_21:
-    sub_1D0F30C(v3, v4);
+    sub_21FFECC(v3, v4);
   v27 = *(_DWORD *)(v3 + 24);
   if ( !v27 )
     goto LABEL_20;
@@ -99,7 +99,15 @@ LABEL_21:
     goto LABEL_20;
   *(_QWORD *)(v3 + 72) = 0xC29A000000000000LL;
   this->fields.LIST_VIEW_ITEM_SEED_PITCH = (struct UnityEngine_Vector2_array *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.LIST_VIEW_ITEM_SEED_PITCH, v3, v21, v22, v23, v24, v25, v26);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.LIST_VIEW_ITEM_SEED_PITCH,
+    v3,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -129,29 +137,29 @@ float ScriptSelectDialog__CalcChangeGaugeTime(
 
 void ScriptSelectDialog__Close(ScriptSelectDialog_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct ScriptSelectListViewManager_o *listViewManager; // x20
   ScriptSelectDialog_o *v9; // x19
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   SePlayer_o *v16; // x0
-  GrandQuestFolderBoardItem_o *p_limitTimeLoopSe; // x19
+  MissionNaviTransitionBoardItem_o *p_limitTimeLoopSe; // x19
   SePlayer_o *limitTimeLoopSe; // t1
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
 
   if ( this->fields.isOpen )
   {
@@ -159,26 +167,26 @@ void ScriptSelectDialog__Close(ScriptSelectDialog_o *this, const MethodInfo *met
     v9 = this;
     if ( !listViewManager
       || (listViewManager->fields.clickFunc = 0,
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
           ListViewManager__DestroyList((ListViewManager_o *)listViewManager, 0),
           (this = (ScriptSelectDialog_o *)v9->fields.rootObject) == 0) )
     {
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
     v9->fields.callbackFunc = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v9->fields.callbackFunc, 0, v10, v11, v12, v13, v14, v15);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->fields.callbackFunc, 0, v10, v11, v12, v13, v14, v15);
     limitTimeLoopSe = v9->fields.limitTimeLoopSe;
-    p_limitTimeLoopSe = (GrandQuestFolderBoardItem_o *)&v9->fields.limitTimeLoopSe;
+    p_limitTimeLoopSe = (MissionNaviTransitionBoardItem_o *)&v9->fields.limitTimeLoopSe;
     v16 = limitTimeLoopSe;
-    LOBYTE(p_limitTimeLoopSe[-1].fields._IconId_k__BackingField) = 0;
+    LOBYTE(p_limitTimeLoopSe[-1].fields._ClosedMessage_k__BackingField) = 0;
     if ( limitTimeLoopSe )
     {
       if ( !v16->fields.isStop )
       {
         SePlayer__StopSe(v16, 0.0, 0);
         p_limitTimeLoopSe->klass = 0;
-        sub_1D0F058(p_limitTimeLoopSe, 0, v19, v20, v21, v22, v23, v24);
+        sub_21FFBF4(p_limitTimeLoopSe, 0, v19, v20, v21, v22, v23, v24);
       }
     }
   }
@@ -203,49 +211,50 @@ void ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, const Metho
   UnityEngine_GameObject_o *rootLimitTimeObject; // x0
   UnityEngine_GameObject_o *v4; // x20
   struct System_Single_array *v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   float maxLimitTimeSeconds; // s0
   struct System_Single_array *changeGaugeTimes; // x8
   float v14; // s1
   int max_length; // w9
-  float v16; // s0
-  float v17; // s1
+  float v16; // s1
+  float v17; // s0
+  float v18; // s0
 
-  if ( (byte_4E796F3 & 1) == 0 )
+  if ( (byte_593A71C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1D0F0B4(&float___TypeInfo);
-    byte_4E796F3 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_21FFC50(&float___TypeInfo);
+    byte_593A71C = 1;
   }
   rootLimitTimeObject = this->fields.rootLimitTimeObject;
   if ( !rootLimitTimeObject )
-    goto LABEL_22;
+    goto LABEL_23;
   UnityEngine_GameObject__SetActive(rootLimitTimeObject, this->fields.limitTimeMode, 0);
   if ( !this->fields.limitTimeMode )
     return;
   rootLimitTimeObject = this->fields.rootLimitTimeObject;
   if ( !rootLimitTimeObject )
-    goto LABEL_22;
+    goto LABEL_23;
   rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       rootLimitTimeObject,
-                                                      (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                                                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   if ( !rootLimitTimeObject )
-    goto LABEL_22;
+    goto LABEL_23;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)rootLimitTimeObject, 0, 0);
   rootLimitTimeObject = this->fields.rootLimitTimeObject;
   if ( !rootLimitTimeObject )
-    goto LABEL_22;
+    goto LABEL_23;
   rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       rootLimitTimeObject,
-                                                      (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !rootLimitTimeObject )
-    goto LABEL_22;
+    goto LABEL_23;
   v4 = rootLimitTimeObject;
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))rootLimitTimeObject->klass[1]._1.element_class)(
     rootLimitTimeObject,
@@ -254,9 +263,9 @@ void ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, const Metho
   (*(void (__fastcall **)(UnityEngine_GameObject_o *, void *))&v4->klass[2]._1.byval_arg.bits)(
     v4,
     v4->klass[2]._1.this_arg.data);
-  v5 = (struct System_Single_array *)sub_1D0F15C(float___TypeInfo, 2);
+  v5 = (struct System_Single_array *)sub_21FFD10(float___TypeInfo, 2);
   this->fields.changeGaugeTimes = v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.changeGaugeTimes, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.changeGaugeTimes, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   maxLimitTimeSeconds = this->fields.maxLimitTimeSeconds;
   changeGaugeTimes = this->fields.changeGaugeTimes;
   v14 = floorf(maxLimitTimeSeconds * 0.2);
@@ -265,27 +274,30 @@ void ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, const Metho
   if ( v14 < 1.0 )
     maxLimitTimeSeconds = 1.0;
   if ( !changeGaugeTimes )
-LABEL_22:
-    sub_1D0F30C(rootLimitTimeObject, method);
+LABEL_23:
+    sub_21FFECC(rootLimitTimeObject, method);
   max_length = changeGaugeTimes->max_length;
   if ( !max_length || (changeGaugeTimes->m_Items[0] = maxLimitTimeSeconds, max_length == 1) )
-    sub_1D0F314(rootLimitTimeObject);
+    sub_21FFED4(rootLimitTimeObject);
   v16 = this->fields.maxLimitTimeSeconds;
   v17 = floorf(v16 * 0.5);
   if ( v17 <= v16 )
     v16 = v17;
-  if ( v17 < 1.0 )
-    v16 = 1.0;
-  changeGaugeTimes->m_Items[1] = v16;
+  if ( v17 >= 1.0 )
+    v18 = v16;
+  else
+    v18 = 1.0;
+  changeGaugeTimes->m_Items[1] = v18;
   ScriptSelectDialog__UpdateLimitTimeUI(this, method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptSelectDialog__InitListViewManagerUI(ScriptSelectDialog_o *this, int32_t itemCount, const MethodInfo *method)
 {
   struct UnityEngine_Vector3_array *BASE_VIEW_POSITIONS; // x8
   struct UnityEngine_Vector2_array *LIST_VIEW_ITEM_SEED_PITCH; // x10
-  int32_t v5; // w8
+  int v5; // w8
   struct ListViewItemSeed_o *listViewItemSeed; // x11
   struct UnityEngine_Vector3_array *v7; // x10
 
@@ -294,7 +306,7 @@ void ScriptSelectDialog__InitListViewManagerUI(ScriptSelectDialog_o *this, int32
     goto LABEL_13;
   LIST_VIEW_ITEM_SEED_PITCH = this->fields.LIST_VIEW_ITEM_SEED_PITCH;
   v5 = LODWORD(BASE_VIEW_POSITIONS->max_length) - 1;
-  if ( v5 >= itemCount )
+  if ( itemCount < v5 )
     v5 = itemCount;
   if ( itemCount < 0 )
     v5 = 0;
@@ -308,11 +320,11 @@ void ScriptSelectDialog__InitListViewManagerUI(ScriptSelectDialog_o *this, int32
         (v7 = this->fields.BASE_VIEW_POSITIONS) == 0) )
   {
 LABEL_13:
-    sub_1D0F30C(this, itemCount);
+    sub_21FFECC(this, *(_QWORD *)&itemCount);
   }
   if ( (unsigned int)v5 >= LODWORD(v7->max_length) )
 LABEL_14:
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (ScriptSelectDialog_o *)this->fields.baseView;
   if ( !this )
     goto LABEL_13;
@@ -320,15 +332,16 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptSelectDialog__OnClickSelect(ScriptSelectDialog_o *this, int32_t index, const MethodInfo *method)
 {
   SePlayer_o *limitTimeLoopSe; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   struct ScriptSelectDialog_ClickDelegate_o *callbackFunc; // x8
 
   if ( this->fields.limitTimeMode )
@@ -336,10 +349,10 @@ void ScriptSelectDialog__OnClickSelect(ScriptSelectDialog_o *this, int32_t index
     limitTimeLoopSe = this->fields.limitTimeLoopSe;
     this->fields.limitTimeMode = 0;
     if ( !limitTimeLoopSe )
-      sub_1D0F30C(0, index);
+      sub_21FFECC(0, *(_QWORD *)&index);
     SePlayer__StopSe(limitTimeLoopSe, 0.0, 0);
     this->fields.limitTimeLoopSe = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.limitTimeLoopSe, 0, v6, v7, v8, v9, v10, v11);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.limitTimeLoopSe, 0, v6, v7, v8, v9, v10, v11);
   }
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -358,12 +371,12 @@ void ScriptSelectDialog__Open(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *rootObject; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   const MethodInfo *v16; // x2
   ScriptSelectListViewManager_o *listViewManager; // x22
   ScriptSelectListViewManager_ClickDelegate_o *v18; // x23
@@ -372,11 +385,11 @@ void ScriptSelectDialog__Open(
   const MethodInfo *v21; // x4
   const MethodInfo *v22; // x1
 
-  if ( (byte_4E796EF & 1) == 0 )
+  if ( (byte_593A718 & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_ScriptSelectDialog_OnClickSelect__);
-    byte_4E796EF = 1;
+    sub_21FFC50(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_ScriptSelectDialog_OnClickSelect__);
+    byte_593A718 = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -384,8 +397,8 @@ void ScriptSelectDialog__Open(
   UnityEngine_GameObject__SetActive(rootObject, 1, 0);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v10,
     v11,
@@ -396,7 +409,7 @@ void ScriptSelectDialog__Open(
   if ( !selectMessageList
     || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v16),
         listViewManager = this->fields.listViewManager,
-        v18 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1D0F300(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
+        v18 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_21FFEBC(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
           v18,
           (Il2CppObject *)this,
@@ -407,7 +420,7 @@ void ScriptSelectDialog__Open(
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
   {
 LABEL_8:
-    sub_1D0F30C(rootObject, selectMessageList);
+    sub_21FFECC(rootObject, selectMessageList);
   }
   ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0, v21);
   this->fields.limitTimeMode = 0;
@@ -424,12 +437,12 @@ void ScriptSelectDialog__OpenHidden(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *rootObject; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   const MethodInfo *v18; // x2
   ScriptSelectListViewManager_o *listViewManager; // x23
   ScriptSelectListViewManager_ClickDelegate_o *v20; // x24
@@ -438,11 +451,11 @@ void ScriptSelectDialog__OpenHidden(
   const MethodInfo *v23; // x4
   const MethodInfo *v24; // x1
 
-  if ( (byte_4E796F0 & 1) == 0 )
+  if ( (byte_593A719 & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_ScriptSelectDialog_OnClickSelect__);
-    byte_4E796F0 = 1;
+    sub_21FFC50(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_ScriptSelectDialog_OnClickSelect__);
+    byte_593A719 = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -450,8 +463,8 @@ void ScriptSelectDialog__OpenHidden(
   UnityEngine_GameObject__SetActive(rootObject, 1, 0);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v12,
     v13,
@@ -462,7 +475,7 @@ void ScriptSelectDialog__OpenHidden(
   if ( !selectMessageList
     || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v18),
         listViewManager = this->fields.listViewManager,
-        v20 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1D0F300(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
+        v20 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_21FFEBC(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
           v20,
           (Il2CppObject *)this,
@@ -473,7 +486,7 @@ void ScriptSelectDialog__OpenHidden(
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
   {
 LABEL_8:
-    sub_1D0F30C(rootObject, selectMessageList);
+    sub_21FFECC(rootObject, selectMessageList);
   }
   ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0, v23);
   this->fields.limitTimeMode = 0;
@@ -491,12 +504,12 @@ void ScriptSelectDialog__OpenLimitTime(
         const MethodInfo *method)
 {
   void *rootObject; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
   const MethodInfo *v21; // x2
   System_String_array *v22; // x23
@@ -505,26 +518,26 @@ void ScriptSelectDialog__OpenLimitTime(
   const MethodInfo *v25; // x3
   const MethodInfo *v26; // x4
   const MethodInfo *v27; // x4
-  il2cpp_array_size_t max_length; // x8
+  il2cpp_array_size_t max_length; // x9
   const MethodInfo *v29; // x1
   _QWORD *v30; // x0
   System_Reflection_MethodBase_o *v31; // x0
   struct SePlayer_o *v32; // x0
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
   int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
+  bool v37; // w6
+  bool v38; // w7
 
-  if ( (byte_4E796F1 & 1) == 0 )
+  if ( (byte_593A71A & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Take_string___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_string___);
-    sub_1D0F0B4(&Method_ScriptSelectDialog_OnClickSelect__);
-    sub_1D0F0B4(&Method_ScriptSelectDialog_OpenLimitTime__);
-    byte_4E796F1 = 1;
+    sub_21FFC50(&ScriptSelectListViewManager_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Take_string___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_21FFC50(&Method_ScriptSelectDialog_OnClickSelect__);
+    sub_21FFC50(&Method_ScriptSelectDialog_OpenLimitTime__);
+    byte_593A71A = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -532,8 +545,8 @@ void ScriptSelectDialog__OpenLimitTime(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rootObject, 1, 0);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v14,
     v15,
@@ -546,15 +559,15 @@ void ScriptSelectDialog__OpenLimitTime(
   v20 = System_Linq_Enumerable__Take_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)selectMessageList,
           LODWORD(selectMessageList->max_length) - 1,
-          (const MethodInfo_328E1FC *)Method_System_Linq_Enumerable_Take_string___);
+          (const MethodInfo_3866DA8 *)Method_System_Linq_Enumerable_Take_string___);
   rootObject = System_Linq_Enumerable__ToArray_object_(
                  v20,
-                 (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_string___);
+                 (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_string___);
   if ( !rootObject
     || (v22 = (System_String_array *)rootObject,
         ScriptSelectDialog__InitListViewManagerUI(this, *((_DWORD *)rootObject + 6), v21),
         listViewManager = this->fields.listViewManager,
-        v24 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1D0F300(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
+        v24 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_21FFEBC(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
           v24,
           (Il2CppObject *)this,
@@ -565,22 +578,30 @@ void ScriptSelectDialog__OpenLimitTime(
         (rootObject = this->fields.listViewManager) == 0) )
   {
 LABEL_11:
-    sub_1D0F30C(rootObject, selectMessageList);
+    sub_21FFECC(rootObject, selectMessageList);
   }
   ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0, v27);
-  this->fields.limitTimeMode = 1;
   max_length = selectMessageList->max_length;
+  this->fields.limitTimeMode = 1;
+  this->fields.selectMessageLength = max_length;
   this->fields.maxLimitTimeSeconds = limitTime;
   this->fields.limitTimeSeconds = limitTime;
-  this->fields.selectMessageLength = max_length;
   ScriptSelectDialog__InitLimitTimeUI(this, v29);
   v30 = Method_ScriptSelectDialog_OpenLimitTime__;
   if ( (*((_BYTE *)Method_ScriptSelectDialog_OpenLimitTime__ + 83) & 2) != 0 )
-    v30 = (_QWORD *)sub_1D0F0CC(Method_ScriptSelectDialog_OpenLimitTime__);
-  v31 = (System_Reflection_MethodBase_o *)sub_1D0F098(v30, v30[4]);
+    v30 = (_QWORD *)sub_21FFC68(Method_ScriptSelectDialog_OpenLimitTime__);
+  v31 = (System_Reflection_MethodBase_o *)sub_21FFC34(v30, v30[4]);
   v32 = OverwriteAssetSoundName__PlaySeLoop(v31, seName, 1.0, 0.0, 0, 0);
   this->fields.limitTimeLoopSe = v32;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.limitTimeLoopSe, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.limitTimeLoopSe,
+    (int32_t)v32,
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
 }
 
 
@@ -590,10 +611,10 @@ void ScriptSelectDialog__SelectDecide(
         ScriptSelectDialog_ClickDelegate_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   ScriptSelectListViewManager_o *listViewManager; // x21
   System_Action_o *v12; // x22
   UnityEngine_GameObject_o *rootLimitTimeObject; // x0
@@ -601,26 +622,26 @@ void ScriptSelectDialog__SelectDecide(
   const MethodInfo *v15; // x4
   UITweener_o *v16; // x19
 
-  if ( (byte_4E796F2 & 1) == 0 )
+  if ( (byte_593A71B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_1D0F0B4(&Method_ScriptSelectDialog_EndSelectDecide__);
-    byte_4E796F2 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_21FFC50(&Method_ScriptSelectDialog_EndSelectDecide__);
+    byte_593A71B = 1;
   }
   this->fields.index = index;
   this->fields.callbackFunc = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
-    (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)callback,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
     v7);
   listViewManager = this->fields.listViewManager;
-  v12 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ScriptSelectDialog_EndSelectDecide__, 0);
   if ( !listViewManager )
     goto LABEL_10;
@@ -635,7 +656,7 @@ void ScriptSelectDialog__SelectDecide(
     {
       rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           rootLimitTimeObject,
-                                                          (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                                                          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
       if ( rootLimitTimeObject )
       {
         v16 = (UITweener_o *)rootLimitTimeObject;
@@ -646,11 +667,12 @@ void ScriptSelectDialog__SelectDecide(
       }
     }
 LABEL_10:
-    sub_1D0F30C(rootLimitTimeObject, v14);
+    sub_21FFECC(rootLimitTimeObject, v14);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptSelectDialog__SetActive(ScriptSelectDialog_o *this, bool flag, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *rootObject; // x0
@@ -659,7 +681,7 @@ void ScriptSelectDialog__SetActive(ScriptSelectDialog_o *this, bool flag, const 
   {
     rootObject = this->fields.rootObject;
     if ( !rootObject )
-      sub_1D0F30C(0, flag);
+      sub_21FFECC(0, flag);
     UnityEngine_GameObject__SetActive(rootObject, flag, 0);
   }
 }
@@ -700,10 +722,10 @@ void ScriptSelectDialog__UpdateLimitTimeUI(ScriptSelectDialog_o *this, const Met
 {
   ScriptSelectDialog_o *v2; // x19
   struct System_Single_array *changeGaugeTimes; // x8
-  unsigned int max_length; // w9
+  int max_length; // w9
   float limitTimeSeconds; // s0
-  float v6; // s1
-  System_String_o **v7; // x8
+  __int64 *v6; // x8
+  __int64 v7; // x1
   UILabel_o *limitTimeValueLabel; // x20
   float v9; // s8
   unsigned int v10; // w9
@@ -711,65 +733,70 @@ void ScriptSelectDialog__UpdateLimitTimeUI(ScriptSelectDialog_o *this, const Met
   unsigned int v12; // [xsp+Ch] [xbp-24h] BYREF
 
   v2 = this;
-  if ( (byte_4E796F4 & 1) == 0 )
+  if ( (byte_593A71D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20991/*"img_timer_meter_yellow"*/);
-    sub_1D0F0B4(&StringLiteral_20989/*"img_timer_meter_blue"*/);
-    this = (ScriptSelectDialog_o *)sub_1D0F0B4(&StringLiteral_20990/*"img_timer_meter_red"*/);
-    byte_4E796F4 = 1;
+    sub_21FFC50(&StringLiteral_21552/*"img_timer_meter_yellow"*/);
+    sub_21FFC50(&StringLiteral_21550/*"img_timer_meter_blue"*/);
+    this = (ScriptSelectDialog_o *)sub_21FFC50(&StringLiteral_21551/*"img_timer_meter_red"*/);
+    byte_593A71D = 1;
   }
   changeGaugeTimes = v2->fields.changeGaugeTimes;
+  v12 = 0;
   if ( !changeGaugeTimes )
-LABEL_23:
-    sub_1D0F30C(this, method);
+LABEL_24:
+    sub_21FFECC(this, method);
   max_length = changeGaugeTimes->max_length;
   if ( !max_length )
-    goto LABEL_24;
+    goto LABEL_25;
   limitTimeSeconds = v2->fields.limitTimeSeconds;
-  if ( limitTimeSeconds > changeGaugeTimes->m_Items[0] )
+  if ( limitTimeSeconds <= changeGaugeTimes->m_Items[0] )
   {
-    if ( max_length > 1 )
-    {
-      this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
-      if ( !this )
-        goto LABEL_23;
-      v6 = changeGaugeTimes->m_Items[1];
-      v7 = (System_String_o **)&StringLiteral_20991/*"img_timer_meter_yellow"*/;
-      if ( limitTimeSeconds > v6 )
-        v7 = (System_String_o **)&StringLiteral_20989/*"img_timer_meter_blue"*/;
-      goto LABEL_13;
-    }
-LABEL_24:
-    sub_1D0F314(this);
+    this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
+    if ( !this )
+      goto LABEL_24;
+    v6 = &StringLiteral_21551/*"img_timer_meter_red"*/;
+    goto LABEL_14;
   }
+  if ( max_length == 1 )
+LABEL_25:
+    sub_21FFED4(this);
+  this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
+  if ( limitTimeSeconds <= changeGaugeTimes->m_Items[1] )
+  {
+    if ( !this )
+      goto LABEL_24;
+    v6 = &StringLiteral_21552/*"img_timer_meter_yellow"*/;
+  }
+  else
+  {
+    if ( !this )
+      goto LABEL_24;
+    v6 = &StringLiteral_21550/*"img_timer_meter_blue"*/;
+  }
+LABEL_14:
+  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v6, 0);
   this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
   if ( !this )
-    goto LABEL_23;
-  v7 = (System_String_o **)&StringLiteral_20990/*"img_timer_meter_red"*/;
-LABEL_13:
-  UISprite__set_spriteName((UISprite_o *)this, *v7, 0);
-  this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
-  if ( !this )
-    goto LABEL_23;
+    goto LABEL_24;
   UIBasicSprite__set_fillAmount(
     (UIBasicSprite_o *)this,
     v2->fields.limitTimeSeconds / v2->fields.maxLimitTimeSeconds,
     0);
   limitTimeValueLabel = v2->fields.limitTimeValueLabel;
   v9 = v2->fields.limitTimeSeconds;
-  if ( !byte_4E71327 )
+  if ( !byte_5931FBB )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E71327 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_5931FBB = 1;
   }
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v7);
   v10 = vcvtps_s32_f32(v9);
   v11 = ceilf(v9) == INFINITY ? 0x80000000 : v10;
   v12 = v11;
   this = (ScriptSelectDialog_o *)System_Int32__ToString((int32_t)&v12, 0);
   if ( !limitTimeValueLabel )
-    goto LABEL_23;
+    goto LABEL_24;
   UILabel__set_text(limitTimeValueLabel, (System_String_o *)this, 0);
 }
 
@@ -780,10 +807,10 @@ void ScriptSelectDialog_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -793,23 +820,23 @@ void ScriptSelectDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -821,9 +848,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3F580;
+  this->fields.invoke_impl = (intptr_t)sub_1FFD038;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3F538;
+  this->fields.extra_arg = (intptr_t)sub_1FFCFF0;
 }
 
 
@@ -834,18 +861,13 @@ System_IAsyncResult_o *ScriptSelectDialog_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = index;
-  if ( (byte_4E796F6 & 1) == 0 )
-  {
-    sub_1D0F0B4(&int_TypeInfo);
-    byte_4E796F6 = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C070, &v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -854,7 +876,7 @@ void ScriptSelectDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

@@ -1,33 +1,33 @@
 void UnlockSlider___ctor(UnlockSlider_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
   int32_t v10; // w1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E76324 & 1) == 0 )
+  if ( (byte_59372D2 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20974/*"img_slider_thumb_locked"*/);
-    sub_1D0F0B4(&StringLiteral_20973/*"img_slider_thumb"*/);
-    byte_4E76324 = 1;
+    sub_21FFC50(&StringLiteral_21535/*"img_slider_thumb_locked"*/);
+    sub_21FFC50(&StringLiteral_21534/*"img_slider_thumb"*/);
+    byte_59372D2 = 1;
   }
-  v9 = StringLiteral_20974/*"img_slider_thumb_locked"*/;
-  this->fields.sliderThumbLockSpriteName = (struct System_String_o *)StringLiteral_20974/*"img_slider_thumb_locked"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sliderThumbLockSpriteName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_20973/*"img_slider_thumb"*/;
-  this->fields.sliderThumbUnlockSpriteName = (struct System_String_o *)StringLiteral_20973/*"img_slider_thumb"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.sliderThumbUnlockSpriteName,
+  v9 = StringLiteral_21535/*"img_slider_thumb_locked"*/;
+  this->fields.sliderThumbLockSpriteName = (struct System_String_o *)StringLiteral_21535/*"img_slider_thumb_locked"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sliderThumbLockSpriteName, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_21534/*"img_slider_thumb"*/;
+  this->fields.sliderThumbUnlockSpriteName = (struct System_String_o *)StringLiteral_21534/*"img_slider_thumb"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.sliderThumbUnlockSpriteName,
     v10,
     v11,
     v12,
@@ -52,7 +52,7 @@ bool UnlockSlider__IsLocked(UnlockSlider_o *this, const MethodInfo *method)
 
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   return UIProgressBar__get_value(checkSlider, 0) < 1.0;
 }
 
@@ -61,37 +61,46 @@ void UnlockSlider__OnSliderDragFinished(UnlockSlider_o *this, const MethodInfo *
 {
   UIProgressBar_o *checkSlider; // x0
   float value; // s0
-  float unlockRate; // s1
-  bool v6; // nf
+  float v5; // s8
+  float unlockRate; // s9
   float v7; // s0
-  _BOOL4 v8; // w20
+  bool v8; // w20
   const MethodInfo *v9; // x2
   struct UnlockSlider_OnDragFinished_o *onDragFinished; // x8
 
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
-    goto LABEL_11;
+    goto LABEL_8;
   value = UIProgressBar__get_value(checkSlider, 0);
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
-    goto LABEL_11;
+    goto LABEL_8;
+  v5 = value;
   unlockRate = this->fields.unlockRate;
-  v6 = value < unlockRate;
-  v7 = value >= unlockRate ? 1.0 : 0.0;
-  v8 = !v6;
+  v7 = 0.0;
+  if ( v5 < unlockRate )
+  {
+    v8 = 0;
+  }
+  else
+  {
+    v7 = 1.0;
+    v8 = 1;
+  }
   UIProgressBar__set_value(checkSlider, v7, 0);
   UnlockSlider__SetSliderThumbSprite(this, v8, v9);
   onDragFinished = this->fields.onDragFinished;
   if ( !onDragFinished )
-LABEL_11:
-    sub_1D0F30C(checkSlider, method);
-  ((void (__fastcall *)(intptr_t, _BOOL4, intptr_t))onDragFinished->fields.invoke_impl)(
+LABEL_8:
+    sub_21FFECC(checkSlider, method);
+  ((void (__fastcall *)(intptr_t, bool, intptr_t))onDragFinished->fields.invoke_impl)(
     onDragFinished->fields.method_code,
-    v8,
+    v5 >= unlockRate,
     onDragFinished->fields.method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UnlockSlider__SetSliderThumbSprite(UnlockSlider_o *this, bool isUnlocked, const MethodInfo *method)
 {
   UISprite_o *sliderThumbSprite; // x0
@@ -99,7 +108,7 @@ void UnlockSlider__SetSliderThumbSprite(UnlockSlider_o *this, bool isUnlocked, c
 
   sliderThumbSprite = this->fields.sliderThumbSprite;
   if ( !sliderThumbSprite )
-    sub_1D0F30C(0, isUnlocked);
+    sub_21FFECC(0, isUnlocked);
   v5 = 64;
   if ( isUnlocked )
     v5 = 72;
@@ -112,34 +121,34 @@ void UnlockSlider__Setup(
         UnlockSlider_OnDragFinished_o *dragFinishedAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v10; // x1
   UIProgressBar_o *checkSlider; // x0
   struct UISlider_o *v12; // x20
   UIProgressBar_OnDragFinished_o *v13; // x21
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   const MethodInfo *v20; // x1
 
-  if ( (byte_4E76323 & 1) == 0 )
+  if ( (byte_59372D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1D0F0B4(&Method_UnlockSlider_OnSliderDragFinished__);
-    byte_4E76323 = 1;
+    sub_21FFC50(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_21FFC50(&Method_UnlockSlider_OnSliderDragFinished__);
+    byte_59372D1 = 1;
   }
   this->fields.onDragFinished = dragFinishedAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onDragFinished,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onDragFinished,
     (int32_t)dragFinishedAction,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -149,14 +158,22 @@ void UnlockSlider__Setup(
   if ( !checkSlider
     || (UIProgressBar__set_value(checkSlider, 0.0, 0),
         v12 = this->fields.checkSlider,
-        v13 = (UIProgressBar_OnDragFinished_o *)sub_1D0F300(UIProgressBar_OnDragFinished_TypeInfo),
+        v13 = (UIProgressBar_OnDragFinished_o *)sub_21FFEBC(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(v13, (Il2CppObject *)this, Method_UnlockSlider_OnSliderDragFinished__, 0),
         !v12) )
   {
-    sub_1D0F30C(checkSlider, v10);
+    sub_21FFECC(checkSlider, v10);
   }
   v12->fields.onDragFinished = v13;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v12->fields.onDragFinished, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v12->fields.onDragFinished,
+    (int32_t)v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   UnlockSlider__OnSliderDragFinished(this, v20);
 }
 
@@ -167,10 +184,10 @@ void UnlockSlider_OnDragFinished___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -180,23 +197,23 @@ void UnlockSlider_OnDragFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -208,9 +225,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3CA68;
+  this->fields.invoke_impl = (intptr_t)sub_1FF8D10;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3CA20;
+  this->fields.extra_arg = (intptr_t)sub_1FF8CC8;
 }
 
 
@@ -221,18 +238,13 @@ System_IAsyncResult_o *UnlockSlider_OnDragFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isUnlocked;
-  if ( (byte_4E76325 & 1) == 0 )
-  {
-    sub_1D0F0B4(&bool_TypeInfo);
-    byte_4E76325 = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -241,7 +253,7 @@ void UnlockSlider_OnDragFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

@@ -15,20 +15,22 @@ int32_t CondParamAddType__GetAddValue(
   System_Int32_array *ParamArray; // x0
   const MethodInfo *v8; // x3
   int64_t Num; // x0
-  int64_t v10; // x19
+  __int64 v10; // x1
+  __int64 v11; // x2
+  int64_t v12; // x19
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_4E76481 & 1) == 0 )
+  if ( (byte_5937429 & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E76481 = 1;
+    dataVals = (DataVals_o *)sub_21FFC50(&System_Math_TypeInfo);
+    byte_5937429 = 1;
   }
   param = 0;
   if ( classStatisticsInfos )
   {
     if ( !v6 )
-      sub_1D0F30C(dataVals, *(_QWORD *)&kind);
+      sub_21FFECC(dataVals, *(_QWORD *)&kind);
     ParamArray = DataVals__GetParamArray(v6, 226, 0);
     Num = CondParamAddType__GetNum(kind, classStatisticsInfos, ParamArray, v8);
     if ( Num < 1 )
@@ -40,10 +42,10 @@ int32_t CondParamAddType__GetAddValue(
       classStatisticsInfos = (ClassStatisticsInfo_array *)(Num * DataVals__GetParam(v6, 224, 0, 0));
       if ( DataVals__TryGetParam(v6, 225, &param, 0) )
       {
-        v10 = param;
-        if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        LODWORD(classStatisticsInfos) = System_Math__Min_67085084((int64_t)classStatisticsInfos, v10, 0);
+        v12 = param;
+        if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v10, v11);
+        LODWORD(classStatisticsInfos) = System_Math__Min_76940304((int64_t)classStatisticsInfos, v12, 0);
       }
     }
   }
@@ -62,24 +64,24 @@ int64_t CondParamAddType__GetNum(
   int64_t v7; // x22
   unsigned __int64 v8; // x26
   __int64 v9; // x23
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   ClassStatisticsInfo_o *v16; // x1
   __int64 v17; // x24
   System_Predicate_int__o *v18; // x25
 
   v6 = type;
-  if ( (byte_4E76483 & 1) == 0 )
+  if ( (byte_593742B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Exists_int___);
-    sub_1D0F0B4(&System_Predicate_int__TypeInfo);
-    sub_1D0F0B4(&Method_CondParamAddType___c__DisplayClass2_0__GetNum_b__0__);
-    *(_QWORD *)&type = sub_1D0F0B4(&CondParamAddType___c__DisplayClass2_0_TypeInfo);
-    byte_4E76483 = 1;
+    sub_21FFC50(&Method_System_Array_Exists_int___);
+    sub_21FFC50(&System_Predicate_int__TypeInfo);
+    sub_21FFC50(&Method_CondParamAddType___c__DisplayClass2_0__GetNum_b__0__);
+    *(_QWORD *)&type = sub_21FFC50(&CondParamAddType___c__DisplayClass2_0_TypeInfo);
+    byte_593742B = 1;
   }
   if ( !classStatisticsInfos )
     goto LABEL_17;
@@ -89,21 +91,21 @@ int64_t CondParamAddType__GetNum(
     v8 = 0;
     while ( 1 )
     {
-      v9 = sub_1D0F300(CondParamAddType___c__DisplayClass2_0_TypeInfo);
+      v9 = sub_21FFEBC(CondParamAddType___c__DisplayClass2_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v9, 0);
       if ( v8 >= LODWORD(classStatisticsInfos->max_length) )
-        sub_1D0F314(*(_QWORD *)&type);
+        sub_21FFED4(*(_QWORD *)&type);
       if ( !v9 )
         break;
       v16 = classStatisticsInfos->m_Items[v8];
       *(_QWORD *)(v9 + 16) = v16;
       v17 = v9 + 16;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       if ( !*(_QWORD *)(v9 + 16) )
         break;
       if ( *(_DWORD *)(*(_QWORD *)(v9 + 16) + 20LL) == v6 )
       {
-        v18 = (System_Predicate_int__o *)sub_1D0F300(System_Predicate_int__TypeInfo);
+        v18 = (System_Predicate_int__o *)sub_21FFEBC(System_Predicate_int__TypeInfo);
         System_Predicate_int____ctor(
           v18,
           (Il2CppObject *)v9,
@@ -112,7 +114,7 @@ int64_t CondParamAddType__GetNum(
         *(_QWORD *)&type = System_Array__Exists_int_(
                              targetIds,
                              (System_Predicate_T__o *)v18,
-                             (const MethodInfo_33568DC *)Method_System_Array_Exists_int___);
+                             (const MethodInfo_3976B80 *)Method_System_Array_Exists_int___);
         if ( (type & 1) != 0 )
         {
           if ( !*(_QWORD *)v17 )
@@ -124,7 +126,7 @@ int64_t CondParamAddType__GetNum(
         return v7;
     }
 LABEL_17:
-    sub_1D0F30C(*(_QWORD *)&type, classStatisticsInfos);
+    sub_21FFECC(*(_QWORD *)&type, classStatisticsInfos);
   }
   return 0;
 }
@@ -142,41 +144,41 @@ int32_t CondParamAddType__GetRangeRateValue(
   int32_t result; // w0
   System_Int32_array *ParamArray; // x0
   const MethodInfo *v10; // x3
-  int64_t Num; // x0
-  int64_t v12; // x20
-  int64_t v13; // x21
-  int64_t v14; // x0
-  __int64 v15; // x20
-  int32_t v16; // w0
+  __int64 v11; // x1
+  __int64 v12; // x2
+  int64_t Num; // x21
+  int64_t v14; // x20
+  int64_t v15; // x0
+  __int64 v16; // x20
+  int32_t v17; // w0
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_4E76482 & 1) == 0 )
+  if ( (byte_593742A & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E76482 = 1;
+    dataVals = (DataVals_o *)sub_21FFC50(&System_Math_TypeInfo);
+    byte_593742A = 1;
   }
   param = 0;
   if ( !classStatisticsInfos )
     return 0;
   if ( !v6 )
-    sub_1D0F30C(dataVals, *(_QWORD *)&kind);
+    sub_21FFECC(dataVals, *(_QWORD *)&kind);
   v7 = DataVals__TryGetParam(v6, 228, &param, 0);
   result = 0;
   if ( v7 && param >= 1 )
   {
     ParamArray = DataVals__GetParamArray(v6, 230, 0);
     Num = CondParamAddType__GetNum(kind, classStatisticsInfos, ParamArray, v10);
-    v12 = param;
-    v13 = Num;
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v14 = System_Math__Min_67085084(v13, v12, 0);
-    if ( v14 >= 1 )
+    v14 = param;
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v11, v12);
+    v15 = System_Math__Min_76940304(Num, v14, 0);
+    if ( v15 >= 1 )
     {
-      v15 = v14;
-      v16 = DataVals__GetParam(v6, 229, 0, 0);
-      return BattleUtility__FloorToInt_47881516((double)v15 / (double)param * (double)v16, 0);
+      v16 = v15;
+      v17 = DataVals__GetParam(v6, 229, 0, 0);
+      return BattleUtility__FloorToInt_53467356((double)v16 / (double)param * (double)v17, 0);
     }
     return 0;
   }
@@ -192,6 +194,7 @@ void CondParamAddType___c__DisplayClass2_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool CondParamAddType___c__DisplayClass2_0___GetNum_b__0(
         CondParamAddType___c__DisplayClass2_0_o *this,
         int32_t id,
@@ -201,6 +204,6 @@ bool CondParamAddType___c__DisplayClass2_0___GetNum_b__0(
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, id);
+    sub_21FFECC(this, *(_QWORD *)&id);
   return info->fields.classId == id;
 }

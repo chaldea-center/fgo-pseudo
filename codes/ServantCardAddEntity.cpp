@@ -1,27 +1,27 @@
 void ServantCardAddEntity___ctor(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77F22 & 1) == 0 )
+  if ( (byte_5938F43 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77F22 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938F43 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantCardAddEntity__CreatePK(int32_t svtId, int32_t cardId, const MethodInfo *method)
 {
-  if ( (byte_4E77F18 & 1) == 0 )
+  if ( (byte_5938F39 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E77F18 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5938F39 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            cardId,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,22 +44,22 @@ float ServantCardAddEntity__GetAttackNpRate(
   ServantCardAddEntity_OverwriteRateData_o *v6; // x8
 
   v4 = this;
-  if ( (byte_4E77F1C & 1) == 0 )
+  if ( (byte_5938F3D & 1) == 0 )
   {
-    this = (ServantCardAddEntity_o *)sub_1D0F0B4(&StringLiteral_17174/*"attackNpRate"*/);
-    byte_4E77F1C = 1;
+    this = (ServantCardAddEntity_o *)sub_21FFC50(&StringLiteral_17608/*"attackNpRate"*/);
+    byte_5938F3D = 1;
   }
   if ( overwriteRatesIndex < 0 )
-    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_17174/*"attackNpRate"*/, 1.0, 0);
+    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_17608/*"attackNpRate"*/, 1.0, 0);
   overwriteRates = v4->fields.overwriteRates;
   if ( !overwriteRates )
     goto LABEL_9;
   if ( LODWORD(overwriteRates->max_length) <= overwriteRatesIndex )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v6 = overwriteRates->m_Items[overwriteRatesIndex];
   if ( !v6 )
 LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&overwriteRatesIndex);
+    sub_21FFECC(this, *(_QWORD *)&overwriteRatesIndex);
   return v6->fields.attackNpRate / 1000.0;
 }
 
@@ -75,22 +75,22 @@ float ServantCardAddEntity__GetDamageRate(
   ServantCardAddEntity_OverwriteRateData_o *v6; // x8
 
   v4 = this;
-  if ( (byte_4E77F1B & 1) == 0 )
+  if ( (byte_5938F3C & 1) == 0 )
   {
-    this = (ServantCardAddEntity_o *)sub_1D0F0B4(&StringLiteral_18744/*"damageRate"*/);
-    byte_4E77F1B = 1;
+    this = (ServantCardAddEntity_o *)sub_21FFC50(&StringLiteral_19238/*"damageRate"*/);
+    byte_5938F3C = 1;
   }
   if ( overwriteRatesIndex < 0 )
-    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_18744/*"damageRate"*/, 1.0, 0);
+    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_19238/*"damageRate"*/, 1.0, 0);
   overwriteRates = v4->fields.overwriteRates;
   if ( !overwriteRates )
     goto LABEL_9;
   if ( LODWORD(overwriteRates->max_length) <= overwriteRatesIndex )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v6 = overwriteRates->m_Items[overwriteRatesIndex];
   if ( !v6 )
 LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&overwriteRatesIndex);
+    sub_21FFECC(this, *(_QWORD *)&overwriteRatesIndex);
   return v6->fields.damageRate / 1000.0;
 }
 
@@ -106,22 +106,22 @@ float ServantCardAddEntity__GetDefenseNpRate(
   ServantCardAddEntity_OverwriteRateData_o *v6; // x8
 
   v4 = this;
-  if ( (byte_4E77F1D & 1) == 0 )
+  if ( (byte_5938F3E & 1) == 0 )
   {
-    this = (ServantCardAddEntity_o *)sub_1D0F0B4(&StringLiteral_18842/*"defenseNpRate"*/);
-    byte_4E77F1D = 1;
+    this = (ServantCardAddEntity_o *)sub_21FFC50(&StringLiteral_19342/*"defenseNpRate"*/);
+    byte_5938F3E = 1;
   }
   if ( overwriteRatesIndex < 0 )
-    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_18842/*"defenseNpRate"*/, 1.0, 0);
+    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_19342/*"defenseNpRate"*/, 1.0, 0);
   overwriteRates = v4->fields.overwriteRates;
   if ( !overwriteRates )
     goto LABEL_9;
   if ( LODWORD(overwriteRates->max_length) <= overwriteRatesIndex )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v6 = overwriteRates->m_Items[overwriteRatesIndex];
   if ( !v6 )
 LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&overwriteRatesIndex);
+    sub_21FFECC(this, *(_QWORD *)&overwriteRatesIndex);
   return v6->fields.defenseNpRate / 1000.0;
 }
 
@@ -137,22 +137,22 @@ float ServantCardAddEntity__GetDropStarRate(
   ServantCardAddEntity_OverwriteRateData_o *v6; // x8
 
   v4 = this;
-  if ( (byte_4E77F1E & 1) == 0 )
+  if ( (byte_5938F3F & 1) == 0 )
   {
-    this = (ServantCardAddEntity_o *)sub_1D0F0B4(&StringLiteral_18976/*"dropStarRate"*/);
-    byte_4E77F1E = 1;
+    this = (ServantCardAddEntity_o *)sub_21FFC50(&StringLiteral_19484/*"dropStarRate"*/);
+    byte_5938F3F = 1;
   }
   if ( overwriteRatesIndex < 0 )
-    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_18976/*"dropStarRate"*/, 1.0, 0);
+    return EntityScriptUtil__GetMillesimal(v4->fields.script, (System_String_o *)StringLiteral_19484/*"dropStarRate"*/, 1.0, 0);
   overwriteRates = v4->fields.overwriteRates;
   if ( !overwriteRates )
     goto LABEL_9;
   if ( LODWORD(overwriteRates->max_length) <= overwriteRatesIndex )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v6 = overwriteRates->m_Items[overwriteRatesIndex];
   if ( !v6 )
 LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&overwriteRatesIndex);
+    sub_21FFECC(this, *(_QWORD *)&overwriteRatesIndex);
   return v6->fields.dropStarRate / 1000.0;
 }
 
@@ -185,55 +185,55 @@ int32_t ServantCardAddEntity__GetOverwriteRatesIndex(
   System_String_o *condType; // x23
   unsigned int TargetNum_k__BackingField; // w23
 
-  if ( (byte_4E77F1A & 1) == 0 )
+  if ( (byte_5938F3B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CondType_CheckAbove__);
-    sub_1D0F0B4(&Method_CondType_CheckBelow__);
-    sub_1D0F0B4(&Method_CondType_CheckEqual__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool____ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_string__Func_int__int__bool___TypeInfo);
-    sub_1D0F0B4(&System_Func_int__int__bool__TypeInfo);
-    sub_1D0F0B4(&StringLiteral_13851/*"TargetNumEqual"*/);
-    sub_1D0F0B4(&StringLiteral_13849/*"TargetNumAbove"*/);
-    sub_1D0F0B4(&StringLiteral_13850/*"TargetNumBelow"*/);
-    byte_4E77F1A = 1;
+    sub_21FFC50(&Method_CondType_CheckAbove__);
+    sub_21FFC50(&Method_CondType_CheckBelow__);
+    sub_21FFC50(&Method_CondType_CheckEqual__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool____ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___get_Item__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_string__Func_int__int__bool___TypeInfo);
+    sub_21FFC50(&System_Func_int__int__bool__TypeInfo);
+    sub_21FFC50(&StringLiteral_14194/*"TargetNumEqual"*/);
+    sub_21FFC50(&StringLiteral_14192/*"TargetNumAbove"*/);
+    sub_21FFC50(&StringLiteral_14193/*"TargetNumBelow"*/);
+    byte_5938F3B = 1;
   }
   ServantCardAddEntity__SetOverwriteRates(this, (const MethodInfo *)commandData);
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.overwriteRates, 0) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_string__Func_int__int__bool___TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__Func_int__int__bool___TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3600C34 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool____ctor__);
-    v8 = (System_Func_int__int__bool__o *)sub_1D0F300(System_Func_int__int__bool__TypeInfo);
+      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool____ctor__);
+    v8 = (System_Func_int__int__bool__o *)sub_21FFEBC(System_Func_int__int__bool__TypeInfo);
     System_Func_int__int__bool____ctor(v8, 0, Method_CondType_CheckEqual__, 0);
     if ( !v7 )
       goto LABEL_19;
     System_Collections_Generic_Dictionary_object__object___Add(
       v7,
-      (Il2CppObject *)StringLiteral_13851/*"TargetNumEqual"*/,
+      (Il2CppObject *)StringLiteral_14194/*"TargetNumEqual"*/,
       (Il2CppObject *)v8,
-      (const MethodInfo_36015E4 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
-    v11 = (System_Func_int__int__bool__o *)sub_1D0F300(System_Func_int__int__bool__TypeInfo);
+      (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
+    v11 = (System_Func_int__int__bool__o *)sub_21FFEBC(System_Func_int__int__bool__TypeInfo);
     System_Func_int__int__bool____ctor(v11, 0, Method_CondType_CheckAbove__, 0);
     System_Collections_Generic_Dictionary_object__object___Add(
       v7,
-      (Il2CppObject *)StringLiteral_13849/*"TargetNumAbove"*/,
+      (Il2CppObject *)StringLiteral_14192/*"TargetNumAbove"*/,
       (Il2CppObject *)v11,
-      (const MethodInfo_36015E4 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
-    v12 = (System_Func_int__int__bool__o *)sub_1D0F300(System_Func_int__int__bool__TypeInfo);
+      (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
+    v12 = (System_Func_int__int__bool__o *)sub_21FFEBC(System_Func_int__int__bool__TypeInfo);
     System_Func_int__int__bool____ctor(v12, 0, Method_CondType_CheckBelow__, 0);
     System_Collections_Generic_Dictionary_object__object___Add(
       v7,
-      (Il2CppObject *)StringLiteral_13850/*"TargetNumBelow"*/,
+      (Il2CppObject *)StringLiteral_14193/*"TargetNumBelow"*/,
       (Il2CppObject *)v12,
-      (const MethodInfo_36015E4 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
+      (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___Add__);
     overwriteRates = this->fields.overwriteRates;
     if ( !overwriteRates )
 LABEL_19:
-      sub_1D0F30C(Item, v10);
+      sub_21FFECC(Item, v10);
     v5 = 0;
     while ( 1 )
     {
@@ -241,16 +241,16 @@ LABEL_19:
       if ( v5 >= max_length )
         break;
       if ( v5 >= (unsigned int)max_length )
-        sub_1D0F314(Item);
+        sub_21FFED4(Item);
       v15 = overwriteRates->m_Items[v5];
       if ( !v15 )
         goto LABEL_19;
       condType = v15->fields.condType;
-      Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_13851/*"TargetNumEqual"*/, 0);
+      Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_14194/*"TargetNumEqual"*/, 0);
       if ( ((unsigned __int8)Item & 1) != 0
-        || (Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_13849/*"TargetNumAbove"*/, 0),
+        || (Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_14192/*"TargetNumAbove"*/, 0),
             ((unsigned __int8)Item & 1) != 0)
-        || (Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_13850/*"TargetNumBelow"*/, 0),
+        || (Item = (Il2CppObject *)System_String__op_Equality(condType, (System_String_o *)StringLiteral_14193/*"TargetNumBelow"*/, 0),
             ((unsigned __int8)Item & 1) != 0) )
       {
         if ( !commandData )
@@ -259,7 +259,7 @@ LABEL_19:
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v7,
                  (Il2CppObject *)v15->fields.condType,
-                 (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___get_Item__);
+                 (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__Func_int__int__bool___get_Item__);
         if ( !Item )
           goto LABEL_19;
         Item = (Il2CppObject *)((__int64 (__fastcall *)(Il2CppClass *, _QWORD, _QWORD, void *))Item[1].monitor)(
@@ -294,11 +294,11 @@ BattleBuffData_ShowBuffData_o *ServantCardAddEntity__GetOverwritesShowBuffData(
   if ( !overwriteRates )
     goto LABEL_7;
   if ( LODWORD(overwriteRates->max_length) <= overwriteRatesIndex )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (ServantCardAddEntity_o *)overwriteRates->m_Items[overwriteRatesIndex];
   if ( !this )
 LABEL_7:
-    sub_1D0F30C(this, overwriteRatesIndex);
+    sub_21FFECC(this, *(_QWORD *)&overwriteRatesIndex);
   return ServantCardAddEntity_OverwriteRateData__GetShowBuffData(
            (ServantCardAddEntity_OverwriteRateData_o *)this,
            *(const MethodInfo **)&overwriteRatesIndex);
@@ -307,23 +307,23 @@ LABEL_7:
 
 int32_t ServantCardAddEntity__GetPositionDamageRatesSlideType(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77F21 & 1) == 0 )
+  if ( (byte_5938F42 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23204/*"positionDamageRatesSlideType"*/);
-    byte_4E77F21 = 1;
+    sub_21FFC50(&StringLiteral_23873/*"positionDamageRatesSlideType"*/);
+    byte_5938F42 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23204/*"positionDamageRatesSlideType"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23873/*"positionDamageRatesSlideType"*/, 0, 0);
 }
 
 
 bool ServantCardAddEntity__IsForceAttackFunctionTargetAll(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77F1F & 1) == 0 )
+  if ( (byte_5938F40 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6884/*"ForceAttackFunctionTargetAll"*/);
-    byte_4E77F1F = 1;
+    sub_21FFC50(&StringLiteral_7085/*"ForceAttackFunctionTargetAll"*/);
+    byte_5938F40 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_6884/*"ForceAttackFunctionTargetAll"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_7085/*"ForceAttackFunctionTargetAll"*/, 0);
 }
 
 
@@ -335,55 +335,52 @@ bool ServantCardAddEntity__IsSlidePositionDamageRates(ServantCardAddEntity_o *th
 
 void ServantCardAddEntity__SetOverwriteRates(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_overwriteRates; // x19
+  MissionNaviTransitionBoardItem_o *p_overwriteRates; // x19
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
-  long double inited; // q0
-  Il2CppObject *v12; // x20
-  Il2CppObject *v13; // x0
-  GrandQuestFolderBoardItem_c *v14; // x1
+  __int64 v5; // x1
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  long double v12; // q0
+  Il2CppObject *v13; // x20
+  Il2CppObject *v14; // x1
   _QWORD *v15; // x20
   __int64 v16; // x8
   __int64 v17; // x0
   __int64 v18; // x0
-  GrandQuestFolderBoardItem_c **v19; // x8
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E77F19 & 1) == 0 )
+  if ( (byte_5938F3A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Empty_ServantCardAddEntity_OverwriteRateData___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1D0F0B4(&Method_JsonManager_Deserialize_ServantCardAddEntity_OverwriteRateData_____);
-    sub_1D0F0B4(&JsonManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23021/*"overwriteRates"*/);
-    byte_4E77F19 = 1;
+    sub_21FFC50(&Method_System_Array_Empty_ServantCardAddEntity_OverwriteRateData___);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_21FFC50(&Method_JsonManager_Deserialize_ServantCardAddEntity_OverwriteRateData_____);
+    sub_21FFC50(&JsonManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_23673/*"overwriteRates"*/);
+    byte_5938F3A = 1;
   }
   value = 0;
-  p_overwriteRates = (GrandQuestFolderBoardItem_o *)&this->fields.overwriteRates;
+  p_overwriteRates = (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteRates;
   if ( !this->fields.overwriteRates )
   {
     script = this->fields.script;
     if ( !script )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
     if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
-           (Il2CppObject *)StringLiteral_23021/*"overwriteRates"*/,
+           (Il2CppObject *)StringLiteral_23673/*"overwriteRates"*/,
            &value,
-           (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
-      v12 = value;
-      if ( !JsonManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-      v13 = JsonManager__Deserialize_object_(
-              v12,
-              (const MethodInfo_32C0284 *)Method_JsonManager_Deserialize_ServantCardAddEntity_OverwriteRateData_____);
-      LODWORD(v14) = (_DWORD)v13;
-      p_overwriteRates->klass = (GrandQuestFolderBoardItem_c *)v13;
+      v13 = value;
+      if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v5);
+      v14 = JsonManager__Deserialize_object_(
+              v13,
+              (const MethodInfo_38A041C *)Method_JsonManager_Deserialize_ServantCardAddEntity_OverwriteRateData_____);
     }
     else
     {
@@ -391,22 +388,21 @@ void ServantCardAddEntity__SetOverwriteRates(ServantCardAddEntity_o *this, const
       v16 = *((_QWORD *)Method_System_Array_Empty_ServantCardAddEntity_OverwriteRateData___ + 7);
       if ( !v16 )
       {
-        sub_1CE5198(Method_System_Array_Empty_ServantCardAddEntity_OverwriteRateData___);
+        sub_2237B54(Method_System_Array_Empty_ServantCardAddEntity_OverwriteRateData___);
         v16 = v15[7];
       }
       v17 = *(_QWORD *)(v16 + 16);
-      if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-        v17 = sub_1CE513C(inited);
-      if ( !*(_DWORD *)(v17 + 224) )
-        inited = j_il2cpp_runtime_class_init_0(v17);
+      if ( (*(_WORD *)(v17 + 309) & 1) == 0 )
+        v17 = sub_2237AF8(v12);
+      if ( !*(_DWORD *)(v17 + 228) )
+        *(__n128 *)&v12 = j_il2cpp_runtime_class_init_0(v17, v5);
       v18 = *(_QWORD *)(v15[7] + 16LL);
-      if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-        v18 = sub_1CE513C(inited);
-      v19 = *(GrandQuestFolderBoardItem_c ***)(v18 + 184);
-      v14 = *v19;
-      p_overwriteRates->klass = *v19;
+      if ( (*(_WORD *)(v18 + 309) & 1) == 0 )
+        v18 = sub_2237AF8(v12);
+      v14 = **(Il2CppObject ***)(v18 + 184);
     }
-    sub_1D0F058(p_overwriteRates, (int32_t)v14, v5, v6, v7, v8, v9, v10);
+    p_overwriteRates->klass = (MissionNaviTransitionBoardItem_c *)v14;
+    sub_21FFBF4(p_overwriteRates, (int32_t)v14, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -416,14 +412,14 @@ bool ServantCardAddEntity__TryGetPositionDamageRates(
         System_Int32_array **positionDamageRates,
         const MethodInfo *method)
 {
-  if ( (byte_4E77F20 & 1) == 0 )
+  if ( (byte_5938F41 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_23203/*"positionDamageRates"*/);
-    byte_4E77F20 = 1;
+    sub_21FFC50(&StringLiteral_23872/*"positionDamageRates"*/);
+    byte_5938F41 = 1;
   }
   return EntityScriptUtil__TryGetIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_23203/*"positionDamageRates"*/,
+           (System_String_o *)StringLiteral_23872/*"positionDamageRates"*/,
            positionDamageRates,
            0);
 }
@@ -476,26 +472,28 @@ BattleBuffData_ShowBuffData_o *ServantCardAddEntity_OverwriteRateData__GetShowBu
   BattleBuffData_BuffData_o *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  BattleBuffData_ShowBuffData_o *v6; // x19
+  BattleBuffData_ShowBuffData_c *v6; // x0
+  BattleBuffData_ShowBuffData_o *v7; // x19
 
-  if ( (byte_4E77F23 & 1) == 0 )
+  if ( (byte_5938F44 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleBuffData_BuffData_TypeInfo);
-    sub_1D0F0B4(&BattleBuffData_ShowBuffData_TypeInfo);
-    byte_4E77F23 = 1;
+    sub_21FFC50(&BattleBuffData_BuffData_TypeInfo);
+    sub_21FFC50(&BattleBuffData_ShowBuffData_TypeInfo);
+    byte_5938F44 = 1;
   }
   if ( !this->fields.iconBuffId )
     return 0;
-  v3 = (BattleBuffData_BuffData_o *)sub_1D0F300(BattleBuffData_BuffData_TypeInfo);
+  v3 = (BattleBuffData_BuffData_o *)sub_21FFEBC(BattleBuffData_BuffData_TypeInfo);
   BattleBuffData_BuffData___ctor(v3, 0);
   if ( !v3
-    || (v3->fields.buffId = this->fields.iconBuffId,
-        v6 = (BattleBuffData_ShowBuffData_o *)sub_1D0F300(BattleBuffData_ShowBuffData_TypeInfo),
-        BattleBuffData_ShowBuffData___ctor_47348880(v6, v3, 0),
-        !v6) )
+    || (v6 = BattleBuffData_ShowBuffData_TypeInfo,
+        v3->fields.buffId = this->fields.iconBuffId,
+        v7 = (BattleBuffData_ShowBuffData_o *)sub_21FFEBC(v6),
+        BattleBuffData_ShowBuffData___ctor_52764748(v7, v3, 0),
+        !v7) )
   {
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
-  v6->fields.isReady = 1;
-  return v6;
+  v7->fields.isReady = 1;
+  return v7;
 }

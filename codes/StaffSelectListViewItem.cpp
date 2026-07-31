@@ -9,29 +9,28 @@ void StaffSelectListViewItem___ctor(
         const MethodInfo *method)
 {
   struct StaffPhotoEntity_o **p_StaffPhotoEntity_k__BackingField; // x22
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   StaffPhotoEntity_o *v21; // x0
   __int64 v22; // x1
   int32_t id; // w8
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
   int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  bool v28; // w6
+  bool v29; // w7
   bool IsRestrictionSvt; // w0
-  struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
     (int32_t)entity,
     v15,
     v16,
@@ -57,14 +56,13 @@ void StaffSelectListViewItem___ctor(
   v21 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_9:
-    sub_1D0F30C(v21, v22);
+    sub_21FFECC(v21, v22);
   IsRestrictionSvt = StaffPhotoEntity__IsRestrictionSvt(v21, selectedSvtId, 0);
 LABEL_8:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
-  p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
-  *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = IsRestrictionSvt;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)p_PhotoCampaignAtlas_k__BackingField,
+  this->fields._IsNotSelect_k__BackingField = IsRestrictionSvt;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v24,
     v25,
@@ -75,6 +73,7 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void StaffSelectListViewItem__ModifyItem(
         StaffSelectListViewItem_o *this,
         int32_t selectStaffPhotoId,
@@ -84,7 +83,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1D0F30C(this, selectStaffPhotoId);
+    sub_21FFECC(this, *(_QWORD *)&selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -99,7 +98,7 @@ bool StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1D0F30C(this, sort);
+    sub_21FFECC(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

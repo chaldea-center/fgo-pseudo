@@ -1,14 +1,14 @@
 void MyroomAddBgDiffMaster___ctor(MyroomAddBgDiffMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77BEC & 1) == 0 )
+  if ( (byte_5938C09 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
-    byte_4E77BEC = 1;
+    sub_21FFC50(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
+    byte_5938C09 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    554,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
+    556,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string___ctor__);
 }
 
 
@@ -21,120 +21,128 @@ int32_t MyroomAddBgDiffMaster__GetDisplayObjectId(
   __int64 v7; // x22
   __int64 v8; // x0
   __int64 v9; // x1
-  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v11; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
-  MyroomAddBgDiffMaster___c_c *v13; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x19
+  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x21
+  System_Func_MyroomAddBgDiffEntity__bool__c *v11; // x0
+  System_Func_object__bool__o *v12; // x19
+  System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
+  __int64 v14; // x1
+  MyroomAddBgDiffMaster___c_c *v15; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x19
+  struct MyroomAddBgDiffMaster___c_StaticFields *static_fields; // x9
   System_Func_object__int__o *_9__0_1; // x20
-  Il2CppObject *v16; // x21
-  struct MyroomAddBgDiffMaster___c_StaticFields *static_fields; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  System_Linq_IOrderedEnumerable_TSource__o *v24; // x0
-  MyroomAddBgDiffMaster___c_c *v25; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x19
+  Il2CppObject *v19; // x21
+  struct MyroomAddBgDiffMaster___c_StaticFields *v20; // x0
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v27; // x0
+  __int64 v28; // x1
+  MyroomAddBgDiffMaster___c_c *v29; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x19
+  struct MyroomAddBgDiffMaster___c_StaticFields *v31; // x9
   System_Func_object__bool__o *_9__0_2; // x20
-  Il2CppObject *v28; // x21
-  struct MyroomAddBgDiffMaster___c_StaticFields *v29; // x0
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
-  Il2CppObject *v36; // x0
+  Il2CppObject *v33; // x21
+  struct MyroomAddBgDiffMaster___c_StaticFields *v34; // x0
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  Il2CppObject *v41; // x0
 
-  if ( (byte_4E77BEB & 1) == 0 )
+  if ( (byte_5938C08 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
-    sub_1D0F0B4(&System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
-    sub_1D0F0B4(&System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
-    sub_1D0F0B4(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__);
-    sub_1D0F0B4(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__);
-    sub_1D0F0B4(&Method_MyroomAddBgDiffMaster___c__DisplayClass0_0__GetDisplayObjectId_b__0__);
-    sub_1D0F0B4(&MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1D0F0B4(&MyroomAddBgDiffMaster___c_TypeInfo);
-    byte_4E77BEB = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
+    sub_21FFC50(&System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+    sub_21FFC50(&System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
+    sub_21FFC50(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__);
+    sub_21FFC50(&Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__);
+    sub_21FFC50(&Method_MyroomAddBgDiffMaster___c__DisplayClass0_0__GetDisplayObjectId_b__0__);
+    sub_21FFC50(&MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
+    sub_21FFC50(&MyroomAddBgDiffMaster___c_TypeInfo);
+    byte_5938C08 = 1;
   }
-  v7 = sub_1D0F300(MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
+  v7 = sub_21FFEBC(MyroomAddBgDiffMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1D0F30C(v8, v9);
+    sub_21FFECC(v8, v9);
+  list = this->fields.list;
+  v11 = System_Func_MyroomAddBgDiffEntity__bool__TypeInfo;
   *(_DWORD *)(v7 + 16) = backGroundOverwriteId;
   *(_DWORD *)(v7 + 20) = type;
-  list = this->fields.list;
-  v11 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_21FFEBC(v11);
   System_Func_object__bool____ctor(
-    v11,
+    v12,
     (Il2CppObject *)v7,
     Method_MyroomAddBgDiffMaster___c__DisplayClass0_0__GetDisplayObjectId_b__0__,
     0);
-  v12 = System_Linq_Enumerable__Where_object_(
+  v13 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
-  v13 = MyroomAddBgDiffMaster___c_TypeInfo;
-  v14 = v12;
-  if ( !MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished )
+          (System_Func_TSource__bool__o *)v12,
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_MyroomAddBgDiffEntity___);
+  v15 = MyroomAddBgDiffMaster___c_TypeInfo;
+  v16 = v13;
+  if ( !*(&MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MyroomAddBgDiffMaster___c_TypeInfo);
-    v13 = MyroomAddBgDiffMaster___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MyroomAddBgDiffMaster___c_TypeInfo, v14);
+    v15 = MyroomAddBgDiffMaster___c_TypeInfo;
   }
-  _9__0_1 = (System_Func_object__int__o *)v13->static_fields->__9__0_1;
+  static_fields = v15->static_fields;
+  _9__0_1 = (System_Func_object__int__o *)static_fields->__9__0_1;
   if ( !_9__0_1 )
   {
-    if ( !v13->_2.cctor_finished )
+    if ( !*(&v15->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v13);
-      v13 = MyroomAddBgDiffMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v15, v14);
+      static_fields = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
     }
-    v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1D0F300(System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__0_1, v16, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__, 0);
-    static_fields = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
-    static_fields->__9__0_1 = (struct System_Func_MyroomAddBgDiffEntity__int__o *)_9__0_1;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v18, v19, v20, v21, v22, v23);
+    v19 = (Il2CppObject *)static_fields->__9;
+    _9__0_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_MyroomAddBgDiffEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__0_1, v19, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_1__, 0);
+    v20 = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
+    v20->__9__0_1 = (struct System_Func_MyroomAddBgDiffEntity__int__o *)_9__0_1;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->__9__0_1, (int32_t)_9__0_1, v21, v22, v23, v24, v25, v26);
   }
-  v24 = System_Linq_Enumerable__OrderByDescending_object__int_(
-          v14,
+  v27 = System_Linq_Enumerable__OrderByDescending_object__int_(
+          v16,
           (System_Func_TSource__TKey__o *)_9__0_1,
-          (const MethodInfo_327F654 *)Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
-  v25 = MyroomAddBgDiffMaster___c_TypeInfo;
-  v26 = (System_Collections_Generic_IEnumerable_TSource__o *)v24;
-  if ( !MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished )
+          (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_MyroomAddBgDiffEntity__int___);
+  v29 = MyroomAddBgDiffMaster___c_TypeInfo;
+  v30 = (System_Collections_Generic_IEnumerable_TSource__o *)v27;
+  if ( !*(&MyroomAddBgDiffMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MyroomAddBgDiffMaster___c_TypeInfo);
-    v25 = MyroomAddBgDiffMaster___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MyroomAddBgDiffMaster___c_TypeInfo, v28);
+    v29 = MyroomAddBgDiffMaster___c_TypeInfo;
   }
-  _9__0_2 = (System_Func_object__bool__o *)v25->static_fields->__9__0_2;
+  v31 = v29->static_fields;
+  _9__0_2 = (System_Func_object__bool__o *)v31->__9__0_2;
   if ( !_9__0_2 )
   {
-    if ( !v25->_2.cctor_finished )
+    if ( !*(&v29->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v25);
-      v25 = MyroomAddBgDiffMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v29, v28);
+      v31 = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
     }
-    v28 = (Il2CppObject *)v25->static_fields->__9;
-    _9__0_2 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
-    System_Func_object__bool____ctor(_9__0_2, v28, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__, 0);
-    v29 = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
-    v29->__9__0_2 = (struct System_Func_MyroomAddBgDiffEntity__bool__o *)_9__0_2;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v29->__9__0_2, (int32_t)_9__0_2, v30, v31, v32, v33, v34, v35);
+    v33 = (Il2CppObject *)v31->__9;
+    _9__0_2 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_MyroomAddBgDiffEntity__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__0_2, v33, Method_MyroomAddBgDiffMaster___c__GetDisplayObjectId_b__0_2__, 0);
+    v34 = MyroomAddBgDiffMaster___c_TypeInfo->static_fields;
+    v34->__9__0_2 = (struct System_Func_MyroomAddBgDiffEntity__bool__o *)_9__0_2;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v34->__9__0_2, (int32_t)_9__0_2, v35, v36, v37, v38, v39, v40);
   }
-  v36 = System_Linq_Enumerable__FirstOrDefault_object__52923832(
-          v26,
+  v41 = System_Linq_Enumerable__FirstOrDefault_object__59044732(
+          v30,
           (System_Func_TSource__bool__o *)_9__0_2,
-          (const MethodInfo_3278DB8 *)Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
-  if ( v36 )
-    LODWORD(v36) = HIDWORD(v36[1].monitor);
-  return (int)v36;
+          (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_MyroomAddBgDiffEntity___);
+  if ( v41 )
+    LODWORD(v41) = HIDWORD(v41[1].monitor);
+  return (int)v41;
 }
 
 
@@ -148,16 +156,16 @@ MyroomAddBgDiffEntity_o *MyroomAddBgDiffMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77BED & 1) == 0 )
+  if ( (byte_5938C0A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
-    byte_4E77BED = 1;
+    sub_21FFC50(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
+    byte_5938C0A = 1;
   }
   PK = (Il2CppObject *)MyroomAddBgDiffEntity__CreatePK(overwriteId, type, priority, *(const MethodInfo **)&priority);
   return (MyroomAddBgDiffEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_353AADC *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
+                                      (const MethodInfo_3EE2044 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__GetEntity__);
 }
 
 
@@ -172,40 +180,40 @@ bool MyroomAddBgDiffMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77BEE & 1) == 0 )
+  if ( (byte_5938C0B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
-    byte_4E77BEE = 1;
+    sub_21FFC50(&Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
+    byte_5938C0B = 1;
   }
   PK = (Il2CppObject *)MyroomAddBgDiffEntity__CreatePK(overwriteId, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_MyroomAddBgDiffMaster__MyroomAddBgDiffEntity__string__TryGetEntity__);
 }
 
 
 void MyroomAddBgDiffMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E77BEF & 1) == 0 )
+  if ( (byte_5938C0C & 1) == 0 )
   {
-    sub_1D0F0B4(&MyroomAddBgDiffMaster___c_TypeInfo);
-    byte_4E77BEF = 1;
+    sub_21FFC50(&MyroomAddBgDiffMaster___c_TypeInfo);
+    byte_5938C0C = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(MyroomAddBgDiffMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(MyroomAddBgDiffMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MyroomAddBgDiffMaster___c_TypeInfo->static_fields->__9 = (struct MyroomAddBgDiffMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)MyroomAddBgDiffMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)MyroomAddBgDiffMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -228,7 +236,7 @@ int32_t MyroomAddBgDiffMaster___c___GetDisplayObjectId_b__0_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return entity->fields.priority;
 }
 
@@ -239,7 +247,7 @@ bool MyroomAddBgDiffMaster___c___GetDisplayObjectId_b__0_2(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return MyroomAddBgDiffEntity__IsOpen(entity, (const MethodInfo *)entity);
 }
 
@@ -258,6 +266,6 @@ bool MyroomAddBgDiffMaster___c__DisplayClass0_0___GetDisplayObjectId_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return entity->fields.overwriteId == this->fields.backGroundOverwriteId && entity->fields.type == this->fields.type;
 }

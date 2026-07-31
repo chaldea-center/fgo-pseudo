@@ -5,23 +5,23 @@ void SupportSelectListViewItem___ctor(
         EventCampaignEntity_array *friendPointCampaigns,
         const MethodInfo *method)
 {
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields.supportServantData = supportServantData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.supportServantData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
     v8,
     v9,
@@ -30,8 +30,8 @@ void SupportSelectListViewItem___ctor(
     v12,
     v13);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     v14,
     v15,
@@ -47,17 +47,17 @@ void SupportSelectListViewItem__ResetEventCampaign(
         EventCampaignEntity_array *friendPointCampaigns,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -72,7 +72,7 @@ System_String_o *SupportSelectListViewItem__get_DeckName(SupportSelectListViewIt
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -90,17 +90,17 @@ void SupportSelectListViewItem__set_listObj(
         SupportSelectListViewObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._listObj_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._listObj_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -114,28 +114,28 @@ void SupportSelectListViewItem__setuplistObj(
         SupportSelectListViewObject_o *obj,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   SupportSelectListViewObject_o **p_listObj_k__BackingField; // x20
   __int64 v10; // x1
   const MethodInfo *v11; // x4
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._listObj_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)obj,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
   if ( !*p_listObj_k__BackingField )
-    sub_1D0F30C(0, v10);
+    sub_21FFECC(0, v10);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

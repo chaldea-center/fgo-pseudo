@@ -1,13 +1,13 @@
 void SvtMultiPortraitEntity___ctor(SvtMultiPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78374 & 1) == 0 )
+  if ( (byte_59393A1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78374 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59393A1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *SvtMultiPortraitEntity__CreatePK(
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_4E78373 & 1) == 0 )
+  if ( (byte_59393A0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4E78373 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_59393A0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            limitCount,
            idx,
            type,
-           (const MethodInfo_324DC90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

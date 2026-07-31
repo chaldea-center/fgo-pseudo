@@ -4,15 +4,15 @@ void EarthPoint___cctor(const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v2; // x8
   float z; // s1
 
-  if ( (byte_4E73E7E & 1) == 0 )
+  if ( (byte_5934DB6 & 1) == 0 )
   {
-    sub_1D0F0B4(&EarthPoint_TypeInfo);
-    byte_4E73E7E = 1;
+    sub_21FFC50(&EarthPoint_TypeInfo);
+    byte_5934DB6 = 1;
   }
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   static_fields = EarthPoint_TypeInfo->static_fields;
   v2 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -24,13 +24,15 @@ void EarthPoint___cctor(const MethodInfo *method)
 
 void EarthPoint___ctor(EarthPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E73E7D & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5934DB5 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseEarthPoint_TypeInfo);
-    byte_4E73E7D = 1;
+    sub_21FFC50(&BaseEarthPoint_TypeInfo);
+    byte_5934DB5 = 1;
   }
-  if ( !BaseEarthPoint_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseEarthPoint_TypeInfo);
+  if ( !*(&BaseEarthPoint_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseEarthPoint_TypeInfo, method, v2);
   BaseEarthPoint___ctor((BaseEarthPoint_o *)this, 0);
 }
 
@@ -39,43 +41,43 @@ System_String_o *EarthPoint__GetEffectName(EarthPoint_o *this, const MethodInfo 
 {
   System_String_o *Instance; // x0
   __int64 v3; // x1
+  __int64 v4; // x2
   int monitor; // w20
   Il2CppObject *Master_object; // x19
-  Il2CppObject *v6; // x0
+  Il2CppObject *v7; // x0
   System_String_o *result; // x0
-  Il2CppObject *v8; // x0
-  int v9; // [xsp+8h] [xbp-28h] BYREF
-  int v10; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v9; // x0
+  int v10; // [xsp+8h] [xbp-28h] BYREF
+  int v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E73E7C & 1) == 0 )
+  if ( (byte_5934DB4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_19141/*"ef_difference{0}1"*/);
-    sub_1D0F0B4(&StringLiteral_5456/*"EARTH_SKIN_EFFECT_NAME{0}"*/);
-    byte_4E73E7C = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_19651/*"ef_difference{0}1"*/);
+    sub_21FFC50(&StringLiteral_5588/*"EARTH_SKIN_EFFECT_NAME{0}"*/);
+    byte_5934DB4 = 1;
   }
-  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   monitor = (int)Instance[3].monitor;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ConstantStrMaster___);
-  v10 = monitor;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  Instance = System_String__Format((System_String_o *)StringLiteral_5456/*"EARTH_SKIN_EFFECT_NAME{0}"*/, v6, 0);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  v11 = monitor;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v11);
+  Instance = System_String__Format((System_String_o *)StringLiteral_5588/*"EARTH_SKIN_EFFECT_NAME{0}"*/, v7, 0);
   if ( !Master_object )
 LABEL_10:
-    sub_1D0F30C(Instance, v3);
+    sub_21FFECC(Instance, v3);
   result = ConstantStrMaster__GetValue((ConstantStrMaster_o *)Master_object, Instance, 0);
   if ( !result )
   {
-    v9 = monitor + 1;
-    v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-    return System_String__Format((System_String_o *)StringLiteral_19141/*"ef_difference{0}1"*/, v8, 0);
+    v10 = monitor + 1;
+    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v10);
+    return System_String__Format((System_String_o *)StringLiteral_19651/*"ef_difference{0}1"*/, v9, 0);
   }
   return result;
 }
@@ -83,129 +85,136 @@ LABEL_10:
 
 void EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *mWidget; // x20
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
   UnityEngine_ParticleSystem_o *transform; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x2
   float DotXZ; // s0
-  struct UIWidget_o *v9; // x8
+  struct UIWidget_o *v11; // x8
   _BOOL4 mIsForward; // w22
+  float v13; // s11
   float r; // s8
   float g; // s9
   float b; // s10
   UnityEngine_Object_o *mParticleSystem; // x20
-  UnityEngine_ParticleSystem_MainModule_o v15; // x0
-  UnityEngine_ParticleSystem_MainModule_o v16; // x0
+  float v18; // s11
+  UnityEngine_ParticleSystem_MainModule_o v19; // x0
+  UnityEngine_ParticleSystem_MainModule_o v20; // x0
+  __int64 v21; // x1
+  __int64 v22; // x2
   UnityEngine_Object_o *earthEffectCamera; // x20
   float x; // s8
-  UnityEngine_Object_o *v19; // x20
-  UnityEngine_Camera_o *v20; // x20
-  int v21; // w8
-  UnityEngine_Transform_o *v22; // x20
-  UnityEngine_Object_o *v23; // x20
-  UnityEngine_Object_o *v24; // x20
-  UnityEngine_ParticleSystem_MinMaxGradient_o v25; // [xsp+0h] [xbp-E0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxGradient_o v26; // [xsp+38h] [xbp-A8h] BYREF
-  struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+70h] [xbp-70h] BYREF
-  float value; // [xsp+7Ch] [xbp-64h]
-  UnityEngine_Vector3_o vec; // [xsp+80h] [xbp-60h] BYREF
+  __int64 v25; // x2
+  UnityEngine_Object_o *v26; // x20
+  UnityEngine_Camera_o *v27; // x20
+  _BOOL4 v28; // w8
+  UnityEngine_Transform_o *v29; // x20
+  UnityEngine_Object_o *v30; // x20
+  UnityEngine_Object_o *v31; // x20
+  UnityEngine_ParticleSystem_MinMaxGradient_o v32; // [xsp+0h] [xbp-F0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxGradient_o v33; // [xsp+40h] [xbp-B0h] BYREF
+  struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+78h] [xbp-78h] BYREF
+  UnityEngine_Vector3_o vec; // [xsp+80h] [xbp-70h] BYREF
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E73E7B & 1) == 0 )
+  if ( (byte_5934DB3 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73E7B = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934DB3 = 1;
   }
-  vec.fields.z = 0.0;
-  *(_QWORD *)&vec.fields.x = 0;
-  m_ParticleSystem = 0;
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  vec.fields.z = 0.0;
+  m_ParticleSystem = 0;
+  *(_QWORD *)&vec.fields.x = 0;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(mWidget, 0, 0) )
     return;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&vec.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   vec.fields.z = z;
   DotXZ = BaseEarthPoint__GetDotXZ((BaseEarthPoint_o *)this, &vec, 0);
-  v9 = this->fields.mWidget;
+  v11 = this->fields.mWidget;
   mIsForward = this->fields.mIsForward;
   this->fields.mIsForward = DotXZ > 0.0;
-  if ( !v9 )
+  if ( !v11 )
     goto LABEL_53;
-  r = v9->fields.mColor.fields.r;
-  g = v9->fields.mColor.fields.g;
-  b = v9->fields.mColor.fields.b;
-  value = fmaxf(DotXZ, 0.0);
+  v13 = DotXZ;
+  r = v11->fields.mColor.fields.r;
+  g = v11->fields.mColor.fields.g;
+  b = v11->fields.mColor.fields.b;
   mParticleSystem = (UnityEngine_Object_o *)this->fields.mParticleSystem;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
+  v18 = fmaxf(v13, 0.0);
   if ( UnityEngine_Object__op_Inequality(mParticleSystem, 0, 0) )
   {
     transform = this->fields.mParticleSystem;
     if ( !transform )
       goto LABEL_53;
-    v15.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_main(transform, 0).fields.m_ParticleSystem;
-    v31.fields.a = value;
-    m_ParticleSystem = v15.fields.m_ParticleSystem;
-    v31.fields.r = r;
-    v31.fields.g = g;
-    v31.fields.b = b;
-    UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v26, v31, 0);
-    v16.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-    v25 = v26;
-    UnityEngine_ParticleSystem_MainModule__set_startColor(v16, &v25, 0);
+    v19.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_main(transform, 0).fields.m_ParticleSystem;
+    v37.fields.r = r;
+    v37.fields.g = g;
+    m_ParticleSystem = v19.fields.m_ParticleSystem;
+    v37.fields.b = b;
+    v37.fields.a = v18;
+    UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v33, v37, 0);
+    v20.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+    v32 = v33;
+    UnityEngine_ParticleSystem_MainModule__set_startColor(v20, &v32, 0);
   }
   transform = (UnityEngine_ParticleSystem_o *)this->fields.mWidget;
   if ( !transform )
 LABEL_53:
-    sub_1D0F30C(transform, v7);
-  v32.fields.a = value;
-  v32.fields.r = r;
-  v32.fields.g = g;
-  v32.fields.b = b;
-  UIWidget__set_color((UIWidget_o *)transform, v32, 0);
-  if ( !byte_4E70C99 )
+    sub_21FFECC(transform, v8);
+  v38.fields.r = r;
+  v38.fields.g = g;
+  v38.fields.b = b;
+  v38.fields.a = v18;
+  UIWidget__set_color((UIWidget_o *)transform, v38, 0);
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   earthEffectCamera = (UnityEngine_Object_o *)this->fields.earthEffectCamera;
   x = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.x;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21, v22);
   if ( !UnityEngine_Object__op_Inequality(earthEffectCamera, 0, 0) )
     goto LABEL_29;
-  v19 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(v19, 0, 0) )
+  v26 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v25);
+  if ( !UnityEngine_Object__op_Inequality(v26, 0, 0) )
     goto LABEL_29;
   transform = this->fields.mParticleSystem;
   if ( !transform )
     goto LABEL_53;
-  v20 = this->fields.earthEffectCamera;
+  v27 = this->fields.earthEffectCamera;
   transform = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_transform(
                                                 (UnityEngine_Component_o *)transform,
                                                 0);
   if ( !transform )
     goto LABEL_53;
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-  if ( !v20 )
+  if ( !v27 )
     goto LABEL_53;
-  x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_73162816(v20, position, 0));
+  x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_82984908(v27, position, 0));
   if ( x < 0.0 )
   {
-    v21 = this->fields.mIsForward;
+    v28 = this->fields.mIsForward;
     if ( this->fields.mIsForward )
     {
       this->fields.IsParticleDisp = 0;
@@ -213,48 +222,48 @@ LABEL_30:
       transform = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0);
-      v22 = (UnityEngine_Transform_o *)transform;
-      if ( !byte_4E70C99 )
+      v29 = (UnityEngine_Transform_o *)transform;
+      if ( !byte_5931940 )
       {
-        transform = (UnityEngine_ParticleSystem_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-        byte_4E70C99 = 1;
+        transform = (UnityEngine_ParticleSystem_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+        byte_5931940 = 1;
       }
-      if ( !v22 )
+      if ( !v29 )
         goto LABEL_53;
-      UnityEngine_Transform__set_eulerAngles(v22, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-      v21 = this->fields.mIsForward;
+      UnityEngine_Transform__set_eulerAngles(v29, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+      v28 = this->fields.mIsForward;
     }
   }
   else
   {
 LABEL_29:
-    v21 = this->fields.mIsForward;
+    v28 = this->fields.mIsForward;
     if ( this->fields.mIsForward )
       goto LABEL_30;
   }
-  if ( (mIsForward & ~v21) != 0 )
+  if ( (mIsForward & (v28 ^ 0xFF)) != 0 )
   {
-    v23 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Inequality(v23, 0, 0) )
+    v30 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v25);
+    if ( !UnityEngine_Object__op_Inequality(v30, 0, 0) )
       goto LABEL_40;
     transform = this->fields.mParticleSystem;
     if ( transform )
     {
-      UnityEngine_ParticleSystem__Clear_73645728(transform, 0);
+      UnityEngine_ParticleSystem__Clear_83624348(transform, 0);
 LABEL_40:
       this->fields.IsParticleDisp = 0;
       return;
     }
     goto LABEL_53;
   }
-  if ( x >= 0.0 && v21 && !this->fields.IsParticleDisp )
+  if ( v28 && !this->fields.IsParticleDisp && x >= 0.0 )
   {
-    v24 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v24, 0, 0) )
+    v31 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v25);
+    if ( UnityEngine_Object__op_Inequality(v31, 0, 0) )
     {
       transform = this->fields.mParticleSystem;
       if ( transform )

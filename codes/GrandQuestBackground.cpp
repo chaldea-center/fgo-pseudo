@@ -1,13 +1,30 @@
 void GrandQuestBackground___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E72124 & 1) == 0 )
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
+  int32_t v4; // w5
+  bool v5; // w6
+  bool v6; // w7
+  int32_t v7; // w1
+
+  if ( (byte_5933122 & 1) == 0 )
   {
-    sub_1D0F0B4(&GrandQuestBackground_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_13885/*"Terminal/OrdealCall"*/);
-    byte_4E72124 = 1;
+    sub_21FFC50(&GrandQuestBackground_TypeInfo);
+    sub_21FFC50(&StringLiteral_14231/*"Terminal/OrdealCall"*/);
+    byte_5933122 = 1;
   }
-  GrandQuestBackground_TypeInfo->static_fields->BLANK_EARTH_ASSET_PATH = (struct System_String_o *)StringLiteral_13885/*"Terminal/OrdealCall"*/;
-  sub_1D0F058(GrandQuestBackground_TypeInfo->static_fields, StringLiteral_13885/*"Terminal/OrdealCall"*/);
+  v7 = StringLiteral_14231/*"Terminal/OrdealCall"*/;
+  GrandQuestBackground_TypeInfo->static_fields->BLANK_EARTH_ASSET_PATH = (struct System_String_o *)StringLiteral_14231/*"Terminal/OrdealCall"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)GrandQuestBackground_TypeInfo->static_fields,
+    v7,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
 }
 
 
@@ -25,64 +42,99 @@ void GrandQuestBackground__BackgroundBlankEarthInit(
   __int64 v5; // x20
   WarEntity_o *WarEntityByWarID; // x0
   WarEntity_o *v7; // x1
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x2
   Il2CppObject *Instance; // x21
   struct GrandQuestRootComponent_o *rootComponent; // x8
   struct ScrTerminalListTop_o *mTerminalListTop; // x8
-  struct GrandQuestRootComponent_o *v11; // x8
-  struct ScrTerminalListTop_o *v12; // x8
-  struct GrandQuestRootComponent_o *v13; // x8
-  struct ScrTerminalListTop_o *v14; // x8
-  struct GrandQuestRootComponent_o *v15; // x8
-  struct ScrTerminalListTop_o *v16; // x8
-  System_Action_o *v17; // x22
-  UnityEngine_Object_o *blankEarth; // x22
-  GrandQuestBackground_c *v19; // x0
-  System_String_o *BLANK_EARTH_ASSET_PATH; // x21
-  AssetLoader_LoadEndDataHandler_o *v21; // x22
-  struct UnityEngine_GameObject_o **p_bgEffect; // x20
-  UnityEngine_Object_o *bgEffect; // x21
   struct GrandQuestRootComponent_o *v24; // x8
+  struct ScrTerminalListTop_o *v25; // x8
+  struct GrandQuestRootComponent_o *v26; // x8
+  struct ScrTerminalListTop_o *v27; // x8
+  struct GrandQuestRootComponent_o *v28; // x8
+  struct ScrTerminalListTop_o *v29; // x8
+  System_Action_o *v30; // x22
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
+  __int64 v37; // x1
+  __int64 v38; // x2
+  UnityEngine_Object_o *blankEarth; // x22
+  __int64 v40; // x1
+  __int64 v41; // x2
+  GrandQuestBackground_c *v42; // x0
+  System_String_o *BLANK_EARTH_ASSET_PATH; // x21
+  AssetLoader_LoadEndDataHandler_o *v44; // x22
+  __int64 v45; // x1
+  __int64 v46; // x2
+  __int64 v47; // x1
+  __int64 v48; // x2
+  MissionNaviTransitionBoardItem_o *p_bgEffect; // x20
+  UnityEngine_Object_o *bgEffect; // x21
+  struct GrandQuestRootComponent_o *v51; // x8
   UnityEngine_GameObject_o *BgEffectPrefab; // x0
+  __int64 v53; // x1
+  __int64 v54; // x2
   UnityEngine_Transform_o *effectRoot; // x19
-  Il2CppObject *v27; // x21
-  Il2CppObject *v28; // x1
+  Il2CppObject *v56; // x21
+  Il2CppObject *v57; // x1
+  System_String_o *v58; // x2
+  System_String_o *v59; // x3
+  int32_t v60; // w4
+  int32_t v61; // w5
+  bool v62; // w6
+  bool v63; // w7
 
-  if ( (byte_4E72122 & 1) == 0 )
+  if ( (byte_5933120 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&GrandQuestBackground_TypeInfo);
-    sub_1D0F0B4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    sub_1D0F0B4(&Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__0__);
-    sub_1D0F0B4(&Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__1__);
-    sub_1D0F0B4(&GrandQuestBackground___c__DisplayClass15_0_TypeInfo);
-    byte_4E72122 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&GrandQuestBackground_TypeInfo);
+    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    sub_21FFC50(&Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__0__);
+    sub_21FFC50(&Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__1__);
+    sub_21FFC50(&GrandQuestBackground___c__DisplayClass15_0_TypeInfo);
+    byte_5933120 = 1;
   }
-  v5 = sub_1D0F300(GrandQuestBackground___c__DisplayClass15_0_TypeInfo);
+  v5 = sub_21FFEBC(GrandQuestBackground___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_41;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058(v5 + 16, this);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
-  sub_1D0F058(v5 + 24, callback);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
   MainMenuBar__FrameIn(0, 0);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3BACB74 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E71891 )
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v7, v20);
+  if ( !byte_5932644 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E71891 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5932644 = 1;
   }
   WarEntityByWarID = (WarEntity_o *)TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v7, v20);
     WarEntityByWarID = (WarEntity_o *)TerminalPramsManager_TypeInfo;
   }
   if ( !Instance )
@@ -102,181 +154,200 @@ void GrandQuestBackground__BackgroundBlankEarthInit(
   if ( !WarEntityByWarID )
     goto LABEL_41;
   TitleInfoControl__SetActiveEventInfo((TitleInfoControl_o *)WarEntityByWarID, v7, 16, 0, 0);
-  v11 = this->fields.rootComponent;
-  if ( !v11 )
+  v24 = this->fields.rootComponent;
+  if ( !v24 )
     goto LABEL_41;
-  v12 = v11->fields.mTerminalListTop;
-  if ( !v12 )
+  v25 = v24->fields.mTerminalListTop;
+  if ( !v25 )
     goto LABEL_41;
-  WarEntityByWarID = (WarEntity_o *)v12->fields.mTitleInfo;
+  WarEntityByWarID = (WarEntity_o *)v25->fields.mTitleInfo;
   if ( !WarEntityByWarID )
     goto LABEL_41;
   WarEntityByWarID = (WarEntity_o *)TitleInfoControl__FrameIn((TitleInfoControl_o *)WarEntityByWarID, 0, 0);
-  v13 = this->fields.rootComponent;
-  if ( !v13 )
+  v26 = this->fields.rootComponent;
+  if ( !v26 )
     goto LABEL_41;
-  v14 = v13->fields.mTerminalListTop;
-  if ( !v14 )
+  v27 = v26->fields.mTerminalListTop;
+  if ( !v27 )
     goto LABEL_41;
-  WarEntityByWarID = (WarEntity_o *)v14->fields.mTitleInfo;
+  WarEntityByWarID = (WarEntity_o *)v27->fields.mTitleInfo;
   if ( !WarEntityByWarID )
     goto LABEL_41;
   TitleInfoControl__SetGrandQuestHeader((TitleInfoControl_o *)WarEntityByWarID, 0);
-  v15 = this->fields.rootComponent;
-  if ( !v15 )
+  v28 = this->fields.rootComponent;
+  if ( !v28 )
     goto LABEL_41;
-  v16 = v15->fields.mTerminalListTop;
-  if ( !v16 )
+  v29 = v28->fields.mTerminalListTop;
+  if ( !v29 )
     goto LABEL_41;
-  WarEntityByWarID = (WarEntity_o *)v16->fields.mTitleInfo;
+  WarEntityByWarID = (WarEntity_o *)v29->fields.mTitleInfo;
   if ( !WarEntityByWarID )
     goto LABEL_41;
   TitleInfoControl__setTitleImgFromBanner((TitleInfoControl_o *)WarEntityByWarID, 0, 0, 1, 98, 0);
-  v17 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
-    v17,
+    v30,
     (Il2CppObject *)v5,
     Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__0__,
     0);
-  *(_QWORD *)(v5 + 32) = v17;
-  sub_1D0F058(v5 + 32, v17);
+  *(_QWORD *)(v5 + 32) = v30;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)v30, v31, v32, v33, v34, v35, v36);
   blankEarth = (UnityEngine_Object_o *)this->fields.blankEarth;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v38);
   if ( UnityEngine_Object__op_Equality(blankEarth, 0, 0) )
   {
-    v19 = GrandQuestBackground_TypeInfo;
-    if ( !GrandQuestBackground_TypeInfo->_2.cctor_finished )
+    v42 = GrandQuestBackground_TypeInfo;
+    if ( !*(&GrandQuestBackground_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(GrandQuestBackground_TypeInfo);
-      v19 = GrandQuestBackground_TypeInfo;
+      j_il2cpp_runtime_class_init_0(GrandQuestBackground_TypeInfo, v40, v41);
+      v42 = GrandQuestBackground_TypeInfo;
     }
-    BLANK_EARTH_ASSET_PATH = v19->static_fields->BLANK_EARTH_ASSET_PATH;
-    v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1D0F300(AssetLoader_LoadEndDataHandler_TypeInfo);
+    BLANK_EARTH_ASSET_PATH = v42->static_fields->BLANK_EARTH_ASSET_PATH;
+    v44 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v21,
+      v44,
       (Il2CppObject *)v5,
       Method_GrandQuestBackground___c__DisplayClass15_0__BackgroundBlankEarthInit_b__1__,
       0);
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage(BLANK_EARTH_ASSET_PATH, v21, 1, 0, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v45, v46);
+    AssetManager__loadAssetStorage(BLANK_EARTH_ASSET_PATH, v44, 1, 0, 0);
   }
   else
   {
     ActionExtensions__Call(*(System_Action_o **)(v5 + 32), 0);
   }
-  p_bgEffect = &this->fields.bgEffect;
+  p_bgEffect = (MissionNaviTransitionBoardItem_o *)&this->fields.bgEffect;
   bgEffect = (UnityEngine_Object_o *)this->fields.bgEffect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v47, v48);
   WarEntityByWarID = (WarEntity_o *)UnityEngine_Object__op_Equality(bgEffect, 0, 0);
   if ( ((unsigned __int8)WarEntityByWarID & 1) != 0 )
   {
-    v24 = this->fields.rootComponent;
-    if ( v24 )
+    v51 = this->fields.rootComponent;
+    if ( v51 )
     {
-      WarEntityByWarID = (WarEntity_o *)v24->fields.resourceCatalog;
+      WarEntityByWarID = (WarEntity_o *)v51->fields.resourceCatalog;
       if ( WarEntityByWarID )
       {
         BgEffectPrefab = GrandQuestResourceCatalogAssetBundle__GetBgEffectPrefab(
                            (GrandQuestResourceCatalogAssetBundle_o *)WarEntityByWarID,
                            (const MethodInfo *)v7);
         effectRoot = this->fields.effectRoot;
-        v27 = (Il2CppObject *)BgEffectPrefab;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v28 = UnityEngine_Object__Instantiate_object__53335036(
-                v27,
+        v56 = (Il2CppObject *)BgEffectPrefab;
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v53, v54);
+        v57 = UnityEngine_Object__Instantiate_object__59506996(
+                v56,
                 effectRoot,
-                (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-        *p_bgEffect = (struct UnityEngine_GameObject_o *)v28;
-        sub_1D0F058(p_bgEffect, v28);
+                (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+        p_bgEffect->klass = (MissionNaviTransitionBoardItem_c *)v57;
+        sub_21FFBF4(p_bgEffect, (int32_t)v57, v58, v59, v60, v61, v62, v63);
         return;
       }
     }
 LABEL_41:
-    sub_1D0F30C(WarEntityByWarID, v7);
+    sub_21FFECC(WarEntityByWarID, v7);
   }
 }
 
 
 void GrandQuestBackground__DeleteBlankEarthObj(GrandQuestBackground_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct BlankEarth_o **p_blankEarth; // x20
   UnityEngine_Object_o *blankEarth; // x21
-  __int64 v5; // x1
-  UnityEngine_Component_o *v6; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
+  UnityEngine_Component_o *v8; // x0
+  __int64 v9; // x1
+  __int64 v10; // x2
   UnityEngine_Object_o *gameObject; // x21
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
   struct UnityEngine_GameObject_o **p_bgEffect; // x20
   UnityEngine_Object_o *bgEffect; // x21
-  UnityEngine_Object_o *v10; // x21
+  __int64 v20; // x1
+  __int64 v21; // x2
+  UnityEngine_Object_o *v22; // x21
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   UnityEngine_Object_o *rootComponent; // x20
-  struct GrandQuestRootComponent_o *v12; // x8
+  __int64 v30; // x2
+  struct GrandQuestRootComponent_o *v31; // x8
   UnityEngine_Object_o *mTerminalScene; // x20
-  struct GrandQuestRootComponent_o *v14; // x8
+  struct GrandQuestRootComponent_o *v33; // x8
 
-  if ( (byte_4E72123 & 1) == 0 )
+  if ( (byte_5933121 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72123 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933121 = 1;
   }
   p_blankEarth = &this->fields.blankEarth;
   blankEarth = (UnityEngine_Object_o *)this->fields.blankEarth;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(blankEarth, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)*p_blankEarth;
+    v8 = (UnityEngine_Component_o *)*p_blankEarth;
     if ( !*p_blankEarth )
       goto LABEL_27;
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(gameObject, 0);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v8, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
+    UnityEngine_Object__Destroy_83246496(gameObject, 0);
     *p_blankEarth = 0;
-    sub_1D0F058(&this->fields.blankEarth, 0);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.blankEarth, 0, v12, v13, v14, v15, v16, v17);
   }
   p_bgEffect = &this->fields.bgEffect;
   bgEffect = (UnityEngine_Object_o *)this->fields.bgEffect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
   if ( UnityEngine_Object__op_Inequality(bgEffect, 0, 0) )
   {
-    v10 = (UnityEngine_Object_o *)*p_bgEffect;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(v10, 0);
+    v22 = (UnityEngine_Object_o *)*p_bgEffect;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
+    UnityEngine_Object__Destroy_83246496(v22, 0);
     *p_bgEffect = 0;
-    sub_1D0F058(&this->fields.bgEffect, 0);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bgEffect, 0, v23, v24, v25, v26, v27, v28);
   }
   rootComponent = (UnityEngine_Object_o *)this->fields.rootComponent;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(rootComponent, 0, 0);
-  if ( ((unsigned __int8)v6 & 1) != 0 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
+  v8 = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(rootComponent, 0, 0);
+  if ( ((unsigned __int8)v8 & 1) != 0 )
   {
-    v12 = this->fields.rootComponent;
-    if ( !v12 )
+    v31 = this->fields.rootComponent;
+    if ( !v31 )
       goto LABEL_27;
-    mTerminalScene = (UnityEngine_Object_o *)v12->fields.mTerminalScene;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(mTerminalScene, 0, 0);
-    if ( ((unsigned __int8)v6 & 1) != 0 )
+    mTerminalScene = (UnityEngine_Object_o *)v31->fields.mTerminalScene;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v30);
+    v8 = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(mTerminalScene, 0, 0);
+    if ( ((unsigned __int8)v8 & 1) != 0 )
     {
-      v14 = this->fields.rootComponent;
-      if ( v14 )
+      v33 = this->fields.rootComponent;
+      if ( v33 )
       {
-        v6 = (UnityEngine_Component_o *)v14->fields.mTerminalScene;
-        if ( v6 )
+        v8 = (UnityEngine_Component_o *)v33->fields.mTerminalScene;
+        if ( v8 )
         {
-          TerminalSceneComponent__InitLighting((TerminalSceneComponent_o *)v6, 0);
+          TerminalSceneComponent__InitLighting((TerminalSceneComponent_o *)v8, 0);
           return;
         }
       }
 LABEL_27:
-      sub_1D0F30C(v6, v5);
+      sub_21FFECC(v8, v6);
     }
   }
 }
@@ -290,28 +361,49 @@ void GrandQuestBackground__Init(
 {
   struct UnityEngine_GameObject_o **p_bgEffect; // x22
   UnityEngine_Object_o *bgEffect; // x23
-  UnityEngine_Object_o *v9; // x23
+  __int64 v9; // x1
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  UnityEngine_Object_o *v16; // x23
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
 
-  if ( (byte_4E72121 & 1) == 0 )
+  if ( (byte_593311F & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72121 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593311F = 1;
   }
   p_bgEffect = &this->fields.bgEffect;
   bgEffect = (UnityEngine_Object_o *)this->fields.bgEffect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, rootcomp, callback);
   if ( UnityEngine_Object__op_Inequality(bgEffect, 0, 0) )
   {
-    v9 = (UnityEngine_Object_o *)*p_bgEffect;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(v9, 0);
+    v16 = (UnityEngine_Object_o *)*p_bgEffect;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
+    UnityEngine_Object__Destroy_83246496(v16, 0);
     *p_bgEffect = 0;
-    sub_1D0F058(&this->fields.bgEffect, 0);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bgEffect, 0, v17, v18, v19, v20, v21, v22);
   }
   this->fields.rootComponent = rootcomp;
-  sub_1D0F058(&this->fields.rootComponent, rootcomp);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
+    (int32_t)rootcomp,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   ActionExtensions__Call(callback, 0);
 }
 
@@ -329,7 +421,7 @@ ScrTerminalListTop_o *GrandQuestBackground__get_TerminalList(GrandQuestBackgroun
 
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rootComponent->fields.mTerminalListTop;
 }
 
@@ -342,7 +434,7 @@ TerminalSceneComponent_o *GrandQuestBackground__get_TerminalScene(
 
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rootComponent->fields.mTerminalScene;
 }
 
@@ -355,7 +447,7 @@ UnityEngine_GameObject_o *GrandQuestBackground__get_grandQuestRoot(
 
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rootComponent->fields.grandQuestRoot;
 }
 
@@ -368,7 +460,7 @@ GrandQuestResourceCatalogAssetBundle_o *GrandQuestBackground__get_resourceCatalo
 
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rootComponent->fields.resourceCatalog;
 }
 
@@ -440,7 +532,7 @@ void GrandQuestBackground___c__DisplayClass15_0___BackgroundBlankEarthInit_b__0(
     || (this = (GrandQuestBackground___c__DisplayClass15_0_o *)v11->fields.mTitleInfo) == 0 )
   {
 LABEL_16:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   TitleInfoControl__setBackBtn_Terminal((TitleInfoControl_o *)this, 1, 0);
   MainMenuBar__SetMenuBtnColliderEnable(1, 0, 0);
@@ -454,107 +546,137 @@ void GrandQuestBackground___c__DisplayClass15_0___BackgroundBlankEarthInit_b__1(
         const MethodInfo *method)
 {
   GrandQuestBackground___c__DisplayClass15_0_o *v4; // x19
-  Il2CppObject *Object_object__52624444; // x21
-  GrandQuestBackground___c__DisplayClass15_0_o *v6; // x21
+  __int64 v5; // x1
+  __int64 v6; // x2
+  Il2CppObject *Object_object__58323140; // x21
+  GrandQuestBackground___c__DisplayClass15_0_o *v8; // x21
   UnityEngine_GameObject_o *gameObject; // x0
   struct GrandQuestBackground_o *_4__this; // x22
-  struct GrandQuestBackground_o *v9; // x8
-  struct GrandQuestBackground_o *v10; // x8
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  struct GrandQuestBackground_o *v17; // x8
+  struct GrandQuestBackground_o *v18; // x8
   struct GrandQuestRootComponent_o *rootComponent; // x9
   struct BlankEarth_o *blankEarth; // x20
-  struct GrandQuestBackground_o *v13; // x8
-  struct GrandQuestRootComponent_o *v14; // x8
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  struct GrandQuestBackground_o *v27; // x8
+  struct GrandQuestRootComponent_o *v28; // x8
   struct GrandQuestResourceCatalogAssetBundle_o *resourceCatalog; // x9
-  struct GrandQuestBackground_o *v16; // x8
-  struct GrandQuestRootComponent_o *v17; // x8
-  struct GrandQuestResourceCatalogAssetBundle_o *v18; // x9
+  struct GrandQuestBackground_o *v30; // x8
+  struct GrandQuestRootComponent_o *v31; // x8
+  struct GrandQuestResourceCatalogAssetBundle_o *v32; // x9
 
   v4 = this;
-  if ( (byte_4E72125 & 1) == 0 )
+  if ( (byte_5933123 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20703/*"img_bg_grand"*/);
-    sub_1D0F0B4(&StringLiteral_20707/*"img_bg_grandquest"*/);
-    this = (GrandQuestBackground___c__DisplayClass15_0_o *)sub_1D0F0B4(&StringLiteral_7228/*"GrandEarth"*/);
-    byte_4E72125 = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_21259/*"img_bg_grand"*/);
+    sub_21FFC50(&StringLiteral_21263/*"img_bg_grandquest"*/);
+    this = (GrandQuestBackground___c__DisplayClass15_0_o *)sub_21FFC50(&StringLiteral_7433/*"GrandEarth"*/);
+    byte_5933123 = 1;
   }
   if ( !data )
     goto LABEL_24;
-  Object_object__52624444 = AssetData__GetObject_object__52624444(
+  Object_object__58323140 = AssetData__GetObject_object__58323140(
                               data,
-                              (System_String_o *)StringLiteral_7228/*"GrandEarth"*/,
-                              (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                              (System_String_o *)StringLiteral_7433/*"GrandEarth"*/,
+                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   this = (GrandQuestBackground___c__DisplayClass15_0_o *)UnityEngine_Object__Instantiate_object_(
-                                                           Object_object__52624444,
-                                                           (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                           Object_object__58323140,
+                                                           (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v4->fields.__4__this )
     goto LABEL_24;
-  v6 = this;
+  v8 = this;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4->fields.__4__this, 0);
-  GameObjectExtensions__SafeSetParent_37349004((UnityEngine_GameObject_o *)v6, gameObject, 0);
-  if ( !v6 )
+  GameObjectExtensions__SafeSetParent_42881912((UnityEngine_GameObject_o *)v8, gameObject, 0);
+  if ( !v8 )
     goto LABEL_24;
   _4__this = v4->fields.__4__this;
   this = (GrandQuestBackground___c__DisplayClass15_0_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                           (UnityEngine_GameObject_o *)v6,
-                                                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
+                                                           (UnityEngine_GameObject_o *)v8,
+                                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
   if ( !_4__this )
     goto LABEL_24;
   _4__this->fields.blankEarth = (struct BlankEarth_o *)this;
-  this = (GrandQuestBackground___c__DisplayClass15_0_o *)sub_1D0F058(&_4__this->fields.blankEarth, this);
-  v9 = v4->fields.__4__this;
-  if ( !v9 )
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&_4__this->fields.blankEarth,
+    (int32_t)this,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
+  v17 = v4->fields.__4__this;
+  if ( !v17 )
     goto LABEL_24;
-  this = (GrandQuestBackground___c__DisplayClass15_0_o *)v9->fields.blankEarth;
+  this = (GrandQuestBackground___c__DisplayClass15_0_o *)v17->fields.blankEarth;
   if ( !this )
     goto LABEL_24;
   BlankEarth__Setup((BlankEarth_o *)this, data, 0, 0);
-  v10 = v4->fields.__4__this;
-  if ( !v10 )
+  v18 = v4->fields.__4__this;
+  if ( !v18 )
     goto LABEL_24;
-  rootComponent = v10->fields.rootComponent;
+  rootComponent = v18->fields.rootComponent;
   if ( !rootComponent )
     goto LABEL_24;
   this = (GrandQuestBackground___c__DisplayClass15_0_o *)rootComponent->fields.mTerminalListTop;
   if ( !this )
     goto LABEL_24;
-  blankEarth = v10->fields.blankEarth;
+  blankEarth = v18->fields.blankEarth;
   this = (GrandQuestBackground___c__DisplayClass15_0_o *)ScrTerminalListTop__GetOrdealCallFolderInfo(
                                                            (ScrTerminalListTop_o *)this,
                                                            0);
   if ( !blankEarth )
     goto LABEL_24;
   blankEarth->fields.ordealCallFolderInfo = (struct ScrTerminalListTop_CaldeaFolderInfo_o *)this;
-  this = (GrandQuestBackground___c__DisplayClass15_0_o *)sub_1D0F058(&blankEarth->fields.ordealCallFolderInfo, this);
-  v13 = v4->fields.__4__this;
-  if ( !v13 )
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&blankEarth->fields.ordealCallFolderInfo,
+    (int32_t)this,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
+  v27 = v4->fields.__4__this;
+  if ( !v27 )
     goto LABEL_24;
-  v14 = v13->fields.rootComponent;
-  if ( !v14
-    || (resourceCatalog = v14->fields.resourceCatalog) == 0
+  v28 = v27->fields.rootComponent;
+  if ( !v28
+    || (resourceCatalog = v28->fields.resourceCatalog) == 0
     || (this = (GrandQuestBackground___c__DisplayClass15_0_o *)resourceCatalog->fields.boardUiAtlasManagerUnit) == 0
     || (this = (GrandQuestBackground___c__DisplayClass15_0_o *)AtlasManagerUnit__SetUI(
                                                                  (AtlasManagerUnit_o *)this,
-                                                                 v14->fields.blankEarthBg,
-                                                                 (System_String_o *)StringLiteral_20703/*"img_bg_grand"*/,
+                                                                 v28->fields.blankEarthBg,
+                                                                 (System_String_o *)StringLiteral_21259/*"img_bg_grand"*/,
                                                                  0),
-        (v16 = v4->fields.__4__this) == 0)
-    || (v17 = v16->fields.rootComponent) == 0
-    || (v18 = v17->fields.resourceCatalog) == 0
-    || (this = (GrandQuestBackground___c__DisplayClass15_0_o *)v18->fields.boardUiAtlasManagerUnit) == 0 )
+        (v30 = v4->fields.__4__this) == 0)
+    || (v31 = v30->fields.rootComponent) == 0
+    || (v32 = v31->fields.resourceCatalog) == 0
+    || (this = (GrandQuestBackground___c__DisplayClass15_0_o *)v32->fields.boardUiAtlasManagerUnit) == 0 )
   {
 LABEL_24:
-    sub_1D0F30C(this, data);
+    sub_21FFECC(this, data);
   }
   AtlasManagerUnit__SetUI(
     (AtlasManagerUnit_o *)this,
-    v17->fields.blankEarthImageTextBg,
-    (System_String_o *)StringLiteral_20707/*"img_bg_grandquest"*/,
+    v31->fields.blankEarthImageTextBg,
+    (System_String_o *)StringLiteral_21263/*"img_bg_grandquest"*/,
     0);
   ActionExtensions__Call(v4->fields.onBlankEarthStoodBy, 0);
 }

@@ -1,13 +1,13 @@
 void AuraEffectPosOverwriteEntity___ctor(AuraEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E772A1 & 1) == 0 )
+  if ( (byte_593826F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E772A1 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_593826F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *AuraEffectPosOverwriteEntity__CreatePK(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4E772A0 & 1) == 0 )
+  if ( (byte_593826E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E772A0 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_593826E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            auraEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -90,12 +90,12 @@ bool AuraEffectPosOverwriteEntity__IsUseNodePositionOnly(
   int32_t IntValue; // w0
   bool v6; // w8
 
-  if ( (byte_4E7729F & 1) == 0 )
+  if ( (byte_593826D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24994/*"useNodePositionOnly"*/);
-    byte_4E7729F = 1;
+    sub_21FFC50(&StringLiteral_25784/*"useNodePositionOnly"*/);
+    byte_593826D = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24994/*"useNodePositionOnly"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25784/*"useNodePositionOnly"*/, -1, 0);
   v6 = IntValue == 1;
   if ( IntValue < 0 )
     return defVal;

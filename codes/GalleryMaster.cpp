@@ -1,14 +1,14 @@
 void GalleryMaster___ctor(GalleryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77AAB & 1) == 0 )
+  if ( (byte_5938ABC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
-    byte_4E77AAB = 1;
+    sub_21FFC50(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
+    byte_5938ABC = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    542,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
+    544,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
 }
 
 
@@ -20,38 +20,40 @@ System_Collections_Generic_List_GalleryEntity__o *GalleryMaster__GetEnableGaller
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x20
+  System_Func_GalleryEntity__bool__c *v9; // x0
+  System_Func_object__bool__o *v10; // x19
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
 
-  if ( (byte_4E77AA9 & 1) == 0 )
+  if ( (byte_5938ABA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToList_GalleryEntity___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_GalleryEntity___);
-    sub_1D0F0B4(&System_Func_GalleryEntity__bool__TypeInfo);
-    sub_1D0F0B4(&Method_GalleryMaster___c__DisplayClass0_0__GetEnableGalleryEntitiesByWarId_b__0__);
-    sub_1D0F0B4(&GalleryMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4E77AA9 = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_GalleryEntity___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GalleryEntity___);
+    sub_21FFC50(&System_Func_GalleryEntity__bool__TypeInfo);
+    sub_21FFC50(&Method_GalleryMaster___c__DisplayClass0_0__GetEnableGalleryEntitiesByWarId_b__0__);
+    sub_21FFC50(&GalleryMaster___c__DisplayClass0_0_TypeInfo);
+    byte_5938ABA = 1;
   }
-  v5 = sub_1D0F300(GalleryMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_21FFEBC(GalleryMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  *(_DWORD *)(v5 + 16) = warId;
+    sub_21FFECC(v6, v7);
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_GalleryEntity__bool__TypeInfo);
+  v9 = System_Func_GalleryEntity__bool__TypeInfo;
+  *(_DWORD *)(v5 + 16) = warId;
+  v10 = (System_Func_object__bool__o *)sub_21FFEBC(v9);
   System_Func_object__bool____ctor(
-    v9,
+    v10,
     (Il2CppObject *)v5,
     Method_GalleryMaster___c__DisplayClass0_0__GetEnableGalleryEntitiesByWarId_b__0__,
     0);
-  v10 = System_Linq_Enumerable__Where_object_(
+  v11 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_GalleryEntity___);
+          (System_Func_TSource__bool__o *)v10,
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GalleryEntity___);
   return (System_Collections_Generic_List_GalleryEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                               v10,
-                                                               (const MethodInfo_329539C *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
+                                                               v11,
+                                                               (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
 }
 
 
@@ -60,33 +62,33 @@ bool GalleryMaster__HasEnableGalleryWar(GalleryMaster_o *this, int32_t warId, co
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v9; // x20
+  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x20
+  System_Func_object__bool__o *v9; // x19
 
-  if ( (byte_4E77AAA & 1) == 0 )
+  if ( (byte_5938ABB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Any_GalleryEntity____80410352);
-    sub_1D0F0B4(&System_Func_GalleryEntity__bool__TypeInfo);
-    sub_1D0F0B4(&Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__);
-    sub_1D0F0B4(&GalleryMaster___c__DisplayClass1_0_TypeInfo);
-    byte_4E77AAA = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Any_GalleryEntity____91523744);
+    sub_21FFC50(&System_Func_GalleryEntity__bool__TypeInfo);
+    sub_21FFC50(&Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__);
+    sub_21FFC50(&GalleryMaster___c__DisplayClass1_0_TypeInfo);
+    byte_5938ABB = 1;
   }
-  v5 = sub_1D0F300(GalleryMaster___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_21FFEBC(GalleryMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  *(_DWORD *)(v5 + 16) = warId;
+    sub_21FFECC(v6, v7);
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_GalleryEntity__bool__TypeInfo);
+  *(_DWORD *)(v5 + 16) = warId;
+  v9 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GalleryEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__,
     0);
-  return System_Linq_Enumerable__Any_object__52817792(
+  return System_Linq_Enumerable__Any_object__58935448(
            (System_Collections_Generic_IEnumerable_TSource__o *)list,
            (System_Func_TSource__bool__o *)v9,
-           (const MethodInfo_325EF80 *)Method_System_Linq_Enumerable_Any_GalleryEntity____80410352);
+           (const MethodInfo_3834898 *)Method_System_Linq_Enumerable_Any_GalleryEntity____91523744);
 }
 
 
@@ -102,7 +104,7 @@ bool GalleryMaster___c__DisplayClass0_0___GetEnableGalleryEntitiesByWarId_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return entity->fields.warId == this->fields.warId
       && GalleryEntity__IsEnableGallery(entity, (const MethodInfo *)entity);
 }
@@ -120,7 +122,7 @@ bool GalleryMaster___c__DisplayClass1_0___HasEnableGalleryWar_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return entity->fields.warId == this->fields.warId
       && GalleryEntity__IsEnableGallery(entity, (const MethodInfo *)entity);
 }

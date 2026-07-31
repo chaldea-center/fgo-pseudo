@@ -4,32 +4,32 @@ void BattleMotionSkipManager___ctor(
         const MethodInfo *method)
 {
   Il2CppObject *v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v10; // w6
+  bool v11; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
 
-  if ( (byte_4E7A2F5 & 1) == 0 )
+  if ( (byte_593B35A & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseMotionSkip_TypeInfo);
-    byte_4E7A2F5 = 1;
+    sub_21FFC50(&BaseMotionSkip_TypeInfo);
+    byte_593B35A = 1;
   }
-  v5 = (Il2CppObject *)sub_1D0F300(BaseMotionSkip_TypeInfo);
+  v5 = (Il2CppObject *)sub_21FFEBC(BaseMotionSkip_TypeInfo);
   System_Object___ctor(v5, 0);
   this->fields.defaultMotionSkip = (struct BaseMotionSkip_o *)v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Perf_k__BackingField = perf;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Perf_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Perf_k__BackingField,
     (int32_t)perf,
     v12,
     v13,
@@ -43,27 +43,27 @@ void BattleMotionSkipManager___ctor(
 void BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManager_o *this, const MethodInfo *method)
 {
   struct BaseMotionSkip_o *mainMotionSkip; // x0
-  GrandQuestFolderBoardItem_o *p_mainMotionSkip; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  MissionNaviTransitionBoardItem_o *p_mainMotionSkip; // x19
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  p_mainMotionSkip = (GrandQuestFolderBoardItem_o *)&this->fields.mainMotionSkip;
+  p_mainMotionSkip = (MissionNaviTransitionBoardItem_o *)&this->fields.mainMotionSkip;
   mainMotionSkip = this->fields.mainMotionSkip;
   if ( !mainMotionSkip )
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, const MethodInfo *))mainMotionSkip->klass->vtable._7_Release.methodPtr)(
     mainMotionSkip,
     mainMotionSkip->klass->vtable._7_Release.method);
   p_mainMotionSkip->klass = 0;
-  sub_1D0F058(p_mainMotionSkip, 0, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4(p_mainMotionSkip, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -75,12 +75,12 @@ void BattleMotionSkipManager__SetMotionSkip(
   struct BaseMotionSkip_o *mainMotionSkip; // x0
   __int64 v6; // x1
   struct BaseMotionSkip_o *v7; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
   BattleMotionSkipManager__ReleaseMotionSkip(this, (const MethodInfo *)skillInfo);
   if ( !skillInfo
@@ -88,8 +88,8 @@ void BattleMotionSkipManager__SetMotionSkip(
                                           skillInfo,
                                           skillInfo->klass->vtable._16_MakeSkillSkip.method),
         this->fields.mainMotionSkip = v7,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.mainMotionSkip,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.mainMotionSkip,
           (int32_t)v7,
           v8,
           v9,
@@ -100,7 +100,7 @@ void BattleMotionSkipManager__SetMotionSkip(
         (mainMotionSkip = this->fields.mainMotionSkip) == 0)
     && (mainMotionSkip = this->fields.defaultMotionSkip) == 0 )
   {
-    sub_1D0F30C(mainMotionSkip, v6);
+    sub_21FFECC(mainMotionSkip, v6);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, const MethodInfo *))mainMotionSkip->klass->vtable._6_Init.methodPtr)(
     mainMotionSkip,
@@ -131,17 +131,17 @@ void BattleMotionSkipManager__set_Current(
         BaseMotionSkip_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.mainMotionSkip = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.mainMotionSkip,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mainMotionSkip,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -155,17 +155,17 @@ void BattleMotionSkipManager__set_Perf(
         BattlePerformance_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Perf_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Perf_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Perf_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

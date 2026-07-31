@@ -1,21 +1,21 @@
 void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_4E7C0A5 & 1) == 0 )
+  if ( (byte_593CFED & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_13194/*"Sprite"*/);
-    byte_4E7C0A5 = 1;
+    sub_21FFC50(&StringLiteral_13529/*"Sprite"*/);
+    byte_593CFED = 1;
   }
-  v9 = StringLiteral_13194/*"Sprite"*/;
-  this->fields.name = (struct System_String_o *)StringLiteral_13194/*"Sprite"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_13529/*"Sprite"*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_13529/*"Sprite"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -23,27 +23,35 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 void UISpriteData__CopyBorderFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
   if ( !sd )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   *(_OWORD *)&this->fields.borderLeft = *(_OWORD *)&sd->fields.borderLeft;
 }
 
 
 void UISpriteData__CopyFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_String_o *name; // x1
   UISpriteData_Fields *p_fields; // x20
 
   if ( !sd )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   name = sd->fields.name;
   this->fields.name = name;
   p_fields = &this->fields;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)name,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   *(_OWORD *)&p_fields->x = *(_OWORD *)&sd->fields.x;
   *(_OWORD *)&p_fields->borderLeft = *(_OWORD *)&sd->fields.borderLeft;
   *(_OWORD *)&p_fields->paddingLeft = *(_OWORD *)&sd->fields.paddingLeft;
@@ -97,11 +105,15 @@ void UISpriteData__SetRect(
 
 bool UISpriteData__get_hasBorder(UISpriteData_o *this, const MethodInfo *method)
 {
-  return (this->fields.borderRight | this->fields.borderLeft | this->fields.borderTop | this->fields.borderBottom) != 0;
+  return vorr_s8(
+           *(int8x8_t *)&this->fields.borderLeft,
+           (int8x8_t)vextq_s8(*(int8x16_t *)&this->fields.borderLeft, *(int8x16_t *)&this->fields.borderLeft, 8u).n128_u64[0]).n64_u64[0] != 0;
 }
 
 
 bool UISpriteData__get_hasPadding(UISpriteData_o *this, const MethodInfo *method)
 {
-  return (this->fields.paddingRight | this->fields.paddingLeft | this->fields.paddingTop | this->fields.paddingBottom) != 0;
+  return vorr_s8(
+           *(int8x8_t *)&this->fields.paddingLeft,
+           (int8x8_t)vextq_s8(*(int8x16_t *)&this->fields.paddingLeft, *(int8x16_t *)&this->fields.paddingLeft, 8u).n128_u64[0]).n64_u64[0] != 0;
 }

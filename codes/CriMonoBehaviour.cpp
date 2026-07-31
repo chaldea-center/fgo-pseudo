@@ -7,36 +7,39 @@ void CriMonoBehaviour___ctor(CriMonoBehaviour_o *this, const MethodInfo *method)
 
 void CriMonoBehaviour__OnDisable(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E70B33 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_59317DB & 1) == 0 )
   {
-    sub_1D0F0B4(&CriMonoBehaviourManager_TypeInfo);
-    byte_4E70B33 = 1;
+    sub_21FFC50(&CriMonoBehaviourManager_TypeInfo);
+    byte_59317DB = 1;
   }
-  if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
+  if ( !*(&CriMonoBehaviourManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo, method, v2);
   CriMonoBehaviourManager__UnRegister(this, method);
 }
 
 
 void CriMonoBehaviour__OnEnable(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   CriMonoBehaviourManager_c *inited; // x0
   CriMonoBehaviourManager_o *instance; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4E70B32 & 1) == 0 )
+  if ( (byte_59317DA & 1) == 0 )
   {
-    sub_1D0F0B4(&CriMonoBehaviourManager_TypeInfo);
-    byte_4E70B32 = 1;
+    sub_21FFC50(&CriMonoBehaviourManager_TypeInfo);
+    byte_59317DA = 1;
   }
   inited = CriMonoBehaviourManager_TypeInfo;
-  if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
-    inited = (CriMonoBehaviourManager_c *)j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
+  if ( !*(&CriMonoBehaviourManager_TypeInfo->_2.cctor_finished + 1) )
+    inited = (CriMonoBehaviourManager_c *)j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo, method, v2);
   instance = CriMonoBehaviourManager__get_instance((const MethodInfo *)inited);
   if ( !instance )
-    sub_1D0F30C(0, v5);
-  CriMonoBehaviourManager__Register(instance, this, v6);
+    sub_21FFECC(0, v6);
+  CriMonoBehaviourManager__Register(instance, this, v7);
 }
 
 

@@ -6,91 +6,97 @@ void EffectSystemBehaviour___ctor(EffectSystemBehaviour_o *this, const MethodInf
 
 void EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x2
   Il2CppObject *Component_object; // x20
   void *gameObject; // x0
-  __int64 v5; // x1
-  Il2CppObject *v6; // x20
-  int v7; // w8
-  void *v8; // x19
-  __int64 v9; // x23
-  UnityEngine_Component_o *v10; // x20
-  Il2CppObject *v11; // x21
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x2
+  Il2CppObject *v10; // x20
+  int v11; // w8
+  void *v12; // x19
+  __int64 v13; // x23
+  UnityEngine_Component_o *v14; // x20
+  __int64 v15; // x1
+  __int64 v16; // x2
+  Il2CppObject *v17; // x21
 
-  if ( (byte_4E7641B & 1) == 0 )
+  if ( (byte_59373C2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_ParticleSystem___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7641B = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59373C2 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_26;
-    v6 = UnityEngine_GameObject__GetComponent_object_(
-           (UnityEngine_GameObject_o *)gameObject,
-           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v6, 0, 0) )
+    v10 = UnityEngine_GameObject__GetComponent_object_(
+            (UnityEngine_GameObject_o *)gameObject,
+            (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
+    if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v10, 0, 0) )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_26;
       UnityEngine_GameObject__AddComponent_object_(
         (UnityEngine_GameObject_o *)gameObject,
-        (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+        (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
     }
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_26:
-    sub_1D0F30C(gameObject, v5);
-  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__53121128(
+    sub_21FFECC(gameObject, v7);
+  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
                  (UnityEngine_GameObject_o *)gameObject,
-                 (const MethodInfo_32A9068 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
+                 (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
   if ( gameObject )
   {
-    v7 = *((_DWORD *)gameObject + 6);
-    v8 = gameObject;
-    if ( v7 >= 1 )
+    v11 = *((_DWORD *)gameObject + 6);
+    v12 = gameObject;
+    if ( v11 >= 1 )
     {
-      v9 = 0;
+      v13 = 0;
       while ( 1 )
       {
-        if ( (unsigned int)v9 >= v7 )
-          sub_1D0F314(gameObject);
-        v10 = (UnityEngine_Component_o *)*((_QWORD *)v8 + v9 + 4);
-        if ( !v10 )
+        if ( (unsigned int)v13 >= v11 )
+          sub_21FFED4(gameObject);
+        v14 = (UnityEngine_Component_o *)*((_QWORD *)v12 + v13 + 4);
+        if ( !v14 )
           goto LABEL_26;
-        gameObject = UnityEngine_Component__get_gameObject(*((UnityEngine_Component_o **)v8 + v9 + 4), 0);
+        gameObject = UnityEngine_Component__get_gameObject(*((UnityEngine_Component_o **)v12 + v13 + 4), 0);
         if ( !gameObject )
           goto LABEL_26;
-        v11 = UnityEngine_GameObject__GetComponent_object_(
+        v17 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)gameObject,
-                (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        gameObject = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0, 0);
+                (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
+        gameObject = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v17, 0, 0);
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          gameObject = UnityEngine_Component__get_gameObject(v10, 0);
+          gameObject = UnityEngine_Component__get_gameObject(v14, 0);
           if ( !gameObject )
             goto LABEL_26;
           gameObject = UnityEngine_GameObject__AddComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+                         (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
         }
-        v7 = *((_DWORD *)v8 + 6);
-        if ( (int)++v9 >= v7 )
+        v11 = *((_DWORD *)v12 + 6);
+        if ( (int)++v13 >= v11 )
           return;
       }
     }

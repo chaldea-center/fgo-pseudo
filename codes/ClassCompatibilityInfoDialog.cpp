@@ -2,10 +2,10 @@ void ClassCompatibilityInfoDialog___cctor(const MethodInfo *method)
 {
   struct ClassCompatibilityInfoDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4E7109E & 1) == 0 )
+  if ( (byte_5931D31 & 1) == 0 )
   {
-    sub_1D0F0B4(&ClassCompatibilityInfoDialog_TypeInfo);
-    byte_4E7109E = 1;
+    sub_21FFC50(&ClassCompatibilityInfoDialog_TypeInfo);
+    byte_5931D31 = 1;
   }
   static_fields = ClassCompatibilityInfoDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->CLOSE_BUTTON_DEFAULT_POSITION_X = 0xC302000000000000LL;
@@ -15,13 +15,15 @@ void ClassCompatibilityInfoDialog___cctor(const MethodInfo *method)
 
 void ClassCompatibilityInfoDialog___ctor(ClassCompatibilityInfoDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7109D & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5931D30 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E7109D = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_5931D30 = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, method);
 }
 
@@ -30,30 +32,32 @@ void ClassCompatibilityInfoDialog__Close(ClassCompatibilityInfoDialog_o *this, c
 {
   const MethodInfo *v2; // x2
 
-  ClassCompatibilityInfoDialog__Close_32053196(this, 0, v2);
+  ClassCompatibilityInfoDialog__Close_37258784(this, 0, v2);
 }
 
 
-void ClassCompatibilityInfoDialog__Close_32053196(
+void ClassCompatibilityInfoDialog__Close_37258784(
         ClassCompatibilityInfoDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  System_Action_c *v5; // x0
+  System_Action_o *v6; // x20
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4E71098 & 1) == 0 )
+  if ( (byte_5931D2B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassCompatibilityInfoDialog_EndClose__);
-    byte_4E71098 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassCompatibilityInfoDialog_EndClose__);
+    byte_5931D2B = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1D0F058(&this->fields.closeCallbackFunc, callback);
+  sub_21FFBF4(&this->fields.closeCallbackFunc, callback);
+  v5 = System_Action_TypeInfo;
   this->fields.state = 5;
-  v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v5, v6);
+  v6 = (System_Action_o *)sub_21FFEBC(v5);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
 
 
@@ -70,7 +74,7 @@ void ClassCompatibilityInfoDialog__EndClose(ClassCompatibilityInfoDialog_o *this
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1D0F058(p_closeCallbackFunc, 0);
+    sub_21FFBF4(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -83,14 +87,14 @@ void ClassCompatibilityInfoDialog__EndCloseClassBoardEffectListDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E7109B & 1) == 0 )
+  if ( (byte_5931D2E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E7109B = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5931D2E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   CommonUI__CloseClassBoardEffectListDialog((CommonUI_o *)Instance, 0, 0);
   this->fields.state = 2;
 }
@@ -107,10 +111,10 @@ void ClassCompatibilityInfoDialog__Init(ClassCompatibilityInfoDialog_o *this, co
   UILabel_o *closeLabel; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4E71096 & 1) == 0 )
+  if ( (byte_5931D29 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E71096 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5931D29 = 1;
   }
   closeLabel = this->fields.closeLabel;
   if ( !closeLabel
@@ -119,7 +123,7 @@ void ClassCompatibilityInfoDialog__Init(ClassCompatibilityInfoDialog_o *this, co
     || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (closeLabel = (UILabel_o *)this->fields.compatibilitySprite) == 0) )
   {
-    sub_1D0F30C(closeLabel, method);
+    sub_21FFECC(closeLabel, method);
   }
   UISprite__set_atlas((UISprite_o *)closeLabel, 0, 0);
   this->fields.state = 0;
@@ -129,47 +133,49 @@ void ClassCompatibilityInfoDialog__Init(ClassCompatibilityInfoDialog_o *this, co
 
 void ClassCompatibilityInfoDialog__OnClickClassBoard(ClassCompatibilityInfoDialog_o *this, const MethodInfo *method)
 {
-  _QWORD *v3; // x0
+  _BYTE *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   Il2CppObject *Instance; // x20
   System_Action_o *v6; // x21
+  __int64 v7; // x1
+  __int64 v8; // x2
   ClassStatisticsInfo_array *classStatisticsInfos; // x0
-  __int64 v8; // x1
+  __int64 v10; // x1
 
-  if ( (byte_4E7109A & 1) == 0 )
+  if ( (byte_5931D2D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassCompatibilityInfoDialog_EndCloseClassBoardEffectListDialog__);
-    sub_1D0F0B4(&Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E7109A = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassCompatibilityInfoDialog_EndCloseClassBoardEffectListDialog__);
+    sub_21FFC50(&Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
+    sub_21FFC50(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5931D2D = 1;
   }
   if ( this->fields.state == 2 )
   {
-    this->fields.state = 4;
     v3 = Method_ClassCompatibilityInfoDialog_OnClickClassBoard__;
-    if ( (*((_BYTE *)Method_ClassCompatibilityInfoDialog_OnClickClassBoard__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_ClassCompatibilityInfoDialog_OnClickClassBoard__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    this->fields.state = 4;
+    if ( (v3[83] & 2) != 0 )
+      v3 = (_BYTE *)sub_21FFC68(v3);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, *((_QWORD *)v3 + 4));
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v6 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v6 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(
       v6,
       (Il2CppObject *)this,
       Method_ClassCompatibilityInfoDialog_EndCloseClassBoardEffectListDialog__,
       0);
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    classStatisticsInfos = (ClassStatisticsInfo_array *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v7, v8);
+    classStatisticsInfos = (ClassStatisticsInfo_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
     if ( classStatisticsInfos )
       classStatisticsInfos = UserClassStatisticsMaster__GetClassStatisticsInfos(
                                (UserClassStatisticsMaster_o *)classStatisticsInfos,
                                0);
     if ( !Instance )
-      sub_1D0F30C(classStatisticsInfos, v8);
+      sub_21FFECC(classStatisticsInfos, v10);
     CommonUI__OpenClassBoardEffectListDialog(
       (CommonUI_o *)Instance,
       1,
@@ -190,29 +196,29 @@ void ClassCompatibilityInfoDialog__OnClickClassBoard(ClassCompatibilityInfoDialo
 void ClassCompatibilityInfoDialog__OnClickClose(ClassCompatibilityInfoDialog_o *this, const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *classBoardButton; // x0
-  int32_t isActiveAndEnabled; // w20
+  bool isActiveAndEnabled; // w20
   _QWORD *v5; // x8
   System_Reflection_MethodBase_o *v6; // x0
   struct System_Action_o **p_callbackFunc; // x19
   struct System_Action_o *v8; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4E71099 & 1) == 0 )
+  if ( (byte_5931D2C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ClassCompatibilityInfoDialog_OnClickClose__);
-    byte_4E71099 = 1;
+    sub_21FFC50(&Method_ClassCompatibilityInfoDialog_OnClickClose__);
+    byte_5931D2C = 1;
   }
   if ( this->fields.state == 2 )
   {
     classBoardButton = (UnityEngine_Behaviour_o *)this->fields.classBoardButton;
     this->fields.state = 3;
     if ( !classBoardButton )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
     isActiveAndEnabled = UnityEngine_Behaviour__get_isActiveAndEnabled(classBoardButton, 0);
     v5 = Method_ClassCompatibilityInfoDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassCompatibilityInfoDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1D0F0CC(Method_ClassCompatibilityInfoDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
+      v5 = (_QWORD *)sub_21FFC68(Method_ClassCompatibilityInfoDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, isActiveAndEnabled, 0, 0);
     callbackFunc = this->fields.callbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
@@ -220,7 +226,7 @@ void ClassCompatibilityInfoDialog__OnClickClose(ClassCompatibilityInfoDialog_o *
     if ( callbackFunc )
     {
       *p_callbackFunc = 0;
-      sub_1D0F058(p_callbackFunc, 0);
+      sub_21FFBF4(p_callbackFunc, 0);
       ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
     }
   }
@@ -234,74 +240,86 @@ void ClassCompatibilityInfoDialog__Open(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x2
   UILabel_o *closeLabel; // x20
+  __int64 v10; // x1
+  __int64 v11; // x2
   UISprite_o *compatibilitySprite; // x20
-  BalanceConfig_c *v9; // x0
+  __int64 v13; // x1
+  __int64 v14; // x2
+  BalanceConfig_c *v15; // x0
   int32_t ClassBoardReleaseQuestId; // w20
-  char v11; // w20
-  UnityEngine_GameObject_o *v12; // x21
-  ClassCompatibilityInfoDialog_c *v13; // x8
-  float *p_CLOSE_BUTTON_DEFAULT_POSITION_X; // x8
+  bool IsQuestClear_47254560; // w8
+  __int64 v18; // x1
+  __int64 v19; // x2
+  UnityEngine_GameObject_o *v20; // x20
+  ClassCompatibilityInfoDialog_c *v21; // x8
+  __int64 v22; // x1
+  __int64 v23; // x2
   UILabel_o *classBoardLabel; // x20
-  System_Action_o *v16; // x20
-  const MethodInfo *v17; // x4
+  __int64 v25; // x1
+  __int64 v26; // x2
+  UnityEngine_GameObject_o *v27; // x20
+  ClassCompatibilityInfoDialog_c *v28; // x8
+  System_Action_o *v29; // x20
+  const MethodInfo *v30; // x4
 
-  if ( (byte_4E71097 & 1) == 0 )
+  if ( (byte_5931D2A & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&Method_ClassCompatibilityInfoDialog_EndOpen__);
-    sub_1D0F0B4(&ClassCompatibilityInfoDialog_TypeInfo);
-    sub_1D0F0B4(&CondType_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3422/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4E71097 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&Method_ClassCompatibilityInfoDialog_EndOpen__);
+    sub_21FFC50(&ClassCompatibilityInfoDialog_TypeInfo);
+    sub_21FFC50(&CondType_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3521/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_5931D2A = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1D0F058(&this->fields.callbackFunc, callback);
+    sub_21FFBF4(&this->fields.callbackFunc, callback);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( gameObject )
     {
       UnityEngine_GameObject__SetActive(gameObject, 1, 0);
       closeLabel = this->fields.closeLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7, v8);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
       if ( closeLabel )
       {
         UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
         compatibilitySprite = this->fields.compatibilitySprite;
-        if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetClassChart_41960220(compatibilitySprite, 0);
-        v9 = BalanceConfig_TypeInfo;
-        if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+        if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v10, v11);
+        AtlasManager__SetClassChart_47531336(compatibilitySprite, 0);
+        v15 = BalanceConfig_TypeInfo;
+        if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          v9 = BalanceConfig_TypeInfo;
+          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v13, v14);
+          v15 = BalanceConfig_TypeInfo;
         }
-        ClassBoardReleaseQuestId = v9->static_fields->ClassBoardReleaseQuestId;
-        if ( !CondType_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)CondType__IsQuestClear_41684364(ClassBoardReleaseQuestId, -1, 0, 0);
-        if ( this->fields.closeButton )
+        ClassBoardReleaseQuestId = v15->static_fields->ClassBoardReleaseQuestId;
+        if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v13, v14);
+        IsQuestClear_47254560 = CondType__IsQuestClear_47254560(ClassBoardReleaseQuestId, -1, 0, 0);
+        gameObject = (UnityEngine_GameObject_o *)this->fields.closeButton;
+        if ( IsQuestClear_47254560 )
         {
-          v11 = (char)gameObject;
-          v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.closeButton, 0);
-          v13 = ClassCompatibilityInfoDialog_TypeInfo;
-          if ( !ClassCompatibilityInfoDialog_TypeInfo->_2.cctor_finished )
+          if ( gameObject )
           {
-            j_il2cpp_runtime_class_init_0(ClassCompatibilityInfoDialog_TypeInfo);
-            v13 = ClassCompatibilityInfoDialog_TypeInfo;
-          }
-          p_CLOSE_BUTTON_DEFAULT_POSITION_X = &v13->static_fields->CLOSE_BUTTON_DEFAULT_POSITION_X;
-          if ( (v11 & 1) != 0 )
-          {
-            GameObjectExtensions__SetLocalPositionX(v12, p_CLOSE_BUTTON_DEFAULT_POSITION_X[1], 0);
+            v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+            v21 = ClassCompatibilityInfoDialog_TypeInfo;
+            if ( !*(&ClassCompatibilityInfoDialog_TypeInfo->_2.cctor_finished + 1) )
+            {
+              j_il2cpp_runtime_class_init_0(ClassCompatibilityInfoDialog_TypeInfo, v18, v19);
+              v21 = ClassCompatibilityInfoDialog_TypeInfo;
+            }
+            GameObjectExtensions__SetLocalPositionX(v20, v21->static_fields->CLOSE_BUTTON_CLASS_BOARD_POSITION_X, 0);
             gameObject = (UnityEngine_GameObject_o *)this->fields.closeLabel;
             if ( gameObject )
             {
@@ -317,51 +335,58 @@ void ClassCompatibilityInfoDialog__Open(
                 {
                   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
                   classBoardLabel = this->fields.classBoardLabel;
-                  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v22, v23);
                   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_3422/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/,
+                                                             (System_String_o *)StringLiteral_3521/*"CLASS_BOARD_EFFECT_DISP_BUTTON"*/,
                                                              0);
                   if ( classBoardLabel )
                   {
                     UILabel__set_text(classBoardLabel, (System_String_o *)gameObject, 0);
-LABEL_29:
+LABEL_32:
                     this->fields.state = 1;
-                    v16 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-                    System_Action___ctor(v16, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndOpen__, 0);
-                    BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0, v17);
+                    v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                    System_Action___ctor(v29, (Il2CppObject *)this, Method_ClassCompatibilityInfoDialog_EndOpen__, 0);
+                    BaseDialog__Open((BaseDialog_o *)this, v29, 0, 0, v30);
                     return;
                   }
                 }
               }
             }
           }
-          else
+        }
+        else if ( gameObject )
+        {
+          v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          v28 = ClassCompatibilityInfoDialog_TypeInfo;
+          if ( !*(&ClassCompatibilityInfoDialog_TypeInfo->_2.cctor_finished + 1) )
           {
-            GameObjectExtensions__SetLocalPositionX(v12, *p_CLOSE_BUTTON_DEFAULT_POSITION_X, 0);
-            gameObject = (UnityEngine_GameObject_o *)this->fields.closeLabel;
+            j_il2cpp_runtime_class_init_0(ClassCompatibilityInfoDialog_TypeInfo, v25, v26);
+            v28 = ClassCompatibilityInfoDialog_TypeInfo;
+          }
+          GameObjectExtensions__SetLocalPositionX(v27, v28->static_fields->CLOSE_BUTTON_DEFAULT_POSITION_X, 0);
+          gameObject = (UnityEngine_GameObject_o *)this->fields.closeLabel;
+          if ( gameObject )
+          {
+            UILabel__set_fontSize(
+              (UILabel_o *)gameObject,
+              ClassCompatibilityInfoDialog_TypeInfo->static_fields->CLOSE_BUTTON_DEFAULT_FONT_SIZE,
+              0);
+            gameObject = (UnityEngine_GameObject_o *)this->fields.classBoardButton;
             if ( gameObject )
             {
-              UILabel__set_fontSize(
-                (UILabel_o *)gameObject,
-                ClassCompatibilityInfoDialog_TypeInfo->static_fields->CLOSE_BUTTON_DEFAULT_FONT_SIZE,
-                0);
-              gameObject = (UnityEngine_GameObject_o *)this->fields.classBoardButton;
+              gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
               if ( gameObject )
               {
-                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-                if ( gameObject )
-                {
-                  UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-                  goto LABEL_29;
-                }
+                UnityEngine_GameObject__SetActive(gameObject, 0, 0);
+                goto LABEL_32;
               }
             }
           }
         }
       }
     }
-    sub_1D0F30C(gameObject, v6);
+    sub_21FFECC(gameObject, v6);
   }
 }
 
@@ -370,10 +395,10 @@ System_String_o *ClassCompatibilityInfoDialog__get_closeBtnPath(
         ClassCompatibilityInfoDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E7109C & 1) == 0 )
+  if ( (byte_5931D2F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_7740/*"InfoDialog/CloseButton"*/);
-    byte_4E7109C = 1;
+    sub_21FFC50(&StringLiteral_7962/*"InfoDialog/CloseButton"*/);
+    byte_5931D2F = 1;
   }
-  return (System_String_o *)StringLiteral_7740/*"InfoDialog/CloseButton"*/;
+  return (System_String_o *)StringLiteral_7962/*"InfoDialog/CloseButton"*/;
 }

@@ -1,27 +1,27 @@
 void WarBoardSquareEntity___ctor(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E788AD & 1) == 0 )
+  if ( (byte_59398EF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E788AD = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59398EF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardSquareEntity__CreatePK(int32_t warBoardId, int32_t squareIndex, const MethodInfo *method)
 {
-  if ( (byte_4E788AC & 1) == 0 )
+  if ( (byte_59398EE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E788AC = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59398EE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            warBoardId,
            squareIndex,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,31 +35,31 @@ System_String_o *WarBoardSquareEntity__CreatePrimaryKey(WarBoardSquareEntity_o *
 
 UnityEngine_Vector3_o WarBoardSquareEntity__GetPosition(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_3A88EAC *v2; // x2
+  const MethodInfo_45B5018 *v2; // x2
   struct System_Nullable_Vector3__o v4; // [xsp+0h] [xbp-30h] BYREF
   System_Nullable_Vector3__o v5; // 0:x0.16
   System_Nullable_Vector3__o v6; // 0:x0.16
   UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E788AB & 1) == 0 )
+  if ( (byte_59398ED & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_Vector3___ctor__);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_Value__);
-    byte_4E788AB = 1;
+    sub_21FFC50(&Method_System_Nullable_Vector3___ctor__);
+    sub_21FFC50(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_21FFC50(&Method_System_Nullable_Vector3__get_Value__);
+    byte_59398ED = 1;
   }
   if ( !this->fields.position.fields.hasValue )
   {
+    v7.fields.z = 0.0;
     *(_QWORD *)&v5.fields.hasValue = &v4;
     v7.fields.x = (float)this->fields.positionX;
-    *(_QWORD *)&v5.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
     v7.fields.y = (float)-this->fields.positionY;
-    v7.fields.z = 0.0;
     v4 = (struct System_Nullable_Vector3__o)0LL;
+    *(_QWORD *)&v5.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
     System_Nullable_Vector3____ctor(v5, v7, v2);
     this->fields.position = v4;
   }
   *(_QWORD *)&v6.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
   *(_QWORD *)&v6.fields.hasValue = &this->fields;
-  return System_Nullable_Vector3___get_Value(v6, (const MethodInfo_3A88EC8 *)v2);
+  return System_Nullable_Vector3___get_Value(v6, (const MethodInfo_45B5034 *)v2);
 }

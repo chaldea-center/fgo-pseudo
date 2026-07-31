@@ -17,7 +17,7 @@ void BranchSkillLabelComponent__SetActive(BranchSkillLabelComponent_o *this, boo
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
 }
 
@@ -33,17 +33,17 @@ void BranchSkillLabelComponent__SetData(
   UISprite_o *buffIcon; // x22
   bool v10; // w1
 
-  if ( (byte_4E7B038 & 1) == 0 )
+  if ( (byte_593C17F & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    byte_4E7B038 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_593C17F = 1;
   }
   BranchSkillLabelComponent__SetActive(this, 1, (const MethodInfo *)detailText);
   buffIcon = this->fields.buffIcon;
   if ( buffId )
   {
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v8);
     AtlasManager__SetSBuffIcon(buffIcon, buffId, 0);
     gameObject = (UnityEngine_Component_o *)this->fields.buffIcon;
     if ( gameObject )
@@ -56,7 +56,7 @@ void BranchSkillLabelComponent__SetData(
       }
     }
 LABEL_14:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
   if ( !buffIcon )
     goto LABEL_14;

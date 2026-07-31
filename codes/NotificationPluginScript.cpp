@@ -11,7 +11,7 @@ void NotificationPluginScript__ClearAll(const MethodInfo *method)
 
   v1 = NotificationPluginScript__Setup(method);
   if ( !v1 )
-    sub_1D0F30C(0, v2);
+    sub_21FFECC(0, v2);
   ((void (__fastcall *)(LocalNotificationService_o *, const MethodInfo *))v1->klass->vtable._6_CancelAll.methodPtr)(
     v1,
     v1->klass->vtable._6_CancelAll.method);
@@ -25,7 +25,7 @@ void NotificationPluginScript__ClearLocalNotification(System_String_o *key, cons
 
   v3 = NotificationPluginScript__Setup((const MethodInfo *)key);
   if ( !v3 )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, const MethodInfo *))v3->klass->vtable._5_Cancel.methodPtr)(
     v3,
     key,
@@ -45,7 +45,7 @@ void NotificationPluginScript__SetLocalNotification(
 
   v7 = NotificationPluginScript__Setup(*(const MethodInfo **)&interval);
   if ( !v7 )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, System_String_o *, _QWORD, const MethodInfo *))v7->klass->vtable._4_Schedule.methodPtr)(
     v7,
     key,
@@ -60,27 +60,27 @@ LocalNotificationService_o *NotificationPluginScript__Setup(const MethodInfo *me
   LocalNotificationService_o *result; // x0
   LocalNotificationServiceAndroid_o *v2; // x19
   const MethodInfo *v3; // x1
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E790CD & 1) == 0 )
+  if ( (byte_593A121 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalNotificationServiceAndroid_TypeInfo);
-    sub_1D0F0B4(&NotificationPluginScript_TypeInfo);
-    byte_4E790CD = 1;
+    sub_21FFC50(&LocalNotificationServiceAndroid_TypeInfo);
+    sub_21FFC50(&NotificationPluginScript_TypeInfo);
+    byte_593A121 = 1;
   }
   result = NotificationPluginScript_TypeInfo->static_fields->_service;
   if ( !result )
   {
-    v2 = (LocalNotificationServiceAndroid_o *)sub_1D0F300(LocalNotificationServiceAndroid_TypeInfo);
+    v2 = (LocalNotificationServiceAndroid_o *)sub_21FFEBC(LocalNotificationServiceAndroid_TypeInfo);
     LocalNotificationServiceAndroid___ctor(v2, v3);
     NotificationPluginScript_TypeInfo->static_fields->_service = (struct LocalNotificationService_o *)v2;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)NotificationPluginScript_TypeInfo->static_fields,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)NotificationPluginScript_TypeInfo->static_fields,
       (int32_t)v2,
       v4,
       v5,

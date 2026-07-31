@@ -1,38 +1,38 @@
 void UIMultiTouch___ctor(UIMultiTouch_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E78F90 & 1) == 0 )
+  if ( (byte_5939FDF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4E78F90 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_5939FDF = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragUpdate = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClick, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.releaseRange = 10.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -46,57 +46,65 @@ void UIMultiTouch__Init(UIMultiTouch_o *this, const MethodInfo *method)
 
 void UIMultiTouch__OnClick(UIMultiTouch_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
 
-  if ( (byte_4E78F8F & 1) == 0 )
+  if ( (byte_5939FDE & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    byte_4E78F8F = 1;
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    byte_5939FDE = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
     onClick = this->fields.onClick;
-    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_50620804(onClick, 0);
+    if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v3);
+    EventDelegate__Execute_56080488(onClick, 0);
   }
 }
 
 
 void UIMultiTouch__OnDrag(UIMultiTouch_o *this, UnityEngine_Vector2_o v, const MethodInfo *method)
 {
-  float releaseRange; // s8
-  UICamera_c *v5; // x0
-  struct UICamera_StaticFields *static_fields; // x8
-  float v7; // s0
-  float v8; // s2
+  __int64 v4; // x1
+  int32x4_t v5; // q3
+  UICamera_c *v6; // x0
+  float32x4_t v7; // q1
+  float32x4_t v8; // q0
+  int32x4_t v9; // q2
+  int32x4_t v10; // q0
+  int32x4_t v11; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4E78F8E & 1) == 0 )
+  if ( (byte_5939FDD & 1) == 0 )
   {
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E78F8E = 1;
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_5939FDD = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
-    releaseRange = this->fields.releaseRange;
-    if ( releaseRange >= 0.0 )
+    v5.n128_u32[0] = LODWORD(this->fields.releaseRange);
+    if ( v5.n128_f32[0] >= 0.0 )
     {
-      v5 = UICamera_TypeInfo;
-      if ( !UICamera_TypeInfo->_2.cctor_finished )
+      v6 = UICamera_TypeInfo;
+      if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-        v5 = UICamera_TypeInfo;
+        v11 = v5;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v4);
+        v5 = v11;
+        v6 = UICamera_TypeInfo;
       }
-      static_fields = v5->static_fields;
-      v7 = static_fields->lastTouchPosition.fields.y - this->fields.startPosition.fields.y;
-      if ( v7 > releaseRange
-        || (v8 = static_fields->lastTouchPosition.fields.x - this->fields.startPosition.fields.x,
-            v8 < (float)-releaseRange)
-        || v8 > releaseRange
-        || v7 < (float)-releaseRange )
-      {
+      v7.n128_u64[0] = vsub_f32(
+                         (float32x2_t)v6->static_fields->lastTouchPosition,
+                         (float32x2_t)this->fields.startPosition).n64_u64[0];
+      v5.n128_f32[1] = -v5.n128_f32[0];
+      v7.n128_u64[1] = v7.n128_u64[0];
+      v8 = vzip1q_s32(v5, v5);
+      v9 = vcgtq_f32(v7, v8);
+      v10 = vcgtq_f32(v8, v7);
+      v7.n128_u32[0] = vmovn_s32(v9).n64_u32[0];
+      v7.n128_u32[1] = vmovn_s32(v10).n64_u32[1];
+      if ( (vmaxv_u16(vcltz_s16(vshl_n_s16((int16x4_t)v7.n128_u64[0], 0xFu))) & 1) != 0 )
         this->fields.isRangeOver = 1;
-      }
     }
   }
 }
@@ -112,75 +120,75 @@ void UIMultiTouch__OnEnable(UIMultiTouch_o *this, const MethodInfo *method)
 void UIMultiTouch__Update(UIMultiTouch_o *this, const MethodInfo *method)
 {
   int32_t touchCount; // w0
-  int v4; // w20
-  int32_t *p_touchMax; // x21
-  int32_t v6; // w8
+  __int64 v4; // x1
+  int32_t v5; // w20
+  int32_t touchMax; // w8
   UICamera_c *v7; // x0
   struct UnityEngine_Vector2_o lastTouchPosition; // x9
   System_Collections_Generic_List_EventDelegate__o *onDragUpdate; // x19
 
-  if ( (byte_4E78F8D & 1) == 0 )
+  if ( (byte_5939FDC & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E78F8D = 1;
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_5939FDC = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     touchCount = UnityEngine_Input__get_touchCount(0);
     if ( touchCount )
     {
-      v4 = touchCount;
-      p_touchMax = &this->fields.touchMax;
+      v5 = touchCount;
       if ( touchCount < 1 )
       {
 LABEL_6:
-        *p_touchMax = 0;
-LABEL_20:
+        this->fields.touchMax = 0;
+LABEL_19:
         onDragUpdate = this->fields.onDragUpdate;
-        if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Execute_50620804(onDragUpdate, 0);
+        if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v4);
+        EventDelegate__Execute_56080488(onDragUpdate, 0);
         return;
       }
     }
     else
     {
-      if ( !UnityEngine_Input__GetMouseButton(0, 0)
-        && !UnityEngine_Input__GetMouseButton(1, 0)
-        && !UnityEngine_Input__GetMouseButton(2, 0) )
+      if ( !UnityEngine_Input__GetMouseButton(0, 0) )
       {
-        p_touchMax = &this->fields.touchMax;
-        goto LABEL_6;
+        v5 = 1;
+        if ( UnityEngine_Input__GetMouseButton(1, 0) )
+          goto LABEL_11;
+        if ( !UnityEngine_Input__GetMouseButton(2, 0) )
+          goto LABEL_6;
       }
-      p_touchMax = &this->fields.touchMax;
-      v4 = 1;
+      v5 = 1;
     }
-    v6 = *p_touchMax;
-    if ( !*p_touchMax )
+LABEL_11:
+    touchMax = this->fields.touchMax;
+    if ( !touchMax )
     {
       v7 = UICamera_TypeInfo;
-      if ( UICamera_TypeInfo->_2.cctor_finished )
+      if ( *(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        v6 = 0;
+        touchMax = 0;
       }
       else
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v4);
         v7 = UICamera_TypeInfo;
-        v6 = *p_touchMax;
+        touchMax = this->fields.touchMax;
       }
       lastTouchPosition = v7->static_fields->lastTouchPosition;
       this->fields.isRangeOver = 0;
       this->fields.startPosition = lastTouchPosition;
     }
-    if ( v4 > v6 )
+    if ( v5 > touchMax )
     {
-      *p_touchMax = v4;
-      if ( v4 >= 2 )
+      this->fields.touchMax = v5;
+      if ( (unsigned int)v5 >= 2 )
         this->fields.isRangeOver = 1;
     }
-    goto LABEL_20;
+    goto LABEL_19;
   }
 }
 

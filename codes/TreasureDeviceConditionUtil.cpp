@@ -8,10 +8,10 @@ bool TreasureDeviceConditionUtil__HasEnoughCriticalStar(
   const MethodInfo *v6; // x3
 
   v4 = servantData;
-  if ( (byte_4E7ABEA & 1) == 0 )
+  if ( (byte_593BC4F & 1) == 0 )
   {
-    servantData = (BattleServantData_o *)sub_1D0F0B4(&StringLiteral_12523/*"STAR_HIGHER"*/);
-    byte_4E7ABEA = 1;
+    servantData = (BattleServantData_o *)sub_21FFC50(&StringLiteral_12842/*"STAR_HIGHER"*/);
+    byte_593BC4F = 1;
   }
   if ( !v4 )
     goto LABEL_11;
@@ -19,14 +19,14 @@ bool TreasureDeviceConditionUtil__HasEnoughCriticalStar(
     return 1;
   if ( !data || (servantData = (BattleServantData_o *)data->fields.changePhaseNotify) == 0 )
 LABEL_11:
-    sub_1D0F30C(servantData, data);
+    sub_21FFECC(servantData, data);
   if ( ChangeBattlePhaseNotify__get_Phase((ChangeBattlePhaseNotify_o *)servantData, (const MethodInfo *)data) != 3 )
   {
     TDvcLv = BattleServantData__get_TDvcLv(v4, 0);
     if ( TDvcLv )
       return TreasureDeviceConditionUtil__HigherCondition(
                TDvcLv->fields.script,
-               (System_String_o *)StringLiteral_12523/*"STAR_HIGHER"*/,
+               (System_String_o *)StringLiteral_12842/*"STAR_HIGHER"*/,
                data->fields.totalCriticalStars,
                v6);
   }
@@ -45,17 +45,18 @@ bool TreasureDeviceConditionUtil__HigherCondition(
   System_String_o *v9; // x0
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E7ABE9 & 1) == 0 )
+  if ( (byte_593BC4E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_4E7ABE9 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_593BC4E = 1;
   }
+  result = 0;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 1;
   }
@@ -63,9 +64,9 @@ bool TreasureDeviceConditionUtil__HigherCondition(
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   v9 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
                             Item,
                             Item->klass->vtable[3].method);

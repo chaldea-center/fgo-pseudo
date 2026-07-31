@@ -1,13 +1,13 @@
 void QuestUseItemPickupEntity___ctor(QuestUseItemPickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77E97 & 1) == 0 )
+  if ( (byte_5938EB8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77E97 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_5938EB8 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,16 +19,19 @@ int32_t QuestUseItemPickupEntity__CreatePrimaryKey(QuestUseItemPickupEntity_o *t
 
 bool QuestUseItemPickupEntity__IsOpen(QuestUseItemPickupEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4E77E96 & 1) == 0 )
+  int64_t Time; // x20
+
+  Time = nowTime;
+  if ( (byte_5938EB7 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E77E96 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5938EB7 = 1;
   }
-  if ( !nowTime )
+  if ( !Time )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    nowTime = NetworkManager__getTime(0);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, nowTime);
+    Time = NetworkManager__getTime(0);
   }
-  return this->fields.startedAt <= nowTime && nowTime <= this->fields.endedAt;
+  return this->fields.startedAt <= Time && Time <= this->fields.endedAt;
 }

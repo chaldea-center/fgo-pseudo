@@ -1,13 +1,13 @@
 void ServantTreasureDvcEntity___ctor(ServantTreasureDvcEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78178 & 1) == 0 )
+  if ( (byte_5939194 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78178 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5939194 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ServantTreasureDvcEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4E78173 & 1) == 0 )
+  if ( (byte_593918F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E78173 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_593918F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -59,42 +59,44 @@ bool ServantTreasureDvcEntity__getEffectExplanation(
   Il2CppObject *Instance; // x0
   __int64 v19; // x1
   Il2CppObject *Entity; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  LocalizationManager_c *v28; // x0
+  __int64 v21; // x1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  LocalizationManager_c *v29; // x0
   System_String_o *unknownNameText; // x1
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
+  int32_t v31; // w1
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
 
-  if ( (byte_4E78176 & 1) == 0 )
+  if ( (byte_5939192 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78176 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_21FFC50(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939192 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v19);
+    sub_21FFECC(Instance, v19);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.treasureDeviceId,
-             (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+             (const MethodInfo_3EDD388 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   *tdCardId = this->fields.cardId;
   *tdStrengthStatus = this->fields.strengthStatus;
   *treasureDeviceNum = this->fields.treasureDeviceNum;
@@ -107,24 +109,25 @@ bool ServantTreasureDvcEntity__getEffectExplanation(
              tdGuageCount,
              tdLv,
              0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4E72907 )
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
+  if ( !byte_593385D )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E72907 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_593385D = 1;
   }
-  v28 = LocalizationManager_TypeInfo;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+  v29 = LocalizationManager_TypeInfo;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v28 = LocalizationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
+    v29 = LocalizationManager_TypeInfo;
   }
-  unknownNameText = v28->static_fields->unknownNameText;
+  unknownNameText = v29->static_fields->unknownNameText;
   *tdName = unknownNameText;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)tdName, (int32_t)unknownNameText, v21, v22, v23, v24, v25, v26);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)tdName, (int32_t)unknownNameText, v22, v23, v24, v25, v26, v27);
+  v31 = (int)StringLiteral_1/*""*/;
   *tdExplanation = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)tdExplanation, StringLiteral_1/*""*/, v30, v31, v32, v33, v34, v35);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)tdExplanation, v31, v32, v33, v34, v35, v36, v37);
   *maxLv = 0;
   *tdGuageCount = 0;
   return 0;
@@ -137,25 +140,25 @@ int32_t ServantTreasureDvcEntity__getLevelMax(ServantTreasureDvcEntity_o *this, 
   __int64 v4; // x1
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4E78174 & 1) == 0 )
+  if ( (byte_5939190 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E78174 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_21FFC50(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5939190 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.treasureDeviceId,
-             (const MethodInfo_3535B7C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+             (const MethodInfo_3EDD388 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( Entity )
     LODWORD(Entity) = Entity[3].klass;
   return (int)Entity;
@@ -168,22 +171,22 @@ bool ServantTreasureDvcEntity__get_IsForcedOpenEffectWhenRankUp(
 {
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_4E78177 & 1) == 0 )
+  if ( (byte_5939193 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4E78177 = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_5939193 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
     v3 = BalanceConfig_TypeInfo;
   }
   return System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v3->static_fields->TreasureDevicesForcedOpenEffect,
            this->fields.treasureDeviceId,
-           (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
 }
 
 
@@ -204,12 +207,12 @@ bool ServantTreasureDvcEntity__isUse(
   int condQuestId; // w23
   int32_t condQuestPhase; // w24
 
-  if ( (byte_4E78175 & 1) == 0 )
+  if ( (byte_5939191 & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E78175 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5939191 = 1;
   }
   if ( this->fields.condLv <= svtLv && this->fields.condFriendshipRank <= friendshipRank )
   {
@@ -221,8 +224,8 @@ bool ServantTreasureDvcEntity__isUse(
     else
     {
       condQuestPhase = this->fields.condQuestPhase;
-      if ( !CondType_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+      if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CondType_TypeInfo, userId);
       IsQuestPhaseClear = CondType__IsQuestPhaseClear(userId, condQuestId, condQuestPhase, beforeClearQuestId, 0, 0);
     }
   }
@@ -230,13 +233,13 @@ bool ServantTreasureDvcEntity__isUse(
   {
     IsQuestPhaseClear = 0;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantTreasureDeviceReleaseMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v16);
+    sub_21FFECC(Instance, v16);
   }
   return ServantTreasureDeviceReleaseMaster__isUse(
            (ServantTreasureDeviceReleaseMaster_o *)Instance,

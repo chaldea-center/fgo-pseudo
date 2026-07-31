@@ -3,10 +3,10 @@ void FSAutoScale___ctor(FSAutoScale_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4E70C9E )
+  if ( !byte_5931945 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C9E = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931945 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->oneVector.fields.z;
@@ -34,7 +34,7 @@ void FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method)
         y = localScale.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1D0F30C(transform, v4);
+    sub_21FFECC(transform, v4);
   }
   v9 = UnityEngine_Transform__get_localScale(transform, 0);
   this->fields.defaultScale.fields.x = v5;
@@ -48,34 +48,32 @@ void FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method)
 void FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *method)
 {
   int32_t width; // w20
-  float v4; // s9
+  float v4; // s8
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
   float z; // s2
-  float y; // s1
-  float x; // s0 OVERLAPPED
+  unsigned __int64 v8; // d0 OVERLAPPED
+  int v9; // s1
 
   width = UnityEngine_Screen__get_width(0);
   v4 = (float)width / (float)UnityEngine_Screen__get_height(0);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( v4 >= 1.7778 )
   {
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( transform )
     {
-      y = this->fields.defaultScale.fields.y;
       z = this->fields.defaultScale.fields.z;
-      x = this->fields.defaultScale.fields.x;
+      v8 = *(_QWORD *)&this->fields.defaultScale.fields.x;
       goto LABEL_6;
     }
 LABEL_7:
-    sub_1D0F30C(transform, v6);
+    sub_21FFECC(transform, v6);
   }
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_7;
   z = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.z;
-  y = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.y;
-  x = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.x;
+  v8 = vmul_n_f32(*(float32x2_t *)&this->fields.defaultScale.fields.x, v4 / 1.7778).n64_u64[0];
 LABEL_6:
-  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&x, 0);
+  v9 = HIDWORD(v8);
+  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v8, 0);
 }

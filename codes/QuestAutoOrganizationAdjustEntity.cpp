@@ -1,13 +1,13 @@
 void QuestAutoOrganizationAdjustEntity___ctor(QuestAutoOrganizationAdjustEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77C97 & 1) == 0 )
+  if ( (byte_5938CB4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77C97 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_5938CB4 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -50,7 +50,7 @@ float QuestAutoOrganizationAdjustEntity__GetAdjustRatePerThousand(
 }
 
 
-float QuestAutoOrganizationAdjustEntity__GetAdjustRate_43830260(
+float QuestAutoOrganizationAdjustEntity__GetAdjustRate_49416112(
         QuestAutoOrganizationAdjustEntity_o *this,
         System_Int32_array *individualities,
         const MethodInfo *method)
@@ -58,15 +58,15 @@ float QuestAutoOrganizationAdjustEntity__GetAdjustRate_43830260(
   bool v5; // w0
   float result; // s0
 
-  if ( (byte_4E77C96 & 1) == 0 )
+  if ( (byte_5938CB3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4E77C96 = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_5938CB3 = 1;
   }
   v5 = System_Linq_Enumerable__Contains_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)individualities,
          this->fields.individuality,
-         (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
+         (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
   result = 1.0;
   if ( v5 )
     return (float)this->fields.adjustRate / 1000.0;
@@ -74,6 +74,7 @@ float QuestAutoOrganizationAdjustEntity__GetAdjustRate_43830260(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool QuestAutoOrganizationAdjustEntity__IsMatchingIndividualityBySvtId(
         QuestAutoOrganizationAdjustEntity_o *this,
         int32_t svtId,
@@ -81,33 +82,35 @@ bool QuestAutoOrganizationAdjustEntity__IsMatchingIndividualityBySvtId(
         int32_t dispLimitCount,
         const MethodInfo *method)
 {
+  int v9; // w8
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
+  __int64 v11; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E77C95 & 1) == 0 )
+  if ( (byte_5938CB2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    byte_4E77C95 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    byte_5938CB2 = 1;
   }
+  v9 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantMaster___);
+  if ( !v9 )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&svtId);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           svtId,
-          (const MethodInfo_3535BC8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
 LABEL_11:
-    sub_1D0F30C(Master_object, v10);
+    sub_21FFECC(Master_object, v11);
   return ServantEntity__IsIndividuality(
            (ServantEntity_o *)entity,
            limitCount,

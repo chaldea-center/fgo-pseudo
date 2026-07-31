@@ -3,16 +3,16 @@ void SubmarineLightenSpotPerformance___ctor(
         SrcSpotBasePrefab_o *spot,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0);
   this->fields.spot = spot;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -21,48 +21,50 @@ System_Collections_IEnumerator_o *SubmarineLightenSpotPerformance__Execute(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E73F24 & 1) == 0 )
+  if ( (byte_5934E5C & 1) == 0 )
   {
-    sub_1D0F0B4(&SubmarineLightenSpotPerformance__Execute_d__4_TypeInfo);
-    byte_4E73F24 = 1;
+    sub_21FFC50(&SubmarineLightenSpotPerformance__Execute_d__4_TypeInfo);
+    byte_5934E5C = 1;
   }
-  v3 = sub_1D0F300(SubmarineLightenSpotPerformance__Execute_d__4_TypeInfo);
+  v3 = sub_21FFEBC(SubmarineLightenSpotPerformance__Execute_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
 void SubmarineLightenSpotPerformance__OnStart(SubmarineLightenSpotPerformance_o *this, const MethodInfo *method)
 {
+  System_Action_c *v3; // x0
   SrcSpotBasePrefab_o *spot; // x20
-  System_Action_o *v4; // x21
-  __int64 v5; // x0
-  __int64 v6; // x1
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4E73F23 & 1) == 0 )
+  if ( (byte_5934E5B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SubmarineLightenSpotPerformance__OnStart_b__3_0__);
-    byte_4E73F23 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SubmarineLightenSpotPerformance__OnStart_b__3_0__);
+    byte_5934E5B = 1;
   }
   SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0);
-  this->fields.spotAnimFinished = 0;
+  v3 = System_Action_TypeInfo;
   spot = this->fields.spot;
-  v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_SubmarineLightenSpotPerformance__OnStart_b__3_0__, 0);
+  this->fields.spotAnimFinished = 0;
+  v5 = (System_Action_o *)sub_21FFEBC(v3);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineLightenSpotPerformance__OnStart_b__3_0__, 0);
   if ( !spot )
-    sub_1D0F30C(v5, v6);
-  SrcSpotBasePrefab__SetState(spot, 4, v4, 0);
+    sub_21FFECC(v6, v7);
+  SrcSpotBasePrefab__SetState(spot, 4, v5, 0);
 }
 
 
@@ -83,7 +85,7 @@ void SubmarineLightenSpotPerformance___OnStart_b__3_0(
 
   spot = this->fields.spot;
   if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0 )
-    sub_1D0F30C(spot, method);
+    sub_21FFECC(spot, method);
   mMapCtrl_SpotInfo->fields.dispType = 1;
   SrcSpotBasePrefab__SetTouchType(spot, 1, 0);
   this->fields.spotAnimFinished = 1;
@@ -104,49 +106,46 @@ bool SubmarineLightenSpotPerformance__Execute_d__4__MoveNext(
         SubmarineLightenSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
-  int32_t _1__state; // w8
-  bool result; // w0
+  int32_t _1__state; // w22
+  int32_t v4; // w8
   Il2CppObject *_4__this; // x20
   System_Func_bool__o *v6; // x21
   UnityEngine_WaitUntil_o *v7; // x20
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  int32_t v14; // w8
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E73F25 & 1) == 0 )
+  if ( (byte_5934E5D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Func_bool__TypeInfo);
-    sub_1D0F0B4(&Method_SubmarineLightenSpotPerformance__Execute_b__4_0__);
-    sub_1D0F0B4(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4E73F25 = 1;
+    sub_21FFC50(&System_Func_bool__TypeInfo);
+    sub_21FFC50(&Method_SubmarineLightenSpotPerformance__Execute_b__4_0__);
+    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
+    byte_5934E5D = 1;
   }
   _1__state = this->fields.__1__state;
-  result = 0;
-  if ( _1__state == 1 )
+  if ( !_1__state )
   {
-    v14 = -1;
-  }
-  else
-  {
-    if ( _1__state )
-      return result;
-    this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v6 = (System_Func_bool__o *)sub_1D0F300(System_Func_bool__TypeInfo);
+    this->fields.__1__state = -1;
+    v6 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v6, _4__this, Method_SubmarineLightenSpotPerformance__Execute_b__4_0__, 0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_1D0F300(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
-    v14 = 1;
-    result = 1;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    v4 = 1;
+    goto LABEL_7;
   }
-  this->fields.__1__state = v14;
-  return result;
+  if ( _1__state == 1 )
+  {
+    v4 = -1;
+LABEL_7:
+    this->fields.__1__state = v4;
+  }
+  return _1__state == 0;
 }
 
 
@@ -166,11 +165,11 @@ void __noreturn SubmarineLightenSpotPerformance__Execute_d__4__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_SubmarineLightenSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_SubmarineLightenSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

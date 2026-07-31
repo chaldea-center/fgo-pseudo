@@ -1,14 +1,14 @@
 void ShopReleaseMaster___ctor(ShopReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78236 & 1) == 0 )
+  if ( (byte_5939264 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string___ctor__);
-    byte_4E78236 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string___ctor__);
+    byte_5939264 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    124,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string___ctor__);
+    126,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string___ctor__);
 }
 
 
@@ -21,28 +21,27 @@ bool ShopReleaseMaster__CondClearCheck(
 {
   ShopReleaseEntity_array *EntitiyList; // x0
   const MethodInfo *v6; // x1
-  int max_length; // w9
-  int v8; // w10
-  ShopReleaseEntity_o *v9; // x8
+  int max_length; // w8
+  ShopReleaseEntity_array **i; // x9
 
   EntitiyList = ShopReleaseMaster__GetEntitiyList(this, shopId, *(const MethodInfo **)&kind);
   if ( !EntitiyList )
 LABEL_9:
-    sub_1D0F30C(EntitiyList, v6);
+    sub_21FFECC(EntitiyList, v6);
   max_length = EntitiyList->max_length;
   if ( max_length < 1 )
     return 1;
-  v8 = 0;
-  while ( 1 )
+  for ( i = (ShopReleaseEntity_array **)EntitiyList->m_Items; ; ++i )
   {
-    v9 = EntitiyList->m_Items[v8];
-    if ( !v9 )
+    EntitiyList = *i;
+    if ( !*i )
       goto LABEL_9;
-    if ( v9->fields.condType == kind )
-      return ShopReleaseEntity__IsCondEnable(EntitiyList->m_Items[v8], v6);
-    if ( max_length == ++v8 )
+    if ( HIDWORD(EntitiyList->bounds) == kind )
+      break;
+    if ( !--max_length )
       return 1;
   }
+  return ShopReleaseEntity__IsCondEnable((ShopReleaseEntity_o *)EntitiyList, v6);
 }
 
 
@@ -57,38 +56,38 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList(
   int32_t Count; // w21
   System_Collections_Generic_List_object__o *v7; // x22
   int32_t v8; // w23
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   struct System_Object_array *items; // x8
   _QWORD *v16; // x9
   __int64 size; // x10
   Il2CppClass **v18; // x0
 
   v3 = shopId;
-  if ( (byte_4E78237 & 1) == 0 )
+  if ( (byte_5939265 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
-    byte_4E78237 = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
+    byte_5939265 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
+            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
+  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
   if ( Count >= 1 )
   {
     v8 = 0;
@@ -100,7 +99,7 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v8,
-                                                                 (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
+                                                                 (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&shopId = list;
@@ -119,14 +118,14 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList(
             System_Collections_Generic_List_object___AddWithResize(
               v7,
               (Il2CppObject *)list,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
             v18 = &items->obj.klass + size;
             v7->fields._size = size + 1;
             v18[4] = *(Il2CppClass **)&shopId;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 4), shopId, v9, v10, v11, v12, v13, v14);
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), shopId, v9, v10, v11, v12, v13, v14);
           }
         }
       }
@@ -134,19 +133,19 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList(
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1D0F30C(list, *(_QWORD *)&shopId);
+    sub_21FFECC(list, *(_QWORD *)&shopId);
   }
 LABEL_15:
   if ( !v7 )
     goto LABEL_17;
   return (ShopReleaseEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v7,
-                                      (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
+                                      (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_44246984(
+ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_49832704(
         ShopReleaseMaster_o *this,
         int32_t shopId,
         bool isClosedDisp,
@@ -158,52 +157,53 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_44246984(
   int32_t Count; // w23
   System_Collections_Generic_List_object__o *v9; // x19
   int32_t v10; // w24
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   struct System_Object_array *items; // x8
   _QWORD *v18; // x9
   __int64 size; // x10
   Il2CppClass **v20; // x0
-  System_Comparison_T__o *v21; // x20
-  Il2CppObject *v22; // x21
-  struct ShopReleaseMaster___c_StaticFields *static_fields; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  struct ShopReleaseMaster___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__4_0; // x20
+  Il2CppObject *v23; // x21
+  struct ShopReleaseMaster___c_StaticFields *v24; // x0
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
 
   v4 = isClosedDisp;
   v5 = shopId;
-  if ( (byte_4E78238 & 1) == 0 )
+  if ( (byte_5939266 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
-    sub_1D0F0B4(&System_Comparison_ShopReleaseEntity__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity__Sort__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
-    sub_1D0F0B4(&Method_ShopReleaseMaster___c__GetEntitiyList_b__4_0__);
-    sub_1D0F0B4(&ShopReleaseMaster___c_TypeInfo);
-    byte_4E78238 = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
+    sub_21FFC50(&System_Comparison_ShopReleaseEntity__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity__Sort__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
+    sub_21FFC50(&Method_ShopReleaseMaster___c__GetEntitiyList_b__4_0__);
+    sub_21FFC50(&ShopReleaseMaster___c_TypeInfo);
+    byte_5939266 = 1;
   }
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
+            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Count__);
+  v9 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopReleaseEntity___ctor__);
   if ( Count >= 1 )
   {
     v10 = 0;
@@ -215,7 +215,7 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_44246984(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v10,
-               (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
+               (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_ShopReleaseEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&shopId = list;
@@ -234,14 +234,14 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_44246984(
             System_Collections_Generic_List_object___AddWithResize(
               v9,
               (Il2CppObject *)list,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v9->fields._size = size + 1;
             v20[4] = *(Il2CppClass **)&shopId;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v20 + 4), shopId, v11, v12, v13, v14, v15, v16);
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), shopId, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -249,39 +249,40 @@ ShopReleaseEntity_array *ShopReleaseMaster__GetEntitiyList_44246984(
         goto LABEL_16;
     }
 LABEL_24:
-    sub_1D0F30C(list, *(_QWORD *)&shopId);
+    sub_21FFECC(list, *(_QWORD *)&shopId);
   }
 LABEL_16:
   list = ShopReleaseMaster___c_TypeInfo;
-  if ( !ShopReleaseMaster___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&ShopReleaseMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ShopReleaseMaster___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(ShopReleaseMaster___c_TypeInfo, *(_QWORD *)&shopId);
     list = ShopReleaseMaster___c_TypeInfo;
   }
-  v21 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v21 )
+  static_fields = (struct ShopReleaseMaster___c_StaticFields *)*((_QWORD *)list + 23);
+  _9__4_0 = (System_Comparison_T__o *)static_fields->__9__4_0;
+  if ( !_9__4_0 )
   {
-    if ( !*((_DWORD *)list + 56) )
+    if ( !*((_DWORD *)list + 57) )
     {
-      j_il2cpp_runtime_class_init_0(list);
-      list = ShopReleaseMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(list, *(_QWORD *)&shopId);
+      static_fields = ShopReleaseMaster___c_TypeInfo->static_fields;
     }
-    v22 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v21 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_ShopReleaseEntity__TypeInfo);
-    System_Comparison_object____ctor(v21, v22, Method_ShopReleaseMaster___c__GetEntitiyList_b__4_0__, 0);
-    static_fields = ShopReleaseMaster___c_TypeInfo->static_fields;
-    static_fields->__9__4_0 = (struct System_Comparison_ShopReleaseEntity__o *)v21;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__4_0, (int32_t)v21, v24, v25, v26, v27, v28, v29);
+    v23 = (Il2CppObject *)static_fields->__9;
+    _9__4_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_ShopReleaseEntity__TypeInfo);
+    System_Comparison_object____ctor(_9__4_0, v23, Method_ShopReleaseMaster___c__GetEntitiyList_b__4_0__, 0);
+    v24 = ShopReleaseMaster___c_TypeInfo->static_fields;
+    v24->__9__4_0 = (struct System_Comparison_ShopReleaseEntity__o *)_9__4_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24->__9__4_0, (int32_t)_9__4_0, v25, v26, v27, v28, v29, v30);
   }
   if ( !v9 )
     goto LABEL_24;
-  System_Collections_Generic_List_object___Sort_60153556(
+  System_Collections_Generic_List_object___Sort_71636404(
     v9,
-    v21,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_ShopReleaseEntity__Sort__);
+    _9__4_0,
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_ShopReleaseEntity__Sort__);
   return (ShopReleaseEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v9,
-                                      (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
+                                      (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ShopReleaseEntity__ToArray__);
 }
 
 
@@ -295,46 +296,45 @@ ShopReleaseEntity_o *ShopReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E78234 & 1) == 0 )
+  if ( (byte_5939262 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__GetEntity__);
-    byte_4E78234 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__GetEntity__);
+    byte_5939262 = 1;
   }
   PK = (Il2CppObject *)ShopReleaseEntity__CreatePK(shopId, condType, priority, *(const MethodInfo **)&priority);
   return (ShopReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_353AADC *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__GetEntity__);
+                                  (const MethodInfo_3EE2044 *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__GetEntity__);
 }
 
 
 int32_t ShopReleaseMaster__GetPurchaseShop(ShopReleaseMaster_o *this, int32_t shopId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  ShopReleaseEntity_array *EntitiyList_44246984; // x0
+  ShopReleaseEntity_array *EntitiyList_49832704; // x0
   __int64 v5; // x1
   int max_length; // w8
-  int v7; // w9
+  ShopReleaseEntity_o **i; // x9
   ShopReleaseEntity_o *v8; // x10
   struct System_Int32_array *condValues; // x8
   il2cpp_array_size_t v10; // x9
 
-  EntitiyList_44246984 = ShopReleaseMaster__GetEntitiyList_44246984(this, shopId, 0, v3);
-  if ( !EntitiyList_44246984 )
+  EntitiyList_49832704 = ShopReleaseMaster__GetEntitiyList_49832704(this, shopId, 0, v3);
+  if ( !EntitiyList_49832704 )
 LABEL_13:
-    sub_1D0F30C(EntitiyList_44246984, v5);
-  max_length = EntitiyList_44246984->max_length;
+    sub_21FFECC(EntitiyList_49832704, v5);
+  max_length = EntitiyList_49832704->max_length;
   if ( max_length < 1 )
     return 0;
-  v7 = 0;
-  while ( 1 )
+  for ( i = EntitiyList_49832704->m_Items; ; ++i )
   {
-    v8 = EntitiyList_44246984->m_Items[v7];
-    if ( !v8 )
+    v8 = *i;
+    if ( !*i )
       goto LABEL_13;
     if ( (v8->fields.condType & 0xFFFFFFFE) == 0xE )
       break;
-    if ( max_length == ++v7 )
+    if ( !--max_length )
       return 0;
   }
   condValues = v8->fields.condValues;
@@ -344,7 +344,7 @@ LABEL_13:
   if ( !v10 )
     return 0;
   if ( !(_DWORD)v10 )
-    sub_1D0F314(EntitiyList_44246984);
+    sub_21FFED4(EntitiyList_49832704);
   return condValues->m_Items[0];
 }
 
@@ -354,7 +354,7 @@ int32_t ShopReleaseMaster__GetTargetShopGroupId(ShopReleaseMaster_o *this, int32
   ShopReleaseEntity_array *EntitiyList; // x0
   __int64 v4; // x1
   int max_length; // w8
-  int v6; // w9
+  ShopReleaseEntity_o **i; // x9
   ShopReleaseEntity_o *v7; // x10
   struct System_Int32_array *condValues; // x8
 
@@ -364,111 +364,109 @@ int32_t ShopReleaseMaster__GetTargetShopGroupId(ShopReleaseMaster_o *this, int32
   max_length = EntitiyList->max_length;
   if ( max_length < 1 )
     return 0;
-  v6 = 0;
-  while ( 1 )
+  for ( i = EntitiyList->m_Items; ; ++i )
   {
-    v7 = EntitiyList->m_Items[v6];
-    if ( !v7 )
+    v7 = *i;
+    if ( !*i )
       goto LABEL_11;
     if ( v7->fields.condType == 82 )
       break;
-    if ( max_length == ++v6 )
+    if ( !--max_length )
       return 0;
   }
   condValues = v7->fields.condValues;
   if ( !condValues )
 LABEL_11:
-    sub_1D0F30C(EntitiyList, v4);
+    sub_21FFECC(EntitiyList, v4);
   if ( !LODWORD(condValues->max_length) )
-    sub_1D0F314(EntitiyList);
+    sub_21FFED4(EntitiyList);
   return condValues->m_Items[0];
 }
 
 
 bool ShopReleaseMaster__IsAllCondClear(ShopReleaseMaster_o *this, int32_t shopId, const MethodInfo *method)
 {
-  ShopReleaseEntity_o *EntitiyList; // x0
+  ShopReleaseEntity_array *EntitiyList; // x0
   const MethodInfo *v4; // x1
-  struct System_Int32_array *condValues; // x20
-  ShopReleaseEntity_o *v6; // x19
-  int v7; // w22
+  il2cpp_array_size_t max_length; // x20
+  ShopReleaseEntity_array *v6; // x19
+  __int64 v7; // x22
   bool v8; // w21
-  _BOOL8 IsCondEnable; // x0
 
-  EntitiyList = (ShopReleaseEntity_o *)ShopReleaseMaster__GetEntitiyList(this, shopId, method);
+  EntitiyList = ShopReleaseMaster__GetEntitiyList(this, shopId, method);
   if ( !EntitiyList )
-    goto LABEL_12;
-  condValues = EntitiyList->fields.condValues;
+    goto LABEL_11;
+  max_length = EntitiyList->max_length;
   v6 = EntitiyList;
-  if ( (int)condValues >= 1 )
+  if ( (int)max_length >= 1 )
   {
-    v7 = 1;
-    v8 = 1;
+    v7 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      EntitiyList = (ShopReleaseEntity_o *)*((_QWORD *)&v6->fields.condValues + v7);
+      if ( (unsigned int)v7 >= LODWORD(v6->max_length) )
+        sub_21FFED4(EntitiyList);
+      EntitiyList = (ShopReleaseEntity_array *)v6->m_Items[v7];
       if ( !EntitiyList )
         break;
-      IsCondEnable = ShopReleaseEntity__IsCondEnable(EntitiyList, v4);
-      if ( !IsCondEnable )
-        return !v8;
-      v8 = v7 < (int)condValues;
-      if ( (_DWORD)condValues == v7 )
-        return !v8;
-      if ( (unsigned int)v7++ >= LODWORD(v6->fields.condValues) )
-        sub_1D0F314(IsCondEnable);
+      EntitiyList = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable((ShopReleaseEntity_o *)EntitiyList, v4);
+      if ( ((unsigned __int8)EntitiyList & 1) != 0 )
+      {
+        v8 = (int)++v7 >= (int)max_length;
+        if ( (_DWORD)max_length != (_DWORD)v7 )
+          continue;
+      }
+      return v8;
     }
-LABEL_12:
-    sub_1D0F30C(EntitiyList, v4);
+LABEL_11:
+    sub_21FFECC(EntitiyList, v4);
   }
-  v8 = 0;
-  return !v8;
+  return 1;
 }
 
 
 bool ShopReleaseMaster__IsOpen(ShopReleaseMaster_o *this, int32_t shopId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  ShopReleaseEntity_array *EntitiyList_44246984; // x0
+  ShopReleaseEntity_array *EntitiyList_49832704; // x0
   const MethodInfo *v5; // x1
   il2cpp_array_size_t max_length; // x20
   ShopReleaseEntity_array *v7; // x19
-  int v8; // w22
+  __int64 v8; // x22
   bool v9; // w21
 
-  EntitiyList_44246984 = ShopReleaseMaster__GetEntitiyList_44246984(this, shopId, 0, v3);
-  if ( !EntitiyList_44246984 )
-    goto LABEL_13;
-  max_length = EntitiyList_44246984->max_length;
-  v7 = EntitiyList_44246984;
+  EntitiyList_49832704 = ShopReleaseMaster__GetEntitiyList_49832704(this, shopId, 0, v3);
+  if ( !EntitiyList_49832704 )
+    goto LABEL_12;
+  max_length = EntitiyList_49832704->max_length;
+  v7 = EntitiyList_49832704;
   if ( (int)max_length >= 1 )
   {
-    v8 = 1;
-    v9 = 1;
+    v8 = 0;
+    v9 = 0;
     while ( 1 )
     {
-      EntitiyList_44246984 = (ShopReleaseEntity_array *)v7->m_Items[v8 - 1];
-      if ( !EntitiyList_44246984 )
+      if ( (unsigned int)v8 >= LODWORD(v7->max_length) )
+        sub_21FFED4(EntitiyList_49832704);
+      EntitiyList_49832704 = (ShopReleaseEntity_array *)v7->m_Items[v8];
+      if ( !EntitiyList_49832704 )
         break;
-      if ( !BYTE4(EntitiyList_44246984->m_Items[1]) )
+      if ( BYTE4(EntitiyList_49832704->m_Items[1])
+        || (EntitiyList_49832704 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(
+                                                                (ShopReleaseEntity_o *)EntitiyList_49832704,
+                                                                v5),
+            ((unsigned __int8)EntitiyList_49832704 & 1) != 0) )
       {
-        EntitiyList_44246984 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(
-                                                            (ShopReleaseEntity_o *)EntitiyList_44246984,
-                                                            v5);
-        if ( ((unsigned __int8)EntitiyList_44246984 & 1) == 0 )
-          return !v9;
+        v9 = (int)++v8 >= (int)max_length;
+        if ( (_DWORD)max_length != (_DWORD)v8 )
+          continue;
       }
-      v9 = v8 < (int)max_length;
-      if ( (_DWORD)max_length == v8 )
-        return !v9;
-      if ( (unsigned int)v8++ >= LODWORD(v7->max_length) )
-        sub_1D0F314(EntitiyList_44246984);
+      return v9;
     }
-LABEL_13:
-    sub_1D0F30C(EntitiyList_44246984, v5);
+LABEL_12:
+    sub_21FFECC(EntitiyList_49832704, v5);
   }
-  v9 = 0;
-  return !v9;
+  return 1;
 }
 
 
@@ -480,92 +478,142 @@ bool ShopReleaseMaster__IsPreparation(
         int32_t shopId,
         const MethodInfo *method)
 {
-  ShopReleaseEntity_array *EntitiyList_44246984; // x0
+  ShopReleaseEntity_array *EntitiyList_49832704; // x0
   const MethodInfo *v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   il2cpp_array_size_t max_length; // x24
   ShopReleaseEntity_array *v16; // x21
-  int v17; // w25
+  __int64 v17; // x25
   bool v18; // w23
   ShopReleaseEntity_o *v19; // x22
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  System_String_o **v27; // x0
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
   System_String_o *closedItemName; // x1
   System_String_o *PreparationConditionText; // x0
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
 
-  EntitiyList_44246984 = ShopReleaseMaster__GetEntitiyList_44246984(this, shopId, 1, *(const MethodInfo **)&shopId);
-  if ( !EntitiyList_44246984 )
-LABEL_17:
-    sub_1D0F30C(EntitiyList_44246984, v8);
-  max_length = EntitiyList_44246984->max_length;
-  v16 = EntitiyList_44246984;
+  EntitiyList_49832704 = ShopReleaseMaster__GetEntitiyList_49832704(this, shopId, 1, *(const MethodInfo **)&shopId);
+  if ( !EntitiyList_49832704 )
+LABEL_16:
+    sub_21FFECC(EntitiyList_49832704, v8);
+  max_length = EntitiyList_49832704->max_length;
+  v16 = EntitiyList_49832704;
   if ( (int)max_length >= 1 )
   {
-    v17 = 1;
+    v17 = 0;
     v18 = 1;
     while ( 1 )
     {
-      v19 = v16->m_Items[v17 - 1];
+      if ( (unsigned int)v17 >= LODWORD(v16->max_length) )
+        sub_21FFED4(EntitiyList_49832704);
+      v19 = v16->m_Items[v17];
       if ( !v19 )
-        goto LABEL_17;
+        goto LABEL_16;
       if ( v19->fields.isClosedDisp )
       {
-        EntitiyList_44246984 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(v19, v8);
-        if ( (v19->fields.condType != 82) != ((unsigned __int8)EntitiyList_44246984 & 1) )
-          goto LABEL_15;
+        EntitiyList_49832704 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(v16->m_Items[v17], v8);
+        if ( ((unsigned __int8)EntitiyList_49832704 & 1) != (v19->fields.condType != 82) )
+          goto LABEL_14;
       }
       else if ( v19->fields.condType == 82 )
       {
-LABEL_15:
+LABEL_14:
         PreparationConditionText = ShopReleaseEntity__GetPreparationConditionText(v19, v8);
         *message = PreparationConditionText;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)message,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)message,
           (int32_t)PreparationConditionText,
+          v28,
+          v29,
           v30,
           v31,
           v32,
-          v33,
-          v34,
-          v35);
+          v33);
         closedItemName = v19->fields.closedItemName;
-        v27 = itemName;
-        *itemName = closedItemName;
-        goto LABEL_16;
+        goto LABEL_15;
       }
-      v18 = v17 < (int)max_length;
-      if ( (_DWORD)max_length == v17 )
-        goto LABEL_14;
-      if ( (unsigned int)v17++ >= LODWORD(v16->max_length) )
-        sub_1D0F314(EntitiyList_44246984);
+      v18 = (int)++v17 < (int)max_length;
+      if ( (_DWORD)max_length == (_DWORD)v17 )
+        goto LABEL_13;
     }
   }
   v18 = 0;
-LABEL_14:
+LABEL_13:
   *message = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)message, 0, v9, v10, v11, v12, v13, v14);
-  *itemName = 0;
-  v27 = itemName;
-  LODWORD(closedItemName) = 0;
-LABEL_16:
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v27, (int32_t)closedItemName, v21, v22, v23, v24, v25, v26);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)message, 0, v9, v10, v11, v12, v13, v14);
+  closedItemName = 0;
+LABEL_15:
+  *itemName = closedItemName;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)itemName, (int32_t)closedItemName, v20, v21, v22, v23, v24, v25);
   return v18;
+}
+
+
+bool ShopReleaseMaster__IsPreparationByCondType(
+        ShopReleaseMaster_o *this,
+        int32_t shopId,
+        int32_t condType,
+        const MethodInfo *method)
+{
+  ShopReleaseEntity_array *EntitiyList_49832704; // x0
+  const MethodInfo *v6; // x1
+  il2cpp_array_size_t max_length; // x22
+  ShopReleaseEntity_array *v8; // x20
+  __int64 v9; // x23
+  bool v10; // w25
+  ShopReleaseEntity_o *v11; // x21
+
+  EntitiyList_49832704 = ShopReleaseMaster__GetEntitiyList_49832704(this, shopId, 1, method);
+  if ( !EntitiyList_49832704 )
+    goto LABEL_15;
+  max_length = EntitiyList_49832704->max_length;
+  v8 = EntitiyList_49832704;
+  if ( (int)max_length >= 1 )
+  {
+    v9 = 0;
+    v10 = 1;
+    while ( 1 )
+    {
+      if ( (unsigned int)v9 >= LODWORD(v8->max_length) )
+        sub_21FFED4(EntitiyList_49832704);
+      v11 = v8->m_Items[v9];
+      if ( !v11 )
+        break;
+      if ( v11->fields.condType == condType )
+      {
+        if ( v11->fields.isClosedDisp )
+        {
+          EntitiyList_49832704 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(v8->m_Items[v9], v6);
+          if ( (((unsigned int)EntitiyList_49832704 ^ (v11->fields.condType != 82)) & 1) != 0 )
+            return v10;
+        }
+        else if ( condType == 82 )
+        {
+          return v10;
+        }
+      }
+      v10 = (int)++v9 < (int)max_length;
+      if ( (_DWORD)max_length == (_DWORD)v9 )
+        return v10;
+    }
+LABEL_15:
+    sub_21FFECC(EntitiyList_49832704, v6);
+  }
+  return 0;
 }
 
 
@@ -577,79 +625,83 @@ bool ShopReleaseMaster__TryGetClosedMessage(
         int32_t shopId,
         const MethodInfo *method)
 {
-  ShopReleaseEntity_array *EntitiyList_44246984; // x0
+  ShopReleaseEntity_array *EntitiyList_49832704; // x0
   const MethodInfo *v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   il2cpp_array_size_t max_length; // x24
   ShopReleaseEntity_array *v16; // x21
-  int v17; // w25
+  __int64 v17; // x25
   bool v18; // w23
   ShopReleaseEntity_o *v19; // x22
   System_String_o *PreparationConditionText; // x0
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  int32_t v25; // w5
-  int64_t v26; // x6
-  System_String_o *v27; // x7
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
   System_String_o *closedItemName; // x1
-  System_String_o **v35; // x0
 
-  EntitiyList_44246984 = ShopReleaseMaster__GetEntitiyList_44246984(this, shopId, 0, *(const MethodInfo **)&shopId);
-  if ( !EntitiyList_44246984 )
-LABEL_15:
-    sub_1D0F30C(EntitiyList_44246984, v8);
-  max_length = EntitiyList_44246984->max_length;
-  v16 = EntitiyList_44246984;
+  EntitiyList_49832704 = ShopReleaseMaster__GetEntitiyList_49832704(this, shopId, 0, *(const MethodInfo **)&shopId);
+  if ( !EntitiyList_49832704 )
+LABEL_14:
+    sub_21FFECC(EntitiyList_49832704, v8);
+  max_length = EntitiyList_49832704->max_length;
+  v16 = EntitiyList_49832704;
   if ( (int)max_length < 1 )
   {
     v18 = 0;
-LABEL_13:
+LABEL_12:
     *message = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)message, 0, v9, v10, v11, v12, v13, v14);
-    v35 = itemName;
-    LODWORD(closedItemName) = 0;
-    *itemName = 0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)message, 0, v9, v10, v11, v12, v13, v14);
+    closedItemName = 0;
   }
   else
   {
-    v17 = 1;
+    v17 = 0;
     v18 = 1;
     while ( 1 )
     {
-      v19 = v16->m_Items[v17 - 1];
+      if ( (unsigned int)v17 >= LODWORD(v16->max_length) )
+        sub_21FFED4(EntitiyList_49832704);
+      v19 = v16->m_Items[v17];
       if ( !v19 )
-        goto LABEL_15;
+        goto LABEL_14;
       if ( v19->fields.isClosedDisp )
         break;
-      EntitiyList_44246984 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(v19, v8);
-      if ( ((unsigned __int8)EntitiyList_44246984 & 1) != 0 )
+      EntitiyList_49832704 = (ShopReleaseEntity_array *)ShopReleaseEntity__IsCondEnable(v16->m_Items[v17], v8);
+      if ( ((unsigned __int8)EntitiyList_49832704 & 1) != 0 )
         break;
-      v18 = v17 < (int)max_length;
-      if ( (_DWORD)max_length == v17 )
-        goto LABEL_13;
-      if ( (unsigned int)v17++ >= LODWORD(v16->max_length) )
-        sub_1D0F314(EntitiyList_44246984);
+      v18 = (int)++v17 < (int)max_length;
+      if ( (_DWORD)max_length == (_DWORD)v17 )
+        goto LABEL_12;
     }
     PreparationConditionText = ShopReleaseEntity__GetPreparationConditionText(v19, v8);
     *message = PreparationConditionText;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)message, (int32_t)PreparationConditionText, v22, v23, v24, v25, v26, v27);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)message,
+      (int32_t)PreparationConditionText,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25,
+      v26);
     closedItemName = v19->fields.closedItemName;
-    v35 = itemName;
-    *itemName = closedItemName;
   }
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v35, (int32_t)closedItemName, v28, v29, v30, v31, v32, v33);
+  *itemName = closedItemName;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)itemName, (int32_t)closedItemName, v27, v28, v29, v30, v31, v32);
   return v18;
 }
 
@@ -665,17 +717,17 @@ bool ShopReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E78235 & 1) == 0 )
+  if ( (byte_5939263 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__TryGetEntity__);
-    byte_4E78235 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__TryGetEntity__);
+    byte_5939263 = 1;
   }
   PK = (Il2CppObject *)ShopReleaseEntity__CreatePK(shopId, condType, priority, *(const MethodInfo **)&condType);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ShopReleaseMaster__ShopReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -688,16 +740,16 @@ bool ShopReleaseMaster__isExistCondType(
 {
   ShopReleaseEntity_array *EntitiyList; // x0
   __int64 v6; // x1
-  int max_length; // w8
-  int v8; // w9
-  bool v9; // w10
-  ShopReleaseEntity_o *v10; // x11
+  il2cpp_array_size_t max_length; // x8
+  __int64 v8; // x9
+  bool v9; // w11
+  ShopReleaseEntity_o *v10; // x12
 
   EntitiyList = ShopReleaseMaster__GetEntitiyList(this, shopId, *(const MethodInfo **)&type);
   if ( !EntitiyList )
     goto LABEL_10;
   max_length = EntitiyList->max_length;
-  if ( max_length >= 1 )
+  if ( (int)max_length >= 1 )
   {
     v8 = 0;
     v9 = 1;
@@ -708,14 +760,14 @@ bool ShopReleaseMaster__isExistCondType(
         break;
       if ( v10->fields.condType != type )
       {
-        v9 = ++v8 < max_length;
-        if ( max_length != v8 )
+        v9 = (int)++v8 < (int)max_length;
+        if ( (_DWORD)max_length != (_DWORD)v8 )
           continue;
       }
       return v9;
     }
 LABEL_10:
-    sub_1D0F30C(EntitiyList, v6);
+    sub_21FFECC(EntitiyList, v6);
   }
   return 0;
 }
@@ -729,10 +781,10 @@ bool ShopReleaseMaster__isQuestNotClearSet(
 {
   ShopReleaseEntity_array *EntitiyList; // x0
   __int64 v6; // x1
-  int max_length; // w9
-  int v8; // w10
+  il2cpp_array_size_t max_length; // x9
+  __int64 v8; // x10
   bool v9; // w8
-  ShopReleaseEntity_o *v10; // x11
+  ShopReleaseEntity_o *v10; // x12
   struct System_Int32_array *condValues; // x9
   il2cpp_array_size_t v12; // x10
 
@@ -740,9 +792,9 @@ bool ShopReleaseMaster__isQuestNotClearSet(
   *questId = 0;
   if ( !EntitiyList )
 LABEL_16:
-    sub_1D0F30C(EntitiyList, v6);
+    sub_21FFECC(EntitiyList, v6);
   max_length = EntitiyList->max_length;
-  if ( max_length < 1 )
+  if ( (int)max_length < 1 )
   {
     return 0;
   }
@@ -757,8 +809,8 @@ LABEL_16:
         goto LABEL_16;
       if ( v10->fields.condType == 36 )
         break;
-      v9 = ++v8 < max_length;
-      if ( max_length == v8 )
+      v9 = (int)++v8 < (int)max_length;
+      if ( (_DWORD)max_length == (_DWORD)v8 )
         return v9;
     }
     condValues = v10->fields.condValues;
@@ -768,7 +820,7 @@ LABEL_16:
       if ( v12 )
       {
         if ( !(_DWORD)v12 )
-          sub_1D0F314(EntitiyList);
+          sub_21FFED4(EntitiyList);
         LODWORD(condValues) = condValues->m_Items[0];
       }
       else
@@ -785,23 +837,23 @@ LABEL_16:
 void ShopReleaseMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E78239 & 1) == 0 )
+  if ( (byte_5939267 & 1) == 0 )
   {
-    sub_1D0F0B4(&ShopReleaseMaster___c_TypeInfo);
-    byte_4E78239 = 1;
+    sub_21FFC50(&ShopReleaseMaster___c_TypeInfo);
+    byte_5939267 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(ShopReleaseMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(ShopReleaseMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ShopReleaseMaster___c_TypeInfo->static_fields->__9 = (struct ShopReleaseMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)ShopReleaseMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)ShopReleaseMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -825,6 +877,6 @@ int32_t ShopReleaseMaster___c___GetEntitiyList_b__4_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   return b->fields.priority - a->fields.priority;
 }

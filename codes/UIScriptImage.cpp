@@ -1,25 +1,30 @@
 void UIScriptImage___ctor(UIScriptImage_o *this, const MethodInfo *method)
 {
   struct UIImageM_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
+  __int64 v10; // x1
+  UIScriptChara_c *v11; // x0
+  int v12; // w8
 
-  if ( (byte_4E7979A & 1) == 0 )
+  if ( (byte_593A7C1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UIImageM___TypeInfo);
-    sub_1D0F0B4(&UIScriptChara_TypeInfo);
-    byte_4E7979A = 1;
+    sub_21FFC50(&UIImageM___TypeInfo);
+    sub_21FFC50(&UIScriptChara_TypeInfo);
+    byte_593A7C1 = 1;
   }
-  v3 = (struct UIImageM_array *)sub_1D0F15C(UIImageM___TypeInfo, 2);
+  v3 = (struct UIImageM_array *)sub_21FFD10(UIImageM___TypeInfo, 2);
   this->fields.imageList = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.imageList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.imageList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v11 = UIScriptChara_TypeInfo;
+  v12 = *(&UIScriptChara_TypeInfo->_2.cctor_finished + 1);
   this->fields.OFFSET_IMAGE_Y = 799.0;
-  if ( !UIScriptChara_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo);
+  if ( !v12 )
+    j_il2cpp_runtime_class_init_0(v11, v10);
   UIScriptChara___ctor((UIScriptChara_o *)this, 0);
 }
 
@@ -39,19 +44,20 @@ void UIScriptImage__ChangeCharacter(
   __int64 mainIndex; // x9
   unsigned int max_length; // w11
   __int64 backIndex; // x10
-  UIImageRender_o *v19; // x22
-  UIImageRender_o *v20; // x23
-  System_Action_o *v21; // x23
-  UIScriptImage_o *v22; // x0
-  const MethodInfo *v23; // x3
+  Il2CppClass **v19; // x9
+  UIImageRender_o *v20; // x22
+  UIImageRender_o *v21; // x23
+  System_Action_o *v22; // x23
+  UIScriptImage_o *v23; // x0
+  const MethodInfo *v24; // x3
 
-  if ( (byte_4E7978F & 1) == 0 )
+  if ( (byte_593A7B6 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_UIScriptImage_UpdateChange__);
-    byte_4E7978F = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_UIScriptImage_UpdateChange__);
+    byte_593A7B6 = 1;
   }
-  UIScriptChara__ChangeCharacter_46279556((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, 0);
+  UIScriptChara__ChangeCharacter_51854672((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, 0);
   imageList = this->fields.imageList;
   if ( !imageList )
     goto LABEL_9;
@@ -60,40 +66,41 @@ void UIScriptImage__ChangeCharacter(
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1D0F314(v13);
+    sub_21FFED4(v13);
   }
-  v19 = (UIImageRender_o *)imageList->m_Items[mainIndex];
-  v20 = (UIImageRender_o *)imageList->m_Items[backIndex];
+  v19 = &imageList->obj.klass + mainIndex;
   this->fields.isDisp = 0;
-  if ( !v19
-    || (UIImageRender__SetActive(v19, 1, 0),
-        UIImageRender__SetAlpha(v19, 0.0, 0),
-        UIImageRender__SetDepth(v19, 0.1, 0),
-        !v20) )
+  v20 = (UIImageRender_o *)v19[4];
+  v21 = (UIImageRender_o *)imageList->m_Items[backIndex];
+  if ( !v20
+    || (UIImageRender__SetActive((UIImageRender_o *)v19[4], 1, 0),
+        UIImageRender__SetAlpha(v20, 0.0, 0),
+        UIImageRender__SetDepth(v20, 0.1, 0),
+        !v21) )
   {
 LABEL_9:
-    sub_1D0F30C(v13, v14);
+    sub_21FFECC(v13, v14);
   }
-  UIImageRender__SetDepth(v20, 0.0, 0);
-  UIImageRender__SetShadow(v19, this->fields.isShadow, 0);
-  v21 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v21, (Il2CppObject *)this, Method_UIScriptImage_UpdateChange__, 0);
-  UIImageM__SetCharacter((UIImageM_o *)v19, imageName, faceType, v21, 0);
-  UIScriptImage__SetFullScreenImage(v22, imageName, (UIImageM_o *)v19, v23);
+  UIImageRender__SetDepth(v21, 0.0, 0);
+  UIImageRender__SetShadow(v20, this->fields.isShadow, 0);
+  v22 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v22, (Il2CppObject *)this, Method_UIScriptImage_UpdateChange__, 0);
+  UIImageM__SetCharacter((UIImageM_o *)v20, imageName, faceType, v22, 0);
+  UIScriptImage__SetFullScreenImage(v23, imageName, (UIImageM_o *)v20, v24);
 }
 
 
 void UIScriptImage__ContinueChangeFade(UIScriptImage_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E79791 & 1) == 0 )
+  if ( (byte_593A7B8 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15388/*"UpdateChange"*/);
-    byte_4E79791 = 1;
+    sub_21FFC50(&StringLiteral_15761/*"UpdateChange"*/);
+    byte_593A7B8 = 1;
   }
   UIScriptImage__SetOverlap(this, 1.0, method);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15388/*"UpdateChange"*/,
+    (System_String_o *)StringLiteral_15761/*"UpdateChange"*/,
     this->fields.changeStep,
     0);
 }
@@ -107,13 +114,13 @@ void UIScriptImage__EndChange(UIScriptImage_o *this, const MethodInfo *method)
   UIScriptImage_o *v5; // x19
   __int64 backIndex; // x10
   UIImageRender_o *v7; // x20
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  GrandQuestFolderBoardItem_o *p_changeCallback; // x19
+  bool v12; // w6
+  bool v13; // w7
+  MissionNaviTransitionBoardItem_o *p_changeCallback; // x19
   struct System_Action_o *v15; // x20
   struct System_Action_o *changeCallback; // t1
 
@@ -126,7 +133,7 @@ void UIScriptImage__EndChange(UIScriptImage_o *this, const MethodInfo *method)
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this
@@ -135,18 +142,18 @@ void UIScriptImage__EndChange(UIScriptImage_o *this, const MethodInfo *method)
         !v7) )
   {
 LABEL_9:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   UIImageRender__SetAlpha(v7, 0.0, 0);
   UIImageM__ReleaseCharacter((UIImageM_o *)v7, 0);
   changeCallback = v5->fields.changeCallback;
-  p_changeCallback = (GrandQuestFolderBoardItem_o *)&v5->fields.changeCallback;
+  p_changeCallback = (MissionNaviTransitionBoardItem_o *)&v5->fields.changeCallback;
   v15 = changeCallback;
-  LODWORD(p_changeCallback[-1].fields._Name_k__BackingField) = 0;
+  p_changeCallback[-1].fields._QuestId_k__BackingField = 0;
   if ( changeCallback )
   {
     p_changeCallback->klass = 0;
-    sub_1D0F058(p_changeCallback, 0, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4(p_changeCallback, 0, v8, v9, v10, v11, v12, v13);
     ((void (__fastcall *)(intptr_t, intptr_t))v15->fields.invoke_impl)(v15->fields.method_code, v15->fields.method);
   }
 }
@@ -164,13 +171,13 @@ void UIScriptImage__EndSet(UIScriptImage_o *this, const MethodInfo *method)
   float v9; // s10
   float v10; // s10
   float v11; // s10
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  GrandQuestFolderBoardItem_o *p_setCallback; // x19
+  bool v16; // w6
+  bool v17; // w7
+  MissionNaviTransitionBoardItem_o *p_setCallback; // x19
   struct System_Action_o *v19; // x20
   struct System_Action_o *setCallback; // t1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
@@ -188,7 +195,7 @@ void UIScriptImage__EndSet(UIScriptImage_o *this, const MethodInfo *method)
   mainIndex = this->fields.mainIndex;
   v4 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v5 = &imageList->obj.klass + mainIndex;
   v6 = (UIImageRender_o *)v5[4];
   if ( !v6 )
@@ -258,19 +265,19 @@ void UIScriptImage__EndSet(UIScriptImage_o *this, const MethodInfo *method)
         (this = (UIScriptImage_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0) )
   {
 LABEL_23:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v28.fields.x = CenterOffset.fields.x;
   v28.fields.y = CenterOffset.fields.y;
   v28.fields.z = v11;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v28, 0);
   setCallback = v4->fields.setCallback;
-  p_setCallback = (GrandQuestFolderBoardItem_o *)&v4->fields.setCallback;
+  p_setCallback = (MissionNaviTransitionBoardItem_o *)&v4->fields.setCallback;
   v19 = setCallback;
   if ( setCallback )
   {
     p_setCallback->klass = 0;
-    sub_1D0F058(p_setCallback, 0, v12, v13, v14, v15, v16, v17);
+    sub_21FFBF4(p_setCallback, 0, v12, v13, v14, v15, v16, v17);
     ((void (__fastcall *)(intptr_t, intptr_t))v19->fields.invoke_impl)(v19->fields.method_code, v19->fields.method);
   }
 }
@@ -286,11 +293,11 @@ UnityEngine_Transform_o *UIScriptImage__GetBody(UIScriptImage_o *this, const Met
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return UIImageM__GetBody((UIImageM_o *)this, 0);
 }
 
@@ -305,11 +312,11 @@ UnityEngine_Texture_o *UIScriptImage__GetBodySubTexture(UIScriptImage_o *this, c
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return UIImageM__GetBodySubTexture((UIImageM_o *)this, 0);
 }
 
@@ -334,11 +341,11 @@ UnityEngine_Vector3_o UIScriptImage__GetOffsetEdgeBlur(UIScriptImage_o *this, co
   mainIndex = this->fields.mainIndex;
   v4 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this || (this = (UIScriptImage_o *)UIImageM__GetBody((UIImageM_o *)this, 0)) == 0 )
 LABEL_6:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   v5 = this;
   localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   v11 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)v5, 0);
@@ -381,15 +388,15 @@ UnityEngine_Vector2_o UIScriptImage__GetSizeEdgeBlur(UIScriptImage_o *this, cons
   float v5; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4E79799 & 1) == 0 )
+  if ( (byte_593A7C0 & 1) == 0 )
   {
-    sub_1D0F0B4(&UIImageRender_TypeInfo);
-    byte_4E79799 = 1;
+    sub_21FFC50(&UIImageRender_TypeInfo);
+    byte_593A7C0 = 1;
   }
   v2 = UIImageRender_TypeInfo;
-  if ( !UIImageRender_TypeInfo->_2.cctor_finished )
+  if ( !*(&UIImageRender_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo, method);
     v2 = UIImageRender_TypeInfo;
   }
   p_MAIN_SIZE_X = &v2->static_fields->MAIN_SIZE_X;
@@ -412,11 +419,11 @@ bool UIScriptImage__IsBusyMoveAlpha(UIScriptImage_o *this, const MethodInfo *met
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v4 = imageList->m_Items[mainIndex];
   if ( !v4 )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return v4->fields.isBusyMoveAlpha;
 }
 
@@ -434,11 +441,11 @@ void UIScriptImage__MoveAlpha(UIScriptImage_o *this, float duration, float a, co
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   UIImageRender__MoveAlpha((UIImageRender_o *)this, duration, a, 0, 0, 0);
   UIScriptChara__RecoverShadowEffect(v6, 0, 0);
 }
@@ -457,11 +464,11 @@ void UIScriptImage__MoveAlphaSpeed(UIScriptImage_o *this, float speed, float a, 
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   UIImageRender__MoveAlphaSpeed((UIImageRender_o *)this, speed, a, 0, 0, 0);
   UIScriptChara__RecoverShadowEffect(v6, 0, 0);
 }
@@ -479,11 +486,11 @@ void UIScriptImage__ResumeCutin(UIScriptImage_o *this, bool isSkip, const Method
   __int64 naturalAligment; // x11
   UnityEngine_Object_o *v13; // x21
 
-  if ( (byte_4E79796 & 1) == 0 )
+  if ( (byte_593A7BD & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaCutEffectComponent_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79796 = 1;
+    sub_21FFC50(&CharaCutEffectComponent_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7BD = 1;
   }
   v5 = ProgramEffectManager__Get(this->fields.baseCutEffect, 0);
   if ( !v5 )
@@ -497,7 +504,7 @@ void UIScriptImage__ResumeCutin(UIScriptImage_o *this, bool isSkip, const Method
     while ( 1 )
     {
       if ( v9 >= (unsigned int)max_length )
-        sub_1D0F314(v5);
+        sub_21FFED4(v5);
       v11 = m_Items[v9];
       if ( v11
         && (naturalAligment = CharaCutEffectComponent_TypeInfo->_2.naturalAligment,
@@ -511,8 +518,8 @@ void UIScriptImage__ResumeCutin(UIScriptImage_o *this, bool isSkip, const Method
       {
         v13 = 0;
       }
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       v5 = (ProgramEffectComponent_array *)UnityEngine_Object__op_Inequality(v13, 0, 0);
       if ( ((unsigned __int8)v5 & 1) != 0 )
         break;
@@ -529,7 +536,7 @@ void UIScriptImage__ResumeCutin(UIScriptImage_o *this, bool isSkip, const Method
       return;
     }
 LABEL_21:
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   }
 }
 
@@ -547,16 +554,17 @@ void UIScriptImage__SetAlpha(UIScriptImage_o *this, float a, const MethodInfo *m
   mainIndex = this->fields.mainIndex;
   v5 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   UIImageRender__SetAlpha((UIImageRender_o *)this, a, 0);
   UIScriptChara__RecoverShadowEffect(v5, 0, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIScriptImage__SetCharacter(
         UIScriptImage_o *this,
         System_String_o *imageName,
@@ -565,8 +573,8 @@ void UIScriptImage__SetCharacter(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v12; // x0
   __int64 v13; // x1
   struct UIImageM_array *imageList; // x8
@@ -577,18 +585,18 @@ void UIScriptImage__SetCharacter(
   UIScriptImage_o *v19; // x0
   const MethodInfo *v20; // x3
 
-  if ( (byte_4E79793 & 1) == 0 )
+  if ( (byte_593A7BA & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    byte_4E79793 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    byte_593A7BA = 1;
   }
   this->fields.setCallback = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.setCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.setCallback,
     (int32_t)callback,
-    faceType,
-    (int32_t)callback,
-    (System_String_o *)method,
+    *(System_String_o **)&faceType,
+    (System_String_o *)callback,
+    (int32_t)method,
     v5,
     v6,
     v7);
@@ -597,14 +605,14 @@ void UIScriptImage__SetCharacter(
     goto LABEL_7;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(v12);
+    sub_21FFED4(v12);
   v16 = &imageList->obj.klass + mainIndex;
   v17 = (UIImageM_o *)v16[4];
   if ( !v17 )
 LABEL_7:
-    sub_1D0F30C(v12, v13);
+    sub_21FFECC(v12, v13);
   UIImageRender__SetFilter((UIImageRender_o *)v16[4], this->fields.filterName, this->fields.filterColor, 0);
-  v18 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v18, (Il2CppObject *)this, (intptr_t)this->klass->vtable._12_EndSet.method, 0);
   UIImageM__SetCharacter(v17, imageName, faceType, v18, 0);
   UIScriptImage__SetFullScreenImage(v19, imageName, v17, v20);
@@ -621,42 +629,43 @@ void UIScriptImage__SetCutin(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseCutEffect; // x23
+  __int64 v14; // x1
   UnityEngine_Object_o *CharaEffect; // x21
   Il2CppObject *Component_object; // x0
-  __int64 v16; // x1
+  __int64 v17; // x1
   struct UIImageM_array *imageList; // x8
   __int64 mainIndex; // x9
-  UnityEngine_Color_o v19; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Color_o v20; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4E79795 & 1) == 0 )
+  if ( (byte_593A7BC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CharaCutEffectComponent___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_18709/*"cut"*/);
-    byte_4E79795 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CharaCutEffectComponent___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_19203/*"cut"*/);
+    byte_593A7BC = 1;
   }
   baseCutEffect = this->fields.baseCutEffect;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
-  v19.fields.r = 1.0;
-  v19.fields.g = 1.0;
-  v19.fields.b = 1.0;
-  v19.fields.a = 1.0;
+  v20.fields.r = 1.0;
+  v20.fields.g = 1.0;
+  v20.fields.b = 1.0;
+  v20.fields.a = 1.0;
   CharaEffect = (UnityEngine_Object_o *)ProgramEffectManager__CreateCharaEffect(
                                           baseCutEffect,
-                                          (System_String_o *)StringLiteral_18709/*"cut"*/,
+                                          (System_String_o *)StringLiteral_19203/*"cut"*/,
                                           UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
                                           time,
-                                          v19,
+                                          v20,
                                           0.0,
                                           isSkip,
                                           isPause,
                                           0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   Component_object = (Il2CppObject *)UnityEngine_Object__op_Equality(CharaEffect, 0, 0);
   if ( ((unsigned __int8)Component_object & 1) == 0 )
   {
@@ -664,16 +673,16 @@ void UIScriptImage__SetCutin(
       goto LABEL_13;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)CharaEffect,
-                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CharaCutEffectComponent___);
+                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CharaCutEffectComponent___);
     imageList = this->fields.imageList;
     if ( !imageList )
       goto LABEL_13;
     mainIndex = this->fields.mainIndex;
     if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-      sub_1D0F314(Component_object);
+      sub_21FFED4(Component_object);
     if ( !Component_object )
 LABEL_13:
-      sub_1D0F30C(Component_object, v16);
+      sub_21FFECC(Component_object, v17);
     CharaCutEffectComponent__CutinStart(
       (CharaCutEffectComponent_o *)Component_object,
       imageList->m_Items[mainIndex],
@@ -696,11 +705,11 @@ void UIScriptImage__SetCutout(UIScriptImage_o *this, float time, bool isSkip, co
   __int64 naturalAligment; // x11
   UnityEngine_Object_o *v15; // x21
 
-  if ( (byte_4E79797 & 1) == 0 )
+  if ( (byte_593A7BE & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaCutEffectComponent_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79797 = 1;
+    sub_21FFC50(&CharaCutEffectComponent_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7BE = 1;
   }
   v7 = ProgramEffectManager__Get(this->fields.baseCutEffect, 0);
   if ( !v7 )
@@ -714,7 +723,7 @@ void UIScriptImage__SetCutout(UIScriptImage_o *this, float time, bool isSkip, co
     while ( 1 )
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_1D0F314(v7);
+        sub_21FFED4(v7);
       v13 = m_Items[v11];
       if ( v13
         && (naturalAligment = CharaCutEffectComponent_TypeInfo->_2.naturalAligment,
@@ -728,8 +737,8 @@ void UIScriptImage__SetCutout(UIScriptImage_o *this, float time, bool isSkip, co
       {
         v15 = 0;
       }
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
       v7 = (ProgramEffectComponent_array *)UnityEngine_Object__op_Inequality(v15, 0, 0);
       if ( ((unsigned __int8)v7 & 1) != 0 )
         break;
@@ -743,7 +752,7 @@ void UIScriptImage__SetCutout(UIScriptImage_o *this, float time, bool isSkip, co
       return;
     }
 LABEL_21:
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   }
 }
 
@@ -754,7 +763,7 @@ void UIScriptImage__SetDepth(UIScriptImage_o *this, int32_t d, const MethodInfo 
   struct UIImageM_array *imageList; // x8
   __int64 mainIndex; // x9
   UIScriptImage_o *v5; // x21
-  UIImageRender_o *v6; // x19
+  UIImageRender_o *v7; // x19
   float v8; // s2
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -764,20 +773,20 @@ void UIScriptImage__SetDepth(UIScriptImage_o *this, int32_t d, const MethodInfo 
   mainIndex = this->fields.mainIndex;
   v5 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)this->fields.baseDepth;
   if ( !this
-    || (v6 = (UIImageRender_o *)imageList->m_Items[mainIndex],
+    || (v7 = (UIImageRender_o *)imageList->m_Items[mainIndex],
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (UIScriptImage_o *)v5->fields.baseDepth) == 0)
     || (v8 = (float)-d * 10.0,
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, localPosition, 0),
-        !v6) )
+        !v7) )
   {
 LABEL_7:
-    sub_1D0F30C(this, *(_QWORD *)&d);
+    sub_21FFECC(this, *(_QWORD *)&d);
   }
-  UIImageRender__SetDepth(v6, 0.1, 0);
+  UIImageRender__SetDepth(v7, 0.1, 0);
 }
 
 
@@ -787,56 +796,56 @@ void UIScriptImage__SetFilter(
         UnityEngine_Color_o filterColor,
         const MethodInfo *method)
 {
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
-  struct System_String_o **p_filterName; // x19
+  bool v7; // w6
+  bool v8; // w7
   float a; // s8
+  struct System_String_o **p_filterName; // x19
   float b; // s9
   float g; // s10
   float r; // s11
-  UIImageRender_o *v14; // x0
-  __int64 v15; // x1
-  struct System_String_o *v16; // x8
-  __int64 v17; // x9
-  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UIImageRender_o *v15; // x0
+  __int64 v16; // x1
+  struct System_String_o *v17; // x8
+  __int64 mainIndex; // x9
+  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
+  a = filterColor.fields.a;
   this->fields.filterName = filterName;
   p_filterName = &this->fields.filterName;
-  a = filterColor.fields.a;
   b = filterColor.fields.b;
   g = filterColor.fields.g;
   r = filterColor.fields.r;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.filterName,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.filterName,
     (int32_t)filterName,
-    (int32_t)method,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
     v7,
     v8);
-  v16 = p_filterName[26];
+  v17 = p_filterName[26];
   *((float *)p_filterName + 2) = r;
   *((float *)p_filterName + 3) = g;
   *((float *)p_filterName + 4) = b;
   *((float *)p_filterName + 5) = a;
-  if ( !v16 )
+  if ( !v17 )
     goto LABEL_5;
-  v17 = *((int *)p_filterName + 16);
-  if ( (unsigned int)v17 >= LODWORD(v16[1].klass) )
-    sub_1D0F314(v14);
-  v14 = (UIImageRender_o *)*((_QWORD *)&v16[1].monitor + v17);
-  if ( !v14 )
+  mainIndex = this->fields.mainIndex;
+  if ( (unsigned int)mainIndex >= LODWORD(v17[1].klass) )
+    sub_21FFED4(v15);
+  v15 = (UIImageRender_o *)*((_QWORD *)&v17[1].monitor + mainIndex);
+  if ( !v15 )
 LABEL_5:
-    sub_1D0F30C(v14, v15);
-  v18.fields.b = b;
-  v18.fields.a = a;
-  v18.fields.r = r;
-  v18.fields.g = g;
-  UIImageRender__SetFilter(v14, *p_filterName, v18, 0);
+    sub_21FFECC(v15, v16);
+  v19.fields.b = b;
+  v19.fields.a = a;
+  v19.fields.r = r;
+  v19.fields.g = g;
+  UIImageRender__SetFilter(v15, *p_filterName, v19, 0);
 }
 
 
@@ -846,76 +855,80 @@ void UIScriptImage__SetFullScreenImage(
         UIImageM_o *baseFigure,
         const MethodInfo *method)
 {
+  __int64 v6; // x1
+  __int64 v7; // x1
   UnityEngine_Transform_o *transform; // x21
-  ExUISpriteRenderer_c *v7; // x8
-  int BACK_WIDTH_21_9; // w23
+  ExUISpriteRenderer_c *v9; // x8
+  int BACK_WIDTH_21_9; // w24
   UnityEngine_GameObject_o *gameObject; // x21
   int32_t width; // w21
-  float v11; // s0
-  bool v12; // nf
   float v13; // s0
-  float v14; // s8
-  UnityEngine_GameObject_o *v15; // x0
-  ExUISpriteRenderer_c *v16; // x0
-  float v17; // s8
-  UnityEngine_GameObject_o *v18; // x21
-  UnityEngine_GameObject_o *v19; // x0
+  float v14; // s1
+  float v15; // s1
+  float v16; // s8
+  UnityEngine_GameObject_o *v17; // x0
+  __int64 v18; // x1
+  ExUISpriteRenderer_c *v19; // x0
+  float v20; // s8
+  UnityEngine_GameObject_o *v21; // x21
+  UnityEngine_GameObject_o *v22; // x0
   float LocalPositionY; // s0
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v24; // x1
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E79792 & 1) == 0 )
+  if ( (byte_593A7B9 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonUI_TypeInfo);
-    sub_1D0F0B4(&ExUISpriteRenderer_TypeInfo);
-    sub_1D0F0B4(&FSUtility_TypeInfo);
-    sub_1D0F0B4(&UIImageRender_TypeInfo);
-    this = (UIScriptImage_o *)sub_1D0F0B4(&StringLiteral_3054/*"Back/"*/);
-    byte_4E79792 = 1;
+    sub_21FFC50(&CommonUI_TypeInfo);
+    sub_21FFC50(&ExUISpriteRenderer_TypeInfo);
+    sub_21FFC50(&FSUtility_TypeInfo);
+    sub_21FFC50(&UIImageRender_TypeInfo);
+    this = (UIScriptImage_o *)sub_21FFC50(&StringLiteral_3148/*"Back/"*/);
+    byte_593A7B9 = 1;
   }
   if ( !baseFigure )
-    goto LABEL_36;
+    goto LABEL_38;
   this = (UIScriptImage_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)baseFigure, 0);
   if ( !this )
-    goto LABEL_36;
-  v21.fields.x = 1.0;
-  v21.fields.y = 1.0;
-  v21.fields.z = 1.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v21, 0);
+    goto LABEL_38;
+  v25.fields.x = 1.0;
+  v25.fields.y = 1.0;
+  v25.fields.z = 1.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v25, 0);
   if ( !imageName )
-    goto LABEL_36;
-  if ( System_String__StartsWith(imageName, (System_String_o *)StringLiteral_3054/*"Back/"*/, 0) )
+    goto LABEL_38;
+  if ( System_String__StartsWith(imageName, (System_String_o *)StringLiteral_3148/*"Back/"*/, 0) )
   {
-    if ( !FSUtility_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
+    if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v6);
     if ( FSUtility__IsFullScreenBack(imageName, 0) )
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)baseFigure, 0);
-      v7 = ExUISpriteRenderer_TypeInfo;
-      if ( !ExUISpriteRenderer_TypeInfo->_2.cctor_finished )
+      v9 = ExUISpriteRenderer_TypeInfo;
+      if ( !*(&ExUISpriteRenderer_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(ExUISpriteRenderer_TypeInfo);
-        v7 = ExUISpriteRenderer_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ExUISpriteRenderer_TypeInfo, imageName);
+        v9 = ExUISpriteRenderer_TypeInfo;
       }
       this = (UIScriptImage_o *)UIImageRender_TypeInfo;
-      BACK_WIDTH_21_9 = v7->static_fields->BACK_WIDTH_21_9;
-      if ( !UIImageRender_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo);
+      BACK_WIDTH_21_9 = v9->static_fields->BACK_WIDTH_21_9;
+      if ( !*(&UIImageRender_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo, imageName);
       if ( !transform )
-        goto LABEL_36;
-      v22.fields.z = 1.0;
-      v22.fields.x = (float)BACK_WIDTH_21_9 / (float)UIImageRender_TypeInfo->static_fields->MAIN_SIZE_X;
-      v22.fields.y = 1.0;
-      UnityEngine_Transform__set_localScale(transform, v22, 0);
+        goto LABEL_38;
+      v26.fields.z = 1.0;
+      v26.fields.x = (float)BACK_WIDTH_21_9 / (float)UIImageRender_TypeInfo->static_fields->MAIN_SIZE_X;
+      v26.fields.y = 1.0;
+      UnityEngine_Transform__set_localScale(transform, v26, 0);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
       this = (UIScriptImage_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
       if ( !this )
-        goto LABEL_36;
+        goto LABEL_38;
       this = (UIScriptImage_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
       if ( !this )
-        goto LABEL_36;
+        goto LABEL_38;
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
       localPosition.fields.x = localPosition.fields.x + -0.5;
       localPosition.fields.y = localPosition.fields.y + 0.5;
@@ -924,95 +937,95 @@ void UIScriptImage__SetFullScreenImage(
     }
     else
     {
-      if ( !CommonUI_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
+      if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v7);
       if ( !CommonUI__GetForceObi_16_9(0) )
       {
         width = UnityEngine_Screen__get_width(0);
-        v11 = (float)width / (float)UnityEngine_Screen__get_height(0);
-        v12 = v11 < 1.7778;
-        v13 = (float)(fminf(v11, 2.3333) * 9.0) * 0.0625;
-        if ( v12 )
-          v14 = 1.0;
-        else
+        v13 = (float)width / (float)UnityEngine_Screen__get_height(0);
+        v14 = 2.3333;
+        if ( v13 <= 2.3333 )
           v14 = v13;
-        v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
-        GameObjectExtensions__SetLocalScale_37345220(v15, v14, 0);
-        v16 = ExUISpriteRenderer_TypeInfo;
-        if ( !ExUISpriteRenderer_TypeInfo->_2.cctor_finished )
+        v15 = (float)(v14 * 9.0) * 0.0625;
+        if ( v13 >= 1.7778 )
+          v16 = v15;
+        else
+          v16 = 1.0;
+        v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
+        GameObjectExtensions__SetLocalScale_42878128(v17, v16, 0);
+        v19 = ExUISpriteRenderer_TypeInfo;
+        if ( !*(&ExUISpriteRenderer_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(ExUISpriteRenderer_TypeInfo);
-          v16 = ExUISpriteRenderer_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ExUISpriteRenderer_TypeInfo, v18);
+          v19 = ExUISpriteRenderer_TypeInfo;
         }
-        v17 = (float)((float)(v14 * (float)v16->static_fields->BACK_HEIGHT_16_9)
-                    - (float)v16->static_fields->BACK_HEIGHT_16_9)
+        v20 = (float)((float)(v16 * (float)v19->static_fields->BACK_HEIGHT_16_9)
+                    - (float)v19->static_fields->BACK_HEIGHT_16_9)
             * 0.5;
-        v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
-        v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
-        LocalPositionY = GameObjectExtensions__GetLocalPositionY(v19, 0);
-        GameObjectExtensions__SetLocalPositionY(v18, LocalPositionY + v17, 0);
+        v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
+        v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseFigure, 0);
+        LocalPositionY = GameObjectExtensions__GetLocalPositionY(v22, 0);
+        GameObjectExtensions__SetLocalPositionY(v21, LocalPositionY + v20, 0);
       }
     }
   }
-  if ( !CommonUI_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
+  if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v6);
   if ( !CommonUI__GetForceObi_16_9(0) )
   {
-    if ( !FSUtility_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
+    if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v24);
     if ( FSUtility__IsFullScreenImage(imageName, 0) )
     {
       this = (UIScriptImage_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)baseFigure, 0);
       if ( this )
       {
-        v24.fields.x = 1.33;
-        v24.fields.y = 1.0;
-        v24.fields.z = 1.0;
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v24, 0);
+        v28.fields.y = 1.0;
+        v28.fields.z = 1.0;
+        v28.fields.x = 1.33;
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v28, 0);
         return;
       }
-LABEL_36:
-      sub_1D0F30C(this, imageName);
+LABEL_38:
+      sub_21FFECC(this, imageName);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIScriptImage__SetFullScreenScaleType(UIScriptImage_o *this, int32_t type, const MethodInfo *method)
 {
-  ScriptManager_c *v5; // x0
-  UIImageRender_c *v6; // x8
+  float v5; // s0
+  ScriptManager_c *v6; // x0
+  UIImageRender_c *v7; // x8
   int PICTURE_FRAME_SPRITE_WIDTH_21_9; // w21
-  float v8; // s0
 
-  if ( (byte_4E79794 & 1) == 0 )
+  if ( (byte_593A7BB & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    sub_1D0F0B4(&UIImageRender_TypeInfo);
-    byte_4E79794 = 1;
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    sub_21FFC50(&UIImageRender_TypeInfo);
+    byte_593A7BB = 1;
   }
+  v5 = 1.0;
   if ( type == 1 )
   {
-    v5 = ScriptManager_TypeInfo;
-    if ( !ScriptManager_TypeInfo->_2.cctor_finished )
+    v6 = ScriptManager_TypeInfo;
+    if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-      v5 = ScriptManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, *(_QWORD *)&type);
+      v6 = ScriptManager_TypeInfo;
     }
-    v6 = UIImageRender_TypeInfo;
-    PICTURE_FRAME_SPRITE_WIDTH_21_9 = v5->static_fields->PICTURE_FRAME_SPRITE_WIDTH_21_9;
-    if ( !UIImageRender_TypeInfo->_2.cctor_finished )
+    v7 = UIImageRender_TypeInfo;
+    PICTURE_FRAME_SPRITE_WIDTH_21_9 = v6->static_fields->PICTURE_FRAME_SPRITE_WIDTH_21_9;
+    if ( !*(&UIImageRender_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo);
-      v6 = UIImageRender_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UIImageRender_TypeInfo, *(_QWORD *)&type);
+      v7 = UIImageRender_TypeInfo;
     }
-    v8 = (float)PICTURE_FRAME_SPRITE_WIDTH_21_9 / (float)v6->static_fields->MAIN_SIZE_X;
+    v5 = (float)PICTURE_FRAME_SPRITE_WIDTH_21_9 / (float)v7->static_fields->MAIN_SIZE_X;
   }
-  else
-  {
-    v8 = 1.0;
-  }
-  UIScriptChara__SetScale((UIScriptChara_o *)this, v8, 0);
+  UIScriptChara__SetScale((UIScriptChara_o *)this, v5, 0);
 }
 
 
@@ -1038,7 +1051,7 @@ void UIScriptImage__SetMaskImage(
   v8 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
 LABEL_11:
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
     goto LABEL_10;
@@ -1058,7 +1071,7 @@ LABEL_11:
         return;
       }
 LABEL_10:
-      sub_1D0F30C(this, *(_QWORD *)&offsetX);
+      sub_21FFECC(this, *(_QWORD *)&offsetX);
     }
     goto LABEL_11;
   }
@@ -1070,19 +1083,19 @@ void UIScriptImage__SetMaskInteraction(UIScriptImage_o *this, int32_t maskIntera
 {
   struct UIImageM_array *imageList; // x20
   int max_length; // w8
-  unsigned int v6; // w21
+  __int64 v6; // x21
 
   imageList = this->fields.imageList;
   if ( !imageList )
-    goto LABEL_9;
+    goto LABEL_8;
   max_length = imageList->max_length;
   if ( max_length >= 1 )
   {
     v6 = 0;
     while ( 1 )
     {
-      if ( v6 >= max_length )
-        sub_1D0F314(this);
+      if ( (unsigned int)v6 >= max_length )
+        sub_21FFED4(this);
       this = (UIScriptImage_o *)imageList->m_Items[v6];
       if ( !this )
         break;
@@ -1091,8 +1104,8 @@ void UIScriptImage__SetMaskInteraction(UIScriptImage_o *this, int32_t maskIntera
       if ( (int)++v6 >= max_length )
         return;
     }
-LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&maskInteraction);
+LABEL_8:
+    sub_21FFECC(this, *(_QWORD *)&maskInteraction);
   }
 }
 
@@ -1103,7 +1116,7 @@ void UIScriptImage__SetOverlap(UIScriptImage_o *this, float a, const MethodInfo 
   __int64 mainIndex; // x9
   unsigned int max_length; // w11
   __int64 backIndex; // x10
-  UIImageRender_o *v7; // x19
+  UIImageRender_o *v8; // x19
 
   imageList = this->fields.imageList;
   if ( !imageList )
@@ -1113,18 +1126,18 @@ void UIScriptImage__SetOverlap(UIScriptImage_o *this, float a, const MethodInfo 
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
   this = (UIScriptImage_o *)imageList->m_Items[mainIndex];
   if ( !this
-    || (v7 = (UIImageRender_o *)imageList->m_Items[backIndex],
+    || (v8 = (UIImageRender_o *)imageList->m_Items[backIndex],
         UIImageRender__SetAlpha((UIImageRender_o *)this, a, 0),
-        !v7) )
+        !v8) )
   {
 LABEL_7:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
-  UIImageRender__SetAlpha(v7, 1.0 - a, 0);
+  UIImageRender__SetAlpha(v8, 1.0 - a, 0);
 }
 
 
@@ -1161,7 +1174,7 @@ LABEL_10:
       klass = v5[1].klass;
       if ( !klass )
 LABEL_11:
-        sub_1D0F30C(this, isShadow);
+        sub_21FFECC(this, isShadow);
       if ( (unsigned int)backIndex < LODWORD(klass->_1.namespaze) )
       {
         this = (UIScriptImage_o *)*((_QWORD *)&klass->_1.byval_arg.data + backIndex);
@@ -1173,7 +1186,7 @@ LABEL_11:
         goto LABEL_11;
       }
     }
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
 }
 
@@ -1183,19 +1196,19 @@ void UIScriptImage__SetSortingOrder(UIScriptImage_o *this, int32_t order, const 
 {
   struct UIImageM_array *imageList; // x20
   int max_length; // w8
-  unsigned int v6; // w21
+  __int64 v6; // x21
 
   imageList = this->fields.imageList;
   if ( !imageList )
-    goto LABEL_9;
+    goto LABEL_8;
   max_length = imageList->max_length;
   if ( max_length >= 1 )
   {
     v6 = 0;
     while ( 1 )
     {
-      if ( v6 >= max_length )
-        sub_1D0F314(this);
+      if ( (unsigned int)v6 >= max_length )
+        sub_21FFED4(this);
       this = (UIScriptImage_o *)imageList->m_Items[v6];
       if ( !this )
         break;
@@ -1204,8 +1217,8 @@ void UIScriptImage__SetSortingOrder(UIScriptImage_o *this, int32_t order, const 
       if ( (int)++v6 >= max_length )
         return;
     }
-LABEL_9:
-    sub_1D0F30C(this, *(_QWORD *)&order);
+LABEL_8:
+    sub_21FFECC(this, *(_QWORD *)&order);
   }
 }
 
@@ -1230,14 +1243,15 @@ void UIScriptImage__SetSpecialEffect(
   float v20; // s4
   float v21; // s5
   float v22; // s6
+  __int64 v23; // x1
   UnityEngine_Object_o *CharaEffect; // x22
-  _BOOL8 v24; // x0
-  __int64 v25; // x1
+  _BOOL8 v25; // x0
+  __int64 v26; // x1
   struct UIImageM_array *imageList; // x8
-  uint32_t v27; // w0
-  __int64 *v28; // x8
+  uint32_t v28; // w0
+  __int64 *v29; // x8
   float colora; // [xsp+5Ch] [xbp-34h]
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   b = color.fields.b;
   g = color.fields.g;
@@ -1245,65 +1259,65 @@ void UIScriptImage__SetSpecialEffect(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4E79798 & 1) == 0 )
+  if ( (byte_593A7BF & 1) == 0 )
   {
     colora = color.fields.a;
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25356/*"wipe"*/);
-    sub_1D0F0B4(&StringLiteral_17065/*"appearanceReverse"*/);
-    sub_1D0F0B4(&StringLiteral_18745/*"darkEnemyErasure"*/);
-    sub_1D0F0B4(&StringLiteral_25362/*"wipeTimeRe"*/);
-    sub_1D0F0B4(&StringLiteral_18746/*"darkWipe"*/);
-    sub_1D0F0B4(&StringLiteral_19834/*"flashErasure"*/);
-    sub_1D0F0B4(&StringLiteral_17064/*"appearance"*/);
-    sub_1D0F0B4(&StringLiteral_19398/*"erasure"*/);
-    sub_1D0F0B4(&StringLiteral_19399/*"erasureReverse"*/);
-    sub_1D0F0B4(&StringLiteral_19359/*"enemyErasure"*/);
-    sub_1D0F0B4(&StringLiteral_25361/*"wipeTime"*/);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_26161/*"wipe"*/);
+    sub_21FFC50(&StringLiteral_17495/*"appearanceReverse"*/);
+    sub_21FFC50(&StringLiteral_19239/*"darkEnemyErasure"*/);
+    sub_21FFC50(&StringLiteral_26167/*"wipeTimeRe"*/);
+    sub_21FFC50(&StringLiteral_19240/*"darkWipe"*/);
+    sub_21FFC50(&StringLiteral_20355/*"flashErasure"*/);
+    sub_21FFC50(&StringLiteral_17494/*"appearance"*/);
+    sub_21FFC50(&StringLiteral_19913/*"erasure"*/);
+    sub_21FFC50(&StringLiteral_19914/*"erasureReverse"*/);
+    sub_21FFC50(&StringLiteral_19874/*"enemyErasure"*/);
+    sub_21FFC50(&StringLiteral_26166/*"wipeTime"*/);
     color.fields.a = colora;
-    byte_4E79798 = 1;
+    byte_593A7BF = 1;
   }
-  v30.fields.x = x;
-  v30.fields.y = y;
-  v30.fields.z = z;
+  v31.fields.x = x;
+  v31.fields.y = y;
+  v31.fields.z = z;
   v20 = r;
   v21 = g;
   v22 = b;
   CharaEffect = (UnityEngine_Object_o *)ProgramEffectManager__CreateCharaEffect(
                                           this->fields.baseSpecialEffect,
                                           n,
-                                          v30,
+                                          v31,
                                           time,
                                           color,
                                           range,
                                           isSkip,
                                           isPause,
                                           0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v24 = UnityEngine_Object__op_Equality(CharaEffect, 0, 0);
-  if ( !v24 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+  v25 = UnityEngine_Object__op_Equality(CharaEffect, 0, 0);
+  if ( !v25 )
   {
     imageList = this->fields.imageList;
     if ( !imageList )
-      sub_1D0F30C(v24, v25);
+      sub_21FFECC(v25, v26);
     if ( this->fields.mainIndex >= LODWORD(imageList->max_length) )
-      sub_1D0F314(v24);
-    v27 = PrivateImplementationDetails___ComputeStringHash(n, 0);
-    if ( v27 > 0x8D759330 )
+      sub_21FFED4(v25);
+    v28 = PrivateImplementationDetails___ComputeStringHash(n, 0);
+    if ( v28 > 0x8D759330 )
     {
-      if ( v27 > 0xD4B34506 )
+      if ( v28 > 0xD4B34506 )
       {
-        switch ( v27 )
+        switch ( v28 )
         {
           case 0xE7555186:
-            v28 = &StringLiteral_25356/*"wipe"*/;
+            v29 = &StringLiteral_26161/*"wipe"*/;
             break;
           case 0xEC9DA126:
-            v28 = &StringLiteral_18746/*"darkWipe"*/;
+            v29 = &StringLiteral_19240/*"darkWipe"*/;
             break;
           case 0xEE11C37F:
-            v28 = &StringLiteral_17064/*"appearance"*/;
+            v29 = &StringLiteral_17494/*"appearance"*/;
             break;
           default:
             return;
@@ -1311,50 +1325,50 @@ void UIScriptImage__SetSpecialEffect(
       }
       else
       {
-        switch ( v27 )
+        switch ( v28 )
         {
           case 0x8DA714B6:
-            v28 = &StringLiteral_25362/*"wipeTimeRe"*/;
+            v29 = &StringLiteral_26167/*"wipeTimeRe"*/;
             break;
           case 0x9C7CDA94:
-            v28 = &StringLiteral_19834/*"flashErasure"*/;
+            v29 = &StringLiteral_20355/*"flashErasure"*/;
             break;
           case 0xD4B34506:
-            v28 = &StringLiteral_19399/*"erasureReverse"*/;
+            v29 = &StringLiteral_19914/*"erasureReverse"*/;
             break;
           default:
             return;
         }
       }
     }
-    else if ( v27 > 0x4A1132BE )
+    else if ( v28 > 0x4A1132BE )
     {
-      switch ( v27 )
+      switch ( v28 )
       {
         case 0x8D759330:
-          v28 = &StringLiteral_19398/*"erasure"*/;
+          v29 = &StringLiteral_19913/*"erasure"*/;
           break;
         case 0x4DE5D9DEu:
-          v28 = &StringLiteral_19359/*"enemyErasure"*/;
+          v29 = &StringLiteral_19874/*"enemyErasure"*/;
           break;
         case 0x50AF70CBu:
-          v28 = &StringLiteral_17065/*"appearanceReverse"*/;
+          v29 = &StringLiteral_17495/*"appearanceReverse"*/;
           break;
         default:
           return;
       }
     }
-    else if ( v27 == 242689791 )
+    else if ( v28 == 242689791 )
     {
-      v28 = &StringLiteral_25361/*"wipeTime"*/;
+      v29 = &StringLiteral_26166/*"wipeTime"*/;
     }
     else
     {
-      if ( v27 != 1242641086 )
+      if ( v28 != 1242641086 )
         return;
-      v28 = &StringLiteral_18745/*"darkEnemyErasure"*/;
+      v29 = &StringLiteral_19239/*"darkEnemyErasure"*/;
     }
-    if ( System_String__op_Equality(n, (System_String_o *)*v28, 0) )
+    if ( System_String__op_Equality(n, (System_String_o *)*v29, 0) )
       UIScriptChara__StopShadowEffect((UIScriptChara_o *)this, isSkip, 0);
   }
 }
@@ -1366,9 +1380,9 @@ void UIScriptImage__StopCut(UIScriptImage_o *this, const MethodInfo *method)
 
   imageList = this->fields.imageList;
   if ( !imageList )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   if ( this->fields.mainIndex >= LODWORD(imageList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
 }
 
 
@@ -1380,38 +1394,44 @@ void UIScriptImage__UpdateChange(UIScriptImage_o *this, const MethodInfo *method
   unsigned int max_length; // w11
   __int64 backIndex; // x10
   int32_t changeKind; // w11
-  float v8; // s0
-  float v9; // s8
-  float changeRange; // s0
-  UIScriptChara_c *v11; // x0
-  float v12; // s2
-  float v13; // s8
-  float v14; // s9
-  float v15; // s0
-  UIImageRender_o *v16; // x20
+  UIImageRender_o *v8; // x20
   float changeSpeed; // s8
-  UIScriptChara_c *v18; // x0
+  float v10; // s0
+  float v11; // s8
+  __int64 v12; // x1
+  float changeRange; // s0
+  float v14; // s9
+  UIScriptChara_c *v15; // x0
+  float v16; // s0
+  float v17; // s8
+  float *v18; // x8
+  UnityEngine_MonoBehaviour_o *v19; // x0
+  float v20; // s0
+  System_String_o *v21; // x1
   float changeTotal; // s9
-  float v20; // s8
-  float UNIT_SPEED; // s0
+  UIScriptChara_c *v23; // x0
+  float v24; // s0
+  float v25; // s8
+  float *p_UNIT_SPEED; // x8
+  float v27; // s1
 
   v2 = this;
-  if ( (byte_4E79790 & 1) == 0 )
+  if ( (byte_593A7B7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UIScriptChara_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6045/*"EndChange"*/);
-    this = (UIScriptImage_o *)sub_1D0F0B4(&StringLiteral_4745/*"ContinueChangeFade"*/);
-    byte_4E79790 = 1;
+    sub_21FFC50(&UIScriptChara_TypeInfo);
+    sub_21FFC50(&StringLiteral_6227/*"EndChange"*/);
+    this = (UIScriptImage_o *)sub_21FFC50(&StringLiteral_4870/*"ContinueChangeFade"*/);
+    byte_593A7B7 = 1;
   }
   imageList = v2->fields.imageList;
   if ( !imageList )
-    goto LABEL_25;
+    goto LABEL_31;
   mainIndex = v2->fields.mainIndex;
   max_length = imageList->max_length;
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = v2->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   }
   changeKind = v2->fields.changeKind;
   if ( changeKind != 3 )
@@ -1420,69 +1440,82 @@ void UIScriptImage__UpdateChange(UIScriptImage_o *this, const MethodInfo *method
     {
       if ( changeKind != 1 )
         return;
-LABEL_16:
+LABEL_22:
       UIScriptImage__EndChange(v2, method);
       return;
     }
     this = (UIScriptImage_o *)imageList->m_Items[backIndex];
     if ( this )
     {
-      v16 = (UIImageRender_o *)imageList->m_Items[mainIndex];
+      v8 = (UIImageRender_o *)imageList->m_Items[mainIndex];
       UIImageRender__MoveAlpha((UIImageRender_o *)this, v2->fields.changeSpeed, 0.0, 0, 0, 0);
       changeSpeed = v2->fields.changeSpeed;
       this = (UIScriptImage_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0);
-      if ( v16 )
+      if ( v8 )
       {
         UIImageRender__MoveAlpha(
-          v16,
+          v8,
           changeSpeed,
           1.0,
           (UnityEngine_GameObject_o *)this,
-          (System_String_o *)StringLiteral_6045/*"EndChange"*/,
+          (System_String_o *)StringLiteral_6227/*"EndChange"*/,
           0);
         return;
       }
     }
-LABEL_25:
-    sub_1D0F30C(this, method);
+LABEL_31:
+    sub_21FFECC(this, method);
   }
-  v8 = v2->fields.changeSpeed;
-  if ( v8 <= 0.0 )
-    goto LABEL_16;
-  v9 = v2->fields.changeTotal / v8;
-  if ( v9 >= 1.0 )
-    goto LABEL_16;
+  v10 = v2->fields.changeSpeed;
+  if ( v10 <= 0.0 )
+    goto LABEL_22;
+  v11 = v2->fields.changeTotal / v10;
+  if ( v11 >= 1.0 )
+    goto LABEL_22;
   UIScriptImage__SetOverlap(v2, 0.0, method);
   changeRange = v2->fields.changeRange;
-  if ( v9 <= 0.5 )
+  if ( v11 <= 0.5 )
   {
-    v18 = UIScriptChara_TypeInfo;
     changeTotal = v2->fields.changeTotal;
-    v20 = fminf((float)(0.5 - v9) * changeRange, 1.0);
-    if ( !UIScriptChara_TypeInfo->_2.cctor_finished )
+    v23 = UIScriptChara_TypeInfo;
+    v24 = (float)(0.5 - v11) * changeRange;
+    if ( v24 <= 1.0 )
+      v25 = v24;
+    else
+      v25 = 1.0;
+    if ( !*(&UIScriptChara_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo);
-      v18 = UIScriptChara_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo, v12);
+      v23 = UIScriptChara_TypeInfo;
     }
-    UNIT_SPEED = v18->static_fields->UNIT_SPEED;
-    v2->fields.changeTotal = changeTotal + (float)(v20 + (float)(UNIT_SPEED + UNIT_SPEED));
-    v2->fields.changeStep = UNIT_SPEED;
-    v15 = v20 + UNIT_SPEED;
+    p_UNIT_SPEED = &v23->static_fields->UNIT_SPEED;
+    v19 = (UnityEngine_MonoBehaviour_o *)v2;
+    v27 = *p_UNIT_SPEED;
+    v21 = (System_String_o *)StringLiteral_4870/*"ContinueChangeFade"*/;
+    v20 = v25 + *p_UNIT_SPEED;
+    v2->fields.changeTotal = changeTotal + (float)(v25 + (float)(*p_UNIT_SPEED + *p_UNIT_SPEED));
+    v2->fields.changeStep = v27;
   }
   else
   {
-    v11 = UIScriptChara_TypeInfo;
-    v12 = v9 + -1.0;
-    v13 = v2->fields.changeTotal;
-    v14 = fminf((float)(v12 + 0.5) * changeRange, 1.0);
-    if ( !UIScriptChara_TypeInfo->_2.cctor_finished )
+    v14 = v2->fields.changeTotal;
+    v15 = UIScriptChara_TypeInfo;
+    v16 = (float)((float)(v11 + -1.0) + 0.5) * changeRange;
+    if ( v16 <= 1.0 )
+      v17 = v16;
+    else
+      v17 = 1.0;
+    if ( !*(&UIScriptChara_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo);
-      v11 = UIScriptChara_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo, v12);
+      v15 = UIScriptChara_TypeInfo;
     }
-    v15 = v11->static_fields->UNIT_SPEED;
-    v2->fields.changeTotal = v13 + (float)(v14 + (float)(v15 + v15));
-    v2->fields.changeStep = v14 + v15;
+    v18 = &v15->static_fields->UNIT_SPEED;
+    v19 = (UnityEngine_MonoBehaviour_o *)v2;
+    v20 = *v18;
+    v21 = (System_String_o *)StringLiteral_4870/*"ContinueChangeFade"*/;
+    v2->fields.changeTotal = v14 + (float)(v17 + (float)(*v18 + *v18));
+    v2->fields.changeStep = v17 + v20;
   }
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_4745/*"ContinueChangeFade"*/, v15, 0);
+  UnityEngine_MonoBehaviour__Invoke(v19, v21, v20, 0);
 }

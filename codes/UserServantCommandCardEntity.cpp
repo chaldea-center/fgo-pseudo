@@ -1,27 +1,27 @@
 void UserServantCommandCardEntity___ctor(UserServantCommandCardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78667 & 1) == 0 )
+  if ( (byte_59396A2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78667 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59396A2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserServantCommandCardEntity__CreatePK(int64_t userId, int64_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4E78666 & 1) == 0 )
+  if ( (byte_59396A1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__long___);
-    byte_4E78666 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_59396A1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            svtId,
-           (const MethodInfo_324D4CC *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_38210F4 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -29,32 +29,34 @@ System_String_o *UserServantCommandCardEntity__CreatePrimaryKey(
         UserServantCommandCardEntity_o *this,
         const MethodInfo *method)
 {
-  __int128 v3; // q0
-  int64_t v4; // x0
-  __int128 v5; // q1
-  int64_t v6; // x20
-  int64_t v7; // x0
-  const MethodInfo *v8; // x2
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v10; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+20h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+40h] [xbp-40h]
+  __int128 v3; // q1
+  int v4; // w8
+  int64_t v5; // x0
+  __int128 v6; // q1
+  int64_t v7; // x20
+  int64_t v8; // x0
+  const MethodInfo *v9; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v13; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_4E78665 & 1) == 0 )
+  if ( (byte_59396A0 & 1) == 0 )
   {
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4E78665 = 1;
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_59396A0 = 1;
   }
   v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v12.fields.fakeValue = v3;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v11 = v12;
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v11, 0);
-  v5 = *(_OWORD *)&this->fields.svtId.fields.fakeValue;
-  v6 = v4;
-  *(_OWORD *)&v10.fields.currentCryptoKey = *(_OWORD *)&this->fields.svtId.fields.currentCryptoKey;
-  *(_OWORD *)&v10.fields.fakeValue = v5;
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v10, 0);
-  return UserServantCommandCardEntity__CreatePK(v6, v7, v8);
+  v4 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
+  *(_OWORD *)&v13.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v13.fields.fakeValue = v3;
+  if ( !v4 )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+  v12 = v13;
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v12, 0);
+  v6 = *(_OWORD *)&this->fields.svtId.fields.fakeValue;
+  v7 = v5;
+  *(_OWORD *)&v11.fields.currentCryptoKey = *(_OWORD *)&this->fields.svtId.fields.currentCryptoKey;
+  *(_OWORD *)&v11.fields.fakeValue = v6;
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v11, 0);
+  return UserServantCommandCardEntity__CreatePK(v7, v8, v9);
 }

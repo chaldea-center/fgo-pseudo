@@ -15,6 +15,7 @@ void FSWidgetSize__Awake(FSWidgetSize_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t FSWidgetSize__GetSize(
         FSWidgetSize_o *this,
         int32_t size_16_9,
@@ -24,95 +25,103 @@ int32_t FSWidgetSize__GetSize(
 {
   FSUtility_c *v8; // x0
   int32_t width; // w21
-  float height; // s9
-  float v12; // s8
-  float v13; // s1
-  float v14; // s0
-  int32_t v15; // w8
+  int32_t height; // w0
+  __int64 v12; // x1
+  float v13; // s0
+  float v14; // s1
+  float v15; // s1
+  float v16; // s0
+  float v17; // s9
+  float v18; // s8
+  int32_t v19; // w9
 
-  if ( (byte_4E79089 & 1) != 0 )
+  if ( (byte_593A0D8 & 1) == 0 )
   {
-    if ( fix )
+    sub_21FFC50(&FSUtility_TypeInfo);
+    byte_593A0D8 = 1;
+  }
+  if ( fix )
+  {
+    v8 = FSUtility_TypeInfo;
+    if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, *(_QWORD *)&size_16_9);
+    if ( FSUtility__IsUnderVista((const MethodInfo *)v8) )
+      return size_16_9;
+    else
+      return size_21_9;
+  }
+  else
+  {
+    width = UnityEngine_Screen__get_width(0);
+    height = UnityEngine_Screen__get_height(0);
+    v13 = (float)width / (float)height;
+    v14 = 2.3333;
+    if ( v13 <= 2.3333 )
+      v14 = (float)width / (float)height;
+    v15 = (float)(v14 + -1.7778) / 0.55556;
+    if ( v13 >= 1.7778 )
+      v16 = v15;
+    else
+      v16 = 0.0;
+    v17 = v16 * (float)(size_21_9 - size_16_9);
+    if ( !byte_5931FBB )
     {
-LABEL_3:
-      v8 = FSUtility_TypeInfo;
-      if ( !FSUtility_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-      if ( FSUtility__IsUnderVista((const MethodInfo *)v8) )
-        return size_16_9;
-      else
-        return size_21_9;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_5931FBB = 1;
     }
+    v18 = v17 + (float)size_16_9;
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v12);
+    v19 = vcvtps_s32_f32(v18);
+    if ( ceilf(v18) == INFINITY )
+      return 0x80000000;
+    else
+      return v19;
   }
-  else
-  {
-    sub_1D0F0B4(&FSUtility_TypeInfo);
-    byte_4E79089 = 1;
-    if ( fix )
-      goto LABEL_3;
-  }
-  width = UnityEngine_Screen__get_width(0);
-  height = (float)UnityEngine_Screen__get_height(0);
-  if ( !byte_4E71327 )
-  {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E71327 = 1;
-  }
-  v12 = (float)width / height;
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v13 = (float)(fminf(v12, 2.3333) + -1.7778) / 0.55556;
-  if ( v12 < 1.7778 )
-    v13 = 0.0;
-  v14 = (float)(v13 * (float)(size_21_9 - size_16_9)) + (float)size_16_9;
-  v15 = vcvtps_s32_f32(v14);
-  if ( ceilf(v14) == INFINITY )
-    return 0x80000000;
-  else
-    return v15;
 }
 
 
 void FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   Il2CppObject *Component_object; // x20
-  _BOOL8 v4; // x0
-  const MethodInfo *v5; // x4
+  _BOOL8 v5; // x0
+  const MethodInfo *v6; // x4
   __int64 Size; // x0
-  __int64 v7; // x1
-  FSWidgetSize_o *v8; // x0
-  const MethodInfo *v9; // x4
-  int32_t v10; // w1
+  __int64 v8; // x1
+  FSWidgetSize_o *v9; // x0
+  const MethodInfo *v10; // x4
+  int32_t v11; // w1
 
-  if ( (byte_4E79088 & 1) == 0 )
+  if ( (byte_593A0D7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79088 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A0D7 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( v4 )
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( v5 )
   {
     Size = FSWidgetSize__GetSize(
-             (FSWidgetSize_o *)v4,
+             (FSWidgetSize_o *)v5,
              this->fields.size_16_9.fields.m_X,
              this->fields.size_21_9.fields.m_X,
              this->fields.fixWidth,
-             v5);
+             v6);
     if ( !Component_object )
-      sub_1D0F30C(Size, v7);
+      sub_21FFECC(Size, v8);
     UIWidget__set_width((UIWidget_o *)Component_object, Size, 0);
-    v10 = FSWidgetSize__GetSize(
-            v8,
+    v11 = FSWidgetSize__GetSize(
+            v9,
             this->fields.size_16_9.fields.m_Y,
             this->fields.size_21_9.fields.m_Y,
             this->fields.fixHeight,
-            v9);
-    UIWidget__set_height((UIWidget_o *)Component_object, v10, 0);
+            v10);
+    UIWidget__set_height((UIWidget_o *)Component_object, v11, 0);
   }
 }

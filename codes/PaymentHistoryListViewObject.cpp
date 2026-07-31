@@ -1,12 +1,14 @@
 void PaymentHistoryListViewObject___ctor(PaymentHistoryListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E735E5 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5934539 & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    byte_4E735E5 = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    byte_5934539 = 1;
   }
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
   ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
@@ -16,28 +18,28 @@ void PaymentHistoryListViewObject__Awake(PaymentHistoryListViewObject_o *this, c
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E735E3 & 1) == 0 )
+  if ( (byte_5934537 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_PaymentHistoryListViewItemDraw___);
-    byte_4E735E3 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_PaymentHistoryListViewItemDraw___);
+    byte_5934537 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_PaymentHistoryListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_PaymentHistoryListViewItemDraw___);
   this->fields.itemDraw = (struct PaymentHistoryListViewItemDraw_o *)Component_object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
     v7,
@@ -53,16 +55,18 @@ void PaymentHistoryListViewObject__SetupDisp(PaymentHistoryListViewObject_o *thi
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
   struct ListViewItem_o *v5; // x20
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  PaymentHistoryListViewItemDraw_o *v9; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
+  PaymentHistoryListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4E735E4 & 1) == 0 )
+  if ( (byte_5934538 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&PaymentHistoryListViewItem_TypeInfo);
-    byte_4E735E4 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&PaymentHistoryListViewItem_TypeInfo);
+    byte_5934538 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -80,13 +84,13 @@ void PaymentHistoryListViewObject__SetupDisp(PaymentHistoryListViewObject_o *thi
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, v5 != 0, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1D0F30C(0, v7);
-    PaymentHistoryListViewItemDraw__SetItem(v9, (PaymentHistoryListViewItem_o *)v5, v8);
+    v11 = this->fields.itemDraw;
+    if ( !v11 )
+      sub_21FFECC(0, v9);
+    PaymentHistoryListViewItemDraw__SetItem(v11, (PaymentHistoryListViewItem_o *)v5, v10);
   }
 }

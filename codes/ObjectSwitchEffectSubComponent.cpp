@@ -12,21 +12,24 @@ void ObjectSwitchEffectSubComponent__RecvParam(
 {
   ObjectSwitchEffectSubComponent_o *v4; // x19
   __int64 naturalAligment; // x10
-  Il2CppObject *v6; // x9
-  struct UnityEngine_GameObject_array *switchObjectList; // x8
-  int max_length; // w20
-  _DWORD *monitor; // x9
-  __int64 parameterIndex; // x10
-  int v11; // w11
-  __int64 v12; // x21
-  int v13; // w22
-  unsigned int v14; // w21
+  Il2CppObject *v6; // x8
+  struct UnityEngine_GameObject_array *switchObjectList; // x9
+  il2cpp_array_size_t max_length; // x20
+  _DWORD *monitor; // x8
+  __int64 parameterIndex; // x9
+  int v11; // w10
+  __int64 v12; // x8
+  __int64 v13; // x21
+  __int64 v14; // x22
+  struct UnityEngine_GameObject_array *v15; // x8
+  __int64 v16; // x21
+  struct UnityEngine_GameObject_array *v17; // x8
 
   v4 = this;
-  if ( (byte_4E78D72 & 1) == 0 )
+  if ( (byte_5939DC1 & 1) == 0 )
   {
-    this = (ObjectSwitchEffectSubComponent_o *)sub_1D0F0B4(&RaceResultEffectParam_TypeInfo);
-    byte_4E78D72 = 1;
+    this = (ObjectSwitchEffectSubComponent_o *)sub_21FFC50(&RaceResultEffectParam_TypeInfo);
+    byte_5939DC1 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -43,8 +46,7 @@ void ObjectSwitchEffectSubComponent__RecvParam(
   }
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
-LABEL_28:
-    sub_1D0F30C(this, param);
+    goto LABEL_29;
   max_length = switchObjectList->max_length;
   if ( !v6 )
     goto LABEL_22;
@@ -56,49 +58,53 @@ LABEL_28:
   if ( (int)parameterIndex >= v11 )
     goto LABEL_22;
   if ( (unsigned int)parameterIndex >= v11 )
-    goto LABEL_30;
+LABEL_30:
+    sub_21FFED4(this);
   v12 = *(_QWORD *)&monitor[2 * parameterIndex + 8];
+  v13 = v12 - 1;
   if ( v12 >= 1 )
   {
-    if ( max_length >= 1 )
+    if ( (int)max_length >= 1 )
     {
-      v13 = 1;
-      while ( (unsigned int)(v13 - 1) < LODWORD(switchObjectList->max_length) )
+      v14 = 0;
+      while ( 1 )
       {
-        this = (ObjectSwitchEffectSubComponent_o *)switchObjectList->m_Items[v13 - 1];
+        v15 = v4->fields.switchObjectList;
+        if ( !v15 )
+          goto LABEL_29;
+        if ( (unsigned int)v14 >= LODWORD(v15->max_length) )
+          goto LABEL_30;
+        this = (ObjectSwitchEffectSubComponent_o *)v15->m_Items[v14];
         if ( !this )
-          goto LABEL_28;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v12 == v13, 0);
-        if ( max_length == v13 )
+          goto LABEL_29;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v13 == v14++, 0);
+        if ( (_DWORD)max_length == (_DWORD)v14 )
           return;
-        switchObjectList = v4->fields.switchObjectList;
-        ++v13;
-        if ( !switchObjectList )
-          goto LABEL_28;
       }
-      goto LABEL_30;
     }
   }
   else
   {
 LABEL_22:
-    if ( max_length >= 1 )
+    if ( (int)max_length >= 1 )
     {
-      v14 = 0;
-      while ( v14 < LODWORD(switchObjectList->max_length) )
+      v16 = 0;
+      while ( 1 )
       {
-        this = (ObjectSwitchEffectSubComponent_o *)switchObjectList->m_Items[v14];
+        v17 = v4->fields.switchObjectList;
+        if ( !v17 )
+          break;
+        if ( (unsigned int)v16 >= LODWORD(v17->max_length) )
+          goto LABEL_30;
+        this = (ObjectSwitchEffectSubComponent_o *)v17->m_Items[v16];
         if ( !this )
-          goto LABEL_28;
+          break;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-        if ( max_length == ++v14 )
+        if ( (_DWORD)max_length == (_DWORD)++v16 )
           return;
-        switchObjectList = v4->fields.switchObjectList;
-        if ( !switchObjectList )
-          goto LABEL_28;
       }
-LABEL_30:
-      sub_1D0F314(this);
+LABEL_29:
+      sub_21FFECC(this, param);
     }
   }
 }

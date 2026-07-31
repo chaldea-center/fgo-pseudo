@@ -1,13 +1,13 @@
 void BattlePointEntity___ctor(BattlePointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E772F3 & 1) == 0 )
+  if ( (byte_59382C0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E772F3 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_59382C0 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -31,7 +31,7 @@ bool BattlePointEntity__IsEnableToAddBattlePoint(
   if ( (this->fields.flag & 1) == 0 )
     return 1;
   if ( !svtData )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return !BattleServantData__IsFollwerSupport(svtData, 0);
 }
 
@@ -42,24 +42,32 @@ bool BattlePointEntity__IsHideBattlePointGauge(
         const MethodInfo *method)
 {
   BattlePointData_o *BattlePointData; // x0
-  _BOOL4 IsEnableToAddValue_k__BackingField; // w21
+  int v6; // w20
   int32_t flag; // w8
 
   if ( (this->fields.flag & 2) != 0 )
-    return 1;
-  if ( !svtData )
-    sub_1D0F30C(this, 0);
-  BattlePointData = BattleServantData__GetBattlePointData(svtData, this->fields.id, 0);
-  if ( BattlePointData )
-    IsEnableToAddValue_k__BackingField = BattlePointData->fields._IsEnableToAddValue_k__BackingField;
+  {
+    LOBYTE(v6) = 1;
+  }
   else
-    IsEnableToAddValue_k__BackingField = 0;
-  flag = this->fields.flag;
-  if ( (flag & 4) != 0 )
-    return !IsEnableToAddValue_k__BackingField;
-  if ( (flag & 8) != 0 )
-    return !IsEnableToAddValue_k__BackingField & BattleServantData__IsFollwerSupport(svtData, 0);
-  return 0;
+  {
+    if ( !svtData )
+      sub_21FFECC(this, 0);
+    BattlePointData = BattleServantData__GetBattlePointData(svtData, this->fields.id, 0);
+    if ( BattlePointData )
+      v6 = !BattlePointData->fields._IsEnableToAddValue_k__BackingField;
+    else
+      v6 = 1;
+    flag = this->fields.flag;
+    if ( (flag & 4) == 0 )
+    {
+      if ( (flag & 8) != 0 )
+        return v6 & BattleServantData__IsFollwerSupport(svtData, 0);
+      else
+        LOBYTE(v6) = 0;
+    }
+  }
+  return v6;
 }
 
 

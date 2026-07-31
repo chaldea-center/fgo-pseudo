@@ -2,189 +2,204 @@ void CriDisposableObjectManager___cctor(const MethodInfo *method)
 {
   System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v1; // x19
 
-  if ( (byte_4E70B2F & 1) == 0 )
+  if ( (byte_59317D7 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__TypeInfo);
-    byte_4E70B2F = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__TypeInfo);
+    byte_59317D7 = 1;
   }
-  v1 = (System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *)sub_1D0F300(System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__TypeInfo);
+  v1 = (System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *)sub_21FFEBC(System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__TypeInfo);
   System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef____ctor(
     v1,
-    (const MethodInfo_39FC790 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___ctor__);
+    (const MethodInfo_44D7720 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___ctor__);
   CriDisposableObjectManager_TypeInfo->static_fields->refList = v1;
-  sub_1D0F058(CriDisposableObjectManager_TypeInfo->static_fields, v1);
+  sub_21FFBF4(CriDisposableObjectManager_TypeInfo->static_fields, v1);
 }
 
 
 void CriDisposableObjectManager__CallOnModuleFinalization(int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4E70B2C & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_59317D4 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    byte_4E70B2C = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    byte_59317D4 = 1;
   }
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
   CriDisposableObjectManager__DisposeAll(type, method);
 }
 
 
 void CriDisposableObjectManager__DisposeAll(int32_t type, const MethodInfo *method)
 {
-  CriDisposableObjectManager_c *v3; // x0
-  Il2CppObject *refList; // x0
-  const MethodInfo *v5; // x1
-  __int64 v6; // x1
-  int32_t NextWithType; // w21
-  CriDisposableObjectManager_c *v8; // x0
-  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v9; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
+  __int64 v2; // x2
+  CriDisposableObjectManager_c *v4; // x0
+  Il2CppObject **static_fields; // x8
+  Il2CppObject *v6; // x0
+  const MethodInfo *v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  int32_t NextWithType; // w20
   CriDisposableObjectManager_c *v12; // x0
-  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v13; // x0
-  System_String_o *v14; // x1
-  Il2CppObject *v15; // x22
-  __int64 v16; // x1
+  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *refList; // x0
+  __int64 v14; // x1
+  __int64 v15; // x2
+  CriDisposableObjectManager_c *v16; // x0
   System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v17; // x0
-  Il2CppObject *obj; // [xsp+0h] [xbp-90h]
-  CriDisposableObjectManager_ObjectRef_o v19; // [xsp+8h] [xbp-88h] BYREF
-  bool lockTaken; // [xsp+2Ch] [xbp-64h] BYREF
+  System_String_o *v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x2
+  Il2CppObject *v21; // x21
+  __int64 v22; // x1
+  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v23; // x0
+  CriDisposableObjectManager_ObjectRef_o v24; // [xsp+8h] [xbp-A8h] BYREF
+  __int64 v25; // [xsp+28h] [xbp-88h]
+  bool *v26; // [xsp+30h] [xbp-80h]
+  Il2CppObject **v27; // [xsp+38h] [xbp-78h]
+  bool lockTaken[4]; // [xsp+44h] [xbp-6Ch] BYREF
+  Il2CppObject *v29; // [xsp+48h] [xbp-68h] BYREF
 
-  if ( (byte_4E70B2E & 1) == 0 )
+  if ( (byte_59317D6 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-    sub_1D0F0B4(&CriDisposableObjectManager_ModuleType_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16107/*"[CRIWARE] Internal: Object disposal(Type:"*/);
-    sub_1D0F0B4(&StringLiteral_773/*") not handled by CriDisposableObjectManager; memory leak may have occured."*/);
-    byte_4E70B2E = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+    sub_21FFC50(&CriDisposableObjectManager_ModuleType_TypeInfo);
+    sub_21FFC50(&StringLiteral_16494/*"[CRIWARE] Internal: Object disposal(Type:"*/);
+    sub_21FFC50(&StringLiteral_804/*") not handled by CriDisposableObjectManager; memory leak may have occured."*/);
+    byte_59317D6 = 1;
   }
-  v3 = CriDisposableObjectManager_TypeInfo;
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+  v4 = CriDisposableObjectManager_TypeInfo;
+  v29 = 0;
+  lockTaken[0] = 0;
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    v3 = CriDisposableObjectManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
+    v4 = CriDisposableObjectManager_TypeInfo;
   }
-  refList = (Il2CppObject *)v3->static_fields->refList;
-  lockTaken = 0;
-  obj = refList;
-  System_Threading_Monitor__Enter_67490772(refList, &lockTaken, 0);
+  static_fields = (Il2CppObject **)v4->static_fields;
+  lockTaken[0] = 0;
+  v25 = 0;
+  v26 = lockTaken;
+  v6 = *static_fields;
+  v27 = &v29;
+  v29 = v6;
+  System_Threading_Monitor__Enter_77339928(v6, lockTaken, 0);
   while ( 1 )
   {
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    NextWithType = CriDisposableObjectManager__GetNextWithType(type, v5);
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v7, v8);
+    NextWithType = CriDisposableObjectManager__GetNextWithType(type, v7);
     if ( NextWithType < 0 )
       break;
-    v8 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    v12 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v8 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v9, v10);
+      v12 = CriDisposableObjectManager_TypeInfo;
     }
-    v9 = v8->static_fields->refList;
-    if ( !v9 )
-      sub_1D0F30C(0, v6);
+    refList = v12->static_fields->refList;
+    if ( !refList )
+      sub_21FFECC(0, v9);
     System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___get_Item(
-      &v19,
-      v9,
+      &v24,
+      refList,
       NextWithType,
-      (const MethodInfo_39FCCF4 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-    if ( v19.fields.disposable )
+      (const MethodInfo_44D7CB8 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+    if ( v24.fields.disposable )
     {
-      ((void (__fastcall *)(struct CriDisposable_o *, const MethodInfo *, __int64))v19.fields.disposable->klass->vtable._5_Dispose.methodPtr)(
-        v19.fields.disposable,
-        v19.fields.disposable->klass->vtable._5_Dispose.method,
-        v11);
+      v24.fields.disposable->klass->vtable._5_Dispose.methodPtr();
     }
     else
     {
-      v12 = CriDisposableObjectManager_TypeInfo;
-      if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+      v16 = CriDisposableObjectManager_TypeInfo;
+      if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-        v12 = CriDisposableObjectManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v14, v15);
+        v16 = CriDisposableObjectManager_TypeInfo;
       }
-      v13 = v12->static_fields->refList;
-      if ( !v13 )
-        sub_1D0F30C(0, v10);
-      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___get_Item(
-        &v19,
-        v13,
-        NextWithType,
-        (const MethodInfo_39FCCF4 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-      *(_QWORD *)&v19.fields.guid.fields._a = CriDisposableObjectManager_ModuleType_TypeInfo;
-      *(_QWORD *)&v19.fields.guid.fields._d = -1;
-      v14 = System_Enum__ToString((System_Enum_o *)&v19, 0);
-      v15 = (Il2CppObject *)System_String__Concat_65601036(
-                              (System_String_o *)StringLiteral_16107/*"[CRIWARE] Internal: Object disposal(Type:"*/,
-                              v14,
-                              (System_String_o *)StringLiteral_773/*") not handled by CriDisposableObjectManager; memory leak may have occured."*/,
-                              0);
-      if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-      UnityEngine_Debug__LogWarning(v15, 0);
-      v17 = CriDisposableObjectManager_TypeInfo->static_fields->refList;
+      v17 = v16->static_fields->refList;
       if ( !v17 )
-        sub_1D0F30C(0, v16);
-      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___RemoveAt(
+        sub_21FFECC(0, v14);
+      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___get_Item(
+        &v24,
         v17,
         NextWithType,
-        (const MethodInfo_39FEAEC *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
+        (const MethodInfo_44D7CB8 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+      *(_QWORD *)&v24.fields.guid.fields._a = CriDisposableObjectManager_ModuleType_TypeInfo;
+      *(_QWORD *)&v24.fields.guid.fields._d = -1;
+      v18 = System_Enum__ToString((System_Enum_o *)&v24, 0);
+      v21 = (Il2CppObject *)System_String__Concat_75481624(
+                              (System_String_o *)StringLiteral_16494/*"[CRIWARE] Internal: Object disposal(Type:"*/,
+                              v18,
+                              (System_String_o *)StringLiteral_804/*") not handled by CriDisposableObjectManager; memory leak may have occured."*/,
+                              0);
+      if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v19, v20);
+      UnityEngine_Debug__LogWarning(v21, 0);
+      v23 = CriDisposableObjectManager_TypeInfo->static_fields->refList;
+      if ( !v23 )
+        sub_21FFECC(0, v22);
+      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___RemoveAt(
+        v23,
+        NextWithType,
+        (const MethodInfo_44D99C0 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
     }
   }
-  if ( lockTaken )
-    System_Threading_Monitor__Exit(obj, 0);
+  if ( lockTaken[0] )
+    System_Threading_Monitor__Exit(*v27, 0);
 }
 
 
 int32_t CriDisposableObjectManager__GetNextWithType(int32_t type, const MethodInfo *method)
 {
-  CriDisposableObjectManager_c *v3; // x0
+  __int64 v2; // x2
+  CriDisposableObjectManager_c *v4; // x0
   struct System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *refList; // x8
   int32_t size; // w20
-  CriDisposableObjectManager_c *v6; // x0
-  CriDisposableObjectManager_ObjectRef_o v8; // [xsp+0h] [xbp-50h] BYREF
+  CriDisposableObjectManager_c *v7; // x0
+  CriDisposableObjectManager_ObjectRef_o v9; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4E70B2D & 1) == 0 )
+  if ( (byte_59317D5 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-    byte_4E70B2D = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+    byte_59317D5 = 1;
   }
-  v3 = CriDisposableObjectManager_TypeInfo;
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+  v4 = CriDisposableObjectManager_TypeInfo;
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    v3 = CriDisposableObjectManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
+    v4 = CriDisposableObjectManager_TypeInfo;
   }
-  refList = v3->static_fields->refList;
+  refList = v4->static_fields->refList;
   if ( !refList )
 LABEL_15:
-    sub_1D0F30C(v3, method);
+    sub_21FFECC(v4, method);
   size = refList->fields._size;
   while ( --size >= 0 )
   {
-    v6 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    v7 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v6 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
+      v7 = CriDisposableObjectManager_TypeInfo;
     }
-    v3 = (CriDisposableObjectManager_c *)v6->static_fields->refList;
-    if ( !v3 )
+    v4 = (CriDisposableObjectManager_c *)v7->static_fields->refList;
+    if ( !v4 )
       goto LABEL_15;
     System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___get_Item(
-      &v8,
-      (System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *)v3,
+      &v9,
+      (System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *)v4,
       size,
-      (const MethodInfo_39FCCF4 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-    if ( v8.fields.type == type )
+      (const MethodInfo_44D7CB8 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+    if ( v9.fields.type == type )
       return size;
   }
   return -1;
@@ -193,13 +208,15 @@ LABEL_15:
 
 bool CriDisposableObjectManager__IsDisposed(CriDisposable_o *disposable, const MethodInfo *method)
 {
-  if ( (byte_4E70B2B & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_59317D3 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    byte_4E70B2B = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    byte_59317D3 = 1;
   }
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
   return (unsigned int)CriDisposableObjectManager__SearchForDisposable(disposable, method) >> 31;
 }
 
@@ -207,218 +224,259 @@ bool CriDisposableObjectManager__IsDisposed(CriDisposable_o *disposable, const M
 // local variable allocation has failed, the output may be wrong!
 void CriDisposableObjectManager__Register(CriDisposable_o *disposable, int32_t type, const MethodInfo *method)
 {
-  CriDisposableObjectManager_c *v5; // x0
-  Il2CppObject *refList; // x19
-  __int64 v7; // x1
-  CriDisposableObjectManager_c *v8; // x0
-  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v9; // x22
-  __int64 v10; // x0
-  __int64 v11; // x1
+  __int64 v5; // x1
+  __int64 v6; // x2
+  CriDisposableObjectManager_c *v7; // x0
+  Il2CppObject **static_fields; // x8
+  Il2CppObject *v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  CriDisposableObjectManager_c *v12; // x0
+  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *refList; // x21
+  __int64 v14; // x0
+  __int64 v15; // x1
   struct CriDisposableObjectManager_ObjectRef_array *items; // x8
-  _QWORD *v13; // x10
-  __int64 size; // x9
-  __int128 v15; // q0
-  char *v16; // x8
-  const MethodInfo_39FD064 *v17; // x2
-  CriDisposableObjectManager_ObjectRef_o v18; // [xsp+0h] [xbp-90h] BYREF
-  CriDisposableObjectManager_ObjectRef_o v19; // [xsp+20h] [xbp-70h]
-  CriDisposableObjectManager_ObjectRef_o v20; // [xsp+40h] [xbp-50h] BYREF
-  bool lockTaken; // [xsp+6Ch] [xbp-24h] BYREF
+  _QWORD *v17; // x9
+  int v18; // w10
+  __int64 size; // x10
+  struct System_Guid_o guid; // q0
+  struct System_Guid_o v21; // q1
+  struct System_Guid_o *v22; // x8
+  const MethodInfo_44D8014 *v23; // x2
+  CriDisposableObjectManager_ObjectRef_o v24; // [xsp+0h] [xbp-B0h] BYREF
+  __int64 v25; // [xsp+20h] [xbp-90h]
+  bool *v26; // [xsp+28h] [xbp-88h]
+  Il2CppObject **v27; // [xsp+30h] [xbp-80h]
+  bool lockTaken[4]; // [xsp+3Ch] [xbp-74h] BYREF
+  CriDisposableObjectManager_ObjectRef_o v29; // [xsp+40h] [xbp-70h]
+  CriDisposableObjectManager_ObjectRef_o v30; // [xsp+60h] [xbp-50h] BYREF
+  Il2CppObject *v31; // [xsp+88h] [xbp-28h] BYREF
 
-  if ( (byte_4E70B29 & 1) == 0 )
+  if ( (byte_59317D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Debug_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__Add__);
-    sub_1D0F0B4(&StringLiteral_16106/*"[CRIWARE] Internal: Duplicated object GUID"*/);
-    byte_4E70B29 = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__Add__);
+    sub_21FFC50(&StringLiteral_16493/*"[CRIWARE] Internal: Duplicated object GUID"*/);
+    byte_59317D1 = 1;
   }
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
+  v31 = 0;
+  lockTaken[0] = 0;
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, *(_QWORD *)&type, method);
   if ( CriDisposableObjectManager__SearchForDisposable(disposable, *(const MethodInfo **)&type) < 0 )
   {
-    v5 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    v7 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v5 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v5, v6);
+      v7 = CriDisposableObjectManager_TypeInfo;
     }
-    refList = (Il2CppObject *)v5->static_fields->refList;
-    lockTaken = 0;
-    System_Threading_Monitor__Enter_67490772(refList, &lockTaken, 0);
-    v8 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    static_fields = (Il2CppObject **)v7->static_fields;
+    lockTaken[0] = 0;
+    v25 = 0;
+    v26 = lockTaken;
+    v9 = *static_fields;
+    v27 = &v31;
+    v31 = v9;
+    System_Threading_Monitor__Enter_77339928(v9, lockTaken, 0);
+    v12 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v8 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v10, v11);
+      v12 = CriDisposableObjectManager_TypeInfo;
     }
     if ( !disposable )
-      sub_1D0F30C(v8, v7);
-    v9 = v8->static_fields->refList;
-    v18.fields.guid = (struct System_Guid_o)disposable->fields;
-    v18.fields.disposable = disposable;
-    *(_QWORD *)&v18.fields.type = (unsigned int)type;
-    v10 = sub_1D0F058(&v18.fields.disposable, disposable);
-    if ( !v9 )
-      sub_1D0F30C(v10, v11);
-    v19 = v18;
-    items = v9->fields._items;
-    v13 = Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__Add__;
-    ++v9->fields._version;
-    if ( !items )
-      sub_1D0F30C(v10, v11);
-    size = v9->fields._size;
+      sub_21FFECC(v12, v10);
+    refList = v12->static_fields->refList;
+    v24.fields.guid = (struct System_Guid_o)disposable->fields;
+    *(_QWORD *)&v24.fields.type = (unsigned int)type;
+    v24.fields.disposable = disposable;
+    v14 = sub_21FFBF4(&v24.fields.disposable, disposable);
+    if ( !refList
+      || (items = refList->fields._items,
+          v17 = Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__Add__,
+          v18 = refList->fields._version + 1,
+          v29 = v24,
+          refList->fields._version = v18,
+          !items) )
+    {
+      sub_21FFECC(v14, v15);
+    }
+    size = refList->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
-      v17 = *(const MethodInfo_39FD064 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL);
-      v20 = v19;
-      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___AddWithResize(v9, &v20, v17);
+      v23 = *(const MethodInfo_44D8014 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL);
+      v30 = v29;
+      System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___AddWithResize(refList, &v30, v23);
     }
     else
     {
-      v9->fields._size = size + 1;
-      v15 = *(_OWORD *)&v19.fields.type;
-      v16 = (char *)items + 32 * size;
-      *((_OWORD *)v16 + 2) = v19.fields.guid;
-      *((_OWORD *)v16 + 3) = v15;
-      sub_1D0F058(v16 + 56, 0);
+      guid = v29.fields.guid;
+      v21 = *(struct System_Guid_o *)&v29.fields.type;
+      v22 = (struct System_Guid_o *)items + 2 * size;
+      refList->fields._size = size + 1;
+      v22[2] = guid;
+      v22[3] = v21;
+      sub_21FFBF4(&v22[3].fields._d, 0);
     }
-    if ( lockTaken )
-      System_Threading_Monitor__Exit(refList, 0);
+    if ( lockTaken[0] )
+      System_Threading_Monitor__Exit(*v27, 0);
   }
   else
   {
-    if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_16106/*"[CRIWARE] Internal: Duplicated object GUID"*/, 0);
+    if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v5, v6);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_16493/*"[CRIWARE] Internal: Duplicated object GUID"*/, 0);
   }
 }
 
 
 int32_t CriDisposableObjectManager__SearchForDisposable(CriDisposable_o *disposable, const MethodInfo *method)
 {
-  CriDisposableObjectManager_c *v3; // x0
-  Il2CppObject *refList; // x19
-  __int64 v5; // x1
-  CriDisposableObjectManager_c *v6; // x0
-  struct System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v7; // x8
-  int32_t size; // w21
+  __int64 v2; // x2
+  CriDisposableObjectManager_c *v4; // x0
+  Il2CppObject **static_fields; // x8
+  Il2CppObject *v6; // x0
+  __int64 v7; // x1
+  __int64 v8; // x2
   CriDisposableObjectManager_c *v9; // x0
-  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v10; // x0
+  struct System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *refList; // x8
+  int32_t size; // w20
+  CriDisposableObjectManager_c *v12; // x0
+  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v13; // x0
   CriDisposableObjectManager_ObjectRef_o *Item; // x0
-  __int64 v12; // x1
-  CriDisposableObjectManager_ObjectRef_o v14; // [xsp+8h] [xbp-58h] BYREF
-  bool lockTaken; // [xsp+2Ch] [xbp-34h] BYREF
+  __int64 v15; // x1
+  CriDisposableObjectManager_ObjectRef_o v17; // [xsp+0h] [xbp-70h] BYREF
+  __int64 v18; // [xsp+20h] [xbp-50h]
+  bool *v19; // [xsp+28h] [xbp-48h]
+  Il2CppObject **v20; // [xsp+30h] [xbp-40h]
+  bool lockTaken[4]; // [xsp+3Ch] [xbp-34h] BYREF
+  Il2CppObject *v22; // [xsp+48h] [xbp-28h] BYREF
 
-  if ( (byte_4E70B28 & 1) == 0 )
+  if ( (byte_59317D0 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
-    byte_4E70B28 = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+    byte_59317D0 = 1;
   }
-  v3 = CriDisposableObjectManager_TypeInfo;
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+  v4 = CriDisposableObjectManager_TypeInfo;
+  v22 = 0;
+  lockTaken[0] = 0;
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    v3 = CriDisposableObjectManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
+    v4 = CriDisposableObjectManager_TypeInfo;
   }
-  refList = (Il2CppObject *)v3->static_fields->refList;
-  lockTaken = 0;
-  System_Threading_Monitor__Enter_67490772(refList, &lockTaken, 0);
-  v6 = CriDisposableObjectManager_TypeInfo;
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+  static_fields = (Il2CppObject **)v4->static_fields;
+  lockTaken[0] = 0;
+  v18 = 0;
+  v19 = lockTaken;
+  v6 = *static_fields;
+  v20 = &v22;
+  v22 = v6;
+  System_Threading_Monitor__Enter_77339928(v6, lockTaken, 0);
+  v9 = CriDisposableObjectManager_TypeInfo;
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    v6 = CriDisposableObjectManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v7, v8);
+    v9 = CriDisposableObjectManager_TypeInfo;
   }
-  v7 = v6->static_fields->refList;
-  if ( !v7 )
-    sub_1D0F30C(v6, v5);
-  size = v7->fields._size;
+  refList = v9->static_fields->refList;
+  if ( !refList )
+    sub_21FFECC(v9, v7);
+  size = refList->fields._size;
   while ( --size >= 0 )
   {
-    v9 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    v12 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v9 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v7, v8);
+      v12 = CriDisposableObjectManager_TypeInfo;
     }
-    v10 = v9->static_fields->refList;
-    if ( !v10 )
-      sub_1D0F30C(0, v5);
+    v13 = v12->static_fields->refList;
+    if ( !v13 )
+      sub_21FFECC(0, v7);
     Item = System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___get_Item(
-             &v14,
-             v10,
+             &v17,
+             v13,
              size,
-             (const MethodInfo_39FCCF4 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
+             (const MethodInfo_44D7CB8 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__get_Item__);
     if ( !disposable )
-      sub_1D0F30C(Item, v12);
-    if ( System_Guid__op_Equality(v14.fields.guid, disposable->fields.guid, 0) )
+      sub_21FFECC(Item, v15);
+    if ( System_Guid__op_Equality(v17.fields.guid, disposable->fields.guid, 0) )
       goto LABEL_17;
   }
   size = -1;
 LABEL_17:
-  if ( lockTaken )
-    System_Threading_Monitor__Exit(refList, 0);
+  if ( lockTaken[0] )
+    System_Threading_Monitor__Exit(*v20, 0);
   return size;
 }
 
 
 bool CriDisposableObjectManager__Unregister(CriDisposable_o *disposable, const MethodInfo *method)
 {
-  CriDisposableObjectManager_c *v3; // x0
-  Il2CppObject *refList; // x19
-  const MethodInfo *v5; // x1
-  __int64 v6; // x1
-  int32_t v7; // w20
-  CriDisposableObjectManager_c *v8; // x0
-  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *v9; // x0
-  bool v10; // w21
-  bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v2; // x2
+  CriDisposableObjectManager_c *v4; // x0
+  Il2CppObject **static_fields; // x8
+  const MethodInfo *v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  int32_t v10; // w19
+  CriDisposableObjectManager_c *v11; // x0
+  System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__o *refList; // x0
+  bool v13; // w20
+  bool lockTaken; // [xsp+24h] [xbp-2Ch] BYREF
+  Il2CppObject *v16; // [xsp+28h] [xbp-28h]
 
-  if ( (byte_4E70B2A & 1) == 0 )
+  if ( (byte_59317D2 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
-    byte_4E70B2A = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
+    byte_59317D2 = 1;
   }
-  v3 = CriDisposableObjectManager_TypeInfo;
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-    v3 = CriDisposableObjectManager_TypeInfo;
-  }
-  refList = (Il2CppObject *)v3->static_fields->refList;
+  v4 = CriDisposableObjectManager_TypeInfo;
+  v16 = 0;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_67490772(refList, &lockTaken, 0);
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-  v7 = CriDisposableObjectManager__SearchForDisposable(disposable, v5);
-  if ( v7 < 0 )
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    v10 = 0;
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, method, v2);
+    v4 = CriDisposableObjectManager_TypeInfo;
+  }
+  static_fields = (Il2CppObject **)v4->static_fields;
+  lockTaken = 0;
+  v16 = *static_fields;
+  System_Threading_Monitor__Enter_77339928(v16, &lockTaken, 0);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v6, v7);
+  v10 = CriDisposableObjectManager__SearchForDisposable(disposable, v6);
+  if ( v10 < 0 )
+  {
+    v13 = 0;
   }
   else
   {
-    v8 = CriDisposableObjectManager_TypeInfo;
-    if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
+    v11 = CriDisposableObjectManager_TypeInfo;
+    if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-      v8 = CriDisposableObjectManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v8, v9);
+      v11 = CriDisposableObjectManager_TypeInfo;
     }
-    v9 = v8->static_fields->refList;
-    if ( !v9 )
-      sub_1D0F30C(0, v6);
+    refList = v11->static_fields->refList;
+    if ( !refList )
+      sub_21FFECC(0, v8);
     System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef___RemoveAt(
-      v9,
-      v7,
-      (const MethodInfo_39FEAEC *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
-    v10 = 1;
+      refList,
+      v10,
+      (const MethodInfo_44D99C0 *)Method_System_Collections_Generic_List_CriDisposableObjectManager_ObjectRef__RemoveAt__);
+    v13 = 1;
   }
   if ( lockTaken )
-    System_Threading_Monitor__Exit(refList, 0);
-  return v10;
+    System_Threading_Monitor__Exit(v16, 0);
+  return v13;
 }
 
 
@@ -432,5 +490,5 @@ void CriDisposableObjectManager_ObjectRef___ctor(
   this->fields.guid = guid;
   this->fields.type = type;
   this->fields.disposable = disposable;
-  sub_1D0F058(&this->fields.disposable, disposable);
+  sub_21FFBF4(&this->fields.disposable, disposable);
 }

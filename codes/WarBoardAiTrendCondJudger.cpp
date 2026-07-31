@@ -14,25 +14,26 @@ bool WarBoardAiTrendCondJudger__IsReplaceTarget(
   WarBoardPieceData_o *basePiece; // x19
 
   v4 = route;
-  if ( (byte_4E74FBE & 1) == 0 )
+  if ( (byte_5935FC3 & 1) == 0 )
   {
-    route = (WarBoardAIRoute_RouteData_o *)sub_1D0F0B4(&WarBoardAIManager_TypeInfo);
-    byte_4E74FBE = 1;
+    route = (WarBoardAIRoute_RouteData_o *)sub_21FFC50(&WarBoardAIManager_TypeInfo);
+    byte_5935FC3 = 1;
   }
   if ( !targetData )
     return 0;
   if ( !v4 )
-    sub_1D0F30C(route, targetData);
+    sub_21FFECC(route, targetData);
   actionPiece = v4->fields.actionPiece;
   if ( !actionPiece || targetData->fields.targetPiece != actionPiece )
     return 0;
   basePiece = v4->fields.basePiece;
-  if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
+  if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, targetData, method);
   return WarBoardAIManager__IsAllyPiece(basePiece, actionPiece, method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool WarBoardAiTrendCondJudger__TargetRangeUnder(
         WarBoardAIRoute_TargetData_o *targetData,
         int32_t value,
@@ -44,7 +45,7 @@ bool WarBoardAiTrendCondJudger__TargetRangeUnder(
   {
     baseRoute = targetData->fields.baseRoute;
     if ( !baseRoute )
-      sub_1D0F30C(targetData, value);
+      sub_21FFECC(targetData, *(_QWORD *)&value);
     LOBYTE(targetData) = LODWORD(baseRoute->max_length) - 1 <= value;
   }
   return (char)targetData;

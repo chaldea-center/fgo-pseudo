@@ -1,7 +1,7 @@
-__int64 __fastcall CloseZStream(void **a1)
+__int64 __fastcall CloseZStream(__int64 *a1)
 {
   int v2; // w8
-  _QWORD *v3; // x0
+  __int64 v3; // x0
   unsigned int v4; // w20
   unsigned int v5; // w0
 
@@ -11,23 +11,23 @@ __int64 __fastcall CloseZStream(void **a1)
     v3 = *a1;
     if ( v2 )
     {
-      if ( v3[2] )
+      if ( *(_QWORD *)(v3 + 16) )
       {
         do
         {
           while ( 1 )
           {
-            v4 = sub_1D8C974();
+            v4 = sub_227C5A8(*a1, 4);
             if ( !*((_BYTE *)a1 + 32) )
               break;
-            v5 = sub_1D0EBD0(a1);
+            v5 = sub_2222288(a1);
             if ( v4 )
-              goto LABEL_11;
+              goto LABEL_8;
           }
           v5 = 0;
         }
         while ( !v4 );
-LABEL_11:
+LABEL_8:
         if ( v4 == 1 )
           v4 = v5;
       }
@@ -35,15 +35,18 @@ LABEL_11:
       {
         v4 = 0;
       }
-      sub_1D8C4D0(*a1);
+      sub_227C104(*a1);
     }
     else
     {
-      sub_1D916BC(v3);
+      sub_227B6EC(v3);
       v4 = 0;
     }
-    free(a1[1]);
-    free(*a1);
+    free((void *)a1[1]);
+    free((void *)*a1);
+    a1[4] = 0;
+    *(_OWORD *)a1 = 0u;
+    *((_OWORD *)a1 + 1) = 0u;
     free(a1);
   }
   else

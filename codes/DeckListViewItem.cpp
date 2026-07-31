@@ -4,16 +4,16 @@ void DeckListViewItem___ctor(
         PartyListViewItem_o *partyItem,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields.partyItem = partyItem;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7, v8, v9, v10, v11);
 }
 
 

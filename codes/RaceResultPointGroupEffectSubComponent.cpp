@@ -1,41 +1,51 @@
 void RaceResultPointGroupEffectSubComponent___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
   int32_t v7; // w1
+  int32_t v8; // w1
   struct RaceResultPointGroupEffectSubComponent_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E78D8E & 1) == 0 )
+  if ( (byte_5939DDD & 1) == 0 )
   {
-    sub_1D0F0B4(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19589/*"event_ranking_group_name_"*/);
-    sub_1D0F0B4(&StringLiteral_19588/*"event_ranking_group_"*/);
-    byte_4E78D8E = 1;
+    sub_21FFC50(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_21FFC50(&StringLiteral_20105/*"event_ranking_group_name_"*/);
+    sub_21FFC50(&StringLiteral_20104/*"event_ranking_group_"*/);
+    byte_5939DDD = 1;
   }
-  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_19588/*"event_ranking_group_"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields,
-    StringLiteral_19588/*"event_ranking_group_"*/,
+  v7 = StringLiteral_20104/*"event_ranking_group_"*/;
+  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_20104/*"event_ranking_group_"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields,
+    v7,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_19589/*"event_ranking_group_name_"*/;
+  v8 = StringLiteral_20105/*"event_ranking_group_name_"*/;
   static_fields = RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields;
-  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_19589/*"event_ranking_group_name_"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_20105/*"event_ranking_group_name_"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME,
+    v8,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
 }
 
 
@@ -52,91 +62,90 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
+  int v4; // w8
   System_String_o *ScriptLabel; // x0
   __int64 Instance; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
   struct UILabel_array *nameLabelList; // x8
-  int64_t v8; // x20
+  int64_t v9; // x20
   int max_length; // w27
   struct UISprite_array *nameSpriteList; // x8
-  int v11; // w8
+  int v12; // w8
   struct UISprite_array *iconSpriteList; // x8
-  int v13; // w8
+  int v14; // w8
   struct UILabel_array *timeLabelList; // x8
-  int v15; // w8
-  int32_t v16; // w21
-  int v17; // w20
-  signed __int64 v18; // x28
+  int v16; // w8
+  int32_t v17; // w24
+  int v18; // w20
   __int64 v19; // x22
   unsigned __int64 v20; // x29
-  __int64 v21; // x23
-  struct UILabel_array *v22; // x8
-  unsigned __int64 v23; // x9
-  struct UISprite_array *v24; // x8
-  unsigned __int64 v25; // x9
-  UISprite_o *v26; // x23
-  RaceResultPointGroupEffectSubComponent_c *v27; // x0
+  signed __int64 v21; // x28
+  __int64 v22; // x21
+  struct UILabel_array *v23; // x8
+  unsigned __int64 v24; // x9
+  struct UISprite_array *v25; // x8
+  unsigned __int64 v26; // x9
+  UISprite_o *v27; // x23
+  RaceResultPointGroupEffectSubComponent_c *v28; // x0
   System_String_o *GROUP_NAME_IMAGE_NAME; // x24
-  System_String_o *v29; // x25
-  System_String_o *v30; // x0
-  struct UISprite_array *v31; // x8
-  unsigned __int64 v32; // x9
-  UISprite_o *v33; // x23
-  RaceResultPointGroupEffectSubComponent_c *v34; // x0
+  System_String_o *v30; // x25
+  System_String_o *v31; // x0
+  struct UISprite_array *v32; // x8
+  unsigned __int64 v33; // x9
+  UISprite_o *v34; // x23
+  RaceResultPointGroupEffectSubComponent_c *v35; // x0
   System_String_o *GROUP_IMAGE_NAME; // x24
-  System_String_o *v36; // x25
-  System_String_o *v37; // x0
-  struct UILabel_array *v38; // x8
-  unsigned __int64 v39; // x9
-  int64_t v40; // x24
-  UILabel_o *v41; // x23
-  System_String_o *v42; // x1
-  struct UILabel_array *v43; // x8
-  unsigned __int64 v44; // x9
-  struct UISprite_array *v45; // x8
-  unsigned __int64 v46; // x9
-  struct UISprite_array *v47; // x8
+  System_String_o *v37; // x25
+  System_String_o *v38; // x0
+  struct UILabel_array *v39; // x8
+  unsigned __int64 v40; // x9
+  int64_t v41; // x23
+  UILabel_o *v42; // x24
+  unsigned __int64 v43; // x9
+  struct UISprite_array *v44; // x8
+  unsigned __int64 v45; // x9
+  struct UISprite_array *v46; // x8
+  unsigned __int64 v47; // x9
   unsigned __int64 v48; // x9
-  struct UILabel_array *v49; // x8
-  unsigned __int64 v50; // x9
-  __int64 v51; // x21
-  struct UILabel_array *v52; // x8
-  __int64 v53; // x22
+  __int64 v49; // x21
+  struct UILabel_array *v50; // x8
+  __int64 v51; // x22
   unsigned __int64 max_length_low; // x9
+  struct UISprite_array *v53; // x8
+  unsigned __int64 v54; // x9
   struct UISprite_array *v55; // x8
   unsigned __int64 v56; // x9
-  struct UISprite_array *v57; // x8
+  struct UILabel_array *v57; // x8
   unsigned __int64 v58; // x9
-  struct UILabel_array *v59; // x8
-  unsigned __int64 v60; // x9
-  int32_t v61; // [xsp+8h] [xbp-88h]
-  __int64 v62; // [xsp+10h] [xbp-80h]
+  int32_t v59; // [xsp+8h] [xbp-88h]
+  int32_t v60; // [xsp+14h] [xbp-7Ch]
   EventPointGroupEntity_o *entity; // [xsp+18h] [xbp-78h] BYREF
   int32_t groupId; // [xsp+24h] [xbp-6Ch] BYREF
   System_Int64_array *goalTime; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4E78D8D & 1) == 0 )
+  if ( (byte_5939DDC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventScriptMaster___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_16314/*"_"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78D8D = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventScriptMaster___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_16714/*"_"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939DDC = 1;
   }
   goalTime = 0;
   groupId = 0;
+  v4 = *(&ScriptManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
-  if ( !ScriptManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
+  if ( !v4 )
+    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, param);
   ScriptLabel = ScriptManager__GetScriptLabel(0);
   Instance = System_Int64__Parse(ScriptLabel, 0);
   nameLabelList = this->fields.nameLabelList;
-  v8 = Instance;
+  v9 = Instance;
   if ( nameLabelList )
     max_length = nameLabelList->max_length;
   else
@@ -144,322 +153,323 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
   nameSpriteList = this->fields.nameSpriteList;
   if ( nameSpriteList )
   {
-    v11 = nameSpriteList->max_length;
-    if ( max_length < v11 )
-      max_length = v11;
+    v12 = nameSpriteList->max_length;
+    if ( max_length <= v12 )
+      max_length = v12;
   }
   iconSpriteList = this->fields.iconSpriteList;
   if ( iconSpriteList )
   {
-    v13 = iconSpriteList->max_length;
-    if ( max_length < v13 )
-      max_length = v13;
+    v14 = iconSpriteList->max_length;
+    if ( max_length <= v14 )
+      max_length = v14;
   }
   timeLabelList = this->fields.timeLabelList;
   if ( timeLabelList )
   {
-    v15 = timeLabelList->max_length;
-    if ( max_length < v15 )
-      max_length = v15;
+    v16 = timeLabelList->max_length;
+    if ( max_length <= v16 )
+      max_length = v16;
   }
   if ( Instance < 1 )
-    goto LABEL_85;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    goto LABEL_86;
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (__int64)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
+                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
   {
-LABEL_109:
-    sub_1D0F30C(Instance, v6);
+LABEL_110:
+    sub_21FFECC(Instance, v7);
   }
-  Instance = (__int64)EventScriptMaster__getRaceResultEntity_43477252((EventScriptMaster_o *)Instance, 2, v8, 0);
+  Instance = (__int64)EventScriptMaster__getRaceResultEntity_49145780((EventScriptMaster_o *)Instance, 2, v9, 0);
   if ( !Instance )
   {
-LABEL_85:
+LABEL_86:
     if ( max_length >= 1 )
     {
-      v51 = 4;
+      v49 = 4;
       while ( 1 )
       {
-        v52 = this->fields.nameLabelList;
-        v53 = v51 - 4;
-        if ( v52 )
+        v50 = this->fields.nameLabelList;
+        v51 = v49 - 4;
+        if ( v50 )
         {
-          max_length_low = LODWORD(v52->max_length);
-          if ( v53 < (int)max_length_low )
+          max_length_low = LODWORD(v50->max_length);
+          if ( v51 < (int)max_length_low )
           {
-            if ( v53 >= max_length_low )
-              goto LABEL_110;
-            Instance = *((_QWORD *)&v52->obj.klass + v51);
+            if ( v51 >= max_length_low )
+              goto LABEL_85;
+            Instance = *((_QWORD *)&v50->obj.klass + v49);
             if ( !Instance )
-              goto LABEL_109;
+              goto LABEL_110;
             UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
           }
         }
-        v55 = this->fields.nameSpriteList;
+        v53 = this->fields.nameSpriteList;
+        if ( v53 )
+        {
+          v54 = LODWORD(v53->max_length);
+          if ( v51 < (int)v54 )
+          {
+            if ( v51 >= v54 )
+              goto LABEL_85;
+            Instance = *((_QWORD *)&v53->obj.klass + v49);
+            if ( !Instance )
+              goto LABEL_110;
+            UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
+          }
+        }
+        v55 = this->fields.iconSpriteList;
         if ( v55 )
         {
           v56 = LODWORD(v55->max_length);
-          if ( v53 < (int)v56 )
+          if ( v51 < (int)v56 )
           {
-            if ( v53 >= v56 )
-              goto LABEL_110;
-            Instance = *((_QWORD *)&v55->obj.klass + v51);
+            if ( v51 >= v56 )
+              goto LABEL_85;
+            Instance = *((_QWORD *)&v55->obj.klass + v49);
             if ( !Instance )
-              goto LABEL_109;
+              goto LABEL_110;
             UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
           }
         }
-        v57 = this->fields.iconSpriteList;
+        v57 = this->fields.timeLabelList;
         if ( v57 )
         {
           v58 = LODWORD(v57->max_length);
-          if ( v53 < (int)v58 )
+          if ( v51 < (int)v58 )
           {
-            if ( v53 >= v58 )
-              goto LABEL_110;
-            Instance = *((_QWORD *)&v57->obj.klass + v51);
+            if ( v51 >= v58 )
+              goto LABEL_85;
+            Instance = *((_QWORD *)&v57->obj.klass + v49);
             if ( !Instance )
-              goto LABEL_109;
-            UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
-          }
-        }
-        v59 = this->fields.timeLabelList;
-        if ( v59 )
-        {
-          v60 = LODWORD(v59->max_length);
-          if ( v53 < (int)v60 )
-          {
-            if ( v53 >= v60 )
               goto LABEL_110;
-            Instance = *((_QWORD *)&v59->obj.klass + v51);
-            if ( !Instance )
-              goto LABEL_109;
             UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
           }
         }
-        if ( ++v51 - (unsigned int)max_length == 4 )
+        if ( ++v49 - (unsigned int)max_length == 4 )
           return;
       }
     }
     return;
   }
-  v16 = *(_DWORD *)(Instance + 16);
-  v17 = *(_DWORD *)(Instance + 40);
-  v61 = Instance + 16;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v17 = *(_DWORD *)(Instance + 16);
+  v18 = *(_DWORD *)(Instance + 40);
+  v59 = Instance + 16;
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_109;
+    goto LABEL_110;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
   if ( !Instance )
-    goto LABEL_109;
+    goto LABEL_110;
   Instance = (__int64)EventRaceResultMaster__GetRankDatas(
                         (EventRaceResultMaster_o *)Instance,
-                        v16,
-                        v17 % 100,
+                        v17,
+                        v18 % 100,
                         &goalTime,
                         0);
   if ( !Instance )
-    goto LABEL_109;
+    goto LABEL_110;
   if ( max_length >= 1 )
   {
-    v18 = *(int *)(Instance + 24);
     v19 = Instance;
     v20 = 0;
-    v21 = Instance + 32;
-    v62 = Instance + 32;
+    v21 = *(int *)(Instance + 24);
+    v22 = Instance + 32;
+    v60 = v17;
     while ( 1 )
     {
-      if ( (__int64)v20 >= v18 )
-        goto LABEL_61;
-      if ( v20 >= *(unsigned int *)(v19 + 24) )
-        goto LABEL_110;
-      groupId = *(_DWORD *)(v21 + 4 * v20);
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !Instance )
-        goto LABEL_109;
-      Instance = (__int64)DataManager__GetMasterData_object_(
-                            (DataManager_o *)Instance,
-                            (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
-      if ( !Instance )
-        goto LABEL_109;
-      Instance = EventPointGroupMaster__TryGetEntity((EventPointGroupMaster_o *)Instance, &entity, v16, groupId, 0);
-      if ( (Instance & 1) != 0 )
+      if ( (__int64)v20 >= v21 )
       {
-        v22 = this->fields.nameLabelList;
-        if ( v22 )
-        {
-          v23 = LODWORD(v22->max_length);
-          if ( (__int64)v20 < (int)v23 )
-          {
-            if ( v20 >= v23 )
-              goto LABEL_110;
-            if ( !entity )
-              goto LABEL_109;
-            Instance = (__int64)v22->m_Items[v20];
-            if ( !Instance )
-              goto LABEL_109;
-            UILabel__set_text((UILabel_o *)Instance, entity->fields.name, 0);
-          }
-        }
-        v24 = this->fields.nameSpriteList;
-        if ( v24 )
-        {
-          v25 = LODWORD(v24->max_length);
-          if ( (__int64)v20 < (int)v25 )
-          {
-            if ( v20 >= v25 )
-              goto LABEL_110;
-            v26 = v24->m_Items[v20];
-            v27 = RaceResultPointGroupEffectSubComponent_TypeInfo;
-            if ( !RaceResultPointGroupEffectSubComponent_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(RaceResultPointGroupEffectSubComponent_TypeInfo);
-              v27 = RaceResultPointGroupEffectSubComponent_TypeInfo;
-            }
-            GROUP_NAME_IMAGE_NAME = v27->static_fields->GROUP_NAME_IMAGE_NAME;
-            v29 = System_Int32__ToString(v61, 0);
-            v30 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_65603040(
-                                  GROUP_NAME_IMAGE_NAME,
-                                  v29,
-                                  (System_String_o *)StringLiteral_16314/*"_"*/,
-                                  v30,
-                                  0);
-            if ( !v26 )
-              goto LABEL_109;
-            UISprite__set_spriteName(v26, (System_String_o *)Instance, 0);
-            v21 = v62;
-          }
-        }
-        v31 = this->fields.iconSpriteList;
-        if ( v31 )
-        {
-          v32 = LODWORD(v31->max_length);
-          if ( (__int64)v20 < (int)v32 )
-          {
-            if ( v20 >= v32 )
-              goto LABEL_110;
-            v33 = v31->m_Items[v20];
-            v34 = RaceResultPointGroupEffectSubComponent_TypeInfo;
-            if ( !RaceResultPointGroupEffectSubComponent_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(RaceResultPointGroupEffectSubComponent_TypeInfo);
-              v34 = RaceResultPointGroupEffectSubComponent_TypeInfo;
-            }
-            GROUP_IMAGE_NAME = v34->static_fields->GROUP_IMAGE_NAME;
-            v36 = System_Int32__ToString(v61, 0);
-            v37 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_65603040(
-                                  GROUP_IMAGE_NAME,
-                                  v36,
-                                  (System_String_o *)StringLiteral_16314/*"_"*/,
-                                  v37,
-                                  0);
-            if ( !v33 )
-              goto LABEL_109;
-            UISprite__set_spriteName(v33, (System_String_o *)Instance, 0);
-            v21 = v62;
-          }
-        }
-        v38 = this->fields.timeLabelList;
-        if ( v38 )
-        {
-          v39 = LODWORD(v38->max_length);
-          if ( (__int64)v20 < (int)v39 )
-          {
-            if ( !goalTime )
-              goto LABEL_109;
-            if ( v20 >= LODWORD(goalTime->max_length) || v20 >= v39 )
-LABEL_110:
-              sub_1D0F314(Instance);
-            v40 = goalTime->m_Items[v20];
-            v41 = v38->m_Items[v20];
-            if ( v40 < 1 )
-            {
-              if ( !v41 )
-                goto LABEL_109;
-              v42 = (System_String_o *)StringLiteral_1/*""*/;
-            }
-            else
-            {
-              if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              Instance = (__int64)LocalizationManager__GetLapTime(v40, 0);
-              if ( !v41 )
-                goto LABEL_109;
-              v42 = (System_String_o *)Instance;
-            }
-            UILabel__set_text(v41, v42, 0);
-            v21 = v62;
-          }
-        }
+        v23 = this->fields.nameLabelList;
       }
       else
       {
-LABEL_61:
-        v43 = this->fields.nameLabelList;
-        if ( v43 )
+        if ( v20 >= *(unsigned int *)(v19 + 24) )
+          goto LABEL_85;
+        groupId = *(_DWORD *)(v22 + 4 * v20);
+        Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        if ( !Instance )
+          goto LABEL_110;
+        Instance = (__int64)DataManager__GetMasterData_object_(
+                              (DataManager_o *)Instance,
+                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+        if ( !Instance )
+          goto LABEL_110;
+        Instance = EventPointGroupMaster__TryGetEntity((EventPointGroupMaster_o *)Instance, &entity, v17, groupId, 0);
+        v23 = this->fields.nameLabelList;
+        if ( (Instance & 1) != 0 )
         {
-          v44 = LODWORD(v43->max_length);
-          if ( (__int64)v20 < (int)v44 )
+          if ( v23 )
           {
-            if ( v20 >= v44 )
-              goto LABEL_110;
-            Instance = (__int64)v43->m_Items[v20];
-            if ( !Instance )
-              goto LABEL_109;
-            UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
+            v24 = LODWORD(v23->max_length);
+            if ( (__int64)v20 < (int)v24 )
+            {
+              if ( v20 >= v24 )
+                goto LABEL_85;
+              if ( !entity )
+                goto LABEL_110;
+              Instance = (__int64)v23->m_Items[v20];
+              if ( !Instance )
+                goto LABEL_110;
+              UILabel__set_text((UILabel_o *)Instance, entity->fields.name, 0);
+            }
           }
-        }
-        v45 = this->fields.nameSpriteList;
-        if ( v45 )
-        {
-          v46 = LODWORD(v45->max_length);
-          if ( (__int64)v20 < (int)v46 )
+          v25 = this->fields.nameSpriteList;
+          if ( v25 )
           {
-            if ( v20 >= v46 )
-              goto LABEL_110;
-            Instance = (__int64)v45->m_Items[v20];
-            if ( !Instance )
-              goto LABEL_109;
-            UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
+            v26 = LODWORD(v25->max_length);
+            if ( (__int64)v20 < (int)v26 )
+            {
+              if ( v20 >= v26 )
+                goto LABEL_85;
+              v27 = v25->m_Items[v20];
+              v28 = RaceResultPointGroupEffectSubComponent_TypeInfo;
+              if ( !*(&RaceResultPointGroupEffectSubComponent_TypeInfo->_2.cctor_finished + 1) )
+              {
+                j_il2cpp_runtime_class_init_0(RaceResultPointGroupEffectSubComponent_TypeInfo, v7);
+                v28 = RaceResultPointGroupEffectSubComponent_TypeInfo;
+              }
+              GROUP_NAME_IMAGE_NAME = v28->static_fields->GROUP_NAME_IMAGE_NAME;
+              v30 = System_Int32__ToString(v59, 0);
+              v31 = System_Int32__ToString((int32_t)&groupId, 0);
+              Instance = (__int64)System_String__Concat_75483552(
+                                    GROUP_NAME_IMAGE_NAME,
+                                    v30,
+                                    (System_String_o *)StringLiteral_16714/*"_"*/,
+                                    v31,
+                                    0);
+              if ( !v27 )
+                goto LABEL_110;
+              UISprite__set_spriteName(v27, (System_String_o *)Instance, 0);
+              v17 = v60;
+            }
           }
-        }
-        v47 = this->fields.iconSpriteList;
-        if ( v47 )
-        {
-          v48 = LODWORD(v47->max_length);
-          if ( (__int64)v20 < (int)v48 )
+          v32 = this->fields.iconSpriteList;
+          if ( v32 )
           {
-            if ( v20 >= v48 )
-              goto LABEL_110;
-            Instance = (__int64)v47->m_Items[v20];
-            if ( !Instance )
-              goto LABEL_109;
-            UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
+            v33 = LODWORD(v32->max_length);
+            if ( (__int64)v20 < (int)v33 )
+            {
+              if ( v20 >= v33 )
+                goto LABEL_85;
+              v34 = v32->m_Items[v20];
+              v35 = RaceResultPointGroupEffectSubComponent_TypeInfo;
+              if ( !*(&RaceResultPointGroupEffectSubComponent_TypeInfo->_2.cctor_finished + 1) )
+              {
+                j_il2cpp_runtime_class_init_0(RaceResultPointGroupEffectSubComponent_TypeInfo, v7);
+                v35 = RaceResultPointGroupEffectSubComponent_TypeInfo;
+              }
+              GROUP_IMAGE_NAME = v35->static_fields->GROUP_IMAGE_NAME;
+              v37 = System_Int32__ToString(v59, 0);
+              v38 = System_Int32__ToString((int32_t)&groupId, 0);
+              Instance = (__int64)System_String__Concat_75483552(
+                                    GROUP_IMAGE_NAME,
+                                    v37,
+                                    (System_String_o *)StringLiteral_16714/*"_"*/,
+                                    v38,
+                                    0);
+              if ( !v34 )
+                goto LABEL_110;
+              UISprite__set_spriteName(v34, (System_String_o *)Instance, 0);
+              v17 = v60;
+            }
           }
-        }
-        v49 = this->fields.timeLabelList;
-        if ( v49 )
-        {
-          v50 = LODWORD(v49->max_length);
-          if ( (__int64)v20 < (int)v50 )
+          v39 = this->fields.timeLabelList;
+          if ( v39 )
           {
-            if ( v20 >= v50 )
-              goto LABEL_110;
-            Instance = (__int64)v49->m_Items[v20];
-            if ( !Instance )
-              goto LABEL_109;
-            UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
+            v40 = LODWORD(v39->max_length);
+            if ( (__int64)v20 < (int)v40 )
+            {
+              if ( !goalTime )
+                goto LABEL_110;
+              if ( v20 >= LODWORD(goalTime->max_length) )
+LABEL_85:
+                sub_21FFED4(Instance);
+              v41 = goalTime->m_Items[v20];
+              if ( v41 < 1 )
+              {
+                if ( v20 >= v40 )
+                  goto LABEL_85;
+                goto LABEL_80;
+              }
+              if ( v20 >= v40 )
+                goto LABEL_85;
+              v42 = v39->m_Items[v20];
+              if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7);
+              Instance = (__int64)LocalizationManager__GetLapTime(v41, 0);
+              if ( !v42 )
+                goto LABEL_110;
+              UILabel__set_text(v42, (System_String_o *)Instance, 0);
+              v17 = v60;
+            }
           }
+          goto LABEL_82;
         }
       }
+      if ( v23 )
+      {
+        v43 = LODWORD(v23->max_length);
+        if ( (__int64)v20 < (int)v43 )
+        {
+          if ( v20 >= v43 )
+            goto LABEL_85;
+          Instance = (__int64)v23->m_Items[v20];
+          if ( !Instance )
+            goto LABEL_110;
+          UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
+        }
+      }
+      v44 = this->fields.nameSpriteList;
+      if ( v44 )
+      {
+        v45 = LODWORD(v44->max_length);
+        if ( (__int64)v20 < (int)v45 )
+        {
+          if ( v20 >= v45 )
+            goto LABEL_85;
+          Instance = (__int64)v44->m_Items[v20];
+          if ( !Instance )
+            goto LABEL_110;
+          UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
+        }
+      }
+      v46 = this->fields.iconSpriteList;
+      if ( v46 )
+      {
+        v47 = LODWORD(v46->max_length);
+        if ( (__int64)v20 < (int)v47 )
+        {
+          if ( v20 >= v47 )
+            goto LABEL_85;
+          Instance = (__int64)v46->m_Items[v20];
+          if ( !Instance )
+            goto LABEL_110;
+          UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
+        }
+      }
+      v39 = this->fields.timeLabelList;
+      if ( v39 )
+      {
+        v48 = LODWORD(v39->max_length);
+        if ( (__int64)v20 < (int)v48 )
+        {
+          if ( v20 >= v48 )
+            goto LABEL_85;
+LABEL_80:
+          Instance = (__int64)v39->m_Items[v20];
+          if ( !Instance )
+            goto LABEL_110;
+          UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
+        }
+      }
+LABEL_82:
       if ( max_length == ++v20 )
-        goto LABEL_85;
+        goto LABEL_86;
     }
   }
 }

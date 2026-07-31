@@ -14,8 +14,8 @@ int32_t DropInfo__GetDropEffectId(
   DropAddEntity_o *dropEffectId; // x0
   DropAddEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  entity = 0;
   dropEffectId = (DropAddEntity_o *)(unsigned int)this->fields.dropEffectId;
+  entity = 0;
   if ( ((unsigned int)dropEffectId & 0x80000000) != 0 )
   {
     if ( dropAddMaster )
@@ -34,7 +34,7 @@ LABEL_7:
         return (int)dropEffectId;
       }
     }
-    sub_1D0F30C(dropEffectId, dropAddMaster);
+    sub_21FFECC(dropEffectId, dropAddMaster);
   }
   return (int)dropEffectId;
 }
@@ -45,23 +45,29 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  bool isRateUp; // w8
   DropInfo_SaveData_o *result; // x0
+  bool isAdd; // w9
+  __int64 v9; // d0
 
-  if ( (byte_4E771CF & 1) == 0 )
+  if ( (byte_5938194 & 1) == 0 )
   {
-    sub_1D0F0B4(&DropInfo_SaveData_TypeInfo);
-    byte_4E771CF = 1;
+    sub_21FFC50(&DropInfo_SaveData_TypeInfo);
+    byte_5938194 = 1;
   }
-  v3 = sub_1D0F300(DropInfo_SaveData_TypeInfo);
+  v3 = sub_21FFEBC(DropInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
+  isRateUp = this->fields.isRateUp;
   result = (DropInfo_SaveData_o *)v3;
+  isAdd = this->fields.isAdd;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
-  *(_QWORD *)(v3 + 32) = *(_QWORD *)&this->fields.lv;
-  *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
+  v9 = *(_QWORD *)&this->fields.lv;
+  *(_BYTE *)(v3 + 40) = isRateUp;
+  *(_BYTE *)(v3 + 52) = isAdd;
+  *(_QWORD *)(v3 + 32) = v9;
   *(_QWORD *)(v3 + 44) = *(_QWORD *)&this->fields.originalNum;
-  *(_BYTE *)(v3 + 52) = this->fields.isAdd;
   return result;
 }
 
@@ -74,7 +80,6 @@ bool DropInfo__IsDropDefaultParticleDisable(
 {
   DropAddEntity_o *entity; // [xsp+8h] [xbp-8h] BYREF
 
-  entity = 0;
   if ( !dropAddMaster )
     goto LABEL_7;
   if ( !DropAddMaster__TryGetEntity(dropAddMaster, &entity, eventId, this->fields.mstGiftId, 0) )
@@ -82,20 +87,27 @@ bool DropInfo__IsDropDefaultParticleDisable(
   this = (DropInfo_o *)entity;
   if ( !entity )
 LABEL_7:
-    sub_1D0F30C(this, dropAddMaster);
+    sub_21FFECC(this, dropAddMaster);
   return DropAddEntity__IsDropDefaultParticleDisable(entity, 0);
 }
 
 
 void DropInfo__SetDataFromSaveData(DropInfo_o *this, DropInfo_SaveData_o *saveData, const MethodInfo *method)
 {
+  bool isRateUp; // w8
+  bool isAdd; // w9
+  __int64 v5; // d0
+
   if ( !saveData )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
+  isRateUp = saveData->fields.isRateUp;
+  isAdd = saveData->fields.isAdd;
   *(_OWORD *)&this->fields.type = *(_OWORD *)&saveData->fields.type;
-  *(_QWORD *)&this->fields.lv = *(_QWORD *)&saveData->fields.lv;
-  this->fields.isRateUp = saveData->fields.isRateUp;
+  v5 = *(_QWORD *)&saveData->fields.lv;
+  this->fields.isRateUp = isRateUp;
+  this->fields.isAdd = isAdd;
+  *(_QWORD *)&this->fields.lv = v5;
   *(_QWORD *)&this->fields.originalNum = *(_QWORD *)&saveData->fields.originalNum;
-  this->fields.isAdd = saveData->fields.isAdd;
 }
 
 

@@ -1,27 +1,27 @@
 void UserGameCommonEntity___ctor(UserGameCommonEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E789BD & 1) == 0 )
+  if ( (byte_5939ADB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E789BD = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5939ADB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserGameCommonEntity__CreatePK(int64_t userId, int32_t no, const MethodInfo *method)
 {
-  if ( (byte_4E789BC & 1) == 0 )
+  if ( (byte_5939ADA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E789BC = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_5939ADA = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            no,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

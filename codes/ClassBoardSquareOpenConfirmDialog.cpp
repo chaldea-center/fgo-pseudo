@@ -1,11 +1,11 @@
 void ClassBoardSquareOpenConfirmDialog___ctor(ClassBoardSquareOpenConfirmDialog_o *this, const MethodInfo *method)
 {
   this->fields.windowHeightForGrand = 570;
-  *(_OWORD *)&this->fields.titleLabelPosYForGrand = xmmword_D34C60;
+  *(_OWORD *)&this->fields.titleLabelPosYForGrand = xmmword_E94280;
   this->fields.itemInfoListBtnPosYForGrand = 60.0;
   *(_QWORD *)&this->fields.confirmTextPosYForGrand = 0xC34C0000C30C0000LL;
-  *(_QWORD *)&this->fields.onClickDecideSeKind = 0x200000008LL;
-  this->fields.onClickCancelSeKind = 1;
+  this->fields.onClickDecideSeKind = 8;
+  *(_QWORD *)&this->fields.onClickDecideDisableSeKind = 0x100000002LL;
   ClassBoardBaseDialog___ctor((ClassBoardBaseDialog_o *)this, 0);
 }
 
@@ -14,15 +14,15 @@ void ClassBoardSquareOpenConfirmDialog__Close(ClassBoardSquareOpenConfirmDialog_
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4E7B4A2 & 1) == 0 )
+  if ( (byte_593C528 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog_EndClose__);
-    byte_4E7B4A2 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog_EndClose__);
+    byte_593C528 = 1;
   }
   this->fields.isButtonEnable = 0;
   ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, 0);
-  v3 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ClassBoardSquareOpenConfirmDialog_EndClose__, 0);
   ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v3, 0);
 }
@@ -30,18 +30,19 @@ void ClassBoardSquareOpenConfirmDialog__Close(ClassBoardSquareOpenConfirmDialog_
 
 void ClassBoardSquareOpenConfirmDialog__EndClose(ClassBoardSquareOpenConfirmDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4E7B4A3 & 1) == 0 )
+  if ( (byte_593C529 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B4A3 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C529 = 1;
   }
   ActionExtensions__Call(this->fields.closeFunc, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_73359484(gameObject, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  UnityEngine_Object__Destroy_83246496(gameObject, 0);
 }
 
 
@@ -59,7 +60,7 @@ void ClassBoardSquareOpenConfirmDialog__Init(ClassBoardSquareOpenConfirmDialog_o
   this->fields.isDecideButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   ClassBoardBaseDialog__Init((ClassBoardBaseDialog_o *)this, 0);
 }
@@ -72,29 +73,37 @@ void ClassBoardSquareOpenConfirmDialog__OnClickCancel(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_o *cancelFunc; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   const MethodInfo *v12; // x1
 
-  if ( (byte_4E7B4A1 & 1) == 0 )
+  if ( (byte_593C527 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__);
-    byte_4E7B4A1 = 1;
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__);
+    byte_593C527 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_ClassBoardSquareOpenConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickCancelSeKind, 0, 0);
     cancelFunc = this->fields.cancelFunc;
     this->fields.closeFunc = cancelFunc;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.closeFunc, (int32_t)cancelFunc, v6, v7, v8, v9, v10, v11);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.closeFunc,
+      (int32_t)cancelFunc,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11);
     ClassBoardSquareOpenConfirmDialog__Close(this, v12);
   }
 }
@@ -107,22 +116,22 @@ void ClassBoardSquareOpenConfirmDialog__OnClickDecide(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_o *decideFunc; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   System_Action_o *v12; // x20
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
 
-  if ( (byte_4E7B4A4 & 1) == 0 )
+  if ( (byte_593C52A & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog_EndClose__);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
-    byte_4E7B4A4 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog_EndClose__);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
+    byte_593C52A = 1;
   }
   if ( this->fields.isDecideButtonEnable )
   {
@@ -130,15 +139,23 @@ void ClassBoardSquareOpenConfirmDialog__OnClickDecide(
     {
       v3 = Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__;
       if ( (*((_BYTE *)Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_1D0F0CC(Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
-      v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+        v3 = (_QWORD *)sub_21FFC68(Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
+      v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
       OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickDecideSeKind, 0, 0);
       decideFunc = this->fields.decideFunc;
       this->fields.closeFunc = decideFunc;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.closeFunc, (int32_t)decideFunc, v6, v7, v8, v9, v10, v11);
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.closeFunc,
+        (int32_t)decideFunc,
+        v6,
+        v7,
+        v8,
+        v9,
+        v10,
+        v11);
       this->fields.isButtonEnable = 0;
       ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, 0);
-      v12 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+      v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
       System_Action___ctor(v12, (Il2CppObject *)this, Method_ClassBoardSquareOpenConfirmDialog_EndClose__, 0);
       ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v12, 0);
     }
@@ -147,8 +164,8 @@ void ClassBoardSquareOpenConfirmDialog__OnClickDecide(
   {
     v13 = Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1D0F0CC(Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1D0F098(v13, v13[4]);
+      v13 = (_QWORD *)sub_21FFC68(Method_ClassBoardSquareOpenConfirmDialog_OnClickDecide__);
+    v14 = (System_Reflection_MethodBase_o *)sub_21FFC34(v13, v13[4]);
     OverwriteAssetSoundName__PlaySystemSe(v14, this->fields.onClickDecideDisableSeKind, 0, 0);
   }
 }
@@ -160,15 +177,15 @@ void ClassBoardSquareOpenConfirmDialog__OnClickItemInfoListWindow(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4E7B4A5 & 1) == 0 )
+  if ( (byte_593C52B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog__OnClickItemInfoListWindow_b__42_0__);
-    byte_4E7B4A5 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog__OnClickItemInfoListWindow_b__42_0__);
+    byte_593C52B = 1;
   }
   if ( this->fields.isButtonEnable )
   {
-    v3 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(
       v3,
       (Il2CppObject *)this,
@@ -180,6 +197,7 @@ void ClassBoardSquareOpenConfirmDialog__OnClickItemInfoListWindow(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClassBoardSquareOpenConfirmDialog__Open(
         ClassBoardSquareOpenConfirmDialog_o *this,
         ClassBoardSquare_o *square,
@@ -188,111 +206,118 @@ void ClassBoardSquareOpenConfirmDialog__Open(
         System_Action_o *cancelFunc,
         const MethodInfo *method)
 {
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   UserClassStatisticsMaster_o *Master_object; // x0
   __int64 v14; // x1
-  char v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  IClassBoardSquareModel_o *SquareModel_k__BackingField; // x22
-  char v22; // w2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
+  bool v19; // w6
+  bool v20; // w7
+  IClassBoardSquareModel_o *SquareModel_k__BackingField; // x23
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
   int32_t v25; // w5
-  int64_t v26; // x6
-  System_String_o *v27; // x7
-  ClassStatisticsInfo_array *v28; // x23
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // x1
+  ClassStatisticsInfo_array *v29; // x22
   IClassBoardSquareModel_c *klass; // x8
-  __int64 v30; // x9
+  __int64 v31; // x9
   IClassBoardSquareModel_c **p_offset; // x10
-  __int64 v32; // x0
-  char v33; // w0
-  UILabel_o *titleLabel; // x24
+  __int64 v33; // x0
+  __int64 v34; // x1
   char v35; // w21
-  System_String_o **v36; // x8
-  IClassBoardSquareModel_c *v37; // x8
-  __int64 v38; // x9
-  IClassBoardSquareModel_c **v39; // x10
-  __int64 v40; // x0
-  System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *v41; // x0
-  _BOOL4 v42; // w23
-  UILabel_o *itemDetailLabel; // x22
-  __int64 *v44; // x8
-  __int64 v45; // x24
-  char v46; // w2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  int32_t v49; // w5
-  int64_t v50; // x6
-  System_String_o *v51; // x7
-  IClassBoardSquareModel_c *v52; // x8
-  __int64 v53; // x9
-  IClassBoardSquareModel_c **v54; // x10
-  __int64 v55; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v56; // x25
-  System_Func_object__bool__o *v57; // x26
-  _BOOL4 v58; // w0
-  IClassBoardSquareModel_c *v59; // x8
-  int v60; // w25
-  __int64 v61; // x9
-  IClassBoardSquareModel_c **v62; // x10
-  __int64 v63; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v64; // x22
-  System_Func_object__bool__o *v65; // x26
-  _BOOL4 v66; // w0
-  char v67; // w24
-  const MethodInfo *v68; // x4
+  LocalizationManager_c *v36; // x0
+  UILabel_o *titleLabel; // x24
+  System_String_o **v38; // x8
+  IClassBoardSquareModel_c *v39; // x8
+  __int64 v40; // x9
+  IClassBoardSquareModel_c **v41; // x10
+  __int64 v42; // x0
+  System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *v43; // x0
+  __int64 v44; // x1
+  _BOOL4 v45; // w22
+  UILabel_o *itemDetailLabel; // x23
+  int v47; // w8
+  __int64 *v48; // x8
+  __int64 v49; // x24
+  __int64 v50; // x1
+  System_String_o *v51; // x2
+  System_String_o *v52; // x3
+  int32_t v53; // w4
+  int32_t v54; // w5
+  bool v55; // w6
+  bool v56; // w7
+  IClassBoardSquareModel_c *v57; // x8
+  __int64 v58; // x9
+  IClassBoardSquareModel_c **v59; // x10
+  __int64 v60; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v61; // x25
+  System_Func_object__bool__o *v62; // x26
+  _BOOL4 v63; // w0
+  IClassBoardSquareModel_c *v64; // x8
+  _BOOL4 v65; // w25
+  __int64 v66; // x9
+  IClassBoardSquareModel_c **v67; // x10
+  __int64 v68; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v69; // x23
+  System_Func_object__bool__o *v70; // x26
+  _BOOL4 v71; // w0
+  __int64 v72; // x1
+  int v73; // w8
+  const MethodInfo *v74; // x4
+  __int64 v75; // x1
   UILabel_o *cancelBtnLabel; // x20
   UILabel_o *decideBtnLabel; // x20
-  const MethodInfo *v71; // x2
-  System_Action_o *v72; // x20
+  const MethodInfo *v78; // x2
+  System_Action_o *v79; // x20
 
-  if ( (byte_4E7B49F & 1) == 0 )
+  if ( (byte_593C525 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog_EndOpen__);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
-    sub_1D0F0B4(&System_Func_IClassBoardItemModel__bool__TypeInfo);
-    sub_1D0F0B4(&IClassBoardSquareModel_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__0__);
-    sub_1D0F0B4(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__1__);
-    sub_1D0F0B4(&ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3465/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/);
-    sub_1D0F0B4(&StringLiteral_3462/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_3467/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/);
-    sub_1D0F0B4(&StringLiteral_3433/*"CLASS_BOARD_GRAND_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_3469/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_3461/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_3466/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/);
-    sub_1D0F0B4(&StringLiteral_3468/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/);
-    sub_1D0F0B4(&StringLiteral_3463/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/);
-    sub_1D0F0B4(&StringLiteral_3464/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/);
-    byte_4E7B49F = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog_EndOpen__);
+    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
+    sub_21FFC50(&System_Func_IClassBoardItemModel__bool__TypeInfo);
+    sub_21FFC50(&IClassBoardSquareModel_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__0__);
+    sub_21FFC50(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__1__);
+    sub_21FFC50(&ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_3564/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/);
+    sub_21FFC50(&StringLiteral_3561/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_3566/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/);
+    sub_21FFC50(&StringLiteral_3532/*"CLASS_BOARD_GRAND_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
+    sub_21FFC50(&StringLiteral_3568/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
+    sub_21FFC50(&StringLiteral_3560/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_3565/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/);
+    sub_21FFC50(&StringLiteral_3567/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/);
+    sub_21FFC50(&StringLiteral_3562/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/);
+    sub_21FFC50(&StringLiteral_3563/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/);
+    byte_593C525 = 1;
   }
   this->fields.classBoardSquare = square;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.classBoardSquare,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.classBoardSquare,
     (int32_t)square,
-    isEnableOpen,
-    (int32_t)decideFunc,
-    (System_String_o *)cancelFunc,
+    (System_String_o *)isEnableOpen,
+    (System_String_o *)decideFunc,
+    (int32_t)cancelFunc,
     (int32_t)method,
     v6,
     v7);
   if ( !square )
-    goto LABEL_70;
+    goto LABEL_73;
   SquareModel_k__BackingField = square->fields._SquareModel_k__BackingField;
   this->fields.decideFunc = decideFunc;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.decideFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.decideFunc,
     (int32_t)decideFunc,
     v15,
     v16,
@@ -301,8 +326,8 @@ void ClassBoardSquareOpenConfirmDialog__Open(
     v19,
     v20);
   this->fields.cancelFunc = cancelFunc;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.cancelFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.cancelFunc,
     (int32_t)cancelFunc,
     v22,
     v23,
@@ -310,235 +335,226 @@ void ClassBoardSquareOpenConfirmDialog__Open(
     v25,
     v26,
     v27);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserClassStatisticsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v28);
+  Master_object = (UserClassStatisticsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
   if ( Master_object )
   {
     Master_object = (UserClassStatisticsMaster_o *)UserClassStatisticsMaster__GetClassStatisticsInfos(Master_object, 0);
-    v28 = (ClassStatisticsInfo_array *)Master_object;
+    v29 = (ClassStatisticsInfo_array *)Master_object;
     if ( !SquareModel_k__BackingField )
-      goto LABEL_70;
+      goto LABEL_73;
   }
   else
   {
-    v28 = 0;
+    v29 = 0;
     if ( !SquareModel_k__BackingField )
-      goto LABEL_70;
+      goto LABEL_73;
   }
   klass = SquareModel_k__BackingField->klass;
-  v30 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+  v31 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
   {
     p_offset = (IClassBoardSquareModel_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != IClassBoardSquareModel_TypeInfo )
     {
-      --v30;
+      --v31;
       p_offset += 2;
-      if ( !v30 )
+      if ( !v31 )
         goto LABEL_14;
     }
-    v32 = (__int64)&(&klass->rgctx_data)[2 * *(_DWORD *)p_offset + 39];
+    v33 = (__int64)&(&klass->rgctx_data)[2 * *(_DWORD *)p_offset + 39];
   }
   else
   {
 LABEL_14:
-    v32 = sub_1CE5430(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 12);
+    v33 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 12);
   }
-  v33 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v32)(
+  v35 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v33)(
           SquareModel_k__BackingField,
-          *(_QWORD *)(v32 + 8));
-  this->fields.isDecideButtonEnable = isEnableOpen;
+          *(_QWORD *)(v33 + 8));
+  v36 = LocalizationManager_TypeInfo;
   titleLabel = this->fields.titleLabel;
-  v35 = v33;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v36 = (System_String_o **)((v35 & 1) != 0 ? &StringLiteral_3433/*"CLASS_BOARD_GRAND_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/ : &StringLiteral_3469/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
-  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get(*v36, 0);
+  this->fields.isDecideButtonEnable = isEnableOpen;
+  if ( !*(&v36->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v36, v34);
+  v38 = (System_String_o **)((v35 & 1) != 0 ? &StringLiteral_3532/*"CLASS_BOARD_GRAND_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/ : &StringLiteral_3568/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/);
+  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get(*v38, 0);
   if ( !titleLabel )
-    goto LABEL_70;
+    goto LABEL_73;
   UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0);
-  ClassBoardBaseDialog__SetUpEffectDetail((ClassBoardBaseDialog_o *)this, SquareModel_k__BackingField, 0.0, 0.0, v28, 0);
-  v37 = SquareModel_k__BackingField->klass;
-  v38 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+  ClassBoardBaseDialog__SetUpEffectDetail((ClassBoardBaseDialog_o *)this, SquareModel_k__BackingField, 0.0, 0.0, v29, 0);
+  v39 = SquareModel_k__BackingField->klass;
+  v40 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
   {
-    v39 = (IClassBoardSquareModel_c **)&v37->_1.interfaceOffsets->offset;
-    while ( *(v39 - 1) != IClassBoardSquareModel_TypeInfo )
+    v41 = (IClassBoardSquareModel_c **)&v39->_1.interfaceOffsets->offset;
+    while ( *(v41 - 1) != IClassBoardSquareModel_TypeInfo )
     {
-      --v38;
-      v39 += 2;
-      if ( !v38 )
+      --v40;
+      v41 += 2;
+      if ( !v40 )
         goto LABEL_26;
     }
-    v40 = (__int64)&v37->vtable[*(_DWORD *)v39 + 6];
+    v42 = (__int64)&v39->vtable[*(_DWORD *)v41 + 6];
   }
   else
   {
 LABEL_26:
-    v40 = sub_1CE5430(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
+    v42 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
   }
-  v41 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v40)(
+  v43 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v42)(
                                                                                     SquareModel_k__BackingField,
-                                                                                    *(_QWORD *)(v40 + 8));
-  v42 = ClassBoardBaseDialog__SetUpItemList((ClassBoardBaseDialog_o *)this, v41, 0);
-  if ( !isEnableOpen )
+                                                                                    *(_QWORD *)(v42 + 8));
+  v45 = ClassBoardBaseDialog__SetUpItemList((ClassBoardBaseDialog_o *)this, v43, 0);
+  if ( isEnableOpen )
   {
-    v45 = sub_1D0F300(ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v45, 0);
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (UserClassStatisticsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ItemMaster___);
-    if ( !v45 )
-      goto LABEL_70;
-    *(_QWORD *)(v45 + 16) = Master_object;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v45 + 16), (int32_t)Master_object, v46, v47, v48, v49, v50, v51);
-    v52 = SquareModel_k__BackingField->klass;
-    v53 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
-    if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
-    {
-      v54 = (IClassBoardSquareModel_c **)&v52->_1.interfaceOffsets->offset;
-      while ( *(v54 - 1) != IClassBoardSquareModel_TypeInfo )
-      {
-        --v53;
-        v54 += 2;
-        if ( !v53 )
-          goto LABEL_39;
-      }
-      v55 = (__int64)&v52->vtable[*(_DWORD *)v54 + 6];
-    }
-    else
-    {
-LABEL_39:
-      v55 = sub_1CE5430(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
-    }
-    v56 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v55)(
-                                                                 SquareModel_k__BackingField,
-                                                                 *(_QWORD *)(v55 + 8));
-    v57 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_IClassBoardItemModel__bool__TypeInfo);
-    System_Func_object__bool____ctor(
-      v57,
-      (Il2CppObject *)v45,
-      Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__0__,
-      0);
-    v58 = System_Linq_Enumerable__Any_object__52817792(
-            v56,
-            (System_Func_TSource__bool__o *)v57,
-            (const MethodInfo_325EF80 *)Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
-    v59 = SquareModel_k__BackingField->klass;
-    v60 = v58;
-    v61 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
-    if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
-    {
-      v62 = (IClassBoardSquareModel_c **)&v59->_1.interfaceOffsets->offset;
-      while ( *(v62 - 1) != IClassBoardSquareModel_TypeInfo )
-      {
-        --v61;
-        v62 += 2;
-        if ( !v61 )
-          goto LABEL_47;
-      }
-      v63 = (__int64)&v59->vtable[*(_DWORD *)v62 + 6];
-    }
-    else
-    {
-LABEL_47:
-      v63 = sub_1CE5430(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
-    }
-    v64 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v63)(
-                                                                 SquareModel_k__BackingField,
-                                                                 *(_QWORD *)(v63 + 8));
-    v65 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_IClassBoardItemModel__bool__TypeInfo);
-    System_Func_object__bool____ctor(
-      v65,
-      (Il2CppObject *)v45,
-      Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__1__,
-      0);
-    v66 = System_Linq_Enumerable__Any_object__52817792(
-            v64,
-            (System_Func_TSource__bool__o *)v65,
-            (const MethodInfo_325EF80 *)Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
-    if ( (v42 & v60 & 1) != 0 && v66 )
-    {
-      itemDetailLabel = this->fields.itemDetailLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3467/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/, 0);
-      if ( itemDetailLabel )
-        goto LABEL_65;
-LABEL_70:
-      sub_1D0F30C(Master_object, v14);
-    }
-    if ( (v42 & ~v60 & v66 & 1) != 0 )
-    {
-      itemDetailLabel = this->fields.itemDetailLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v44 = &StringLiteral_3466/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/;
-      goto LABEL_64;
-    }
     itemDetailLabel = this->fields.itemDetailLabel;
-    v67 = v66 | v42 & v60 ^ 1;
-    if ( LocalizationManager_TypeInfo->_2.cctor_finished )
+    v47 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+    if ( v45 )
     {
-      if ( ((v66 | v42 & (unsigned __int8)v60 ^ 1) & 1) != 0 )
-      {
-LABEL_61:
-        v44 = &StringLiteral_3465/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/;
-        goto LABEL_64;
-      }
+      if ( !v47 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v44);
+      v48 = &StringLiteral_3563/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/;
     }
     else
     {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      if ( (v67 & 1) != 0 )
-        goto LABEL_61;
+      if ( !v47 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v44);
+      v48 = &StringLiteral_3562/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/;
     }
-    v44 = &StringLiteral_3468/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/;
-    goto LABEL_64;
+    goto LABEL_67;
   }
-  itemDetailLabel = this->fields.itemDetailLabel;
-  if ( LocalizationManager_TypeInfo->_2.cctor_finished )
+  v49 = sub_21FFEBC(ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v49, 0);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v50);
+  Master_object = (UserClassStatisticsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
+  if ( !v49 )
+LABEL_73:
+    sub_21FFECC(Master_object, v14);
+  *(_QWORD *)(v49 + 16) = Master_object;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v49 + 16), (int32_t)Master_object, v51, v52, v53, v54, v55, v56);
+  v57 = SquareModel_k__BackingField->klass;
+  v58 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+  if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
   {
-    if ( v42 )
+    v59 = (IClassBoardSquareModel_c **)&v57->_1.interfaceOffsets->offset;
+    while ( *(v59 - 1) != IClassBoardSquareModel_TypeInfo )
     {
-LABEL_31:
-      v44 = &StringLiteral_3464/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/;
-      goto LABEL_64;
+      --v58;
+      v59 += 2;
+      if ( !v58 )
+        goto LABEL_40;
+    }
+    v60 = (__int64)&v57->vtable[*(_DWORD *)v59 + 6];
+  }
+  else
+  {
+LABEL_40:
+    v60 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
+  }
+  v61 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v60)(
+                                                               SquareModel_k__BackingField,
+                                                               *(_QWORD *)(v60 + 8));
+  v62 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_IClassBoardItemModel__bool__TypeInfo);
+  System_Func_object__bool____ctor(
+    v62,
+    (Il2CppObject *)v49,
+    Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__0__,
+    0);
+  v63 = System_Linq_Enumerable__Any_object__58935448(
+          v61,
+          (System_Func_TSource__bool__o *)v62,
+          (const MethodInfo_3834898 *)Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
+  v64 = SquareModel_k__BackingField->klass;
+  v65 = v63;
+  v66 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+  if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
+  {
+    v67 = (IClassBoardSquareModel_c **)&v64->_1.interfaceOffsets->offset;
+    while ( *(v67 - 1) != IClassBoardSquareModel_TypeInfo )
+    {
+      --v66;
+      v67 += 2;
+      if ( !v66 )
+        goto LABEL_49;
+    }
+    v68 = (__int64)&v64->vtable[*(_DWORD *)v67 + 6];
+  }
+  else
+  {
+LABEL_49:
+    v68 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
+  }
+  v69 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v68)(
+                                                               SquareModel_k__BackingField,
+                                                               *(_QWORD *)(v68 + 8));
+  v70 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_IClassBoardItemModel__bool__TypeInfo);
+  System_Func_object__bool____ctor(
+    v70,
+    (Il2CppObject *)v49,
+    Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0__Open_b__1__,
+    0);
+  v71 = System_Linq_Enumerable__Any_object__58935448(
+          v69,
+          (System_Func_TSource__bool__o *)v70,
+          (const MethodInfo_3834898 *)Method_System_Linq_Enumerable_Any_IClassBoardItemModel___);
+  if ( v45 && v65 && v71 )
+  {
+    itemDetailLabel = this->fields.itemDetailLabel;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v72);
+    v48 = &StringLiteral_3566/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/;
+  }
+  else if ( v65 || !v45 || !v71 )
+  {
+    itemDetailLabel = this->fields.itemDetailLabel;
+    v73 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+    if ( v71 || !v45 || !v65 )
+    {
+      if ( !v73 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v72);
+      v48 = &StringLiteral_3564/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/;
+    }
+    else
+    {
+      if ( !v73 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v72);
+      v48 = &StringLiteral_3567/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/;
     }
   }
   else
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( v42 )
-      goto LABEL_31;
+    itemDetailLabel = this->fields.itemDetailLabel;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v72);
+    v48 = &StringLiteral_3565/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/;
   }
-  v44 = &StringLiteral_3463/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/;
-LABEL_64:
-  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)*v44, 0);
+LABEL_67:
+  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)*v48, 0);
   if ( !itemDetailLabel )
-    goto LABEL_70;
-LABEL_65:
+    goto LABEL_73;
   UILabel__set_text(itemDetailLabel, (System_String_o *)Master_object, 0);
-  ClassBoardSquareOpenConfirmDialog__SetUiPosition(this, v42, isEnableOpen, v35 & 1, v68);
+  ClassBoardSquareOpenConfirmDialog__SetUiPosition(this, v45, isEnableOpen, v35 & 1, v74);
   cancelBtnLabel = this->fields.cancelBtnLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3461/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v75);
+  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3560/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0);
   if ( !cancelBtnLabel )
-    goto LABEL_70;
+    goto LABEL_73;
   UILabel__set_text(cancelBtnLabel, (System_String_o *)Master_object, 0);
   decideBtnLabel = this->fields.decideBtnLabel;
-  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3462/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0);
+  Master_object = (UserClassStatisticsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3561/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0);
   if ( !decideBtnLabel )
-    goto LABEL_70;
+    goto LABEL_73;
   UILabel__set_text(decideBtnLabel, (System_String_o *)Master_object, 0);
-  ClassBoardSquareOpenConfirmDialog__SetDecideButton(this, this->fields.isDecideButtonEnable, v71);
+  ClassBoardSquareOpenConfirmDialog__SetDecideButton(this, this->fields.isDecideButtonEnable, v78);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0);
-  v72 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v72, (Il2CppObject *)this, Method_ClassBoardSquareOpenConfirmDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v72, 0, 0, 0);
+  v79 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v79, (Il2CppObject *)this, Method_ClassBoardSquareOpenConfirmDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v79, 0, 0, 0);
   ClassBoardBaseDialog__SetEffectScrollInitPos((ClassBoardBaseDialog_o *)this, 0);
 }
 
@@ -551,35 +567,39 @@ void ClassBoardSquareOpenConfirmDialog__SetDecideButton(
 {
   UnityEngine_Behaviour_o *decideBtn; // x0
   float v5; // s0 OVERLAPPED
-  float v6; // s3
-  float v7; // s1
-  float v8; // s2
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
 
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtn;
-  if ( !decideBtn )
-    goto LABEL_8;
   if ( !isEnable )
   {
-    UnityEngine_Behaviour__set_enabled(decideBtn, 0, 0);
-    decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
     if ( decideBtn )
     {
-      v6 = 1.0;
-      v5 = 0.5;
-      goto LABEL_7;
+      UnityEngine_Behaviour__set_enabled(decideBtn, 0, 0);
+      decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
+      if ( decideBtn )
+      {
+        v5 = 0.5;
+        v6 = 0.5;
+        v7 = 0.5;
+        goto LABEL_8;
+      }
     }
-LABEL_8:
-    sub_1D0F30C(decideBtn, isEnable);
+LABEL_9:
+    sub_21FFECC(decideBtn, isEnable);
   }
+  if ( !decideBtn )
+    goto LABEL_9;
   UnityEngine_Behaviour__set_enabled(decideBtn, 1, 0);
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
   if ( !decideBtn )
-    goto LABEL_8;
+    goto LABEL_9;
   v5 = 1.0;
   v6 = 1.0;
-LABEL_7:
-  v7 = v5;
-  v8 = v5;
+  v7 = 1.0;
+LABEL_8:
+  v8 = 1.0;
   UIWidget__set_color((UIWidget_o *)decideBtn, *(UnityEngine_Color_o *)&v5, 0);
 }
 
@@ -593,23 +613,24 @@ void ClassBoardSquareOpenConfirmDialog__SetUiPosition(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseWindow; // x0
+  __int64 v10; // x1
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v12; // x0
   UnityEngine_GameObject_o *v13; // x0
+  UnityEngine_GameObject_o *v14; // x0
   float x; // s0 OVERLAPPED
   float y; // s1
   float z; // s2
-  UnityEngine_GameObject_o *v17; // x0
   UnityEngine_GameObject_o *v18; // x0
   UnityEngine_GameObject_o *v19; // x0
   UnityEngine_GameObject_o *v20; // x0
+  UnityEngine_GameObject_o *v21; // x0
 
-  if ( (byte_4E7B4A0 & 1) == 0 )
+  if ( (byte_593C526 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B4A0 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C526 = 1;
   }
   if ( isGrand )
   {
@@ -618,9 +639,9 @@ void ClassBoardSquareOpenConfirmDialog__SetUiPosition(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            baseWindow,
-                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
       baseWindow = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                                  (UnityEngine_Object_o *)Component_object,
                                                  0,
@@ -661,7 +682,7 @@ LABEL_10:
       }
     }
 LABEL_31:
-    sub_1D0F30C(baseWindow, isContainQp);
+    sub_21FFECC(baseWindow, isContainQp);
   }
   if ( isContainQp && isEnableOpen )
   {
@@ -673,17 +694,17 @@ LABEL_31:
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemIconListGrid;
     if ( !baseWindow )
       goto LABEL_31;
-    v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v12, this->fields.itemIconListGridPosContainQp, 0);
+    v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v13, this->fields.itemIconListGridPosContainQp, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel;
     if ( !baseWindow )
       goto LABEL_31;
-    v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
     x = this->fields.itemDetailLabelPosContainQp.fields.x;
     y = this->fields.itemDetailLabelPosContainQp.fields.y;
     z = this->fields.itemDetailLabelPosContainQp.fields.z;
 LABEL_29:
-    GameObjectExtensions__SetLocalPosition(v13, *(UnityEngine_Vector3_o *)&x, 0);
+    GameObjectExtensions__SetLocalPosition(v14, *(UnityEngine_Vector3_o *)&x, 0);
     return;
   }
   if ( isContainQp && !isEnableOpen )
@@ -691,17 +712,17 @@ LABEL_29:
     baseWindow = this->fields.itemQpObj;
     if ( !baseWindow )
       goto LABEL_31;
-    v17 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v17, this->fields.itemQpObjPosContainQpDisable, 0);
+    v18 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v18, this->fields.itemQpObjPosContainQpDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemIconListGrid;
     if ( !baseWindow )
       goto LABEL_31;
-    v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v18, this->fields.itemIconListGridPosContainQpDisable, 0);
+    v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v19, this->fields.itemIconListGridPosContainQpDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel;
     if ( !baseWindow )
       goto LABEL_31;
-    v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
     x = this->fields.itemDetailLabelPosContainQpDisable.fields.x;
     y = this->fields.itemDetailLabelPosContainQpDisable.fields.y;
     z = this->fields.itemDetailLabelPosContainQpDisable.fields.z;
@@ -712,17 +733,17 @@ LABEL_29:
     baseWindow = this->fields.itemQpObj;
     if ( !baseWindow )
       goto LABEL_31;
-    v19 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v19, this->fields.itemQpObjPosDisable, 0);
+    v20 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v20, this->fields.itemQpObjPosDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemIconListGrid;
     if ( !baseWindow )
       goto LABEL_31;
-    v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v20, this->fields.itemIconListGridPosDisable, 0);
+    v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v21, this->fields.itemIconListGridPosDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel;
     if ( !baseWindow )
       goto LABEL_31;
-    v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
     x = this->fields.itemDetailLabelPosDisable.fields.x;
     y = this->fields.itemDetailLabelPosDisable.fields.y;
     z = this->fields.itemDetailLabelPosDisable.fields.z;
@@ -743,12 +764,12 @@ System_String_o *ClassBoardSquareOpenConfirmDialog__get_closeBtnPath(
         ClassBoardSquareOpenConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E7B4A6 & 1) == 0 )
+  if ( (byte_593C52C & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15845/*"Window/CancelBtn"*/);
-    byte_4E7B4A6 = 1;
+    sub_21FFC50(&StringLiteral_16226/*"Window/CancelBtn"*/);
+    byte_593C52C = 1;
   }
-  return (System_String_o *)StringLiteral_15845/*"Window/CancelBtn"*/;
+  return (System_String_o *)StringLiteral_16226/*"Window/CancelBtn"*/;
 }
 
 
@@ -777,10 +798,10 @@ bool ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0___Open_b__0(
   __int64 v14; // x0
 
   v4 = this;
-  if ( (byte_4E7B4A7 & 1) == 0 )
+  if ( (byte_593C52D & 1) == 0 )
   {
-    this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)sub_1D0F0B4(&IClassBoardItemModel_TypeInfo);
-    byte_4E7B4A7 = 1;
+    this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)sub_21FFC50(&IClassBoardItemModel_TypeInfo);
+    byte_593C52D = 1;
   }
   if ( !x )
     goto LABEL_20;
@@ -801,7 +822,7 @@ bool ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0___Open_b__0(
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(x, IClassBoardItemModel_TypeInfo, 2);
+    v8 = sub_2237E2C(x, IClassBoardItemModel_TypeInfo, 2);
   }
   if ( ((*(__int64 (__fastcall **)(IClassBoardItemModel_o *, _QWORD))v8)(x, *(_QWORD *)(v8 + 8)) & 1) != 0 )
     return 0;
@@ -823,14 +844,14 @@ LABEL_8:
   else
   {
 LABEL_16:
-    v14 = sub_1CE5430(x, IClassBoardItemModel_TypeInfo, 0);
+    v14 = sub_2237E2C(x, IClassBoardItemModel_TypeInfo, 0);
   }
   this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)(*(__int64 (__fastcall **)(IClassBoardItemModel_o *, _QWORD))v14)(
                                                                         x,
                                                                         *(_QWORD *)(v14 + 8));
   if ( !itemMaster )
 LABEL_20:
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, x);
   return ItemMaster__isQP(itemMaster, (int32_t)this, 0);
 }
 
@@ -852,10 +873,10 @@ bool ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0___Open_b__1(
   __int64 v14; // x0
 
   v4 = this;
-  if ( (byte_4E7B4A8 & 1) == 0 )
+  if ( (byte_593C52E & 1) == 0 )
   {
-    this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)sub_1D0F0B4(&IClassBoardItemModel_TypeInfo);
-    byte_4E7B4A8 = 1;
+    this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)sub_21FFC50(&IClassBoardItemModel_TypeInfo);
+    byte_593C52E = 1;
   }
   if ( !x )
     goto LABEL_21;
@@ -876,7 +897,7 @@ bool ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0___Open_b__1(
   else
   {
 LABEL_8:
-    v8 = sub_1CE5430(x, IClassBoardItemModel_TypeInfo, 2);
+    v8 = sub_2237E2C(x, IClassBoardItemModel_TypeInfo, 2);
   }
   if ( ((*(__int64 (__fastcall **)(IClassBoardItemModel_o *, _QWORD))v8)(x, *(_QWORD *)(v8 + 8)) & 1) == 0 )
   {
@@ -898,7 +919,7 @@ LABEL_8:
     else
     {
 LABEL_16:
-      v14 = sub_1CE5430(x, IClassBoardItemModel_TypeInfo, 0);
+      v14 = sub_2237E2C(x, IClassBoardItemModel_TypeInfo, 0);
     }
     this = (ClassBoardSquareOpenConfirmDialog___c__DisplayClass34_0_o *)(*(__int64 (__fastcall **)(IClassBoardItemModel_o *, _QWORD))v14)(
                                                                           x,
@@ -906,7 +927,7 @@ LABEL_16:
     if ( itemMaster )
       return !ItemMaster__isQP(itemMaster, (int32_t)this, 0);
 LABEL_21:
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, x);
   }
   return 0;
 }

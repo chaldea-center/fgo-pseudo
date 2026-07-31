@@ -6,18 +6,18 @@ void ServantStatusCharaGraphListViewItem___ctor(
         const MethodInfo *method)
 {
   ServantStatusCharaGraphListViewItem_o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
   v7 = this;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = limitCountStage;
 }
 
@@ -28,7 +28,7 @@ bool ServantStatusCharaGraphListViewItem__get_IsSealed(
 {
   ServantStatusListViewItem_o *mainInfo; // x0
   int32_t v4; // w20
-  int32_t LimitCount; // w0
+  int32_t LimitCount; // w1
 
   mainInfo = this->fields.mainInfo;
   if ( !mainInfo )
@@ -47,7 +47,7 @@ bool ServantStatusCharaGraphListViewItem__get_IsSealed(
       }
     }
 LABEL_7:
-    sub_1D0F30C(mainInfo, method);
+    sub_21FFECC(mainInfo, method);
   }
   return 0;
 }
@@ -92,7 +92,7 @@ int32_t ServantStatusCharaGraphListViewItem__get_LimitCountStageSealAfterIndexZe
         !this->fields.mainInfo) )
   {
 LABEL_8:
-    sub_1D0F30C(mainInfo, method);
+    sub_21FFECC(mainInfo, method);
   }
   v4 = (int)mainInfo;
   LimitCount = ServantStatusListViewItem__get_LimitCount(this->fields.mainInfo, 0);

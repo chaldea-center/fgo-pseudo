@@ -1,29 +1,29 @@
 void ClientMissionManager___ctor(ClientMissionManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E76D53 & 1) == 0 )
+  if ( (byte_5937D03 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ClientMissionManager___ctor__);
-    byte_4E76D53 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_ClientMissionManager___ctor__);
+    byte_5937D03 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *)sub_1D0F300(System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__TypeInfo);
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int____ctor(
     v3,
-    (const MethodInfo_364B14C *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ctor__);
+    (const MethodInfo_4038654 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ctor__);
   this->fields.progressDictionary = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.progressDictionary, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.progressDictionary, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3BACB6C *)Method_SingletonMonoBehaviour_ClientMissionManager___ctor__);
+    (const MethodInfo_476EDF0 *)Method_SingletonMonoBehaviour_ClientMissionManager___ctor__);
 }
 
 
@@ -45,19 +45,19 @@ void ClientMissionManager__AddProgress(
 
   v5 = *(_QWORD *)&key.fields.targetId;
   v6 = *(_QWORD *)&key.fields.missionTargetId;
-  if ( (byte_4E76D51 & 1) == 0 )
+  if ( (byte_5937D01 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
-    byte_4E76D51 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
+    byte_5937D01 = 1;
   }
   progressDictionary = this->fields.progressDictionary;
   if ( !progressDictionary )
     goto LABEL_9;
   *(_QWORD *)&v11.fields.missionTargetId = v6;
   *(_QWORD *)&v11.fields.targetId = v5;
-  progressDictionary = (System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *)System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ContainsKey(progressDictionary, v11, (const MethodInfo_364BD3C *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__ContainsKey__);
+  progressDictionary = (System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *)System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___ContainsKey(progressDictionary, v11, (const MethodInfo_4039224 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__ContainsKey__);
   if ( ((unsigned __int8)progressDictionary & 1) == 0 )
   {
     progressDictionary = this->fields.progressDictionary;
@@ -69,18 +69,18 @@ void ClientMissionManager__AddProgress(
       progressDictionary,
       v12,
       0,
-      (const MethodInfo_364BB1C *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
+      (const MethodInfo_4038FFC *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
   }
   v9 = this->fields.progressDictionary;
   if ( !v9 )
 LABEL_9:
-    sub_1D0F30C(progressDictionary, *(_QWORD *)&key.fields.missionTargetId);
+    sub_21FFECC(progressDictionary, *(_QWORD *)&key.fields.missionTargetId);
   *(_QWORD *)&v13.fields.missionTargetId = v6;
   *(_QWORD *)&v13.fields.targetId = v5;
   v10 = System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___get_Item(
           v9,
           v13,
-          (const MethodInfo_364BA84 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__get_Item__)
+          (const MethodInfo_4038F64 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__get_Item__)
       + valueToAdd;
   *(_QWORD *)&v14.fields.missionTargetId = v6;
   *(_QWORD *)&v14.fields.targetId = v5;
@@ -88,7 +88,7 @@ LABEL_9:
     v9,
     v14,
     v10,
-    (const MethodInfo_364BB1C *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
+    (const MethodInfo_4038FFC *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__set_Item__);
 }
 
 
@@ -96,18 +96,18 @@ void ClientMissionManager__ClearData(ClientMissionManager_o *this, const MethodI
 {
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *progressDictionary; // x0
 
-  if ( (byte_4E76D52 & 1) == 0 )
+  if ( (byte_5937D02 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__Clear__);
-    byte_4E76D52 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__Clear__);
+    byte_5937D02 = 1;
   }
   progressDictionary = this->fields.progressDictionary;
   this->fields.deemedTime = 0;
   if ( !progressDictionary )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___Clear(
     progressDictionary,
-    (const MethodInfo_364BCD0 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__Clear__);
+    (const MethodInfo_40391B8 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__Clear__);
 }
 
 
@@ -127,17 +127,17 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
   __int64 current_low; // x24
   _BOOL8 v17; // x0
   __int64 v18; // x1
-  Il2CppClass *klass; // x27
+  Il2CppClass *klass; // x26
   const char *namespaze; // x8
-  unsigned __int64 v21; // x22
-  __int64 v22; // x26
+  __int64 v21; // x25
+  unsigned __int64 v22; // x22
   __int64 v23; // x24
   __int64 v24; // x1
   const MethodInfo *v25; // x4
-  Il2CppClass *v26; // x29
+  Il2CppClass *v26; // x28
   const char *v27; // x8
-  unsigned __int64 v28; // x28
-  __int64 v29; // x24
+  __int64 v28; // x24
+  unsigned __int64 v29; // x27
   int *v30; // [xsp+8h] [xbp-B8h]
   unsigned int v31; // [xsp+14h] [xbp-ACh]
   System_Collections_Generic_HashSet_Enumerator_T__o v32; // [xsp+20h] [xbp-A0h] BYREF
@@ -145,30 +145,30 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
   System_Collections_Generic_HashSet_Enumerator_T__o v34; // [xsp+40h] [xbp-80h] BYREF
   ClientMissionManager_ProgressDictionaryKey_o v35; // 0:x1.16
 
-  if ( (byte_4E76D4F & 1) == 0 )
+  if ( (byte_5937CFF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventMissionCondDetailMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserExchangeSvtMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__get_Count__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E76D4F = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventMissionCondDetailMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserExchangeSvtMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__get_Count__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5937CFF = 1;
   }
   memset(&v34, 0, sizeof(v34));
   entity = 0;
-  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_45;
   Instance = (char *)DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserExchangeSvtMaster___);
+                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserExchangeSvtMaster___);
   if ( !Instance )
     goto LABEL_45;
   Instance = (char *)UserExchangeSvtMaster__GetEventIdHashSetBySvtId((UserExchangeSvtMaster_o *)Instance, svtId, 0);
@@ -177,24 +177,24 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
   v7 = (System_Collections_Generic_HashSet_int__o *)Instance;
   if ( *((_DWORD *)Instance + 8) )
   {
-    Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_45;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
-    Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_45;
     Instance = (char *)DataManager__GetMasterData_object_(
                          (DataManager_o *)Instance,
-                         (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventMissionCondDetailMaster___);
+                         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMissionCondDetailMaster___);
     if ( !MasterData_object )
       goto LABEL_45;
     v9 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
     Instance = (char *)DataMasterBase_object__object__object___getEntitys(
                          (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                         (const MethodInfo_3539D60 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
+                         (const MethodInfo_3EE13C0 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
     if ( !Instance )
       goto LABEL_45;
     v10 = *((_DWORD *)Instance + 6);
@@ -205,12 +205,12 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
       while ( 1 )
       {
         if ( v11 >= v10 )
-          sub_1D0F314(Instance);
+          sub_21FFED4(Instance);
         v12 = &Instance[8 * v11];
+        v31 = v11;
         v13 = *((_QWORD *)v12 + 4);
         if ( !v13 )
           break;
-        v31 = v11;
         Instance = (char *)EventMissionConditionEntity__GetPossibleClientProgressMissionCondDetailIdHashSet(
                              *((EventMissionConditionEntity_o **)v12 + 4),
                              this->fields.deemedTime,
@@ -220,82 +220,84 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
         System_Collections_Generic_HashSet_int___GetEnumerator(
           &v32,
           (System_Collections_Generic_HashSet_int__o *)Instance,
-          (const MethodInfo_38012F8 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+          (const MethodInfo_4280E28 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
         v34 = v32;
+        v32.fields._set = 0;
+        *(_QWORD *)&v32.fields._index = &v34;
         while ( 1 )
         {
           v14 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
                   &v34,
-                  (const MethodInfo_36C9F08 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+                  (const MethodInfo_40C1EB0 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
           if ( !v14 )
             break;
           if ( !v9 )
-            sub_1D0F30C(v14, v15);
+            sub_21FFECC(v14, v15);
           current_low = LODWORD(v34.fields._current);
           v17 = DataMasterBase_object__object__int___TryGetEntity(
                   v9,
                   &entity,
                   (int32_t)v34.fields._current,
-                  (const MethodInfo_3535BC8 *)Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
+                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
           if ( v17 )
           {
             if ( !entity )
-              sub_1D0F30C(v17, v18);
+              sub_21FFECC(v17, v18);
             if ( LODWORD(entity[1].monitor) == 39 )
             {
               klass = entity[4].klass;
               if ( !klass )
-                sub_1D0F30C(v17, v18);
+                sub_21FFECC(v17, v18);
               namespaze = klass->_1.namespaze;
               if ( (int)namespaze >= 1 )
               {
-                v21 = 0;
-                v22 = current_low << 32;
+                v21 = current_low << 32;
+                v22 = 0;
                 do
                 {
-                  if ( v21 >= (unsigned int)namespaze )
-                    sub_1D0F314(v17);
-                  v23 = *((unsigned int *)&klass->_1.byval_arg.data + v21);
+                  if ( v22 >= (unsigned int)namespaze )
+                    sub_21FFED4(v17);
+                  v23 = *((unsigned int *)&klass->_1.byval_arg.data + v22);
                   v17 = System_Collections_Generic_HashSet_int___Contains(
                           v7,
                           v23,
-                          (const MethodInfo_3800E64 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+                          (const MethodInfo_4280968 *)Method_System_Collections_Generic_HashSet_int__Contains__);
                   if ( v17 )
                   {
                     if ( !entity )
-                      sub_1D0F30C(v17, v24);
+                      sub_21FFECC(v17, v24);
                     v26 = entity[2].klass;
                     if ( !v26 )
-                      sub_1D0F30C(v17, v24);
+                      sub_21FFECC(v17, v24);
                     v27 = v26->_1.namespaze;
                     if ( (int)v27 >= 1 )
                     {
-                      v28 = 0;
-                      v29 = v23 << 32;
+                      v28 = v23 << 32;
+                      v29 = 0;
                       do
                       {
-                        if ( v28 >= (unsigned int)v27 )
-                          sub_1D0F314(v17);
-                        *(_QWORD *)&v35.fields.missionTargetId = v22 | *(unsigned int *)(v13 + 32);
-                        *(_QWORD *)&v35.fields.targetId = v29 | *((unsigned int *)&v26->_1.byval_arg.data + v28);
+                        if ( v29 >= (unsigned int)v27 )
+                          sub_21FFED4(v17);
+                        *(_QWORD *)&v35.fields.missionTargetId = v21 | *(unsigned int *)(v13 + 32);
+                        *(_QWORD *)&v35.fields.targetId = v28 | *((unsigned int *)&v26->_1.byval_arg.data + v29);
                         ClientMissionManager__AddProgress(this, v35, 1, v25);
                         LODWORD(v27) = v26->_1.namespaze;
-                        ++v28;
+                        ++v29;
                       }
-                      while ( (__int64)v28 < (int)v27 );
+                      while ( (__int64)v29 < (int)v27 );
                     }
                   }
                   LODWORD(namespaze) = klass->_1.namespaze;
-                  ++v21;
+                  ++v22;
                 }
-                while ( (__int64)v21 < (int)namespaze );
+                while ( (__int64)v22 < (int)namespaze );
               }
             }
           }
         }
         System_Collections_Generic_HashSet_Enumerator_int___Dispose(
           &v34,
-          (const MethodInfo_36C9F04 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+          (const MethodInfo_40C1EAC *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
         Instance = (char *)v30;
         v10 = v30[6];
         v11 = v31 + 1;
@@ -303,232 +305,264 @@ void ClientMissionManager__MyRoomPlayVoice(ClientMissionManager_o *this, int32_t
           return;
       }
 LABEL_45:
-      sub_1D0F30C(Instance, v6);
+      sub_21FFECC(Instance, v6);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClientMissionManager__OnClickMapGimmick(
         ClientMissionManager_o *this,
         int32_t eventId,
         int32_t targetGimmickId,
         const MethodInfo *method)
 {
+  int v6; // w8
   Il2CppObject *Master_object; // x26
   Il2CppObject *v8; // x22
-  Il2CppObject *v9; // x23
+  __int64 v9; // x1
   NetworkManager_c *v10; // x0
   System_Collections_Generic_HashSet_int__o *v11; // x24
-  void *Entitys; // x0
+  _DWORD *Entitys; // x0
   __int64 v13; // x1
-  int v14; // w8
-  void *v15; // x26
-  unsigned int v16; // w28
+  _DWORD *v14; // x26
+  int v15; // w8
+  unsigned int v16; // w25
   EventMissionConditionEntity_o *v17; // x27
-  _BOOL8 v18; // x0
-  __int64 v19; // x1
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
+  _BOOL4 isClearMission; // w21
+  _BOOL8 v19; // x0
+  __int64 v20; // x1
+  int32_t current; // w27
+  _BOOL8 v22; // x0
+  __int64 v23; // x1
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
   __int64 current_low; // x24
-  _BOOL8 v23; // x0
-  __int64 v24; // x1
-  Il2CppClass *klass; // x27
+  _BOOL8 v27; // x0
+  __int64 v28; // x1
+  Il2CppClass *klass; // x21
   const char *namespaze; // x8
-  unsigned __int64 v27; // x28
-  __int64 v28; // x24
-  const MethodInfo *v29; // x4
-  int64_t userId; // [xsp+8h] [xbp-A8h]
-  System_Collections_Generic_HashSet_Enumerator_T__o v31; // [xsp+10h] [xbp-A0h] BYREF
-  Il2CppObject *v32; // [xsp+28h] [xbp-88h] BYREF
-  System_Collections_Generic_HashSet_Enumerator_T__o i; // [xsp+30h] [xbp-80h] BYREF
-  UserEventMissionEntity_o *entity; // [xsp+48h] [xbp-68h] BYREF
-  ClientMissionManager_ProgressDictionaryKey_o v35; // 0:x1.16
+  __int64 v31; // x24
+  unsigned __int64 v32; // x26
+  const MethodInfo *v33; // x4
+  int64_t userId; // [xsp+0h] [xbp-C0h]
+  UserEventMissionMaster_o *v35; // [xsp+8h] [xbp-B8h]
+  System_Collections_Generic_HashSet_Enumerator_T__o v37; // [xsp+18h] [xbp-A8h] BYREF
+  Il2CppObject *v38; // [xsp+30h] [xbp-90h] BYREF
+  Il2CppObject *v39; // [xsp+38h] [xbp-88h] BYREF
+  System_Collections_Generic_HashSet_Enumerator_T__o v40; // [xsp+40h] [xbp-80h] BYREF
+  UserEventMissionEntity_o *entity; // [xsp+58h] [xbp-68h] BYREF
+  ClientMissionManager_ProgressDictionaryKey_o v42; // 0:x1.16
 
-  if ( (byte_4E76D50 & 1) == 0 )
+  if ( (byte_5937D00 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_EventMissionCondDetailMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_EventMissionConditionMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserEventMissionMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E76D50 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_EventMissionCondDetailMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_EventMissionConditionMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_UserEventMissionMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5937D00 = 1;
   }
   entity = 0;
-  memset(&i, 0, sizeof(i));
-  v32 = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventMissionConditionMaster___);
-  v8 = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_EventMissionCondDetailMaster___);
-  v9 = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+  memset(&v40, 0, sizeof(v40));
+  v6 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
+  v38 = 0;
+  v39 = 0;
+  if ( !v6 )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&eventId);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMissionConditionMaster___);
+  v8 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMissionCondDetailMaster___);
+  v35 = (UserEventMissionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
   v10 = NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9);
     v10 = NetworkManager_TypeInfo;
   }
   userId = v10->static_fields->userIdNumber;
-  v11 = (System_Collections_Generic_HashSet_int__o *)sub_1D0F300(System_Collections_Generic_HashSet_int__TypeInfo);
+  v11 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v11,
-    (const MethodInfo_3800770 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( !Master_object )
-    goto LABEL_51;
+    goto LABEL_58;
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-              (const MethodInfo_3539D60 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
+              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntitys__);
   if ( !Entitys )
-    goto LABEL_51;
-  v14 = *((_DWORD *)Entitys + 6);
-  v15 = Entitys;
-  if ( v14 >= 1 )
+    goto LABEL_58;
+  v14 = Entitys;
+  v15 = Entitys[6];
+  if ( v15 >= 1 )
   {
     v16 = 0;
     while ( 1 )
     {
-      if ( v16 >= v14 )
-        sub_1D0F314(Entitys);
-      v17 = (EventMissionConditionEntity_o *)*((_QWORD *)v15 + (int)v16 + 4);
-      if ( !v17 || !v9 )
+      if ( v16 >= v15 )
+        sub_21FFED4(Entitys);
+      v17 = *(EventMissionConditionEntity_o **)&v14[2 * v16 + 8];
+      if ( !v17 )
         break;
-      if ( !UserEventMissionMaster__TryGetEntity(
-              (UserEventMissionMaster_o *)v9,
-              &entity,
-              userId,
-              v17->fields.missionId,
-              0) )
-        goto LABEL_21;
-      Entitys = entity;
-      if ( !entity )
+      Entitys = v35;
+      if ( !v35 )
         break;
-      Entitys = (void *)UserEventMissionEntity__isClearMission(entity, 0);
-      if ( ((unsigned __int8)Entitys & 1) == 0 )
+      if ( UserEventMissionMaster__TryGetEntity(v35, &entity, userId, v17->fields.missionId, 0) )
       {
-LABEL_21:
-        Entitys = EventMissionConditionEntity__GetPossibleClientProgressMissionCondDetailIdHashSet(
-                    v17,
-                    this->fields.deemedTime,
-                    0);
-        if ( !Entitys )
+        Entitys = entity;
+        if ( !entity )
           break;
-        System_Collections_Generic_HashSet_int___GetEnumerator(
-          &v31,
-          (System_Collections_Generic_HashSet_int__o *)Entitys,
-          (const MethodInfo_38012F8 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-        for ( i = v31;
-              ;
-              System_Collections_Generic_HashSet_int___Add(
-                v11,
-                (int32_t)i.fields._current,
-                (const MethodInfo_3801974 *)Method_System_Collections_Generic_HashSet_int__Add__) )
-        {
-          v18 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
-                  &i,
-                  (const MethodInfo_36C9F08 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
-          if ( !v18 )
-            break;
-          if ( !v11 )
-            sub_1D0F30C(v18, v19);
-        }
-        System_Collections_Generic_HashSet_Enumerator_int___Dispose(
-          &i,
-          (const MethodInfo_36C9F04 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+        isClearMission = UserEventMissionEntity__isClearMission(entity, 0);
       }
-      v14 = *((_DWORD *)v15 + 6);
-      if ( (int)++v16 >= v14 )
-        goto LABEL_30;
-    }
-LABEL_51:
-    sub_1D0F30C(Entitys, v13);
-  }
+      else
+      {
+        isClearMission = 0;
+      }
+      Entitys = EventMissionConditionEntity__GetPossibleClientProgressMissionCondDetailIdHashSet(
+                  v17,
+                  this->fields.deemedTime,
+                  0);
+      if ( !Entitys )
+        break;
+      System_Collections_Generic_HashSet_int___GetEnumerator(
+        &v37,
+        (System_Collections_Generic_HashSet_int__o *)Entitys,
+        (const MethodInfo_4280E28 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+      v40 = v37;
+      v37.fields._set = 0;
+      *(_QWORD *)&v37.fields._index = &v40;
+      while ( 1 )
+      {
+        v19 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
+                &v40,
+                (const MethodInfo_40C1EB0 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+        if ( !v19 )
+          break;
+        if ( !v8 )
+          sub_21FFECC(v19, v20);
+        current = (int32_t)v40.fields._current;
+        v22 = DataMasterBase_object__object__int___TryGetEntity(
+                (DataMasterBase_TMaster__TEntity__PKType__o *)v8,
+                &v39,
+                (int32_t)v40.fields._current,
+                (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
+        if ( v22 )
+        {
+          if ( !isClearMission )
+            goto LABEL_30;
+          if ( !v39 )
+            sub_21FFECC(v22, v23);
+          if ( LODWORD(v39[1].monitor) == 44 )
+          {
 LABEL_30:
+            if ( !v11 )
+              sub_21FFECC(v22, v23);
+            System_Collections_Generic_HashSet_int___Add(
+              v11,
+              current,
+              (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+          }
+        }
+      }
+      System_Collections_Generic_HashSet_Enumerator_int___Dispose(
+        &v40,
+        (const MethodInfo_40C1EAC *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+      v15 = v14[6];
+      if ( (int)++v16 >= v15 )
+        goto LABEL_37;
+    }
+LABEL_58:
+    sub_21FFECC(Entitys, v13);
+  }
+LABEL_37:
   if ( !v11 )
-    goto LABEL_51;
+    goto LABEL_58;
   System_Collections_Generic_HashSet_int___GetEnumerator(
-    &v31,
+    &v37,
     v11,
-    (const MethodInfo_38012F8 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-  i = v31;
+    (const MethodInfo_4280E28 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+  v40 = v37;
+  v37.fields._set = 0;
+  *(_QWORD *)&v37.fields._index = &v40;
   while ( 1 )
   {
-    v20 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
-            &i,
-            (const MethodInfo_36C9F08 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
-    if ( !v20 )
+    v24 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
+            &v40,
+            (const MethodInfo_40C1EB0 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+    if ( !v24 )
       break;
     if ( !v8 )
-      sub_1D0F30C(v20, v21);
-    current_low = LODWORD(i.fields._current);
-    v23 = DataMasterBase_object__object__int___TryGetEntity(
+      sub_21FFECC(v24, v25);
+    current_low = LODWORD(v40.fields._current);
+    v27 = DataMasterBase_object__object__int___TryGetEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)v8,
-            &v32,
-            (int32_t)i.fields._current,
-            (const MethodInfo_3535BC8 *)Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
-    if ( v23 )
+            &v38,
+            (int32_t)v40.fields._current,
+            (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMissionCondDetailMaster__EventMissionCondDetailEntity__int__TryGetEntity__);
+    if ( v27 )
     {
-      if ( !v32 )
-        sub_1D0F30C(v23, v24);
-      if ( LODWORD(v32[1].monitor) == 40 )
+      if ( !v38 )
+        sub_21FFECC(v27, v28);
+      if ( (LODWORD(v38[1].monitor) | 4) == 0x2C )
       {
-        klass = v32[4].klass;
+        klass = v38[4].klass;
         if ( !klass )
-          sub_1D0F30C(v23, v24);
+          sub_21FFECC(v27, v28);
         namespaze = klass->_1.namespaze;
         if ( (int)namespaze >= 1 )
         {
-          v27 = 0;
-          v28 = current_low << 32;
+          v31 = current_low << 32;
+          v32 = 0;
           do
           {
-            if ( v27 >= (unsigned int)namespaze )
-              sub_1D0F314(v23);
-            if ( *((_DWORD *)&klass->_1.byval_arg.data + v27) == eventId )
+            if ( v32 >= (unsigned int)namespaze )
+              sub_21FFED4(v27);
+            if ( *((_DWORD *)&klass->_1.byval_arg.data + v32) == eventId )
             {
-              if ( !v32 )
-                sub_1D0F30C(v23, v24);
-              v23 = System_Linq_Enumerable__Contains_int_(
-                      (System_Collections_Generic_IEnumerable_TSource__o *)v32[2].klass,
+              if ( !v38 )
+                sub_21FFECC(v27, v28);
+              v27 = System_Linq_Enumerable__Contains_int_(
+                      (System_Collections_Generic_IEnumerable_TSource__o *)v38[2].klass,
                       targetGimmickId,
-                      (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
-              if ( v23 )
+                      (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+              if ( v27 )
               {
-                if ( !v32 )
-                  sub_1D0F30C(v23, v24);
-                *(_QWORD *)&v35.fields.missionTargetId = v28 | HIDWORD(v32[1].klass);
-                v35.fields.targetId = targetGimmickId;
-                v35.fields.eventId = eventId;
-                ClientMissionManager__AddProgress(this, v35, 1, v29);
+                if ( !v38 )
+                  sub_21FFECC(v27, v28);
+                *(_QWORD *)&v42.fields.missionTargetId = v31 | HIDWORD(v38[1].klass);
+                v42.fields.targetId = targetGimmickId;
+                v42.fields.eventId = eventId;
+                ClientMissionManager__AddProgress(this, v42, 1, v33);
               }
             }
             LODWORD(namespaze) = klass->_1.namespaze;
-            ++v27;
+            ++v32;
           }
-          while ( (__int64)v27 < (int)namespaze );
+          while ( (__int64)v32 < (int)namespaze );
         }
       }
     }
   }
   System_Collections_Generic_HashSet_Enumerator_int___Dispose(
-    &i,
-    (const MethodInfo_36C9F04 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+    &v40,
+    (const MethodInfo_40C1EAC *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
 }
 
 
@@ -537,149 +571,154 @@ void ClientMissionManager__SendRequest(
         NetworkManager_ResultCallbackFunc_o *callback,
         const MethodInfo *method)
 {
+  int v5; // w8
   Il2CppObject *Request_object; // x20
-  System_Collections_Generic_List_object__o *v6; // x21
-  const MethodInfo *v7; // x1
+  System_Collections_Generic_List_object__o *v7; // x21
+  const MethodInfo *v8; // x1
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *progressDictionary; // x0
   int32_t getEnumeratorRetType; // w23
   struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
-  EventMissionProgressRequest_Argument_ProgressData_o *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  EventMissionProgressRequest_Argument_ProgressData_o *v12; // x22
+  __int64 v13; // x0
+  __int64 v14; // x1
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
+  Il2CppClass **v24; // x0
   int64_t deemedTime; // x22
-  EventMissionProgressRequest_Argument_o *v25; // x23
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v26; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v27; // [xsp+30h] [xbp-90h] BYREF
+  EventMissionProgressRequest_Argument_o *v26; // x23
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v27; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v28; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_4E76D4D & 1) == 0 )
+  if ( (byte_5937CFD & 1) == 0 )
   {
-    sub_1D0F0B4(&EventMissionProgressRequest_Argument_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_ClientMissionManager_ProgressDictionaryKey__int__get_Key__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_KeyValuePair_ClientMissionManager_ProgressDictionaryKey__int__get_Value__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__get_Count__);
-    sub_1D0F0B4(&System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
-    sub_1D0F0B4(&Method_NetworkManager_getRequest_EventMissionProgressRequest___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
-    byte_4E76D4D = 1;
+    sub_21FFC50(&EventMissionProgressRequest_Argument_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_ClientMissionManager_ProgressDictionaryKey__int__get_Key__);
+    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_ClientMissionManager_ProgressDictionaryKey__int__get_Value__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__get_Count__);
+    sub_21FFC50(&System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+    sub_21FFC50(&Method_NetworkManager_getRequest_EventMissionProgressRequest___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
+    byte_5937CFD = 1;
   }
-  memset(&v27, 0, sizeof(v27));
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  v5 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
+  memset(&v28, 0, sizeof(v28));
+  if ( !v5 )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, callback);
   Request_object = NetworkManager__getRequest_object_(
                      callback,
-                     (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_EventMissionProgressRequest___);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+                     (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_EventMissionProgressRequest___);
+  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v6,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
+    v7,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
   progressDictionary = this->fields.progressDictionary;
   if ( !progressDictionary )
-    goto LABEL_25;
+    goto LABEL_24;
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___GetEnumerator(
-    &v26,
+    &v27,
     progressDictionary,
-    (const MethodInfo_364BF58 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__GetEnumerator__);
-  v27 = v26;
+    (const MethodInfo_403942C *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__GetEnumerator__);
+  v28 = v27;
+  v27.fields._dictionary = 0;
+  *(_QWORD *)&v27.fields._version = &v28;
   while ( System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int___MoveNext(
-            &v27,
-            (const MethodInfo_3714F14 *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__MoveNext__) )
+            &v28,
+            (const MethodInfo_414A12C *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__MoveNext__) )
   {
-    getEnumeratorRetType = v27.fields._getEnumeratorRetType;
-    if ( v27.fields._getEnumeratorRetType )
+    getEnumeratorRetType = v28.fields._getEnumeratorRetType;
+    if ( v28.fields._getEnumeratorRetType )
     {
-      current = v27.fields._current;
-      v11 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_1D0F300(EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
+      current = v28.fields._current;
+      v12 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_21FFEBC(EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
       EventMissionProgressRequest_Argument_ProgressData___ctor(
-        v11,
+        v12,
         (int32_t)current.fields.key,
         SHIDWORD(current.fields.key),
         (int32_t)current.fields.value,
         SHIDWORD(current.fields.value),
         getEnumeratorRetType,
         0);
-      if ( !v6 )
-        sub_1D0F30C(v12, v13);
-      items = v6->fields._items;
-      v21 = Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__;
-      ++v6->fields._version;
-      if ( !items )
-        sub_1D0F30C(v12, v13);
-      size = v6->fields._size;
+      if ( !v7
+        || (items = v7->fields._items,
+            v22 = Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__,
+            ++v7->fields._version,
+            !items) )
+      {
+        sub_21FFECC(v13, v14);
+      }
+      size = v7->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v6,
-          (Il2CppObject *)v11,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          v7,
+          (Il2CppObject *)v12,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
-        v23 = &items->obj.klass + size;
-        v6->fields._size = size + 1;
-        v23[4] = (Il2CppClass *)v11;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v23 + 4), (int32_t)v11, v14, v15, v16, v17, v18, v19);
+        v24 = &items->obj.klass + size;
+        v7->fields._size = size + 1;
+        v24[4] = (Il2CppClass *)v12;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)v12, v15, v16, v17, v18, v19, v20);
       }
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int___Dispose(
-    &v27,
-    (const MethodInfo_3715048 *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__Dispose__);
-  if ( !v6 )
-    goto LABEL_25;
-  if ( v6->fields._size >= 1 )
+    &v28,
+    (const MethodInfo_414A268 *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__Dispose__);
+  if ( !v7 )
+    goto LABEL_24;
+  if ( v7->fields._size >= 1 )
   {
     deemedTime = this->fields.deemedTime;
     if ( !deemedTime )
     {
-      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v8);
       deemedTime = NetworkManager__getTime(0);
     }
-    v25 = (EventMissionProgressRequest_Argument_o *)sub_1D0F300(EventMissionProgressRequest_Argument_TypeInfo);
+    v26 = (EventMissionProgressRequest_Argument_o *)sub_21FFEBC(EventMissionProgressRequest_Argument_TypeInfo);
     EventMissionProgressRequest_Argument___ctor(
-      v25,
+      v26,
       deemedTime,
-      (System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *)v6,
+      (System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *)v7,
       0);
     if ( Request_object )
     {
-      EventMissionProgressRequest__beginRequest((EventMissionProgressRequest_o *)Request_object, v25, 0);
+      EventMissionProgressRequest__beginRequest((EventMissionProgressRequest_o *)Request_object, v26, 0);
       goto LABEL_22;
     }
-LABEL_25:
-    sub_1D0F30C(progressDictionary, v7);
+LABEL_24:
+    sub_21FFECC(progressDictionary, v8);
   }
 LABEL_22:
-  ClientMissionManager__ClearData(this, v7);
+  ClientMissionManager__ClearData(this, v8);
 }
 
 
 void ClientMissionManager__SetCurrentTimeAsDeemedTime(ClientMissionManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E76D4E & 1) == 0 )
+  if ( (byte_5937CFE & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E76D4E = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5937CFE = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   this->fields.deemedTime = NetworkManager__getTime(0);
 }
 
@@ -712,10 +751,10 @@ bool ClientMissionManager_ProgressDictionaryKey__Equals(
 
   v3 = *(ClientMissionManager_ProgressDictionaryKey_c ***)&this.fields.targetId;
   v4 = *(_QWORD *)&this.fields.missionTargetId;
-  if ( (byte_4E76D54 & 1) == 0 )
+  if ( (byte_5937D04 & 1) == 0 )
   {
-    sub_1D0F0B4(&ClientMissionManager_ProgressDictionaryKey_TypeInfo);
-    byte_4E76D54 = 1;
+    sub_21FFC50(&ClientMissionManager_ProgressDictionaryKey_TypeInfo);
+    byte_5937D04 = 1;
   }
   result = v3
         && *v3 == ClientMissionManager_ProgressDictionaryKey_TypeInfo
@@ -727,7 +766,7 @@ bool ClientMissionManager_ProgressDictionaryKey__Equals(
 }
 
 
-bool ClientMissionManager_ProgressDictionaryKey__Equals_42613920(
+bool ClientMissionManager_ProgressDictionaryKey__Equals_48181540(
         ClientMissionManager_ProgressDictionaryKey_o this,
         ClientMissionManager_ProgressDictionaryKey_o other,
         const MethodInfo *method)
@@ -751,11 +790,11 @@ int32_t ClientMissionManager_ProgressDictionaryKey__GetHashCode(
   System_ValueTuple_T1__T2__T3__T4__o v8; // [xsp+0h] [xbp-50h] BYREF
 
   v2 = *(int32_t **)&this.fields.missionTargetId;
-  if ( (byte_4E76D55 & 1) == 0 )
+  if ( (byte_5937D05 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_ValueTuple_int__int__int__int__GetHashCode__);
-    sub_1D0F0B4(&Method_System_ValueTuple_int__int__int__int___ctor__);
-    byte_4E76D55 = 1;
+    sub_21FFC50(&Method_System_ValueTuple_int__int__int__int__GetHashCode__);
+    sub_21FFC50(&Method_System_ValueTuple_int__int__int__int___ctor__);
+    byte_5937D05 = 1;
   }
   v3 = *v2;
   v4 = v2[1];
@@ -768,11 +807,11 @@ int32_t ClientMissionManager_ProgressDictionaryKey__GetHashCode(
     v4,
     v5,
     v6,
-    (const MethodInfo_3CF14EC *)Method_System_ValueTuple_int__int__int__int___ctor__);
+    (const MethodInfo_3CE4108 *)Method_System_ValueTuple_int__int__int__int___ctor__);
   *(_OWORD *)&v8.fields.Item3 = *(_OWORD *)&v8.fields.Item1;
   return System_ValueTuple_int__int__int__int___GetHashCode(
            (System_ValueTuple_T1__T2__T3__T4__o *)&v8.fields.Item3,
-           (const MethodInfo_3CF224C *)Method_System_ValueTuple_int__int__int__int__GetHashCode__);
+           (const MethodInfo_3CE4E8C *)Method_System_ValueTuple_int__int__int__int__GetHashCode__);
 }
 
 
@@ -784,107 +823,107 @@ System_String_o *ClientMissionManager_ProgressDictionaryKey__ToString(
   System_Object_array *v3; // x19
   __int64 v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   Il2CppObject *v12; // x21
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  Il2CppObject *v19; // x21
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
-  Il2CppObject *v26; // x21
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
-  Il2CppObject *v33; // x20
-  __int64 v35; // x0
-  int v36; // [xsp+8h] [xbp-38h] BYREF
-  int v37; // [xsp+Ch] [xbp-34h] BYREF
-  int v38; // [xsp+18h] [xbp-28h] BYREF
-  int v39; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v13; // x1
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  Il2CppObject *v20; // x21
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  Il2CppObject *v27; // x21
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
+  Il2CppObject *v34; // x20
+  __int64 v36; // x0
+  int v37; // [xsp+8h] [xbp-38h] BYREF
+  int v38; // [xsp+Ch] [xbp-34h] BYREF
+  int v39; // [xsp+18h] [xbp-28h] BYREF
+  int v40; // [xsp+1Ch] [xbp-24h] BYREF
 
   v2 = *(int **)&this.fields.missionTargetId;
-  if ( (byte_4E76D56 & 1) == 0 )
+  if ( (byte_5937D06 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22040/*"missionTargetId={0}, condDetailId={1}, targetId={2}, eventId={3}"*/);
-    byte_4E76D56 = 1;
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&StringLiteral_22667/*"missionTargetId={0}, condDetailId={1}, targetId={2}, eventId={3}"*/);
+    byte_5937D06 = 1;
   }
-  v3 = (System_Object_array *)sub_1D0F15C(object___TypeInfo, 4);
-  v39 = *v2;
-  v4 = j_il2cpp_value_box_0(int_TypeInfo, &v39);
+  v3 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 4);
+  v40 = *v2;
+  v4 = j_il2cpp_value_box_0(qword_594C070, &v40);
   if ( !v3 )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   v12 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = sub_1D0F1F0(v4, v3->obj.klass->_1.element_class);
+    v4 = sub_21FFDA4(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_18;
   }
   if ( !LODWORD(v3->max_length) )
     goto LABEL_17;
   v3->m_Items[0] = v12;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v3->m_Items, (int32_t)v12, v6, v7, v8, v9, v10, v11);
-  v38 = v2[1];
-  v4 = j_il2cpp_value_box_0(int_TypeInfo, &v38);
-  v19 = (Il2CppObject *)v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v3->m_Items, (int32_t)v12, v6, v7, v8, v9, v10, v11);
+  v39 = v2[1];
+  v4 = j_il2cpp_value_box_0(qword_594C070, &v39);
+  v20 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = sub_1D0F1F0(v4, v3->obj.klass->_1.element_class);
+    v4 = sub_21FFDA4(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_18;
   }
-  if ( LODWORD(v3->max_length) <= 1 )
+  if ( (v3->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_17;
-  v3->m_Items[1] = v19;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->m_Items[1], (int32_t)v19, v13, v14, v15, v16, v17, v18);
-  v37 = v2[2];
-  v4 = j_il2cpp_value_box_0(int_TypeInfo, &v37);
-  v26 = (Il2CppObject *)v4;
+  v3->m_Items[1] = v20;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->m_Items[1], (int32_t)v20, v14, v15, v16, v17, v18, v19);
+  v38 = v2[2];
+  v4 = j_il2cpp_value_box_0(qword_594C070, &v38);
+  v27 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = sub_1D0F1F0(v4, v3->obj.klass->_1.element_class);
+    v4 = sub_21FFDA4(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_18;
   }
   if ( LODWORD(v3->max_length) <= 2 )
     goto LABEL_17;
-  v3->m_Items[2] = v26;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->m_Items[2], (int32_t)v26, v20, v21, v22, v23, v24, v25);
-  v36 = v2[3];
-  v4 = j_il2cpp_value_box_0(int_TypeInfo, &v36);
-  v33 = (Il2CppObject *)v4;
+  v3->m_Items[2] = v27;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->m_Items[2], (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  v37 = v2[3];
+  v4 = j_il2cpp_value_box_0(qword_594C070, &v37);
+  v34 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = sub_1D0F1F0(v4, v3->obj.klass->_1.element_class);
+    v4 = sub_21FFDA4(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
     {
 LABEL_18:
-      v35 = sub_1D0F330(v4);
-      sub_1D0F1DC(v35, 0);
+      v36 = sub_21FFEF0(v4, v13);
+      sub_21FFD90(v36, 0);
     }
   }
-  if ( LODWORD(v3->max_length) <= 3 )
+  if ( (v3->max_length & 0xFFFFFFFC) == 0 )
 LABEL_17:
-    sub_1D0F314(v4);
-  v3->m_Items[3] = v33;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->m_Items[3], (int32_t)v33, v27, v28, v29, v30, v31, v32);
-  return System_String__Format_65604216((System_String_o *)StringLiteral_22040/*"missionTargetId={0}, condDetailId={1}, targetId={2}, eventId={3}"*/, v3, 0);
+    sub_21FFED4(v4);
+  v3->m_Items[3] = v34;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->m_Items[3], (int32_t)v34, v28, v29, v30, v31, v32, v33);
+  return System_String__Format_75484712((System_String_o *)StringLiteral_22667/*"missionTargetId={0}, condDetailId={1}, targetId={2}, eventId={3}"*/, v3, 0);
 }

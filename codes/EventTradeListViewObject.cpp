@@ -1,12 +1,14 @@
 void EventTradeListViewObject___ctor(EventTradeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E71EB1 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5932C6D & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    byte_4E71EB1 = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    byte_5932C6D = 1;
   }
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
   ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
@@ -16,21 +18,35 @@ void EventTradeListViewObject__Awake(EventTradeListViewObject_o *this, const Met
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E71EA9 & 1) == 0 )
+  if ( (byte_5932C65 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewItemDraw___);
-    byte_4E71EA9 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewItemDraw___);
+    byte_5932C65 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewItemDraw___);
   this->fields.itemDraw = (struct EventTradeListViewItemDraw_o *)Component_object;
-  sub_1D0F058(&this->fields.itemDraw, Component_object);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -43,21 +59,21 @@ UnityEngine_GameObject_o *EventTradeListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_4E71EAD & 1) == 0 )
+  if ( (byte_5932C69 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___);
-    byte_4E71EAD = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___);
+    byte_5932C69 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___)) == 0) )
+                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___)) == 0) )
   {
-    sub_1D0F30C(DragObject, v4);
+    sub_21FFECC(DragObject, v4);
   }
-  EventTradeListViewObject__Init_33656628((EventTradeListViewObject_o *)DragObject, 2, 0, v6);
+  EventTradeListViewObject__Init_38989880((EventTradeListViewObject_o *)DragObject, 2, 0, v6);
   return v5;
 }
 
@@ -67,10 +83,10 @@ EventTradeListViewItem_o *EventTradeListViewObject__GetItem(EventTradeListViewOb
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4E71EAC & 1) == 0 )
+  if ( (byte_5932C68 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventTradeListViewItem_TypeInfo);
-    byte_4E71EAC = 1;
+    sub_21FFC50(&EventTradeListViewItem_TypeInfo);
+    byte_5932C68 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -92,7 +108,7 @@ int32_t EventTradeListViewObject__GetState(
   if ( (unsigned int)initMode > 7 )
     return 0;
   else
-    return dword_D687D4[initMode];
+    return dword_ECFEC4[initMode];
 }
 
 
@@ -100,11 +116,11 @@ void EventTradeListViewObject__Init(EventTradeListViewObject_o *this, int32_t in
 {
   const MethodInfo *v3; // x3
 
-  EventTradeListViewObject__Init_33656628(this, initMode, 0, v3);
+  EventTradeListViewObject__Init_38989880(this, initMode, 0, v3);
 }
 
 
-void EventTradeListViewObject__Init_33656628(
+void EventTradeListViewObject__Init_38989880(
         EventTradeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *onMoveEnd,
@@ -118,14 +134,15 @@ void EventTradeListViewObject__Init_33656628(
   UnityEngine_Transform_o *transform; // x0
   __int64 v13; // x1
   const MethodInfo *v14; // x2
-  int32_t v15; // w0
-  const MethodInfo *v16; // x1
-  int32_t v17; // w8
+  EventTradeListViewObject_o *v15; // x0
+  int v16; // w22
+  const MethodInfo *v17; // x2
+  const MethodInfo *v18; // x1
 
-  if ( (byte_4E71EAE & 1) == 0 )
+  if ( (byte_5932C6A & 1) == 0 )
   {
-    sub_1D0F0B4(&EventTradeListViewItem_TypeInfo);
-    byte_4E71EAE = 1;
+    sub_21FFC50(&EventTradeListViewItem_TypeInfo);
+    byte_5932C6A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -155,50 +172,36 @@ void EventTradeListViewObject__Init_33656628(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1D0F30C(transform, v13);
+    sub_21FFECC(transform, v13);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
-  v15 = EventTradeListViewItemDraw__GetDisplayMode(initMode, (EventTradeListViewItem_o *)v9, v14);
-  this->fields.displayMode = v15;
-  switch ( initMode )
+  v15 = (EventTradeListViewObject_o *)EventTradeListViewItemDraw__GetDisplayMode(
+                                        initMode,
+                                        (EventTradeListViewItem_o *)v9,
+                                        v14);
+  v16 = (int)v15;
+  this->fields.displayMode = (int)v15;
+  this->fields.state = EventTradeListViewObject__GetState(v15, initMode, v17);
+  if ( initMode > 5 )
   {
-    case 0:
-    case 1:
-    case 2:
-    case 7:
-      v17 = 1;
-      goto LABEL_17;
-    case 3:
-      this->fields.state = 3;
-      goto LABEL_22;
-    case 4:
-    case 6:
-      this->fields.state = 2;
+    if ( initMode == 6 )
       return;
-    case 5:
-      this->fields.state = 0;
-LABEL_20:
-      if ( !state || displayMode != v15 )
+    if ( initMode != 7 )
+    {
 LABEL_22:
-        EventTradeListViewObject__SetupDisplay(this, v16);
-      ActionExtensions__Call(onMoveEnd, 0);
-      break;
-    default:
-      v17 = 0;
-LABEL_17:
-      this->fields.state = v17;
-      switch ( initMode )
-      {
-        case 3:
-        case 7:
-          goto LABEL_22;
-        case 4:
-        case 6:
-          return;
-        default:
-          goto LABEL_20;
-      }
+      if ( state && displayMode == v16 )
+        goto LABEL_20;
+    }
+LABEL_19:
+    EventTradeListViewObject__SetupDisplay(this, v18);
+LABEL_20:
+    ActionExtensions__Call(onMoveEnd, 0);
+    return;
   }
+  if ( initMode == 3 )
+    goto LABEL_19;
+  if ( initMode != 4 )
+    goto LABEL_22;
 }
 
 
@@ -208,7 +211,7 @@ void EventTradeListViewObject__OnClickReceiveButton(EventTradeListViewObject_o *
 
   receiveAction = this->fields.receiveAction;
   if ( !receiveAction )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   ((void (__fastcall *)(intptr_t, EventTradeListViewObject_o *, intptr_t))receiveAction->fields.invoke_impl)(
     receiveAction->fields.method_code,
     this,
@@ -222,7 +225,7 @@ void EventTradeListViewObject__OnClickReplenishmentButton(EventTradeListViewObje
 
   replenishmentAction = this->fields.replenishmentAction;
   if ( !replenishmentAction )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   ((void (__fastcall *)(intptr_t, EventTradeListViewObject_o *, intptr_t))replenishmentAction->fields.invoke_impl)(
     replenishmentAction->fields.method_code,
     this,
@@ -232,15 +235,15 @@ void EventTradeListViewObject__OnClickReplenishmentButton(EventTradeListViewObje
 
 void EventTradeListViewObject__OnClickTradeStartButton(EventTradeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E71EB0 & 1) == 0 )
+  if ( (byte_5932C6C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_EventTradeListViewObject___);
-    byte_4E71EB0 = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_EventTradeListViewObject___);
+    byte_5932C6C = 1;
   }
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.tradeStartAction,
     (Il2CppObject *)this,
-    (const MethodInfo_31932D8 *)Method_ActionExtensions_Call_EventTradeListViewObject___);
+    (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_EventTradeListViewObject___);
 }
 
 
@@ -250,7 +253,7 @@ void EventTradeListViewObject__OnClickWithdrawalButton(EventTradeListViewObject_
 
   withdrawalAction = this->fields.withdrawalAction;
   if ( !withdrawalAction )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   ((void (__fastcall *)(intptr_t, EventTradeListViewObject_o *, intptr_t))withdrawalAction->fields.invoke_impl)(
     withdrawalAction->fields.method_code,
     this,
@@ -260,30 +263,39 @@ void EventTradeListViewObject__OnClickWithdrawalButton(EventTradeListViewObject_
 
 void EventTradeListViewObject__OnDestroy(EventTradeListViewObject_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_GameObject_o **p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  __int64 v2; // x2
+  MissionNaviTransitionBoardItem_o *p_dragObject; // x19
+  UnityEngine_Object_o *v5; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
-  UnityEngine_Object_o *v6; // x20
+  __int64 v7; // x1
+  __int64 v8; // x2
+  UnityEngine_Object_o *klass; // x20
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E71EAB & 1) == 0 )
+  if ( (byte_5932C67 & 1) == 0 )
   {
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E71EAB = 1;
+    sub_21FFC50(&NGUITools_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5932C67 = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = &this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(v4, 0, 0) )
+  p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
+  v5 = (UnityEngine_Object_o *)dragObject;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
+  if ( !UnityEngine_Object__op_Equality(v5, 0, 0) )
   {
-    v6 = (UnityEngine_Object_o *)*p_dragObject;
-    if ( !NGUITools_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__Destroy(v6, 0);
-    *p_dragObject = 0;
-    sub_1D0F058(p_dragObject, 0);
+    klass = (UnityEngine_Object_o *)p_dragObject->klass;
+    if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
+    NGUITools__Destroy(klass, 0);
+    p_dragObject->klass = 0;
+    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -295,7 +307,7 @@ void EventTradeListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_45188780((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -307,14 +319,67 @@ void EventTradeListViewObject__SetOnClickAction(
         System_Action_EventTradeListViewObject__o *withdrawal,
         const MethodInfo *method)
 {
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+
   this->fields.tradeStartAction = tradeStart;
-  sub_1D0F058(&this->fields.tradeStartAction, tradeStart);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.tradeStartAction,
+    (int32_t)tradeStart,
+    (System_String_o *)receive,
+    (System_String_o *)replenishment,
+    (int32_t)withdrawal,
+    (int32_t)method,
+    v6,
+    v7);
   this->fields.receiveAction = receive;
-  sub_1D0F058(&this->fields.receiveAction, receive);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.receiveAction,
+    (int32_t)receive,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   this->fields.replenishmentAction = replenishment;
-  sub_1D0F058(&this->fields.replenishmentAction, replenishment);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.replenishmentAction,
+    (int32_t)replenishment,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
   this->fields.withdrawalAction = withdrawal;
-  sub_1D0F058(&this->fields.withdrawalAction, withdrawal);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.withdrawalAction,
+    (int32_t)withdrawal,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29);
 }
 
 
@@ -323,17 +388,19 @@ void EventTradeListViewObject__SetupDisplay(EventTradeListViewObject_o *this, co
   struct ListViewItem_o *linkItem; // x20
   __int64 naturalAligment; // x10
   bool v5; // w1
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  EventTradeListViewItemDraw_o *v9; // x0
+  __int64 v9; // x1
   const MethodInfo *v10; // x3
+  EventTradeListViewItemDraw_o *v11; // x0
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4E71EAF & 1) == 0 )
+  if ( (byte_5932C6B & 1) == 0 )
   {
-    sub_1D0F0B4(&EventTradeListViewItem_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E71EAF = 1;
+    sub_21FFC50(&EventTradeListViewItem_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5932C6B = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -351,63 +418,61 @@ LABEL_7:
 LABEL_8:
   ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
   if ( !UnityEngine_Object__op_Equality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9
-      || (EventTradeListViewItemDraw__SetItem(v9, (EventTradeListViewItem_o *)linkItem, this->fields.displayMode, v8),
-          (v9 = this->fields.itemDraw) == 0) )
+    v11 = this->fields.itemDraw;
+    if ( !v11
+      || (EventTradeListViewItemDraw__SetItem(v11, (EventTradeListViewItem_o *)linkItem, this->fields.displayMode, v10),
+          (v11 = this->fields.itemDraw) == 0) )
     {
-      sub_1D0F30C(v9, v7);
+      sub_21FFECC(v11, v9);
     }
-    EventTradeListViewItemDraw__UpdateItem(v9, (EventTradeListViewItem_o *)linkItem, this->fields.displayMode, v10);
+    EventTradeListViewItemDraw__UpdateItem(v11, (EventTradeListViewItem_o *)linkItem, this->fields.displayMode, v12);
   }
 }
 
 
 void EventTradeListViewObject__Update(EventTradeListViewObject_o *this, const MethodInfo *method)
 {
-  struct ListViewItem_o *linkItem; // x8
-  __int64 naturalAligment; // x11
-  EventTradeListViewItem_c *v5; // x10
-  EventTradeListViewItem_o *v6; // x20
+  struct ListViewItem_o *linkItem; // x20
+  __int64 naturalAligment; // x10
   float time; // s8
-  const MethodInfo *v8; // x3
-  float v9; // s0
+  const MethodInfo *v6; // x3
+  float v7; // s0
   EventTradeListViewItemDraw_o *itemDraw; // x21
-  __int64 v11; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x3
+  __int64 v9; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4E71EAA & 1) == 0 )
+  if ( (byte_5932C66 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventTradeListViewItem_TypeInfo);
-    byte_4E71EAA = 1;
+    sub_21FFC50(&EventTradeListViewItem_TypeInfo);
+    byte_5932C66 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
   {
     naturalAligment = EventTradeListViewItem_TypeInfo->_2.naturalAligment;
-    if ( linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
+    if ( linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+      && (EventTradeListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == EventTradeListViewItem_TypeInfo )
     {
-      v5 = (EventTradeListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1];
-      v6 = v5 == EventTradeListViewItem_TypeInfo ? (EventTradeListViewItem_o *)this->fields.linkItem : 0LL;
-      if ( v5 == EventTradeListViewItem_TypeInfo )
+      time = this->fields.time;
+      v7 = time + UnityEngine_Time__get_deltaTime(0);
+      this->fields.time = v7;
+      if ( v7 >= 1.0 )
       {
-        time = this->fields.time;
-        v9 = time + UnityEngine_Time__get_deltaTime(0);
-        this->fields.time = v9;
-        if ( v9 >= 1.0 )
-        {
-          itemDraw = this->fields.itemDraw;
-          this->fields.time = 0.0;
-          EventTradeListViewObject__Init_33656628(this, 3, 0, v8);
-          if ( !itemDraw )
-            sub_1D0F30C(v11, v12);
-          EventTradeListViewItemDraw__UpdateItem(itemDraw, v6, this->fields.displayMode, v13);
-        }
+        itemDraw = this->fields.itemDraw;
+        this->fields.time = 0.0;
+        EventTradeListViewObject__Init_38989880(this, 3, 0, v6);
+        if ( !itemDraw )
+          sub_21FFECC(v9, v10);
+        EventTradeListViewItemDraw__UpdateItem(
+          itemDraw,
+          (EventTradeListViewItem_o *)linkItem,
+          this->fields.displayMode,
+          v11);
       }
     }
   }

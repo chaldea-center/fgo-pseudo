@@ -6,147 +6,164 @@ void SetResolutionOptionControl___ctor(SetResolutionOptionControl_o *this, const
 
 void SetResolutionOptionControl__Init(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
-  SetResolutionOptionControl_o *v2; // x19
+  __int64 v2; // x2
+  SetResolutionOptionControl_o *v3; // x19
   int enableResolutionSetting; // w8
   struct UILabel_o *lowLabel; // x8
   struct UnityEngine_Color_o mEffectColor; // q0
   struct UILabel_o *normalLabel; // x8
   System_String_o *normalSprite; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  System_String_o *v14; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x0
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
+  __int64 v22; // x1
+  __int64 v23; // x2
   bool IsEnableResolutionSetting; // w0
   UILabel_o *infoLabel; // x20
-  System_String_o **v23; // x8
-  System_String_o *v24; // x21
-  UILabel_o *v25; // x20
-  UILabel_o *v26; // x20
+  System_String_o **v26; // x8
+  System_String_o *v27; // x21
+  UILabel_o *v28; // x20
+  UILabel_o *v29; // x20
+  __int64 v30; // x1
+  __int64 v31; // x2
   int32_t ResolutionType; // w1
-  const MethodInfo *v28; // x2
+  const MethodInfo *v33; // x2
 
-  v2 = this;
-  if ( (byte_4E7257F & 1) == 0 )
+  v3 = this;
+  if ( (byte_59334AA & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&OptionManager_TypeInfo);
-    sub_1D0F0B4(&ResolutionManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_9806/*"OPTION_RERSOLUTION_INFO_DISABLE"*/);
-    sub_1D0F0B4(&StringLiteral_9805/*"OPTION_RERSOLUTION_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_9808/*"OPTION_RERSOLUTION_NORMAL"*/);
-    this = (SetResolutionOptionControl_o *)sub_1D0F0B4(&StringLiteral_9807/*"OPTION_RERSOLUTION_LOW"*/);
-    byte_4E7257F = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&OptionManager_TypeInfo);
+    sub_21FFC50(&ResolutionManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_10074/*"OPTION_RERSOLUTION_INFO_DISABLE"*/);
+    sub_21FFC50(&StringLiteral_10073/*"OPTION_RERSOLUTION_INFO"*/);
+    sub_21FFC50(&StringLiteral_10076/*"OPTION_RERSOLUTION_NORMAL"*/);
+    this = (SetResolutionOptionControl_o *)sub_21FFC50(&StringLiteral_10075/*"OPTION_RERSOLUTION_LOW"*/);
+    byte_59334AA = 1;
   }
-  if ( v2->fields.isInit )
+  if ( v3->fields.isInit )
   {
-    enableResolutionSetting = v2->fields.enableResolutionSetting;
+    enableResolutionSetting = v3->fields.enableResolutionSetting;
   }
   else
   {
-    lowLabel = v2->fields.lowLabel;
-    v2->fields.isInit = 1;
+    lowLabel = v3->fields.lowLabel;
+    v3->fields.isInit = 1;
     if ( !lowLabel )
       goto LABEL_23;
     mEffectColor = lowLabel->fields.mEffectColor;
-    normalLabel = v2->fields.normalLabel;
-    v2->fields.onButtonOutlineColor = mEffectColor;
+    normalLabel = v3->fields.normalLabel;
+    v3->fields.onButtonOutlineColor = mEffectColor;
     if ( !normalLabel )
       goto LABEL_23;
-    this = (SetResolutionOptionControl_o *)v2->fields.lowButton;
-    v2->fields.offButtonOutlineColor = normalLabel->fields.mEffectColor;
+    this = (SetResolutionOptionControl_o *)v3->fields.lowButton;
+    v3->fields.offButtonOutlineColor = normalLabel->fields.mEffectColor;
     if ( !this )
       goto LABEL_23;
     normalSprite = UIButton__get_normalSprite((UIButton_o *)this, 0);
-    v2->fields.onButtonName = normalSprite;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&v2->fields.onButtonName,
+    v3->fields.onButtonName = normalSprite;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&v3->fields.onButtonName,
       (int32_t)normalSprite,
-      v8,
       v9,
       v10,
       v11,
       v12,
-      v13);
-    this = (SetResolutionOptionControl_o *)v2->fields.normalButton;
+      v13,
+      v14);
+    this = (SetResolutionOptionControl_o *)v3->fields.normalButton;
     if ( !this )
       goto LABEL_23;
-    v14 = UIButton__get_normalSprite((UIButton_o *)this, 0);
-    v2->fields.offButtonName = v14;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.offButtonName, (int32_t)v14, v15, v16, v17, v18, v19, v20);
-    if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
+    v15 = UIButton__get_normalSprite((UIButton_o *)this, 0);
+    v3->fields.offButtonName = v15;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&v3->fields.offButtonName,
+      (int32_t)v15,
+      v16,
+      v17,
+      v18,
+      v19,
+      v20,
+      v21);
+    if ( !*(&ResolutionManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo, v22, v23);
     IsEnableResolutionSetting = ResolutionManager__IsEnableResolutionSetting(0);
     enableResolutionSetting = IsEnableResolutionSetting;
-    v2->fields.enableResolutionSetting = IsEnableResolutionSetting;
+    v3->fields.enableResolutionSetting = IsEnableResolutionSetting;
   }
-  infoLabel = v2->fields.infoLabel;
+  infoLabel = v3->fields.infoLabel;
   if ( enableResolutionSetting )
-    v23 = (System_String_o **)&StringLiteral_9805/*"OPTION_RERSOLUTION_INFO"*/;
+    v26 = (System_String_o **)&StringLiteral_10073/*"OPTION_RERSOLUTION_INFO"*/;
   else
-    v23 = (System_String_o **)&StringLiteral_9806/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
-  v24 = *v23;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (SetResolutionOptionControl_o *)LocalizationManager__Get(v24, 0);
+    v26 = (System_String_o **)&StringLiteral_10074/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
+  v27 = *v26;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
+  this = (SetResolutionOptionControl_o *)LocalizationManager__Get(v27, 0);
   if ( !infoLabel
     || (UILabel__set_text(infoLabel, (System_String_o *)this, 0),
-        v25 = v2->fields.normalLabel,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9808/*"OPTION_RERSOLUTION_NORMAL"*/, 0),
-        !v25)
-    || (UILabel__set_text(v25, (System_String_o *)this, 0),
-        v26 = v2->fields.lowLabel,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9807/*"OPTION_RERSOLUTION_LOW"*/, 0),
-        !v26) )
+        v28 = v3->fields.normalLabel,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10076/*"OPTION_RERSOLUTION_NORMAL"*/, 0),
+        !v28)
+    || (UILabel__set_text(v28, (System_String_o *)this, 0),
+        v29 = v3->fields.lowLabel,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10075/*"OPTION_RERSOLUTION_LOW"*/, 0),
+        !v29) )
   {
 LABEL_23:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
-  UILabel__set_text(v26, (System_String_o *)this, 0);
-  if ( !OptionManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+  UILabel__set_text(v29, (System_String_o *)this, 0);
+  if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, v30, v31);
   ResolutionType = OptionManager__GetResolutionType(0);
-  SetResolutionOptionControl__RefreshDisplay(v2, ResolutionType, v28);
+  SetResolutionOptionControl__RefreshDisplay(v3, ResolutionType, v33);
 }
 
 
 void SetResolutionOptionControl__OnClickLowButton(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
-  _BOOL4 enableResolutionSetting; // w20
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4E72581 & 1) == 0 )
+  if ( (byte_59334AC & 1) == 0 )
   {
-    sub_1D0F0B4(&OptionManager_TypeInfo);
-    sub_1D0F0B4(&Method_SetResolutionOptionControl_OnClickLowButton__);
-    byte_4E72581 = 1;
+    sub_21FFC50(&OptionManager_TypeInfo);
+    sub_21FFC50(&Method_SetResolutionOptionControl_OnClickLowButton__);
+    byte_59334AC = 1;
   }
   v3 = Method_SetResolutionOptionControl_OnClickLowButton__;
-  enableResolutionSetting = this->fields.enableResolutionSetting;
-  if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickLowButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_SetResolutionOptionControl_OnClickLowButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
-  if ( enableResolutionSetting )
+  if ( this->fields.enableResolutionSetting )
   {
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
-    SetResolutionOptionControl__RefreshDisplay(this, 1, v6);
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickLowButton__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_21FFC68(Method_SetResolutionOptionControl_OnClickLowButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+    SetResolutionOptionControl__RefreshDisplay(this, 1, v5);
+    if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, v6, v7);
     OptionManager__SetResolutionType(1, 0);
   }
   else
   {
-    OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
+    if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickLowButton__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_21FFC68(Method_SetResolutionOptionControl_OnClickLowButton__);
+    v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 2, 0, 0);
   }
 }
 
@@ -154,32 +171,36 @@ void SetResolutionOptionControl__OnClickLowButton(SetResolutionOptionControl_o *
 void SetResolutionOptionControl__OnClickNormalButton(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
-  _BOOL4 enableResolutionSetting; // w20
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4E72580 & 1) == 0 )
+  if ( (byte_59334AB & 1) == 0 )
   {
-    sub_1D0F0B4(&OptionManager_TypeInfo);
-    sub_1D0F0B4(&Method_SetResolutionOptionControl_OnClickNormalButton__);
-    byte_4E72580 = 1;
+    sub_21FFC50(&OptionManager_TypeInfo);
+    sub_21FFC50(&Method_SetResolutionOptionControl_OnClickNormalButton__);
+    byte_59334AB = 1;
   }
   v3 = Method_SetResolutionOptionControl_OnClickNormalButton__;
-  enableResolutionSetting = this->fields.enableResolutionSetting;
-  if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickNormalButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_SetResolutionOptionControl_OnClickNormalButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
-  if ( enableResolutionSetting )
+  if ( this->fields.enableResolutionSetting )
   {
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
-    SetResolutionOptionControl__RefreshDisplay(this, 0, v6);
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickNormalButton__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_21FFC68(Method_SetResolutionOptionControl_OnClickNormalButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+    SetResolutionOptionControl__RefreshDisplay(this, 0, v5);
+    if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, v6, v7);
     OptionManager__SetResolutionType(0, 0);
   }
   else
   {
-    OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
+    if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickNormalButton__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_21FFC68(Method_SetResolutionOptionControl_OnClickNormalButton__);
+    v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 2, 0, 0);
   }
 }
 
@@ -235,15 +256,15 @@ void SetResolutionOptionControl__RefreshDisplay(
                 lowButton = this->fields.lowButton;
                 if ( lowButton )
                 {
-                  lowButton->fields.hover = (struct UnityEngine_Color_o)xmmword_D34FA0;
+                  lowButton->fields.hover = (struct UnityEngine_Color_o)xmmword_E93FD0;
                   v7 = this->fields.lowButton;
                   if ( v7 )
                   {
-                    v7->fields.pressed = (struct UnityEngine_Color_o)xmmword_D34FA0;
+                    v7->fields.pressed = (struct UnityEngine_Color_o)xmmword_E93FD0;
                     v8 = this->fields.lowButton;
                     if ( v8 )
                     {
-                      v8->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_D34FA0;
+                      v8->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_E93FD0;
                       return;
                     }
                   }
@@ -280,7 +301,7 @@ void SetResolutionOptionControl__RefreshDisplay(
       }
     }
 LABEL_24:
-    sub_1D0F30C(normalLabel, *(_QWORD *)&type);
+    sub_21FFECC(normalLabel, *(_QWORD *)&type);
   }
   if ( !normalLabel )
     goto LABEL_24;

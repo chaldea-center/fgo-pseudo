@@ -4,21 +4,19 @@ void PlayFieldMotionBattleLogicTask___ctor(
         bool isForcedSpeedOne,
         const MethodInfo *method)
 {
-  PlayFieldMotionBattleLogicTask_o *v5; // x20
-  bool v6; // w21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  PlayFieldMotionBattleLogicTask_o *v6; // x21
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
-  v5 = this;
-  v6 = isForcedSpeedOne;
+  v6 = this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
-  v5->fields.motionName = motionName;
-  v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
-  LODWORD(v5[-1].fields.timingLastWaitSecond) = 44;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v5, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
-  LOBYTE(v5->fields.combo) = v6;
+  v6->fields.motionName = motionName;
+  v6 = (PlayFieldMotionBattleLogicTask_o *)((char *)v6 + 120);
+  *(_DWORD *)&v6[-1].fields._IsBattleScriptRelationTask_k__BackingField = 44;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v6, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
+  LOBYTE(v6->fields.combo) = isForcedSpeedOne;
 }

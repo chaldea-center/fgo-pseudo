@@ -10,14 +10,12 @@ void ScriptBackLogListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  ScriptBackLogListViewItemDraw_o *v4; // x19
+  ScriptBackLogListViewItemDraw_o *v5; // x19
 
-  if ( !item )
-    goto LABEL_8;
-  v4 = this;
-  this = (ScriptBackLogListViewItemDraw_o *)item->fields.label;
-  if ( mode )
+  v5 = this;
+  if ( item && mode )
   {
+    this = (ScriptBackLogListViewItemDraw_o *)item->fields.label;
     if ( this )
     {
       ScriptMessageLabel__CheckPlayingVoice((ScriptMessageLabel_o *)this, 0);
@@ -26,27 +24,30 @@ void ScriptBackLogListViewItemDraw__SetItem(
       {
         ScriptMessageLabel__SetLogDraw(
           (ScriptMessageLabel_o *)this,
-          v4->fields.mainPrefab,
-          v4->fields.rubyPrefab,
-          v4->fields.imagePrefab,
-          v4->fields.playVoicePrefab,
-          v4->fields.playVoiceEffect,
+          v5->fields.mainPrefab,
+          v5->fields.rubyPrefab,
+          v5->fields.imagePrefab,
+          v5->fields.playVoicePrefab,
+          v5->fields.playVoiceEffect,
           (UnityEngine_Font_o *)this[1].fields.m_CachedPtr,
           0);
         return;
       }
     }
-LABEL_8:
-    sub_1D0F30C(this, item);
+LABEL_9:
+    sub_21FFECC(this, item);
   }
+  if ( !item )
+    goto LABEL_9;
+  this = (ScriptBackLogListViewItemDraw_o *)item->fields.label;
   if ( !this )
-    goto LABEL_8;
+    goto LABEL_9;
   ScriptMessageLabel__ClearLogDraw(
     (ScriptMessageLabel_o *)this,
-    v4->fields.mainPrefab,
-    v4->fields.rubyPrefab,
-    v4->fields.imagePrefab,
-    v4->fields.playVoicePrefab,
-    v4->fields.playVoiceEffect,
+    v5->fields.mainPrefab,
+    v5->fields.rubyPrefab,
+    v5->fields.imagePrefab,
+    v5->fields.playVoicePrefab,
+    v5->fields.playVoiceEffect,
     0);
 }

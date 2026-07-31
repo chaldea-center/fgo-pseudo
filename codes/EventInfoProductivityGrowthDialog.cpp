@@ -1,12 +1,12 @@
 void EventInfoProductivityGrowthDialog___ctor(EventInfoProductivityGrowthDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78B1F & 1) == 0 )
+  if ( (byte_593A410 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E78B1F = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_593A410 = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -15,23 +15,24 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
 {
   __int64 v3; // x1
   UILabel_o *titleLabel; // x0
+  __int64 v5; // x1
   UILabel_o *closeLabel; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
   struct UnityEngine_GameObject_array *dispObjList; // x20
   int max_length; // w8
-  unsigned int v14; // w21
+  __int64 v15; // x21
 
-  if ( (byte_4E78B1C & 1) == 0 )
+  if ( (byte_593A40D & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78B1C = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593A40D = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -39,9 +40,9 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
     goto LABEL_14;
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   closeLabel = this->fields.closeLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_14;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
@@ -51,25 +52,25 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
   max_length = dispObjList->max_length;
   if ( max_length >= 1 )
   {
-    v14 = 0;
+    v15 = 0;
     while ( 1 )
     {
-      if ( v14 >= max_length )
-        sub_1D0F314(titleLabel);
-      titleLabel = (UILabel_o *)dispObjList->m_Items[v14];
+      if ( (unsigned int)v15 >= max_length )
+        sub_21FFED4(titleLabel);
+      titleLabel = (UILabel_o *)dispObjList->m_Items[v15];
       if ( !titleLabel )
         break;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
       max_length = dispObjList->max_length;
-      if ( (int)++v14 >= max_length )
+      if ( (int)++v15 >= max_length )
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1D0F30C(titleLabel, v3);
+    sub_21FFECC(titleLabel, v3);
   }
 LABEL_13:
   this->fields.closeAction = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.closeAction, 0, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -81,19 +82,19 @@ void EventInfoProductivityGrowthDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4E78B1E & 1) == 0 )
+  if ( (byte_593A40F & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-    sub_1D0F0B4(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
-    byte_4E78B1E = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+    sub_21FFC50(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
+    byte_593A40F = 1;
   }
   v3 = Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    v3 = (_QWORD *)sub_21FFC68(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-  v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
@@ -114,339 +115,330 @@ void EventInfoProductivityGrowthDialog__Open(
   System_Collections_Generic_List_object__o *v8; // x22
   void *Item; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   int max_length; // w8
   __int64 v18; // x26
-  EventConquestInfo_o *v19; // x28
+  EventConquestInfo_o *v19; // x20
   __int64 v20; // x23
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   struct System_Object_array *items; // x8
   _QWORD *v28; // x9
   __int64 size; // x10
   Il2CppClass **v30; // x0
   System_Text_StringBuilder_o *v31; // x23
-  System_String_o *v32; // x24
+  __int64 v32; // x1
   System_String_o *v33; // x24
-  Il2CppObject *v34; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  struct System_Object_array *v41; // x8
-  _QWORD *v42; // x9
-  __int64 v43; // x10
-  Il2CppClass *v44; // x1
-  Il2CppClass **v45; // x0
-  int v46; // w19
-  unsigned int v47; // w8
-  EventInfoProductivityGrowthDialog_o *v48; // x14
-  struct ItemIconComponent_array **p_countIconList01; // x9
-  struct UILabel_array **p_countLabelList01; // x10
-  struct UnityEngine_GameObject_array *dispObjList; // x11
+  __int64 v34; // x1
+  System_String_o *v35; // x24
+  Il2CppObject *v36; // x0
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
+  struct System_Object_array *v43; // x8
+  _QWORD *v44; // x9
+  __int64 v45; // x10
+  Il2CppClass *v46; // x1
+  Il2CppClass **v47; // x0
+  int v48; // w19
+  EventInfoProductivityGrowthDialog_o *v49; // x14
+  struct ItemIconComponent_array **p_countIconList03; // x8
+  struct UILabel_array **p_countLabelList03; // x9
+  struct UnityEngine_GameObject_array *dispObjList; // x10
+  __int64 v53; // x11
   struct UILabel_array *messageList; // x12
-  struct ItemIconComponent_array *v53; // x20
-  struct UILabel_o *v54; // x1
-  UnityEngine_GameObject_o *v55; // x8
+  struct ItemIconComponent_array *v55; // x20
   struct UILabel_array *v56; // x28
-  int32_t v57; // w25
-  System_Text_StringBuilder_o *v58; // x0
-  ItemIconComponent_o *v59; // x26
-  UILabel_o *v60; // x27
-  int v61; // w8
-  const MethodInfo *v62; // x1
+  struct UILabel_o *v57; // x1
+  UnityEngine_GameObject_o *v58; // x8
+  __int64 v59; // x25
+  System_Text_StringBuilder_o *v60; // x0
+  ItemIconComponent_o *v61; // x26
+  int v62; // w8
+  UILabel_o *v63; // x27
+  const MethodInfo *v64; // x1
+  __int64 v65; // x1
   UILabel_o *titleLabel; // x21
-  UILabel_o *v64; // x21
-  int32_t v65; // w2
-  int32_t v66; // w3
-  System_String_o *v67; // x4
-  int32_t v68; // w5
-  int64_t v69; // x6
-  System_String_o *v70; // x7
+  UILabel_o *v67; // x21
+  System_String_o *v68; // x2
+  System_String_o *v69; // x3
+  int32_t v70; // w4
+  int32_t v71; // w5
+  bool v72; // w6
+  bool v73; // w7
   UILabel_o **p_messageLabel; // [xsp+8h] [xbp-88h]
-  UnityEngine_GameObject_o *v72; // [xsp+10h] [xbp-80h]
+  UnityEngine_GameObject_o *v75; // [xsp+10h] [xbp-80h]
   System_Action_o *action; // [xsp+18h] [xbp-78h]
-  EventInfoProductivityGrowthDialog_o *v74; // [xsp+20h] [xbp-70h]
+  EventInfoProductivityGrowthDialog_o *v77; // [xsp+20h] [xbp-70h]
   int32_t productAdd; // [xsp+28h] [xbp-68h] BYREF
   int32_t productNum; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4E78B1D & 1) == 0 )
+  if ( (byte_593A40E & 1) == 0 )
   {
-    sub_1D0F0B4(&GiftEntity_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&System_Text_StringBuilder_TypeInfo);
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5637/*"EVENT_CONQUEST_UP_MESSAGE"*/);
-    sub_1D0F0B4(&StringLiteral_5636/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
-    sub_1D0F0B4(&StringLiteral_5635/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
-    sub_1D0F0B4(&StringLiteral_5638/*"EVENT_CONQUEST_UP_TITLE"*/);
-    byte_4E78B1D = 1;
+    sub_21FFC50(&GiftEntity_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_21FFC50(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_5768/*"EVENT_CONQUEST_UP_MESSAGE"*/);
+    sub_21FFC50(&StringLiteral_5767/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
+    sub_21FFC50(&StringLiteral_5766/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
+    sub_21FFC50(&StringLiteral_5769/*"EVENT_CONQUEST_UP_TITLE"*/);
+    byte_593A40E = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, closeAction);
     v5 = TerminalPramsManager_TypeInfo;
   }
   eventConquestInfos = v5->static_fields->eventConquestInfos;
-  if ( eventConquestInfos )
+  if ( !eventConquestInfos )
   {
-    action = closeAction;
-    v74 = this;
-    v7 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GiftEntity__TypeInfo);
-    System_Collections_Generic_List_object____ctor(
-      v7,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    v8 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor(
-      v8,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
-    max_length = eventConquestInfos->max_length;
-    if ( max_length >= 1 )
+    ActionExtensions__Call(closeAction, 0);
+    return;
+  }
+  action = closeAction;
+  v77 = this;
+  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v7,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+  v8 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v8,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+  max_length = eventConquestInfos->max_length;
+  if ( max_length >= 1 )
+  {
+    v18 = 0;
+    while ( (unsigned int)v18 < max_length )
     {
-      v18 = 0;
-      while ( 1 )
+      v19 = eventConquestInfos->m_Items[v18];
+      v20 = sub_21FFEBC(GiftEntity_TypeInfo);
+      GiftEntity___ctor((GiftEntity_o *)v20, 0);
+      if ( !v19 )
+        goto LABEL_64;
+      if ( !v20 )
+        goto LABEL_64;
+      *(_QWORD *)(v20 + 20) = *(_QWORD *)&v19->fields.type;
+      *(_DWORD *)(v20 + 28) = v19->fields.productAdd;
+      if ( !v7 )
+        goto LABEL_64;
+      items = v7->fields._items;
+      v28 = Method_System_Collections_Generic_List_GiftEntity__Add__;
+      ++v7->fields._version;
+      if ( !items )
+        goto LABEL_64;
+      size = v7->fields._size;
+      if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
-        if ( (unsigned int)v18 >= max_length )
+        System_Collections_Generic_List_object___AddWithResize(
+          v7,
+          (Il2CppObject *)v20,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v30 = &items->obj.klass + size;
+        v7->fields._size = size + 1;
+        v30[4] = (Il2CppClass *)v20;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 4), v20, v21, v22, v23, v24, v25, v26);
+      }
+      v31 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+      System_Text_StringBuilder___ctor(v31, 0);
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32);
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5767/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
+      productNum = v19->fields.productNum;
+      Item = (void *)j_il2cpp_value_box_0(qword_594C070, &productNum);
+      if ( !v31 )
+        goto LABEL_64;
+      System_Text_StringBuilder__AppendFormat(v31, v33, (Il2CppObject *)Item, 0);
+      if ( v19->fields.productAdd >= 1 )
+      {
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34);
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5766/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
+        productAdd = v19->fields.productAdd;
+        v36 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &productAdd);
+        System_Text_StringBuilder__AppendFormat(v31, v35, v36, 0);
+      }
+      Item = (void *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v31->klass->vtable._3_ToString.methodPtr)(
+                       v31,
+                       v31->klass->vtable._3_ToString.method);
+      if ( !v8 )
+        goto LABEL_64;
+      v43 = v8->fields._items;
+      v44 = Method_System_Collections_Generic_List_string__Add__;
+      ++v8->fields._version;
+      if ( !v43 )
+        goto LABEL_64;
+      v45 = v8->fields._size;
+      v46 = (Il2CppClass *)Item;
+      if ( (unsigned int)v45 >= LODWORD(v43->max_length) )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v8,
+          (Il2CppObject *)Item,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v47 = &v43->obj.klass + v45;
+        v8->fields._size = v45 + 1;
+        v47[4] = v46;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v47 + 4), (int32_t)v46, v37, v38, v39, v40, v41, v42);
+      }
+      max_length = eventConquestInfos->max_length;
+      if ( (int)++v18 >= max_length )
+        goto LABEL_32;
+    }
+LABEL_65:
+    sub_21FFED4(Item);
+  }
+  if ( !v7 )
 LABEL_64:
-          sub_1D0F314(Item);
-        v19 = eventConquestInfos->m_Items[v18];
-        v20 = sub_1D0F300(GiftEntity_TypeInfo);
-        GiftEntity___ctor((GiftEntity_o *)v20, 0);
-        if ( !v19 )
-          break;
-        if ( !v20 )
-          break;
-        *(_QWORD *)(v20 + 20) = *(_QWORD *)&v19->fields.type;
-        *(_DWORD *)(v20 + 28) = v19->fields.productAdd;
-        if ( !v7 )
-          break;
-        items = v7->fields._items;
-        v28 = Method_System_Collections_Generic_List_GiftEntity__Add__;
-        ++v7->fields._version;
-        if ( !items )
-          break;
-        size = v7->fields._size;
-        if ( (unsigned int)size >= LODWORD(items->max_length) )
-        {
-          System_Collections_Generic_List_object___AddWithResize(
-            v7,
-            (Il2CppObject *)v20,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
-        }
-        else
-        {
-          v30 = &items->obj.klass + size;
-          v7->fields._size = size + 1;
-          v30[4] = (Il2CppClass *)v20;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v30 + 4), v20, v21, v22, v23, v24, v25, v26);
-        }
-        v31 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
-        System_Text_StringBuilder___ctor(v31, 0);
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5636/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
-        productNum = v19->fields.productNum;
-        Item = (void *)j_il2cpp_value_box_0(int_TypeInfo, &productNum);
-        if ( !v31 )
-          break;
-        System_Text_StringBuilder__AppendFormat(v31, v32, (Il2CppObject *)Item, 0);
-        if ( v19->fields.productAdd >= 1 )
-        {
-          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
-          productAdd = v19->fields.productAdd;
-          v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productAdd);
-          System_Text_StringBuilder__AppendFormat(v31, v33, v34, 0);
-        }
-        Item = (void *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v31->klass->vtable._3_ToString.methodPtr)(
-                         v31,
-                         v31->klass->vtable._3_ToString.method);
-        if ( !v8 )
-          break;
-        v41 = v8->fields._items;
-        v42 = Method_System_Collections_Generic_List_string__Add__;
-        ++v8->fields._version;
-        if ( !v41 )
-          break;
-        v43 = v8->fields._size;
-        v44 = (Il2CppClass *)Item;
-        if ( (unsigned int)v43 >= LODWORD(v41->max_length) )
-        {
-          System_Collections_Generic_List_object___AddWithResize(
-            v8,
-            (Il2CppObject *)Item,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
-        }
-        else
-        {
-          v45 = &v41->obj.klass + v43;
-          v8->fields._size = v43 + 1;
-          v45[4] = v44;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v45 + 4), (int32_t)v44, v35, v36, v37, v38, v39, v40);
-        }
-        max_length = eventConquestInfos->max_length;
-        if ( (int)++v18 >= max_length )
-          goto LABEL_32;
-      }
-LABEL_63:
-      sub_1D0F30C(Item, v10);
-    }
-    if ( !v7 )
-      goto LABEL_63;
+    sub_21FFECC(Item, v10);
 LABEL_32:
-    v46 = v7->fields._size;
-    if ( v46 <= 0 )
+  v48 = v7->fields._size;
+  if ( v48 <= 0 )
+    goto LABEL_39;
+  if ( v48 > 2 )
+  {
+    v49 = v77;
+    if ( v48 == 3 )
     {
-LABEL_35:
-      ActionExtensions__Call(action, 0);
+      p_countIconList03 = &v77->fields.countIconList03;
+      p_countLabelList03 = &v77->fields.countLabelList03;
+      goto LABEL_42;
     }
-    else
+    if ( v48 == 4 )
     {
-      v47 = v46 - 1;
-      switch ( v46 )
-      {
-        case 1:
-          v48 = v74;
-          p_countIconList01 = &v74->fields.countIconList01;
-          p_countLabelList01 = &v74->fields.countLabelList01;
-          goto LABEL_39;
-        case 2:
-          v48 = v74;
-          p_countIconList01 = &v74->fields.countIconList02;
-          p_countLabelList01 = &v74->fields.countLabelList02;
-          goto LABEL_39;
-        case 3:
-          v48 = v74;
-          p_countIconList01 = &v74->fields.countIconList03;
-          p_countLabelList01 = &v74->fields.countLabelList03;
-          goto LABEL_39;
-        case 4:
-          v48 = v74;
-          p_countIconList01 = &v74->fields.countIconList04;
-          p_countLabelList01 = &v74->fields.countLabelList04;
+      p_countIconList03 = &v77->fields.countIconList04;
+      p_countLabelList03 = &v77->fields.countLabelList04;
+      goto LABEL_42;
+    }
 LABEL_39:
-          dispObjList = v48->fields.dispObjList;
-          if ( !dispObjList )
-            goto LABEL_63;
-          if ( v47 >= LODWORD(dispObjList->max_length) )
-            goto LABEL_64;
-          messageList = v48->fields.messageList;
-          if ( !messageList )
-            goto LABEL_63;
-          if ( v47 >= LODWORD(messageList->max_length) )
-            goto LABEL_64;
-          v53 = *p_countIconList01;
-          v54 = messageList->m_Items[v47];
-          v55 = dispObjList->m_Items[v47];
-          v56 = *p_countLabelList01;
-          v48->fields.messageLabel = v54;
-          p_messageLabel = &v48->fields.messageLabel;
-          v72 = v55;
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&v48->fields.messageLabel,
-            (int32_t)v54,
-            v11,
-            v12,
-            v13,
-            v14,
-            v15,
-            v16);
-          v57 = 0;
-          break;
-        default:
-          goto LABEL_35;
-      }
-      do
-      {
-        v58 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
-        System_Text_StringBuilder___ctor(v58, 0);
-        if ( !v53 )
-          goto LABEL_63;
-        if ( (unsigned int)v57 >= LODWORD(v53->max_length) )
-          goto LABEL_64;
-        v59 = v53->m_Items[v57];
-        Item = System_Collections_Generic_List_object___get_Item(
-                 v7,
-                 v57,
-                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-        if ( !v56 )
-          goto LABEL_63;
-        if ( (unsigned int)v57 >= LODWORD(v56->max_length) )
-          goto LABEL_64;
-        if ( !Item || !v59 )
-          goto LABEL_63;
-        v60 = v56->m_Items[v57];
-        v61 = *((int *)Item + 7) <= 1 ? -1 : *((_DWORD *)Item + 7);
-        ItemIconComponent__SetGift_42283820(v59, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v61, 0, 0);
-        if ( !v8 )
-          goto LABEL_63;
-        Item = System_Collections_Generic_List_object___get_Item(
-                 v8,
-                 v57,
-                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_string__get_Item__);
-        if ( !v60 )
-          goto LABEL_63;
-        UILabel__set_text(v60, (System_String_o *)Item, 0);
-        ++v57;
-      }
-      while ( v46 != v57 );
-      EventInfoProductivityGrowthDialog__Init(v74, v62);
-      Item = v72;
-      if ( !v72 )
-        goto LABEL_63;
-      UnityEngine_GameObject__SetActive(v72, 1, 0);
-      BaseDialog__Open((BaseDialog_o *)v74, 0, 0, 0, 0);
-      titleLabel = v74->fields.titleLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Item = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
-      if ( !titleLabel )
-        goto LABEL_63;
-      UILabel__set_text(titleLabel, (System_String_o *)Item, 0);
-      v64 = *p_messageLabel;
-      Item = LocalizationManager__Get((System_String_o *)StringLiteral_5637/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
-      if ( !v64 )
-        goto LABEL_63;
-      UILabel__set_text(v64, (System_String_o *)Item, 0);
-      v74->fields.closeAction = action;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&v74->fields.closeAction,
-        (int32_t)action,
-        v65,
-        v66,
-        v67,
-        v68,
-        v69,
-        v70);
-    }
+    ActionExtensions__Call(action, 0);
+    return;
+  }
+  v49 = v77;
+  if ( v48 == 1 )
+  {
+    p_countIconList03 = &v77->fields.countIconList01;
+    p_countLabelList03 = &v77->fields.countLabelList01;
   }
   else
   {
-    ActionExtensions__Call(closeAction, 0);
+    p_countIconList03 = &v77->fields.countIconList02;
+    p_countLabelList03 = &v77->fields.countLabelList02;
   }
+LABEL_42:
+  dispObjList = v49->fields.dispObjList;
+  if ( !dispObjList )
+    goto LABEL_64;
+  v53 = (unsigned int)(v48 - 1);
+  if ( (unsigned int)v53 >= LODWORD(dispObjList->max_length) )
+    goto LABEL_65;
+  messageList = v49->fields.messageList;
+  if ( !messageList )
+    goto LABEL_64;
+  if ( (unsigned int)v53 >= LODWORD(messageList->max_length) )
+    goto LABEL_65;
+  v55 = *p_countIconList03;
+  v56 = *p_countLabelList03;
+  v57 = messageList->m_Items[v53];
+  v58 = dispObjList->m_Items[v53];
+  v49->fields.messageLabel = v57;
+  p_messageLabel = &v49->fields.messageLabel;
+  v75 = v58;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->fields.messageLabel, (int32_t)v57, v11, v12, v13, v14, v15, v16);
+  v59 = 0;
+  do
+  {
+    v60 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v60, 0);
+    if ( !v55 )
+      goto LABEL_64;
+    if ( (unsigned int)v59 >= LODWORD(v55->max_length) )
+      goto LABEL_65;
+    v61 = v55->m_Items[v59];
+    Item = System_Collections_Generic_List_object___get_Item(
+             v7,
+             v59,
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    if ( !v56 )
+      goto LABEL_64;
+    if ( (unsigned int)v59 >= LODWORD(v56->max_length) )
+      goto LABEL_65;
+    if ( !Item || !v61 )
+      goto LABEL_64;
+    v62 = *((_DWORD *)Item + 7);
+    v63 = v56->m_Items[v59];
+    if ( v62 <= 1 )
+      v62 = -1;
+    ItemIconComponent__SetGift_47936840(v61, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v62, 0, 0);
+    if ( !v8 )
+      goto LABEL_64;
+    Item = System_Collections_Generic_List_object___get_Item(
+             v8,
+             v59,
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+    if ( !v63 )
+      goto LABEL_64;
+    UILabel__set_text(v63, (System_String_o *)Item, 0);
+    ++v59;
+  }
+  while ( v48 != (_DWORD)v59 );
+  EventInfoProductivityGrowthDialog__Init(v77, v64);
+  Item = v75;
+  if ( !v75 )
+    goto LABEL_64;
+  UnityEngine_GameObject__SetActive(v75, 1, 0);
+  BaseDialog__Open((BaseDialog_o *)v77, 0, 0, 0, 0);
+  titleLabel = v77->fields.titleLabel;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v65);
+  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5769/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
+  if ( !titleLabel )
+    goto LABEL_64;
+  UILabel__set_text(titleLabel, (System_String_o *)Item, 0);
+  v67 = *p_messageLabel;
+  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5768/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
+  if ( !v67 )
+    goto LABEL_64;
+  UILabel__set_text(v67, (System_String_o *)Item, 0);
+  v77->fields.closeAction = action;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v77->fields.closeAction,
+    (int32_t)action,
+    v68,
+    v69,
+    v70,
+    v71,
+    v72,
+    v73);
 }
 
 

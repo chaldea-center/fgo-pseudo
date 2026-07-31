@@ -9,30 +9,30 @@ void SoundLoadWrapper__LoadAudioAssetStorage(
   const MethodInfo *v10; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4E766BA & 1) == 0 )
+  if ( (byte_5937669 & 1) == 0 )
   {
-    sub_1D0F0B4(&SoundManager_TypeInfo);
-    byte_4E766BA = 1;
+    sub_21FFC50(&SoundManager_TypeInfo);
+    byte_5937669 = 1;
   }
-  if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+  if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, path, callbackFunc);
   SoundManager__loadAudioAssetStorage(path, callbackFunc, cueType, 0);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1D0F30C(0, v9);
+    sub_21FFECC(0, v9);
   AssetPathLoadCounter__AddCount(pathCounter, path, v10);
 }
 
 
 void SoundLoadWrapper__Release(SoundLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4E766BB & 1) == 0 )
+  if ( (byte_593766A & 1) == 0 )
   {
-    sub_1D0F0B4(&SoundManager_TypeInfo);
-    byte_4E766BB = 1;
+    sub_21FFC50(&SoundManager_TypeInfo);
+    byte_593766A = 1;
   }
-  if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+  if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, path, method);
   SoundManager__releaseAudioAssetStorage(path, 0);
 }
 
@@ -52,6 +52,6 @@ void SoundLoadWrapper__ReleaseAudioAssetStorage(
     this->klass->vtable._4_Release.method);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, v6);
 }

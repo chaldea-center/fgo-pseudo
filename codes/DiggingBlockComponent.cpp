@@ -1,19 +1,26 @@
 void DiggingBlockComponent___ctor(DiggingBlockComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  int32_t v9; // w1
 
-  if ( (byte_4E71B95 & 1) == 0 )
+  if ( (byte_5932951 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_16126/*"[FF0000]"*/);
-    byte_4E71B95 = 1;
+    sub_21FFC50(&StringLiteral_16513/*"[FF0000]"*/);
+    byte_5932951 = 1;
   }
-  v3 = StringLiteral_16126/*"[FF0000]"*/;
-  this->fields.consumableItemTextColor = (struct System_String_o *)StringLiteral_16126/*"[FF0000]"*/;
-  sub_1D0F058(&this->fields.consumableItemTextColor, v3);
+  v9 = StringLiteral_16513/*"[FF0000]"*/;
+  this->fields.consumableItemTextColor = (struct System_String_o *)StringLiteral_16513/*"[FF0000]"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.consumableItemTextColor, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool DiggingBlockComponent__CheckBlockInfoByIndex(
         DiggingBlockComponent_o *this,
         int32_t x,
@@ -24,7 +31,7 @@ bool DiggingBlockComponent__CheckBlockInfoByIndex(
 
   blockInfo = this->fields.blockInfo;
   if ( !blockInfo )
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, *(_QWORD *)&x);
   return blockInfo->fields.x == x && blockInfo->fields.y == y;
 }
 
@@ -47,7 +54,7 @@ int32_t DiggingBlockComponent__GetConsumeNum(
   int32_t num; // w19
 
   if ( !consumeEnt )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   num = consumeEnt->fields.num;
   return DiggingBlockComponent__GetHintConsumeNum(this, (const MethodInfo *)consumeEnt) + num;
 }
@@ -62,24 +69,24 @@ System_String_o *DiggingBlockComponent__GetDiggingSeName(DiggingBlockComponent_o
   System_String_o **v6; // x8
 
   v2 = this;
-  if ( (byte_4E71B92 & 1) == 0 )
+  if ( (byte_593294E & 1) == 0 )
   {
-    this = (DiggingBlockComponent_o *)sub_1D0F0B4(&StringLiteral_17097/*"ar173"*/);
-    byte_4E71B92 = 1;
+    this = (DiggingBlockComponent_o *)sub_21FFC50(&StringLiteral_17527/*"ar173"*/);
+    byte_593294E = 1;
   }
   diggingSeList = v2->fields.diggingSeList;
   if ( !diggingSeList )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   animationId = v2->fields.animationId;
   max_length = diggingSeList->max_length;
   if ( (int)animationId >= max_length )
   {
-    v6 = (System_String_o **)&StringLiteral_17097/*"ar173"*/;
+    v6 = (System_String_o **)&StringLiteral_17527/*"ar173"*/;
   }
   else
   {
     if ( (unsigned int)animationId >= max_length )
-      sub_1D0F314(this);
+      sub_21FFED4(this);
     v6 = &diggingSeList->m_Items[animationId];
   }
   return *v6;
@@ -95,10 +102,10 @@ int32_t DiggingBlockComponent__GetHintConsumeNum(DiggingBlockComponent_o *this, 
   struct System_Int32_array *consumeHintItemNums; // x8
 
   v2 = this;
-  if ( (byte_4E71B91 & 1) == 0 )
+  if ( (byte_593294D & 1) == 0 )
   {
-    this = (DiggingBlockComponent_o *)sub_1D0F0B4(&Method_System_Array_IndexOf_int___);
-    byte_4E71B91 = 1;
+    this = (DiggingBlockComponent_o *)sub_21FFC50(&Method_System_Array_IndexOf_int___);
+    byte_593294D = 1;
   }
   hintInfo = v2->fields.hintInfo;
   if ( !hintInfo )
@@ -109,15 +116,15 @@ int32_t DiggingBlockComponent__GetHintConsumeNum(DiggingBlockComponent_o *this, 
   this = (DiggingBlockComponent_o *)System_Array__IndexOf_int_(
                                       diggingBlockEntity->fields.consumeHintImageIds,
                                       hintInfo->fields.hintImageId,
-                                      (const MethodInfo_33590E4 *)Method_System_Array_IndexOf_int___);
+                                      (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
   if ( ((unsigned int)this & 0x80000000) != 0 )
     return 0;
   v5 = v2->fields.diggingBlockEntity;
   if ( !v5 || (consumeHintItemNums = v5->fields.consumeHintItemNums) == 0 )
 LABEL_11:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   if ( (unsigned int)this >= LODWORD(consumeHintItemNums->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   return consumeHintItemNums->m_Items[(unsigned int)this];
 }
 
@@ -131,27 +138,27 @@ int32_t DiggingBlockComponent__GetTotalEventPoint(DiggingBlockComponent_o *this,
   Il2CppObject *v7; // x20
   _DWORD *monitor; // x8
 
-  if ( (byte_4E71B94 & 1) == 0 )
+  if ( (byte_5932950 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_IndexOf_int___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E71B94 = 1;
+    sub_21FFC50(&Method_System_Array_IndexOf_int___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5932950 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
   blockInfo = this->fields.blockInfo;
   if ( !blockInfo || !Instance )
     goto LABEL_14;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                blockInfo->fields.diggingBlockId,
-               (const MethodInfo_3535B7C *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+               (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
   if ( !Instance )
     return (int)Instance;
   hintInfo = this->fields.hintInfo;
@@ -160,7 +167,7 @@ int32_t DiggingBlockComponent__GetTotalEventPoint(DiggingBlockComponent_o *this,
     || (Instance = (Il2CppObject *)System_Array__IndexOf_int_(
                                      (System_Int32_array *)Instance[2].monitor,
                                      hintInfo->fields.hintImageId,
-                                     (const MethodInfo_33590E4 *)Method_System_Array_IndexOf_int___),
+                                     (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___),
         ((unsigned int)Instance & 0x80000000) != 0) )
   {
     LODWORD(Instance) = HIDWORD(v7[2].klass);
@@ -169,43 +176,73 @@ int32_t DiggingBlockComponent__GetTotalEventPoint(DiggingBlockComponent_o *this,
   monitor = v7[3].monitor;
   if ( !monitor )
 LABEL_14:
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   if ( (unsigned int)Instance >= monitor[6] )
-    sub_1D0F314(Instance);
+    sub_21FFED4(Instance);
   LODWORD(Instance) = HIDWORD(v7[2].klass) + monitor[(unsigned int)Instance + 8];
   return (int)Instance;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void DiggingBlockComponent__Initialize(
         DiggingBlockComponent_o *this,
         DiggingInfo_BlockInfos_o *blockInfo,
         int32_t eventId,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x1
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  const MethodInfo *v11; // x1
   UnityEngine_Component_o *hintSprite; // x0
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
   Il2CppObject *Entity; // x0
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
   struct EventDiggingBlockEntity_o *diggingBlockEntity; // x8
-  struct EventDiggingBlockEntity_o *v11; // x8
+  struct EventDiggingBlockEntity_o *v27; // x8
   UISprite_o *blockSprite; // x20
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x0
-  const MethodInfo *v15; // x3
-  struct DiggingInfo_BlockInfos_o *v16; // x8
+  Il2CppObject *v29; // x0
+  System_String_o *v30; // x0
+  const MethodInfo *v31; // x3
+  struct DiggingInfo_BlockInfos_o *v32; // x8
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
   int32_t imageId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E71B8C & 1) == 0 )
+  if ( (byte_5932948 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_19518/*"event_digging_block_{0}"*/);
-    byte_4E71B8C = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_20034/*"event_digging_block_{0}"*/);
+    byte_5932948 = 1;
   }
   this->fields.hintInfo = 0;
-  sub_1D0F058(&this->fields.hintInfo, 0);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.hintInfo,
+    0,
+    *(System_String_o **)&eventId,
+    (System_String_o *)method,
+    v4,
+    v5,
+    v6,
+    v7);
   hintSprite = (UnityEngine_Component_o *)this->fields.hintSprite;
   if ( !hintSprite )
     goto LABEL_13;
@@ -215,13 +252,21 @@ void DiggingBlockComponent__Initialize(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hintSprite, 0, 0);
   this->fields.blockInfo = blockInfo;
   this->fields.eventId = eventId;
-  sub_1D0F058(&this->fields.blockInfo, blockInfo);
-  hintSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.blockInfo,
+    (int32_t)blockInfo,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
+  hintSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !hintSprite )
     goto LABEL_13;
   hintSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)hintSprite,
-                                            (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                                            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
   if ( !blockInfo )
     goto LABEL_13;
   if ( !hintSprite )
@@ -229,33 +274,49 @@ void DiggingBlockComponent__Initialize(
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)hintSprite,
              blockInfo->fields.diggingBlockId,
-             (const MethodInfo_3535B7C *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+             (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
   this->fields.diggingBlockEntity = (struct EventDiggingBlockEntity_o *)Entity;
-  hintSprite = (UnityEngine_Component_o *)sub_1D0F058(&this->fields.diggingBlockEntity, Entity);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.diggingBlockEntity,
+    (int32_t)Entity,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
   diggingBlockEntity = this->fields.diggingBlockEntity;
   if ( !diggingBlockEntity )
     goto LABEL_13;
   this->fields.animationId = diggingBlockEntity->fields.objectId;
-  DiggingBlockComponent__SetConsumableItemInfo(this, v7);
-  v11 = this->fields.diggingBlockEntity;
-  if ( !v11
+  DiggingBlockComponent__SetConsumableItemInfo(this, v11);
+  v27 = this->fields.diggingBlockEntity;
+  if ( !v27
     || (blockSprite = this->fields.blockSprite,
-        imageId = v11->fields.imageId,
-        v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId),
-        v14 = System_String__Format((System_String_o *)StringLiteral_19518/*"event_digging_block_{0}"*/, v13, 0),
-        DiggingBlockComponent__SetImage(this, blockSprite, v14, v15),
+        imageId = v27->fields.imageId,
+        v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId),
+        v30 = System_String__Format((System_String_o *)StringLiteral_20034/*"event_digging_block_{0}"*/, v29, 0),
+        DiggingBlockComponent__SetImage(this, blockSprite, v30, v31),
         hintSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                   (UnityEngine_Component_o *)this,
                                                   0),
-        (v16 = this->fields.blockInfo) == 0)
+        (v32 = this->fields.blockInfo) == 0)
     || !hintSprite )
   {
 LABEL_13:
-    sub_1D0F30C(hintSprite, v7);
+    sub_21FFECC(hintSprite, v11);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hintSprite, v16->fields.isDigged != 1, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hintSprite, v32->fields.isDigged != 1, 0);
   this->fields._OnClickPanel_k__BackingField = 0;
-  sub_1D0F058(&this->fields._OnClickPanel_k__BackingField, 0);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickPanel_k__BackingField,
+    0,
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
 }
 
 
@@ -265,7 +326,7 @@ bool DiggingBlockComponent__IsDigged(DiggingBlockComponent_o *this, const Method
 
   blockInfo = this->fields.blockInfo;
   if ( !blockInfo )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return blockInfo->fields.isDigged == 1;
 }
 
@@ -299,7 +360,7 @@ void DiggingBlockComponent__SetActiveBlockUI(DiggingBlockComponent_o *this, bool
     || (blockSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(blockSprite, 0)) == 0 )
   {
 LABEL_10:
-    sub_1D0F30C(blockSprite, isActive);
+    sub_21FFECC(blockSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)blockSprite, isActive, 0);
 }
@@ -314,28 +375,29 @@ void DiggingBlockComponent__SetConsumableItemInfo(DiggingBlockComponent_o *this,
   UISprite_o *consumableItemIcon; // x20
   System_String_o *v7; // x0
   const MethodInfo *v8; // x3
+  __int64 v9; // x2
   Il2CppObject *MasterData_object; // x21
   System_String_o *consumableItemTextColor; // x20
-  CommonConsumeEntity_o *v11; // x8
+  CommonConsumeEntity_o *v12; // x8
   UILabel_o *consumableItemText; // x21
   int32_t num; // w22
-  System_String_o *v14; // x0
-  int v15; // [xsp+Ch] [xbp-44h] BYREF
-  UserItemEntity_o *v16; // [xsp+10h] [xbp-40h] BYREF
+  System_String_o *v15; // x0
+  int v16; // [xsp+Ch] [xbp-44h] BYREF
+  UserItemEntity_o *v17; // [xsp+10h] [xbp-40h] BYREF
   CommonConsumeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4E71B8F & 1) == 0 )
+  if ( (byte_593294B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    this = (DiggingBlockComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E71B8F = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (DiggingBlockComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593294B = 1;
   }
-  v16 = 0;
+  v17 = 0;
   entity = 0;
-  v15 = 0;
+  v16 = 0;
   commonConsumeMaster = DiggingBlockComponent__get_commonConsumeMaster(this, method);
   diggingBlockEntity = v2->fields.diggingBlockEntity;
   if ( !diggingBlockEntity || !commonConsumeMaster )
@@ -353,54 +415,54 @@ void DiggingBlockComponent__SetConsumableItemInfo(DiggingBlockComponent_o *this,
   consumableItemIcon = v2->fields.consumableItemIcon;
   v7 = System_Int32__ToString((int)entity + 28, 0);
   DiggingBlockComponent__SetImage(v2, consumableItemIcon, v7, v8);
-  commonConsumeMaster = (CommonConsumeMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  commonConsumeMaster = (CommonConsumeMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !commonConsumeMaster )
     goto LABEL_26;
-  v16 = 0;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)commonConsumeMaster,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+  v17 = 0;
   consumableItemTextColor = (System_String_o *)StringLiteral_1/*""*/;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v9);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
   commonConsumeMaster = (CommonConsumeMaster_o *)NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v9);
     commonConsumeMaster = (CommonConsumeMaster_o *)NetworkManager_TypeInfo;
   }
   if ( !entity || !MasterData_object )
     goto LABEL_26;
   commonConsumeMaster = (CommonConsumeMaster_o *)UserItemMaster__TryGetEntity(
                                                    (UserItemMaster_o *)MasterData_object,
-                                                   &v16,
+                                                   &v17,
                                                    (int64_t)commonConsumeMaster[2].fields.list[1].monitor,
                                                    entity->fields.objectId,
                                                    0);
   if ( ((unsigned __int8)commonConsumeMaster & 1) == 0 )
   {
-    v11 = entity;
+    v12 = entity;
     if ( !entity )
       goto LABEL_26;
     goto LABEL_22;
   }
-  v11 = entity;
-  if ( !entity || !v16 )
+  v12 = entity;
+  if ( !entity || !v17 )
 LABEL_26:
-    sub_1D0F30C(commonConsumeMaster, v4);
-  if ( entity->fields.num > v16->fields.num )
+    sub_21FFECC(commonConsumeMaster, v4);
+  if ( entity->fields.num > v17->fields.num )
 LABEL_22:
     consumableItemTextColor = v2->fields.consumableItemTextColor;
   consumableItemText = v2->fields.consumableItemText;
-  num = v11->fields.num;
-  v15 = DiggingBlockComponent__GetHintConsumeNum(v2, v4) + num;
-  v14 = System_Int32__ToString((int32_t)&v15, 0);
-  commonConsumeMaster = (CommonConsumeMaster_o *)System_String__Concat_65562772(consumableItemTextColor, v14, 0);
+  num = v12->fields.num;
+  v16 = DiggingBlockComponent__GetHintConsumeNum(v2, v4) + num;
+  v15 = System_Int32__ToString((int32_t)&v16, 0);
+  commonConsumeMaster = (CommonConsumeMaster_o *)System_String__Concat_75438412(consumableItemTextColor, v15, 0);
   if ( !consumableItemText )
     goto LABEL_26;
   UILabel__set_text(consumableItemText, (System_String_o *)commonConsumeMaster, 0);
@@ -412,24 +474,37 @@ void DiggingBlockComponent__SetHintInfo(
         DiggingInfo_HintInfos_o *hintInfo,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  __int64 v10; // x1
   UnityEngine_Component_o *hintSprite; // x0
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
-  UISprite_o *v8; // x21
-  Il2CppObject *v9; // x0
-  System_String_o *v10; // x0
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
-  int32_t hintImageId; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t hintImageId; // w9
+  UISprite_o *v14; // x20
+  Il2CppObject *v15; // x0
+  System_String_o *v16; // x0
+  const MethodInfo *v17; // x3
+  const MethodInfo *v18; // x1
+  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E71B8E & 1) == 0 )
+  if ( (byte_593294A & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19519/*"event_digging_layer_{0}"*/);
-    byte_4E71B8E = 1;
+    sub_21FFC50(&StringLiteral_20035/*"event_digging_layer_{0}"*/);
+    byte_593294A = 1;
   }
   this->fields.hintInfo = hintInfo;
-  sub_1D0F058(&this->fields.hintInfo, hintInfo);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.hintInfo,
+    (int32_t)hintInfo,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   hintSprite = (UnityEngine_Component_o *)this->fields.hintSprite;
   if ( !hintSprite
     || (hintSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(hintSprite, 0),
@@ -438,14 +513,15 @@ void DiggingBlockComponent__SetHintInfo(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hintSprite, blockInfo->fields.isDigged != 1, 0),
         !hintInfo) )
   {
-    sub_1D0F30C(hintSprite, v5);
+    sub_21FFECC(hintSprite, v10);
   }
-  v8 = this->fields.hintSprite;
   hintImageId = hintInfo->fields.hintImageId;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &hintImageId);
-  v10 = System_String__Format((System_String_o *)StringLiteral_19519/*"event_digging_layer_{0}"*/, v9, 0);
-  DiggingBlockComponent__SetImage(this, v8, v10, v11);
-  DiggingBlockComponent__SetConsumableItemInfo(this, v12);
+  v14 = this->fields.hintSprite;
+  v19 = hintImageId;
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
+  v16 = System_String__Format((System_String_o *)StringLiteral_20035/*"event_digging_layer_{0}"*/, v15, 0);
+  DiggingBlockComponent__SetImage(this, v14, v16, v17);
+  DiggingBlockComponent__SetConsumableItemInfo(this, v18);
 }
 
 
@@ -457,15 +533,15 @@ void DiggingBlockComponent__SetImage(
 {
   int32_t eventId; // w21
 
-  if ( (byte_4E71B8D & 1) == 0 )
+  if ( (byte_5932949 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    byte_4E71B8D = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_5932949 = 1;
   }
   eventId = this->fields.eventId;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_41967144(eventId, sprite, name, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, sprite, name);
+  AtlasManager__SetEventUI_47538316(eventId, sprite, name, 0);
 }
 
 
@@ -474,30 +550,60 @@ void DiggingBlockComponent__SetPanelClickAction(
         System_Action_DiggingBlockComponent__o *clickAction,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x21
+  __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Action_o *v8; // x20
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_Action_o *v20; // x20
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
 
-  if ( (byte_4E71B90 & 1) == 0 )
+  if ( (byte_593294C & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_DiggingBlockComponent___c__DisplayClass23_0__SetPanelClickAction_b__0__);
-    sub_1D0F0B4(&DiggingBlockComponent___c__DisplayClass23_0_TypeInfo);
-    byte_4E71B90 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_DiggingBlockComponent___c__DisplayClass23_0__SetPanelClickAction_b__0__);
+    sub_21FFC50(&DiggingBlockComponent___c__DisplayClass23_0_TypeInfo);
+    byte_593294C = 1;
   }
-  v5 = (Il2CppObject *)sub_1D0F300(DiggingBlockComponent___c__DisplayClass23_0_TypeInfo);
-  System_Object___ctor(v5, 0);
+  v5 = sub_21FFEBC(DiggingBlockComponent___c__DisplayClass23_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  v5[1].klass = (Il2CppClass *)clickAction;
-  sub_1D0F058(&v5[1], clickAction);
-  v5[1].monitor = this;
-  sub_1D0F058(&v5[1].monitor, this);
-  v8 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v8, v5, Method_DiggingBlockComponent___c__DisplayClass23_0__SetPanelClickAction_b__0__, 0);
-  this->fields._OnClickPanel_k__BackingField = v8;
-  sub_1D0F058(&this->fields._OnClickPanel_k__BackingField, v8);
+    sub_21FFECC(v6, v7);
+  *(_QWORD *)(v5 + 16) = clickAction;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)clickAction, v8, v9, v10, v11, v12, v13);
+  *(_QWORD *)(v5 + 24) = this;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v20,
+    (Il2CppObject *)v5,
+    Method_DiggingBlockComponent___c__DisplayClass23_0__SetPanelClickAction_b__0__,
+    0);
+  this->fields._OnClickPanel_k__BackingField = v20;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickPanel_k__BackingField,
+    (int32_t)v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
 }
 
 
@@ -509,15 +615,15 @@ void DiggingBlockComponent__SetPointAnimSprite(DiggingBlockComponent_o *this, co
   const MethodInfo *v6; // x3
   int32_t TotalEventPoint; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E71B93 & 1) == 0 )
+  if ( (byte_593294F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6302/*"EventPoint_"*/);
-    byte_4E71B93 = 1;
+    sub_21FFC50(&StringLiteral_6489/*"EventPoint_"*/);
+    byte_593294F = 1;
   }
   eventPointAnimSp = this->fields.eventPointAnimSp;
   TotalEventPoint = DiggingBlockComponent__GetTotalEventPoint(this, method);
   v4 = System_Int32__ToString((int32_t)&TotalEventPoint, 0);
-  v5 = System_String__Concat_65562772((System_String_o *)StringLiteral_6302/*"EventPoint_"*/, v4, 0);
+  v5 = System_String__Concat_75438412((System_String_o *)StringLiteral_6489/*"EventPoint_"*/, v4, 0);
   DiggingBlockComponent__SetImage(this, eventPointAnimSp, v5, v6);
 }
 
@@ -536,18 +642,18 @@ CommonConsumeMaster_o *DiggingBlockComponent__get_commonConsumeMaster(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4E71B8B & 1) == 0 )
+  if ( (byte_5932947 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E71B8B = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5932947 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return (CommonConsumeMaster_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                                    (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
 }
 
 
@@ -563,13 +669,13 @@ void DiggingBlockComponent___c__DisplayClass23_0___SetPanelClickAction_b__0(
         DiggingBlockComponent___c__DisplayClass23_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E71B96 & 1) == 0 )
+  if ( (byte_5932952 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_DiggingBlockComponent___);
-    byte_4E71B96 = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_DiggingBlockComponent___);
+    byte_5932952 = 1;
   }
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.clickAction,
     (Il2CppObject *)this->fields.__4__this,
-    (const MethodInfo_31932D8 *)Method_ActionExtensions_Call_DiggingBlockComponent___);
+    (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_DiggingBlockComponent___);
 }

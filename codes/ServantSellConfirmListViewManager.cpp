@@ -9,20 +9,26 @@ void ServantSellConfirmListViewManager__CallOnSelectitem(
         ServantSellConfirmListViewItem_o *selectItem,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_Action_ServantSellConfirmListViewItem__o *onSelectItem; // x20
-  GrandQuestFolderBoardItem_o *p_onSelectItem; // x0
 
   onSelectItem = this->fields.onSelectItem;
   if ( onSelectItem )
   {
-    p_onSelectItem = (GrandQuestFolderBoardItem_o *)&this->fields.onSelectItem;
-    p_onSelectItem->klass = 0;
-    sub_1D0F058(p_onSelectItem, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    this->fields.onSelectItem = 0;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.onSelectItem,
+      0,
+      (System_String_o *)method,
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
     ((void (__fastcall *)(intptr_t, ServantSellConfirmListViewItem_o *, intptr_t))onSelectItem->fields.invoke_impl)(
       onSelectItem->fields.method_code,
       selectItem,
@@ -58,34 +64,34 @@ void ServantSellConfirmListViewManager__CreateCommandCodeList(
   Il2CppObject *Entity; // x25
   ServantSellConfirmListViewItem_o *v19; // x23
   const MethodInfo *v20; // x4
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   struct System_Object_array *items; // x8
   _QWORD *v28; // x9
   __int64 size; // x10
   Il2CppClass **v30; // x0
 
-  if ( (byte_4E736AB & 1) == 0 )
+  if ( (byte_59345FE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E736AB = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59345FE = 1;
   }
-  if ( commandCodeIds && commandCodeIds->max_length && !isExceeded && !isSellLastServant )
+  if ( commandCodeIds && !isExceeded && !isSellLastServant && commandCodeIds->max_length )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_20;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
     max_length = commandCodeIds->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -94,7 +100,7 @@ void ServantSellConfirmListViewManager__CreateCommandCodeList(
       while ( 1 )
       {
         if ( v14 >= (unsigned int)max_length )
-          sub_1D0F314(MasterData_object);
+          sub_21FFED4(MasterData_object);
         Instance = (DataManager_o *)this->fields.parentManager;
         if ( !Instance )
           break;
@@ -110,9 +116,9 @@ void ServantSellConfirmListViewManager__CreateCommandCodeList(
         Entity = DataMasterBase_object__object__long___GetEntity(
                    v13,
                    v15,
-                   (const MethodInfo_353832C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-        v19 = (ServantSellConfirmListViewItem_o *)sub_1D0F300(ServantSellConfirmListViewItem_TypeInfo);
-        ServantSellConfirmListViewItem___ctor_36297956(v19, v17, (UserCommandCodeEntity_o *)Entity, 0, v20);
+                   (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+        v19 = (ServantSellConfirmListViewItem_o *)sub_21FFEBC(ServantSellConfirmListViewItem_TypeInfo);
+        ServantSellConfirmListViewItem___ctor_41830384(v19, v17, (UserCommandCodeEntity_o *)Entity, 0, v20);
         if ( !itemList )
           break;
         items = itemList->fields._items;
@@ -126,21 +132,21 @@ void ServantSellConfirmListViewManager__CreateCommandCodeList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v19,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
         }
         else
         {
           v30 = &items->obj.klass + size;
           itemList->fields._size = size + 1;
           v30[4] = (Il2CppClass *)v19;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v30 + 4), (int32_t)v19, v21, v22, v23, v24, v25, v26);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 4), (int32_t)v19, v21, v22, v23, v24, v25, v26);
         }
         LODWORD(max_length) = commandCodeIds->max_length;
         if ( (__int64)++v14 >= (int)max_length )
           return;
       }
 LABEL_20:
-      sub_1D0F30C(Instance, v10);
+      sub_21FFECC(Instance, v10);
     }
   }
 }
@@ -165,85 +171,88 @@ void ServantSellConfirmListViewManager__CreateCommandCodeResultList(
   const MethodInfo *v18; // x4
   __int64 v19; // x0
   __int64 v20; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   struct System_Object_array *items; // x8
   _QWORD *v28; // x9
   __int64 size; // x10
   Il2CppClass **v30; // x0
-  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-80h] BYREF
+  __int64 v31; // [xsp+8h] [xbp-88h]
+  System_Collections_Generic_List_Enumerator_object__o *v32; // [xsp+10h] [xbp-80h]
+  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+18h] [xbp-78h] BYREF
 
-  if ( (byte_4E736AC & 1) == 0 )
+  if ( (byte_59345FF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserCommandCodeEntity__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserCommandCodeEntity__IndexOf__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    byte_4E736AC = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserCommandCodeEntity__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserCommandCodeEntity__IndexOf__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    byte_59345FF = 1;
   }
-  memset(&v32, 0, sizeof(v32));
+  memset(&v33, 0, sizeof(v33));
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
-  if ( commandCodeIds && commandCodeIds->fields._size >= 1 && !isExceeded && !isSellLastServant )
+  if ( commandCodeIds && !isExceeded && !isSellLastServant && commandCodeIds->fields._size >= 1 )
   {
     SortEntList = (System_Collections_Generic_List_object__o *)ServantSellConfirmListViewManager__GetSortEntList(
                                                                  v9,
                                                                  commandCodeIds,
                                                                  v10);
     if ( !SortEntList )
-      sub_1D0F30C(0, v12);
+      sub_21FFECC(0, v12);
     v13 = SortEntList;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v31,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v33,
       SortEntList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__GetEnumerator__);
-    v32 = v31;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__GetEnumerator__);
+    v31 = 0;
+    v32 = &v33;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v32,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__MoveNext__) )
+              &v33,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__MoveNext__) )
     {
-      current = v32.fields._current;
+      current = v33.fields._current;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       v16 = System_Collections_Generic_List_object___IndexOf(
               v13,
-              v32.fields._current,
-              (const MethodInfo_395D0B0 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__IndexOf__);
-      v17 = (ServantSellConfirmListViewItem_o *)sub_1D0F300(ServantSellConfirmListViewItem_TypeInfo);
-      ServantSellConfirmListViewItem___ctor_36297956(v17, v16, (UserCommandCodeEntity_o *)current, 0, v18);
-      if ( !itemList )
-        sub_1D0F30C(v19, v20);
-      items = itemList->fields._items;
-      v28 = Method_System_Collections_Generic_List_ListViewItem__Add__;
-      ++itemList->fields._version;
-      if ( !items )
-        sub_1D0F30C(v19, v20);
+              v33.fields._current,
+              (const MethodInfo_44507B0 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__IndexOf__);
+      v17 = (ServantSellConfirmListViewItem_o *)sub_21FFEBC(ServantSellConfirmListViewItem_TypeInfo);
+      ServantSellConfirmListViewItem___ctor_41830384(v17, v16, (UserCommandCodeEntity_o *)current, 0, v18);
+      if ( !itemList
+        || (items = itemList->fields._items,
+            v28 = Method_System_Collections_Generic_List_ListViewItem__Add__,
+            ++itemList->fields._version,
+            !items) )
+      {
+        sub_21FFECC(v19, v20);
+      }
       size = itemList->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v17,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
         v30 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v30[4] = (Il2CppClass *)v17;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v30 + 4), (int32_t)v17, v21, v22, v23, v24, v25, v26);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 4), (int32_t)v17, v21, v22, v23, v24, v25, v26);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v32,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__Dispose__);
+      &v33,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserCommandCodeEntity__Dispose__);
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   }
 }
@@ -263,8 +272,6 @@ void ServantSellConfirmListViewManager__CreateList(
 
   this->fields.kind = kind;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
-  isExceeded = isExceeded;
-  isSellLastServant = isSellLastServant;
   ServantSellConfirmListViewManager__CreateServantList(this, servantIds, isExceeded, isSellLastServant, v12);
   ServantSellConfirmListViewManager__CreateCommandCodeList(this, commandCodeids, isExceeded, isSellLastServant, v13);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -282,91 +289,93 @@ void ServantSellConfirmListViewManager__CreateServantList(
   DataManager_o *Instance; // x0
   __int64 v9; // x1
   Il2CppObject *MasterData_object; // x23
-  Il2CppObject *v11; // x25
+  __int64 v11; // x2
+  Il2CppObject *v12; // x25
   ServantOperationManager_o *parentManager; // x19
   System_Collections_Generic_List_ServantOperationListViewItem__o *SelectedEquipeCmdCardServantList; // x0
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v15; // x21
-  int64_t v16; // x26
-  UserServantEntity_o *v17; // x27
-  __int64 v18; // x19
-  __int64 v19; // x28
+  unsigned __int64 v16; // x21
+  int64_t v17; // x26
+  __int64 v18; // x2
+  UserServantEntity_o *v19; // x27
+  __int64 v20; // x19
+  __int64 v21; // x28
   System_Collections_Generic_List_object__o *itemList; // x28
-  System_Int64_array *v21; // x23
-  _BOOL4 v22; // w25
+  System_Int64_array *v23; // x23
+  _BOOL4 v24; // w25
   int64_t favoriteUserSvtId; // x24
-  System_Int64_array *v24; // x20
-  System_Int64_array *v25; // x22
   int32_t v26; // w19
-  ServantSellConfirmListViewItem_o *v27; // x29
-  const MethodInfo *v28; // x6
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
+  System_Int64_array *v27; // x20
+  System_Int64_array *v28; // x22
+  ServantSellConfirmListViewItem_o *v29; // x29
+  const MethodInfo *v30; // x6
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v36; // x9
+  _QWORD *v38; // x9
   __int64 size; // x10
-  Il2CppClass **v38; // x0
-  System_Collections_Generic_List_int__o *v39; // [xsp+0h] [xbp-A0h]
-  Il2CppObject *v40; // [xsp+8h] [xbp-98h]
-  ServantSellConfirmListViewManager_o *v41; // [xsp+10h] [xbp-90h]
+  Il2CppClass **v40; // x0
+  System_Collections_Generic_List_int__o *v41; // [xsp+0h] [xbp-A0h]
+  Il2CppObject *v42; // [xsp+8h] [xbp-98h]
+  ServantSellConfirmListViewManager_o *v43; // [xsp+10h] [xbp-90h]
   UserGameEntity_o *SelfUserGame; // [xsp+18h] [xbp-88h]
   int64_t *m_Items; // [xsp+28h] [xbp-78h]
   System_Int64_array *equipIdList; // [xsp+30h] [xbp-70h] BYREF
   System_Int64_array *svtIdList; // [xsp+38h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v49; // 0:x0.16
 
   v5 = isExceeded;
-  if ( (byte_4E736A8 & 1) == 0 )
+  if ( (byte_59345FB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E736A8 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59345FB = 1;
   }
   equipIdList = 0;
   svtIdList = 0;
   if ( servantIds && servantIds->max_length )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_38;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
     SelfUserGame = UserGameMaster__getSelfUserGame(0);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_38;
-    v11 = DataManager__GetMasterData_object_(
+    v12 = DataManager__GetMasterData_object_(
             Instance,
-            (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserDeckMaster___);
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4E710BF )
+            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9, v11);
+    if ( !byte_5931D52 )
     {
-      sub_1D0F0B4(&NetworkManager_TypeInfo);
-      byte_4E710BF = 1;
+      sub_21FFC50(&NetworkManager_TypeInfo);
+      byte_5931D52 = 1;
     }
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9, v11);
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
     }
-    if ( !v11 )
+    if ( !v12 )
       goto LABEL_38;
     UserDeckMaster__getPartyList(
-      (UserDeckMaster_o *)v11,
+      (UserDeckMaster_o *)v12,
       &svtIdList,
       &equipIdList,
       *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -382,25 +391,25 @@ void ServantSellConfirmListViewManager__CreateServantList(
                                   SelectedEquipeCmdCardServantList,
                                   0);
     max_length = servantIds->max_length;
-    v39 = (System_Collections_Generic_List_int__o *)Instance;
+    v41 = (System_Collections_Generic_List_int__o *)Instance;
     if ( (int)max_length >= 1 )
     {
-      v15 = 0;
+      v16 = 0;
       m_Items = servantIds->m_Items;
-      v40 = MasterData_object;
-      v41 = this;
+      v42 = MasterData_object;
+      v43 = this;
       while ( 1 )
       {
-        if ( v15 >= (unsigned int)max_length )
-          sub_1D0F314(Instance);
+        if ( v16 >= (unsigned int)max_length )
+          sub_21FFED4(Instance);
         if ( !MasterData_object )
           break;
-        v16 = m_Items[v15];
+        v17 = m_Items[v16];
         Instance = (DataManager_o *)DataMasterBase_object__object__long___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                      v16,
-                                      (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-        v17 = (UserServantEntity_o *)Instance;
+                                      v17,
+                                      (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+        v19 = (UserServantEntity_o *)Instance;
         if ( !v5 )
           goto LABEL_42;
         if ( !Instance )
@@ -411,22 +420,22 @@ void ServantSellConfirmListViewManager__CreateServantList(
 LABEL_42:
           if ( !isSellLastServant )
             goto LABEL_28;
-          if ( !v17 )
+          if ( !v19 )
             break;
-          v19 = *(_QWORD *)&v17->fields.svtId.fields.currentCryptoKey;
-          v18 = *(_QWORD *)&v17->fields.svtId.fields.fakeValue;
-          if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          *(_QWORD *)&v47.fields.currentCryptoKey = v19;
-          *(_QWORD *)&v47.fields.fakeValue = v18;
-          v9 = (unsigned int)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v47, 0);
-          Instance = (DataManager_o *)v39;
-          if ( !v39 )
+          v20 = *(_QWORD *)&v19->fields.svtId.fields.currentCryptoKey;
+          v21 = *(_QWORD *)&v19->fields.svtId.fields.fakeValue;
+          if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9, v18);
+          *(_QWORD *)&v49.fields.currentCryptoKey = v20;
+          *(_QWORD *)&v49.fields.fakeValue = v21;
+          v9 = (unsigned int)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v49, 0);
+          Instance = (DataManager_o *)v41;
+          if ( !v41 )
             break;
           Instance = (DataManager_o *)System_Collections_Generic_List_int___Contains(
-                                        v39,
+                                        v41,
                                         v9,
-                                        (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__);
+                                        (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
 LABEL_28:
@@ -434,24 +443,24 @@ LABEL_28:
             if ( !Instance )
               break;
             itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-            v21 = servantIds;
-            v22 = v5;
+            v23 = servantIds;
+            v24 = v5;
             Instance = (DataManager_o *)ServantOperationManager__GetSelectedOrderByServantId(
                                           (ServantOperationManager_o *)Instance,
-                                          v16,
+                                          v17,
                                           0);
             if ( !SelfUserGame )
               break;
             favoriteUserSvtId = SelfUserGame->fields.favoriteUserSvtId;
-            v24 = equipIdList;
-            v25 = svtIdList;
             v26 = (int)Instance;
-            v27 = (ServantSellConfirmListViewItem_o *)sub_1D0F300(ServantSellConfirmListViewItem_TypeInfo);
-            ServantSellConfirmListViewItem___ctor(v27, v26, v17, v25, v24, v16 == favoriteUserSvtId, v28);
+            v27 = equipIdList;
+            v28 = svtIdList;
+            v29 = (ServantSellConfirmListViewItem_o *)sub_21FFEBC(ServantSellConfirmListViewItem_TypeInfo);
+            ServantSellConfirmListViewItem___ctor(v29, v26, v19, v28, v27, v17 == favoriteUserSvtId, v30);
             if ( !itemList )
               break;
             items = itemList->fields._items;
-            v36 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+            v38 = Method_System_Collections_Generic_List_ListViewItem__Add__;
             ++itemList->fields._version;
             if ( !items )
               break;
@@ -460,28 +469,28 @@ LABEL_28:
             {
               System_Collections_Generic_List_object___AddWithResize(
                 itemList,
-                (Il2CppObject *)v27,
-                *(const MethodInfo_395C410 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+                (Il2CppObject *)v29,
+                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
             }
             else
             {
-              v38 = &items->obj.klass + size;
+              v40 = &items->obj.klass + size;
               itemList->fields._size = size + 1;
-              v38[4] = (Il2CppClass *)v27;
-              sub_1D0F058((GrandQuestFolderBoardItem_o *)(v38 + 4), (int32_t)v27, v29, v30, v31, v32, v33, v34);
+              v40[4] = (Il2CppClass *)v29;
+              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v40 + 4), (int32_t)v29, v31, v32, v33, v34, v35, v36);
             }
-            servantIds = v21;
-            MasterData_object = v40;
-            this = v41;
-            v5 = v22;
+            servantIds = v23;
+            MasterData_object = v42;
+            this = v43;
+            v5 = v24;
           }
         }
         LODWORD(max_length) = servantIds->max_length;
-        if ( (__int64)++v15 >= (int)max_length )
+        if ( (__int64)++v16 >= (int)max_length )
           return;
       }
 LABEL_38:
-      sub_1D0F30C(Instance, v9);
+      sub_21FFECC(Instance, v9);
     }
   }
 }
@@ -497,108 +506,113 @@ void ServantSellConfirmListViewManager__CreateSortServantList(
   DataManager_o *Instance; // x0
   int64_t v7; // x1
   UserGameEntity_o *SelfUserGame; // x22
+  __int64 v9; // x2
   Il2CppObject *MasterData_object; // x19
   ServantOperationManager_o *parentManager; // x19
   System_Collections_Generic_List_ServantOperationListViewItem__o *SelectedEquipeCmdCardServantList; // x0
   System_Collections_Generic_List_int__o *EquipedCommandCodeSellLastSvtList; // x23
-  System_Collections_Generic_List_long__o *v13; // x25
-  const MethodInfo *v14; // x2
+  System_Collections_Generic_List_long__o *v14; // x25
+  const MethodInfo *v15; // x2
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v16; // x19
+  unsigned __int64 v17; // x19
   struct System_Int64_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v19; // x9
   __int64 size; // x10
-  System_Collections_Generic_List_object__o *v20; // x24
-  _BOOL8 v21; // x0
-  __int64 v22; // x1
+  System_Collections_Generic_List_object__o *v21; // x24
+  _BOOL8 v22; // x0
+  __int64 v23; // x1
+  __int64 v24; // x2
   Il2CppObject *current; // x25
-  void *monitor; // x19
-  Il2CppClass *klass; // x20
-  __int64 v26; // x0
-  System_Collections_Generic_List_object__o *itemList; // x26
+  Il2CppClass *klass; // x19
+  void *monitor; // x20
   __int64 v28; // x0
-  __int64 v29; // x1
-  Il2CppObject v30; // q0
-  int32_t v31; // w27
-  System_Int64_array *v32; // x19
-  System_Int64_array *v33; // x29
-  int64_t v34; // x0
-  __int64 v35; // x1
+  System_Collections_Generic_List_object__o *itemList; // x26
+  __int64 v30; // x0
+  __int64 v31; // x1
+  __int64 v32; // x2
+  int32_t v33; // w27
+  Il2CppObject v34; // q1
+  System_Int64_array *v35; // x19
+  System_Int64_array *v36; // x29
+  int64_t v37; // x0
+  __int64 v38; // x1
   int64_t favoriteUserSvtId; // x21
-  int64_t v37; // x20
-  ServantSellConfirmListViewItem_o *v38; // x28
-  const MethodInfo *v39; // x6
-  __int64 v40; // x0
-  __int64 v41; // x1
-  int32_t v42; // w2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  int32_t v45; // w5
-  int64_t v46; // x6
-  System_String_o *v47; // x7
-  struct System_Object_array *v48; // x8
-  _QWORD *v49; // x9
-  __int64 v50; // x10
-  Il2CppClass **v51; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v55; // [xsp+10h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v56; // [xsp+30h] [xbp-B0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+50h] [xbp-90h] BYREF
-  System_Int64_array *equipIdList; // [xsp+70h] [xbp-70h] BYREF
-  System_Int64_array *svtIdList; // [xsp+78h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
+  int64_t v40; // x20
+  ServantSellConfirmListViewItem_o *v41; // x28
+  const MethodInfo *v42; // x6
+  __int64 v43; // x0
+  __int64 v44; // x1
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
+  struct System_Object_array *v51; // x8
+  _QWORD *v52; // x9
+  __int64 v53; // x10
+  Il2CppClass **v54; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v58; // [xsp+10h] [xbp-E0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v59; // [xsp+30h] [xbp-C0h] BYREF
+  __int64 v60; // [xsp+50h] [xbp-A0h]
+  System_Collections_Generic_List_Enumerator_object__o *v61; // [xsp+58h] [xbp-98h]
+  System_Collections_Generic_List_Enumerator_object__o v62; // [xsp+60h] [xbp-90h] BYREF
+  System_Int64_array *equipIdList; // [xsp+80h] [xbp-70h] BYREF
+  System_Int64_array *svtIdList; // [xsp+88h] [xbp-68h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v65; // 0:x0.16
 
-  if ( (byte_4E736A9 & 1) == 0 )
+  if ( (byte_59345FC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserServantEntity__IndexOf__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_long__TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E736A9 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__IndexOf__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_long__TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59345FC = 1;
   }
   equipIdList = 0;
   svtIdList = 0;
-  memset(&v57, 0, sizeof(v57));
+  memset(&v62, 0, sizeof(v62));
   this->fields.kind = 3;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( servantIds && servantIds->max_length )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_47;
     DataManager__GetMasterData_object_(
       Instance,
-      (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+      (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
     SelfUserGame = UserGameMaster__getSelfUserGame(0);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_47;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserDeckMaster___);
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4E710BF )
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v9);
+    if ( !byte_5931D52 )
     {
-      sub_1D0F0B4(&NetworkManager_TypeInfo);
-      byte_4E710BF = 1;
+      sub_21FFC50(&NetworkManager_TypeInfo);
+      byte_5931D52 = 1;
     }
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v9);
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
     }
     if ( !MasterData_object )
@@ -619,152 +633,155 @@ void ServantSellConfirmListViewManager__CreateSortServantList(
                                           parentManager,
                                           SelectedEquipeCmdCardServantList,
                                           0);
-    v13 = (System_Collections_Generic_List_long__o *)sub_1D0F300(System_Collections_Generic_List_long__TypeInfo);
+    v14 = (System_Collections_Generic_List_long__o *)sub_21FFEBC(System_Collections_Generic_List_long__TypeInfo);
     System_Collections_Generic_List_long____ctor(
-      v13,
-      (const MethodInfo_3943BF0 *)Method_System_Collections_Generic_List_long___ctor__);
+      v14,
+      (const MethodInfo_44378D8 *)Method_System_Collections_Generic_List_long___ctor__);
     max_length = servantIds->max_length;
     if ( (int)max_length >= 1 )
     {
-      v16 = 0;
+      v17 = 0;
       while ( 1 )
       {
-        if ( v16 >= (unsigned int)max_length )
-          sub_1D0F314(Instance);
-        if ( !v13 )
+        if ( v17 >= (unsigned int)max_length )
+          sub_21FFED4(Instance);
+        if ( !v14 )
           break;
-        v7 = servantIds->m_Items[v16];
-        items = v13->fields._items;
-        v18 = Method_System_Collections_Generic_List_long__Add__;
-        ++v13->fields._version;
+        items = v14->fields._items;
+        v7 = servantIds->m_Items[v17];
+        v19 = Method_System_Collections_Generic_List_long__Add__;
+        ++v14->fields._version;
         if ( !items )
           break;
-        size = v13->fields._size;
+        size = v14->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_long___AddWithResize(
-            v13,
+            v14,
             v7,
-            *(const MethodInfo_3944444 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_4438164 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
-          v13->fields._size = size + 1;
+          v14->fields._size = size + 1;
           items->m_Items[size] = v7;
         }
         LODWORD(max_length) = servantIds->max_length;
-        if ( (__int64)++v16 >= (int)max_length )
+        if ( (__int64)++v17 >= (int)max_length )
           goto LABEL_24;
       }
 LABEL_47:
-      sub_1D0F30C(Instance, v7);
+      sub_21FFECC(Instance, v7);
     }
 LABEL_24:
     Instance = (DataManager_o *)ServantSellConfirmListViewManager__GetSvtSortEntList(
                                   (ServantSellConfirmListViewManager_o *)Instance,
-                                  v13,
-                                  v14);
+                                  v14,
+                                  v15);
     if ( !Instance )
       goto LABEL_47;
-    v20 = (System_Collections_Generic_List_object__o *)Instance;
+    v21 = (System_Collections_Generic_List_object__o *)Instance;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v56,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v59,
       (System_Collections_Generic_List_object__o *)Instance,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-    *(_OWORD *)&v57.fields._list = *(_OWORD *)&v56.fields.currentCryptoKey;
-    v57.fields._current = (Il2CppObject *)v56.fields.fakeValue;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+    v62.fields._current = (Il2CppObject *)v59.fields.fakeValue;
+    *(_OWORD *)&v62.fields._list = *(_OWORD *)&v59.fields.currentCryptoKey;
+    v60 = 0;
+    v61 = &v62;
     while ( 1 )
     {
-      v21 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v57,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
-      if ( !v21 )
+      v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v62,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
+      if ( !v22 )
         break;
-      current = v57.fields._current;
+      current = v62.fields._current;
       if ( isExceeded )
       {
-        if ( !v57.fields._current )
-          sub_1D0F30C(v21, v22);
-        v21 = UserServantEntity__isExceeded((UserServantEntity_o *)v57.fields._current, 0);
-        if ( !v21 )
+        if ( !v62.fields._current )
+          sub_21FFECC(v22, v23);
+        v22 = UserServantEntity__isExceeded((UserServantEntity_o *)v62.fields._current, 0);
+        if ( !v22 )
           continue;
       }
       if ( !isSellLastServant )
         goto LABEL_36;
       if ( !current )
-        sub_1D0F30C(v21, v22);
+        sub_21FFECC(v22, v23);
       klass = current[5].klass;
       monitor = current[5].monitor;
-      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v60.fields.currentCryptoKey = klass;
-      *(_QWORD *)&v60.fields.fakeValue = monitor;
-      v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v60, 0);
+      if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v23, v24);
+      *(_QWORD *)&v65.fields.currentCryptoKey = klass;
+      *(_QWORD *)&v65.fields.fakeValue = monitor;
+      v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v65, 0);
       if ( !EquipedCommandCodeSellLastSvtList )
-        sub_1D0F30C(v26, (unsigned int)v26);
+        sub_21FFECC(v28, (unsigned int)v28);
       if ( System_Collections_Generic_List_int___Contains(
              EquipedCommandCodeSellLastSvtList,
-             v26,
-             (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__) )
+             v28,
+             (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__) )
       {
 LABEL_36:
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        v28 = System_Collections_Generic_List_object___IndexOf(
-                v20,
+        v30 = System_Collections_Generic_List_object___IndexOf(
+                v21,
                 current,
-                (const MethodInfo_395D0B0 *)Method_System_Collections_Generic_List_UserServantEntity__IndexOf__);
+                (const MethodInfo_44507B0 *)Method_System_Collections_Generic_List_UserServantEntity__IndexOf__);
         if ( !current )
-          sub_1D0F30C(v28, v29);
-        v30 = current[2];
-        v31 = v28;
-        v32 = equipIdList;
-        v33 = svtIdList;
-        *(Il2CppObject *)&v56.fields.currentCryptoKey = current[1];
-        *(Il2CppObject *)&v56.fields.fakeValue = v30;
-        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-        v55 = v56;
-        v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v55, 0);
+          sub_21FFECC(v30, v31);
+        v33 = v30;
+        v34 = current[2];
+        v35 = equipIdList;
+        v36 = svtIdList;
+        *(Il2CppObject *)&v59.fields.currentCryptoKey = current[1];
+        *(Il2CppObject *)&v59.fields.fakeValue = v34;
+        if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v31, v32);
+        v58 = v59;
+        v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v58, 0);
         if ( !SelfUserGame )
-          sub_1D0F30C(v34, v35);
+          sub_21FFECC(v37, v38);
         favoriteUserSvtId = SelfUserGame->fields.favoriteUserSvtId;
-        v37 = v34;
-        v38 = (ServantSellConfirmListViewItem_o *)sub_1D0F300(ServantSellConfirmListViewItem_TypeInfo);
+        v40 = v37;
+        v41 = (ServantSellConfirmListViewItem_o *)sub_21FFEBC(ServantSellConfirmListViewItem_TypeInfo);
         ServantSellConfirmListViewItem___ctor(
-          v38,
-          v31,
-          (UserServantEntity_o *)current,
+          v41,
           v33,
-          v32,
-          v37 == favoriteUserSvtId,
-          v39);
-        if ( !itemList )
-          sub_1D0F30C(v40, v41);
-        v48 = itemList->fields._items;
-        v49 = Method_System_Collections_Generic_List_ListViewItem__Add__;
-        ++itemList->fields._version;
-        if ( !v48 )
-          sub_1D0F30C(v40, v41);
-        v50 = itemList->fields._size;
-        if ( (unsigned int)v50 >= LODWORD(v48->max_length) )
+          (UserServantEntity_o *)current,
+          v36,
+          v35,
+          v40 == favoriteUserSvtId,
+          v42);
+        if ( !itemList
+          || (v51 = itemList->fields._items,
+              v52 = Method_System_Collections_Generic_List_ListViewItem__Add__,
+              ++itemList->fields._version,
+              !v51) )
+        {
+          sub_21FFECC(v43, v44);
+        }
+        v53 = itemList->fields._size;
+        if ( (unsigned int)v53 >= LODWORD(v51->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
-            (Il2CppObject *)v38,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+            (Il2CppObject *)v41,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
         }
         else
         {
-          v51 = &v48->obj.klass + v50;
-          itemList->fields._size = v50 + 1;
-          v51[4] = (Il2CppClass *)v38;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v51 + 4), (int32_t)v38, v42, v43, v44, v45, v46, v47);
+          v54 = &v51->obj.klass + v53;
+          itemList->fields._size = v53 + 1;
+          v54[4] = (Il2CppClass *)v41;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v54 + 4), (int32_t)v41, v45, v46, v47, v48, v49, v50);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v57,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+      &v62,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   }
 }
@@ -787,24 +804,25 @@ int64_t ServantSellConfirmListViewManager__GetAmountSortValue(
   System_Collections_Generic_List_object__o *itemList; // x0
   int64_t v6; // x21
   int32_t v7; // w22
+  __int64 v8; // x2
   __int64 naturalAligment; // x10
-  __int64 v9; // x23
-  struct System_Object_array *items; // x24
-  int32_t v11; // w8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
+  struct System_Object_array *items; // x23
+  __int64 v11; // x24
+  int32_t v12; // w8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4E736B2 & 1) == 0 )
+  if ( (byte_5934605 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    byte_4E736B2 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    byte_5934605 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_14:
-    sub_1D0F30C(itemList, *(_QWORD *)&svtId);
+    sub_21FFECC(itemList, *(_QWORD *)&svtId);
   v6 = 0;
   v7 = 0;
   while ( v7 < itemList->fields._size )
@@ -812,7 +830,7 @@ LABEL_14:
     itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               itemList,
                                                               v7,
-                                                              (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( itemList )
     {
       naturalAligment = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
@@ -820,16 +838,16 @@ LABEL_14:
         && (ServantSellConfirmListViewItem_c *)itemList->klass->_2.typeHierarchy[naturalAligment - 1] == ServantSellConfirmListViewItem_TypeInfo )
       {
         items = itemList[3].fields._items;
-        v9 = *(_QWORD *)&itemList[3].fields._size;
-        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v13.fields.currentCryptoKey = items;
-        *(_QWORD *)&v13.fields.fakeValue = v9;
-        v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v13, 0);
+        v11 = *(_QWORD *)&itemList[3].fields._size;
+        if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&svtId, v8);
+        *(_QWORD *)&v14.fields.currentCryptoKey = items;
+        *(_QWORD *)&v14.fields.fakeValue = v11;
+        v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v14, 0);
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        if ( v11 == svtId )
-          ++v6;
         ++v7;
+        if ( v12 == svtId )
+          ++v6;
         if ( itemList )
           continue;
       }
@@ -850,19 +868,19 @@ int64_t ServantSellConfirmListViewManager__GetCommandCodeAmountSortValue(
   int64_t v6; // x21
   int32_t v7; // w22
   __int64 naturalAligment; // x10
-  System_Collections_Generic_List_object__o *v9; // x8
+  int monitor; // w8
 
-  if ( (byte_4E736B3 & 1) == 0 )
+  if ( (byte_5934606 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    byte_4E736B3 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    byte_5934606 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_12:
-    sub_1D0F30C(itemList, *(_QWORD *)&commandCodeId);
+    sub_21FFECC(itemList, *(_QWORD *)&commandCodeId);
   v6 = 0;
   v7 = 0;
   while ( v7 < itemList->fields._size )
@@ -870,17 +888,17 @@ LABEL_12:
     itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               itemList,
                                                               v7,
-                                                              (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( itemList )
     {
       naturalAligment = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
       if ( itemList->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (ServantSellConfirmListViewItem_c *)itemList->klass->_2.typeHierarchy[naturalAligment - 1] == ServantSellConfirmListViewItem_TypeInfo )
       {
-        ++v7;
-        v9 = itemList;
+        monitor = (int)itemList[4].monitor;
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        if ( LODWORD(v9[4].monitor) != commandCodeId )
+        ++v7;
+        if ( monitor != commandCodeId )
           ++v6;
         if ( itemList )
           continue;
@@ -920,138 +938,144 @@ System_Collections_Generic_List_UserCommandCodeEntity__o *ServantSellConfirmList
   _BOOL8 v8; // x0
   __int64 v9; // x1
   Il2CppObject *Entity; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   Il2CppObject *v17; // x1
   struct System_Object_array *items; // x8
   _QWORD *v19; // x9
   __int64 size; // x10
   Il2CppClass **v21; // x0
-  System_Comparison_T__o *v22; // x20
-  Il2CppObject *v23; // x21
-  struct ServantSellConfirmListViewManager___c_StaticFields *static_fields; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  System_Collections_Generic_List_Enumerator_T__o v32; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v33; // [xsp+20h] [xbp-70h] BYREF
+  __int64 v22; // x2
+  struct ServantSellConfirmListViewManager___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__19_0; // x20
+  Il2CppObject *v25; // x21
+  struct ServantSellConfirmListViewManager___c_StaticFields *v26; // x0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  System_Collections_Generic_List_Enumerator_T__o v34; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4E736AD & 1) == 0 )
+  if ( (byte_5934600 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Comparison_UserCommandCodeEntity__TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserCommandCodeEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserCommandCodeEntity__Sort__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserCommandCodeEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_UserCommandCodeEntity__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&Method_ServantSellConfirmListViewManager___c__GetSortEntList_b__19_0__);
-    sub_1D0F0B4(&ServantSellConfirmListViewManager___c_TypeInfo);
-    byte_4E736AD = 1;
+    sub_21FFC50(&System_Comparison_UserCommandCodeEntity__TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserCommandCodeEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserCommandCodeEntity__Sort__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserCommandCodeEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_UserCommandCodeEntity__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&Method_ServantSellConfirmListViewManager___c__GetSortEntList_b__19_0__);
+    sub_21FFC50(&ServantSellConfirmListViewManager___c_TypeInfo);
+    byte_5934600 = 1;
   }
-  memset(&v33, 0, sizeof(v33));
-  v4 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UserCommandCodeEntity__TypeInfo);
+  memset(&v35, 0, sizeof(v35));
+  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UserCommandCodeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UserCommandCodeEntity___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UserCommandCodeEntity___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_24;
+    goto LABEL_23;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
   if ( !commandCodeIds )
-    goto LABEL_24;
+    goto LABEL_23;
   v7 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   System_Collections_Generic_List_long___GetEnumerator(
-    &v32,
+    &v34,
     commandCodeIds,
-    (const MethodInfo_3944F18 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
-  v33 = v32;
+    (const MethodInfo_4438C14 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
+  v35 = v34;
+  v34.fields._list = 0;
+  *(_QWORD *)&v34.fields._index = &v35;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_long___MoveNext(
-           &v33,
-           (const MethodInfo_36CB448 *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+           &v35,
+           (const MethodInfo_40C441C *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
     if ( !v8 )
       break;
     if ( !v7 )
-      sub_1D0F30C(v8, v9);
+      sub_21FFECC(v8, v9);
     Entity = DataMasterBase_object__object__long___GetEntity(
                v7,
-               (int64_t)v33.fields._current,
-               (const MethodInfo_353832C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+               (int64_t)v35.fields._current,
+               (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
     v17 = Entity;
-    if ( !v4 )
-      sub_1D0F30C(Entity, Entity);
-    items = v4->fields._items;
-    v19 = Method_System_Collections_Generic_List_UserCommandCodeEntity__Add__;
-    ++v4->fields._version;
-    if ( !items )
-      sub_1D0F30C(Entity, Entity);
+    if ( !v4
+      || (items = v4->fields._items,
+          v19 = Method_System_Collections_Generic_List_UserCommandCodeEntity__Add__,
+          ++v4->fields._version,
+          !items) )
+    {
+      sub_21FFECC(Entity, Entity);
+    }
     size = v4->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v4,
         Entity,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = &items->obj.klass + size;
       v4->fields._size = size + 1;
       v21[4] = (Il2CppClass *)v17;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v17, v11, v12, v13, v14, v15, v16);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v17, v11, v12, v13, v14, v15, v16);
     }
   }
   System_Collections_Generic_List_Enumerator_long___Dispose(
-    &v33,
-    (const MethodInfo_36CB444 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    &v35,
+    (const MethodInfo_40C4418 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
   Instance = ServantSellConfirmListViewManager___c_TypeInfo;
-  if ( !ServantSellConfirmListViewManager___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&ServantSellConfirmListViewManager___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ServantSellConfirmListViewManager___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(ServantSellConfirmListViewManager___c_TypeInfo, v6, v22);
     Instance = ServantSellConfirmListViewManager___c_TypeInfo;
   }
-  v22 = *(System_Comparison_T__o **)(*((_QWORD *)Instance + 23) + 16LL);
-  if ( !v22 )
+  static_fields = (struct ServantSellConfirmListViewManager___c_StaticFields *)*((_QWORD *)Instance + 23);
+  _9__19_0 = (System_Comparison_T__o *)static_fields->__9__19_0;
+  if ( !_9__19_0 )
   {
-    if ( !*((_DWORD *)Instance + 56) )
+    if ( !*((_DWORD *)Instance + 57) )
     {
-      j_il2cpp_runtime_class_init_0(Instance);
-      Instance = ServantSellConfirmListViewManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(Instance, v6, v22);
+      static_fields = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
     }
-    v23 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v22 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_UserCommandCodeEntity__TypeInfo);
+    v25 = (Il2CppObject *)static_fields->__9;
+    _9__19_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_UserCommandCodeEntity__TypeInfo);
     System_Comparison_object____ctor(
-      v22,
-      v23,
+      _9__19_0,
+      v25,
       Method_ServantSellConfirmListViewManager___c__GetSortEntList_b__19_0__,
       0);
-    static_fields = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
-    static_fields->__9__19_0 = (struct System_Comparison_UserCommandCodeEntity__o *)v22;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__19_0, (int32_t)v22, v25, v26, v27, v28, v29, v30);
+    v26 = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
+    v26->__9__19_0 = (struct System_Comparison_UserCommandCodeEntity__o *)_9__19_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->__9__19_0, (int32_t)_9__19_0, v27, v28, v29, v30, v31, v32);
   }
   if ( !v4 )
-LABEL_24:
-    sub_1D0F30C(Instance, v6);
-  System_Collections_Generic_List_object___Sort_60153556(
+LABEL_23:
+    sub_21FFECC(Instance, v6);
+  System_Collections_Generic_List_object___Sort_71636404(
     v4,
-    v22,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__Sort__);
+    _9__19_0,
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_UserCommandCodeEntity__Sort__);
   return (System_Collections_Generic_List_UserCommandCodeEntity__o *)v4;
 }
 
@@ -1068,138 +1092,144 @@ System_Collections_Generic_List_UserServantEntity__o *ServantSellConfirmListView
   _BOOL8 v8; // x0
   __int64 v9; // x1
   Il2CppObject *Entity; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   Il2CppObject *v17; // x1
   struct System_Object_array *items; // x8
   _QWORD *v19; // x9
   __int64 size; // x10
   Il2CppClass **v21; // x0
-  System_Comparison_T__o *v22; // x20
-  Il2CppObject *v23; // x21
-  struct ServantSellConfirmListViewManager___c_StaticFields *static_fields; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  System_Collections_Generic_List_Enumerator_T__o v32; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v33; // [xsp+20h] [xbp-70h] BYREF
+  __int64 v22; // x2
+  struct ServantSellConfirmListViewManager___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__16_0; // x20
+  Il2CppObject *v25; // x21
+  struct ServantSellConfirmListViewManager___c_StaticFields *v26; // x0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  System_Collections_Generic_List_Enumerator_T__o v34; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4E736AA & 1) == 0 )
+  if ( (byte_59345FD & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Comparison_UserServantEntity__TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_long__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserServantEntity__Sort__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&Method_ServantSellConfirmListViewManager___c__GetSvtSortEntList_b__16_0__);
-    sub_1D0F0B4(&ServantSellConfirmListViewManager___c_TypeInfo);
-    byte_4E736AA = 1;
+    sub_21FFC50(&System_Comparison_UserServantEntity__TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_long__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__Sort__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&Method_ServantSellConfirmListViewManager___c__GetSvtSortEntList_b__16_0__);
+    sub_21FFC50(&ServantSellConfirmListViewManager___c_TypeInfo);
+    byte_59345FD = 1;
   }
-  memset(&v33, 0, sizeof(v33));
-  v4 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  memset(&v35, 0, sizeof(v35));
+  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_24;
+    goto LABEL_23;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !servantIds )
-    goto LABEL_24;
+    goto LABEL_23;
   v7 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   System_Collections_Generic_List_long___GetEnumerator(
-    &v32,
+    &v34,
     servantIds,
-    (const MethodInfo_3944F18 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
-  v33 = v32;
+    (const MethodInfo_4438C14 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
+  v35 = v34;
+  v34.fields._list = 0;
+  *(_QWORD *)&v34.fields._index = &v35;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_long___MoveNext(
-           &v33,
-           (const MethodInfo_36CB448 *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+           &v35,
+           (const MethodInfo_40C441C *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
     if ( !v8 )
       break;
     if ( !v7 )
-      sub_1D0F30C(v8, v9);
+      sub_21FFECC(v8, v9);
     Entity = DataMasterBase_object__object__long___GetEntity(
                v7,
-               (int64_t)v33.fields._current,
-               (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+               (int64_t)v35.fields._current,
+               (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     v17 = Entity;
-    if ( !v4 )
-      sub_1D0F30C(Entity, Entity);
-    items = v4->fields._items;
-    v19 = Method_System_Collections_Generic_List_UserServantEntity__Add__;
-    ++v4->fields._version;
-    if ( !items )
-      sub_1D0F30C(Entity, Entity);
+    if ( !v4
+      || (items = v4->fields._items,
+          v19 = Method_System_Collections_Generic_List_UserServantEntity__Add__,
+          ++v4->fields._version,
+          !items) )
+    {
+      sub_21FFECC(Entity, Entity);
+    }
     size = v4->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v4,
         Entity,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = &items->obj.klass + size;
       v4->fields._size = size + 1;
       v21[4] = (Il2CppClass *)v17;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v17, v11, v12, v13, v14, v15, v16);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v17, v11, v12, v13, v14, v15, v16);
     }
   }
   System_Collections_Generic_List_Enumerator_long___Dispose(
-    &v33,
-    (const MethodInfo_36CB444 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    &v35,
+    (const MethodInfo_40C4418 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
   Instance = ServantSellConfirmListViewManager___c_TypeInfo;
-  if ( !ServantSellConfirmListViewManager___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&ServantSellConfirmListViewManager___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ServantSellConfirmListViewManager___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(ServantSellConfirmListViewManager___c_TypeInfo, v6, v22);
     Instance = ServantSellConfirmListViewManager___c_TypeInfo;
   }
-  v22 = *(System_Comparison_T__o **)(*((_QWORD *)Instance + 23) + 8LL);
-  if ( !v22 )
+  static_fields = (struct ServantSellConfirmListViewManager___c_StaticFields *)*((_QWORD *)Instance + 23);
+  _9__16_0 = (System_Comparison_T__o *)static_fields->__9__16_0;
+  if ( !_9__16_0 )
   {
-    if ( !*((_DWORD *)Instance + 56) )
+    if ( !*((_DWORD *)Instance + 57) )
     {
-      j_il2cpp_runtime_class_init_0(Instance);
-      Instance = ServantSellConfirmListViewManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(Instance, v6, v22);
+      static_fields = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
     }
-    v23 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v22 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_UserServantEntity__TypeInfo);
+    v25 = (Il2CppObject *)static_fields->__9;
+    _9__16_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_UserServantEntity__TypeInfo);
     System_Comparison_object____ctor(
-      v22,
-      v23,
+      _9__16_0,
+      v25,
       Method_ServantSellConfirmListViewManager___c__GetSvtSortEntList_b__16_0__,
       0);
-    static_fields = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
-    static_fields->__9__16_0 = (struct System_Comparison_UserServantEntity__o *)v22;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__16_0, (int32_t)v22, v25, v26, v27, v28, v29, v30);
+    v26 = ServantSellConfirmListViewManager___c_TypeInfo->static_fields;
+    v26->__9__16_0 = (struct System_Comparison_UserServantEntity__o *)_9__16_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->__9__16_0, (int32_t)_9__16_0, v27, v28, v29, v30, v31, v32);
   }
   if ( !v4 )
-LABEL_24:
-    sub_1D0F30C(Instance, v6);
-  System_Collections_Generic_List_object___Sort_60153556(
+LABEL_23:
+    sub_21FFECC(Instance, v6);
+  System_Collections_Generic_List_object___Sort_71636404(
     v4,
-    v22,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_UserServantEntity__Sort__);
+    _9__16_0,
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_UserServantEntity__Sort__);
   return (System_Collections_Generic_List_UserServantEntity__o *)v4;
 }
 
@@ -1237,222 +1267,243 @@ void ServantSellConfirmListViewManager__ModifyItem(
         int64_t selectedId,
         const MethodInfo *method)
 {
+  struct System_Collections_Generic_List_ListViewItem__o *itemList; // x8
   int32_t kind; // w21
   __int64 Instance; // x0
-  const MethodInfo *v7; // x1
-  int32_t v8; // w20
-  __int64 v9; // x21
+  const MethodInfo *v8; // x1
+  int32_t v9; // w20
+  __int64 v10; // x21
   __int64 naturalAligment; // x10
-  Il2CppObject v11; // q0
-  __int64 v12; // x22
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w1
-  UnityEngine_Object_o *v20; // x22
-  System_Collections_Generic_List_object__o *itemList; // x8
-  __int64 v22; // x20
-  int32_t v23; // w21
-  __int64 v24; // x22
-  __int64 v25; // x10
-  Il2CppObject v26; // q0
-  __int64 v27; // x23
-  const MethodInfo *v28; // x1
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
-  int32_t v35; // w1
-  __int64 v36; // x8
-  UnityEngine_Object_o *v37; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+0h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v39; // [xsp+20h] [xbp-B0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v40; // [xsp+40h] [xbp-90h]
-  Il2CppObject *v41; // [xsp+68h] [xbp-68h] BYREF
+  __int64 v12; // x2
+  __int64 v13; // x22
+  Il2CppObject v14; // q1
+  int v15; // w8
+  __int64 v16; // x1
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  int32_t v23; // w1
+  UnityEngine_Object_c *v24; // x0
+  UnityEngine_Object_o *v25; // x22
+  System_Collections_Generic_List_object__o *v26; // x8
+  __int64 v27; // x20
+  int32_t v28; // w21
+  __int64 v29; // x22
+  __int64 v30; // x10
+  __int64 v31; // x2
+  __int64 v32; // x23
+  Il2CppObject v33; // q1
+  int v34; // w8
+  const MethodInfo *v35; // x1
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  int32_t v42; // w1
+  __int64 v43; // x2
+  __int64 v44; // x8
+  UnityEngine_Object_o *v45; // x23
+  bool v46; // zf
+  UnityEngine_Object_c *v47; // x0
+  char v48; // w8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v49; // [xsp+0h] [xbp-D0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+20h] [xbp-B0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v51; // [xsp+40h] [xbp-90h]
+  Il2CppObject *v52; // [xsp+68h] [xbp-68h] BYREF
   Il2CppObject *entity; // [xsp+78h] [xbp-58h] BYREF
 
-  if ( (byte_4E736AE & 1) == 0 )
+  if ( (byte_5934601 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1D0F0B4(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E736AE = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934601 = 1;
   }
+  itemList = this->fields.itemList;
   entity = 0;
-  v41 = 0;
-  if ( !this->fields.itemList )
+  v52 = 0;
+  if ( !itemList )
     return;
   kind = this->fields.kind;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
-    goto LABEL_46;
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( kind == 2 )
   {
-    Instance = (__int64)DataManager__GetMasterData_object_(
-                          (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
     if ( Instance )
     {
-      if ( !DataMasterBase_object__object__long___TryGetEntity(
-              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-              &entity,
-              selectedId,
-              (const MethodInfo_3538378 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__TryGetEntity__) )
-        return;
-      Instance = (__int64)this->fields.itemList;
+      Instance = (__int64)DataManager__GetMasterData_object_(
+                            (DataManager_o *)Instance,
+                            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
       if ( Instance )
       {
-        v8 = 0;
-        while ( v8 < *(_DWORD *)(Instance + 24) )
+        if ( !DataMasterBase_object__object__long___TryGetEntity(
+                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
+                &entity,
+                selectedId,
+                (const MethodInfo_3EDFA34 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__TryGetEntity__) )
+          return;
+        Instance = (__int64)this->fields.itemList;
+        if ( Instance )
         {
-          Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                                (System_Collections_Generic_List_object__o *)Instance,
-                                v8,
-                                (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-          if ( Instance )
+          v9 = 0;
+          while ( v9 < *(_DWORD *)(Instance + 24) )
           {
-            v9 = Instance;
-            naturalAligment = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
-            if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 304LL) >= (unsigned int)naturalAligment
-              && *(ServantSellConfirmListViewItem_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL)
-                                                      + 8 * naturalAligment
-                                                      - 8) == ServantSellConfirmListViewItem_TypeInfo )
+            Instance = (__int64)System_Collections_Generic_List_object___get_Item(
+                                  (System_Collections_Generic_List_object__o *)Instance,
+                                  v9,
+                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+            if ( Instance )
             {
-              Instance = ServantSellConfirmListViewItem__get_UserCommandCodeId(
-                           (ServantSellConfirmListViewItem_o *)Instance,
-                           v7);
-              if ( entity )
+              v10 = Instance;
+              naturalAligment = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
+              if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 304LL) >= (unsigned int)naturalAligment
+                && *(ServantSellConfirmListViewItem_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL)
+                                                        + 8 * naturalAligment
+                                                        - 8) == ServantSellConfirmListViewItem_TypeInfo )
               {
-                v11 = entity[2];
-                v12 = Instance;
-                *(Il2CppObject *)&v40.fields.currentCryptoKey = entity[1];
-                *(Il2CppObject *)&v40.fields.fakeValue = v11;
-                if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-                  j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-                v39 = v40;
-                if ( v12 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v39, 0) )
+                Instance = ServantSellConfirmListViewItem__get_UserCommandCodeId(
+                             (ServantSellConfirmListViewItem_o *)Instance,
+                             v8);
+                if ( entity )
                 {
-                  v19 = (int)entity;
-                  *(_QWORD *)(v9 + 152) = entity;
-                  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 152), v19, v13, v14, v15, v16, v17, v18);
+                  v13 = Instance;
+                  v14 = entity[2];
+                  v15 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
+                  *(Il2CppObject *)&v51.fields.currentCryptoKey = entity[1];
+                  *(Il2CppObject *)&v51.fields.fakeValue = v14;
+                  if ( !v15 )
+                    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8, v12);
+                  v50 = v51;
+                  if ( v13 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v50, 0) )
+                  {
+                    v23 = (int)entity;
+                    *(_QWORD *)(v10 + 152) = entity;
+                    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v10 + 152), v23, v17, v18, v19, v20, v21, v22);
+                  }
+                  v24 = UnityEngine_Object_TypeInfo;
+                  *(_BYTE *)(v10 + 192) = 0;
+                  v25 = *(UnityEngine_Object_o **)(v10 + 112);
+                  *(_DWORD *)(v10 + 224) = -1;
+                  if ( !*(&v24->_2.cctor_finished + 1) )
+                    j_il2cpp_runtime_class_init_0(v24, v16, v17);
+                  if ( UnityEngine_Object__op_Inequality(v25, 0, 0) )
+                  {
+                    Instance = *(_QWORD *)(v10 + 112);
+                    if ( !Instance )
+                      goto LABEL_50;
+                    (*(void (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Instance + 392LL))(
+                      Instance,
+                      v10,
+                      *(_QWORD *)(*(_QWORD *)Instance + 400LL));
+                  }
+                  Instance = (__int64)this->fields.itemList;
+                  ++v9;
+                  if ( Instance )
+                    continue;
                 }
-                *(_BYTE *)(v9 + 192) = 0;
-                *(_DWORD *)(v9 + 224) = -1;
-                v20 = *(UnityEngine_Object_o **)(v9 + 112);
-                if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                  j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                if ( UnityEngine_Object__op_Inequality(v20, 0, 0) )
-                {
-                  Instance = *(_QWORD *)(v9 + 112);
-                  if ( !Instance )
-                    goto LABEL_46;
-                  (*(void (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Instance + 392LL))(
-                    Instance,
-                    v9,
-                    *(_QWORD *)(*(_QWORD *)Instance + 400LL));
-                }
-                Instance = (__int64)this->fields.itemList;
-                ++v8;
-                if ( Instance )
-                  continue;
               }
             }
+            goto LABEL_50;
           }
-          goto LABEL_46;
+          return;
         }
-        return;
       }
     }
-LABEL_46:
-    sub_1D0F30C(Instance, v7);
+LABEL_50:
+    sub_21FFECC(Instance, v8);
   }
+  if ( !Instance )
+    goto LABEL_50;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
-    goto LABEL_46;
+    goto LABEL_50;
   if ( !DataMasterBase_object__object__long___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-          &v41,
+          &v52,
           selectedId,
-          (const MethodInfo_3538378 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+          (const MethodInfo_3EDFA34 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
     return;
   Instance = (__int64)UserGameMaster__getSelfUserGame(0);
-  itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-  if ( !itemList )
-    goto LABEL_46;
-  v22 = Instance;
-  v23 = 0;
-  while ( v23 < itemList->fields._size )
+  v26 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
+  if ( !v26 )
+    goto LABEL_50;
+  v27 = Instance;
+  v28 = 0;
+  while ( v28 < v26->fields._size )
   {
     Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                          itemList,
-                          v23,
-                          (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                          v26,
+                          v28,
+                          (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( Instance )
     {
-      v24 = Instance;
-      v25 = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
-      if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 304LL) >= (unsigned int)v25
-        && *(ServantSellConfirmListViewItem_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL) + 8 * v25 - 8) == ServantSellConfirmListViewItem_TypeInfo )
+      v29 = Instance;
+      v30 = ServantSellConfirmListViewItem_TypeInfo->_2.naturalAligment;
+      if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 304LL) >= (unsigned int)v30
+        && *(ServantSellConfirmListViewItem_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL) + 8 * v30 - 8) == ServantSellConfirmListViewItem_TypeInfo )
       {
-        Instance = ServantSellConfirmListViewItem__get_UserSvtId((ServantSellConfirmListViewItem_o *)Instance, v7);
-        if ( v41 )
+        Instance = ServantSellConfirmListViewItem__get_UserSvtId((ServantSellConfirmListViewItem_o *)Instance, v8);
+        if ( v52 )
         {
-          v26 = v41[2];
-          v27 = Instance;
-          *(Il2CppObject *)&v40.fields.currentCryptoKey = v41[1];
-          *(Il2CppObject *)&v40.fields.fakeValue = v26;
-          if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-          v38 = v40;
-          if ( v27 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_50334724(&v38, 0) )
+          v32 = Instance;
+          v33 = v52[2];
+          v34 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
+          *(Il2CppObject *)&v51.fields.currentCryptoKey = v52[1];
+          *(Il2CppObject *)&v51.fields.fakeValue = v33;
+          if ( !v34 )
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8, v31);
+          v49 = v51;
+          if ( v32 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v49, 0) )
           {
-            v35 = (int)v41;
-            *(_QWORD *)(v24 + 120) = v41;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v24 + 120), v35, v29, v30, v31, v32, v33, v34);
+            v42 = (int)v52;
+            *(_QWORD *)(v29 + 120) = v52;
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v29 + 120), v42, v36, v37, v38, v39, v40, v41);
           }
-          Instance = ServantSellConfirmListViewItem__get_UserSvtId((ServantSellConfirmListViewItem_o *)v24, v28);
-          if ( v22 )
+          Instance = ServantSellConfirmListViewItem__get_UserSvtId((ServantSellConfirmListViewItem_o *)v29, v35);
+          if ( v27 )
           {
-            v36 = *(_QWORD *)(v22 + 120);
-            *(_DWORD *)(v24 + 224) = -1;
-            v37 = *(UnityEngine_Object_o **)(v24 + 112);
-            *(_BYTE *)(v24 + 192) = Instance == v36;
-            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            Instance = UnityEngine_Object__op_Inequality(v37, 0, 0);
+            v44 = *(_QWORD *)(v27 + 120);
+            *(_DWORD *)(v29 + 224) = -1;
+            v45 = *(UnityEngine_Object_o **)(v29 + 112);
+            v46 = Instance == v44;
+            v47 = UnityEngine_Object_TypeInfo;
+            v48 = v46;
+            *(_BYTE *)(v29 + 192) = v48;
+            if ( !*(&v47->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(v47, v8, v43);
+            Instance = UnityEngine_Object__op_Inequality(v45, 0, 0);
             if ( (Instance & 1) != 0 )
             {
-              Instance = *(_QWORD *)(v24 + 112);
+              Instance = *(_QWORD *)(v29 + 112);
               if ( !Instance )
-                goto LABEL_46;
+                goto LABEL_50;
               Instance = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Instance + 392LL))(
                            Instance,
-                           v24,
+                           v29,
                            *(_QWORD *)(*(_QWORD *)Instance + 400LL));
             }
-            itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-            ++v23;
-            if ( itemList )
+            v26 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
+            ++v28;
+            if ( v26 )
               continue;
           }
         }
       }
     }
-    goto LABEL_46;
+    goto LABEL_50;
   }
 }
 
@@ -1482,10 +1533,10 @@ void ServantSellConfirmListViewManager__OnMoveEnd(ServantSellConfirmListViewMana
   bool v4; // vf
   int32_t v5; // w8
 
-  if ( (byte_4E736B1 & 1) == 0 )
+  if ( (byte_5934604 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E736B1 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934604 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -1509,15 +1560,16 @@ void ServantSellConfirmListViewManager__RequestListObject(
   Il2CppObject *Item; // x23
   System_Action_o *v11; // x24
   const MethodInfo *v12; // x3
+  System_String_o *v13; // x1
 
-  if ( (byte_4E736B0 & 1) == 0 )
+  if ( (byte_5934603 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Item__);
-    sub_1D0F0B4(&Method_ServantSellConfirmListViewManager_OnMoveEnd__);
-    sub_1D0F0B4(&StringLiteral_10060/*"OnMoveEnd"*/);
-    byte_4E736B0 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Item__);
+    sub_21FFC50(&Method_ServantSellConfirmListViewManager_OnMoveEnd__);
+    sub_21FFC50(&StringLiteral_10331/*"OnMoveEnd"*/);
+    byte_5934603 = 1;
   }
   ObjectList = ServantSellConfirmListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
   if ( !ObjectList )
@@ -1533,8 +1585,8 @@ void ServantSellConfirmListViewManager__RequestListObject(
       Item = System_Collections_Generic_List_object___get_Item(
                v8,
                v9,
-               (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Item__);
-      v11 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__get_Item__);
+      v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_ServantSellConfirmListViewManager_OnMoveEnd__, 0);
       if ( !Item )
         break;
@@ -1543,10 +1595,11 @@ void ServantSellConfirmListViewManager__RequestListObject(
         return;
     }
 LABEL_10:
-    sub_1D0F30C(ObjectList, v6);
+    sub_21FFECC(ObjectList, v6);
   }
+  v13 = (System_String_o *)StringLiteral_10331/*"OnMoveEnd"*/;
   this->fields.callbackCount = 1;
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_10060/*"OnMoveEnd"*/, 0.0, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, v13, 0.0, 0);
 }
 
 
@@ -1581,27 +1634,27 @@ void ServantSellConfirmListViewManager__SetMode(
         System_Action_ServantSellConfirmListViewItem__o *onSelectItem,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v10; // x2
 
   this->fields.onSelectItem = onSelectItem;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onSelectItem,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onSelectItem,
     (int32_t)onSelectItem,
-    (int32_t)onSelectItem,
-    (int32_t)method,
+    (System_String_o *)onSelectItem,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
     v7);
-  ServantSellConfirmListViewManager__SetMode_36310132(this, mode, v10);
+  ServantSellConfirmListViewManager__SetMode_41842492(this, mode, v10);
 }
 
 
-void ServantSellConfirmListViewManager__SetMode_36310132(
+void ServantSellConfirmListViewManager__SetMode_41842492(
         ServantSellConfirmListViewManager_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -1639,26 +1692,41 @@ void ServantSellConfirmListViewManager__SetObjectItem(
         const MethodInfo *method)
 {
   ServantSellConfirmListViewManager_o *v5; // x20
-  __int64 naturalAligment; // x10
+  __int64 v6; // x10
   int32_t v7; // w1
+  __int64 naturalAligment; // x10
 
   v5 = this;
-  if ( (byte_4E736AF & 1) == 0 )
+  if ( (byte_5934602 & 1) == 0 )
   {
-    this = (ServantSellConfirmListViewManager_o *)sub_1D0F0B4(&ServantSellConfirmListViewObject_TypeInfo);
-    byte_4E736AF = 1;
+    this = (ServantSellConfirmListViewManager_o *)sub_21FFC50(&ServantSellConfirmListViewObject_TypeInfo);
+    byte_5934602 = 1;
   }
-  if ( !obj
-    || (naturalAligment = ServantSellConfirmListViewObject_TypeInfo->_2.naturalAligment,
-        obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
-    || (ServantSellConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != ServantSellConfirmListViewObject_TypeInfo )
+  if ( v5->fields.initMode != 2 )
   {
-    sub_1D0F30C(this, obj);
+    if ( obj )
+    {
+      naturalAligment = ServantSellConfirmListViewObject_TypeInfo->_2.naturalAligment;
+      if ( obj->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+        && (ServantSellConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] == ServantSellConfirmListViewObject_TypeInfo )
+      {
+        v7 = 2;
+        goto LABEL_12;
+      }
+    }
+LABEL_13:
+    sub_21FFECC(this, obj);
   }
-  if ( v5->fields.initMode == 2 )
-    v7 = 3;
-  else
-    v7 = 2;
+  if ( !obj )
+    goto LABEL_13;
+  v6 = ServantSellConfirmListViewObject_TypeInfo->_2.naturalAligment;
+  if ( obj->klass->_2.naturalAligment < (unsigned int)v6
+    || (ServantSellConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[v6 - 1] != ServantSellConfirmListViewObject_TypeInfo )
+  {
+    goto LABEL_13;
+  }
+  v7 = 3;
+LABEL_12:
   ServantSellConfirmListViewObject__Init((ServantSellConfirmListViewObject_o *)obj, v7, 0, method);
 }
 
@@ -1671,47 +1739,49 @@ System_Collections_Generic_List_ServantSellConfirmListViewObject__o *ServantSell
   const MethodInfo *v4; // x1
   System_Collections_Generic_List_object__o *objectList; // x0
   int32_t v6; // w21
+  __int64 v7; // x1
+  __int64 v8; // x2
   Il2CppObject *Item; // x22
-  Il2CppObject *v8; // x22
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  Il2CppObject *v10; // x22
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v20; // x0
 
-  if ( (byte_4E736A7 & 1) == 0 )
+  if ( (byte_59345FA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E736A7 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_21FFC50(&System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59345FA = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
 LABEL_21:
-    sub_1D0F30C(objectList, v4);
+    sub_21FFECC(objectList, v4);
   v6 = 0;
   while ( v6 < objectList->fields._size )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              objectList,
              v6,
-             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
     {
       objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
@@ -1720,15 +1790,15 @@ LABEL_21:
       objectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   objectList,
                                                                   v6,
-                                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !objectList )
         goto LABEL_21;
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)objectList,
-                                                                  (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
+                                                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
       if ( !objectList )
         goto LABEL_21;
-      v8 = (Il2CppObject *)objectList;
+      v10 = (Il2CppObject *)objectList;
       objectList = (System_Collections_Generic_List_object__o *)ServantSellConfirmListViewObject__GetItem(
                                                                   (ServantSellConfirmListViewObject_o *)objectList,
                                                                   v4);
@@ -1736,7 +1806,7 @@ LABEL_21:
       {
         v4 = (const MethodInfo *)objectList;
         if ( !LOBYTE(objectList[2].fields._items)
-          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_45173204(
+          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_50765052(
                                                                           (ListViewManager_o *)this,
                                                                           (ListViewItem_o *)objectList,
                                                                           0),
@@ -1745,7 +1815,7 @@ LABEL_21:
           if ( !v3 )
             goto LABEL_21;
           items = v3->fields._items;
-          v16 = Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__;
+          v18 = Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__;
           ++v3->fields._version;
           if ( !items )
             goto LABEL_21;
@@ -1754,15 +1824,15 @@ LABEL_21:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v3,
-              v8,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              v10,
+              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
-            v18 = &items->obj.klass + size;
+            v20 = &items->obj.klass + size;
             v3->fields._size = size + 1;
-            v18[4] = (Il2CppClass *)v8;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
+            v20[4] = (Il2CppClass *)v10;
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v10, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -1784,47 +1854,49 @@ System_Collections_Generic_List_ServantSellConfirmListViewObject__o *ServantSell
   __int64 v4; // x1
   System_Collections_Generic_List_object__o *objectList; // x0
   int32_t v6; // w21
+  __int64 v7; // x1
+  __int64 v8; // x2
   Il2CppObject *Item; // x22
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v15; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  System_Collections_Generic_List_object__o *v17; // x1
-  Il2CppClass **v18; // x0
+  System_Collections_Generic_List_object__o *v19; // x1
+  Il2CppClass **v20; // x0
 
-  if ( (byte_4E736A6 & 1) == 0 )
+  if ( (byte_59345F9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E736A6 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_21FFC50(&System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59345F9 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantSellConfirmListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantSellConfirmListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
 LABEL_17:
-    sub_1D0F30C(objectList, v4);
+    sub_21FFECC(objectList, v4);
   v6 = 0;
   while ( v6 < objectList->fields._size )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              objectList,
              v6,
-             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
     {
       objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
@@ -1833,34 +1905,34 @@ LABEL_17:
       objectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   objectList,
                                                                   v6,
-                                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !objectList )
         goto LABEL_17;
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)objectList,
-                                                                  (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
+                                                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
       if ( !v3 )
         goto LABEL_17;
       items = v3->fields._items;
-      v15 = Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__;
+      v17 = Method_System_Collections_Generic_List_ServantSellConfirmListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
         goto LABEL_17;
       size = v3->fields._size;
-      v17 = objectList;
+      v19 = objectList;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           (Il2CppObject *)objectList,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
-        v18 = &items->obj.klass + size;
+        v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v18[4] = (Il2CppClass *)v17;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v17, v8, v9, v10, v11, v12, v13);
+        v20[4] = (Il2CppClass *)v19;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
       }
     }
     objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
@@ -1875,23 +1947,23 @@ LABEL_17:
 void ServantSellConfirmListViewManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E736B4 & 1) == 0 )
+  if ( (byte_5934607 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantSellConfirmListViewManager___c_TypeInfo);
-    byte_4E736B4 = 1;
+    sub_21FFC50(&ServantSellConfirmListViewManager___c_TypeInfo);
+    byte_5934607 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(ServantSellConfirmListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(ServantSellConfirmListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantSellConfirmListViewManager___c_TypeInfo->static_fields->__9 = (struct ServantSellConfirmListViewManager___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)ServantSellConfirmListViewManager___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)ServantSellConfirmListViewManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -1917,51 +1989,55 @@ int32_t ServantSellConfirmListViewManager___c___GetSortEntList_b__19_0(
         const MethodInfo *method)
 {
   int32_t Rarity; // w21
-  __int64 v8; // x21
-  __int64 v9; // x22
-  int32_t v10; // w21
-  __int64 v11; // x20
-  __int64 v12; // x21
-  int32_t v13; // w0
-  __int64 v14; // x8
-  int32_t v15; // w19
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x21
+  __int64 v11; // x22
+  int32_t v12; // w21
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x20
+  __int64 v16; // x21
+  int32_t v17; // w0
+  __int64 v18; // x8
+  int32_t v19; // w19
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
-  if ( (byte_4E736B5 & 1) == 0 )
+  if ( (byte_5934608 & 1) == 0 )
   {
-    this = (ServantSellConfirmListViewManager___c_o *)sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4E736B5 = 1;
+    this = (ServantSellConfirmListViewManager___c_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_5934608 = 1;
   }
   if ( !a || (this = (ServantSellConfirmListViewManager___c_o *)UserCommandCodeEntity__GetRarity(a, 0), !b) )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   if ( (int)this < UserCommandCodeEntity__GetRarity(b, 0) )
     return 1;
   Rarity = UserCommandCodeEntity__GetRarity(a, 0);
   if ( Rarity > UserCommandCodeEntity__GetRarity(b, 0) )
     return -1;
-  v9 = *(_QWORD *)&a->fields.commandCodeId.fields.currentCryptoKey;
-  v8 = *(_QWORD *)&a->fields.commandCodeId.fields.fakeValue;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v16.fields.currentCryptoKey = v9;
-  *(_QWORD *)&v16.fields.fakeValue = v8;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v16, 0);
-  if ( v10 < CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(b->fields.commandCodeId, 0) )
-    return 1;
-  v12 = *(_QWORD *)&a->fields.commandCodeId.fields.currentCryptoKey;
+  v10 = *(_QWORD *)&a->fields.commandCodeId.fields.currentCryptoKey;
   v11 = *(_QWORD *)&a->fields.commandCodeId.fields.fakeValue;
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v17.fields.currentCryptoKey = v12;
-  *(_QWORD *)&v17.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v17, 0);
-  v14 = *(_QWORD *)&b->fields.commandCodeId.fields.currentCryptoKey;
-  *(_QWORD *)&v18.fields.fakeValue = *(_QWORD *)&b->fields.commandCodeId.fields.fakeValue;
-  v15 = v13;
-  *(_QWORD *)&v18.fields.currentCryptoKey = v14;
-  if ( v15 <= CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v18, 0) )
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8, v9);
+  *(_QWORD *)&v20.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v20.fields.fakeValue = v11;
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v20, 0);
+  if ( v12 < CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(b->fields.commandCodeId, 0) )
+    return 1;
+  v16 = *(_QWORD *)&a->fields.commandCodeId.fields.currentCryptoKey;
+  v15 = *(_QWORD *)&a->fields.commandCodeId.fields.fakeValue;
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13, v14);
+  *(_QWORD *)&v21.fields.currentCryptoKey = v16;
+  *(_QWORD *)&v21.fields.fakeValue = v15;
+  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v21, 0);
+  v18 = *(_QWORD *)&b->fields.commandCodeId.fields.currentCryptoKey;
+  *(_QWORD *)&v22.fields.fakeValue = *(_QWORD *)&b->fields.commandCodeId.fields.fakeValue;
+  v19 = v17;
+  *(_QWORD *)&v22.fields.currentCryptoKey = v18;
+  if ( v19 <= CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v22, 0) )
     return 0;
   else
     return -1;
@@ -1979,7 +2055,7 @@ int32_t ServantSellConfirmListViewManager___c___GetSvtSortEntList_b__16_0(
   int32_t v9; // w20
 
   if ( !a || (this = (ServantSellConfirmListViewManager___c_o *)UserServantEntity__getRarity(a, 0), !b) )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   if ( (int)this < UserServantEntity__getRarity(b, 0) )
     return 1;
   Rarity = UserServantEntity__getRarity(a, 0);

@@ -10,12 +10,12 @@ CharaGraphFilterLogicBase_o *CharaGraphSortManageUnitGrandEquip__CreateFilterLog
 {
   ServantCharaGraphEquipFilterLogic_o *v2; // x19
 
-  if ( (byte_4E721FE & 1) == 0 )
+  if ( (byte_59331FB & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantCharaGraphEquipFilterLogicGrand_TypeInfo);
-    byte_4E721FE = 1;
+    sub_21FFC50(&ServantCharaGraphEquipFilterLogicGrand_TypeInfo);
+    byte_59331FB = 1;
   }
-  v2 = (ServantCharaGraphEquipFilterLogic_o *)sub_1D0F300(ServantCharaGraphEquipFilterLogicGrand_TypeInfo);
+  v2 = (ServantCharaGraphEquipFilterLogic_o *)sub_21FFEBC(ServantCharaGraphEquipFilterLogicGrand_TypeInfo);
   ServantCharaGraphEquipFilterLogic___ctor(v2, 0);
   return (CharaGraphFilterLogicBase_o *)v2;
 }

@@ -8,16 +8,16 @@ void BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, const MethodInf
 {
   ItemIconComponent_o *itemIcon; // x0
 
-  if ( (byte_4E7180D & 1) == 0 )
+  if ( (byte_59325C0 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7180D = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59325C0 = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon
     || (ItemIconComponent__Clear(itemIcon, 0), (itemIcon = (ItemIconComponent_o *)this->fields.dataLabel) == 0) )
   {
-    sub_1D0F30C(itemIcon, method);
+    sub_21FFECC(itemIcon, method);
   }
   UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -31,12 +31,14 @@ void BoxGachaItemComponent__Set(
         const MethodInfo *method)
 {
   ItemIconComponent_o *itemIcon; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
   UILabel_o *dataLabel; // x20
 
-  if ( (byte_4E7180E & 1) == 0 )
+  if ( (byte_59325C1 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E7180E = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_59325C1 = 1;
   }
   if ( itemId < 1 )
   {
@@ -49,12 +51,12 @@ void BoxGachaItemComponent__Set(
       goto LABEL_10;
     ItemIconComponent__SetItem(itemIcon, itemId, -1, 1, 0);
     dataLabel = this->fields.dataLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v9);
     itemIcon = (ItemIconComponent_o *)LocalizationManager__GetNumberFormat(payNum, 0);
     if ( !dataLabel )
 LABEL_10:
-      sub_1D0F30C(itemIcon, *(_QWORD *)&itemId);
+      sub_21FFECC(itemIcon, *(_QWORD *)&itemId);
     UILabel__set_text(dataLabel, (System_String_o *)itemIcon, 0);
   }
 }

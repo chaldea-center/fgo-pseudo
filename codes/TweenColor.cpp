@@ -15,8 +15,8 @@ TweenColor_o *TweenColor__Begin(
 {
   float a; // s8
   float b; // s9
-  float g; // s11
-  float r; // s12
+  float g; // s10
+  float r; // s11
   TweenColor_o *v10; // x0
   const MethodInfo *v11; // x1
   TweenColor_o *v12; // x19
@@ -26,17 +26,17 @@ TweenColor_o *TweenColor__Begin(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4E7BFC9 & 1) == 0 )
+  if ( (byte_593CF12 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenColor___);
-    byte_4E7BFC9 = 1;
+    sub_21FFC50(&Method_UITweener_Begin_TweenColor___);
+    byte_593CF12 = 1;
   }
   v10 = (TweenColor_o *)UITweener__Begin_object_(
                           go,
                           duration,
-                          (const MethodInfo_332666C *)Method_UITweener_Begin_TweenColor___);
+                          (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenColor___);
   if ( !v10 )
-    sub_1D0F30C(0, v11);
+    sub_21FFECC(0, v11);
   v12 = v10;
   v10->fields.from = TweenColor__get_value(v10, v11);
   v12->fields.to.fields.r = r;
@@ -54,110 +54,128 @@ TweenColor_o *TweenColor__Begin(
 
 void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
 {
+  const MethodInfo_37ED7E0 *v3; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  __int64 v11; // x1
   UnityEngine_Object_o *mWidget; // x21
-  Il2CppObject *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
   UnityEngine_Object_o *mSr; // x21
-  Il2CppObject *v19; // x21
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
+  __int64 v22; // x1
+  Il2CppObject *v23; // x21
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
   struct UnityEngine_Material_o *material; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  int32_t v29; // w1
-  GrandQuestFolderBoardItem_o *p_mMat; // x0
-  Il2CppObject *v31; // x0
-  int32_t v32; // w2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  int32_t v35; // w5
-  int64_t v36; // x6
-  System_String_o *v37; // x7
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  Il2CppObject *ComponentInChildren_object__58644924; // x1
+  MissionNaviTransitionBoardItem_o *p_mMat; // x0
+  Il2CppObject *v35; // x0
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  __int64 v42; // x1
   UnityEngine_Object_o *mLight; // x21
-  Il2CppObject *ComponentInChildren_object__52714476; // x0
 
-  if ( (byte_4E7BFC6 & 1) == 0 )
+  if ( (byte_593CF0F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Light___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC6 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Light___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF0F = 1;
   }
+  v3 = (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___;
   this->fields.mCached = 1;
-  Component_object = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+  Component_object = UnityEngine_Component__GetComponent_object_((UnityEngine_Component_o *)this, v3);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
+    (int32_t)Component_object,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
   if ( !UnityEngine_Object__op_Inequality(mWidget, 0, 0) )
   {
-    v11 = UnityEngine_Component__GetComponent_object_(
+    v13 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v11;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSr, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v13;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSr, (int32_t)v13, v14, v15, v16, v17, v18, v19);
     mSr = (UnityEngine_Object_o *)this->fields.mSr;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
     if ( !UnityEngine_Object__op_Inequality(mSr, 0, 0) )
     {
-      v19 = UnityEngine_Component__GetComponent_object_(
+      v23 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v20 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0);
-      if ( v20 )
+              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+      v24 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0, 0);
+      if ( v24 )
       {
-        if ( !v19 )
-          sub_1D0F30C(v20, v21);
-        material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v19, 0);
+        if ( !v23 )
+          sub_21FFECC(v24, v25);
+        material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v23, 0);
+        LODWORD(ComponentInChildren_object__58644924) = (_DWORD)material;
         this->fields.mMat = material;
-        v29 = (int)material;
-        p_mMat = (GrandQuestFolderBoardItem_o *)&this->fields.mMat;
+        p_mMat = (MissionNaviTransitionBoardItem_o *)&this->fields.mMat;
       }
       else
       {
-        v31 = UnityEngine_Component__GetComponent_object_(
+        v35 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Light___);
-        this->fields.mLight = (struct UnityEngine_Light_o *)v31;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mLight, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+                (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Light___);
+        this->fields.mLight = (struct UnityEngine_Light_o *)v35;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.mLight,
+          (int32_t)v35,
+          v36,
+          v37,
+          v38,
+          v39,
+          v40,
+          v41);
         mLight = (UnityEngine_Object_o *)this->fields.mLight;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v42);
         if ( !UnityEngine_Object__op_Equality(mLight, 0, 0) )
           return;
-        ComponentInChildren_object__52714476 = UnityEngine_Component__GetComponentInChildren_object__52714476(
+        ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3245BEC *)Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
-        v29 = (int)ComponentInChildren_object__52714476;
-        this->fields.mWidget = (struct UIWidget_o *)ComponentInChildren_object__52714476;
-        p_mMat = (GrandQuestFolderBoardItem_o *)&this->fields.mWidget;
+                                                 (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
+        p_mMat = (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget;
+        this->fields.mWidget = (struct UIWidget_o *)ComponentInChildren_object__58644924;
       }
-      sub_1D0F058(p_mMat, v29, v23, v24, v25, v26, v27, v28);
+      sub_21FFBF4(p_mMat, (int32_t)ComponentInChildren_object__58644924, v27, v28, v29, v30, v31, v32);
     }
   }
 }
@@ -166,22 +184,22 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
 // local variable allocation has failed, the output may be wrong!
 void TweenColor__OnUpdate(TweenColor_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
-  bool v4; // nf
-  float v5; // s0
-  UnityEngine_Color_o v6; // q0 OVERLAPPED
+  float v4; // s1
+  UnityEngine_Color_o v5; // q0 OVERLAPPED
   float g; // s1
-  __int64 v8; // kr00_8
+  __int64 v7; // kr00_8
 
-  v4 = factor < 0.0;
-  v5 = fminf(factor, 1.0);
-  if ( v4 )
-    v5 = 0.0;
-  v6 = (UnityEngine_Color_o)vaddq_f32(
+  v4 = 1.0;
+  if ( factor <= 1.0 )
+    v4 = factor;
+  if ( factor < 0.0 )
+    v4 = 0.0;
+  v5 = (UnityEngine_Color_o)vaddq_f32(
                               (float32x4_t)this->fields.from,
-                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v5));
-  g = v6.fields.g;
-  v8 = *(_QWORD *)&v6.fields.b;
-  TweenColor__set_value(this, v6, (const MethodInfo *)isFinished);
+                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4));
+  g = v5.fields.g;
+  v7 = *(_QWORD *)&v5.fields.b;
+  TweenColor__set_value(this, v5, (const MethodInfo *)isFinished);
 }
 
 
@@ -232,22 +250,22 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
   UnityEngine_Object_o *mLight; // x20
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7BFC7 & 1) == 0 )
+  if ( (byte_593CF10 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC7 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF10 = 1;
   }
   if ( !this->fields.mCached )
     TweenColor__Cache(this, method);
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   v4 = (UnityEngine_Material_o *)UnityEngine_Object__op_Inequality(mWidget, 0, 0);
   if ( ((unsigned __int8)v4 & 1) == 0 )
   {
     mMat = (UnityEngine_Object_o *)this->fields.mMat;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
     if ( UnityEngine_Object__op_Inequality(mMat, 0, 0) )
     {
       v4 = this->fields.mMat;
@@ -260,8 +278,8 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
     else
     {
       mSr = (UnityEngine_Object_o *)this->fields.mSr;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
       if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
       {
         v4 = (UnityEngine_Material_o *)this->fields.mSr;
@@ -274,14 +292,14 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
       else
       {
         mLight = (UnityEngine_Object_o *)this->fields.mLight;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
         if ( !UnityEngine_Object__op_Inequality(mLight, 0, 0) )
         {
-          a = 1.0;
           r = 0.0;
           g = 0.0;
           b = 0.0;
+          a = 1.0;
           goto LABEL_27;
         }
         v4 = (UnityEngine_Material_o *)this->fields.mLight;
@@ -293,7 +311,7 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
       }
     }
 LABEL_26:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
   v6 = this->fields.mWidget;
   if ( !v6 )
@@ -320,10 +338,10 @@ void TweenColor__set_color(TweenColor_o *this, UnityEngine_Color_o value, const 
 
 void TweenColor__set_value(TweenColor_o *this, UnityEngine_Color_o value, const MethodInfo *method)
 {
-  float a; // s11
+  float a; // s10
   float b; // s8
   float g; // s9
-  float r; // s10
+  float r; // s11
   UnityEngine_Object_o *mWidget; // x20
   const MethodInfo *v9; // x1
   UIWidget_o *v10; // x0
@@ -339,16 +357,16 @@ void TweenColor__set_value(TweenColor_o *this, UnityEngine_Color_o value, const 
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4E7BFC8 & 1) == 0 )
+  if ( (byte_593CF11 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC8 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF11 = 1;
   }
   if ( !this->fields.mCached )
     TweenColor__Cache(this, method);
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mWidget, 0, 0) )
   {
     v10 = this->fields.mWidget;
@@ -362,11 +380,11 @@ void TweenColor__set_value(TweenColor_o *this, UnityEngine_Color_o value, const 
       return;
     }
 LABEL_27:
-    sub_1D0F30C(v10, v9);
+    sub_21FFECC(v10, v9);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   if ( UnityEngine_Object__op_Inequality(mMat, 0, 0) )
   {
     v10 = (UIWidget_o *)this->fields.mMat;
@@ -381,8 +399,8 @@ LABEL_27:
   else
   {
     mSr = (UnityEngine_Object_o *)this->fields.mSr;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
     {
       v10 = (UIWidget_o *)this->fields.mSr;
@@ -397,8 +415,8 @@ LABEL_27:
     else
     {
       mLight = (UnityEngine_Object_o *)this->fields.mLight;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
       if ( UnityEngine_Object__op_Inequality(mLight, 0, 0) )
       {
         v10 = (UIWidget_o *)this->fields.mLight;

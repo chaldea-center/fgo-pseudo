@@ -26,27 +26,22 @@ void EventSaveData__SetValueByArray(
 {
   System_String_o *v6; // x0
   struct System_String_o *v7; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
-  uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  bool v12; // w6
+  bool v13; // w7
+  uint16_t v14; // [xsp+Ch] [xbp-14h] BYREF
 
   v14 = separator;
-  if ( (byte_4E748BC & 1) == 0 )
-  {
-    sub_1D0F0B4(&char_TypeInfo);
-    byte_4E748BC = 1;
-  }
   if ( valueArray )
   {
-    if ( !char_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(char_TypeInfo);
+    if ( !*(_DWORD *)(qword_594C0B0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_594C0B0, valueArray, separator);
     v6 = System_Char__ToString((uint16_t)&v14, 0);
     v7 = System_String__Join(v6, valueArray, 0);
     this->fields.value = v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

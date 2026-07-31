@@ -1,13 +1,13 @@
 void BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77363 & 1) == 0 )
+  if ( (byte_5938330 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77363 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_5938330 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -32,13 +32,13 @@ BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
 {
   struct BoardMessageEntity_TimeData_array *script; // x8
   il2cpp_array_size_t max_length; // x9
-  unsigned int v5; // w10
-  unsigned int v6; // w11
-  __int64 v7; // x12
-  BoardMessageEntity_TimeData_o *v8; // x13
-  int64_t v9; // x13
-  _BOOL4 v10; // w14
-  _BOOL4 v11; // w15
+  __int64 v5; // x11
+  unsigned int v6; // w10
+  __int64 v7; // x13
+  BoardMessageEntity_TimeData_o *v8; // x14
+  int64_t v9; // x14
+  _BOOL4 v10; // w15
+  _BOOL4 v11; // w16
 
   script = this->fields.script;
   if ( !script )
@@ -48,7 +48,7 @@ BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
     return 0;
   if ( (int)max_length < 1 )
   {
-    v5 = 0;
+    v6 = 0;
   }
   else
   {
@@ -57,23 +57,23 @@ BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
     v7 = 0x7FFFFFFFFFFFFFFFLL;
     do
     {
-      v8 = script->m_Items[v6];
+      v8 = script->m_Items[v5];
       if ( !v8 )
-        sub_1D0F30C(this, nowTime);
+        sub_21FFECC(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
       if ( v10 && v11 )
-        v5 = v6;
-      ++v6;
+        v6 = v5;
+      ++v5;
       if ( v10 && v11 )
         v7 = v9;
     }
-    while ( (_DWORD)max_length != v6 );
+    while ( (_DWORD)max_length != (_DWORD)v5 );
   }
-  if ( v5 >= (unsigned int)max_length )
-    sub_1D0F314(this);
-  return script->m_Items[v5];
+  if ( v6 >= (unsigned int)max_length )
+    sub_21FFED4(this);
+  return script->m_Items[v6];
 }
 
 

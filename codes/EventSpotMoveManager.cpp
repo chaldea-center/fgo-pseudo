@@ -1,9 +1,9 @@
 void EventSpotMoveManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E7161C & 1) == 0 )
+  if ( (byte_59323D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventSpotMoveManager_TypeInfo);
-    byte_4E7161C = 1;
+    sub_21FFC50(&EventSpotMoveManager_TypeInfo);
+    byte_59323D1 = 1;
   }
   LODWORD(EventSpotMoveManager_TypeInfo->static_fields->MOVE_SPEED) = (struct EventSpotMoveManager_StaticFields)1123024896;
 }
@@ -12,19 +12,25 @@ void EventSpotMoveManager___cctor(const MethodInfo *method)
 void EventSpotMoveManager___ctor(EventSpotMoveManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E7161B & 1) == 0 )
+  if ( (byte_59323D0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
-    byte_4E7161B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
+    byte_59323D0 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData___ctor__);
   this->fields.eventSpotMoveDataList = (struct System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__o *)v3;
-  sub_1D0F058(&this->fields, v3);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -34,25 +40,32 @@ void EventSpotMoveManager__Add(
         EventSpotMoveManager_SpotMoveData_o *data,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *eventSpotMoveDataList; // x0
-  struct System_Object_array *items; // x8
-  _QWORD *v7; // x9
-  __int64 size; // x10
-  Il2CppClass **v9; // x8
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  EventSpotMoveManager_o *v9; // x20
+  System_Collections_Generic_List_object__o *eventSpotMoveDataList; // x8
+  struct System_Object_array *items; // x9
+  _QWORD *v12; // x10
+  __int64 size; // x11
+  Il2CppClass **v14; // x0
 
-  if ( (byte_4E71615 & 1) == 0 )
+  v9 = this;
+  if ( (byte_59323CA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
-    byte_4E71615 = 1;
+    this = (EventSpotMoveManager_o *)sub_21FFC50(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__);
+    byte_59323CA = 1;
   }
-  eventSpotMoveDataList = (System_Collections_Generic_List_object__o *)this->fields.eventSpotMoveDataList;
+  eventSpotMoveDataList = (System_Collections_Generic_List_object__o *)v9->fields.eventSpotMoveDataList;
   if ( !eventSpotMoveDataList
     || (items = eventSpotMoveDataList->fields._items,
-        v7 = Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__,
+        v12 = Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Add__,
         ++eventSpotMoveDataList->fields._version,
         !items) )
   {
-    sub_1D0F30C(eventSpotMoveDataList, data);
+    sub_21FFECC(this, data);
   }
   size = eventSpotMoveDataList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -60,14 +73,22 @@ void EventSpotMoveManager__Add(
     System_Collections_Generic_List_object___AddWithResize(
       eventSpotMoveDataList,
       (Il2CppObject *)data,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
-    v9 = &items->obj.klass + size;
+    v14 = &items->obj.klass + size;
     eventSpotMoveDataList->fields._size = size + 1;
-    v9[4] = (Il2CppClass *)data;
-    sub_1D0F058(v9 + 4, data);
+    v14[4] = (Il2CppClass *)data;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)(v14 + 4),
+      (int32_t)data,
+      (System_String_o *)method,
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
   }
 }
 
@@ -92,60 +113,59 @@ float EventSpotMoveManager__CalcSpotPathRate(
 {
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
+  float v9; // s8
   int32_t valueType; // w8
-  DataManager_o *v10; // x20
-  float v11; // s8
-  bool HasPrioredData; // w0
+  DataManager_o *v11; // x20
   float GoalRate; // s0
   EventRaidEntity_o *Entity; // x0
-  EventRaidEntity_o *v15; // x21
+  EventRaidEntity_o *v14; // x21
   TotalEventRaidEntity_o *TotalEventRaidEntity; // x0
   int64_t startedAt; // x22
-  TotalEventRaidEntity_o *v18; // x20
-  __int64 v19; // x21
-  bool IsStopRaidDeadTime; // w0
+  TotalEventRaidEntity_o *v17; // x20
+  __int64 v18; // x21
+  __int64 v19; // x1
+  __int64 v20; // x2
   int64_t Time; // x0
+  float v22; // s0
   int32_t data; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E71618 & 1) == 0 )
+  if ( (byte_59323CD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_SpotAddMaster___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E71618 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_SpotAddMaster___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59323CD = 1;
   }
   data = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !spotPathEnt )
-    goto LABEL_26;
+    goto LABEL_31;
+  v9 = 0.0;
   valueType = spotPathEnt->fields.valueType;
-  v10 = (DataManager_o *)Instance;
-  v11 = 0.0;
+  v11 = (DataManager_o *)Instance;
   if ( valueType != 2 )
   {
     if ( valueType != 1 )
-      return v11;
+      return v9;
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SpotAddMaster___);
+                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SpotAddMaster___);
       if ( Instance )
       {
-        HasPrioredData = SpotAddMaster__HasPrioredData(
-                           (SpotAddMaster_o *)Instance,
-                           3,
-                           spotPathEnt->fields.spotId,
-                           &data,
-                           0);
-        v11 = 2.0;
-        if ( (unsigned int)data <= 0x3E8 && HasPrioredData )
-          v11 = (float)data / 1000.0;
+        v9 = 2.0;
+        if ( SpotAddMaster__HasPrioredData((SpotAddMaster_o *)Instance, 3, spotPathEnt->fields.spotId, &data, 0)
+          && (data & 0x80000000) == 0
+          && data <= 1000 )
+        {
+          v9 = (float)data / 1000.0;
+        }
         Instance = DataManager__GetMasterData_object_(
-                     v10,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                     v11,
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaceMaster___);
         if ( Instance )
         {
           GoalRate = EventRaceMaster__GetGoalRate(
@@ -154,40 +174,45 @@ float EventSpotMoveManager__CalcSpotPathRate(
                        spotPathEnt->fields.targetId % 100,
                        spotPathEnt->fields.targetValue,
                        0);
-          if ( v11 >= GoalRate )
+          if ( v9 >= GoalRate )
             return GoalRate;
-          return v11;
+          return v9;
         }
       }
     }
-LABEL_26:
-    sub_1D0F30C(Instance, v8);
+LABEL_31:
+    sub_21FFECC(Instance, v8);
   }
   if ( !Instance )
-    goto LABEL_26;
+    goto LABEL_31;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaidMaster___);
   if ( !Instance )
-    goto LABEL_26;
+    goto LABEL_31;
   Entity = EventRaidMaster__GetEntity((EventRaidMaster_o *)Instance, eventId, raidId, 0);
   if ( Entity )
   {
-    v15 = Entity;
+    v14 = Entity;
     TotalEventRaidEntity = EventRaidEntity__getTotalEventRaidEntity(Entity, 0);
-    startedAt = v15->fields.startedAt;
-    v18 = TotalEventRaidEntity;
-    v19 = v15->fields.timeLimitAt - startedAt;
-    IsStopRaidDeadTime = SpotPathEntity__IsStopRaidDeadTime(spotPathEnt, 0);
-    if ( !v18 || !IsStopRaidDeadTime || (Time = v18->fields.defeatedAt, Time <= 0) )
+    startedAt = v14->fields.startedAt;
+    v17 = TotalEventRaidEntity;
+    v18 = v14->fields.timeLimitAt - startedAt;
+    if ( !SpotPathEntity__IsStopRaidDeadTime(spotPathEnt, 0) || !v17 || (Time = v17->fields.defeatedAt, Time <= 0) )
     {
-      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v19, v20);
       Time = NetworkManager__getTime(0);
     }
-    return fmaxf(fminf((float)(Time - startedAt) / (float)v19, 1.0), 0.0);
+    v22 = (float)(Time - startedAt) / (float)v18;
+    if ( v22 > 1.0 )
+      v22 = 1.0;
+    if ( v22 >= 0.0 )
+      return v22;
+    else
+      return 0.0;
   }
-  return v11;
+  return v9;
 }
 
 
@@ -196,59 +221,83 @@ void EventSpotMoveManager__Clear(EventSpotMoveManager_o *this, const MethodInfo 
   System_Collections_Generic_List_object__o *eventSpotMoveDataList; // x0
   _BOOL8 v4; // x0
   __int64 v5; // x1
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
   Il2CppObject *current; // x22
-  struct System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__o *v7; // x8
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  struct System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__o *v19; // x8
   int32_t size; // w2
-  int v9; // w9
-  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-48h] BYREF
+  int v21; // w9
+  __int64 v22; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v23; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E71614 & 1) == 0 )
+  if ( (byte_59323C9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
-    byte_4E71614 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    byte_59323C9 = 1;
   }
-  memset(&v10, 0, sizeof(v10));
   eventSpotMoveDataList = (System_Collections_Generic_List_object__o *)this->fields.eventSpotMoveDataList;
+  memset(&v24, 0, sizeof(v24));
   if ( !eventSpotMoveDataList )
     goto LABEL_13;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v10,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     eventSpotMoveDataList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+  v22 = 0;
+  v23 = &v24;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v10,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
+           &v24,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
     if ( !v4 )
       break;
-    current = v10.fields._current;
-    if ( !v10.fields._current )
-      sub_1D0F30C(v4, v5);
-    *(Il2CppClass **)((char *)&v10.fields._current->klass + (unsigned __int64)&off_18) = 0;
+    current = v24.fields._current;
+    if ( !v24.fields._current )
+      sub_21FFECC(v4, v5);
+    *(Il2CppClass **)((char *)&v24.fields._current->klass + (unsigned __int64)off_18) = 0;
     *(_DWORD *)((char *)&word_10 + (_QWORD)current) = 0;
-    sub_1D0F058((char *)&off_18 + (_QWORD)current, 0);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)off_18 + (_QWORD)current), 0, v6, v7, v8, v9, v10, v11);
     *(__int64 *)((char *)&qword_20 + (_QWORD)current) = 0;
-    sub_1D0F058((char *)&qword_20 + (_QWORD)current, 0);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)((char *)&qword_20 + (_QWORD)current),
+      0,
+      v13,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18);
     *(_DWORD *)((char *)&qword_28 + (_QWORD)current) = 0;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v10,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-  v7 = this->fields.eventSpotMoveDataList;
-  if ( !v7 )
+    &v24,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+  v19 = this->fields.eventSpotMoveDataList;
+  if ( !v19 )
 LABEL_13:
-    sub_1D0F30C(eventSpotMoveDataList, method);
-  size = v7->fields._size;
-  v9 = v7->fields._version + 1;
-  v7->fields._size = 0;
-  v7->fields._version = v9;
+    sub_21FFECC(eventSpotMoveDataList, method);
+  size = v19->fields._size;
+  v21 = v19->fields._version + 1;
+  v19->fields._size = 0;
+  v19->fields._version = v21;
   if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)v7->fields._items, 0, size, 0);
+    System_Array__Clear((System_Array_o *)v19->fields._items, 0, size, 0);
 }
 
 
@@ -269,27 +318,27 @@ SpotPathEntity_o *EventSpotMoveManager__GetSpotPathEntity(
   __int64 v5; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E7161A & 1) == 0 )
+  if ( (byte_59323CF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_SpotPathMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7161A = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_SpotPathMaster___);
+    sub_21FFC50(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59323CF = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SpotPathMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SpotPathMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v5);
+    sub_21FFECC(Instance, v5);
   }
   DataMasterBase_object__object__int___TryGetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
     &entity,
     spotId,
-    (const MethodInfo_3535BC8 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
+    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
   return (SpotPathEntity_o *)entity;
 }
 
@@ -303,46 +352,55 @@ void EventSpotMoveManager__Init(EventSpotMoveManager_o *this, const MethodInfo *
 
 bool EventSpotMoveManager__IsSpotObjectMoving(EventSpotMoveManager_o *this, const MethodInfo *method)
 {
-  EventSpotMoveManager___c_c *v3; // x0
+  __int64 v2; // x2
+  EventSpotMoveManager___c_c *v4; // x0
   System_Collections_Generic_List_T__o *eventSpotMoveDataList; // x19
+  struct EventSpotMoveManager___c_StaticFields *static_fields; // x8
   System_Func_object__bool__o *_9__12_0; // x20
-  Il2CppObject *v6; // x21
-  struct EventSpotMoveManager___c_StaticFields *static_fields; // x0
+  Il2CppObject *v8; // x21
+  struct EventSpotMoveManager___c_StaticFields *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E71619 & 1) == 0 )
+  if ( (byte_59323CE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
-    sub_1D0F0B4(&System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
-    sub_1D0F0B4(&Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__);
-    sub_1D0F0B4(&EventSpotMoveManager___c_TypeInfo);
-    byte_4E71619 = 1;
+    sub_21FFC50(&Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
+    sub_21FFC50(&System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
+    sub_21FFC50(&Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__);
+    sub_21FFC50(&EventSpotMoveManager___c_TypeInfo);
+    byte_59323CE = 1;
   }
-  v3 = EventSpotMoveManager___c_TypeInfo;
+  v4 = EventSpotMoveManager___c_TypeInfo;
   eventSpotMoveDataList = (System_Collections_Generic_List_T__o *)this->fields.eventSpotMoveDataList;
-  if ( !EventSpotMoveManager___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventSpotMoveManager___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventSpotMoveManager___c_TypeInfo);
-    v3 = EventSpotMoveManager___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventSpotMoveManager___c_TypeInfo, method, v2);
+    v4 = EventSpotMoveManager___c_TypeInfo;
   }
-  _9__12_0 = (System_Func_object__bool__o *)v3->static_fields->__9__12_0;
+  static_fields = v4->static_fields;
+  _9__12_0 = (System_Func_object__bool__o *)static_fields->__9__12_0;
   if ( !_9__12_0 )
   {
-    if ( !v3->_2.cctor_finished )
+    if ( !*(&v4->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v3);
-      v3 = EventSpotMoveManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v4, method, v2);
+      static_fields = EventSpotMoveManager___c_TypeInfo->static_fields;
     }
-    v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__12_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
-    System_Func_object__bool____ctor(_9__12_0, v6, Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__, 0);
-    static_fields = EventSpotMoveManager___c_TypeInfo->static_fields;
-    static_fields->__9__12_0 = (struct System_Func_EventSpotMoveManager_SpotMoveData__bool__o *)_9__12_0;
-    sub_1D0F058(&static_fields->__9__12_0, _9__12_0);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__12_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_EventSpotMoveManager_SpotMoveData__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__12_0, v8, Method_EventSpotMoveManager___c__IsSpotObjectMoving_b__12_0__, 0);
+    v9 = EventSpotMoveManager___c_TypeInfo->static_fields;
+    v9->__9__12_0 = (struct System_Func_EventSpotMoveManager_SpotMoveData__bool__o *)_9__12_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__12_0, (int32_t)_9__12_0, v10, v11, v12, v13, v14, v15);
   }
   return BasicHelper__Any_object_(
            eventSpotMoveDataList,
            (System_Func_T__bool__o *)_9__12_0,
-           (const MethodInfo_32382EC *)Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
+           (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_EventSpotMoveManager_SpotMoveData___);
 }
 
 
@@ -353,34 +411,40 @@ void EventSpotMoveManager__UpdateAllSpotPosition(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *eventSpotMoveDataList; // x0
-  bool v6; // w20
-  const MethodInfo *v7; // x3
-  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
+  const MethodInfo *v6; // x3
+  __int64 v7; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v8; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E71616 & 1) == 0 )
+  if ( (byte_59323CB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
-    byte_4E71616 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+    byte_59323CB = 1;
   }
-  memset(&v8, 0, sizeof(v8));
   eventSpotMoveDataList = (System_Collections_Generic_List_object__o *)this->fields.eventSpotMoveDataList;
+  memset(&v9, 0, sizeof(v9));
   if ( !eventSpotMoveDataList )
-    sub_1D0F30C(0, isFocedMove);
+    sub_21FFECC(0, isFocedMove);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v8,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     eventSpotMoveDataList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
-  v6 = isFocedMove;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+  v7 = 0;
+  v8 = &v9;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v8,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
-    EventSpotMoveManager__UpdateSpotPosition(this, (EventSpotMoveManager_SpotMoveData_o *)v8.fields._current, v6, v7);
+            &v9,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
+    EventSpotMoveManager__UpdateSpotPosition(
+      this,
+      (EventSpotMoveManager_SpotMoveData_o *)v9.fields._current,
+      isFocedMove,
+      v6);
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v8,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+    &v9,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
 }
 
 
@@ -391,125 +455,149 @@ void EventSpotMoveManager__UpdateSpotPosition(
         const MethodInfo *method)
 {
   __int64 v6; // x20
-  __int64 SpotPathEntity; // x0
+  void *SpotPathEntity; // x0
   __int64 v8; // x1
-  __int64 v9; // x19
-  UnityEngine_Object_o *v10; // x22
-  UnityEngine_Object_o *v11; // x22
-  const MethodInfo *v12; // x2
-  const MethodInfo *v13; // x3
-  SpotPathEntity_o *v14; // x22
-  int32_t v15; // w23
-  int32_t v16; // w24
-  float v17; // s0
-  float v18; // s8
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  __int64 v15; // x19
+  __int64 v16; // x2
+  UnityEngine_Object_o *v17; // x22
+  __int64 v18; // x2
+  UnityEngine_Object_o *v19; // x22
+  const MethodInfo *v20; // x2
+  __int64 v21; // x2
+  const MethodInfo *v22; // x3
+  SpotPathEntity_o *v23; // x22
+  int32_t v24; // w23
+  int32_t v25; // w24
+  float v26; // s0
+  float v27; // s8
+  __int64 v28; // x1
+  __int64 v29; // x2
   Il2CppObject *Component_object; // x22
+  __int64 v31; // x2
   float x; // s8
   float y; // s9
   float z; // s10
-  float v23; // s11
-  __int64 v24; // x9
-  UITweener_o *v25; // x21
-  EventSpotMoveManager_c *v26; // x0
-  System_Collections_Generic_List_object__o *onFinished; // x22
+  __int64 v35; // x8
+  float v36; // s11
+  __int64 v37; // x2
+  char *v38; // x21
+  EventSpotMoveManager_c *v39; // x0
+  __int64 v40; // x9
   float MOVE_SPEED; // s0
-  EventDelegate_Callback_o *v29; // x23
-  EventDelegate_o *v30; // x20
+  System_Collections_Generic_List_object__o *v42; // x22
+  EventDelegate_Callback_c *v43; // x0
+  EventDelegate_Callback_o *v44; // x23
+  EventDelegate_o *v45; // x20
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v32; // x9
+  _QWORD *v53; // x9
   __int64 size; // x10
-  Il2CppClass **v34; // x0
+  Il2CppClass **v55; // x0
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E71617 & 1) == 0 )
+  if ( (byte_59323CC & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&EventSpotMoveManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__);
-    sub_1D0F0B4(&EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
-    byte_4E71617 = 1;
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&EventSpotMoveManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__);
+    sub_21FFC50(&EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
+    byte_59323CC = 1;
   }
-  v6 = sub_1D0F300(EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
+  v6 = sub_21FFEBC(EventSpotMoveManager___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
-    goto LABEL_49;
+    goto LABEL_50;
   *(_QWORD *)(v6 + 16) = data;
-  v9 = v6 + 16;
-  SpotPathEntity = sub_1D0F058(v6 + 16, data);
+  v15 = v6 + 16;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)data, v9, v10, v11, v12, v13, v14);
   if ( !*(_QWORD *)(v6 + 16) )
-    goto LABEL_49;
-  v10 = *(UnityEngine_Object_o **)(*(_QWORD *)(v6 + 16) + 24LL);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  SpotPathEntity = UnityEngine_Object__op_Equality(v10, 0, 0);
-  if ( (SpotPathEntity & 1) == 0 )
+    goto LABEL_50;
+  v17 = *(UnityEngine_Object_o **)(*(_QWORD *)(v6 + 16) + 24LL);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v16);
+  SpotPathEntity = (void *)UnityEngine_Object__op_Equality(v17, 0, 0);
+  if ( ((unsigned __int8)SpotPathEntity & 1) == 0 )
   {
-    if ( *(_QWORD *)v9 )
+    if ( *(_QWORD *)v15 )
     {
-      v11 = *(UnityEngine_Object_o **)(*(_QWORD *)v9 + 32LL);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      SpotPathEntity = UnityEngine_Object__op_Equality(v11, 0, 0);
-      if ( (SpotPathEntity & 1) != 0 )
+      v19 = *(UnityEngine_Object_o **)(*(_QWORD *)v15 + 32LL);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v18);
+      SpotPathEntity = (void *)UnityEngine_Object__op_Equality(v19, 0, 0);
+      if ( ((unsigned __int8)SpotPathEntity & 1) != 0 )
         return;
-      if ( *(_QWORD *)v9 )
+      if ( *(_QWORD *)v15 )
       {
-        SpotPathEntity = (__int64)EventSpotMoveManager__GetSpotPathEntity(
-                                    (EventSpotMoveManager_o *)SpotPathEntity,
-                                    *(_DWORD *)(*(_QWORD *)v9 + 16LL),
-                                    v12);
+        SpotPathEntity = EventSpotMoveManager__GetSpotPathEntity(
+                           (EventSpotMoveManager_o *)SpotPathEntity,
+                           *(_DWORD *)(*(_QWORD *)v15 + 16LL),
+                           v20);
         if ( SpotPathEntity )
         {
-          v14 = (SpotPathEntity_o *)SpotPathEntity;
-          v16 = *(_DWORD *)(SpotPathEntity + 28);
-          v15 = *(_DWORD *)(SpotPathEntity + 32);
-          if ( !EventSpotMoveManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(EventSpotMoveManager_TypeInfo);
-          v17 = EventSpotMoveManager__CalcSpotPathRate(v16, v15, v14, v13);
-          if ( *(_QWORD *)v9 )
+          v23 = (SpotPathEntity_o *)SpotPathEntity;
+          v24 = *((_DWORD *)SpotPathEntity + 7);
+          v25 = *((_DWORD *)SpotPathEntity + 8);
+          if ( !*(&EventSpotMoveManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(EventSpotMoveManager_TypeInfo, v8, v21);
+          v26 = EventSpotMoveManager__CalcSpotPathRate(v24, v25, v23, v22);
+          if ( *(_QWORD *)v15 )
           {
-            SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 32LL);
+            SpotPathEntity = *(void **)(*(_QWORD *)v15 + 32LL);
             if ( SpotPathEntity )
             {
-              v18 = v17;
+              v27 = v26;
               Custom2dSplineMesh__CreateMesh((Custom2dSplineMesh_o *)SpotPathEntity, 0);
-              if ( *(_QWORD *)v9 )
+              if ( *(_QWORD *)v15 )
               {
-                SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 32LL);
+                SpotPathEntity = *(void **)(*(_QWORD *)v15 + 32LL);
                 if ( SpotPathEntity )
                 {
-                  Custom2dSplineMesh__SetPathRate((Custom2dSplineMesh_o *)SpotPathEntity, v18, 0);
-                  if ( *(_QWORD *)v9 )
+                  Custom2dSplineMesh__SetPathRate((Custom2dSplineMesh_o *)SpotPathEntity, v27, 0);
+                  if ( *(_QWORD *)v15 )
                   {
-                    SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 24LL);
+                    SpotPathEntity = *(void **)(*(_QWORD *)v15 + 24LL);
                     if ( SpotPathEntity )
                     {
                       Component_object = UnityEngine_GameObject__GetComponent_object_(
                                            (UnityEngine_GameObject_o *)SpotPathEntity,
-                                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-                      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                      SpotPathEntity = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-                      if ( (SpotPathEntity & 1) != 0 )
+                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+                        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28, v29);
+                      SpotPathEntity = (void *)UnityEngine_Object__op_Inequality(
+                                                 (UnityEngine_Object_o *)Component_object,
+                                                 0,
+                                                 0);
+                      if ( ((unsigned __int8)SpotPathEntity & 1) != 0 )
                       {
-                        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                        UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)Component_object, 0);
+                        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v31);
+                        UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
                       }
-                      if ( *(_QWORD *)v9 )
+                      if ( *(_QWORD *)v15 )
                       {
                         Position = GameObjectExtensions__GetPosition(
-                                     (UnityEngine_GameObject_o *)*(_QWORD *)(*(_QWORD *)v9 + 24LL),
+                                     (UnityEngine_GameObject_o *)*(_QWORD *)(*(_QWORD *)v15 + 24LL),
                                      0);
-                        if ( *(_QWORD *)v9 )
+                        if ( *(_QWORD *)v15 )
                         {
-                          SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 32LL);
+                          SpotPathEntity = *(void **)(*(_QWORD *)v15 + 32LL);
                           if ( SpotPathEntity )
                           {
                             x = Position.fields.x;
@@ -517,91 +605,104 @@ void EventSpotMoveManager__UpdateSpotPosition(
                             z = Position.fields.z;
                             PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(
                                                     (Custom2dSplineMesh_o *)SpotPathEntity,
-                                                    *(float *)(SpotPathEntity + 68),
+                                                    *((float *)SpotPathEntity + 17),
                                                     0);
                             *(UnityEngine_Vector3_o *)(v6 + 24) = PointAsWorldFlatten;
                             if ( isFocedMove )
                             {
-                              if ( *(_QWORD *)v9 )
-                              {
-                                SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 24LL);
+                              v35 = *(_QWORD *)v15;
+                              if ( !*(_QWORD *)v15 )
+                                goto LABEL_50;
 LABEL_37:
-                                GameObjectExtensions__SetPosition(
-                                  (UnityEngine_GameObject_o *)SpotPathEntity,
-                                  PointAsWorldFlatten,
-                                  0);
-                                return;
-                              }
+                              GameObjectExtensions__SetPosition(
+                                *(UnityEngine_GameObject_o **)(v35 + 24),
+                                PointAsWorldFlatten,
+                                0);
+                              return;
                             }
-                            else if ( *(_QWORD *)v9 )
+                            v35 = *(_QWORD *)v15;
+                            v36 = sqrtf(
+                                    (float)((float)(x - PointAsWorldFlatten.fields.x)
+                                          * (float)(x - PointAsWorldFlatten.fields.x))
+                                  + (float)((float)(y - PointAsWorldFlatten.fields.y)
+                                          * (float)(y - PointAsWorldFlatten.fields.y)));
+                            if ( v36 < 2.0 )
                             {
-                              SpotPathEntity = *(_QWORD *)(*(_QWORD *)v9 + 24LL);
-                              v23 = sqrtf(
-                                      (float)((float)(x - PointAsWorldFlatten.fields.x)
-                                            * (float)(x - PointAsWorldFlatten.fields.x))
-                                    + (float)((float)(y - PointAsWorldFlatten.fields.y)
-                                            * (float)(y - PointAsWorldFlatten.fields.y)));
-                              if ( v23 < 2.0 )
-                                goto LABEL_37;
+                              if ( !v35 )
+                                goto LABEL_50;
+                              goto LABEL_37;
+                            }
+                            if ( v35 )
+                            {
+                              SpotPathEntity = *(void **)(v35 + 24);
                               if ( SpotPathEntity )
                               {
-                                SpotPathEntity = (__int64)UnityEngine_GameObject__AddComponent_object_(
-                                                            (UnityEngine_GameObject_o *)SpotPathEntity,
-                                                            (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                SpotPathEntity = UnityEngine_GameObject__AddComponent_object_(
+                                                   (UnityEngine_GameObject_o *)SpotPathEntity,
+                                                   (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
                                 if ( SpotPathEntity )
                                 {
-                                  *(float *)(SpotPathEntity + 128) = x;
-                                  *(float *)(SpotPathEntity + 132) = y;
-                                  *(float *)(SpotPathEntity + 136) = z;
-                                  *(_BYTE *)(SpotPathEntity + 152) = 1;
-                                  v24 = *(_QWORD *)(v6 + 24);
-                                  v25 = (UITweener_o *)SpotPathEntity;
-                                  *(_DWORD *)(SpotPathEntity + 148) = *(_DWORD *)(v6 + 32);
-                                  *(_QWORD *)(SpotPathEntity + 140) = v24;
-                                  v26 = EventSpotMoveManager_TypeInfo;
-                                  if ( !EventSpotMoveManager_TypeInfo->_2.cctor_finished )
+                                  *((float *)SpotPathEntity + 32) = x;
+                                  *((float *)SpotPathEntity + 33) = y;
+                                  v38 = (char *)SpotPathEntity;
+                                  *((_BYTE *)SpotPathEntity + 152) = 1;
+                                  *((float *)SpotPathEntity + 34) = z;
+                                  v39 = EventSpotMoveManager_TypeInfo;
+                                  v40 = *(_QWORD *)(v6 + 24);
+                                  *((_DWORD *)v38 + 37) = *(_DWORD *)(v6 + 32);
+                                  *(_QWORD *)(v38 + 140) = v40;
+                                  if ( !*(&v39->_2.cctor_finished + 1) )
                                   {
-                                    j_il2cpp_runtime_class_init_0(EventSpotMoveManager_TypeInfo);
-                                    v26 = EventSpotMoveManager_TypeInfo;
+                                    j_il2cpp_runtime_class_init_0(v39, v8, v37);
+                                    v39 = EventSpotMoveManager_TypeInfo;
                                   }
-                                  onFinished = (System_Collections_Generic_List_object__o *)v25->fields.onFinished;
-                                  MOVE_SPEED = v26->static_fields->MOVE_SPEED;
-                                  v25->fields.method = 0;
-                                  v25->fields.duration = v23 / MOVE_SPEED;
-                                  v29 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
+                                  MOVE_SPEED = v39->static_fields->MOVE_SPEED;
+                                  v42 = (System_Collections_Generic_List_object__o *)*((_QWORD *)v38 + 9);
+                                  *((_DWORD *)v38 + 8) = 0;
+                                  v43 = EventDelegate_Callback_TypeInfo;
+                                  *((float *)v38 + 14) = v36 / MOVE_SPEED;
+                                  v44 = (EventDelegate_Callback_o *)sub_21FFEBC(v43);
                                   EventDelegate_Callback___ctor(
-                                    v29,
+                                    v44,
                                     (Il2CppObject *)v6,
                                     Method_EventSpotMoveManager___c__DisplayClass9_0__UpdateSpotPosition_b__0__,
                                     0);
-                                  v30 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-                                  EventDelegate___ctor_50674352(v30, v29, 0);
-                                  if ( onFinished )
+                                  v45 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+                                  EventDelegate___ctor_56132624(v45, v44, 0);
+                                  if ( v42 )
                                   {
-                                    items = onFinished->fields._items;
-                                    v32 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-                                    ++onFinished->fields._version;
+                                    items = v42->fields._items;
+                                    v53 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+                                    ++v42->fields._version;
                                     if ( items )
                                     {
-                                      size = onFinished->fields._size;
+                                      size = v42->fields._size;
                                       if ( (unsigned int)size >= LODWORD(items->max_length) )
                                       {
                                         System_Collections_Generic_List_object___AddWithResize(
-                                          onFinished,
-                                          (Il2CppObject *)v30,
-                                          *(const MethodInfo_395C410 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+                                          v42,
+                                          (Il2CppObject *)v45,
+                                          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
                                       }
                                       else
                                       {
-                                        v34 = &items->obj.klass + size;
-                                        onFinished->fields._size = size + 1;
-                                        v34[4] = (Il2CppClass *)v30;
-                                        sub_1D0F058(v34 + 4, v30);
+                                        v55 = &items->obj.klass + size;
+                                        v42->fields._size = size + 1;
+                                        v55[4] = (Il2CppClass *)v45;
+                                        sub_21FFBF4(
+                                          (MissionNaviTransitionBoardItem_o *)(v55 + 4),
+                                          (int32_t)v45,
+                                          v46,
+                                          v47,
+                                          v48,
+                                          v49,
+                                          v50,
+                                          v51);
                                       }
-                                      UITweener__PlayForward(v25, 0);
-                                      if ( *(_QWORD *)v9 )
+                                      UITweener__PlayForward((UITweener_o *)v38, 0);
+                                      if ( *(_QWORD *)v15 )
                                       {
-                                        *(_DWORD *)(*(_QWORD *)v9 + 40LL) = 1;
+                                        *(_DWORD *)(*(_QWORD *)v15 + 40LL) = 1;
                                         return;
                                       }
                                     }
@@ -621,8 +722,8 @@ LABEL_37:
         }
       }
     }
-LABEL_49:
-    sub_1D0F30C(SpotPathEntity, v8);
+LABEL_50:
+    sub_21FFECC(SpotPathEntity, v8);
   }
 }
 
@@ -635,32 +736,58 @@ void EventSpotMoveManager_SpotMoveData___ctor(EventSpotMoveManager_SpotMoveData_
 
 void EventSpotMoveManager_SpotMoveData__Clear(EventSpotMoveManager_SpotMoveData_o *this, const MethodInfo *method)
 {
-  EventSpotMoveManager_SpotMoveData_o *v2; // x19
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  EventSpotMoveManager_SpotMoveData_o *v8; // x19
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
 
-  v2 = this;
+  v8 = this;
   this->fields.SpotId = 0;
   this->fields.SpotObject = 0;
-  sub_1D0F058(&this->fields.SpotObject, 0);
-  v2->fields.SpotPathMesh = 0;
-  v2 = (EventSpotMoveManager_SpotMoveData_o *)((char *)v2 + 32);
-  sub_1D0F058(v2, 0);
-  LODWORD(v2->monitor) = 0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.SpotObject, 0, v2, v3, v4, v5, v6, v7);
+  v8->fields.SpotPathMesh = 0;
+  v8 = (EventSpotMoveManager_SpotMoveData_o *)((char *)v8 + 32);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, 0, v9, v10, v11, v12, v13, v14);
+  LODWORD(v8->monitor) = 0;
 }
 
 
 void EventSpotMoveManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7161D & 1) == 0 )
+  if ( (byte_59323D2 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventSpotMoveManager___c_TypeInfo);
-    byte_4E7161D = 1;
+    sub_21FFC50(&EventSpotMoveManager___c_TypeInfo);
+    byte_59323D2 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(EventSpotMoveManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(EventSpotMoveManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventSpotMoveManager___c_TypeInfo->static_fields->__9 = (struct EventSpotMoveManager___c_o *)v1;
-  sub_1D0F058(EventSpotMoveManager___c_TypeInfo->static_fields, v1);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)EventSpotMoveManager___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -676,7 +803,7 @@ bool EventSpotMoveManager___c___IsSpotObjectMoving_b__12_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.State == 1;
 }
 
@@ -700,7 +827,7 @@ void EventSpotMoveManager___c__DisplayClass9_0___UpdateSpotPosition_b__0(
   if ( !data
     || (GameObjectExtensions__SetPosition(data->fields.SpotObject, this->fields.endPos, 0), (v4 = this->fields.data) == 0) )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v4->fields.State = 0;
 }

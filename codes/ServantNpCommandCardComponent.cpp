@@ -10,7 +10,7 @@ void ServantNpCommandCardComponent__Clear(ServantNpCommandCardComponent_o *this,
 
   cardSprite = (UnityEngine_Behaviour_o *)this->fields.cardSprite;
   if ( !cardSprite )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   UnityEngine_Behaviour__set_enabled(cardSprite, 0, 0);
 }
 
@@ -20,19 +20,21 @@ void ServantNpCommandCardComponent__Set(
         TreasureDvcInfo_o *tdInfo,
         const MethodInfo *method)
 {
+  TreasureDvcInfo_o *v3; // x20
   UISprite_o *cardSprite; // x19
 
-  if ( (byte_4E76C1C & 1) == 0 )
+  v3 = tdInfo;
+  if ( (byte_5937BBD & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleCommand_TypeInfo);
-    byte_4E76C1C = 1;
+    sub_21FFC50(&BattleCommand_TypeInfo);
+    byte_5937BBD = 1;
   }
-  if ( tdInfo )
-    LODWORD(tdInfo) = tdInfo->fields.cardId;
+  if ( v3 )
+    LODWORD(v3) = v3->fields.cardId;
   cardSprite = this->fields.cardSprite;
-  if ( !BattleCommand_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  BattleCommand__setSprite(cardSprite, (int32_t)tdInfo, 0);
+  if ( !*(&BattleCommand_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo, tdInfo);
+  BattleCommand__setSprite(cardSprite, (int32_t)v3, 0);
 }
 
 

@@ -2,21 +2,24 @@ void SceneRootComponent___ctor(SceneRootComponent_o *this, const MethodInfo *met
 {
   ManagerConfig_c *v3; // x0
   struct ManagerConfig_StaticFields *static_fields; // x8
+  int32_t WIDTH; // w9
 
-  if ( (byte_4E7701A & 1) == 0 )
+  if ( (byte_5937FD4 & 1) == 0 )
   {
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    byte_4E7701A = 1;
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    byte_5937FD4 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
     v3 = ManagerConfig_TypeInfo;
   }
   static_fields = v3->static_fields;
-  this->fields.manualWidth = static_fields->WIDTH;
-  this->fields.manualHeight = static_fields->HEIGHT;
+  WIDTH = static_fields->WIDTH;
+  LODWORD(static_fields) = static_fields->HEIGHT;
+  this->fields.manualWidth = WIDTH;
+  this->fields.manualHeight = (int)static_fields;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -35,20 +38,21 @@ void SceneRootComponent__ReScaleUpdate(SceneRootComponent_o *this, const MethodI
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool SceneRootComponent__SetSceneActive(SceneRootComponent_o *this, bool flag, const MethodInfo *method)
 {
   UnityEngine_Object_o *uiRoot; // x21
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4E77015 & 1) == 0 )
+  if ( (byte_5937FCF & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E77015 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937FCF = 1;
   }
   uiRoot = (UnityEngine_Object_o *)this->fields.uiRoot;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, flag);
   if ( UnityEngine_Object__op_Inequality(uiRoot, 0, 0) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.uiRoot;
@@ -70,7 +74,7 @@ bool SceneRootComponent__SetSceneActive(SceneRootComponent_o *this, bool flag, c
         }
       }
 LABEL_13:
-      sub_1D0F30C(gameObject, v6);
+      sub_21FFECC(gameObject, v6);
     }
   }
   return 0;
@@ -80,38 +84,46 @@ LABEL_13:
 void SceneRootComponent__Start(SceneRootComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  Il2CppObject *ComponentInChildren_object__52714476; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  bool v8; // w6
+  bool v9; // w7
+  Il2CppObject *ComponentInChildren_object__58644924; // x0
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E77014 & 1) == 0 )
+  if ( (byte_5937FCE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentInChildren_UIRoot___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    byte_4E77014 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_UIRoot___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    byte_5937FCE = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
   this->fields.myFSM = (struct PlayMakerFSM_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.myFSM, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
-  ComponentInChildren_object__52714476 = UnityEngine_Component__GetComponentInChildren_object__52714476(
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.myFSM,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
+  ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
                                            (UnityEngine_Component_o *)this,
-                                           (const MethodInfo_3245BEC *)Method_UnityEngine_Component_GetComponentInChildren_UIRoot___);
-  this->fields.uiRoot = (struct UIRoot_o *)ComponentInChildren_object__52714476;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.uiRoot,
-    (int32_t)ComponentInChildren_object__52714476,
+                                           (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_UIRoot___);
+  this->fields.uiRoot = (struct UIRoot_o *)ComponentInChildren_object__58644924;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.uiRoot,
+    (int32_t)ComponentInChildren_object__58644924,
     v11,
     v12,
     v13,
@@ -139,7 +151,7 @@ void SceneRootComponent__beginInitialize(SceneRootComponent_o *this, const Metho
   v3.fields.a = 1.0;
   UnityEngine_RenderSettings__set_ambientLight(v3, 0);
   *(_QWORD *)&this->fields.kind = 0x100000000LL;
-  MainMenuBar__setActiveScene_42656912(this, 0, 1, 0, 0);
+  MainMenuBar__setActiveScene_48224148(this, 0, 1, 0, 0);
 }
 
 
@@ -157,7 +169,7 @@ void SceneRootComponent__beginResume(SceneRootComponent_o *this, Il2CppObject *d
 }
 
 
-void SceneRootComponent__beginResume_42858936(SceneRootComponent_o *this, const MethodInfo *method)
+void SceneRootComponent__beginResume_48429424(SceneRootComponent_o *this, const MethodInfo *method)
 {
   ((void (__fastcall *)(SceneRootComponent_o *, const MethodInfo *))this->klass->vtable._7_beginFinish.methodPtr)(
     this,
@@ -177,25 +189,25 @@ void SceneRootComponent__beginStartUp(SceneRootComponent_o *this, Il2CppObject *
 }
 
 
-void SceneRootComponent__beginStartUp_42858752(SceneRootComponent_o *this, const MethodInfo *method)
+void SceneRootComponent__beginStartUp_48429240(SceneRootComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
   CommonUI_o *v5; // x20
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E77019 & 1) == 0 )
+  if ( (byte_5937FD3 & 1) == 0 )
   {
-    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E77019 = 1;
+    sub_21FFC50(&AvalonSceneManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5937FD3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v5 = (CommonUI_o *)Instance;
-  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
+  if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v4);
   if ( !v5 )
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   CommonUI__maskFadein(v5, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
   SceneRootComponent__sendMessageStartUp(this, v6);
 }
@@ -214,8 +226,8 @@ bool SceneRootComponent__checkSceneName(SceneRootComponent_o *this, System_Strin
 
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject || (gameObject = (UnityEngine_Object_o *)UnityEngine_Object__get_name(gameObject, 0)) == 0 )
-    sub_1D0F30C(gameObject, v5);
-  return System_String__Equals_65598092((System_String_o *)gameObject, name, 0);
+    sub_21FFECC(gameObject, v5);
+  return System_String__Equals_75473208((System_String_o *)gameObject, name, 0);
 }
 
 
@@ -226,7 +238,7 @@ System_String_o *SceneRootComponent__getSceneName(SceneRootComponent_o *this, co
 
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return UnityEngine_Object__get_name(gameObject, 0);
 }
 
@@ -255,19 +267,19 @@ void SceneRootComponent__sendMessage(SceneRootComponent_o *this, System_String_o
   __int64 v6; // x1
   PlayMakerFSM_o *v7; // x0
 
-  if ( (byte_4E77018 & 1) == 0 )
+  if ( (byte_5937FD2 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E77018 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937FD2 = 1;
   }
   myFSM = (UnityEngine_Object_o *)this->fields.myFSM;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, message);
   if ( UnityEngine_Object__op_Inequality(myFSM, 0, 0) )
   {
     v7 = this->fields.myFSM;
     if ( !v7 )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     PlayMakerFSM__SendEvent(v7, message, 0);
   }
 }
@@ -279,19 +291,19 @@ void SceneRootComponent__sendMessageResume(SceneRootComponent_o *this, const Met
   PlayMakerFSM_o *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E77017 & 1) == 0 )
+  if ( (byte_5937FD1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_11293/*"RESUME"*/);
-    byte_4E77017 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_11595/*"RESUME"*/);
+    byte_5937FD1 = 1;
   }
   myFSM = (UnityEngine_Object_o *)this->fields.myFSM;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(myFSM, 0, 0) )
   {
-    Instance = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    Instance = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     if ( !Instance )
       goto LABEL_11;
     if ( NetworkManager__CheckServerLimitTime((NetworkManager_o *)Instance, 0) )
@@ -299,11 +311,11 @@ void SceneRootComponent__sendMessageResume(SceneRootComponent_o *this, const Met
       Instance = this->fields.myFSM;
       if ( Instance )
       {
-        PlayMakerFSM__SendEvent(Instance, (System_String_o *)StringLiteral_11293/*"RESUME"*/, 0);
+        PlayMakerFSM__SendEvent(Instance, (System_String_o *)StringLiteral_11595/*"RESUME"*/, 0);
         return;
       }
 LABEL_11:
-      sub_1D0F30C(Instance, v5);
+      sub_21FFECC(Instance, v5);
     }
   }
 }
@@ -315,19 +327,19 @@ void SceneRootComponent__sendMessageStartUp(SceneRootComponent_o *this, const Me
   PlayMakerFSM_o *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E77016 & 1) == 0 )
+  if ( (byte_5937FD0 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_12484/*"STARTUP"*/);
-    byte_4E77016 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_12803/*"STARTUP"*/);
+    byte_5937FD0 = 1;
   }
   myFSM = (UnityEngine_Object_o *)this->fields.myFSM;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(myFSM, 0, 0) )
   {
-    Instance = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    Instance = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     if ( !Instance )
       goto LABEL_11;
     if ( NetworkManager__CheckServerLimitTime((NetworkManager_o *)Instance, 0) )
@@ -335,11 +347,11 @@ void SceneRootComponent__sendMessageStartUp(SceneRootComponent_o *this, const Me
       Instance = this->fields.myFSM;
       if ( Instance )
       {
-        PlayMakerFSM__SendEvent(Instance, (System_String_o *)StringLiteral_12484/*"STARTUP"*/, 0);
+        PlayMakerFSM__SendEvent(Instance, (System_String_o *)StringLiteral_12803/*"STARTUP"*/, 0);
         return;
       }
 LABEL_11:
-      sub_1D0F30C(Instance, v5);
+      sub_21FFECC(Instance, v5);
     }
   }
 }
@@ -353,5 +365,5 @@ void SceneRootComponent__setMainMenuBar(
 {
   this->fields.kind = kind;
   this->fields.depth = depth;
-  MainMenuBar__setActiveScene_42656912(this, kind, depth, 0, 0);
+  MainMenuBar__setActiveScene_48224148(this, kind, depth, 0, 0);
 }

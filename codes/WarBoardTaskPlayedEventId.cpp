@@ -14,23 +14,23 @@ System_Collections_IEnumerator_o *WarBoardTaskPlayedEventId__Execute(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E752E3 & 1) == 0 )
+  if ( (byte_5936269 & 1) == 0 )
   {
-    sub_1D0F0B4(&WarBoardTaskPlayedEventId__Execute_d__2_TypeInfo);
-    byte_4E752E3 = 1;
+    sub_21FFC50(&WarBoardTaskPlayedEventId__Execute_d__2_TypeInfo);
+    byte_5936269 = 1;
   }
-  v3 = sub_1D0F300(WarBoardTaskPlayedEventId__Execute_d__2_TypeInfo);
+  v3 = sub_21FFEBC(WarBoardTaskPlayedEventId__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -53,18 +53,18 @@ bool WarBoardTaskPlayedEventId__Execute_d__2__MoveNext(
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E752E4 & 1) == 0 )
+  if ( (byte_593626A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E752E4 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_593626A = 1;
   }
   if ( !this->fields.__1__state )
   {
-    this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this->fields.__1__state = -1;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !_4__this || !Instance )
-      sub_1D0F30C(Instance, v5);
+      sub_21FFECC(Instance, v5);
     WarBoardManager__PlayedEventId(
       (WarBoardManager_o *)Instance,
       *(_DWORD *)(&_4__this->fields._isPause_k__BackingField + 3),
@@ -90,11 +90,11 @@ void __noreturn WarBoardTaskPlayedEventId__Execute_d__2__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_WarBoardTaskPlayedEventId__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_WarBoardTaskPlayedEventId__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

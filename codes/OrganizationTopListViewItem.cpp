@@ -4,16 +4,16 @@ void OrganizationTopListViewItem___ctor(
         OrganizationTopItemInfo_o *info,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -31,7 +31,7 @@ System_String_o *OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields.eventData;
 }
 
@@ -44,7 +44,7 @@ System_String_o *OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields.imageName;
 }
 
@@ -53,21 +53,22 @@ System_String_o *OrganizationTopListViewItem__get_InfoText(
         OrganizationTopListViewItem_o *this,
         const MethodInfo *method)
 {
-  OrganizationTopListViewItem_o *v2; // x19
+  __int64 v2; // x2
+  OrganizationTopListViewItem_o *v3; // x19
   struct OrganizationTopItemInfo_o *info; // x8
   System_String_o *textCode; // x19
 
-  v2 = this;
-  if ( (byte_4E72C52 & 1) == 0 )
+  v3 = this;
+  if ( (byte_5933C4A & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E72C52 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_5933C4A = 1;
   }
-  info = v2->fields.info;
+  info = v3->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   textCode = info->fields.textCode;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
   return LocalizationManager__Get(textCode, 0);
 }

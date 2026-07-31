@@ -8,25 +8,25 @@ void ShopTopItemInfo___ctor(
         const MethodInfo *method)
 {
   ShopTopItemInfo_o *v12; // x24
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  bool v17; // w6
+  bool v18; // w7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
 
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._Kind_k__BackingField = kind;
   v12->fields._TextCode_k__BackingField = textCode;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v12->fields._TextCode_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v12->fields._TextCode_k__BackingField,
     (int32_t)textCode,
     v13,
     v14,
@@ -36,7 +36,7 @@ void ShopTopItemInfo___ctor(
     v18);
   v12->fields._ImageName_k__BackingField = imageName;
   v12 = (ShopTopItemInfo_o *)((char *)v12 + 32);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v12, (int32_t)imageName, v19, v20, v21, v22, v23, v24);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v12, (int32_t)imageName, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = state;
   HIDWORD(v12->monitor) = shopType;
 }
@@ -74,17 +74,17 @@ System_String_o *ShopTopItemInfo__get_TextCode(ShopTopItemInfo_o *this, const Me
 
 void ShopTopItemInfo__set_ImageName(ShopTopItemInfo_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ImageName_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ImageName_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -113,17 +113,17 @@ void ShopTopItemInfo__set_State(ShopTopItemInfo_o *this, int32_t value, const Me
 
 void ShopTopItemInfo__set_TextCode(ShopTopItemInfo_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._TextCode_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._TextCode_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

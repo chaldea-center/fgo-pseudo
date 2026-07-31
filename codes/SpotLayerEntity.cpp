@@ -1,13 +1,13 @@
 void SpotLayerEntity___ctor(SpotLayerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E782E3 & 1) == 0 )
+  if ( (byte_5939312 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E782E3 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_5939312 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,33 +22,33 @@ bool SpotLayerEntity__IsEnabledDispSpot(SpotLayerEntity_o *this, int32_t targetL
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Int32_array *displayLayers; // x19
-  System_Func_int__bool__o *v9; // x20
+  System_Int32_array *displayLayers; // x20
+  System_Func_int__bool__o *v9; // x19
 
-  if ( (byte_4E782E2 & 1) == 0 )
+  if ( (byte_5939311 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Any_int____80372680);
-    sub_1D0F0B4(&System_Func_int__bool__TypeInfo);
-    sub_1D0F0B4(&Method_SpotLayerEntity___c__DisplayClass1_0__IsEnabledDispSpot_b__0__);
-    sub_1D0F0B4(&SpotLayerEntity___c__DisplayClass1_0_TypeInfo);
-    byte_4E782E2 = 1;
+    sub_21FFC50(&Method_BasicHelper_Any_int____91485032);
+    sub_21FFC50(&System_Func_int__bool__TypeInfo);
+    sub_21FFC50(&Method_SpotLayerEntity___c__DisplayClass1_0__IsEnabledDispSpot_b__0__);
+    sub_21FFC50(&SpotLayerEntity___c__DisplayClass1_0_TypeInfo);
+    byte_5939311 = 1;
   }
-  v5 = sub_1D0F300(SpotLayerEntity___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_21FFEBC(SpotLayerEntity___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  *(_DWORD *)(v5 + 16) = targetLayer;
+    sub_21FFECC(v6, v7);
   displayLayers = this->fields.displayLayers;
-  v9 = (System_Func_int__bool__o *)sub_1D0F300(System_Func_int__bool__TypeInfo);
+  *(_DWORD *)(v5 + 16) = targetLayer;
+  v9 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_SpotLayerEntity___c__DisplayClass1_0__IsEnabledDispSpot_b__0__,
     0);
-  return BasicHelper__Any_int__52658284(
+  return BasicHelper__Any_int__58574768(
            displayLayers,
            (System_Func_T__bool__o *)v9,
-           (const MethodInfo_323806C *)Method_BasicHelper_Any_int____80372680);
+           (const MethodInfo_37DC7B0 *)Method_BasicHelper_Any_int____91485032);
 }
 
 
@@ -57,33 +57,33 @@ bool SpotLayerEntity__IsEnabledSpot(SpotLayerEntity_o *this, int32_t targetLayer
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Int32_array *activeLayers; // x19
-  System_Func_int__bool__o *v9; // x20
+  System_Int32_array *activeLayers; // x20
+  System_Func_int__bool__o *v9; // x19
 
-  if ( (byte_4E782E1 & 1) == 0 )
+  if ( (byte_5939310 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Any_int____80372680);
-    sub_1D0F0B4(&System_Func_int__bool__TypeInfo);
-    sub_1D0F0B4(&Method_SpotLayerEntity___c__DisplayClass0_0__IsEnabledSpot_b__0__);
-    sub_1D0F0B4(&SpotLayerEntity___c__DisplayClass0_0_TypeInfo);
-    byte_4E782E1 = 1;
+    sub_21FFC50(&Method_BasicHelper_Any_int____91485032);
+    sub_21FFC50(&System_Func_int__bool__TypeInfo);
+    sub_21FFC50(&Method_SpotLayerEntity___c__DisplayClass0_0__IsEnabledSpot_b__0__);
+    sub_21FFC50(&SpotLayerEntity___c__DisplayClass0_0_TypeInfo);
+    byte_5939310 = 1;
   }
-  v5 = sub_1D0F300(SpotLayerEntity___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_21FFEBC(SpotLayerEntity___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
-  *(_DWORD *)(v5 + 16) = targetLayer;
+    sub_21FFECC(v6, v7);
   activeLayers = this->fields.activeLayers;
-  v9 = (System_Func_int__bool__o *)sub_1D0F300(System_Func_int__bool__TypeInfo);
+  *(_DWORD *)(v5 + 16) = targetLayer;
+  v9 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_SpotLayerEntity___c__DisplayClass0_0__IsEnabledSpot_b__0__,
     0);
-  return BasicHelper__Any_int__52658284(
+  return BasicHelper__Any_int__58574768(
            activeLayers,
            (System_Func_T__bool__o *)v9,
-           (const MethodInfo_323806C *)Method_BasicHelper_Any_int____80372680);
+           (const MethodInfo_37DC7B0 *)Method_BasicHelper_Any_int____91485032);
 }
 
 

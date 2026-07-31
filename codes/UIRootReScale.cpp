@@ -29,30 +29,33 @@ void UIRootReScale__OnApplicationPause(UIRootReScale_o *this, bool pauseStatus, 
 
 void UIRootReScale__ReScale(UIRootReScale_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v3; // x0
+  int32_t height; // w0
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x8
   struct ManagerConfig_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4E76C73 & 1) == 0 )
+  if ( (byte_5937C14 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIRoot___);
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    byte_4E76C73 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIRoot___);
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    byte_5937C14 = 1;
   }
   this->fields.preWidth = UnityEngine_Screen__get_width(0);
-  this->fields.preHeight = UnityEngine_Screen__get_height(0);
-  v3 = ManagerConfig_TypeInfo;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  height = UnityEngine_Screen__get_height(0);
+  v5 = ManagerConfig_TypeInfo;
+  this->fields.preHeight = height;
+  if ( !*(&v5->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v3 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v5, v4);
+    v5 = ManagerConfig_TypeInfo;
   }
-  static_fields = v3->static_fields;
+  static_fields = v5->static_fields;
   if ( static_fields->WIDTH >= 1 && static_fields->HEIGHT >= 1 )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
+                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
     CommonFunction__ReScaleUiFunc((UIRoot_o *)Component_object, 0);
   }
 }

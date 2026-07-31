@@ -10,80 +10,87 @@ void SummonServantListViewItem___ctor(
         const MethodInfo *method)
 {
   bool v15; // w25
-  bool v16; // w28
-  bool v17; // w27
+  bool v16; // w27
+  bool v17; // w28
+  const MethodInfo_476E8C0 *v18; // x0
   Il2CppObject *Instance; // x0
-  __int64 v19; // x1
+  __int64 v20; // x1
   struct System_String_o *Name; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v27; // x20
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // x1
+  __int64 v29; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v30; // x20
 
   v15 = commandCode;
   v16 = isNew;
   v17 = isRankUp;
-  if ( (byte_4E73A46 & 1) == 0 )
+  if ( (byte_5934A17 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E73A46 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934A17 = 1;
   }
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  v18 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.svtId = svtId;
   this->fields.usrSvtId = usrSvtId;
   this->fields.isNew = v16;
   this->fields.isRankUp = v17;
   this->fields.noticeNo = noticeNo;
   this->fields.commandCode = v15;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
-    goto LABEL_14;
+  Instance = SingletonMonoBehaviour_object___get_Instance(v18);
   if ( commandCode )
   {
-    Instance = DataManager__GetMasterData_object_(
-                 (DataManager_o *)Instance,
-                 (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
     if ( Instance )
     {
-      Instance = DataMasterBase_object__object__int___GetEntity(
-                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                   svtId,
-                   (const MethodInfo_3535B7C *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+      Instance = DataManager__GetMasterData_object_(
+                   (DataManager_o *)Instance,
+                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
       if ( Instance )
       {
-        Name = CommandCodeEntity__GetName((CommandCodeEntity_o *)Instance, 0);
-        goto LABEL_13;
+        Instance = DataMasterBase_object__object__int___GetEntity(
+                     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
+                     svtId,
+                     (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+        if ( Instance )
+        {
+          Name = CommandCodeEntity__GetName((CommandCodeEntity_o *)Instance, 0);
+          goto LABEL_14;
+        }
       }
     }
-LABEL_14:
-    sub_1D0F30C(Instance, v19);
+LABEL_15:
+    sub_21FFECC(Instance, v20);
   }
+  if ( !Instance )
+    goto LABEL_15;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
-    goto LABEL_14;
+    goto LABEL_15;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                svtId,
-               (const MethodInfo_3535B7C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+               (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !Instance )
-    goto LABEL_14;
-  v27 = ServantEntity__GetName((ServantEntity_o *)Instance, -1, 0, -1, 0, 0);
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_50367044(v27, 0);
-LABEL_13:
+    goto LABEL_15;
+  v30 = ServantEntity__GetName((ServantEntity_o *)Instance, -1, 0, -1, 0, 0);
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v28, v29);
+  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_55828364(v30, 0);
+LABEL_14:
   this->fields.name = Name;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.name, (int32_t)Name, v21, v22, v23, v24, v25, v26);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.name, (int32_t)Name, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -187,12 +194,20 @@ void SummonServantListViewItem__set_ServantName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.name = value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.name, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.name,
+    (int32_t)value,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

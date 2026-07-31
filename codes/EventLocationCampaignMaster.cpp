@@ -1,12 +1,12 @@
 void EventLocationCampaignMaster___ctor(EventLocationCampaignMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7768F & 1) == 0 )
+  if ( (byte_5938783 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
-    byte_4E7768F = 1;
+    sub_21FFC50(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
+    byte_5938783 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    232,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
+    234,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int___ctor__);
 }

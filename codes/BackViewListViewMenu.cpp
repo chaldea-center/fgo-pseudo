@@ -6,22 +6,22 @@ void BackViewListViewMenu___ctor(BackViewListViewMenu_o *this, const MethodInfo 
 
 void BackViewListViewMenu__Callback(BackViewListViewMenu_o *this, bool result, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_callbackFunc; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_callbackFunc; // x0
   struct BackViewListViewMenu_CallbackFunc_o *v9; // x20
   struct BackViewListViewMenu_CallbackFunc_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+  p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
   v9 = callbackFunc;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1D0F058(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -34,12 +34,12 @@ void BackViewListViewMenu__Close(BackViewListViewMenu_o *this, const MethodInfo 
 {
   __int64 v3; // x1
   ListViewManager_o *listViewManager; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   BackViewListViewMenu__EndInput(this, method);
   if ( this->fields.state )
@@ -49,13 +49,13 @@ void BackViewListViewMenu__Close(BackViewListViewMenu_o *this, const MethodInfo 
       goto LABEL_6;
     ListViewManager__DestroyList(listViewManager, 0);
     this->fields.backAssetList = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.backAssetList, 0, v5, v6, v7, v8, v9, v10);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.backAssetList, 0, v5, v6, v7, v8, v9, v10);
     this->fields.state = 0;
   }
   listViewManager = (ListViewManager_o *)this->fields.rootObject;
   if ( !listViewManager )
 LABEL_6:
-    sub_1D0F30C(listViewManager, v3);
+    sub_21FFECC(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0);
 }
 
@@ -71,7 +71,7 @@ void BackViewListViewMenu__EndInput(BackViewListViewMenu_o *this, const MethodIn
       || (ListViewManager__set_IsInput(listViewManager, 0, 0),
           (listViewManager = (ListViewManager_o *)this->fields.cancelButton) == 0) )
     {
-      sub_1D0F30C(listViewManager, method);
+      sub_21FFECC(listViewManager, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0);
   }
@@ -93,15 +93,17 @@ void BackViewListViewMenu__OnClickCancel(BackViewListViewMenu_o *this, const Met
 
 void BackViewListViewMenu__OnClickClear(BackViewListViewMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E74AB8 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5935A4E & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    byte_4E74AB8 = 1;
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    byte_5935A4E = 1;
   }
   if ( this->fields.state == 2 )
   {
-    if ( !ScriptManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
+    if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, method, v2);
     ScriptManager__BackViewClear(0);
   }
 }
@@ -111,13 +113,15 @@ void BackViewListViewMenu__OnClickForceObi169(BackViewListViewMenu_o *this, cons
 {
   struct UISprite_o *forceObi169Sprite; // x0
   bool enabled; // w0
-  ScriptManager_c *v5; // x8
-  bool v6; // w19
+  __int64 v5; // x1
+  __int64 v6; // x2
+  ScriptManager_c *v7; // x8
+  bool v8; // w19
 
-  if ( (byte_4E74AB9 & 1) == 0 )
+  if ( (byte_5935A4F & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    byte_4E74AB9 = 1;
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    byte_5935A4F = 1;
   }
   forceObi169Sprite = this->fields.forceObi169Sprite;
   if ( !forceObi169Sprite
@@ -131,17 +135,17 @@ void BackViewListViewMenu__OnClickForceObi169(BackViewListViewMenu_o *this, cons
           0),
         (forceObi169Sprite = this->fields.forceObi169Sprite) == 0) )
   {
-    sub_1D0F30C(forceObi169Sprite, method);
+    sub_21FFECC(forceObi169Sprite, method);
   }
   enabled = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)forceObi169Sprite, 0);
-  v5 = ScriptManager_TypeInfo;
-  v6 = enabled;
-  if ( !ScriptManager_TypeInfo->_2.cctor_finished )
+  v7 = ScriptManager_TypeInfo;
+  v8 = enabled;
+  if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    v5 = ScriptManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v5, v6);
+    v7 = ScriptManager_TypeInfo;
   }
-  v5->static_fields->defaultForceObi_16_9 = v6;
+  v7->static_fields->defaultForceObi_16_9 = v8;
 }
 
 
@@ -153,13 +157,15 @@ void BackViewListViewMenu__OnClickItem(BackViewListViewMenu_o *this, const Metho
   System_String_o *dragParentObject; // x20
   System_String_array *backAssetList; // x21
   ScriptManager_CallbackFunc_o *v8; // x22
+  __int64 v9; // x1
+  __int64 v10; // x2
 
-  if ( (byte_4E74AB6 & 1) == 0 )
+  if ( (byte_5935A4C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BackViewListViewMenu_OnEndBackView__);
-    sub_1D0F0B4(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    byte_4E74AB6 = 1;
+    sub_21FFC50(&Method_BackViewListViewMenu_OnEndBackView__);
+    sub_21FFC50(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    byte_5935A4C = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -173,13 +179,13 @@ void BackViewListViewMenu__OnClickItem(BackViewListViewMenu_o *this, const Metho
     this->fields.state = 3;
     if ( !listViewManager )
 LABEL_11:
-      sub_1D0F30C(listViewManager, method);
+      sub_21FFECC(listViewManager, method);
     dragParentObject = (System_String_o *)listViewManager->fields.dragParentObject;
     backAssetList = this->fields.backAssetList;
-    v8 = (ScriptManager_CallbackFunc_o *)sub_1D0F300(ScriptManager_CallbackFunc_TypeInfo);
+    v8 = (ScriptManager_CallbackFunc_o *)sub_21FFEBC(ScriptManager_CallbackFunc_TypeInfo);
     ScriptManager_CallbackFunc___ctor(v8, (Il2CppObject *)this, Method_BackViewListViewMenu_OnEndBackView__, 0);
-    if ( !ScriptManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
+    if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v9, v10);
     ScriptManager__BackViewPlay(dragParentObject, backAssetList, v8, 0);
   }
 }
@@ -193,23 +199,23 @@ void BackViewListViewMenu__OnEndBackView(BackViewListViewMenu_o *this, bool isEx
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4E74AB7 & 1) == 0 )
+  if ( (byte_5935A4D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_BackViewListViewMenu_OnClickItem__);
-    byte_4E74AB7 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_BackViewListViewMenu_OnClickItem__);
+    byte_5935A4D = 1;
   }
   if ( this->fields.state == 3 )
   {
-    this->fields.state = 2;
     listViewManager = this->fields.listViewManager;
-    v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    this->fields.state = 2;
+    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_BackViewListViewMenu_OnClickItem__, 0);
     if ( !listViewManager
-      || (BackViewListViewManager__SetMode_38636876(listViewManager, 1, v5, v8),
+      || (BackViewListViewManager__SetMode_44199508(listViewManager, 1, v5, v8),
           (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
     {
-      sub_1D0F30C(cancelButton, v7);
+      sub_21FFECC(cancelButton, v7);
     }
     UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
   }
@@ -219,21 +225,21 @@ void BackViewListViewMenu__OnEndBackView(BackViewListViewMenu_o *this, bool isEx
 void BackViewListViewMenu__OnSearchLabelChange(BackViewListViewMenu_o *this, const MethodInfo *method)
 {
   ListViewManager_o *listViewManager; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   BackViewListViewMenu_CallbackFunc_o *callbackFunc; // x1
   const MethodInfo *v11; // x2
 
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   ListViewManager__DestroyList(listViewManager, 0);
   this->fields.backAssetList = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.backAssetList, 0, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.backAssetList, 0, v4, v5, v6, v7, v8, v9);
   callbackFunc = this->fields.callbackFunc;
   this->fields.state = 0;
   BackViewListViewMenu__Open(this, callbackFunc, v11);
@@ -246,81 +252,92 @@ void BackViewListViewMenu__Open(
         const MethodInfo *method)
 {
   __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
+  __int64 v12; // x1
+  __int64 v13; // x2
   System_Collections_Generic_IEnumerable_T__o *AssetStorageList; // x22
-  System_Collections_Generic_List_object__o *v13; // x20
-  __int64 v14; // x1
+  System_Collections_Generic_List_object__o *v15; // x20
+  __int64 v16; // x1
   void *rootObject; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  _QWORD *v22; // x22
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  System_Predicate_object__o *v29; // x22
-  System_Comparison_T__o *v30; // x21
-  Il2CppObject *v31; // x22
-  struct BackViewListViewMenu___c_StaticFields *static_fields; // x0
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  struct System_String_array *v39; // x0
-  int32_t v40; // w2
-  int32_t v41; // w3
-  System_String_o *v42; // x4
-  int32_t v43; // w5
-  int64_t v44; // x6
-  System_String_o *v45; // x7
-  const MethodInfo *v46; // x2
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  _QWORD *v24; // x22
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  System_Predicate_object__o *v31; // x22
+  struct BackViewListViewMenu___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__14_1; // x21
+  Il2CppObject *v34; // x22
+  struct BackViewListViewMenu___c_StaticFields *v35; // x0
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  struct System_String_array *v42; // x0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  const MethodInfo *v49; // x2
 
-  if ( (byte_4E74AB4 & 1) == 0 )
+  if ( (byte_5935A4A & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&System_Comparison_string__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__RemoveAll__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Sort___80331304);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor___80331160);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&System_Predicate_string__TypeInfo);
-    sub_1D0F0B4(&Method_BackViewListViewMenu___c__Open_b__14_1__);
-    sub_1D0F0B4(&Method_BackViewListViewMenu___c__DisplayClass14_0__Open_b__0__);
-    sub_1D0F0B4(&BackViewListViewMenu___c__DisplayClass14_0_TypeInfo);
-    sub_1D0F0B4(&BackViewListViewMenu___c_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3053/*"Back"*/);
-    byte_4E74AB4 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&System_Comparison_string__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__RemoveAll__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Sort___91439504);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor___91439360);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&System_Predicate_string__TypeInfo);
+    sub_21FFC50(&Method_BackViewListViewMenu___c__Open_b__14_1__);
+    sub_21FFC50(&Method_BackViewListViewMenu___c__DisplayClass14_0__Open_b__0__);
+    sub_21FFC50(&BackViewListViewMenu___c__DisplayClass14_0_TypeInfo);
+    sub_21FFC50(&BackViewListViewMenu___c_TypeInfo);
+    sub_21FFC50(&StringLiteral_3147/*"Back"*/);
+    byte_5935A4A = 1;
   }
   if ( !this->fields.state )
   {
-    v5 = sub_1D0F300(BackViewListViewMenu___c__DisplayClass14_0_TypeInfo);
+    v5 = sub_21FFEBC(BackViewListViewMenu___c__DisplayClass14_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     this->fields.callbackFunc = callback;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7, v8, v9, v10, v11);
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
+      (int32_t)callback,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v12, v13);
     AssetStorageList = (System_Collections_Generic_IEnumerable_T__o *)AssetManager__getAssetStorageList(
-                                                                        (System_String_o *)StringLiteral_3053/*"Back"*/,
+                                                                        (System_String_o *)StringLiteral_3147/*"Back"*/,
                                                                         0);
-    v13 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_60144900(
-      v13,
+    v15 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_71627776(
+      v15,
       AssetStorageList,
-      (const MethodInfo_395BD04 *)Method_System_Collections_Generic_List_string___ctor___80331160);
+      (const MethodInfo_444F400 *)Method_System_Collections_Generic_List_string___ctor___91439360);
     rootObject = this->fields.rootObject;
     if ( rootObject )
     {
@@ -340,83 +357,92 @@ void BackViewListViewMenu__Open(
             if ( v5 )
             {
               *(_QWORD *)(v5 + 16) = rootObject;
-              v22 = (_QWORD *)(v5 + 16);
-              sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)rootObject, v16, v17, v18, v19, v20, v21);
+              v24 = (_QWORD *)(v5 + 16);
+              sub_21FFBF4(
+                (MissionNaviTransitionBoardItem_o *)(v5 + 16),
+                (int32_t)rootObject,
+                v18,
+                v19,
+                v20,
+                v21,
+                v22,
+                v23);
               if ( System_String__IsNullOrEmpty(*(System_String_o **)(v5 + 16), 0) )
               {
-                *v22 = 0;
-                sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), 0, v23, v24, v25, v26, v27, v28);
+                *v24 = 0;
+                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), 0, v25, v26, v27, v28, v29, v30);
               }
-              if ( *v22 )
+              if ( *v24 )
               {
-                v29 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_string__TypeInfo);
+                v31 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_string__TypeInfo);
                 System_Predicate_object____ctor(
-                  v29,
+                  v31,
                   (Il2CppObject *)v5,
                   Method_BackViewListViewMenu___c__DisplayClass14_0__Open_b__0__,
                   0);
-                if ( !v13 )
+                if ( !v15 )
                   goto LABEL_26;
                 System_Collections_Generic_List_object___RemoveAll(
-                  v13,
-                  (System_Predicate_T__o *)v29,
-                  (const MethodInfo_395DA6C *)Method_System_Collections_Generic_List_string__RemoveAll__);
+                  v15,
+                  (System_Predicate_T__o *)v31,
+                  (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_string__RemoveAll__);
               }
               rootObject = BackViewListViewMenu___c_TypeInfo;
-              if ( !BackViewListViewMenu___c_TypeInfo->_2.cctor_finished )
+              if ( !*(&BackViewListViewMenu___c_TypeInfo->_2.cctor_finished + 1) )
               {
-                j_il2cpp_runtime_class_init_0(BackViewListViewMenu___c_TypeInfo);
+                j_il2cpp_runtime_class_init_0(BackViewListViewMenu___c_TypeInfo, v16, v25);
                 rootObject = BackViewListViewMenu___c_TypeInfo;
               }
-              v30 = *(System_Comparison_T__o **)(*((_QWORD *)rootObject + 23) + 8LL);
-              if ( !v30 )
+              static_fields = (struct BackViewListViewMenu___c_StaticFields *)*((_QWORD *)rootObject + 23);
+              _9__14_1 = (System_Comparison_T__o *)static_fields->__9__14_1;
+              if ( !_9__14_1 )
               {
-                if ( !*((_DWORD *)rootObject + 56) )
+                if ( !*((_DWORD *)rootObject + 57) )
                 {
-                  j_il2cpp_runtime_class_init_0(rootObject);
-                  rootObject = BackViewListViewMenu___c_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(rootObject, v16, v25);
+                  static_fields = BackViewListViewMenu___c_TypeInfo->static_fields;
                 }
-                v31 = (Il2CppObject *)**((_QWORD **)rootObject + 23);
-                v30 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_string__TypeInfo);
-                System_Comparison_object____ctor(v30, v31, Method_BackViewListViewMenu___c__Open_b__14_1__, 0);
-                static_fields = BackViewListViewMenu___c_TypeInfo->static_fields;
-                static_fields->__9__14_1 = (struct System_Comparison_string__o *)v30;
-                sub_1D0F058(
-                  (GrandQuestFolderBoardItem_o *)&static_fields->__9__14_1,
-                  (int32_t)v30,
-                  v33,
-                  v34,
-                  v35,
+                v34 = (Il2CppObject *)static_fields->__9;
+                _9__14_1 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_string__TypeInfo);
+                System_Comparison_object____ctor(_9__14_1, v34, Method_BackViewListViewMenu___c__Open_b__14_1__, 0);
+                v35 = BackViewListViewMenu___c_TypeInfo->static_fields;
+                v35->__9__14_1 = (struct System_Comparison_string__o *)_9__14_1;
+                sub_21FFBF4(
+                  (MissionNaviTransitionBoardItem_o *)&v35->__9__14_1,
+                  (int32_t)_9__14_1,
                   v36,
                   v37,
-                  v38);
-              }
-              if ( v13 )
-              {
-                System_Collections_Generic_List_object___Sort_60153556(
-                  v13,
-                  v30,
-                  (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_string__Sort___80331304);
-                v39 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                                      v13,
-                                                      (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_string__ToArray__);
-                this->fields.backAssetList = v39;
-                sub_1D0F058(
-                  (GrandQuestFolderBoardItem_o *)&this->fields.backAssetList,
-                  (int32_t)v39,
+                  v38,
+                  v39,
                   v40,
-                  v41,
-                  v42,
+                  v41);
+              }
+              if ( v15 )
+              {
+                System_Collections_Generic_List_object___Sort_71636404(
+                  v15,
+                  _9__14_1,
+                  (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_string__Sort___91439504);
+                v42 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                                      v15,
+                                                      (const MethodInfo_445164C *)Method_System_Collections_Generic_List_string__ToArray__);
+                this->fields.backAssetList = v42;
+                sub_21FFBF4(
+                  (MissionNaviTransitionBoardItem_o *)&this->fields.backAssetList,
+                  (int32_t)v42,
                   v43,
                   v44,
-                  v45);
+                  v45,
+                  v46,
+                  v47,
+                  v48);
                 rootObject = this->fields.listViewManager;
                 if ( rootObject )
                 {
                   BackViewListViewManager__CreateList(
                     (BackViewListViewManager_o *)rootObject,
                     this->fields.backAssetList,
-                    v46);
+                    v49);
                   goto LABEL_25;
                 }
               }
@@ -426,7 +452,7 @@ void BackViewListViewMenu__Open(
       }
     }
 LABEL_26:
-    sub_1D0F30C(rootObject, v14);
+    sub_21FFECC(rootObject, v16);
   }
 LABEL_25:
   BackViewListViewMenu__StartInput(this, (const MethodInfo *)callback);
@@ -435,27 +461,30 @@ LABEL_25:
 
 void BackViewListViewMenu__StartInput(BackViewListViewMenu_o *this, const MethodInfo *method)
 {
+  System_Action_c *v3; // x0
   BackViewListViewManager_o *listViewManager; // x20
-  System_Action_o *v4; // x21
+  System_Action_o *v5; // x21
   UnityEngine_Behaviour_o *cancelButton; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x3
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  __int64 v9; // x2
   UnityEngine_Behaviour_o *forceObi169Sprite; // x19
 
-  if ( (byte_4E74AB5 & 1) == 0 )
+  if ( (byte_5935A4B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_BackViewListViewMenu_OnClickItem__);
-    sub_1D0F0B4(&ScriptManager_TypeInfo);
-    byte_4E74AB5 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_BackViewListViewMenu_OnClickItem__);
+    sub_21FFC50(&ScriptManager_TypeInfo);
+    byte_5935A4B = 1;
   }
-  this->fields.state = 2;
+  v3 = System_Action_TypeInfo;
   listViewManager = this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_BackViewListViewMenu_OnClickItem__, 0);
+  this->fields.state = 2;
+  v5 = (System_Action_o *)sub_21FFEBC(v3);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_BackViewListViewMenu_OnClickItem__, 0);
   if ( !listViewManager )
     goto LABEL_10;
-  BackViewListViewManager__SetMode_38636876(listViewManager, 1, v4, v7);
+  BackViewListViewManager__SetMode_44199508(listViewManager, 1, v5, v8);
   cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton;
   if ( !cancelButton )
     goto LABEL_10;
@@ -469,11 +498,11 @@ void BackViewListViewMenu__StartInput(BackViewListViewMenu_o *this, const Method
     cancelButton->klass[1]._1.namespaze);
   cancelButton = (UnityEngine_Behaviour_o *)ScriptManager_TypeInfo;
   forceObi169Sprite = (UnityEngine_Behaviour_o *)this->fields.forceObi169Sprite;
-  if ( !ScriptManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
+  if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v7, v9);
   if ( !forceObi169Sprite )
 LABEL_10:
-    sub_1D0F30C(cancelButton, v6);
+    sub_21FFECC(cancelButton, v7);
   UnityEngine_Behaviour__set_enabled(forceObi169Sprite, ScriptManager_TypeInfo->static_fields->defaultForceObi_16_9, 0);
 }
 
@@ -484,16 +513,16 @@ void BackViewListViewMenu__StartMenu(BackViewListViewMenu_o *this, const MethodI
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_4E74AB3 & 1) == 0 )
+  if ( (byte_5935A49 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BackViewListViewMenu__StartMenu_b__13_0__);
-    sub_1D0F0B4(&BackViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_4E74AB3 = 1;
+    sub_21FFC50(&Method_BackViewListViewMenu__StartMenu_b__13_0__);
+    sub_21FFC50(&BackViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_5935A49 = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (BackViewListViewMenu_CallbackFunc_o *)sub_1D0F300(BackViewListViewMenu_CallbackFunc_TypeInfo);
+  v3 = (BackViewListViewMenu_CallbackFunc_o *)sub_21FFEBC(BackViewListViewMenu_CallbackFunc_TypeInfo);
   BackViewListViewMenu_CallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -512,16 +541,18 @@ void BackViewListViewMenu__add_callbackFunc(
   System_Delegate_o *v6; // x21
   struct BackViewListViewMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  BackViewListViewMenu_o *v11; // x0
-  BackViewListViewMenu_CallbackFunc_o *v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  BackViewListViewMenu_o *v13; // x0
+  BackViewListViewMenu_CallbackFunc_o *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4E74AB1 & 1) == 0 )
+  if ( (byte_5935A47 & 1) == 0 )
   {
-    sub_1D0F0B4(&BackViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_4E74AB1 = 1;
+    sub_21FFC50(&BackViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_5935A47 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -534,14 +565,14 @@ void BackViewListViewMenu__add_callbackFunc(
       if ( (BackViewListViewMenu_CallbackFunc_c *)v8->klass != BackViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  BackViewListViewMenu__remove_callbackFunc(v11, v12, v13);
+  sub_220024C(v8, BackViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  BackViewListViewMenu__remove_callbackFunc(v13, v14, v15);
 }
 
 
@@ -554,15 +585,17 @@ void BackViewListViewMenu__remove_callbackFunc(
   System_Delegate_o *v6; // x21
   struct BackViewListViewMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  BackViewListViewMenu_o *v11; // x0
-  const MethodInfo *v12; // x1
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  BackViewListViewMenu_o *v13; // x0
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4E74AB2 & 1) == 0 )
+  if ( (byte_5935A48 & 1) == 0 )
   {
-    sub_1D0F0B4(&BackViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_4E74AB2 = 1;
+    sub_21FFC50(&BackViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_5935A48 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -575,14 +608,14 @@ void BackViewListViewMenu__remove_callbackFunc(
       if ( (BackViewListViewMenu_CallbackFunc_c *)v8->klass != BackViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  BackViewListViewMenu__StartMenu(v11, v12);
+  sub_220024C(v8, BackViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  BackViewListViewMenu__StartMenu(v13, v14);
 }
 
 
@@ -592,10 +625,10 @@ void BackViewListViewMenu_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -605,23 +638,23 @@ void BackViewListViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -633,9 +666,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3A398;
+  this->fields.invoke_impl = (intptr_t)sub_1FF50BC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3A350;
+  this->fields.extra_arg = (intptr_t)&loc_1FF5074;
 }
 
 
@@ -646,18 +679,13 @@ System_IAsyncResult_o *BackViewListViewMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = result;
-  if ( (byte_4E74ABA & 1) == 0 )
-  {
-    sub_1D0F0B4(&bool_TypeInfo);
-    byte_4E74ABA = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -666,7 +694,7 @@ void BackViewListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 
@@ -685,23 +713,23 @@ void BackViewListViewMenu_CallbackFunc__Invoke(
 void BackViewListViewMenu___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E74ABB & 1) == 0 )
+  if ( (byte_5935A50 & 1) == 0 )
   {
-    sub_1D0F0B4(&BackViewListViewMenu___c_TypeInfo);
-    byte_4E74ABB = 1;
+    sub_21FFC50(&BackViewListViewMenu___c_TypeInfo);
+    byte_5935A50 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(BackViewListViewMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(BackViewListViewMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BackViewListViewMenu___c_TypeInfo->static_fields->__9 = (struct BackViewListViewMenu___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)BackViewListViewMenu___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)BackViewListViewMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -729,7 +757,7 @@ int32_t BackViewListViewMenu___c___Open_b__14_1(
   int32_t result; // w0
 
   if ( !a || !b )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   stringLength = a->fields._stringLength;
   v5 = b->fields._stringLength;
   result = stringLength - v5;
@@ -753,6 +781,6 @@ bool BackViewListViewMenu___c__DisplayClass14_0___Open_b__0(
         const MethodInfo *method)
 {
   if ( !X )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return !System_String__Contains(X, this->fields.searchStr, 0);
 }

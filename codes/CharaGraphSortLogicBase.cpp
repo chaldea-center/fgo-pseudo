@@ -1,25 +1,25 @@
 void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct IconLabelInfo_o *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   const MethodInfo *v10; // x0
   struct IconLabelInfo_o *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)v3,
     v4,
     v5,
@@ -29,8 +29,8 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
     v9);
   v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
   this->fields._IconInfo2_k__BackingField = v11;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)v11,
     v12,
     v13,
@@ -48,15 +48,15 @@ IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
   __int64 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4E769EA & 1) == 0 )
+  if ( (byte_5937997 & 1) == 0 )
   {
-    sub_1D0F0B4(&IconLabelInfo_TypeInfo);
-    byte_4E769EA = 1;
+    sub_21FFC50(&IconLabelInfo_TypeInfo);
+    byte_5937997 = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_1D0F300(IconLabelInfo_TypeInfo);
+  v1 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v1, 0);
   if ( !v1 )
-    sub_1D0F30C(v2, v3);
+    sub_21FFECC(v2, v3);
   IconLabelInfo__Clear(v1, 0);
   return v1;
 }
@@ -66,17 +66,17 @@ void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, con
 {
   IconLabelInfo_o *IconInfo1_k__BackingField; // x0
 
-  IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
-  *(_OWORD *)&this->fields._SortValue0_k__BackingField = 0u;
   this->fields._SortValue1_k__BackingField = -1;
   this->fields._SortValue1B_k__BackingField = 0;
-  *(_OWORD *)&this->fields._SortValue2_k__BackingField = 0u;
+  IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
   this->fields._AmountSortValue_k__BackingField = -1;
+  *(_OWORD *)&this->fields._SortValue0_k__BackingField = 0u;
+  *(_OWORD *)&this->fields._SortValue2_k__BackingField = 0u;
   if ( !IconInfo1_k__BackingField
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_1D0F30C(IconInfo1_k__BackingField, method);
+    sub_21FFECC(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
@@ -87,17 +87,17 @@ void CharaGraphSortLogicBase__SetListViewItem(
         CharaGraphListViewItemBase_o *inputItem,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.item = inputItem;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.item,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.item,
     (int32_t)inputItem,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -111,14 +111,22 @@ void CharaGraphSortLogicBase__SetListViewSort(
         ListViewSort_o *inputSort,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.sort = inputSort;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)inputSort,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -134,19 +142,38 @@ void CharaGraphSortLogicBase__SetSortValue(CharaGraphSortLogicBase_o *this, cons
 void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct CharaGraphListViewItemBase_o *item; // x8
+  _BOOL4 IsChoice_k__BackingField; // w9
+  _BOOL4 IsSwapChoice_k__BackingField; // w8
+  bool v5; // zf
+  _BOOL4 v6; // w9
+  int v7; // w10
+  int v8; // w8
   struct ListViewSort_o *sort; // x8
 
   item = this->fields.item;
   if ( !item )
-    goto LABEL_7;
-  if ( item->fields._IsSwapChoice_k__BackingField == item->fields._IsChoice_k__BackingField )
-    return;
-  sort = this->fields.sort;
-  if ( !sort )
-LABEL_7:
-    sub_1D0F30C(this, method);
-  if ( sort->fields.isChoiceSort )
-    this->fields._SortValue0_k__BackingField = 10;
+    goto LABEL_13;
+  IsChoice_k__BackingField = item->fields._IsChoice_k__BackingField;
+  IsSwapChoice_k__BackingField = item->fields._IsSwapChoice_k__BackingField;
+  v5 = !IsChoice_k__BackingField;
+  v6 = !IsChoice_k__BackingField;
+  v7 = !v5;
+  if ( IsSwapChoice_k__BackingField )
+    v8 = v6;
+  else
+    v8 = v7;
+  if ( v8 == 1 )
+  {
+    sort = this->fields.sort;
+    if ( sort )
+    {
+      if ( sort->fields.isChoiceSort )
+        this->fields._SortValue0_k__BackingField = 10;
+      return;
+    }
+LABEL_13:
+    sub_21FFECC(this, method);
+  }
 }
 
 
@@ -224,17 +251,17 @@ void CharaGraphSortLogicBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -248,17 +275,17 @@ void CharaGraphSortLogicBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

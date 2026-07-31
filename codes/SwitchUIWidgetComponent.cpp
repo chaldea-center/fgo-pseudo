@@ -1,23 +1,23 @@
 void SwitchUIWidgetComponent___ctor(SwitchUIWidgetComponent_o *this, const MethodInfo *method)
 {
   this->fields._Alpha_k__BackingField = 1.0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
 void SwitchUIWidgetComponent__Clear(SwitchUIWidgetComponent_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v9; // x1
 
   this->fields.isEnableSingle = 0;
   this->fields.componentList = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.componentList, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.componentList, 0, v2, v3, v4, v5, v6, v7);
   SwitchUIWidgetComponent__ClearParam(this, v9);
 }
 
@@ -29,7 +29,7 @@ void SwitchUIWidgetComponent__ClearParam(SwitchUIWidgetComponent_o *this, const 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -49,24 +49,25 @@ bool SwitchUIWidgetComponent__ParameterChange(SwitchUIWidgetComponent_o *this, i
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v6);
   activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0);
   if ( activeSelf )
-    SwitchUIWidgetComponent__Set_42498080(this, count, v7);
+    SwitchUIWidgetComponent__Set_48061448(this, count, v7);
   return activeSelf;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SwitchUIWidgetComponent__Set(
         SwitchUIWidgetComponent_o *this,
         UIWidget_array *componentList,
         bool isEnableSingleFade,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   bool v10; // w21
   SwitchParameterDisplayManager_o *Instance; // x0
   __int64 v12; // x1
@@ -74,42 +75,42 @@ void SwitchUIWidgetComponent__Set(
   const MethodInfo *v14; // x1
 
   v10 = isEnableSingleFade;
-  if ( (byte_4E76C61 & 1) == 0 )
+  if ( (byte_5937C03 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4E76C61 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_5937C03 = 1;
   }
   this->fields.isEnableSingle = v10;
   if ( componentList )
   {
     this->fields.componentList = componentList;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.componentList,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.componentList,
       (int32_t)componentList,
-      isEnableSingleFade,
-      (int32_t)method,
+      (System_String_o *)isEnableSingleFade,
+      (System_String_o *)method,
       v4,
       v5,
       v6,
       v7);
-    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !Instance
       || (SwitchParameterDisplayManager__AddComponent(Instance, (SwitchParameterDisplayComponent_o *)this, 0),
-          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0) )
+          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0) )
     {
-      sub_1D0F30C(Instance, v12);
+      sub_21FFECC(Instance, v12);
     }
-    SwitchUIWidgetComponent__Set_42498080(this, Instance->fields.count, v13);
+    SwitchUIWidgetComponent__Set_48061448(this, Instance->fields.count, v13);
   }
   else
   {
     this->fields.isEnableSingle = 0;
     this->fields.componentList = 0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.componentList,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.componentList,
       0,
-      isEnableSingleFade,
-      (int32_t)method,
+      (System_String_o *)isEnableSingleFade,
+      (System_String_o *)method,
       v4,
       v5,
       v6,
@@ -119,33 +120,32 @@ void SwitchUIWidgetComponent__Set(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void SwitchUIWidgetComponent__SetAlpha(SwitchUIWidgetComponent_o *this, float alpha, const MethodInfo *method)
 {
-  long double v3; // q8
+  UnityEngine_Object_c *v5; // x0
   UnityEngine_Object_o *component; // x20
-  __int64 v6; // x1
-  struct UIWidget_o *v7; // x0
+  __int64 v7; // x1
+  struct UIWidget_o *v8; // x0
 
-  v3 = *(long double *)&alpha;
-  if ( (byte_4E76C63 & 1) == 0 )
+  if ( (byte_5937C05 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C63 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937C05 = 1;
   }
-  this->fields._Alpha_k__BackingField = *(float *)&v3;
+  v5 = UnityEngine_Object_TypeInfo;
   component = (UnityEngine_Object_o *)this->fields.component;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  this->fields._Alpha_k__BackingField = alpha;
+  if ( !*(&v5->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v5, method);
   if ( !UnityEngine_Object__op_Equality(component, 0, 0) )
   {
-    v7 = this->fields.component;
-    if ( !v7 )
-      sub_1D0F30C(0, v6);
-    ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, long double))v7->klass->vtable._8_set_alpha.methodPtr)(
-      v7,
-      v7->klass->vtable._8_set_alpha.method,
-      v3);
+    v8 = this->fields.component;
+    if ( !v8 )
+      sub_21FFECC(0, v7);
+    ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))v8->klass->vtable._8_set_alpha.methodPtr)(
+      v8,
+      v8->klass->vtable._8_set_alpha.method,
+      alpha);
   }
 }
 
@@ -154,96 +154,94 @@ void SwitchUIWidgetComponent__SetAlpha(SwitchUIWidgetComponent_o *this, float al
 void SwitchUIWidgetComponent__SetParam(SwitchUIWidgetComponent_o *this, int32_t num, const MethodInfo *method)
 {
   struct UIWidget_array *componentList; // x8
-  struct UIWidget_o *v4; // x20
-  SwitchUIWidgetComponent_o *v5; // x19
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  SwitchUIWidgetComponent_o *v4; // x19
+  struct UIWidget_o *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
   componentList = this->fields.componentList;
   if ( !componentList )
     goto LABEL_5;
   if ( LODWORD(componentList->max_length) <= num )
-    sub_1D0F314(this);
-  v4 = componentList->m_Items[num];
-  v5 = this;
+    sub_21FFED4(this);
+  v4 = this;
+  v5 = componentList->m_Items[num];
   this = (SwitchUIWidgetComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !this )
 LABEL_5:
-    sub_1D0F30C(this, *(_QWORD *)&num);
+    sub_21FFECC(this, *(_QWORD *)&num);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  v5->fields.component = v4;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v5->fields.component, (int32_t)v4, v6, v7, v8, v9, v10, v11);
+  v4->fields.component = v5;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields.component, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SwitchUIWidgetComponent__Set_42498080(SwitchUIWidgetComponent_o *this, int32_t count, const MethodInfo *method)
+void SwitchUIWidgetComponent__Set_48061448(SwitchUIWidgetComponent_o *this, int32_t count, const MethodInfo *method)
 {
   struct UIWidget_array *componentList; // x8
-  il2cpp_array_size_t v6; // x8
-  int32_t v7; // w20
+  il2cpp_array_size_t max_length; // x8
+  __int64 v7; // x20
   float *Instance; // x0
   const MethodInfo *v9; // x1
   struct UIWidget_array *v10; // x8
-  il2cpp_array_size_t max_length; // x9
-  unsigned __int64 v12; // x21
+  unsigned __int64 v11; // x21
+  unsigned __int64 max_length_low; // x9
   const MethodInfo *v13; // x1
 
-  if ( (byte_4E76C62 & 1) == 0 )
+  if ( (byte_5937C04 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4E76C62 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_5937C04 = 1;
   }
   componentList = this->fields.componentList;
-  if ( componentList && (v6 = componentList->max_length) != 0 )
+  if ( componentList && (max_length = componentList->max_length) != 0 )
   {
-    if ( (_DWORD)v6 == 1 && !this->fields.isEnableSingle )
+    if ( (_DWORD)max_length == 1 && !this->fields.isEnableSingle )
     {
       SwitchUIWidgetComponent__SetParam(this, 0, method);
       SwitchUIWidgetComponent__SetAlpha(this, 1.0, v13);
     }
     else
     {
-      v7 = count % (int)v6;
+      v7 = (unsigned int)(count % (int)max_length);
       SwitchUIWidgetComponent__SetParam(this, v7, method);
-      Instance = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-      if ( !Instance )
-        goto LABEL_19;
-      SwitchUIWidgetComponent__SetAlpha(this, Instance[13], v9);
-      v10 = this->fields.componentList;
-      if ( !v10 )
-        goto LABEL_19;
-      max_length = v10->max_length;
-      if ( (int)max_length >= 2 )
+      Instance = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      if ( !Instance
+        || (SwitchUIWidgetComponent__SetAlpha(this, Instance[13], v9), (v10 = this->fields.componentList) == 0) )
       {
-        v12 = 0;
+LABEL_17:
+        sub_21FFECC(Instance, v9);
+      }
+      if ( SLODWORD(v10->max_length) >= 2 )
+      {
+        v11 = 0;
         while ( 1 )
         {
-          if ( v7 != v12 )
+          max_length_low = LODWORD(v10->max_length);
+          if ( (__int64)v11 >= (int)max_length_low )
+            break;
+          if ( v7 != v11 )
           {
-            if ( v12 >= (unsigned int)max_length )
-              sub_1D0F314(Instance);
-            Instance = (float *)v10->m_Items[v12];
+            if ( v11 >= max_length_low )
+              sub_21FFED4(Instance);
+            Instance = (float *)v10->m_Items[v11];
             if ( !Instance )
-              break;
-            Instance = (float *)(*(__int64 (__fastcall **)(float *, _QWORD, float))(*(_QWORD *)Instance + 440LL))(
+              goto LABEL_17;
+            Instance = (float *)(*(__int64 (__fastcall **)(float *, _QWORD, double))(*(_QWORD *)Instance + 440LL))(
                                   Instance,
                                   *(_QWORD *)(*(_QWORD *)Instance + 448LL),
                                   0.0);
             v10 = this->fields.componentList;
-            if ( !v10 )
-              break;
           }
-          LODWORD(max_length) = v10->max_length;
-          if ( (__int64)++v12 >= (int)max_length )
-            return;
+          ++v11;
+          if ( !v10 )
+            goto LABEL_17;
         }
-LABEL_19:
-        sub_1D0F30C(Instance, v9);
       }
     }
   }

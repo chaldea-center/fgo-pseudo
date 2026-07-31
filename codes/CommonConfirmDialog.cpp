@@ -1,18 +1,23 @@
 void CommonConfirmDialog___ctor(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E710BC & 1) == 0 )
+  __int64 v2; // x2
+  BaseDialog_c *v4; // x0
+
+  if ( (byte_5931D4F & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E710BC = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_5931D4F = 1;
   }
+  v4 = BaseDialog_TypeInfo;
+  *(_OWORD *)&this->fields.DEFULT_MESSAGE_WIDGET_SIZE.fields.m_X = xmmword_E941E0;
   this->fields.DEFULT_TITLE_WIDGET_SIZE = (struct UnityEngine_Vector2Int_o)0x32000002BCLL;
-  *(_OWORD *)&this->fields.DEFULT_MESSAGE_WIDGET_SIZE.fields.m_X = xmmword_D35870;
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&v4->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v4, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonConfirmDialog__AdjustMessageLabel(
         CommonConfirmDialog_o *this,
         bool isNoTitle,
@@ -28,39 +33,40 @@ void CommonConfirmDialog__AdjustMessageLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *noTitleMessageLabel; // x22
-  __int64 v23; // x1
   UnityEngine_GameObject_o *baseWindow; // x0
   struct UILabel_o *messageLabel; // x22
-  int monitor_high; // w27
+  __int64 v25; // x2
+  unsigned int monitor_high; // w27
   float v27; // s8
   float v28; // s0
   unsigned __int64 v29; // x27
   UnityEngine_Object_o *v30; // x28
   UnityEngine_GameObject_o *gameObject; // x0
-  BalanceConfig_c *v32; // x0
-  System_String_o *Empty; // x1
+  __int64 v32; // x1
+  __int64 v33; // x2
+  BalanceConfig_c *v34; // x0
+  System_String_o *v35; // x1
   int32_t mWidth; // w19
-  int32_t v35; // w3
-  Il2CppObject *v36; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v37; // w3
+  Il2CppObject *v38; // [xsp+0h] [xbp-80h] BYREF
   Il2CppObject *component; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4E710B1 & 1) == 0 )
+  if ( (byte_5931D44 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&string_TypeInfo);
-    byte_4E710B1 = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
+    sub_21FFC50(&System_Math_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5931D44 = 1;
   }
-  v36 = 0;
+  v38 = 0;
   component = 0;
   if ( isNoTitle )
   {
     noTitleMessageLabel = (UnityEngine_Object_o *)this->fields.noTitleMessageLabel;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isNoTitle, message);
     if ( UnityEngine_Object__op_Inequality(noTitleMessageLabel, 0, 0) )
     {
       baseWindow = this->fields.baseWindow;
@@ -70,15 +76,15 @@ void CommonConfirmDialog__AdjustMessageLabel(
       if ( !UnityEngine_GameObject__TryGetComponent_object_(
               baseWindow,
               &component,
-              (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___) )
+              (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___) )
         goto LABEL_23;
       baseWindow = this->fields.buttonDecide;
       if ( !baseWindow )
         goto LABEL_38;
       baseWindow = (UnityEngine_GameObject_o *)UnityEngine_GameObject__TryGetComponent_object_(
                                                  baseWindow,
-                                                 &v36,
-                                                 (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
+                                                 &v38,
+                                                 (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_UISprite___);
       if ( ((unsigned __int8)baseWindow & 1) == 0 )
       {
 LABEL_23:
@@ -86,13 +92,13 @@ LABEL_23:
         messagePosY = 38.0;
         goto LABEL_24;
       }
-      if ( component && v36 )
+      if ( component && v38 )
       {
         monitor_high = HIDWORD(component[10].monitor);
-        v27 = (float)((float)SHIDWORD(v36[10].monitor) * 0.5) + buttonPosY;
-        if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v28 = fabsf((float)((float)monitor_high * 0.5) + -30.0) + fabsf(v27);
+        v27 = (float)((float)SHIDWORD(v38[10].monitor) * 0.5) + buttonPosY;
+        if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, isNoTitle, v25);
+        v28 = fabsf(vcvts_n_f32_s32(monitor_high, 1u) + -30.0) + fabsf(v27);
         messagePosY = v27 + (float)(v28 * 0.5);
         if ( v28 == INFINITY )
           LODWORD(v29) = 0x80000000;
@@ -105,14 +111,14 @@ LABEL_24:
         goto LABEL_25;
       }
 LABEL_38:
-      sub_1D0F30C(baseWindow, v23);
+      sub_21FFECC(baseWindow, isNoTitle);
     }
   }
   messageLabel = this->fields.messageLabel;
   v30 = (UnityEngine_Object_o *)this->fields.noTitleMessageLabel;
   v29 = HIDWORD(*(unsigned __int64 *)&messageWidgetSize);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isNoTitle, message);
   baseWindow = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(v30, 0, 0);
   if ( ((unsigned __int8)baseWindow & 1) != 0 )
   {
@@ -120,7 +126,7 @@ LABEL_38:
     if ( baseWindow )
     {
 LABEL_25:
-      UILabel__set_text((UILabel_o *)baseWindow, string_TypeInfo->static_fields->Empty, 0);
+      UILabel__set_text((UILabel_o *)baseWindow, **(System_String_o ***)(qword_594C0B8 + 184), 0);
       goto LABEL_26;
     }
     goto LABEL_38;
@@ -135,24 +141,24 @@ LABEL_26:
   UILabel__set_spacingY(messageLabel, spacingY, 0);
   if ( !fontsize )
   {
-    v32 = BalanceConfig_TypeInfo;
-    if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+    v34 = BalanceConfig_TypeInfo;
+    if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v32 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v32, v33);
+      v34 = BalanceConfig_TypeInfo;
     }
-    fontsize = v32->static_fields->DefaultFontSize;
+    fontsize = v34->static_fields->DefaultFontSize;
   }
   UILabel__set_fontSize(messageLabel, fontsize, 0);
   UILabel__set_alignment(messageLabel, alignment, 0);
   if ( message )
   {
-    Empty = System_String__Trim_65618948(message, 0xAu, 0);
+    v35 = System_String__Trim_75499764(message, 0xAu, 0);
     if ( setCondensedScale )
     {
 LABEL_33:
       mWidth = messageLabel->fields.mWidth;
-      UILabel__set_text(messageLabel, Empty, 0);
+      UILabel__set_text(messageLabel, v35, 0);
       ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))messageLabel->klass->vtable._33_MakePixelPerfect.methodPtr)(
         messageLabel,
         messageLabel->klass->vtable._33_MakePixelPerfect.method);
@@ -162,14 +168,14 @@ LABEL_33:
   }
   else
   {
-    Empty = string_TypeInfo->static_fields->Empty;
+    v35 = **(System_String_o ***)(qword_594C0B8 + 184);
     if ( setCondensedScale )
       goto LABEL_33;
   }
-  v35 = minFontSize;
+  v37 = minFontSize;
   if ( minFontSize < 1 )
-    v35 = 0;
-  WrapControlText__textAdjust(messageLabel, Empty, messageLabel->fields.mFontSize, v35, 0);
+    v37 = 0;
+  WrapControlText__textAdjust(messageLabel, v35, messageLabel->fields.mFontSize, v37, 0);
 }
 
 
@@ -177,30 +183,32 @@ void CommonConfirmDialog__Close(CommonConfirmDialog_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x2
 
-  CommonConfirmDialog__Close_32063960(this, 0, v2);
+  CommonConfirmDialog__Close_37269428(this, 0, v2);
 }
 
 
-void CommonConfirmDialog__Close_32063960(
+void CommonConfirmDialog__Close_37269428(
         CommonConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  System_Action_c *v5; // x0
+  System_Action_o *v6; // x20
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4E710B4 & 1) == 0 )
+  if ( (byte_5931D47 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_CommonConfirmDialog_EndClose__);
-    byte_4E710B4 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_CommonConfirmDialog_EndClose__);
+    byte_5931D47 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1D0F058(&this->fields.closeCallbackFunc, callback);
+  sub_21FFBF4(&this->fields.closeCallbackFunc, callback);
+  v5 = System_Action_TypeInfo;
   this->fields.isButtonEnable = 0;
-  v5 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_CommonConfirmDialog_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v5, v6);
+  v6 = (System_Action_o *)sub_21FFEBC(v5);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_CommonConfirmDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
 
 
@@ -215,7 +223,7 @@ void CommonConfirmDialog__EndClose(CommonConfirmDialog_o *this, const MethodInfo
   CommonConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -223,7 +231,7 @@ void CommonConfirmDialog__EndClose(CommonConfirmDialog_o *this, const MethodInfo
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1D0F058(p_closeCallbackFunc, 0);
+    sub_21FFBF4(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -237,25 +245,31 @@ void CommonConfirmDialog__EndOpen(CommonConfirmDialog_o *this, const MethodInfo 
 
 void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *titleLabel; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x2
   UILabel_o *gameObject; // x0
   UnityEngine_Object_o *messageLabel; // x20
+  __int64 v9; // x2
   UnityEngine_Object_o *noTitleMessageLabel; // x20
+  __int64 v11; // x2
   UnityEngine_Object_o *buttonDecideLabel; // x20
+  __int64 v13; // x2
   UnityEngine_Object_o *buttonCancelLabel; // x20
+  __int64 v15; // x2
   UnityEngine_Object_o *addMsgInfo; // x20
-  const MethodInfo *v11; // x1
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4E710AF & 1) == 0 )
+  if ( (byte_5931D42 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E710AF = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5931D42 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(titleLabel, 0, 0) )
   {
     gameObject = this->fields.titleLabel;
@@ -264,8 +278,8 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0, 0) )
   {
     gameObject = this->fields.messageLabel;
@@ -274,8 +288,8 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   noTitleMessageLabel = (UnityEngine_Object_o *)this->fields.noTitleMessageLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v9);
   if ( UnityEngine_Object__op_Inequality(noTitleMessageLabel, 0, 0) )
   {
     gameObject = this->fields.noTitleMessageLabel;
@@ -284,8 +298,8 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v11);
   if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
   {
     gameObject = this->fields.buttonDecideLabel;
@@ -294,8 +308,8 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v13);
   if ( UnityEngine_Object__op_Inequality(buttonCancelLabel, 0, 0) )
   {
     gameObject = this->fields.buttonCancelLabel;
@@ -304,8 +318,8 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   addMsgInfo = (UnityEngine_Object_o *)this->fields.addMsgInfo;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v15);
   if ( UnityEngine_Object__op_Inequality(addMsgInfo, 0, 0) )
   {
     gameObject = (UILabel_o *)this->fields.addMsgInfo;
@@ -317,193 +331,198 @@ void CommonConfirmDialog__Init(CommonConfirmDialog_o *this, const MethodInfo *me
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_35:
-    sub_1D0F30C(gameObject, v4);
+    sub_21FFECC(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   this->fields._ForceCancelSE_k__BackingField = 0;
-  BaseDialog__Init((BaseDialog_o *)this, v11);
+  BaseDialog__Init((BaseDialog_o *)this, v17);
 }
 
 
 void CommonConfirmDialog__OnClickCancel(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
-  Il2CppObject *v3; // x24
-  Il2CppObject *v4; // x23
-  Il2CppObject *v5; // x22
-  Il2CppObject *v6; // x21
-  System_Collections_Generic_List_object__o *v7; // x20
-  __int64 v8; // x0
-  __int64 v9; // x1
+  __int64 v2; // x2
+  Il2CppObject *v4; // x24
+  Il2CppObject *v5; // x23
+  Il2CppObject *v6; // x22
+  Il2CppObject *v7; // x21
+  System_Collections_Generic_List_object__o *v8; // x20
+  __int64 v9; // x0
+  __int64 v10; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v11; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v13; // x0
-  struct System_Object_array *v14; // x8
-  _QWORD *v15; // x9
-  __int64 v16; // x10
-  Il2CppClass **v17; // x0
-  struct System_Object_array *v18; // x8
-  _QWORD *v19; // x9
-  __int64 v20; // x10
-  Il2CppClass **v21; // x0
-  struct System_Object_array *v22; // x8
-  _QWORD *v23; // x9
-  __int64 v24; // x10
-  Il2CppClass **v25; // x0
+  Il2CppClass **v14; // x0
+  struct System_Object_array *v15; // x8
+  _QWORD *v16; // x9
+  __int64 v17; // x10
+  Il2CppClass **v18; // x0
+  struct System_Object_array *v19; // x8
+  _QWORD *v20; // x9
+  __int64 v21; // x10
+  Il2CppClass **v22; // x0
+  struct System_Object_array *v23; // x8
+  _QWORD *v24; // x9
+  __int64 v25; // x10
+  Il2CppClass **v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x2
   UnityEngine_Object_o *buttonDecide; // x21
+  __int64 v30; // x1
+  __int64 v31; // x2
   UnityEngine_Object_o *buttonDecideLabel; // x21
-  System_Func_object__bool__o *v28; // x21
-  int32_t v29; // w20
-  _QWORD *v30; // x0
-  System_Reflection_MethodBase_o *v31; // x0
+  System_Func_object__bool__o *v33; // x21
+  int32_t v34; // w20
+  _QWORD *v35; // x0
+  System_Reflection_MethodBase_o *v36; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E710B7 & 1) == 0 )
+  if ( (byte_5931D4A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Any_string___);
-    sub_1D0F0B4(&Method_CommonConfirmDialog_OnClickCancel__);
-    sub_1D0F0B4(&Method_CommonConfirmDialog__OnClickCancel_b__60_0__);
-    sub_1D0F0B4(&System_Func_string__bool__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_3727/*"COMMON_CONFIRM_NO"*/);
-    sub_1D0F0B4(&StringLiteral_10535/*"PLAY_OPENING_CONFIRM_CANCEL"*/);
-    byte_4E710B7 = 1;
+    sub_21FFC50(&Method_BasicHelper_Any_string___);
+    sub_21FFC50(&Method_CommonConfirmDialog_OnClickCancel__);
+    sub_21FFC50(&Method_CommonConfirmDialog__OnClickCancel_b__60_0__);
+    sub_21FFC50(&System_Func_string__bool__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_3826/*"COMMON_CONFIRM_NO"*/);
+    sub_21FFC50(&StringLiteral_10811/*"PLAY_OPENING_CONFIRM_CANCEL"*/);
+    byte_5931D4A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v3 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
-    v4 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3723/*"COMMON_CONFIRM_CANCEL"*/, 0);
-    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10535/*"PLAY_OPENING_CONFIRM_CANCEL"*/, 0);
-    v6 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3727/*"COMMON_CONFIRM_NO"*/, 0);
-    v7 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
+    v4 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
+    v6 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10811/*"PLAY_OPENING_CONFIRM_CANCEL"*/, 0);
+    v7 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3826/*"COMMON_CONFIRM_NO"*/, 0);
+    v8 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v7,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
-    if ( !v7 )
+      v8,
+      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    if ( !v8 )
       goto LABEL_38;
-    items = v7->fields._items;
-    v11 = Method_System_Collections_Generic_List_string__Add__;
-    ++v7->fields._version;
+    items = v8->fields._items;
+    v12 = Method_System_Collections_Generic_List_string__Add__;
+    ++v8->fields._version;
     if ( !items )
       goto LABEL_38;
-    size = v7->fields._size;
+    size = v8->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v7,
-        v3,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
-    }
-    else
-    {
-      v13 = &items->obj.klass + size;
-      v7->fields._size = size + 1;
-      v13[4] = (Il2CppClass *)v3;
-      v8 = sub_1D0F058(v13 + 4, v3);
-    }
-    v14 = v7->fields._items;
-    v15 = Method_System_Collections_Generic_List_string__Add__;
-    ++v7->fields._version;
-    if ( !v14 )
-      goto LABEL_38;
-    v16 = v7->fields._size;
-    if ( (unsigned int)v16 >= LODWORD(v14->max_length) )
-    {
-      System_Collections_Generic_List_object___AddWithResize(
-        v7,
+        v8,
         v4,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
     }
     else
     {
-      v17 = &v14->obj.klass + v16;
-      v7->fields._size = v16 + 1;
-      v17[4] = (Il2CppClass *)v4;
-      v8 = sub_1D0F058(v17 + 4, v4);
+      v14 = &items->obj.klass + size;
+      v8->fields._size = size + 1;
+      v14[4] = (Il2CppClass *)v4;
+      v9 = sub_21FFBF4(v14 + 4, v4);
     }
-    v18 = v7->fields._items;
-    v19 = Method_System_Collections_Generic_List_string__Add__;
-    ++v7->fields._version;
-    if ( !v18 )
+    v15 = v8->fields._items;
+    v16 = Method_System_Collections_Generic_List_string__Add__;
+    ++v8->fields._version;
+    if ( !v15 )
       goto LABEL_38;
-    v20 = v7->fields._size;
-    if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
+    v17 = v8->fields._size;
+    if ( (unsigned int)v17 >= LODWORD(v15->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v7,
+        v8,
         v5,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
     }
     else
     {
-      v21 = &v18->obj.klass + v20;
-      v7->fields._size = v20 + 1;
-      v21[4] = (Il2CppClass *)v5;
-      v8 = sub_1D0F058(v21 + 4, v5);
+      v18 = &v15->obj.klass + v17;
+      v8->fields._size = v17 + 1;
+      v18[4] = (Il2CppClass *)v5;
+      v9 = sub_21FFBF4(v18 + 4, v5);
     }
-    v22 = v7->fields._items;
-    v23 = Method_System_Collections_Generic_List_string__Add__;
-    ++v7->fields._version;
-    if ( !v22 )
-LABEL_38:
-      sub_1D0F30C(v8, v9);
-    v24 = v7->fields._size;
-    if ( (unsigned int)v24 >= LODWORD(v22->max_length) )
+    v19 = v8->fields._items;
+    v20 = Method_System_Collections_Generic_List_string__Add__;
+    ++v8->fields._version;
+    if ( !v19 )
+      goto LABEL_38;
+    v21 = v8->fields._size;
+    if ( (unsigned int)v21 >= LODWORD(v19->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v7,
+        v8,
         v6,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
     }
     else
     {
-      v25 = &v22->obj.klass + v24;
-      v7->fields._size = v24 + 1;
-      v25[4] = (Il2CppClass *)v6;
-      sub_1D0F058(v25 + 4, v6);
+      v22 = &v19->obj.klass + v21;
+      v8->fields._size = v21 + 1;
+      v22[4] = (Il2CppClass *)v6;
+      v9 = sub_21FFBF4(v22 + 4, v6);
+    }
+    v23 = v8->fields._items;
+    v24 = Method_System_Collections_Generic_List_string__Add__;
+    ++v8->fields._version;
+    if ( !v23 )
+LABEL_38:
+      sub_21FFECC(v9, v10);
+    v25 = v8->fields._size;
+    if ( (unsigned int)v25 >= LODWORD(v23->max_length) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        v8,
+        v7,
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v26 = &v23->obj.klass + v25;
+      v8->fields._size = v25 + 1;
+      v26[4] = (Il2CppClass *)v7;
+      sub_21FFBF4(v26 + 4, v7);
     }
     buttonDecide = (UnityEngine_Object_o *)this->fields.buttonDecide;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27, v28);
     if ( UnityEngine_Object__op_Inequality(buttonDecide, 0, 0) )
       goto LABEL_41;
     buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
     if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
     {
 LABEL_41:
-      v28 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_string__bool__TypeInfo);
+      v33 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_string__bool__TypeInfo);
       System_Func_object__bool____ctor(
-        v28,
+        v33,
         (Il2CppObject *)this,
         Method_CommonConfirmDialog__OnClickCancel_b__60_0__,
         0);
       if ( BasicHelper__Any_object_(
-             (System_Collections_Generic_List_T__o *)v7,
-             (System_Func_T__bool__o *)v28,
-             (const MethodInfo_32382EC *)Method_BasicHelper_Any_string___) )
+             (System_Collections_Generic_List_T__o *)v8,
+             (System_Func_T__bool__o *)v33,
+             (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_string___) )
       {
         goto LABEL_31;
       }
     }
     if ( this->fields._ForceCancelSE_k__BackingField )
 LABEL_31:
-      v29 = 1;
+      v34 = 1;
     else
-      v29 = 0;
-    v30 = Method_CommonConfirmDialog_OnClickCancel__;
+      v34 = 0;
+    v35 = Method_CommonConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CommonConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v30 = (_QWORD *)sub_1D0F0CC(Method_CommonConfirmDialog_OnClickCancel__);
-    v31 = (System_Reflection_MethodBase_o *)sub_1D0F098(v30, v30[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v31, v29, 0, 0);
+      v35 = (_QWORD *)sub_21FFC68(Method_CommonConfirmDialog_OnClickCancel__);
+    v36 = (System_Reflection_MethodBase_o *)sub_21FFC34(v35, v35[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v36, v34, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
     if ( clickFunc )
@@ -521,17 +540,17 @@ void CommonConfirmDialog__OnClickClose(CommonConfirmDialog_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E710B8 & 1) == 0 )
+  if ( (byte_5931D4B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CommonConfirmDialog_OnClickClose__);
-    byte_4E710B8 = 1;
+    sub_21FFC50(&Method_CommonConfirmDialog_OnClickClose__);
+    byte_5931D4B = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_CommonConfirmDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_CommonConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_CommonConfirmDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_CommonConfirmDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -546,24 +565,24 @@ void CommonConfirmDialog__OnClickClose(CommonConfirmDialog_o *this, const Method
 
 void CommonConfirmDialog__OnClickDecide(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
-  _BOOL4 isDecideBtnSe; // w20
-  _QWORD *v4; // x0
+  _QWORD *v3; // x0
+  int32_t v4; // w20
   System_Reflection_MethodBase_o *v5; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E710B5 & 1) == 0 )
+  if ( (byte_5931D48 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CommonConfirmDialog_OnClickDecide__);
-    byte_4E710B5 = 1;
+    sub_21FFC50(&Method_CommonConfirmDialog_OnClickDecide__);
+    byte_5931D48 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
-    isDecideBtnSe = this->fields.isDecideBtnSe;
-    v4 = Method_CommonConfirmDialog_OnClickDecide__;
+    v3 = Method_CommonConfirmDialog_OnClickDecide__;
+    v4 = 8 * this->fields.isDecideBtnSe;
     if ( (*((_BYTE *)Method_CommonConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1D0F0CC(Method_CommonConfirmDialog_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 8 * isDecideBtnSe, 0, 0);
+      v3 = (_QWORD *)sub_21FFC68(Method_CommonConfirmDialog_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, v4, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
     if ( clickFunc )
@@ -581,17 +600,17 @@ void CommonConfirmDialog__OnClickDecide2(CommonConfirmDialog_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4E710B6 & 1) == 0 )
+  if ( (byte_5931D49 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_CommonConfirmDialog_OnClickDecide2__);
-    byte_4E710B6 = 1;
+    sub_21FFC50(&Method_CommonConfirmDialog_OnClickDecide2__);
+    byte_5931D49 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_CommonConfirmDialog_OnClickDecide2__;
     if ( (*((_BYTE *)Method_CommonConfirmDialog_OnClickDecide2__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_CommonConfirmDialog_OnClickDecide2__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_CommonConfirmDialog_OnClickDecide2__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -606,54 +625,56 @@ void CommonConfirmDialog__OnClickDecide2(CommonConfirmDialog_o *this, const Meth
 
 void CommonConfirmDialog__OnEnable(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
-  UnityEngine_Component_o *v2; // x19
+  __int64 v2; // x2
+  UnityEngine_Component_o *v3; // x19
   void *monitor; // x8
-  System_String_o *v4; // x20
-  System_String_o *v5; // x0
-  void *v6; // x8
-  System_String_o *v7; // x20
-  System_String_o *v8; // x0
+  System_String_o *v5; // x20
+  System_String_o *v6; // x0
+  __int64 v7; // x2
+  void *v8; // x8
+  System_String_o *v9; // x20
+  System_String_o *v10; // x0
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v10; // x0
+  UnityEngine_Transform_o *v12; // x0
 
-  v2 = (UnityEngine_Component_o *)this;
-  if ( (byte_4E710BB & 1) == 0 )
+  v3 = (UnityEngine_Component_o *)this;
+  if ( (byte_5931D4E & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_2700/*"BATTLERESUME_CONFIRM_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_2701/*"BATTLERESUME_CONFIRM_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_4693/*"ConfirmWindow/CancelButton"*/);
-    this = (CommonConfirmDialog_o *)sub_1D0F0B4(&StringLiteral_15846/*"Window/CancelButton"*/);
-    byte_4E710BB = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_2794/*"BATTLERESUME_CONFIRM_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_2795/*"BATTLERESUME_CONFIRM_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_4818/*"ConfirmWindow/CancelButton"*/);
+    this = (CommonConfirmDialog_o *)sub_21FFC50(&StringLiteral_16227/*"Window/CancelButton"*/);
+    byte_5931D4E = 1;
   }
-  monitor = v2[5].monitor;
+  monitor = v3[5].monitor;
   if ( !monitor )
     goto LABEL_13;
-  v4 = (System_String_o *)*((_QWORD *)monitor + 52);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2701/*"BATTLERESUME_CONFIRM_DECIDE"*/, 0);
-  this = (CommonConfirmDialog_o *)System_String__op_Equality(v4, v5, 0);
+  v5 = (System_String_o *)*((_QWORD *)monitor + 52);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2795/*"BATTLERESUME_CONFIRM_DECIDE"*/, 0);
+  this = (CommonConfirmDialog_o *)System_String__op_Equality(v5, v6, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    v6 = v2[5].monitor;
-    if ( v6 )
+    v8 = v3[5].monitor;
+    if ( v8 )
     {
-      v7 = (System_String_o *)*((_QWORD *)v6 + 52);
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2700/*"BATTLERESUME_CONFIRM_CANCEL"*/, 0);
-      if ( !System_String__op_Equality(v7, v8, 0) )
+      v9 = (System_String_o *)*((_QWORD *)v8 + 52);
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v7);
+      v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2794/*"BATTLERESUME_CONFIRM_CANCEL"*/, 0);
+      if ( !System_String__op_Equality(v9, v10, 0) )
       {
-        transform = UnityEngine_Component__get_transform(v2, 0);
-        AndroidBackKeyManager__AddBackBtn_46335372(transform, (System_String_o *)StringLiteral_15846/*"Window/CancelButton"*/, 0);
-        v10 = UnityEngine_Component__get_transform(v2, 0);
-        AndroidBackKeyManager__AddBackBtn_46335372(v10, (System_String_o *)StringLiteral_4693/*"ConfirmWindow/CancelButton"*/, 0);
+        transform = UnityEngine_Component__get_transform(v3, 0);
+        AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16227/*"Window/CancelButton"*/, 0);
+        v12 = UnityEngine_Component__get_transform(v3, 0);
+        AndroidBackKeyManager__AddBackBtn_51910300(v12, (System_String_o *)StringLiteral_4818/*"ConfirmWindow/CancelButton"*/, 0);
       }
       return;
     }
 LABEL_13:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
 }
 
@@ -800,7 +821,7 @@ void CommonConfirmDialog__OpenDecideDlgAddMsgFrame(
 }
 
 
-void CommonConfirmDialog__OpenDecideDlg_32062780(
+void CommonConfirmDialog__OpenDecideDlg_37268292(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -847,7 +868,7 @@ void CommonConfirmDialog__OpenDecideDlg_32062780(
 }
 
 
-void CommonConfirmDialog__OpenDecideDlg_32062912(
+void CommonConfirmDialog__OpenDecideDlg_37268420(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -916,7 +937,7 @@ void CommonConfirmDialog__OpenSetTitleCondensedScale(
         int32_t maskType,
         const MethodInfo *method)
 {
-  struct UnityEngine_Vector2Int_o messageWidgetSize; // x21
+  struct UnityEngine_Vector2Int_o messageWidgetSize; // x20
   System_Nullable_float__o v23; // x0
   __int64 v24; // x1
   UILabel_o *titleLabel; // x0
@@ -924,15 +945,15 @@ void CommonConfirmDialog__OpenSetTitleCondensedScale(
   const MethodInfo *v27; // [xsp+70h] [xbp-A0h]
   System_Nullable_float__o v30; // [xsp+98h] [xbp-78h] BYREF
 
-  if ( (byte_4E710B3 & 1) == 0 )
+  if ( (byte_5931D46 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_float___ctor__);
-    byte_4E710B3 = 1;
+    sub_21FFC50(&Method_System_Nullable_float___ctor__);
+    byte_5931D46 = 1;
   }
   messageWidgetSize = this->fields.DEFULT_MESSAGE_WIDGET_SIZE;
   v23 = (System_Nullable_float__o)&v30;
   v30 = 0;
-  System_Nullable_float____ctor(v23, titlePosY, (const MethodInfo_3A869E8 *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(v23, titlePosY, (const MethodInfo_45B27E0 *)Method_System_Nullable_float___ctor__);
   CommonConfirmDialog__Setup(
     this,
     title,
@@ -968,13 +989,13 @@ void CommonConfirmDialog__OpenSetTitleCondensedScale(
           titleLabel->klass->vtable._33_MakePixelPerfect.method),
         (titleLabel = this->fields.titleLabel) == 0) )
   {
-    sub_1D0F30C(titleLabel, v24);
+    sub_21FFECC(titleLabel, v24);
   }
   UILabel__SetCondensedScale(titleLabel, mWidth, 0, 0);
 }
 
 
-void CommonConfirmDialog__Open_32061816(
+void CommonConfirmDialog__Open_37267360(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1018,7 +1039,7 @@ void CommonConfirmDialog__Open_32061816(
 }
 
 
-void CommonConfirmDialog__Open_32061960(
+void CommonConfirmDialog__Open_37267496(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1063,7 +1084,7 @@ void CommonConfirmDialog__Open_32061960(
 }
 
 
-void CommonConfirmDialog__Open_32062080(
+void CommonConfirmDialog__Open_37267608(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1107,7 +1128,7 @@ void CommonConfirmDialog__Open_32062080(
 }
 
 
-void CommonConfirmDialog__Open_32062208(
+void CommonConfirmDialog__Open_37267732(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1123,20 +1144,20 @@ void CommonConfirmDialog__Open_32062208(
         int32_t maskType,
         const MethodInfo *method)
 {
-  struct UnityEngine_Vector2Int_o messageWidgetSize; // x20
+  struct UnityEngine_Vector2Int_o messageWidgetSize; // x19
   System_Nullable_float__o v23; // x0
   const MethodInfo *v24; // [xsp+70h] [xbp-A0h]
   System_Nullable_float__o v27; // [xsp+98h] [xbp-78h] BYREF
 
-  if ( (byte_4E710B2 & 1) == 0 )
+  if ( (byte_5931D45 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_float___ctor__);
-    byte_4E710B2 = 1;
+    sub_21FFC50(&Method_System_Nullable_float___ctor__);
+    byte_5931D45 = 1;
   }
   messageWidgetSize = this->fields.DEFULT_MESSAGE_WIDGET_SIZE;
   v23 = (System_Nullable_float__o)&v27;
   v27 = 0;
-  System_Nullable_float____ctor(v23, titlePosY, (const MethodInfo_3A869E8 *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(v23, titlePosY, (const MethodInfo_45B27E0 *)Method_System_Nullable_float___ctor__);
   CommonConfirmDialog__Setup(
     this,
     title,
@@ -1167,7 +1188,7 @@ void CommonConfirmDialog__Open_32062208(
 }
 
 
-void CommonConfirmDialog__Open_32062504(
+void CommonConfirmDialog__Open_37268028(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1220,7 +1241,7 @@ void CommonConfirmDialog__Open_32062504(
 }
 
 
-void CommonConfirmDialog__Open_32063204(
+void CommonConfirmDialog__Open_37268692(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1266,7 +1287,8 @@ void CommonConfirmDialog__Open_32063204(
 }
 
 
-void CommonConfirmDialog__Open_32063328(
+// local variable allocation has failed, the output may be wrong!
+void CommonConfirmDialog__Open_37268808(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1295,7 +1317,7 @@ void CommonConfirmDialog__Open_32063328(
     messagePosY,
     0,
     (UnityEngine_Vector2Int_o)((unsigned int)this->fields.DEFULT_MESSAGE_WIDGET_SIZE.fields.m_X
-                             | ((unsigned __int64)(unsigned int)messageLabelHeight << 32)),
+                             | (*(_QWORD *)&messageLabelHeight << 32)),
     canMaskTouchClose,
     0,
     0,
@@ -1313,7 +1335,7 @@ void CommonConfirmDialog__Open_32063328(
 }
 
 
-void CommonConfirmDialog__Open_32063464(
+void CommonConfirmDialog__Open_37268940(
         CommonConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1362,28 +1384,30 @@ void CommonConfirmDialog__Open_32063464(
 
 void CommonConfirmDialog__ResetDecideButtonLabelMaxLineCount(CommonConfirmDialog_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *buttonDecideLabel; // x20
-  __int64 v4; // x1
-  UILabel_o *v5; // x0
+  __int64 v5; // x1
+  UILabel_o *v6; // x0
 
-  if ( (byte_4E710BA & 1) == 0 )
+  if ( (byte_5931D4D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E710BA = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5931D4D = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
   {
-    v5 = this->fields.buttonDecideLabel;
-    if ( !v5 )
-      sub_1D0F30C(0, v4);
-    UILabel__set_maxLineCount(v5, 1, 0);
+    v6 = this->fields.buttonDecideLabel;
+    if ( !v6 )
+      sub_21FFECC(0, v5);
+    UILabel__set_maxLineCount(v6, 1, 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonConfirmDialog__SetDecideButtonLabelMaxLineCount(
         CommonConfirmDialog_o *this,
         int32_t maxLine,
@@ -1393,19 +1417,19 @@ void CommonConfirmDialog__SetDecideButtonLabelMaxLineCount(
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4E710B9 & 1) == 0 )
+  if ( (byte_5931D4C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E710B9 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5931D4C = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&maxLine, method);
   if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
   {
     v7 = this->fields.buttonDecideLabel;
     if ( !v7 )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     UILabel__set_maxLineCount(v7, maxLine, 0);
   }
 }
@@ -1439,59 +1463,77 @@ void CommonConfirmDialog__Setup(
         bool isCancelTxtTwoLine,
         const MethodInfo *method)
 {
-  int32_t v26; // w24
-  int32_t v27; // w28
-  UnityEngine_Object_o *addMsgInfo; // x20
-  bool v37; // w0
-  __int64 v38; // x1
+  int32_t v31; // w24
+  System_String_o *v32; // x26
+  int32_t v34; // w27
+  UnityEngine_Object_o *addMsgInfo; // x19
+  bool v36; // w0
+  unsigned __int64 v37; // x1
   __int64 addMsgLabel; // x0
-  UnityEngine_Object_o *v40; // x20
-  _BOOL4 activeSelf; // w20
-  _BOOL4 IsNullOrEmpty; // w27
-  UnityEngine_Object_o *titleLabel; // x29
-  _BOOL4 v44; // w20
-  int v45; // w27
+  __int64 v39; // x1
+  __int64 v40; // x2
+  UnityEngine_Object_o *v41; // x19
+  bool activeSelf; // w28
+  __int64 v43; // x1
+  __int64 v44; // x2
+  bool IsNullOrEmpty; // w29
+  UnityEngine_Object_o *titleLabel; // x19
+  bool v47; // w28
+  bool v48; // w29
   UnityEngine_GameObject_o *gameObject; // x0
   float value; // s0
-  UILabel_o *v48; // x29
-  UnityEngine_Transform_o *v49; // x26
+  __int64 v51; // x2
+  UILabel_o *v52; // x28
+  UnityEngine_Transform_o *v53; // x26
+  __int64 v54; // x1
+  __int64 v55; // x2
   Il2CppObject *Component_object; // x26
-  UnityEngine_Object_o *messageLabel; // x20
-  UnityEngine_Object_o *buttonDecideLabel; // x20
-  UILabel_o *v54; // x20
-  UILabel_o *v55; // x20
-  UnityEngine_Object_o *buttonCancelLabel; // x20
-  UILabel_o *v57; // x20
-  UILabel_o *v58; // x20
-  UnityEngine_Object_o *buttonDecide; // x20
-  UnityEngine_Object_o *buttonCancel; // x20
-  const MethodInfo *v61; // x2
-  System_Action_o *v62; // x20
-  const MethodInfo *v63; // x4
-  const MethodInfo *v64; // [xsp+8h] [xbp-C8h]
+  __int64 v57; // x2
+  UnityEngine_Object_o *messageLabel; // x19
+  __int64 v59; // x1
+  __int64 v60; // x2
+  UnityEngine_Object_o *buttonDecideLabel; // x19
+  __int64 v63; // x2
+  UILabel_o *v64; // x19
+  __int64 v65; // x2
+  UILabel_o *v66; // x19
+  UnityEngine_Object_o *buttonCancelLabel; // x19
+  __int64 v68; // x2
+  UILabel_o *v69; // x19
+  __int64 v70; // x2
+  UILabel_o *v71; // x19
+  UnityEngine_Object_o *buttonDecide; // x19
+  __int64 v73; // x1
+  __int64 v74; // x2
+  UnityEngine_Object_o *buttonCancel; // x19
+  const MethodInfo *v76; // x2
+  System_Action_c *v77; // x0
+  System_Action_o *v78; // x19
+  const MethodInfo *v79; // x4
+  const MethodInfo *v80; // [xsp+8h] [xbp-D8h]
 
-  v26 = decideTxtSize;
-  v27 = titleFontSize;
-  if ( (byte_4E710B0 & 1) == 0 )
+  v31 = decideTxtSize;
+  v32 = title;
+  v34 = titleFontSize;
+  if ( (byte_5931D43 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&Method_CommonConfirmDialog_EndOpen__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_float__get_HasValue__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&string_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3727/*"COMMON_CONFIRM_NO"*/);
-    sub_1D0F0B4(&StringLiteral_3732/*"COMMON_CONFIRM_YES"*/);
-    byte_4E710B0 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&Method_CommonConfirmDialog_EndOpen__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_3826/*"COMMON_CONFIRM_NO"*/);
+    sub_21FFC50(&StringLiteral_3831/*"COMMON_CONFIRM_YES"*/);
+    byte_5931D43 = 1;
   }
   addMsgInfo = (UnityEngine_Object_o *)this->fields.addMsgInfo;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v37 = UnityEngine_Object__op_Inequality(addMsgInfo, 0, 0);
-  if ( addMsg && v37 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, title, message);
+  v36 = UnityEngine_Object__op_Inequality(addMsgInfo, 0, 0);
+  if ( addMsg && v36 )
   {
     addMsgLabel = (__int64)this->fields.addMsgInfo;
     if ( !addMsgLabel )
@@ -1503,11 +1545,11 @@ void CommonConfirmDialog__Setup(
     UILabel__set_text((UILabel_o *)addMsgLabel, addMsg, 0);
   }
   this->fields.clickFunc = func;
-  sub_1D0F058(&this->fields.clickFunc, func);
-  v40 = (UnityEngine_Object_o *)this->fields.addMsgInfo;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v40, 0, 0) )
+  sub_21FFBF4(&this->fields.clickFunc, func);
+  v41 = (UnityEngine_Object_o *)this->fields.addMsgInfo;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39, v40);
+  if ( UnityEngine_Object__op_Inequality(v41, 0, 0) )
   {
     addMsgLabel = (__int64)this->fields.addMsgInfo;
     if ( !addMsgLabel )
@@ -1518,12 +1560,12 @@ void CommonConfirmDialog__Setup(
   {
     activeSelf = 0;
   }
-  IsNullOrEmpty = System_String__IsNullOrEmpty(title, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(v32, 0);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
-  v44 = !activeSelf;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v45 = IsNullOrEmpty && v44;
+  v47 = !activeSelf;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v43, v44);
+  v48 = IsNullOrEmpty && v47;
   if ( UnityEngine_Object__op_Inequality(titleLabel, 0, 0) )
   {
     addMsgLabel = (__int64)this->fields.titleLabel;
@@ -1534,26 +1576,26 @@ void CommonConfirmDialog__Setup(
     if ( !titlePosY.fields.hasValue )
       value = 180.0;
     GameObjectExtensions__SetLocalPositionY(gameObject, value, 0);
-    v48 = this->fields.titleLabel;
+    v52 = this->fields.titleLabel;
     if ( !titleFontSize )
     {
       addMsgLabel = (__int64)BalanceConfig_TypeInfo;
-      if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+      if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v37, v51);
         addMsgLabel = (__int64)BalanceConfig_TypeInfo;
       }
-      v27 = *(_DWORD *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
+      v34 = *(_DWORD *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
     }
-    if ( !v48 )
+    if ( !v52 )
       goto LABEL_87;
-    UILabel__set_fontSize(v48, v27, 0);
+    UILabel__set_fontSize(v52, v34, 0);
     addMsgLabel = (__int64)this->fields.titleLabel;
-    if ( v45 )
-      title = string_TypeInfo->static_fields->Empty;
+    if ( v48 )
+      v32 = **(System_String_o ***)(qword_594C0B8 + 184);
     if ( !addMsgLabel )
       goto LABEL_87;
-    UILabel__set_text((UILabel_o *)addMsgLabel, title, 0);
+    UILabel__set_text((UILabel_o *)addMsgLabel, v32, 0);
     addMsgLabel = (__int64)this->fields.titleLabel;
     if ( !addMsgLabel )
       goto LABEL_87;
@@ -1566,24 +1608,24 @@ void CommonConfirmDialog__Setup(
     if ( !addMsgLabel )
       goto LABEL_87;
     addMsgLabel = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)addMsgLabel, 0);
-    v49 = (UnityEngine_Transform_o *)addMsgLabel;
-    if ( !byte_4E70C9E )
+    v53 = (UnityEngine_Transform_o *)addMsgLabel;
+    if ( !byte_5931945 )
     {
-      addMsgLabel = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C9E = 1;
+      addMsgLabel = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931945 = 1;
     }
-    if ( !v49 )
+    if ( !v53 )
       goto LABEL_87;
-    UnityEngine_Transform__set_localScale(v49, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+    UnityEngine_Transform__set_localScale(v53, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   }
   addMsgLabel = (__int64)this->fields.baseWindow;
   if ( !addMsgLabel )
     goto LABEL_87;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)addMsgLabel,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v54, v55);
   addMsgLabel = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( (addMsgLabel & 1) != 0 )
   {
@@ -1592,12 +1634,12 @@ void CommonConfirmDialog__Setup(
     UIWidget__set_height((UIWidget_o *)Component_object, windowHeight, 0);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v57);
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0, 0) )
     CommonConfirmDialog__AdjustMessageLabel(
       this,
-      v45,
+      v48,
       message,
       messagePosY,
       spacingY,
@@ -1607,71 +1649,72 @@ void CommonConfirmDialog__Setup(
       setCondensedScale,
       minFontSize,
       buttonPosY,
-      v64);
+      v80);
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v59, v60);
   addMsgLabel = UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0);
   if ( (addMsgLabel & 1) != 0 )
   {
-    v54 = this->fields.buttonDecideLabel;
+    v64 = this->fields.buttonDecideLabel;
     if ( !decideTxt )
     {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      addMsgLabel = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_YES"*/, 0);
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v37, v63);
+      addMsgLabel = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"COMMON_CONFIRM_YES"*/, 0);
       decideTxt = (System_String_o *)addMsgLabel;
     }
-    if ( !v54 )
+    if ( !v64 )
       goto LABEL_87;
-    UILabel__set_text(v54, decideTxt, 0);
-    v55 = this->fields.buttonDecideLabel;
+    UILabel__set_text(v64, decideTxt, 0);
+    v66 = this->fields.buttonDecideLabel;
     if ( !decideTxtSize )
     {
       addMsgLabel = (__int64)BalanceConfig_TypeInfo;
-      if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+      if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v37, v65);
         addMsgLabel = (__int64)BalanceConfig_TypeInfo;
       }
-      v26 = *(_DWORD *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
+      v31 = *(_DWORD *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
     }
-    if ( !v55 )
+    if ( !v66 )
       goto LABEL_87;
-    UILabel__set_fontSize(v55, v26, 0);
+    UILabel__set_fontSize(v66, v31, 0);
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v63);
   addMsgLabel = UnityEngine_Object__op_Inequality(buttonCancelLabel, 0, 0);
   if ( (addMsgLabel & 1) != 0 )
   {
-    v57 = this->fields.buttonCancelLabel;
+    v69 = this->fields.buttonCancelLabel;
+    v37 = (unsigned __int64)cancelTxt;
     if ( !cancelTxt )
     {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      addMsgLabel = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3727/*"COMMON_CONFIRM_NO"*/, 0);
-      cancelTxt = (System_String_o *)addMsgLabel;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, 0, v68);
+      addMsgLabel = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3826/*"COMMON_CONFIRM_NO"*/, 0);
+      v37 = addMsgLabel;
     }
-    if ( v57 )
+    if ( v69 )
     {
-      UILabel__set_text(v57, cancelTxt, 0);
-      v58 = this->fields.buttonCancelLabel;
-      v38 = (unsigned int)cancelTxtSize;
+      UILabel__set_text(v69, (System_String_o *)v37, 0);
+      v71 = this->fields.buttonCancelLabel;
+      v37 = (unsigned int)cancelTxtSize;
       if ( !cancelTxtSize )
       {
         addMsgLabel = (__int64)BalanceConfig_TypeInfo;
-        if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+        if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, (unsigned int)cancelTxtSize, v70);
           addMsgLabel = (__int64)BalanceConfig_TypeInfo;
         }
-        v38 = *(unsigned int *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
+        v37 = *(unsigned int *)(*(_QWORD *)(addMsgLabel + 184) + 508LL);
       }
-      if ( v58 )
+      if ( v71 )
       {
-        UILabel__set_fontSize(v58, v38, 0);
+        UILabel__set_fontSize(v71, v37, 0);
         if ( !isCancelTxtTwoLine )
           goto LABEL_78;
         addMsgLabel = (__int64)this->fields.buttonCancelLabel;
@@ -1688,27 +1731,28 @@ void CommonConfirmDialog__Setup(
       }
     }
 LABEL_87:
-    sub_1D0F30C(addMsgLabel, v38);
+    sub_21FFECC(addMsgLabel, v37);
   }
 LABEL_78:
   buttonDecide = (UnityEngine_Object_o *)this->fields.buttonDecide;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v68);
   if ( UnityEngine_Object__op_Inequality(buttonDecide, 0, 0) )
     GameObjectExtensions__SetLocalPositionY(this->fields.buttonDecide, buttonPosY, 0);
   buttonCancel = (UnityEngine_Object_o *)this->fields.buttonCancel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v73, v74);
   if ( UnityEngine_Object__op_Inequality(buttonCancel, 0, 0) )
     GameObjectExtensions__SetLocalPositionY(this->fields.buttonCancel, buttonPosY, 0);
   this->fields.isButtonEnable = 0;
   this->fields.isDecideBtnSe = isDecideSe;
-  BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, v61);
+  BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, v76);
   GameObjectExtensions__SetLocalPositionY(this->fields.baseWindow, windowPosY, 0);
+  v77 = System_Action_TypeInfo;
   this->fields._ForceCancelSE_k__BackingField = 0;
-  v62 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v62, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v62, maskType, 0, v63);
+  v78 = (System_Action_o *)sub_21FFEBC(v77);
+  System_Action___ctor(v78, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v78, maskType, 0, v79);
 }
 
 
@@ -1721,8 +1765,8 @@ bool CommonConfirmDialog___OnClickCancel_b__60_0(
 
   buttonCancelLabel = this->fields.buttonCancelLabel;
   if ( !buttonCancelLabel || !x )
-    sub_1D0F30C(this, x);
-  return System_String__Equals_65598092(x, buttonCancelLabel->fields.mText, 0);
+    sub_21FFECC(this, x);
+  return System_String__Equals_75473208(x, buttonCancelLabel->fields.mText, 0);
 }
 
 
@@ -1756,10 +1800,10 @@ void CommonConfirmDialog_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -1769,23 +1813,23 @@ void CommonConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1797,9 +1841,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3C810;
+  this->fields.invoke_impl = (intptr_t)sub_1FF8818;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3C7C8;
+  this->fields.extra_arg = (intptr_t)sub_1FF87D0;
 }
 
 
@@ -1810,18 +1854,13 @@ System_IAsyncResult_o *CommonConfirmDialog_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4E76021 & 1) == 0 )
-  {
-    sub_1D0F0B4(&bool_TypeInfo);
-    byte_4E76021 = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -1830,7 +1869,7 @@ void CommonConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

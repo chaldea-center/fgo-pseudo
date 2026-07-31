@@ -1,41 +1,35 @@
 void FileName___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
   int32_t v7; // w1
+  int32_t v8; // w1
   struct FileName_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E76573 & 1) == 0 )
+  if ( (byte_593751F & 1) == 0 )
   {
-    sub_1D0F0B4(&FileName_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20628/*"icon_support_02"*/);
-    sub_1D0F0B4(&StringLiteral_20579/*"icon_eventjoin_02"*/);
-    byte_4E76573 = 1;
+    sub_21FFC50(&FileName_TypeInfo);
+    sub_21FFC50(&StringLiteral_21182/*"icon_support_02"*/);
+    sub_21FFC50(&StringLiteral_21130/*"icon_eventjoin_02"*/);
+    byte_593751F = 1;
   }
-  FileName_TypeInfo->static_fields->friendIconName = (struct System_String_o *)StringLiteral_20628/*"icon_support_02"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)FileName_TypeInfo->static_fields,
-    StringLiteral_20628/*"icon_support_02"*/,
-    v1,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6);
-  v7 = StringLiteral_20579/*"icon_eventjoin_02"*/;
+  v7 = StringLiteral_21182/*"icon_support_02"*/;
+  FileName_TypeInfo->static_fields->friendIconName = (struct System_String_o *)StringLiteral_21182/*"icon_support_02"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)FileName_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
+  v8 = StringLiteral_21130/*"icon_eventjoin_02"*/;
   static_fields = FileName_TypeInfo->static_fields;
-  static_fields->eventJoinIconName = (struct System_String_o *)StringLiteral_20579/*"icon_eventjoin_02"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->eventJoinIconName, v7, v9, v10, v11, v12, v13, v14);
+  static_fields->eventJoinIconName = (struct System_String_o *)StringLiteral_21130/*"icon_eventjoin_02"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->eventJoinIconName, v8, v10, v11, v12, v13, v14, v15);
 }
 
 

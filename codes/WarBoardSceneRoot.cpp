@@ -9,45 +9,46 @@ WarBoardDataEntity_o *WarBoardSceneRoot__GetWarBoardDataEntity(
         Il2CppObject *data,
         const MethodInfo *method)
 {
-  System_String_c *klass; // x8
+  Il2CppObject *v3; // x19
+  Il2CppClass *klass; // x8
   __int64 naturalAligment; // x10
   Il2CppObject *v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   WarBoardDataEntity_o *v14; // x20
 
-  if ( (byte_4E753B6 & 1) == 0 )
+  v3 = data;
+  if ( (byte_593633C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_JsonManager_Deserialize_WarBoardDataEntity___);
-    sub_1D0F0B4(&JsonManager_TypeInfo);
-    sub_1D0F0B4(&string_TypeInfo);
-    sub_1D0F0B4(&WarBoardDataEntity_TypeInfo);
-    byte_4E753B6 = 1;
+    sub_21FFC50(&Method_JsonManager_Deserialize_WarBoardDataEntity___);
+    sub_21FFC50(&JsonManager_TypeInfo);
+    sub_21FFC50(&WarBoardDataEntity_TypeInfo);
+    byte_593633C = 1;
   }
-  if ( data )
+  if ( v3 )
   {
-    klass = (System_String_c *)data->klass;
+    klass = v3->klass;
     naturalAligment = WarBoardDataEntity_TypeInfo->_2.naturalAligment;
-    if ( data->klass->_2.naturalAligment < (unsigned int)naturalAligment
+    if ( v3->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (WarBoardDataEntity_c *)klass->_2.typeHierarchy[naturalAligment - 1] != WarBoardDataEntity_TypeInfo )
     {
-      if ( klass == string_TypeInfo )
+      if ( klass == (Il2CppClass *)qword_594C0B8 )
       {
-        if ( !JsonManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+        if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, data, method);
         v6 = JsonManager__Deserialize_object_(
-               data,
-               (const MethodInfo_32C0284 *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
+               v3,
+               (const MethodInfo_38A041C *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
         if ( !v6 )
-          sub_1D0F30C(0, v7);
+          sub_21FFECC(0, v7);
         v14 = (WarBoardDataEntity_o *)v6;
-        v6[9].monitor = data;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&v6[9].monitor, (int32_t)data, v8, v9, v10, v11, v12, v13);
+        v6[9].monitor = v3;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v6[9].monitor, (int32_t)v3, v8, v9, v10, v11, v12, v13);
         return v14;
       }
       else
@@ -56,13 +57,13 @@ WarBoardDataEntity_o *WarBoardSceneRoot__GetWarBoardDataEntity(
       }
     }
   }
-  return (WarBoardDataEntity_o *)data;
+  return (WarBoardDataEntity_o *)v3;
 }
 
 
 void WarBoardSceneRoot____n__0(WarBoardSceneRoot_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_48429240((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -71,20 +72,20 @@ void WarBoardSceneRoot___beginResume_b__3_0(WarBoardSceneRoot_o *this, const Met
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E753B7 & 1) == 0 )
+  if ( (byte_593633D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E753B7 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_593633D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
   CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0);
-  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_48429240((SceneRootComponent_o *)this, 0);
   SceneRootComponent__resumeMainMenuBar((SceneRootComponent_o *)this, 0);
 }
 
@@ -95,7 +96,7 @@ void WarBoardSceneRoot__beginFinish(WarBoardSceneRoot_o *this, const MethodInfo 
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   WarBoardManager__Finish(manager, 0);
   SceneRootComponent__beginFinish((SceneRootComponent_o *)this, 0);
 }
@@ -106,15 +107,15 @@ void WarBoardSceneRoot__beginInitialize(WarBoardSceneRoot_o *this, const MethodI
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E753B3 & 1) == 0 )
+  if ( (byte_5936339 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E753B3 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_5936339 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -135,41 +136,41 @@ void WarBoardSceneRoot__beginResume(WarBoardSceneRoot_o *this, Il2CppObject *dat
   WarBoardManager_o *manager; // x21
   System_Action_o *v17; // x22
 
-  if ( (byte_4E753B5 & 1) == 0 )
+  if ( (byte_593633B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_WarBoardSceneRoot__beginResume_b__3_0__);
-    byte_4E753B5 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_WarBoardSceneRoot__beginResume_b__3_0__);
+    byte_593633B = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1CE513C(v3);
+  if ( (*(_WORD *)(v6 + 309) & 1) == 0 )
+    v6 = sub_2237AF8(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1CE513C(v3);
+  if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
+    v7 = sub_2237AF8(v3);
   Instance = **(Il2CppObject ***)(v7 + 184);
   if ( !Instance )
     goto LABEL_26;
   WarBoardManager__ResumeBgm((WarBoardManager_o *)Instance, 0);
   v11 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1CE513C(v10);
+  if ( (*(_WORD *)(v11 + 309) & 1) == 0 )
+    v11 = sub_2237AF8(v10);
   Instance = *(Il2CppObject **)(*(_QWORD *)(v11 + 192) + 16LL);
-  if ( (BYTE5(Instance[19].klass) & 1) == 0 )
-    Instance = (Il2CppObject *)sub_1CE513C(v10);
+  if ( (*(_WORD *)((_BYTE *)&Instance[19].klass + 5) & 1) == 0 )
+    Instance = (Il2CppObject *)sub_2237AF8(v10);
   v12 = *(_QWORD *)Instance[11].monitor;
   if ( !v12 )
     goto LABEL_26;
   if ( *(_BYTE *)(v12 + 840) )
   {
     v13 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-    if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1CE513C(v10);
+    if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
+      v13 = sub_2237AF8(v10);
     v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
-    if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-      v14 = sub_1CE513C(v10);
+    if ( (*(_WORD *)(v14 + 309) & 1) == 0 )
+      v14 = sub_2237AF8(v10);
     Instance = **(Il2CppObject ***)(v14 + 184);
     if ( Instance )
     {
@@ -181,21 +182,21 @@ void WarBoardSceneRoot__beginResume(WarBoardSceneRoot_o *this, Il2CppObject *dat
       return;
     }
 LABEL_26:
-    sub_1D0F30C(Instance, data);
+    sub_21FFECC(Instance, data);
   }
   if ( data )
   {
     WarBoardDataEntity = WarBoardSceneRoot__GetWarBoardDataEntity((WarBoardSceneRoot_o *)Instance, data, v9);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_26;
     CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_26;
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
     manager = this->fields.manager;
-    v17 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_WarBoardSceneRoot__beginResume_b__3_0__, 0);
     if ( !manager )
       goto LABEL_26;
@@ -213,45 +214,45 @@ void WarBoardSceneRoot__beginStartUp(WarBoardSceneRoot_o *this, Il2CppObject *da
   __int64 v5; // x20
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   WarBoardSceneRoot_o *v14; // x0
   const MethodInfo *v15; // x2
   WarBoardDataEntity_o *WarBoardDataEntity; // x0
   WarBoardDataEntity_o **v17; // x21
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   WarBoardDataEntity_o *v24; // x22
   WarBoardManager_o *manager; // x19
   System_Action_o *v26; // x21
 
-  if ( (byte_4E753B4 & 1) == 0 )
+  if ( (byte_593633A & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__);
-    sub_1D0F0B4(&WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo);
-    byte_4E753B4 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__);
+    sub_21FFC50(&WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo);
+    byte_593633A = 1;
   }
-  v5 = sub_1D0F300(WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo);
+  v5 = sub_21FFEBC(WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_QWORD *)(v5 + 24) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   WarBoardDataEntity = WarBoardSceneRoot__GetWarBoardDataEntity(v14, data, v15);
   *(_QWORD *)(v5 + 16) = WarBoardDataEntity;
   v17 = (WarBoardDataEntity_o **)(v5 + 16);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)WarBoardDataEntity, v18, v19, v20, v21, v22, v23);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)WarBoardDataEntity, v18, v19, v20, v21, v22, v23);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0);
@@ -260,18 +261,18 @@ void WarBoardSceneRoot__beginStartUp(WarBoardSceneRoot_o *this, Il2CppObject *da
     goto LABEL_11;
   if ( v24->fields.progressType != 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_11;
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
     v24 = *v17;
   }
   manager = this->fields.manager;
-  v26 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)v5, Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__, 0);
   if ( !manager )
 LABEL_11:
-    sub_1D0F30C(Instance, v7);
+    sub_21FFECC(Instance, v7);
   WarBoardManager__Initialize(manager, v24, v26, 0);
 }
 
@@ -293,38 +294,41 @@ void WarBoardSceneRoot___c__DisplayClass2_0___beginStartUp_b__0(
   int32_t progressType; // w21
 
   v2 = this;
-  if ( (byte_4E753B8 & 1) == 0 )
+  if ( (byte_593633E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E753B8 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_593633E = 1;
   }
   warBoardData = v2->fields.warBoardData;
   if ( !warBoardData )
-    goto LABEL_11;
+    goto LABEL_12;
   progressType = warBoardData->fields.progressType;
-  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !this )
-    goto LABEL_11;
+  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( progressType == 2 )
   {
-    CommonUI__SetConnect((CommonUI_o *)this, 0, 0);
-    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( this )
     {
-      AvalonSceneManager__pushScene((AvalonSceneManager_o *)this, 10, 2, 0, 0);
-      return;
+      CommonUI__SetConnect((CommonUI_o *)this, 0, 0);
+      this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      if ( this )
+      {
+        AvalonSceneManager__pushScene((AvalonSceneManager_o *)this, 10, 2, 0, 0);
+        return;
+      }
     }
-LABEL_11:
-    sub_1D0F30C(this, method);
+LABEL_12:
+    sub_21FFECC(this, method);
   }
-  CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0);
-  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
-    goto LABEL_11;
+    goto LABEL_12;
+  CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0);
+  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !this )
+    goto LABEL_12;
   CommonUI__SetConnect((CommonUI_o *)this, 0, 0);
   this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)v2->fields.__4__this;
   if ( !this )
-    goto LABEL_11;
-  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
+    goto LABEL_12;
+  SceneRootComponent__beginStartUp_48429240((SceneRootComponent_o *)this, 0);
 }

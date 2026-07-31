@@ -1,14 +1,14 @@
 void UserDeleteReservationMaster___ctor(UserDeleteReservationMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7846F & 1) == 0 )
+  if ( (byte_593949D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string___ctor__);
-    byte_4E7846F = 1;
+    sub_21FFC50(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string___ctor__);
+    byte_593949D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    409,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string___ctor__);
+    411,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string___ctor__);
 }
 
 
@@ -19,19 +19,19 @@ UserDeleteReservationEntity_o *UserDeleteReservationMaster__GetEntity(
 {
   Il2CppObject *v5; // x1
 
-  if ( (byte_4E7846D & 1) == 0 )
+  if ( (byte_593949B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__GetEntity__);
-    sub_1D0F0B4(&UserDeleteReservationEntity_TypeInfo);
-    byte_4E7846D = 1;
+    sub_21FFC50(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__GetEntity__);
+    sub_21FFC50(&UserDeleteReservationEntity_TypeInfo);
+    byte_593949B = 1;
   }
-  if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
+  if ( !*(&UserDeleteReservationEntity_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo, userId);
   v5 = (Il2CppObject *)UserDeleteReservationEntity__CreatePK(userId, (const MethodInfo *)userId);
   return (UserDeleteReservationEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             v5,
-                                            (const MethodInfo_353AADC *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__GetEntity__);
+                                            (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__GetEntity__);
 }
 
 
@@ -43,18 +43,18 @@ bool UserDeleteReservationMaster__TryGetEntity(
 {
   Il2CppObject *v7; // x2
 
-  if ( (byte_4E7846E & 1) == 0 )
+  if ( (byte_593949C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__TryGetEntity__);
-    sub_1D0F0B4(&UserDeleteReservationEntity_TypeInfo);
-    byte_4E7846E = 1;
+    sub_21FFC50(&Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__TryGetEntity__);
+    sub_21FFC50(&UserDeleteReservationEntity_TypeInfo);
+    byte_593949C = 1;
   }
-  if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
+  if ( !*(&UserDeleteReservationEntity_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo, entity);
   v7 = (Il2CppObject *)UserDeleteReservationEntity__CreatePK(userId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            v7,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserDeleteReservationMaster__UserDeleteReservationEntity__string__TryGetEntity__);
 }

@@ -2,30 +2,30 @@ void ScriptPosition___cctor(const MethodInfo *method)
 {
   __int64 v1; // x0
   __int64 v2; // x1
-  int32_t v3; // w2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
+  bool v7; // w6
+  bool v8; // w7
   unsigned int v9; // w8
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   unsigned int v16; // w8
   struct UnityEngine_Vector2_array *v17; // x1
   struct ScriptPosition_StaticFields *static_fields; // x0
 
-  if ( (byte_4E796E7 & 1) == 0 )
+  if ( (byte_593A710 & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptPosition_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Vector2___TypeInfo);
-    byte_4E796E7 = 1;
+    sub_21FFC50(&ScriptPosition_TypeInfo);
+    sub_21FFC50(&UnityEngine_Vector2___TypeInfo);
+    byte_593A710 = 1;
   }
-  v1 = sub_1D0F15C(UnityEngine_Vector2___TypeInfo, 7);
+  v1 = sub_21FFD10(UnityEngine_Vector2___TypeInfo, 7);
   if ( !v1 )
     goto LABEL_17;
   v9 = *(_DWORD *)(v1 + 24);
@@ -38,15 +38,15 @@ void ScriptPosition___cctor(const MethodInfo *method)
     || (*(_QWORD *)(v1 + 72) = 1138425856, v9 <= 6) )
   {
 LABEL_16:
-    sub_1D0F314(v1);
+    sub_21FFED4(v1);
   }
   *(_QWORD *)(v1 + 80) = 1140850688;
   ScriptPosition_TypeInfo->static_fields->positionList = (struct UnityEngine_Vector2_array *)v1;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)ScriptPosition_TypeInfo->static_fields, v1, v3, v4, v5, v6, v7, v8);
-  v1 = sub_1D0F15C(UnityEngine_Vector2___TypeInfo, 3);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)ScriptPosition_TypeInfo->static_fields, v1, v3, v4, v5, v6, v7, v8);
+  v1 = sub_21FFD10(UnityEngine_Vector2___TypeInfo, 3);
   if ( !v1 )
 LABEL_17:
-    sub_1D0F30C(v1, v2);
+    sub_21FFECC(v1, v2);
   v16 = *(_DWORD *)(v1 + 24);
   v17 = (struct UnityEngine_Vector2_array *)v1;
   if ( !v16 )
@@ -60,8 +60,8 @@ LABEL_17:
   *(_QWORD *)(v1 + 48) = 0;
   static_fields = ScriptPosition_TypeInfo->static_fields;
   static_fields->charaOffsetList = v17;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&static_fields->charaOffsetList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->charaOffsetList,
     (int32_t)v17,
     v10,
     v11,
@@ -84,53 +84,57 @@ UnityEngine_Vector3_o ScriptPosition__GetCharaOffset(int32_t index, const Method
   struct UnityEngine_Vector2_array *charaOffsetList; // x8
   struct UnityEngine_Vector2_array *v5; // x8
   float *v6; // x8
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
+  float v7; // s2
+  float v8; // s0
+  float v9; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E796E6 & 1) == 0 )
+  if ( (byte_593A70F & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptPosition_TypeInfo);
-    byte_4E796E6 = 1;
+    sub_21FFC50(&ScriptPosition_TypeInfo);
+    byte_593A70F = 1;
   }
   v3 = ScriptPosition_TypeInfo;
   if ( index < 0 )
-    goto LABEL_8;
-  if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-    v3 = ScriptPosition_TypeInfo;
-  }
-  charaOffsetList = v3->static_fields->charaOffsetList;
-  if ( !charaOffsetList )
-LABEL_14:
-    sub_1D0F30C(v3, method);
-  if ( SLODWORD(charaOffsetList->max_length) <= index )
-LABEL_8:
     index = 0;
-  if ( !v3->_2.cctor_finished )
+  }
+  else
   {
-    j_il2cpp_runtime_class_init_0(v3);
+    if ( !*(&ScriptPosition_TypeInfo->_2.cctor_finished + 1) )
+    {
+      j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo, method);
+      v3 = ScriptPosition_TypeInfo;
+    }
+    charaOffsetList = v3->static_fields->charaOffsetList;
+    if ( !charaOffsetList )
+LABEL_15:
+      sub_21FFECC(v3, method);
+    if ( SLODWORD(charaOffsetList->max_length) <= index )
+      index = 0;
+  }
+  if ( !*(&v3->_2.cctor_finished + 1) )
+  {
+    j_il2cpp_runtime_class_init_0(v3, method);
     v3 = ScriptPosition_TypeInfo;
   }
   v5 = v3->static_fields->charaOffsetList;
   if ( !v5 )
-    goto LABEL_14;
+    goto LABEL_15;
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
-    sub_1D0F314(v3);
+    sub_21FFED4(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  v7 = v6[8];
-  v8 = v6[9];
-  v9 = 0.0;
-  result.fields.z = v9;
-  result.fields.y = v8;
-  result.fields.x = v7;
+  v7 = 0.0;
+  v8 = v6[8];
+  v9 = v6[9];
+  result.fields.z = v7;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
-UnityEngine_Vector3_o ScriptPosition__GetCharaOffset_46249884(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o ScriptPosition__GetCharaOffset_51825280(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -149,53 +153,57 @@ UnityEngine_Vector3_o ScriptPosition__GetPosition(int32_t index, const MethodInf
   struct UnityEngine_Vector2_array *positionList; // x8
   struct UnityEngine_Vector2_array *v5; // x8
   float *v6; // x8
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
+  float v7; // s2
+  float v8; // s0
+  float v9; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E796E5 & 1) == 0 )
+  if ( (byte_593A70E & 1) == 0 )
   {
-    sub_1D0F0B4(&ScriptPosition_TypeInfo);
-    byte_4E796E5 = 1;
+    sub_21FFC50(&ScriptPosition_TypeInfo);
+    byte_593A70E = 1;
   }
   v3 = ScriptPosition_TypeInfo;
   if ( index < 0 )
-    goto LABEL_8;
-  if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-    v3 = ScriptPosition_TypeInfo;
-  }
-  positionList = v3->static_fields->positionList;
-  if ( !positionList )
-LABEL_14:
-    sub_1D0F30C(v3, method);
-  if ( SLODWORD(positionList->max_length) <= index )
-LABEL_8:
     index = 0;
-  if ( !v3->_2.cctor_finished )
+  }
+  else
   {
-    j_il2cpp_runtime_class_init_0(v3);
+    if ( !*(&ScriptPosition_TypeInfo->_2.cctor_finished + 1) )
+    {
+      j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo, method);
+      v3 = ScriptPosition_TypeInfo;
+    }
+    positionList = v3->static_fields->positionList;
+    if ( !positionList )
+LABEL_15:
+      sub_21FFECC(v3, method);
+    if ( SLODWORD(positionList->max_length) <= index )
+      index = 0;
+  }
+  if ( !*(&v3->_2.cctor_finished + 1) )
+  {
+    j_il2cpp_runtime_class_init_0(v3, method);
     v3 = ScriptPosition_TypeInfo;
   }
   v5 = v3->static_fields->positionList;
   if ( !v5 )
-    goto LABEL_14;
+    goto LABEL_15;
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
-    sub_1D0F314(v3);
+    sub_21FFED4(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  v7 = v6[8];
-  v8 = v6[9];
-  v9 = 0.0;
-  result.fields.z = v9;
-  result.fields.y = v8;
-  result.fields.x = v7;
+  v7 = 0.0;
+  v8 = v6[8];
+  v9 = v6[9];
+  result.fields.z = v7;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
-UnityEngine_Vector3_o ScriptPosition__GetPosition_46249696(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o ScriptPosition__GetPosition_51825092(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4

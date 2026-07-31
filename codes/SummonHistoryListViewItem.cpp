@@ -6,23 +6,23 @@ void SummonHistoryListViewItem___ctor(
         const MethodInfo *method)
 {
   SummonHistoryListViewItem_o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
   v7 = this;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   v7->fields._Message_k__BackingField = message;
   v7 = (SummonHistoryListViewItem_o *)((char *)v7 + 120);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v7, (int32_t)message, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v7, (int32_t)message, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = layout;
 }
 
 
-void SummonHistoryListViewItem___ctor_36591184(
+void SummonHistoryListViewItem___ctor_42126820(
         SummonHistoryListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -32,24 +32,24 @@ void SummonHistoryListViewItem___ctor_36591184(
         const MethodInfo *method)
 {
   SummonHistoryListViewItem_o *v11; // x23
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
 
   v11 = this;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   v11->fields._Message_k__BackingField = message;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v11->fields._Message_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v11->fields._Message_k__BackingField,
     (int32_t)message,
     v12,
     v13,
@@ -60,7 +60,7 @@ void SummonHistoryListViewItem___ctor_36591184(
   v11->fields._Title_k__BackingField = title;
   v11 = (SummonHistoryListViewItem_o *)((char *)v11 + 136);
   v11[-1].fields._itemID_k__BackingField = layout;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v11, (int32_t)title, v18, v19, v20, v21, v22, v23);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v11, (int32_t)title, v18, v19, v20, v21, v22, v23);
   LODWORD(v11->monitor) = objectId;
 }
 
@@ -100,17 +100,17 @@ void SummonHistoryListViewItem__set_Message(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Message_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Message_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -124,17 +124,17 @@ void SummonHistoryListViewItem__set_Title(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Title_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Title_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Title_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

@@ -1,121 +1,123 @@
 void AndroidBackKeyManager___ctor(AndroidBackKeyManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E797C5 & 1) == 0 )
+  if ( (byte_593A7EB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AndroidBackKeyManager___ctor__);
-    byte_4E797C5 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AndroidBackKeyManager___ctor__);
+    byte_593A7EB = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.btnObjList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.btnObjList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.btnObjList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3BACB6C *)Method_SingletonMonoBehaviour_AndroidBackKeyManager___ctor__);
+    (const MethodInfo_476EDF0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager___ctor__);
 }
 
 
 void AndroidBackKeyManager__AddBackBtn(UnityEngine_GameObject_o *obj, const MethodInfo *method)
 {
   __int64 v3; // x20
-  System_Collections_Generic_List_object__o *v4; // x0
+  Il2CppObject *v4; // x0
   Il2CppObject *v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
+  __int64 v12; // x1
   Il2CppObject *Instance; // x21
-  System_Collections_Generic_List_object__o *syncRoot; // x21
-  System_Predicate_object__o *v14; // x22
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
-  __int64 size; // x10
-  Il2CppClass **v24; // x8
+  System_Collections_Generic_List_object__o *klass; // x21
+  System_Predicate_object__o *v15; // x22
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
+  System_Collections_Generic_List_object__o *v22; // x8
+  struct System_Object_array *items; // x9
+  _QWORD *v24; // x10
+  __int64 size; // x11
+  Il2CppClass **v26; // x0
 
-  if ( (byte_4E797B3 & 1) == 0 )
+  if ( (byte_593A7D9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__RemoveAll__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&System_Predicate_GameObject__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-    sub_1D0F0B4(&Method_AndroidBackKeyManager___c__DisplayClass0_0__AddBackBtn_b__0__);
-    sub_1D0F0B4(&AndroidBackKeyManager___c__DisplayClass0_0_TypeInfo);
-    byte_4E797B3 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__RemoveAll__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&System_Predicate_GameObject__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    sub_21FFC50(&Method_AndroidBackKeyManager___c__DisplayClass0_0__AddBackBtn_b__0__);
+    sub_21FFC50(&AndroidBackKeyManager___c__DisplayClass0_0_TypeInfo);
+    byte_593A7D9 = 1;
   }
-  v3 = sub_1D0F300(AndroidBackKeyManager___c__DisplayClass0_0_TypeInfo);
+  v3 = sub_21FFEBC(AndroidBackKeyManager___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_15;
   *(_QWORD *)(v3 + 16) = obj;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)obj, v6, v7, v8, v9, v10, v11);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)obj, v6, v7, v8, v9, v10, v11);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v4 = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
     if ( v4 )
     {
-      syncRoot = (System_Collections_Generic_List_object__o *)v4->fields._syncRoot;
-      v14 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_GameObject__TypeInfo);
+      klass = (System_Collections_Generic_List_object__o *)v4[2].klass;
+      v15 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_GameObject__TypeInfo);
       System_Predicate_object____ctor(
-        v14,
+        v15,
         (Il2CppObject *)v3,
         Method_AndroidBackKeyManager___c__DisplayClass0_0__AddBackBtn_b__0__,
         0);
-      if ( syncRoot )
+      if ( klass )
       {
         System_Collections_Generic_List_object___RemoveAll(
-          syncRoot,
-          (System_Predicate_T__o *)v14,
-          (const MethodInfo_395DA6C *)Method_System_Collections_Generic_List_GameObject__RemoveAll__);
-        v4 = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+          klass,
+          (System_Predicate_T__o *)v15,
+          (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_GameObject__RemoveAll__);
+        v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
         if ( v4 )
         {
-          v4 = (System_Collections_Generic_List_object__o *)v4->fields._syncRoot;
-          if ( v4 )
+          v22 = (System_Collections_Generic_List_object__o *)v4[2].klass;
+          if ( v22 )
           {
+            items = v22->fields._items;
             v5 = *(Il2CppObject **)(v3 + 16);
-            items = v4->fields._items;
-            v22 = Method_System_Collections_Generic_List_GameObject__Add__;
-            ++v4->fields._version;
+            v24 = Method_System_Collections_Generic_List_GameObject__Add__;
+            ++v22->fields._version;
             if ( items )
             {
-              size = v4->fields._size;
+              size = v22->fields._size;
               if ( (unsigned int)size >= LODWORD(items->max_length) )
               {
                 System_Collections_Generic_List_object___AddWithResize(
-                  v4,
+                  v22,
                   v5,
-                  *(const MethodInfo_395C410 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                  *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
               }
               else
               {
-                v24 = &items->obj.klass + size;
-                v4->fields._size = size + 1;
-                v24[4] = (Il2CppClass *)v5;
-                sub_1D0F058((GrandQuestFolderBoardItem_o *)(v24 + 4), (int32_t)v5, v15, v16, v17, v18, v19, v20);
+                v26 = &items->obj.klass + size;
+                v26[4] = (Il2CppClass *)v5;
+                v22->fields._size = size + 1;
+                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v5, v16, v17, v18, v19, v20, v21);
               }
               return;
             }
@@ -124,51 +126,53 @@ void AndroidBackKeyManager__AddBackBtn(UnityEngine_GameObject_o *obj, const Meth
       }
     }
 LABEL_15:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
 }
 
 
-void AndroidBackKeyManager__AddBackBtn_46335372(
+void AndroidBackKeyManager__AddBackBtn_51910300(
         UnityEngine_Transform_o *rootTrans,
         System_String_o *btnPath,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   Il2CppObject *Instance; // x21
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  UnityEngine_Object_o *v8; // x19
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  UnityEngine_Object_o *v10; // x19
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v10; // x1
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4E797B4 & 1) == 0 )
+  if ( (byte_593A7DA & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-    byte_4E797B4 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    byte_593A7DA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
-  if ( !v6 )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v7 )
   {
     if ( rootTrans )
     {
-      v8 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(rootTrans, btnPath, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v6 = UnityEngine_Object__op_Equality(v8, 0, 0);
-      if ( v6 )
+      v10 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(rootTrans, btnPath, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+      v7 = UnityEngine_Object__op_Equality(v10, 0, 0);
+      if ( v7 )
         return;
-      if ( v8 )
+      if ( v10 )
       {
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8, 0);
-        AndroidBackKeyManager__AddBackBtn(gameObject, v10);
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
+        AndroidBackKeyManager__AddBackBtn(gameObject, v12);
         return;
       }
     }
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v7, v8);
   }
 }
 
@@ -176,62 +180,64 @@ void AndroidBackKeyManager__AddBackBtn_46335372(
 void AndroidBackKeyManager__AddBackKeyTarget(UnityEngine_GameObject_o *obj, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v2; // x19
+  __int64 v3; // x1
   Il2CppObject *Component_object; // x20
 
   v2 = obj;
-  if ( (byte_4E797B7 & 1) == 0 )
+  if ( (byte_593A7DD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyTarget___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_AndroidBackKeyTarget___);
-    obj = (UnityEngine_GameObject_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E797B7 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyTarget___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_AndroidBackKeyTarget___);
+    obj = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7DD = 1;
   }
   if ( !v2 )
-    sub_1D0F30C(obj, method);
+    sub_21FFECC(obj, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v2,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_AndroidBackKeyTarget___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_AndroidBackKeyTarget___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
     UnityEngine_GameObject__AddComponent_object_(
       v2,
-      (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyTarget___);
+      (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyTarget___);
 }
 
 
-void AndroidBackKeyManager__AddBackKeyTarget_46336408(
+void AndroidBackKeyManager__AddBackKeyTarget_51911336(
         UnityEngine_Transform_o *rootTrans,
         System_String_o *btnPath,
         const MethodInfo *method)
 {
   UnityEngine_Transform_o *v4; // x20
-  UnityEngine_Object_o *v5; // x19
+  __int64 v5; // x1
+  UnityEngine_Object_o *v6; // x19
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x1
 
   v4 = rootTrans;
-  if ( (byte_4E797B8 & 1) == 0 )
+  if ( (byte_593A7DE & 1) == 0 )
   {
-    rootTrans = (UnityEngine_Transform_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E797B8 = 1;
+    rootTrans = (UnityEngine_Transform_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7DE = 1;
   }
   if ( !v4 )
     goto LABEL_9;
-  v5 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v4, btnPath, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  rootTrans = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v5, 0, 0);
+  v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v4, btnPath, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  rootTrans = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v6, 0, 0);
   if ( ((unsigned __int8)rootTrans & 1) == 0 )
   {
-    if ( v5 )
+    if ( v6 )
     {
-      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0);
-      AndroidBackKeyManager__AddBackKeyTarget(gameObject, v7);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0);
+      AndroidBackKeyManager__AddBackKeyTarget(gameObject, v8);
       return;
     }
 LABEL_9:
-    sub_1D0F30C(rootTrans, btnPath);
+    sub_21FFECC(rootTrans, btnPath);
   }
 }
 
@@ -240,32 +246,34 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
 {
   System_Collections_Generic_List_object__o *btnObjList; // x0
   int size; // w8
+  __int64 v5; // x1
   Il2CppObject *Item; // x24
-  const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x2
   _BOOL8 IsBtnTouchable; // x0
-  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x2
   _BOOL8 IsTitleTopMainPanel; // x0
-  const MethodInfo *v10; // x1
-  const MethodInfo *v11; // x2
+  const MethodInfo *v11; // x1
   const MethodInfo *v12; // x2
-  const MethodInfo *v14; // x1
+  const MethodInfo *v13; // x2
   const MethodInfo *v15; // x1
   const MethodInfo *v16; // x1
+  const MethodInfo *v17; // x1
+  __int64 v18; // x1
   Il2CppObject *Component_object; // x19
-  System_String_o *v18; // x1
+  System_String_o *v20; // x1
 
   while ( 1 )
   {
-    if ( (byte_4E797BC & 1) == 0 )
+    if ( (byte_593A7E2 & 1) == 0 )
     {
-      sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Remove__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      sub_1D0F0B4(&StringLiteral_4540/*"Click"*/);
-      sub_1D0F0B4(&StringLiteral_9955/*"OnClick"*/);
-      byte_4E797BC = 1;
+      sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+      sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Remove__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      sub_21FFC50(&StringLiteral_4664/*"Click"*/);
+      sub_21FFC50(&StringLiteral_10224/*"OnClick"*/);
+      byte_593A7E2 = 1;
     }
     btnObjList = (System_Collections_Generic_List_object__o *)this->fields.btnObjList;
     if ( !btnObjList )
@@ -276,9 +284,9 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
     Item = System_Collections_Generic_List_object___get_Item(
              btnObjList,
              size - 1,
-             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
     btnObjList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Equality(
                                                                 (UnityEngine_Object_o *)Item,
                                                                 0,
@@ -296,39 +304,39 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
     System_Collections_Generic_List_object___Remove(
       btnObjList,
       Item,
-      (const MethodInfo_395D938 *)Method_System_Collections_Generic_List_GameObject__Remove__);
+      (const MethodInfo_445101C *)Method_System_Collections_Generic_List_GameObject__Remove__);
   }
-  IsBtnTouchable = AndroidBackKeyManager__IsBtnTouchable(this, (UnityEngine_GameObject_o *)Item, v6);
+  IsBtnTouchable = AndroidBackKeyManager__IsBtnTouchable(this, (UnityEngine_GameObject_o *)Item, v7);
   if ( !IsBtnTouchable )
     return 0;
   IsTitleTopMainPanel = AndroidBackKeyManager__IsTitleTopMainPanel(
                           (AndroidBackKeyManager_o *)IsBtnTouchable,
                           (UnityEngine_GameObject_o *)Item,
-                          v8);
+                          v9);
   if ( IsTitleTopMainPanel
     || (IsTitleTopMainPanel = AndroidBackKeyManager__IsBtnTerminalTop(
                                 (AndroidBackKeyManager_o *)IsTitleTopMainPanel,
                                 (UnityEngine_GameObject_o *)Item,
-                                v11)) )
+                                v12)) )
   {
-    AndroidBackKeyManager__OpenQuitConfirmDialog((AndroidBackKeyManager_o *)IsTitleTopMainPanel, v10);
+    AndroidBackKeyManager__OpenQuitConfirmDialog((AndroidBackKeyManager_o *)IsTitleTopMainPanel, v11);
     return 1;
   }
-  if ( !AndroidBackKeyManager__IsTacticalPhaseWait(this, (UnityEngine_GameObject_o *)Item, v12) )
+  if ( !AndroidBackKeyManager__IsTacticalPhaseWait(this, (UnityEngine_GameObject_o *)Item, v13) )
   {
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)Item,
-                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
-      v18 = (System_String_o *)StringLiteral_4540/*"Click"*/;
+      v20 = (System_String_o *)StringLiteral_4664/*"Click"*/;
     else
-      v18 = (System_String_o *)StringLiteral_9955/*"OnClick"*/;
-    UnityEngine_GameObject__SendMessage_73340852((UnityEngine_GameObject_o *)Item, v18, 0);
+      v20 = (System_String_o *)StringLiteral_10224/*"OnClick"*/;
+    UnityEngine_GameObject__SendMessage_83224792((UnityEngine_GameObject_o *)Item, v20, 0);
     return 1;
   }
-  btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v14);
+  btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v15);
   if ( !btnObjList )
     goto LABEL_33;
   btnObjList = *(System_Collections_Generic_List_object__o **)&btnObjList[1].fields._size;
@@ -336,7 +344,7 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
     goto LABEL_33;
   if ( !BattleData__isTutorial((BattleData_o *)btnObjList, 0) )
   {
-    btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v15);
+    btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v16);
     if ( btnObjList )
     {
       btnObjList = *(System_Collections_Generic_List_object__o **)&btnObjList[1].fields._size;
@@ -344,7 +352,7 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
       {
         if ( BattleData__IsWarBoard((BattleData_o *)btnObjList, 0) )
           return 0;
-        btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v16);
+        btnObjList = (System_Collections_Generic_List_object__o *)AndroidBackKeyManager__get_BattlePerfMaster(this, v17);
         if ( btnObjList )
         {
           BattlePerformanceMaster__OpenRetireWindowSA((BattlePerformanceMaster_o *)btnObjList, 0);
@@ -353,7 +361,7 @@ bool AndroidBackKeyManager__ExecuteBackFunc(AndroidBackKeyManager_o *this, const
       }
     }
 LABEL_33:
-    sub_1D0F30C(btnObjList, method);
+    sub_21FFECC(btnObjList, method);
   }
   return 0;
 }
@@ -361,56 +369,58 @@ LABEL_33:
 
 void AndroidBackKeyManager__InstantiateSelf(const MethodInfo *method)
 {
-  Il2CppType *v1; // x19
-  System_RuntimeTypeHandle_o v2; // x0
+  __int64 v1; // x1
+  Il2CppType *v2; // x19
+  System_RuntimeTypeHandle_o v3; // x0
+  __int64 v4; // x1
   System_Type_o *TypeFromHandle; // x19
   UnityEngine_Object_o *ObjectOfType; // x0
+  __int64 v7; // x1
   Il2CppObject *Instance; // x19
-  UnityEngine_GameObject_o *v6; // x19
-  UnityEngine_Component_o *v7; // x0
-  __int64 v8; // x1
+  UnityEngine_GameObject_o *v9; // x19
+  UnityEngine_Component_o *v10; // x0
+  __int64 v11; // x1
   UnityEngine_Transform_o *transform; // x20
 
-  if ( (byte_4E797B9 & 1) == 0 )
+  if ( (byte_593A7DF & 1) == 0 )
   {
-    sub_1D0F0B4(&AndroidBackKeyManager_var);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyManager___);
-    sub_1D0F0B4(&UnityEngine_GameObject_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    sub_1D0F0B4(&System_Type_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_2281/*"AndroidBackKeyManager"*/);
-    byte_4E797B9 = 1;
+    sub_21FFC50(&AndroidBackKeyManager_var);
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyManager___);
+    sub_21FFC50(&UnityEngine_GameObject_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_2371/*"AndroidBackKeyManager"*/);
+    byte_593A7DF = 1;
   }
-  v1 = AndroidBackKeyManager_var;
-  if ( !System_Type_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v2.fields.value = (intptr_t)v1;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v2, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v2 = AndroidBackKeyManager_var;
+  if ( !*(_DWORD *)(qword_594C108 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_594C108, v1);
+  v3.fields.value = (intptr_t)v2;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v3, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   ObjectOfType = UnityEngine_Object__FindObjectOfType(TypeFromHandle, 0);
   if ( UnityEngine_Object__op_Equality(ObjectOfType, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
     {
-      v6 = (UnityEngine_GameObject_o *)sub_1D0F300(UnityEngine_GameObject_TypeInfo);
-      UnityEngine_GameObject___ctor_73341140(v6, 0);
-      if ( !v6
-        || (UnityEngine_Object__set_name((UnityEngine_Object_o *)v6, (System_String_o *)StringLiteral_2281/*"AndroidBackKeyManager"*/, 0),
-            transform = UnityEngine_GameObject__get_transform(v6, 0),
-            (v7 = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__)) == 0)
-        || (v7 = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v7, 0), !transform) )
+      v9 = (UnityEngine_GameObject_o *)sub_21FFEBC(UnityEngine_GameObject_TypeInfo);
+      UnityEngine_GameObject___ctor_83225376(v9, 0);
+      if ( !v9
+        || (UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)StringLiteral_2371/*"AndroidBackKeyManager"*/, 0),
+            transform = UnityEngine_GameObject__get_transform(v9, 0),
+            (v10 = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__)) == 0)
+        || (v10 = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v10, 0), !transform) )
       {
-        sub_1D0F30C(v7, v8);
+        sub_21FFECC(v10, v11);
       }
-      UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v7, 0);
+      UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v10, 0);
       UnityEngine_GameObject__AddComponent_object_(
-        v6,
-        (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyManager___);
+        v9,
+        (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyManager___);
     }
   }
 }
@@ -423,17 +433,18 @@ bool AndroidBackKeyManager__IsBtnTerminalTop(
 {
   System_String_o *name; // x0
   System_String_o *v5; // x0
-  TerminalSceneComponent_c *v6; // x0
+  __int64 v6; // x1
+  TerminalSceneComponent_c *v7; // x0
   UnityEngine_Object_o *mInstance; // x19
-  TerminalSceneComponent_c *v9; // x0
+  TerminalSceneComponent_c *v10; // x0
 
-  if ( (byte_4E797BF & 1) == 0 )
+  if ( (byte_593A7E5 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&TerminalSceneComponent_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_13905/*"TerminalScene"*/);
-    this = (AndroidBackKeyManager_o *)sub_1D0F0B4(&StringLiteral_14713/*"TitlePrefab"*/);
-    byte_4E797BF = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
+    sub_21FFC50(&StringLiteral_14251/*"TerminalScene"*/);
+    this = (AndroidBackKeyManager_o *)sub_21FFC50(&StringLiteral_15078/*"TitlePrefab"*/);
+    byte_593A7E5 = 1;
   }
   if ( !btnObj )
     goto LABEL_32;
@@ -447,7 +458,7 @@ bool AndroidBackKeyManager__IsBtnTerminalTop(
   if ( !this )
     goto LABEL_32;
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  if ( System_String__op_Inequality(name, (System_String_o *)StringLiteral_13905/*"TerminalScene"*/, 0) )
+  if ( System_String__op_Inequality(name, (System_String_o *)StringLiteral_14251/*"TerminalScene"*/, 0) )
     return 0;
   this = (AndroidBackKeyManager_o *)UnityEngine_GameObject__get_transform(btnObj, 0);
   if ( !this )
@@ -465,43 +476,43 @@ bool AndroidBackKeyManager__IsBtnTerminalTop(
   if ( !this )
     goto LABEL_32;
   v5 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_14713/*"TitlePrefab"*/, 0) )
+  if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_15078/*"TitlePrefab"*/, 0) )
     return 0;
-  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4E7125B )
+  if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6);
+  if ( !byte_5931EF0 )
   {
-    sub_1D0F0B4(&TerminalSceneComponent_TypeInfo);
-    byte_4E7125B = 1;
+    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
+    byte_5931EF0 = 1;
   }
-  v6 = TerminalSceneComponent_TypeInfo;
-  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+  v7 = TerminalSceneComponent_TypeInfo;
+  if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    v6 = TerminalSceneComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6);
+    v7 = TerminalSceneComponent_TypeInfo;
   }
-  mInstance = (UnityEngine_Object_o *)v6->static_fields->mInstance;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  mInstance = (UnityEngine_Object_o *)v7->static_fields->mInstance;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Equality(mInstance, 0, 0) )
     return 0;
-  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4E7125B )
+  if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, btnObj);
+  if ( !byte_5931EF0 )
   {
-    sub_1D0F0B4(&TerminalSceneComponent_TypeInfo);
-    byte_4E7125B = 1;
+    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
+    byte_5931EF0 = 1;
   }
-  v9 = TerminalSceneComponent_TypeInfo;
-  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+  v10 = TerminalSceneComponent_TypeInfo;
+  if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    v9 = TerminalSceneComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, btnObj);
+    v10 = TerminalSceneComponent_TypeInfo;
   }
-  this = (AndroidBackKeyManager_o *)v9->static_fields->mInstance;
+  this = (AndroidBackKeyManager_o *)v10->static_fields->mInstance;
   if ( !this )
 LABEL_32:
-    sub_1D0F30C(this, btnObj);
+    sub_21FFECC(this, btnObj);
   return TerminalSceneComponent__IsTerminalListAreaWait((TerminalSceneComponent_o *)this, 0);
 }
 
@@ -511,40 +522,46 @@ bool AndroidBackKeyManager__IsBtnTouchable(
         UnityEngine_GameObject_o *btnObj,
         const MethodInfo *method)
 {
+  int v5; // w8
   AndroidBackKeyManager_o *mainCamera; // x20
-  const MethodInfo *v6; // x2
-  const MethodInfo *v7; // x1
+  const MethodInfo *v7; // x2
+  const MethodInfo *v8; // x1
   UnityEngine_Component_o *bounds; // x0
-  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   Il2CppObject *Component_object; // x21
+  __int64 v13; // x1
   float x; // s8
   float y; // s9
   float z; // s10
-  UICamera_c *v14; // x0
+  __int64 v17; // x1
+  UICamera_c *v18; // x0
   struct UICamera_StaticFields *static_fields; // x8
-  __int128 v16; // q1
-  __int128 v17; // q2
+  __int128 v20; // q1
+  __int128 v21; // q2
+  __int64 v22; // x1
   UnityEngine_Object_o *gameObject; // x20
-  UnityEngine_Bounds_o v20; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_RaycastHit_o v21; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Bounds_o v25; // [xsp+8h] [xbp-98h] BYREF
+  UnityEngine_RaycastHit_o v26; // [xsp+20h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E797BE & 1) == 0 )
+  if ( (byte_593A7E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E797BE = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_593A7E4 = 1;
   }
-  memset(&v21, 0, sizeof(v21));
-  if ( !UICamera_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+  v5 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
+  memset(&v26, 0, sizeof(v26));
+  if ( !v5 )
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, btnObj);
   mainCamera = (AndroidBackKeyManager_o *)UICamera__get_mainCamera(0);
-  if ( AndroidBackKeyManager__IsInBattleScene(mainCamera, btnObj, v6) )
-    mainCamera = (AndroidBackKeyManager_o *)AndroidBackKeyManager__get_battleCamera(this, v7);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( AndroidBackKeyManager__IsInBattleScene(mainCamera, btnObj, v7) )
+    mainCamera = (AndroidBackKeyManager_o *)AndroidBackKeyManager__get_battleCamera(this, v8);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   bounds = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)mainCamera, 0, 0);
   if ( ((unsigned __int8)bounds & 1) != 0 )
     return 0;
@@ -552,50 +569,50 @@ bool AndroidBackKeyManager__IsBtnTouchable(
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        btnObj,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
   bounds = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( ((unsigned __int8)bounds & 1) != 0 )
     return 0;
   if ( !Component_object )
     goto LABEL_27;
   bounds = (UnityEngine_Component_o *)UnityEngine_Collider__get_bounds(
-                                        &v20,
+                                        &v25,
                                         (UnityEngine_Collider_o *)Component_object,
                                         0);
   if ( !mainCamera )
     goto LABEL_27;
-  v22 = UnityEngine_Camera__WorldToScreenPoint_73162808((UnityEngine_Camera_o *)mainCamera, v20.fields.m_Center, 0);
-  x = v22.fields.x;
-  y = v22.fields.y;
-  z = v22.fields.z;
-  if ( !UICamera_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-  v23.fields.x = x;
-  v23.fields.y = y;
-  v23.fields.z = z;
-  if ( !UICamera__Raycast(v23, 0) )
+  v27 = UnityEngine_Camera__WorldToScreenPoint_82984900((UnityEngine_Camera_o *)mainCamera, v25.fields.m_Center, 0);
+  x = v27.fields.x;
+  y = v27.fields.y;
+  z = v27.fields.z;
+  if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v13);
+  v28.fields.x = x;
+  v28.fields.y = y;
+  v28.fields.z = z;
+  if ( !UICamera__Raycast(v28, 0) )
     return 0;
-  v14 = UICamera_TypeInfo;
-  if ( !UICamera_TypeInfo->_2.cctor_finished )
+  v18 = UICamera_TypeInfo;
+  if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-    v14 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v17);
+    v18 = UICamera_TypeInfo;
   }
-  static_fields = v14->static_fields;
-  v17 = *(_OWORD *)&static_fields->lastHit.fields.m_Point.fields.x;
-  v16 = *(_OWORD *)&static_fields->lastHit.fields.m_Normal.fields.y;
-  *(_OWORD *)&v21.fields.m_Distance = *(_OWORD *)&static_fields->lastHit.fields.m_Distance;
-  *(_OWORD *)&v21.fields.m_Point.fields.x = v17;
-  *(_OWORD *)&v21.fields.m_Normal.fields.y = v16;
-  bounds = (UnityEngine_Component_o *)UnityEngine_RaycastHit__get_collider(&v21, 0);
+  static_fields = v18->static_fields;
+  v20 = *(_OWORD *)&static_fields->lastHit.fields.m_Normal.fields.y;
+  v21 = *(_OWORD *)&static_fields->lastHit.fields.m_Distance;
+  *(_OWORD *)&v26.fields.m_Point.fields.x = *(_OWORD *)&static_fields->lastHit.fields.m_Point.fields.x;
+  *(_OWORD *)&v26.fields.m_Normal.fields.y = v20;
+  *(_OWORD *)&v26.fields.m_Distance = v21;
+  bounds = (UnityEngine_Component_o *)UnityEngine_RaycastHit__get_collider(&v26, 0);
   if ( !bounds )
 LABEL_27:
-    sub_1D0F30C(bounds, v9);
+    sub_21FFECC(bounds, v10);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(bounds, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
   return UnityEngine_Object__op_Equality(gameObject, (UnityEngine_Object_o *)btnObj, 0);
 }
 
@@ -607,20 +624,20 @@ bool AndroidBackKeyManager__IsInBattleScene(
 {
   System_String_o *name; // x0
 
-  if ( (byte_4E797C2 & 1) == 0 )
+  if ( (byte_593A7E8 & 1) == 0 )
   {
-    this = (AndroidBackKeyManager_o *)sub_1D0F0B4(&StringLiteral_3152/*"BattleScene"*/);
-    byte_4E797C2 = 1;
+    this = (AndroidBackKeyManager_o *)sub_21FFC50(&StringLiteral_3244/*"BattleScene"*/);
+    byte_593A7E8 = 1;
   }
   if ( !btnObj
     || (this = (AndroidBackKeyManager_o *)UnityEngine_GameObject__get_transform(btnObj, 0)) == 0
     || (this = (AndroidBackKeyManager_o *)UnityEngine_Transform__get_root((UnityEngine_Transform_o *)this, 0)) == 0
     || (this = (AndroidBackKeyManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
   {
-    sub_1D0F30C(this, btnObj);
+    sub_21FFECC(this, btnObj);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  return System_String__op_Equality(name, (System_String_o *)StringLiteral_3152/*"BattleScene"*/, 0);
+  return System_String__op_Equality(name, (System_String_o *)StringLiteral_3244/*"BattleScene"*/, 0);
 }
 
 
@@ -629,29 +646,30 @@ bool AndroidBackKeyManager__IsTacticalPhaseWait(
         UnityEngine_GameObject_o *btnObj,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *BattlePerfMaster; // x21
-  _BOOL8 v6; // x0
-  const MethodInfo *v7; // x2
-  const MethodInfo *v8; // x1
+  _BOOL8 v7; // x0
+  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x1
   BattlePerformanceMaster_o *IsTacticalPhaseWait; // x0
-  __int64 v10; // x1
+  __int64 v11; // x1
   System_String_o *name; // x0
 
-  if ( (byte_4E797C3 & 1) == 0 )
+  if ( (byte_593A7E9 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_18286/*"click"*/);
-    byte_4E797C3 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_18765/*"click"*/);
+    byte_593A7E9 = 1;
   }
   BattlePerfMaster = (UnityEngine_Object_o *)AndroidBackKeyManager__get_BattlePerfMaster(
                                                this,
                                                (const MethodInfo *)btnObj);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Inequality(BattlePerfMaster, 0, 0);
-  if ( !v6 || !AndroidBackKeyManager__IsInBattleScene((AndroidBackKeyManager_o *)v6, btnObj, v7) )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  v7 = UnityEngine_Object__op_Inequality(BattlePerfMaster, 0, 0);
+  if ( !v7 || !AndroidBackKeyManager__IsInBattleScene((AndroidBackKeyManager_o *)v7, btnObj, v8) )
     return 0;
-  IsTacticalPhaseWait = AndroidBackKeyManager__get_BattlePerfMaster(this, v8);
+  IsTacticalPhaseWait = AndroidBackKeyManager__get_BattlePerfMaster(this, v9);
   if ( !IsTacticalPhaseWait )
     goto LABEL_13;
   IsTacticalPhaseWait = (BattlePerformanceMaster_o *)BattlePerformanceMaster__IsTacticalPhaseWait(
@@ -661,9 +679,9 @@ bool AndroidBackKeyManager__IsTacticalPhaseWait(
     return 0;
   if ( !btnObj )
 LABEL_13:
-    sub_1D0F30C(IsTacticalPhaseWait, v10);
+    sub_21FFECC(IsTacticalPhaseWait, v11);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)btnObj, 0);
-  return System_String__op_Equality(name, (System_String_o *)StringLiteral_18286/*"click"*/, 0);
+  return System_String__op_Equality(name, (System_String_o *)StringLiteral_18765/*"click"*/, 0);
 }
 
 
@@ -675,24 +693,29 @@ bool AndroidBackKeyManager__IsTitleTopMainPanel(
   System_String_o *name; // x0
   System_String_o *v6; // x0
 
-  if ( (byte_4E797C0 & 1) == 0 )
+  if ( (byte_593A7E6 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_8976/*"MainPanel"*/);
-    this = (AndroidBackKeyManager_o *)sub_1D0F0B4(&StringLiteral_14715/*"TitleScene"*/);
-    byte_4E797C0 = 1;
+    sub_21FFC50(&StringLiteral_9226/*"MainPanel"*/);
+    this = (AndroidBackKeyManager_o *)sub_21FFC50(&StringLiteral_15080/*"TitleScene"*/);
+    byte_593A7E6 = 1;
   }
   if ( !btnObj
     || (this = (AndroidBackKeyManager_o *)UnityEngine_GameObject__get_transform(btnObj, 0)) == 0
     || (this = (AndroidBackKeyManager_o *)UnityEngine_Transform__get_root((UnityEngine_Transform_o *)this, 0)) == 0
     || (this = (AndroidBackKeyManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
   {
-    sub_1D0F30C(this, btnObj);
+    sub_21FFECC(this, btnObj);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  if ( System_String__op_Inequality(name, (System_String_o *)StringLiteral_14715/*"TitleScene"*/, 0) )
+  if ( System_String__op_Inequality(name, (System_String_o *)StringLiteral_15080/*"TitleScene"*/, 0) )
+  {
     return 0;
-  v6 = UnityEngine_Object__get_name((UnityEngine_Object_o *)btnObj, 0);
-  return !System_String__op_Inequality(v6, (System_String_o *)StringLiteral_8976/*"MainPanel"*/, 0);
+  }
+  else
+  {
+    v6 = UnityEngine_Object__get_name((UnityEngine_Object_o *)btnObj, 0);
+    return !System_String__op_Inequality(v6, (System_String_o *)StringLiteral_9226/*"MainPanel"*/, 0);
+  }
 }
 
 
@@ -701,25 +724,26 @@ void AndroidBackKeyManager__OnTouchBackKey(AndroidBackKeyManager_o *this, const 
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x1
-  System_String_o *v6; // x0
-  const MethodInfo *v7; // x1
+  __int64 v6; // x1
+  System_String_o *v7; // x0
+  const MethodInfo *v8; // x1
 
-  if ( (byte_4E797BB & 1) == 0 )
+  if ( (byte_593A7E1 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_7042/*"GLOBAL_ANDROID_BACKKEY_INVALID"*/);
-    byte_4E797BB = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_7246/*"GLOBAL_ANDROID_BACKKEY_INVALID"*/);
+    byte_593A7E1 = 1;
   }
   if ( !UnityEngine_Input__GetMouseButton(0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
     if ( Instance )
     {
       if ( WebViewManager__get_IsBusy((WebViewManager_o *)Instance, 0) )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
         if ( Instance )
         {
           WebViewManager__PressBackKey((WebViewManager_o *)Instance, 0);
@@ -728,107 +752,102 @@ void AndroidBackKeyManager__OnTouchBackKey(AndroidBackKeyManager_o *this, const 
       }
       else
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( Instance )
         {
           if ( !CommonUI__maskFadeIsBusy((CommonUI_o *)Instance, 0) && !AndroidBackKeyManager__ExecuteBackFunc(this, v5) )
           {
-            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v6 = LocalizationManager__Get((System_String_o *)StringLiteral_7042/*"GLOBAL_ANDROID_BACKKEY_INVALID"*/, 0);
-            AndroidBackKeyManager__ShowToast(v6, v7);
+            if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
+            v7 = LocalizationManager__Get((System_String_o *)StringLiteral_7246/*"GLOBAL_ANDROID_BACKKEY_INVALID"*/, 0);
+            AndroidBackKeyManager__ShowToast(v7, v8);
           }
           return;
         }
       }
     }
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
 }
 
 
 void AndroidBackKeyManager__OpenQuitConfirmDialog(AndroidBackKeyManager_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   Il2CppObject *Instance; // x19
-  System_String_o *v3; // x20
-  System_String_o *v4; // x21
-  System_String_o *v5; // x0
-  __int64 v6; // x1
-  AndroidBackKeyManager___c_c *v7; // x8
-  System_String_o *v8; // x22
-  System_String_o *v9; // x23
+  System_String_o *v4; // x20
+  System_String_o *v5; // x21
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  AndroidBackKeyManager___c_c *v8; // x8
+  System_String_o *v9; // x22
+  struct AndroidBackKeyManager___c_StaticFields *static_fields; // x9
+  System_String_o *v11; // x23
   CommonConfirmDialog_ClickDelegate_o *_9__14_0; // x24
-  Il2CppObject *v11; // x25
-  struct AndroidBackKeyManager___c_StaticFields *static_fields; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  Il2CppObject *v13; // x25
+  struct AndroidBackKeyManager___c_StaticFields *v14; // x0
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
 
-  if ( (byte_4E797BD & 1) == 0 )
+  if ( (byte_593A7E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_AndroidBackKeyManager___c__OpenQuitConfirmDialog_b__14_0__);
-    sub_1D0F0B4(&AndroidBackKeyManager___c_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_2692/*"BACK_BUTTON_CONFIRM"*/);
-    sub_1D0F0B4(&StringLiteral_2694/*"BACK_BUTTON_CONFIRM_YES"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_2693/*"BACK_BUTTON_CONFIRM_NO"*/);
-    byte_4E797BD = 1;
+    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_AndroidBackKeyManager___c__OpenQuitConfirmDialog_b__14_0__);
+    sub_21FFC50(&AndroidBackKeyManager___c_TypeInfo);
+    sub_21FFC50(&StringLiteral_2786/*"BACK_BUTTON_CONFIRM"*/);
+    sub_21FFC50(&StringLiteral_2788/*"BACK_BUTTON_CONFIRM_YES"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_2787/*"BACK_BUTTON_CONFIRM_NO"*/);
+    byte_593A7E3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2692/*"BACK_BUTTON_CONFIRM"*/, 0);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_2694/*"BACK_BUTTON_CONFIRM_YES"*/, 0);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2693/*"BACK_BUTTON_CONFIRM_NO"*/, 0);
-  v7 = AndroidBackKeyManager___c_TypeInfo;
-  v8 = v5;
-  if ( !AndroidBackKeyManager___c_TypeInfo->_2.cctor_finished )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v2);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_2786/*"BACK_BUTTON_CONFIRM"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2788/*"BACK_BUTTON_CONFIRM_YES"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2787/*"BACK_BUTTON_CONFIRM_NO"*/, 0);
+  v8 = AndroidBackKeyManager___c_TypeInfo;
+  v9 = v6;
+  if ( !*(&AndroidBackKeyManager___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AndroidBackKeyManager___c_TypeInfo);
-    v7 = AndroidBackKeyManager___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AndroidBackKeyManager___c_TypeInfo, v7);
+    v8 = AndroidBackKeyManager___c_TypeInfo;
   }
-  v9 = (System_String_o *)StringLiteral_1/*""*/;
-  _9__14_0 = v7->static_fields->__9__14_0;
+  static_fields = v8->static_fields;
+  v11 = (System_String_o *)StringLiteral_1/*""*/;
+  _9__14_0 = static_fields->__9__14_0;
   if ( !_9__14_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !*(&v8->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = AndroidBackKeyManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v8, v7);
+      static_fields = AndroidBackKeyManager___c_TypeInfo->static_fields;
     }
-    v11 = (Il2CppObject *)v7->static_fields->__9;
-    _9__14_0 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v13 = (Il2CppObject *)static_fields->__9;
+    _9__14_0 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
       _9__14_0,
-      v11,
+      v13,
       Method_AndroidBackKeyManager___c__OpenQuitConfirmDialog_b__14_0__,
       0);
-    static_fields = AndroidBackKeyManager___c_TypeInfo->static_fields;
-    static_fields->__9__14_0 = _9__14_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__14_0,
-      (int32_t)_9__14_0,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18);
+    v14 = AndroidBackKeyManager___c_TypeInfo->static_fields;
+    v14->__9__14_0 = _9__14_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->__9__14_0, (int32_t)_9__14_0, v15, v16, v17, v18, v19, v20);
   }
   if ( !Instance )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v6, v7);
   CommonUI__OpenConfirmDecideDlg(
     (CommonUI_o *)Instance,
-    v9,
-    v3,
+    v11,
     v4,
-    v8,
+    v5,
+    v9,
     _9__14_0,
     0,
     0.0,
@@ -850,44 +869,45 @@ void AndroidBackKeyManager__RemoveBackBtn(UnityEngine_GameObject_o *obj, const M
   __int64 v3; // x19
   Il2CppObject *v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
+  __int64 v12; // x1
   Il2CppObject *Instance; // x20
   System_Collections_Generic_List_object__o *klass; // x20
-  System_Predicate_object__o *v14; // x21
+  System_Predicate_object__o *v15; // x21
 
-  if ( (byte_4E797B5 & 1) == 0 )
+  if ( (byte_593A7DB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__RemoveAll__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&System_Predicate_GameObject__TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-    sub_1D0F0B4(&Method_AndroidBackKeyManager___c__DisplayClass2_0__RemoveBackBtn_b__0__);
-    sub_1D0F0B4(&AndroidBackKeyManager___c__DisplayClass2_0_TypeInfo);
-    byte_4E797B5 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__RemoveAll__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&System_Predicate_GameObject__TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    sub_21FFC50(&Method_AndroidBackKeyManager___c__DisplayClass2_0__RemoveBackBtn_b__0__);
+    sub_21FFC50(&AndroidBackKeyManager___c__DisplayClass2_0_TypeInfo);
+    byte_593A7DB = 1;
   }
-  v3 = sub_1D0F300(AndroidBackKeyManager___c__DisplayClass2_0_TypeInfo);
+  v3 = sub_21FFEBC(AndroidBackKeyManager___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_10;
   *(_QWORD *)(v3 + 16) = obj;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)obj, v6, v7, v8, v9, v10, v11);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)obj, v6, v7, v8, v9, v10, v11);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
     if ( v4 )
     {
       klass = (System_Collections_Generic_List_object__o *)v4[2].klass;
-      v14 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_GameObject__TypeInfo);
+      v15 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_GameObject__TypeInfo);
       System_Predicate_object____ctor(
-        v14,
+        v15,
         (Il2CppObject *)v3,
         Method_AndroidBackKeyManager___c__DisplayClass2_0__RemoveBackBtn_b__0__,
         0);
@@ -895,57 +915,59 @@ void AndroidBackKeyManager__RemoveBackBtn(UnityEngine_GameObject_o *obj, const M
       {
         System_Collections_Generic_List_object___RemoveAll(
           klass,
-          (System_Predicate_T__o *)v14,
-          (const MethodInfo_395DA6C *)Method_System_Collections_Generic_List_GameObject__RemoveAll__);
+          (System_Predicate_T__o *)v15,
+          (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_GameObject__RemoveAll__);
         return;
       }
     }
 LABEL_10:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
 }
 
 
-void AndroidBackKeyManager__RemoveBackBtn_46335972(
+void AndroidBackKeyManager__RemoveBackBtn_51910900(
         UnityEngine_Transform_o *rootTrans,
         System_String_o *btnPath,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   Il2CppObject *Instance; // x21
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  UnityEngine_Object_o *v8; // x19
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  UnityEngine_Object_o *v10; // x19
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v10; // x1
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4E797B6 & 1) == 0 )
+  if ( (byte_593A7DC & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-    byte_4E797B6 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+    byte_593A7DC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
-  if ( !v6 )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AndroidBackKeyManager__get_Instance__);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v7 )
   {
     if ( rootTrans )
     {
-      v8 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(rootTrans, btnPath, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v6 = UnityEngine_Object__op_Equality(v8, 0, 0);
-      if ( v6 )
+      v10 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(rootTrans, btnPath, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+      v7 = UnityEngine_Object__op_Equality(v10, 0, 0);
+      if ( v7 )
         return;
-      if ( v8 )
+      if ( v10 )
       {
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8, 0);
-        AndroidBackKeyManager__RemoveBackBtn(gameObject, v10);
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
+        AndroidBackKeyManager__RemoveBackBtn(gameObject, v12);
         return;
       }
     }
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v7, v8);
   }
 }
 
@@ -955,95 +977,96 @@ void AndroidBackKeyManager__ShowToast(System_String_o *text, const MethodInfo *m
   __int64 v3; // x19
   __int64 v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   UnityEngine_AndroidJavaClass_o *v12; // x20
   Il2CppObject *Static_object; // x0
-  long double inited; // q0
+  long double v14; // q0
   _QWORD *v15; // x21
   UnityEngine_AndroidJavaObject_o *v16; // x20
   __int64 v17; // x8
   __int64 v18; // x0
   Il2CppObject *v19; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
   System_Object_array *v26; // x21
   UnityEngine_AndroidJavaRunnable_o *v27; // x22
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
   int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  __int64 v34; // x0
+  bool v32; // w6
+  bool v33; // w7
+  __int64 v34; // x1
+  __int64 v35; // x0
 
-  if ( (byte_4E797C4 & 1) == 0 )
+  if ( (byte_593A7EA & 1) == 0 )
   {
-    sub_1D0F0B4(&AndroidBackKeyManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____80366248);
-    sub_1D0F0B4(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-    sub_1D0F0B4(&UnityEngine_AndroidJavaRunnable_TypeInfo);
-    sub_1D0F0B4(&Method_System_Array_Empty_object___);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&Method_AndroidBackKeyManager___c__DisplayClass26_0__ShowToast_b__0__);
-    sub_1D0F0B4(&AndroidBackKeyManager___c__DisplayClass26_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20139/*"getApplicationContext"*/);
-    sub_1D0F0B4(&StringLiteral_18403/*"com.unity3d.player.UnityPlayer"*/);
-    sub_1D0F0B4(&StringLiteral_23643/*"runOnUiThread"*/);
-    sub_1D0F0B4(&StringLiteral_18701/*"currentActivity"*/);
-    byte_4E797C4 = 1;
+    sub_21FFC50(&AndroidBackKeyManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____91478512);
+    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+    sub_21FFC50(&UnityEngine_AndroidJavaRunnable_TypeInfo);
+    sub_21FFC50(&Method_System_Array_Empty_object___);
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&Method_AndroidBackKeyManager___c__DisplayClass26_0__ShowToast_b__0__);
+    sub_21FFC50(&AndroidBackKeyManager___c__DisplayClass26_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_20663/*"getApplicationContext"*/);
+    sub_21FFC50(&StringLiteral_18888/*"com.unity3d.player.UnityPlayer"*/);
+    sub_21FFC50(&StringLiteral_24331/*"runOnUiThread"*/);
+    sub_21FFC50(&StringLiteral_19193/*"currentActivity"*/);
+    byte_593A7EA = 1;
   }
-  v3 = sub_1D0F300(AndroidBackKeyManager___c__DisplayClass26_0_TypeInfo);
+  v3 = sub_21FFEBC(AndroidBackKeyManager___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_21;
   *(_QWORD *)(v3 + 24) = text;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)text, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)text, v6, v7, v8, v9, v10, v11);
   if ( !AndroidBackKeyManager_TypeInfo->static_fields->ToastEnabled )
     return;
-  v12 = (UnityEngine_AndroidJavaClass_o *)sub_1D0F300(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v12, (System_String_o *)StringLiteral_18403/*"com.unity3d.player.UnityPlayer"*/, 0);
+  v12 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v12, (System_String_o *)StringLiteral_18888/*"com.unity3d.player.UnityPlayer"*/, 0);
   if ( !v12 )
     goto LABEL_21;
   Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
                     (UnityEngine_AndroidJavaObject_o *)v12,
-                    (System_String_o *)StringLiteral_18701/*"currentActivity"*/,
-                    (const MethodInfo_3198DB0 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+                    (System_String_o *)StringLiteral_19193/*"currentActivity"*/,
+                    (const MethodInfo_36D7798 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
   v15 = Method_System_Array_Empty_object___;
   v16 = (UnityEngine_AndroidJavaObject_o *)Static_object;
   v17 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
   if ( !v17 )
   {
-    sub_1CE5198(Method_System_Array_Empty_object___);
+    sub_2237B54(Method_System_Array_Empty_object___);
     v17 = v15[7];
   }
   v18 = *(_QWORD *)(v17 + 16);
-  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1CE513C(inited);
-  if ( !*(_DWORD *)(v18 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v18);
+  if ( (*(_WORD *)(v18 + 309) & 1) == 0 )
+    v18 = sub_2237AF8(v14);
+  if ( !*(_DWORD *)(v18 + 228) )
+    *(__n128 *)&v14 = j_il2cpp_runtime_class_init_0(v18, v5);
   v4 = *(_QWORD *)(v15[7] + 16LL);
-  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1CE513C(inited);
+  if ( (*(_WORD *)(v4 + 309) & 1) == 0 )
+    v4 = sub_2237AF8(v14);
   if ( !v16
     || (v19 = UnityEngine_AndroidJavaObject__Call_object_(
                 v16,
-                (System_String_o *)StringLiteral_20139/*"getApplicationContext"*/,
+                (System_String_o *)StringLiteral_20663/*"getApplicationContext"*/,
                 **(System_Object_array ***)(v4 + 184),
-                (const MethodInfo_3196C28 *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____80366248),
+                (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____91478512),
         *(_QWORD *)(v3 + 16) = v19,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v19, v20, v21, v22, v23, v24, v25),
-        v26 = (System_Object_array *)sub_1D0F15C(object___TypeInfo, 1),
-        v27 = (UnityEngine_AndroidJavaRunnable_o *)sub_1D0F300(UnityEngine_AndroidJavaRunnable_TypeInfo),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)v19, v20, v21, v22, v23, v24, v25),
+        v26 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1),
+        v27 = (UnityEngine_AndroidJavaRunnable_o *)sub_21FFEBC(UnityEngine_AndroidJavaRunnable_TypeInfo),
         UnityEngine_AndroidJavaRunnable___ctor(
           v27,
           (Il2CppObject *)v3,
@@ -1052,22 +1075,22 @@ void AndroidBackKeyManager__ShowToast(System_String_o *text, const MethodInfo *m
         !v26) )
   {
 LABEL_21:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, v5);
   }
   if ( v27 )
   {
-    v4 = sub_1D0F1F0(v27, v26->obj.klass->_1.element_class);
+    v4 = sub_21FFDA4(v27, v26->obj.klass->_1.element_class);
     if ( !v4 )
     {
-      v34 = sub_1D0F330(0);
-      sub_1D0F1DC(v34, 0);
+      v35 = sub_21FFEF0(0, v34);
+      sub_21FFD90(v35, 0);
     }
   }
   if ( !LODWORD(v26->max_length) )
-    sub_1D0F314(v4);
+    sub_21FFED4(v4);
   v26->m_Items[0] = (Il2CppObject *)v27;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v26->m_Items, (int32_t)v27, v28, v29, v30, v31, v32, v33);
-  UnityEngine_AndroidJavaObject__Call(v16, (System_String_o *)StringLiteral_23643/*"runOnUiThread"*/, v26, 0);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v26->m_Items, (int32_t)v27, v28, v29, v30, v31, v32, v33);
+  UnityEngine_AndroidJavaObject__Call(v16, (System_String_o *)StringLiteral_24331/*"runOnUiThread"*/, v26, 0);
 }
 
 
@@ -1084,66 +1107,67 @@ BattlePerformanceMaster_o *AndroidBackKeyManager__get_BattlePerfMaster(
         AndroidBackKeyManager_o *this,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_battlePerfMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_battlePerfMaster; // x19
   UnityEngine_Object_o *v4; // x20
   struct BattlePerformanceMaster_o *battlePerfMaster; // t1
-  Il2CppType *v6; // x20
-  System_RuntimeTypeHandle_o v7; // x0
+  __int64 v6; // x1
+  Il2CppType *v7; // x20
+  System_RuntimeTypeHandle_o v8; // x0
+  __int64 v9; // x1
   System_Type_o *TypeFromHandle; // x20
   UnityEngine_Object_o *ObjectOfType; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  UnityEngine_Object_o *v16; // x8
-  BattlePerformanceMaster_c *v17; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  int32_t v18; // w8
+  BattlePerformanceMaster_c *v19; // x1
   __int64 naturalAligment; // x9
 
-  if ( (byte_4E797BA & 1) == 0 )
+  if ( (byte_593A7E0 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattlePerformanceMaster_var);
-    sub_1D0F0B4(&BattlePerformanceMaster_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&System_Type_TypeInfo);
-    byte_4E797BA = 1;
+    sub_21FFC50(&BattlePerformanceMaster_var);
+    sub_21FFC50(&BattlePerformanceMaster_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7E0 = 1;
   }
   battlePerfMaster = this->fields._battlePerfMaster;
-  p_battlePerfMaster = (GrandQuestFolderBoardItem_o *)&this->fields._battlePerfMaster;
+  p_battlePerfMaster = (MissionNaviTransitionBoardItem_o *)&this->fields._battlePerfMaster;
   v4 = (UnityEngine_Object_o *)battlePerfMaster;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(v4, 0, 0) )
   {
-    v6 = BattlePerformanceMaster_var;
-    if ( !System_Type_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v7.fields.value = (intptr_t)v6;
-    TypeFromHandle = System_Type__GetTypeFromHandle(v7, 0);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    v7 = BattlePerformanceMaster_var;
+    if ( !*(_DWORD *)(qword_594C108 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_594C108, v6);
+    v8.fields.value = (intptr_t)v7;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     ObjectOfType = UnityEngine_Object__FindObjectOfType(TypeFromHandle, 0);
-    v16 = ObjectOfType;
+    v18 = (int)ObjectOfType;
     if ( ObjectOfType )
     {
-      v17 = BattlePerformanceMaster_TypeInfo;
+      v19 = BattlePerformanceMaster_TypeInfo;
       naturalAligment = BattlePerformanceMaster_TypeInfo->_2.naturalAligment;
       if ( ObjectOfType->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == BattlePerformanceMaster_TypeInfo )
       {
-        p_battlePerfMaster->klass = (GrandQuestFolderBoardItem_c *)ObjectOfType;
+        p_battlePerfMaster->klass = (MissionNaviTransitionBoardItem_c *)ObjectOfType;
         if ( ObjectOfType->klass->_2.naturalAligment >= (unsigned int)naturalAligment
-          && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == v17 )
+          && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == v19 )
         {
           goto LABEL_17;
         }
       }
-      sub_1D0F6A8(ObjectOfType);
+      sub_220024C(ObjectOfType, v19, v12);
     }
-    p_battlePerfMaster->klass = (GrandQuestFolderBoardItem_c *)v16;
+    p_battlePerfMaster->klass = 0;
 LABEL_17:
-    sub_1D0F058(p_battlePerfMaster, (int32_t)v16, v10, v11, v12, v13, v14, v15);
+    sub_21FFBF4(p_battlePerfMaster, v18, v12, v13, v14, v15, v16, v17);
   }
   return (BattlePerformanceMaster_o *)p_battlePerfMaster->klass;
 }
@@ -1157,19 +1181,19 @@ UnityEngine_Camera_o *AndroidBackKeyManager__get_battleCamera(AndroidBackKeyMana
   __int64 v6; // x1
   UICamera_c *v7; // x0
   BetterList_T__o *list; // x0
-  __int64 v9; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x0
+  __int64 v10; // x1
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
   __int64 v12; // x9
-  int32_t *p_offset; // x10
+  int *p_offset; // x10
   __int64 v14; // x0
   System_Collections_Generic_IEnumerator_T__c *v15; // x8
   __int64 v16; // x9
-  int32_t *v17; // x10
+  int *v17; // x10
   __int64 v18; // x0
   UnityEngine_Component_o *v19; // x0
   __int64 v20; // x1
-  UnityEngine_Component_o *v21; // x21
+  UnityEngine_Component_o *v21; // x20
   UnityEngine_Transform_o *transform; // x0
   __int64 v23; // x1
   UnityEngine_Component_o *root; // x0
@@ -1178,57 +1202,59 @@ UnityEngine_Camera_o *AndroidBackKeyManager__get_battleCamera(AndroidBackKeyMana
   __int64 v27; // x1
   System_String_o *name; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
   int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
-  UnityEngine_Camera_o *v36; // x22
+  bool v34; // w6
+  bool v35; // w7
+  UnityEngine_Camera_o *v36; // x21
   int v37; // w23
   System_Collections_Generic_IEnumerator_T__c *v38; // x8
   __int64 v39; // x9
-  int32_t *v40; // x10
+  int *v40; // x10
   __int64 v41; // x0
+  System_Collections_Generic_IEnumerator_T__o *v43; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4E797C1 & 1) == 0 )
+  if ( (byte_593A7E7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BetterList_UICamera__GetEnumerator__);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_UICamera__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3152/*"BattleScene"*/);
-    byte_4E797C1 = 1;
+    sub_21FFC50(&Method_BetterList_UICamera__GetEnumerator__);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_UICamera__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UICamera_TypeInfo);
+    sub_21FFC50(&StringLiteral_3244/*"BattleScene"*/);
+    byte_593A7E7 = 1;
   }
   battleCamera = this->fields._battleCamera;
   p_battleCamera = &this->fields._battleCamera;
   v4 = (UnityEngine_Object_o *)battleCamera;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Equality(v4, 0, 0) )
     return *p_battleCamera;
   v7 = UICamera_TypeInfo;
-  if ( !UICamera_TypeInfo->_2.cctor_finished )
+  if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
     v7 = UICamera_TypeInfo;
   }
   list = (BetterList_T__o *)v7->static_fields->list;
   if ( !list )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v6);
   Enumerator = BetterList_object___GetEnumerator(
                  list,
-                 (const MethodInfo_34ABD98 *)Method_BetterList_UICamera__GetEnumerator__);
-  if ( !Enumerator )
-    sub_1D0F30C(0, v9);
+                 (const MethodInfo_3E3BFC4 *)Method_BetterList_UICamera__GetEnumerator__);
+  v43 = Enumerator;
   while ( 1 )
   {
-    klass = Enumerator->klass;
-    v12 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    if ( !v43 )
+      sub_21FFECC(Enumerator, v10);
+    klass = v43->klass;
+    v12 = *(unsigned __int16 *)&v43->klass->_2.rank;
+    if ( *(_WORD *)&v43->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
@@ -1236,23 +1262,23 @@ UnityEngine_Camera_o *AndroidBackKeyManager__get_battleCamera(AndroidBackKeyMana
         --v12;
         p_offset += 4;
         if ( !v12 )
-          goto LABEL_14;
+          goto LABEL_15;
       }
       v14 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
-LABEL_14:
-      v14 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_15:
+      v14 = sub_2237E2C(v43, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
-            Enumerator,
+            v43,
             *(_QWORD *)(v14 + 8))
         & 1) == 0 )
       break;
-    v15 = Enumerator->klass;
-    v16 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    v15 = v43->klass;
+    v16 = *(unsigned __int16 *)&v43->klass->_2.rank;
+    if ( *(_WORD *)&v43->klass->_2.rank )
     {
       v17 = &v15->_1.interfaceOffsets->offset;
       while ( *((System_Collections_Generic_IEnumerator_UICamera__c **)v17 - 1) != System_Collections_Generic_IEnumerator_UICamera__TypeInfo )
@@ -1260,39 +1286,43 @@ LABEL_14:
         --v16;
         v17 += 4;
         if ( !v16 )
-          goto LABEL_21;
+          goto LABEL_22;
       }
       v18 = (__int64)&v15->vtable[*v17];
     }
     else
     {
-LABEL_21:
-      v18 = sub_1CE5430(Enumerator, System_Collections_Generic_IEnumerator_UICamera__TypeInfo, 0);
+LABEL_22:
+      v18 = sub_2237E2C(v43, System_Collections_Generic_IEnumerator_UICamera__TypeInfo, 0);
     }
     v19 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
-                                       Enumerator,
+                                       v43,
                                        *(_QWORD *)(v18 + 8));
     v21 = v19;
     if ( !v19 )
-      sub_1D0F30C(0, v20);
+      sub_21FFECC(0, v20);
     transform = UnityEngine_Component__get_transform(v19, 0);
     if ( !transform )
-      sub_1D0F30C(0, v23);
+      sub_21FFECC(0, v23);
     root = (UnityEngine_Component_o *)UnityEngine_Transform__get_root(transform, 0);
     if ( !root )
-      sub_1D0F30C(0, v25);
+      sub_21FFECC(0, v25);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(root, 0);
     if ( !gameObject )
-      sub_1D0F30C(0, v27);
+      sub_21FFECC(0, v27);
     name = UnityEngine_Object__get_name(gameObject, 0);
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_3152/*"BattleScene"*/, 0) )
+    Enumerator = (System_Collections_Generic_IEnumerator_T__o *)System_String__op_Equality(
+                                                                  name,
+                                                                  (System_String_o *)StringLiteral_3244/*"BattleScene"*/,
+                                                                  0);
+    if ( ((unsigned __int8)Enumerator & 1) != 0 )
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            v21,
-                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Camera___);
       *p_battleCamera = (UnityEngine_Camera_o *)Component_object;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)p_battleCamera,
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)p_battleCamera,
         (int32_t)Component_object,
         v30,
         v31,
@@ -1302,15 +1332,15 @@ LABEL_21:
         v35);
       v36 = *p_battleCamera;
       v37 = 5;
-      goto LABEL_30;
+      goto LABEL_31;
     }
   }
   v36 = 0;
   v37 = 2;
-LABEL_30:
-  v38 = Enumerator->klass;
-  v39 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-  if ( *(_WORD *)&Enumerator->klass->_2.rank )
+LABEL_31:
+  v38 = v43->klass;
+  v39 = *(unsigned __int16 *)&v43->klass->_2.rank;
+  if ( *(_WORD *)&v43->klass->_2.rank )
   {
     v40 = &v38->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)v40 - 1) != System_IDisposable_TypeInfo )
@@ -1318,16 +1348,16 @@ LABEL_30:
       --v39;
       v40 += 4;
       if ( !v39 )
-        goto LABEL_34;
+        goto LABEL_35;
     }
     v41 = (__int64)&v38->vtable[*v40];
   }
   else
   {
-LABEL_34:
-    v41 = sub_1CE5430(Enumerator, System_IDisposable_TypeInfo, 0);
+LABEL_35:
+    v41 = sub_2237E2C(v43, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v41)(Enumerator, *(_QWORD *)(v41 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v41)(v43, *(_QWORD *)(v41 + 8));
   if ( (v37 | 2) == 2 )
     return *p_battleCamera;
   return v36;
@@ -1339,17 +1369,17 @@ void AndroidBackKeyManager__set_battleCamera(
         UnityEngine_Camera_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._battleCamera = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._battleCamera,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._battleCamera,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -1361,23 +1391,23 @@ void AndroidBackKeyManager__set_battleCamera(
 void AndroidBackKeyManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E797C6 & 1) == 0 )
+  if ( (byte_593A7EC & 1) == 0 )
   {
-    sub_1D0F0B4(&AndroidBackKeyManager___c_TypeInfo);
-    byte_4E797C6 = 1;
+    sub_21FFC50(&AndroidBackKeyManager___c_TypeInfo);
+    byte_593A7EC = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(AndroidBackKeyManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(AndroidBackKeyManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AndroidBackKeyManager___c_TypeInfo->static_fields->__9 = (struct AndroidBackKeyManager___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)AndroidBackKeyManager___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)AndroidBackKeyManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -1402,33 +1432,35 @@ void AndroidBackKeyManager___c___OpenQuitConfirmDialog_b__14_0(
   __int64 v4; // x20
   __int64 v5; // x0
   __int64 v6; // x1
+  const MethodInfo_476E8C0 *v7; // x0
   Il2CppObject *Instance; // x19
-  System_Action_o *v8; // x21
+  System_Action_o *v9; // x21
 
-  if ( (byte_4E797C7 & 1) == 0 )
+  if ( (byte_593A7ED & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_AndroidBackKeyManager___c__DisplayClass14_0__OpenQuitConfirmDialog_b__1__);
-    sub_1D0F0B4(&AndroidBackKeyManager___c__DisplayClass14_0_TypeInfo);
-    byte_4E797C7 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_AndroidBackKeyManager___c__DisplayClass14_0__OpenQuitConfirmDialog_b__1__);
+    sub_21FFC50(&AndroidBackKeyManager___c__DisplayClass14_0_TypeInfo);
+    byte_593A7ED = 1;
   }
-  v4 = sub_1D0F300(AndroidBackKeyManager___c__DisplayClass14_0_TypeInfo);
+  v4 = sub_21FFEBC(AndroidBackKeyManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
-    || (*(_BYTE *)(v4 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo),
+    || (v7 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
+        *(_BYTE *)(v4 + 16) = isDecide,
+        Instance = SingletonMonoBehaviour_object___get_Instance(v7),
+        v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
         System_Action___ctor(
-          v8,
+          v9,
           (Il2CppObject *)v4,
           Method_AndroidBackKeyManager___c__DisplayClass14_0__OpenQuitConfirmDialog_b__1__,
           0),
         !Instance) )
   {
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   }
-  CommonUI__CloseConfirmDialog_32087272((CommonUI_o *)Instance, v8, 0);
+  CommonUI__CloseConfirmDialog_37292452((CommonUI_o *)Instance, v9, 0);
 }
 
 
@@ -1447,14 +1479,14 @@ bool AndroidBackKeyManager___c__DisplayClass0_0___AddBackBtn_b__0(
 {
   UnityEngine_Object_o *obj; // x20
 
-  if ( (byte_4E797C8 & 1) == 0 )
+  if ( (byte_593A7EE & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E797C8 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7EE = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, a);
   return UnityEngine_Object__op_Equality((UnityEngine_Object_o *)a, obj, 0);
 }
 
@@ -1471,16 +1503,16 @@ void AndroidBackKeyManager___c__DisplayClass14_0___OpenQuitConfirmDialog_b__1(
         AndroidBackKeyManager___c__DisplayClass14_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E797C9 & 1) == 0 )
+  if ( (byte_593A7EF & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
-    byte_4E797C9 = 1;
+    sub_21FFC50(&UnityEngine_Application_TypeInfo);
+    byte_593A7EF = 1;
   }
   if ( this->fields.isDecide )
   {
-    if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-    UnityEngine_Application__Quit_73151244(0);
+    if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
+    UnityEngine_Application__Quit_82963804(0);
   }
 }
 
@@ -1497,7 +1529,7 @@ void AndroidBackKeyManager___c__DisplayClass26_0___ShowToast_b__0(
         AndroidBackKeyManager___c__DisplayClass26_0_o *this,
         const MethodInfo *method)
 {
-  long double inited; // q0
+  long double v2; // q0
   UnityEngine_AndroidJavaObject_o *beforeToast; // x20
   _QWORD *v5; // x21
   __int64 v6; // x8
@@ -1506,66 +1538,66 @@ void AndroidBackKeyManager___c__DisplayClass26_0___ShowToast_b__0(
   __int64 v9; // x1
   struct UnityEngine_AndroidJavaObject_o *v10; // x0
   struct AndroidBackKeyManager_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   UnityEngine_AndroidJavaClass_o *v18; // x20
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
   struct UnityEngine_AndroidJavaObject_o *context; // x22
   System_Object_array *v26; // x21
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
+  __int64 v27; // x1
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
   struct System_String_o *text; // x19
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
-  Il2CppObject *v40; // x19
-  Il2CppObject *v41; // x0
-  long double v42; // q0
-  _QWORD *v43; // x20
-  UnityEngine_AndroidJavaObject_o *v44; // x19
-  __int64 v45; // x8
-  __int64 v46; // x0
-  struct AndroidBackKeyManager_StaticFields *v47; // x0
-  int32_t v48; // w2
-  int32_t v49; // w3
-  System_String_o *v50; // x4
-  int32_t v51; // w5
-  int64_t v52; // x6
-  System_String_o *v53; // x7
-  __int64 v54; // x0
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  Il2CppObject *v41; // x19
+  Il2CppObject *v42; // x0
+  long double v43; // q0
+  _QWORD *v44; // x20
+  UnityEngine_AndroidJavaObject_o *v45; // x19
+  __int64 v46; // x8
+  __int64 v47; // x0
+  struct AndroidBackKeyManager_StaticFields *v48; // x0
+  System_String_o *v49; // x2
+  System_String_o *v50; // x3
+  int32_t v51; // w4
+  int32_t v52; // w5
+  bool v53; // w6
+  bool v54; // w7
+  __int64 v55; // x0
   int32_t Static_int; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4E797CA & 1) == 0 )
+  if ( (byte_593A7F0 & 1) == 0 )
   {
-    sub_1D0F0B4(&AndroidBackKeyManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____80366368);
-    sub_1D0F0B4(&Method_UnityEngine_AndroidJavaObject_GetStatic_int___);
-    sub_1D0F0B4(&Method_System_Array_Empty_object___);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_17993/*"cancel"*/);
-    sub_1D0F0B4(&StringLiteral_23945/*"show"*/);
-    sub_1D0F0B4(&StringLiteral_8358/*"LENGTH_SHORT"*/);
-    sub_1D0F0B4(&StringLiteral_17016/*"android.widget.Toast"*/);
-    sub_1D0F0B4(&StringLiteral_21834/*"makeText"*/);
-    byte_4E797CA = 1;
+    sub_21FFC50(&AndroidBackKeyManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
+    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_GetStatic_int___);
+    sub_21FFC50(&Method_System_Array_Empty_object___);
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&StringLiteral_18468/*"cancel"*/);
+    sub_21FFC50(&StringLiteral_24659/*"show"*/);
+    sub_21FFC50(&StringLiteral_8593/*"LENGTH_SHORT"*/);
+    sub_21FFC50(&StringLiteral_17444/*"android.widget.Toast"*/);
+    sub_21FFC50(&StringLiteral_22450/*"makeText"*/);
+    byte_593A7F0 = 1;
   }
   beforeToast = AndroidBackKeyManager_TypeInfo->static_fields->beforeToast;
   if ( beforeToast )
@@ -1574,113 +1606,113 @@ void AndroidBackKeyManager___c__DisplayClass26_0___ShowToast_b__0(
     v6 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v6 )
     {
-      sub_1CE5198(Method_System_Array_Empty_object___);
+      sub_2237B54(Method_System_Array_Empty_object___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
-    if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1CE513C(inited);
-    if ( !*(_DWORD *)(v7 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v7);
+    if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
+      v7 = sub_2237AF8(v2);
+    if ( !*(_DWORD *)(v7 + 228) )
+      *(__n128 *)&v2 = j_il2cpp_runtime_class_init_0(v7, method);
     v8 = *(_QWORD *)(v5[7] + 16LL);
-    if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1CE513C(inited);
+    if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
+      v8 = sub_2237AF8(v2);
     UnityEngine_AndroidJavaObject__Call(
       beforeToast,
-      (System_String_o *)StringLiteral_17993/*"cancel"*/,
+      (System_String_o *)StringLiteral_18468/*"cancel"*/,
       **(System_Object_array ***)(v8 + 184),
       0);
     v10 = AndroidBackKeyManager_TypeInfo->static_fields->beforeToast;
     if ( !v10 )
 LABEL_35:
-      sub_1D0F30C(v10, v9);
+      sub_21FFECC(v10, v9);
     UnityEngine_AndroidJavaObject__Dispose(v10, 0);
     static_fields = AndroidBackKeyManager_TypeInfo->static_fields;
     static_fields->beforeToast = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->beforeToast, 0, v12, v13, v14, v15, v16, v17);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->beforeToast, 0, v12, v13, v14, v15, v16, v17);
   }
-  v18 = (UnityEngine_AndroidJavaClass_o *)sub_1D0F300(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v18, (System_String_o *)StringLiteral_17016/*"android.widget.Toast"*/, 0);
-  v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_1D0F15C(object___TypeInfo, 3);
+  v18 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v18, (System_String_o *)StringLiteral_17444/*"android.widget.Toast"*/, 0);
+  v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_21FFD10(object___TypeInfo, 3);
   if ( !v10 )
     goto LABEL_35;
   context = this->fields.context;
   v26 = (System_Object_array *)v10;
   if ( context )
   {
-    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_1D0F1F0(this->fields.context, v10->klass->_1.element_class);
+    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_21FFDA4(this->fields.context, v10->klass->_1.element_class);
     if ( !v10 )
       goto LABEL_37;
   }
   if ( !LODWORD(v26->max_length) )
     goto LABEL_36;
   v26->m_Items[0] = (Il2CppObject *)context;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v26->m_Items, (int32_t)context, v19, v20, v21, v22, v23, v24);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v26->m_Items, (int32_t)context, v19, v20, v21, v22, v23, v24);
   text = this->fields.text;
   if ( text )
   {
-    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_1D0F1F0(text, v26->obj.klass->_1.element_class);
+    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_21FFDA4(text, v26->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_37;
   }
-  if ( LODWORD(v26->max_length) <= 1 )
+  if ( (v26->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_36;
   v26->m_Items[1] = (Il2CppObject *)text;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v26->m_Items[1], (int32_t)text, v27, v28, v29, v30, v31, v32);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->m_Items[1], (int32_t)text, v28, v29, v30, v31, v32, v33);
   if ( !v18 )
     goto LABEL_35;
   Static_int = UnityEngine_AndroidJavaObject__GetStatic_int_(
                  (UnityEngine_AndroidJavaObject_o *)v18,
-                 (System_String_o *)StringLiteral_8358/*"LENGTH_SHORT"*/,
-                 (const MethodInfo_3198D70 *)Method_UnityEngine_AndroidJavaObject_GetStatic_int___);
-  v10 = (struct UnityEngine_AndroidJavaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &Static_int);
-  v40 = (Il2CppObject *)v10;
+                 (System_String_o *)StringLiteral_8593/*"LENGTH_SHORT"*/,
+                 (const MethodInfo_36D7758 *)Method_UnityEngine_AndroidJavaObject_GetStatic_int___);
+  v10 = (struct UnityEngine_AndroidJavaObject_o *)j_il2cpp_value_box_0(qword_594C070, &Static_int);
+  v41 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_1D0F1F0(v10, v26->obj.klass->_1.element_class);
+    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_21FFDA4(v10, v26->obj.klass->_1.element_class);
     if ( !v10 )
     {
 LABEL_37:
-      v54 = sub_1D0F330(v10);
-      sub_1D0F1DC(v54, 0);
+      v55 = sub_21FFEF0(v10, v27);
+      sub_21FFD90(v55, 0);
     }
   }
   if ( LODWORD(v26->max_length) <= 2 )
 LABEL_36:
-    sub_1D0F314(v10);
-  v26->m_Items[2] = v40;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v26->m_Items[2], (int32_t)v40, v34, v35, v36, v37, v38, v39);
-  v41 = UnityEngine_AndroidJavaObject__CallStatic_object_(
+    sub_21FFED4(v10);
+  v26->m_Items[2] = v41;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->m_Items[2], (int32_t)v41, v35, v36, v37, v38, v39, v40);
+  v42 = UnityEngine_AndroidJavaObject__CallStatic_object_(
           (UnityEngine_AndroidJavaObject_o *)v18,
-          (System_String_o *)StringLiteral_21834/*"makeText"*/,
+          (System_String_o *)StringLiteral_22450/*"makeText"*/,
           v26,
-          (const MethodInfo_3197560 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____80366368);
-  v43 = Method_System_Array_Empty_object___;
-  v44 = (UnityEngine_AndroidJavaObject_o *)v41;
-  v45 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-  if ( !v45 )
+          (const MethodInfo_36D5FD0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
+  v44 = Method_System_Array_Empty_object___;
+  v45 = (UnityEngine_AndroidJavaObject_o *)v42;
+  v46 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
+  if ( !v46 )
   {
-    sub_1CE5198(Method_System_Array_Empty_object___);
-    v45 = v43[7];
+    sub_2237B54(Method_System_Array_Empty_object___);
+    v46 = v44[7];
   }
-  v46 = *(_QWORD *)(v45 + 16);
-  if ( (*(_BYTE *)(v46 + 309) & 1) == 0 )
-    v46 = sub_1CE513C(v42);
-  if ( !*(_DWORD *)(v46 + 224) )
-    v42 = j_il2cpp_runtime_class_init_0(v46);
-  v10 = *(struct UnityEngine_AndroidJavaObject_o **)(v43[7] + 16LL);
-  if ( (BYTE5(v10[9].fields.m_jobject) & 1) == 0 )
-    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_1CE513C(v42);
-  if ( !v44 )
+  v47 = *(_QWORD *)(v46 + 16);
+  if ( (*(_WORD *)(v47 + 309) & 1) == 0 )
+    v47 = sub_2237AF8(v43);
+  if ( !*(_DWORD *)(v47 + 228) )
+    *(__n128 *)&v43 = j_il2cpp_runtime_class_init_0(v47, v9);
+  v10 = *(struct UnityEngine_AndroidJavaObject_o **)(v44[7] + 16LL);
+  if ( (*(_WORD *)((_BYTE *)&v10[9].fields.m_jobject + 5) & 1) == 0 )
+    v10 = (struct UnityEngine_AndroidJavaObject_o *)sub_2237AF8(v43);
+  if ( !v45 )
     goto LABEL_35;
   UnityEngine_AndroidJavaObject__Call(
-    v44,
-    (System_String_o *)StringLiteral_23945/*"show"*/,
+    v45,
+    (System_String_o *)StringLiteral_24659/*"show"*/,
     (System_Object_array *)v10[5].fields.m_jclass->klass,
     0);
-  v47 = AndroidBackKeyManager_TypeInfo->static_fields;
-  v47->beforeToast = v44;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v47->beforeToast, (int32_t)v44, v48, v49, v50, v51, v52, v53);
+  v48 = AndroidBackKeyManager_TypeInfo->static_fields;
+  v48->beforeToast = v45;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v48->beforeToast, (int32_t)v45, v49, v50, v51, v52, v53, v54);
 }
 
 
@@ -1699,13 +1731,13 @@ bool AndroidBackKeyManager___c__DisplayClass2_0___RemoveBackBtn_b__0(
 {
   UnityEngine_Object_o *obj; // x20
 
-  if ( (byte_4E797CB & 1) == 0 )
+  if ( (byte_593A7F1 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E797CB = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A7F1 = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, a);
   return UnityEngine_Object__op_Equality((UnityEngine_Object_o *)a, obj, 0);
 }

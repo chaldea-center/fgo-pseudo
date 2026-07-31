@@ -1,26 +1,36 @@
 void BattleNpGaugeSystemComponent___ctor(BattleNpGaugeSystemComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_float__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_Collections_Generic_List_float__c *v3; // x0
+  System_Collections_Generic_List_float__o *v4; // x20
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7AD1B & 1) == 0 )
+  if ( (byte_593BD89 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_float___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_float__TypeInfo);
-    byte_4E7AD1B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_float___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_float__TypeInfo);
+    byte_593BD89 = 1;
   }
+  v3 = System_Collections_Generic_List_float__TypeInfo;
   this->fields.isPercent = 1;
-  v3 = (System_Collections_Generic_List_float__o *)sub_1D0F300(System_Collections_Generic_List_float__TypeInfo);
+  v4 = (System_Collections_Generic_List_float__o *)sub_21FFEBC(v3);
   System_Collections_Generic_List_float____ctor(
-    v3,
-    (const MethodInfo_39A8588 *)Method_System_Collections_Generic_List_float___ctor__);
-  this->fields.sliderDefaultValue = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sliderDefaultValue, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+    v4,
+    (const MethodInfo_447A128 *)Method_System_Collections_Generic_List_float___ctor__);
+  this->fields.sliderDefaultValue = v4;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.sliderDefaultValue,
+    (int32_t)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -32,7 +42,7 @@ void BattleNpGaugeSystemComponent__EndTweenFunc(
 {
   const MethodInfo *v3; // x3
 
-  BattleNpGaugeSystemComponent__updateNpGauge_48867116(this, targetParam, this->fields.maxparam, v3);
+  BattleNpGaugeSystemComponent__updateNpGauge_54458392(this, targetParam, this->fields.maxparam, v3);
 }
 
 
@@ -47,14 +57,14 @@ void BattleNpGaugeSystemComponent__InitSliderValue(BattleNpGaugeSystemComponent_
   UIProgressBar_o *v8; // x22
   float Item; // s0
   System_Collections_Generic_List_float__o *v10; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  __int64 v17; // x22
-  int max_length; // w9
+  bool v15; // w6
+  bool v16; // w7
+  unsigned int v17; // w23
+  unsigned int max_length; // w9
   System_Collections_Generic_List_float__o *v19; // x21
   float value; // s0
   struct System_Single_array *items; // x8
@@ -62,14 +72,14 @@ void BattleNpGaugeSystemComponent__InitSliderValue(BattleNpGaugeSystemComponent_
   __int64 size; // x10
 
   v2 = this;
-  if ( (byte_4E7AD17 & 1) == 0 )
+  if ( (byte_593BD85 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_float___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_float__get_Item__);
-    this = (BattleNpGaugeSystemComponent_o *)sub_1D0F0B4(&System_Collections_Generic_List_float__TypeInfo);
-    byte_4E7AD17 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_float__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_float___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_float__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_float__get_Item__);
+    this = (BattleNpGaugeSystemComponent_o *)sub_21FFC50(&System_Collections_Generic_List_float__TypeInfo);
+    byte_593BD85 = 1;
   }
   sliderlist = v2->fields.sliderlist;
   if ( sliderlist )
@@ -78,13 +88,13 @@ void BattleNpGaugeSystemComponent__InitSliderValue(BattleNpGaugeSystemComponent_
     sliderDefaultValue = v2->fields.sliderDefaultValue;
     if ( !sliderDefaultValue || !sliderDefaultValue->fields._size )
     {
-      v10 = (System_Collections_Generic_List_float__o *)sub_1D0F300(System_Collections_Generic_List_float__TypeInfo);
+      v10 = (System_Collections_Generic_List_float__o *)sub_21FFEBC(System_Collections_Generic_List_float__TypeInfo);
       System_Collections_Generic_List_float____ctor(
         v10,
-        (const MethodInfo_39A8588 *)Method_System_Collections_Generic_List_float___ctor__);
+        (const MethodInfo_447A128 *)Method_System_Collections_Generic_List_float___ctor__);
       v2->fields.sliderDefaultValue = v10;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&v2->fields.sliderDefaultValue,
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&v2->fields.sliderDefaultValue,
         (int32_t)v10,
         v11,
         v12,
@@ -95,16 +105,16 @@ void BattleNpGaugeSystemComponent__InitSliderValue(BattleNpGaugeSystemComponent_
       sliderlist = v2->fields.sliderlist;
       if ( !sliderlist )
 LABEL_25:
-        sub_1D0F30C(this, method);
+        sub_21FFECC(this, method);
       v17 = 0;
       while ( 1 )
       {
         max_length = sliderlist->max_length;
-        if ( (int)v17 >= max_length )
+        if ( (int)v17 >= (int)max_length )
           break;
-        if ( (unsigned int)v17 >= max_length )
+        if ( v17 >= max_length )
 LABEL_26:
-          sub_1D0F314(this);
+          sub_21FFED4(this);
         this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v17];
         if ( this )
         {
@@ -123,7 +133,7 @@ LABEL_26:
                 System_Collections_Generic_List_float___AddWithResize(
                   v19,
                   value,
-                  *(const MethodInfo_39A8DE4 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                  *(const MethodInfo_447A9BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
               }
               else
               {
@@ -155,7 +165,7 @@ LABEL_26:
         Item = System_Collections_Generic_List_float___get_Item(
                  (System_Collections_Generic_List_float__o *)this,
                  v6,
-                 (const MethodInfo_39A8AEC *)Method_System_Collections_Generic_List_float__get_Item__);
+                 (const MethodInfo_447A6C0 *)Method_System_Collections_Generic_List_float__get_Item__);
         if ( v8 )
         {
           UIProgressBar__set_value(v8, Item, 0);
@@ -176,315 +186,283 @@ void BattleNpGaugeSystemComponent__changeParam(
         int32_t param,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x19
-  UnityEngine_GameObject_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  System_Object_array *v15; // x20
-  __int64 v16; // x0
-  __int64 v17; // x1
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  Il2CppObject *v24; // x22
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  __int64 v31; // x1
-  int32_t v32; // w2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  int32_t v35; // w5
-  int64_t v36; // x6
-  System_String_o *v37; // x7
-  Il2CppObject *v38; // x22
-  int32_t v39; // w2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  int32_t v42; // w5
-  int64_t v43; // x6
-  System_String_o *v44; // x7
-  __int64 v45; // x1
-  int32_t v46; // w2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  int32_t v49; // w5
-  int64_t v50; // x6
-  System_String_o *v51; // x7
-  __int64 v52; // x1
-  int32_t v53; // w2
-  int32_t v54; // w3
-  System_String_o *v55; // x4
-  int32_t v56; // w5
-  int64_t v57; // x6
-  System_String_o *v58; // x7
-  __int64 v59; // x1
-  int32_t v60; // w2
-  int32_t v61; // w3
-  System_String_o *v62; // x4
-  int32_t v63; // w5
-  int64_t v64; // x6
-  System_String_o *v65; // x7
-  __int64 v66; // x1
-  int32_t v67; // w2
-  int32_t v68; // w3
-  System_String_o *v69; // x4
-  int32_t v70; // w5
-  int64_t v71; // x6
-  System_String_o *v72; // x7
-  __int64 v73; // x1
-  int32_t v74; // w2
-  int32_t v75; // w3
-  System_String_o *v76; // x4
-  int32_t v77; // w5
-  int64_t v78; // x6
-  System_String_o *v79; // x7
-  Il2CppObject *v80; // x21
-  int32_t v81; // w2
-  int32_t v82; // w3
-  System_String_o *v83; // x4
-  int32_t v84; // w5
-  int64_t v85; // x6
-  System_String_o *v86; // x7
-  __int64 v87; // x1
-  int32_t v88; // w2
-  int32_t v89; // w3
-  System_String_o *v90; // x4
-  int32_t v91; // w5
-  int64_t v92; // x6
-  System_String_o *v93; // x7
-  Il2CppObject *v94; // x21
-  System_Collections_Hashtable_o *v95; // x0
-  __int64 v96; // x0
-  int v97; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v98; // [xsp+Ch] [xbp-44h] BYREF
-  int32_t v99; // [xsp+18h] [xbp-38h] BYREF
+  UnityEngine_GameObject_o *v7; // x19
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  System_Object_array *v16; // x20
+  __int64 v17; // x0
+  __int64 v18; // x1
+  int32_t v19; // w1
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  Il2CppObject *v26; // x22
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  int32_t v33; // w1
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  Il2CppObject *v40; // x22
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  int32_t v47; // w1
+  System_String_o *v48; // x2
+  System_String_o *v49; // x3
+  int32_t v50; // w4
+  int32_t v51; // w5
+  bool v52; // w6
+  bool v53; // w7
+  int32_t v54; // w1
+  System_String_o *v55; // x2
+  System_String_o *v56; // x3
+  int32_t v57; // w4
+  int32_t v58; // w5
+  bool v59; // w6
+  bool v60; // w7
+  int32_t v61; // w1
+  System_String_o *v62; // x2
+  System_String_o *v63; // x3
+  int32_t v64; // w4
+  int32_t v65; // w5
+  bool v66; // w6
+  bool v67; // w7
+  int32_t v68; // w1
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  int32_t v75; // w1
+  System_String_o *v76; // x2
+  System_String_o *v77; // x3
+  int32_t v78; // w4
+  int32_t v79; // w5
+  bool v80; // w6
+  bool v81; // w7
+  Il2CppObject *v82; // x21
+  System_String_o *v83; // x2
+  System_String_o *v84; // x3
+  int32_t v85; // w4
+  int32_t v86; // w5
+  bool v87; // w6
+  bool v88; // w7
+  int32_t v89; // w1
+  System_String_o *v90; // x2
+  System_String_o *v91; // x3
+  int32_t v92; // w4
+  int32_t v93; // w5
+  bool v94; // w6
+  bool v95; // w7
+  Il2CppObject *v96; // x21
+  System_Collections_Hashtable_o *v97; // x0
+  __int64 v98; // x0
+  int v99; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v100; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v101; // [xsp+18h] [xbp-38h] BYREF
   int32_t prevparam; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E7AD19 & 1) == 0 )
+  if ( (byte_593BD87 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&float_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20056/*"from"*/);
-    sub_1D0F0B4(&StringLiteral_24569/*"time"*/);
-    sub_1D0F0B4(&StringLiteral_22869/*"oncompleteparams"*/);
-    sub_1D0F0B4(&StringLiteral_22876/*"onupdate"*/);
-    sub_1D0F0B4(&StringLiteral_24609/*"to"*/);
-    sub_1D0F0B4(&StringLiteral_24948/*"updateNpGauge"*/);
-    sub_1D0F0B4(&StringLiteral_22868/*"oncomplete"*/);
-    sub_1D0F0B4(&StringLiteral_6098/*"EndTweenFunc"*/);
-    sub_1D0F0B4(&iTween_TypeInfo);
-    byte_4E7AD19 = 1;
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&StringLiteral_20581/*"from"*/);
+    sub_21FFC50(&StringLiteral_25318/*"time"*/);
+    sub_21FFC50(&StringLiteral_23519/*"oncompleteparams"*/);
+    sub_21FFC50(&StringLiteral_23526/*"onupdate"*/);
+    sub_21FFC50(&StringLiteral_25358/*"to"*/);
+    sub_21FFC50(&StringLiteral_25737/*"updateNpGauge"*/);
+    sub_21FFC50(&StringLiteral_23518/*"oncomplete"*/);
+    sub_21FFC50(&StringLiteral_6280/*"EndTweenFunc"*/);
+    sub_21FFC50(&iTween_TypeInfo);
+    byte_593BD87 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !iTween_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_65310676(gameObject, 0);
-  v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v7 = sub_1D0F15C(object___TypeInfo, 12);
-  if ( !v7 )
-    sub_1D0F30C(0, v8);
-  v15 = (System_Object_array *)v7;
-  v16 = StringLiteral_20056/*"from"*/;
-  if ( StringLiteral_20056/*"from"*/ )
+  if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v5);
+  iTween__Stop_75189608(gameObject, 0);
+  v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v8 = sub_21FFD10(object___TypeInfo, 12);
+  if ( !v8 )
+    sub_21FFECC(0, v9);
+  v16 = (System_Object_array *)v8;
+  v17 = StringLiteral_20581/*"from"*/;
+  if ( StringLiteral_20581/*"from"*/ )
   {
-    v16 = sub_1D0F1F0(StringLiteral_20056/*"from"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v17 = StringLiteral_20056/*"from"*/;
+    v17 = sub_21FFDA4(StringLiteral_20581/*"from"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  else
-  {
-    v17 = 0;
-  }
-  if ( !LODWORD(v15->max_length) )
-    goto LABEL_59;
-  v15->m_Items[0] = (Il2CppObject *)v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v15->m_Items, v17, v9, v10, v11, v12, v13, v14);
+  if ( !LODWORD(v16->max_length) )
+    goto LABEL_43;
+  v19 = StringLiteral_20581/*"from"*/;
+  v16->m_Items[0] = (Il2CppObject *)StringLiteral_20581/*"from"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v16->m_Items, v19, v10, v11, v12, v13, v14, v15);
   prevparam = this->fields.prevparam;
-  v16 = j_il2cpp_value_box_0(int_TypeInfo, &prevparam);
-  v24 = (Il2CppObject *)v16;
-  if ( v16 )
+  v17 = j_il2cpp_value_box_0(qword_594C070, &prevparam);
+  v26 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v16 = sub_1D0F1F0(v16, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
+    v17 = sub_21FFDA4(v17, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 1 )
-    goto LABEL_59;
-  v15->m_Items[1] = v24;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[1], (int32_t)v24, v18, v19, v20, v21, v22, v23);
-  v16 = StringLiteral_24609/*"to"*/;
-  if ( StringLiteral_24609/*"to"*/ )
+  if ( (v16->max_length & 0xFFFFFFFE) == 0 )
+    goto LABEL_43;
+  v16->m_Items[1] = v26;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
+  v17 = StringLiteral_25358/*"to"*/;
+  if ( StringLiteral_25358/*"to"*/ )
   {
-    v16 = sub_1D0F1F0(StringLiteral_24609/*"to"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v31 = StringLiteral_24609/*"to"*/;
+    v17 = sub_21FFDA4(StringLiteral_25358/*"to"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  else
+  if ( LODWORD(v16->max_length) <= 2 )
+    goto LABEL_43;
+  v33 = StringLiteral_25358/*"to"*/;
+  v16->m_Items[2] = (Il2CppObject *)StringLiteral_25358/*"to"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[2], v33, v27, v28, v29, v30, v31, v32);
+  v101 = param;
+  v17 = j_il2cpp_value_box_0(qword_594C070, &v101);
+  v40 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v31 = 0;
+    v17 = sub_21FFDA4(v17, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 2 )
-    goto LABEL_59;
-  v15->m_Items[2] = (Il2CppObject *)v31;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[2], v31, v25, v26, v27, v28, v29, v30);
-  v99 = param;
-  v16 = j_il2cpp_value_box_0(int_TypeInfo, &v99);
-  v38 = (Il2CppObject *)v16;
-  if ( v16 )
+  if ( (v16->max_length & 0xFFFFFFFC) == 0 )
+    goto LABEL_43;
+  v16->m_Items[3] = v40;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[3], (int32_t)v40, v34, v35, v36, v37, v38, v39);
+  v17 = StringLiteral_23526/*"onupdate"*/;
+  if ( StringLiteral_23526/*"onupdate"*/ )
   {
-    v16 = sub_1D0F1F0(v16, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
+    v17 = sub_21FFDA4(StringLiteral_23526/*"onupdate"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 3 )
-    goto LABEL_59;
-  v15->m_Items[3] = v38;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[3], (int32_t)v38, v32, v33, v34, v35, v36, v37);
-  v16 = StringLiteral_22876/*"onupdate"*/;
-  if ( StringLiteral_22876/*"onupdate"*/ )
+  if ( LODWORD(v16->max_length) <= 4 )
+    goto LABEL_43;
+  v47 = StringLiteral_23526/*"onupdate"*/;
+  v16->m_Items[4] = (Il2CppObject *)StringLiteral_23526/*"onupdate"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[4], v47, v41, v42, v43, v44, v45, v46);
+  v17 = StringLiteral_25737/*"updateNpGauge"*/;
+  if ( StringLiteral_25737/*"updateNpGauge"*/ )
   {
-    v16 = sub_1D0F1F0(StringLiteral_22876/*"onupdate"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v45 = StringLiteral_22876/*"onupdate"*/;
+    v17 = sub_21FFDA4(StringLiteral_25737/*"updateNpGauge"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  else
+  if ( LODWORD(v16->max_length) <= 5 )
+    goto LABEL_43;
+  v54 = StringLiteral_25737/*"updateNpGauge"*/;
+  v16->m_Items[5] = (Il2CppObject *)StringLiteral_25737/*"updateNpGauge"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[5], v54, v48, v49, v50, v51, v52, v53);
+  v17 = StringLiteral_23518/*"oncomplete"*/;
+  if ( StringLiteral_23518/*"oncomplete"*/ )
   {
-    v45 = 0;
+    v17 = sub_21FFDA4(StringLiteral_23518/*"oncomplete"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 4 )
-    goto LABEL_59;
-  v15->m_Items[4] = (Il2CppObject *)v45;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[4], v45, v39, v40, v41, v42, v43, v44);
-  v16 = StringLiteral_24948/*"updateNpGauge"*/;
-  if ( StringLiteral_24948/*"updateNpGauge"*/ )
+  if ( LODWORD(v16->max_length) <= 6 )
+    goto LABEL_43;
+  v61 = StringLiteral_23518/*"oncomplete"*/;
+  v16->m_Items[6] = (Il2CppObject *)StringLiteral_23518/*"oncomplete"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[6], v61, v55, v56, v57, v58, v59, v60);
+  v17 = StringLiteral_6280/*"EndTweenFunc"*/;
+  if ( StringLiteral_6280/*"EndTweenFunc"*/ )
   {
-    v16 = sub_1D0F1F0(StringLiteral_24948/*"updateNpGauge"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v52 = StringLiteral_24948/*"updateNpGauge"*/;
+    v17 = sub_21FFDA4(StringLiteral_6280/*"EndTweenFunc"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  else
+  if ( (v16->max_length & 0xFFFFFFF8) == 0 )
+    goto LABEL_43;
+  v68 = StringLiteral_6280/*"EndTweenFunc"*/;
+  v16->m_Items[7] = (Il2CppObject *)StringLiteral_6280/*"EndTweenFunc"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[7], v68, v62, v63, v64, v65, v66, v67);
+  v17 = StringLiteral_23519/*"oncompleteparams"*/;
+  if ( StringLiteral_23519/*"oncompleteparams"*/ )
   {
-    v52 = 0;
+    v17 = sub_21FFDA4(StringLiteral_23519/*"oncompleteparams"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 5 )
-    goto LABEL_59;
-  v15->m_Items[5] = (Il2CppObject *)v52;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[5], v52, v46, v47, v48, v49, v50, v51);
-  v16 = StringLiteral_22868/*"oncomplete"*/;
-  if ( StringLiteral_22868/*"oncomplete"*/ )
+  if ( LODWORD(v16->max_length) <= 8 )
+    goto LABEL_43;
+  v75 = StringLiteral_23519/*"oncompleteparams"*/;
+  v16->m_Items[8] = (Il2CppObject *)StringLiteral_23519/*"oncompleteparams"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[8], v75, v69, v70, v71, v72, v73, v74);
+  v100 = param;
+  v17 = j_il2cpp_value_box_0(qword_594C070, &v100);
+  v82 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v16 = sub_1D0F1F0(StringLiteral_22868/*"oncomplete"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v59 = StringLiteral_22868/*"oncomplete"*/;
+    v17 = sub_21FFDA4(v17, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  else
+  if ( LODWORD(v16->max_length) <= 9 )
+    goto LABEL_43;
+  v16->m_Items[9] = v82;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[9], (int32_t)v82, v76, v77, v78, v79, v80, v81);
+  v17 = StringLiteral_25318/*"time"*/;
+  if ( StringLiteral_25318/*"time"*/ )
   {
-    v59 = 0;
+    v17 = sub_21FFDA4(StringLiteral_25318/*"time"*/, v16->obj.klass->_1.element_class);
+    if ( !v17 )
+      goto LABEL_44;
   }
-  if ( LODWORD(v15->max_length) <= 6 )
-    goto LABEL_59;
-  v15->m_Items[6] = (Il2CppObject *)v59;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[6], v59, v53, v54, v55, v56, v57, v58);
-  v16 = StringLiteral_6098/*"EndTweenFunc"*/;
-  if ( StringLiteral_6098/*"EndTweenFunc"*/ )
+  if ( LODWORD(v16->max_length) <= 0xA )
+    goto LABEL_43;
+  v89 = StringLiteral_25318/*"time"*/;
+  v16->m_Items[10] = (Il2CppObject *)StringLiteral_25318/*"time"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[10], v89, v83, v84, v85, v86, v87, v88);
+  v99 = 1050253722;
+  v17 = j_il2cpp_value_box_0(qword_594C0A0, &v99);
+  v96 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v16 = sub_1D0F1F0(StringLiteral_6098/*"EndTweenFunc"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v66 = StringLiteral_6098/*"EndTweenFunc"*/;
-  }
-  else
-  {
-    v66 = 0;
-  }
-  if ( LODWORD(v15->max_length) <= 7 )
-    goto LABEL_59;
-  v15->m_Items[7] = (Il2CppObject *)v66;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[7], v66, v60, v61, v62, v63, v64, v65);
-  v16 = StringLiteral_22869/*"oncompleteparams"*/;
-  if ( StringLiteral_22869/*"oncompleteparams"*/ )
-  {
-    v16 = sub_1D0F1F0(StringLiteral_22869/*"oncompleteparams"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v73 = StringLiteral_22869/*"oncompleteparams"*/;
-  }
-  else
-  {
-    v73 = 0;
-  }
-  if ( LODWORD(v15->max_length) <= 8 )
-    goto LABEL_59;
-  v15->m_Items[8] = (Il2CppObject *)v73;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[8], v73, v67, v68, v69, v70, v71, v72);
-  v98 = param;
-  v16 = j_il2cpp_value_box_0(int_TypeInfo, &v98);
-  v80 = (Il2CppObject *)v16;
-  if ( v16 )
-  {
-    v16 = sub_1D0F1F0(v16, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-  }
-  if ( LODWORD(v15->max_length) <= 9 )
-    goto LABEL_59;
-  v15->m_Items[9] = v80;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[9], (int32_t)v80, v74, v75, v76, v77, v78, v79);
-  v16 = StringLiteral_24569/*"time"*/;
-  if ( StringLiteral_24569/*"time"*/ )
-  {
-    v16 = sub_1D0F1F0(StringLiteral_24569/*"time"*/, v15->obj.klass->_1.element_class);
-    if ( !v16 )
-      goto LABEL_60;
-    v87 = StringLiteral_24569/*"time"*/;
-  }
-  else
-  {
-    v87 = 0;
-  }
-  if ( LODWORD(v15->max_length) <= 0xA )
-    goto LABEL_59;
-  v15->m_Items[10] = (Il2CppObject *)v87;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[10], v87, v81, v82, v83, v84, v85, v86);
-  v97 = 1050253722;
-  v16 = j_il2cpp_value_box_0(float_TypeInfo, &v97);
-  v94 = (Il2CppObject *)v16;
-  if ( v16 )
-  {
-    v16 = sub_1D0F1F0(v16, v15->obj.klass->_1.element_class);
-    if ( !v16 )
+    v17 = sub_21FFDA4(v17, v16->obj.klass->_1.element_class);
+    if ( !v17 )
     {
-LABEL_60:
-      v96 = sub_1D0F330(v16);
-      sub_1D0F1DC(v96, 0);
+LABEL_44:
+      v98 = sub_21FFEF0(v17, v18);
+      sub_21FFD90(v98, 0);
     }
   }
-  if ( LODWORD(v15->max_length) <= 0xB )
-LABEL_59:
-    sub_1D0F314(v16);
-  v15->m_Items[11] = v94;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->m_Items[11], (int32_t)v94, v88, v89, v90, v91, v92, v93);
-  v95 = iTween__Hash(v15, 0);
-  iTween__ValueTo(v6, v95, 0);
+  if ( LODWORD(v16->max_length) <= 0xB )
+LABEL_43:
+    sub_21FFED4(v17);
+  v16->m_Items[11] = v96;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->m_Items[11], (int32_t)v96, v90, v91, v92, v93, v94, v95);
+  v97 = iTween__Hash(v16, 0);
+  iTween__ValueTo(v7, v97, 0);
 }
 
 
@@ -494,16 +472,18 @@ void BattleNpGaugeSystemComponent__resetSlider(BattleNpGaugeSystemComponent_o *t
   struct UIProgressBar_array *sliderlist; // x8
   __int64 v4; // x20
   int max_length; // w9
+  __int64 v6; // x1
   UnityEngine_GameObject_o *gameObject; // x20
+  __int64 v8; // x1
   UnityEngine_Object_o *fullGauge; // x20
   UnityEngine_Object_o *overGauge; // x20
 
   v2 = this;
-  if ( (byte_4E7AD18 & 1) == 0 )
+  if ( (byte_593BD86 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    this = (BattleNpGaugeSystemComponent_o *)sub_1D0F0B4(&iTween_TypeInfo);
-    byte_4E7AD18 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    this = (BattleNpGaugeSystemComponent_o *)sub_21FFC50(&iTween_TypeInfo);
+    byte_593BD86 = 1;
   }
   sliderlist = v2->fields.sliderlist;
   if ( sliderlist )
@@ -515,7 +495,7 @@ void BattleNpGaugeSystemComponent__resetSlider(BattleNpGaugeSystemComponent_o *t
       if ( (int)v4 >= max_length )
         break;
       if ( (unsigned int)v4 >= max_length )
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v4];
       if ( this )
       {
@@ -529,12 +509,12 @@ void BattleNpGaugeSystemComponent__resetSlider(BattleNpGaugeSystemComponent_o *t
     }
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0);
-  if ( !iTween_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_65310676(gameObject, 0);
+  if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v6);
+  iTween__Stop_75189608(gameObject, 0);
   fullGauge = (UnityEngine_Object_o *)v2->fields.fullGauge;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   if ( UnityEngine_Object__op_Inequality(fullGauge, 0, 0) )
   {
     this = (BattleNpGaugeSystemComponent_o *)v2->fields.fullGauge;
@@ -546,8 +526,8 @@ void BattleNpGaugeSystemComponent__resetSlider(BattleNpGaugeSystemComponent_o *t
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   }
   overGauge = (UnityEngine_Object_o *)v2->fields.overGauge;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(overGauge, 0, 0) )
   {
     this = (BattleNpGaugeSystemComponent_o *)v2->fields.overGauge;
@@ -561,7 +541,7 @@ void BattleNpGaugeSystemComponent__resetSlider(BattleNpGaugeSystemComponent_o *t
       }
     }
 LABEL_9:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
 }
 
@@ -595,7 +575,7 @@ void BattleNpGaugeSystemComponent__setNowParam(
   maxparam = this->fields.maxparam;
   this->fields.nowparam = nowparam;
   if ( maxparam )
-    BattleNpGaugeSystemComponent__updateNpGauge_48867116(this, nowparam, maxparam, v3);
+    BattleNpGaugeSystemComponent__updateNpGauge_54458392(this, nowparam, maxparam, v3);
 }
 
 
@@ -603,51 +583,51 @@ void BattleNpGaugeSystemComponent__setNowParam(
 void BattleNpGaugeSystemComponent__setUseNp(BattleNpGaugeSystemComponent_o *this, bool flg, const MethodInfo *method)
 {
   UIWidget_o *frameSprite; // x0
-  float v5; // s8
-  float v6; // s9
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
   UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   frameSprite = (UIWidget_o *)this->fields.frameSprite;
-  if ( flg )
+  if ( !flg )
   {
     if ( frameSprite )
     {
-      v7.fields.r = 1.0;
-      v7.fields.g = 1.0;
-      v7.fields.b = 1.0;
-      v7.fields.a = 1.0;
-      v5 = 1.0;
-      UIWidget__set_color(frameSprite, v7, 0);
+      v10.fields.r = 0.5;
+      v10.fields.g = 0.5;
+      v10.fields.b = 0.5;
+      v10.fields.a = 1.0;
+      UIWidget__set_color(frameSprite, v10, 0);
       frameSprite = (UIWidget_o *)this->fields.label;
       if ( frameSprite )
       {
-        v6 = 1.0;
-        goto LABEL_7;
+        v5 = 0.5;
+        v6 = 0.5;
+        v7 = 0.5;
+        goto LABEL_8;
       }
     }
-LABEL_8:
-    sub_1D0F30C(frameSprite, flg);
+LABEL_9:
+    sub_21FFECC(frameSprite, flg);
   }
   if ( !frameSprite )
-    goto LABEL_8;
-  v8.fields.r = 0.5;
-  v8.fields.g = 0.5;
-  v8.fields.b = 0.5;
-  v8.fields.a = 1.0;
-  v5 = 0.5;
-  v6 = 1.0;
-  UIWidget__set_color(frameSprite, v8, 0);
+    goto LABEL_9;
+  v9.fields.r = 1.0;
+  v9.fields.g = 1.0;
+  v9.fields.b = 1.0;
+  v9.fields.a = 1.0;
+  UIWidget__set_color(frameSprite, v9, 0);
   frameSprite = (UIWidget_o *)this->fields.label;
   if ( !frameSprite )
-    goto LABEL_8;
-LABEL_7:
-  v9.fields.r = v5;
-  v9.fields.g = v5;
-  v9.fields.b = v5;
-  v9.fields.a = v6;
-  UIWidget__set_color(frameSprite, v9, 0);
+    goto LABEL_9;
+  v5 = 1.0;
+  v6 = 1.0;
+  v7 = 1.0;
+LABEL_8:
+  v8 = 1.0;
+  UIWidget__set_color(frameSprite, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 
@@ -658,12 +638,12 @@ void BattleNpGaugeSystemComponent__updateNpGauge(
 {
   const MethodInfo *v3; // x3
 
-  BattleNpGaugeSystemComponent__updateNpGauge_48867116(this, now, this->fields.maxparam, v3);
+  BattleNpGaugeSystemComponent__updateNpGauge_54458392(this, now, this->fields.maxparam, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void BattleNpGaugeSystemComponent__updateNpGauge_48867116(
+void BattleNpGaugeSystemComponent__updateNpGauge_54458392(
         BattleNpGaugeSystemComponent_o *this,
         int32_t now,
         int32_t max,
@@ -671,14 +651,14 @@ void BattleNpGaugeSystemComponent__updateNpGauge_48867116(
 {
   BattleNpGaugeSystemComponent_o *v6; // x19
   struct UIProgressBar_array *sliderlist; // x8
-  __int64 v8; // x27
+  int v8; // w26
   int max_length; // w9
-  unsigned int v10; // w22
-  float v11; // s8
+  float v10; // s8
   float value; // s0
-  struct UIProgressBar_array *v13; // x8
-  float v14; // s0
-  struct UIProgressBar_array *v15; // x8
+  struct UIProgressBar_array *v12; // x8
+  float v13; // s0
+  struct UIProgressBar_array *v14; // x8
+  __int64 v15; // x1
   UnityEngine_Object_o *fullGauge; // x22
   float v17; // s9
   _QWORD *v18; // x0
@@ -692,98 +672,103 @@ void BattleNpGaugeSystemComponent__updateNpGauge_48867116(
   UILabel_o *label; // x19
   Il2CppObject *v27; // x0
   BattleNpGaugeSystemComponent_o *v28; // x1
-  int32_t v29; // [xsp+8h] [xbp-78h] BYREF
-  int32_t v30; // [xsp+Ch] [xbp-74h] BYREF
+  int32_t v29; // [xsp+28h] [xbp-48h] BYREF
+  int32_t v30; // [xsp+2Ch] [xbp-44h] BYREF
 
   v6 = this;
   v30 = now;
-  if ( (byte_4E7AD1A & 1) == 0 )
+  if ( (byte_593BD88 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BattleNpGaugeSystemComponent_updateNpGauge__);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25569/*"{0,3}%"*/);
-    this = (BattleNpGaugeSystemComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7AD1A = 1;
+    sub_21FFC50(&Method_BattleNpGaugeSystemComponent_updateNpGauge__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_26376/*"{0,3}%"*/);
+    this = (BattleNpGaugeSystemComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593BD88 = 1;
   }
   sliderlist = v6->fields.sliderlist;
   if ( !sliderlist )
-    goto LABEL_48;
-  v8 = 4;
+    goto LABEL_51;
+  v8 = 0;
   while ( 1 )
   {
     max_length = sliderlist->max_length;
-    v10 = v8 - 4;
-    if ( (int)v8 - 4 >= max_length )
+    if ( v8 >= max_length )
       break;
-    if ( v10 >= max_length )
-      goto LABEL_49;
-    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&sliderlist->obj.klass + v8);
+    if ( v8 >= (unsigned int)max_length )
+      goto LABEL_52;
+    this = (BattleNpGaugeSystemComponent_o *)sliderlist->m_Items[v8];
     if ( !this )
-      goto LABEL_48;
-    v11 = (float)((float)now / (float)(max / v6->fields.lineCount)) - (float)(int)v10;
+      goto LABEL_51;
+    v10 = (float)((float)now / (float)(max / v6->fields.lineCount)) - (float)v8;
     value = UIProgressBar__get_value((UIProgressBar_o *)this, 0);
-    if ( v11 <= 0.0 )
+    if ( v10 <= 0.0 )
     {
-      v15 = v6->fields.sliderlist;
-      if ( !v15 )
-        goto LABEL_48;
-      if ( v10 >= LODWORD(v15->max_length) )
-        goto LABEL_49;
-      this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v15->obj.klass + v8);
+      v14 = v6->fields.sliderlist;
+      if ( !v14 )
+        goto LABEL_51;
+      if ( (unsigned int)v8 >= LODWORD(v14->max_length) )
+        goto LABEL_52;
+      this = (BattleNpGaugeSystemComponent_o *)v14->m_Items[v8];
       if ( !this )
-        goto LABEL_48;
-      v14 = 0.0;
+        goto LABEL_51;
+      v13 = 0.0;
       goto LABEL_18;
     }
-    v13 = v6->fields.sliderlist;
-    if ( !v13 )
-      goto LABEL_48;
-    if ( v10 >= LODWORD(v13->max_length) )
-      goto LABEL_49;
-    this = (BattleNpGaugeSystemComponent_o *)*((_QWORD *)&v13->obj.klass + v8);
-    if ( !this )
-      goto LABEL_48;
-    if ( v11 < 1.0 )
+    v12 = v6->fields.sliderlist;
+    if ( v10 < 1.0 )
     {
-      v14 = v11;
+      if ( !v12 )
+        goto LABEL_51;
+      if ( (unsigned int)v8 >= LODWORD(v12->max_length) )
+        goto LABEL_52;
+      this = (BattleNpGaugeSystemComponent_o *)v12->m_Items[v8];
+      if ( !this )
+        goto LABEL_51;
+      v13 = v10;
 LABEL_18:
-      UIProgressBar__set_value((UIProgressBar_o *)this, v14, 0);
+      UIProgressBar__set_value((UIProgressBar_o *)this, v13, 0);
       goto LABEL_19;
     }
+    if ( !v12 )
+      goto LABEL_51;
+    if ( (unsigned int)v8 >= LODWORD(v12->max_length) )
+      goto LABEL_52;
+    this = (BattleNpGaugeSystemComponent_o *)v12->m_Items[v8];
+    if ( !this )
+      goto LABEL_51;
     v17 = value;
     UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0);
     if ( v17 < 1.0 )
     {
       v18 = Method_BattleNpGaugeSystemComponent_updateNpGauge__;
       if ( (*((_BYTE *)Method_BattleNpGaugeSystemComponent_updateNpGauge__ + 83) & 2) != 0 )
-        v18 = (_QWORD *)sub_1D0F0CC(Method_BattleNpGaugeSystemComponent_updateNpGauge__);
-      v19 = (System_Reflection_MethodBase_o *)sub_1D0F098(v18, v18[4]);
+        v18 = (_QWORD *)sub_21FFC68(Method_BattleNpGaugeSystemComponent_updateNpGauge__);
+      v19 = (System_Reflection_MethodBase_o *)sub_21FFC34(v18, v18[4]);
       OverwriteAssetSoundName__PlayCommonSe(v19, 8, 0, 0);
     }
 LABEL_19:
     fullGauge = (UnityEngine_Object_o *)v6->fields.fullGauge;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
     this = (BattleNpGaugeSystemComponent_o *)UnityEngine_Object__op_Inequality(fullGauge, 0, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       this = (BattleNpGaugeSystemComponent_o *)v6->fields.fullGauge;
       if ( !this )
-        goto LABEL_48;
+        goto LABEL_51;
       this = (BattleNpGaugeSystemComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !this )
-        goto LABEL_48;
+        goto LABEL_51;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, now >= max, 0);
     }
     sliderlist = v6->fields.sliderlist;
     ++v8;
     if ( !sliderlist )
-      goto LABEL_48;
+      goto LABEL_51;
   }
   overGauge = (UnityEngine_Object_o *)v6->fields.overGauge;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&now);
   if ( UnityEngine_Object__op_Inequality(overGauge, 0, 0) )
   {
     this = (BattleNpGaugeSystemComponent_o *)v6->fields.overGauge;
@@ -794,8 +779,8 @@ LABEL_19:
       if ( v21 )
       {
         if ( !LODWORD(v21->max_length) )
-LABEL_49:
-          sub_1D0F314(this);
+LABEL_52:
+          sub_21FFED4(this);
         v22 = this;
         this = (BattleNpGaugeSystemComponent_o *)v21->m_Items[0];
         if ( this )
@@ -804,26 +789,26 @@ LABEL_49:
           if ( v22 )
           {
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v22, v23 >= 1.0, 0);
-            goto LABEL_40;
+            goto LABEL_43;
           }
         }
       }
     }
-LABEL_48:
-    sub_1D0F30C(this, *(_QWORD *)&now);
+LABEL_51:
+    sub_21FFECC(this, *(_QWORD *)&now);
   }
-LABEL_40:
+LABEL_43:
   isPercent = v6->fields.isPercent;
   v6->fields.prevparam = now;
   if ( isPercent )
   {
-    v25 = BattleUtility__FloorToInt_47881516((double)v6->fields.lineCount * 100.0 * (double)now / (double)max, 0);
+    v25 = BattleUtility__FloorToInt_53467356((double)v6->fields.lineCount * 100.0 * (double)now / (double)max, 0);
     label = v6->fields.label;
     v29 = v25;
-    v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
-    this = (BattleNpGaugeSystemComponent_o *)System_String__Format((System_String_o *)StringLiteral_25569/*"{0,3}%"*/, v27, 0);
+    v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v29);
+    this = (BattleNpGaugeSystemComponent_o *)System_String__Format((System_String_o *)StringLiteral_26376/*"{0,3}%"*/, v27, 0);
     if ( !label )
-      goto LABEL_48;
+      goto LABEL_51;
     v28 = this;
   }
   else
@@ -831,7 +816,7 @@ LABEL_40:
     label = v6->fields.label;
     this = (BattleNpGaugeSystemComponent_o *)System_Int32__ToString((int32_t)&v30, 0);
     if ( !label )
-      goto LABEL_48;
+      goto LABEL_51;
     if ( this )
       v28 = this;
     else

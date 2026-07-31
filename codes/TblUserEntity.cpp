@@ -1,13 +1,13 @@
 void TblUserEntity___ctor(TblUserEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78382 & 1) == 0 )
+  if ( (byte_59393AF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E78382 = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_59393AF = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 

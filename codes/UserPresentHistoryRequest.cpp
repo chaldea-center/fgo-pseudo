@@ -2,14 +2,14 @@ System_String_o *UserPresentHistoryRequest__getURL(UserPresentHistoryRequest_o *
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E792F8 & 1) == 0 )
+  if ( (byte_593A34C & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23222/*"present/history"*/);
-    byte_4E792F8 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_23894/*"present/history"*/);
+    byte_593A34C = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_23222/*"present/history"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_23894/*"present/history"*/, 0);
 }

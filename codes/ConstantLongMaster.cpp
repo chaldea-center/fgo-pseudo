@@ -1,14 +1,14 @@
 void ConstantLongMaster___ctor(ConstantLongMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E774D0 & 1) == 0 )
+  if ( (byte_593849E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
-    byte_4E774D0 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
+    byte_593849E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    106,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
+    107,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
 }
 
 
@@ -22,22 +22,22 @@ int64_t ConstantLongMaster__GetValue(
   __int64 v8; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E774D1 & 1) == 0 )
+  if ( (byte_593849F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
-    byte_4E774D1 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
+    byte_593849F = 1;
   }
   result = 0;
   EntityFromId = DataMasterBase_object__object__object___TryGetEntityFromId(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                    &result,
                    name,
-                   (const MethodInfo_353A18C *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
+                   (const MethodInfo_3EE17F4 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
   if ( EntityFromId )
   {
     if ( !result )
-      sub_1D0F30C(EntityFromId, v8);
-    return *(int64_t *)((char *)&off_18 + (_QWORD)result);
+      sub_21FFECC(EntityFromId, v8);
+    return *(int64_t *)((char *)off_18 + (_QWORD)result);
   }
   return def;
 }

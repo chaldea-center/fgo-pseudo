@@ -11,7 +11,7 @@ void WarBoardCost___ctor(WarBoardCost_o *this, const MethodInfo *method)
 }
 
 
-void WarBoardCost___ctor_39166488(
+void WarBoardCost___ctor_44799448(
         WarBoardCost_o *this,
         int32_t classId,
         int32_t baseActionPoint,
@@ -72,33 +72,35 @@ bool WarBoardCost__CanAction(
         const MethodInfo *method)
 {
   __int64 v4; // x8
-  int v5; // w9
-  __int64 v6; // x8
-  int v7; // w8
-  bool v8; // cc
-  bool v9; // w8
-  __int64 v10; // x8
+  int32_t CurrentActionPoint_k__BackingField; // w10
+  int v6; // w9
+  __int64 v7; // x8
+  int v8; // w8
+  bool v9; // cc
+  bool v10; // w8
+  __int64 v11; // x8
 
   v4 = 44;
+  CurrentActionPoint_k__BackingField = this->fields._CurrentActionPoint_k__BackingField;
   if ( this->fields.overwirteMove < 0 )
     v4 = 28;
-  v5 = this->fields._CurrentActionPoint_k__BackingField - substructPoint;
-  if ( v5 >= *(_DWORD *)((char *)&this->klass + v4) )
+  v6 = CurrentActionPoint_k__BackingField - substructPoint;
+  if ( CurrentActionPoint_k__BackingField - substructPoint >= *(_DWORD *)((char *)&this->klass + v4) )
     return 1;
-  v6 = 48;
+  v7 = 48;
   if ( this->fields.overwirteAttack < 0 )
-    v6 = 32;
-  v7 = *(_DWORD *)((char *)&this->klass + v6);
-  v8 = v5 < v7;
-  v9 = v5 >= v7;
-  if ( v8 && isIncludeWallAttack )
+    v7 = 32;
+  v8 = *(_DWORD *)((char *)&this->klass + v7);
+  v9 = v6 < v8;
+  v10 = v6 >= v8;
+  if ( v9 && isIncludeWallAttack )
   {
-    v10 = 52;
+    v11 = 52;
     if ( this->fields.overwirteWallAttack < 0 )
-      v10 = 36;
-    return v5 >= *(_DWORD *)((char *)&this->klass + v10);
+      v11 = 36;
+    return v6 >= *(_DWORD *)((char *)&this->klass + v11);
   }
-  return v9;
+  return v10;
 }
 
 
@@ -108,50 +110,51 @@ WarBoardCost_o *WarBoardCost__Create(
         WarBoardReinforcementsEntity_o *reinforcementsEntity,
         const MethodInfo *method)
 {
-  int32_t wallAttackCost; // w22
-  unsigned __int64 v8; // d8
-  unsigned __int64 v9; // d9
-  __int64 v10; // x20
-  const MethodInfo *v11; // x2
-  int v13; // [xsp+4h] [xbp-4Ch]
+  int32_t classId; // w22
+  int32_t baseActionPoint; // w23
+  int32_t wallAttackCost; // w24
+  int32x2_t v10; // d8
+  __int64 v11; // x20
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4E74FCD & 1) == 0 )
+  if ( (byte_5935FD2 & 1) == 0 )
   {
-    sub_1D0F0B4(&WarBoardCost_TypeInfo);
-    byte_4E74FCD = 1;
+    sub_21FFC50(&WarBoardCost_TypeInfo);
+    byte_5935FD2 = 1;
   }
   if ( entity )
   {
+    classId = entity->fields.classId;
+    baseActionPoint = entity->fields.baseActionPoint;
     wallAttackCost = entity->fields.wallAttackCost;
-    v13 = HIDWORD(*(_QWORD *)&entity->fields.classId);
-    v8 = vrev64_s32(*(int32x2_t *)&entity->fields.classId).n64_u64[0];
-    v9 = vrev64_s32(*(int32x2_t *)&entity->fields.attackCost).n64_u64[0];
-    v10 = sub_1D0F300(WarBoardCost_TypeInfo);
-    *(_QWORD *)(v10 + 40) = -1;
-    *(_QWORD *)(v10 + 48) = -1;
-    System_Object___ctor((Il2CppObject *)v10, 0);
-    *(_QWORD *)(v10 + 16) = v8;
-    *(_DWORD *)(v10 + 24) = v13;
-    *(_QWORD *)(v10 + 28) = v9;
-    *(_DWORD *)(v10 + 36) = wallAttackCost;
+    v10.n64_u64[0] = *(unsigned __int64 *)&entity->fields.attackCost;
+    v11 = sub_21FFEBC(WarBoardCost_TypeInfo);
+    *(_QWORD *)(v11 + 40) = -1;
+    *(_QWORD *)(v11 + 48) = -1;
+    System_Object___ctor((Il2CppObject *)v11, 0);
+    *(_DWORD *)(v11 + 16) = baseActionPoint;
+    *(_DWORD *)(v11 + 20) = classId;
+    *(_DWORD *)(v11 + 24) = baseActionPoint;
+    *(_DWORD *)(v11 + 36) = wallAttackCost;
+    *(int32x2_t *)(v11 + 28) = vrev64_s32(v10);
     if ( stagePieceDetailEntity )
-      WarBoardCost__SetOverwriteCost((WarBoardCost_o *)v10, stagePieceDetailEntity, v11);
+      WarBoardCost__SetOverwriteCost((WarBoardCost_o *)v11, stagePieceDetailEntity, v12);
     if ( reinforcementsEntity )
-      WarBoardCost__SetOverwriteCost_39166704((WarBoardCost_o *)v10, reinforcementsEntity, v11);
+      WarBoardCost__SetOverwriteCost_44799664((WarBoardCost_o *)v11, reinforcementsEntity, v12);
   }
   else
   {
-    v10 = sub_1D0F300(WarBoardCost_TypeInfo);
-    *(_QWORD *)(v10 + 40) = -1;
-    *(_QWORD *)(v10 + 48) = -1;
-    System_Object___ctor((Il2CppObject *)v10, 0);
-    *(_DWORD *)(v10 + 16) = 0;
-    *(_QWORD *)(v10 + 24) = 0;
-    *(_QWORD *)(v10 + 32) = 0;
-    *(_QWORD *)(v10 + 40) = -1;
-    *(_QWORD *)(v10 + 48) = -1;
+    v11 = sub_21FFEBC(WarBoardCost_TypeInfo);
+    *(_QWORD *)(v11 + 40) = -1;
+    *(_QWORD *)(v11 + 48) = -1;
+    System_Object___ctor((Il2CppObject *)v11, 0);
+    *(_DWORD *)(v11 + 16) = 0;
+    *(_QWORD *)(v11 + 24) = 0;
+    *(_QWORD *)(v11 + 32) = 0;
+    *(_QWORD *)(v11 + 40) = -1;
+    *(_QWORD *)(v11 + 48) = -1;
   }
-  return (WarBoardCost_o *)v10;
+  return (WarBoardCost_o *)v11;
 }
 
 
@@ -163,20 +166,19 @@ System_String_o *WarBoardCost__CurrentAndMaxPointToString(WarBoardCost_o *this, 
   int v7; // [xsp+8h] [xbp-28h] BYREF
   int32_t CurrentActionPoint_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E74FCC & 1) == 0 )
+  if ( (byte_5935FD1 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25679/*"{0}/{1}"*/);
-    byte_4E74FCC = 1;
+    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
+    byte_5935FD1 = 1;
   }
   CurrentActionPoint_k__BackingField = this->fields._CurrentActionPoint_k__BackingField;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &CurrentActionPoint_k__BackingField);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &CurrentActionPoint_k__BackingField);
   v4 = 40;
   if ( this->fields.overwirteBaseActionPoint < 0 )
     v4 = 24;
   v7 = *(_DWORD *)((char *)&this->klass + v4);
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v7);
-  return System_String__Format_65604080((System_String_o *)StringLiteral_25679/*"{0}/{1}"*/, v3, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v7);
+  return System_String__Format_75484576((System_String_o *)StringLiteral_26497/*"{0}/{1}"*/, v3, v5, 0);
 }
 
 
@@ -241,7 +243,7 @@ void WarBoardCost__SetOverwriteCost(
   __int64 v8; // x8
 
   if ( !stagePieceDetailEntity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   this->fields.overwirteBaseActionPoint = WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
                                             stagePieceDetailEntity,
                                             0);
@@ -258,7 +260,7 @@ void WarBoardCost__SetOverwriteCost(
 }
 
 
-void WarBoardCost__SetOverwriteCost_39166704(
+void WarBoardCost__SetOverwriteCost_44799664(
         WarBoardCost_o *this,
         WarBoardReinforcementsEntity_o *reinforcementsEntity,
         const MethodInfo *method)
@@ -271,7 +273,7 @@ void WarBoardCost__SetOverwriteCost_39166704(
   *(_QWORD *)v7 = 0;
   *(_QWORD *)value = 0;
   if ( !reinforcementsEntity )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   OverwriteBaseActionPoint = WarBoardReinforcementsEntity__TryGetOverwriteBaseActionPoint(
                                reinforcementsEntity,
                                &value[1],
@@ -287,16 +289,16 @@ void WarBoardCost__SetOverwriteCost_39166704(
   {
     this->fields.overwirteMove = v7[1];
     if ( !WarBoardReinforcementsEntity__TryGetOverwriteWallAttackCost(reinforcementsEntity, v7, 0) )
-      goto LABEL_12;
+      goto LABEL_11;
   }
   else if ( !WarBoardReinforcementsEntity__TryGetOverwriteWallAttackCost(reinforcementsEntity, v7, 0) )
   {
     if ( !OverwriteBaseActionPoint )
       return;
-    goto LABEL_12;
+    goto LABEL_11;
   }
   this->fields.overwirteWallAttack = v7[0];
-LABEL_12:
+LABEL_11:
   v6 = 40;
   if ( this->fields.overwirteBaseActionPoint < 0 )
     v6 = 24;
@@ -306,30 +308,43 @@ LABEL_12:
 
 void WarBoardCost__UpdateClassCost(WarBoardCost_o *this, WarBoardCost_o *changeClassCost, const MethodInfo *method)
 {
-  __int64 v3; // x8
+  int32_t overwirteBaseActionPoint; // w11
   __int64 v4; // x8
-  __int64 v5; // x8
-  __int64 v6; // x8
+  int32_t overwirteWallAttack; // w12
+  bool v6; // nf
+  __int64 v7; // x9
+  int32_t v8; // w8
+  __int64 v9; // x9
+  int32_t v10; // w8
+  __int64 v11; // x9
+  int32_t v12; // w8
 
   if ( !changeClassCost )
-    sub_1D0F30C(this, 0);
-  v3 = 44;
-  if ( changeClassCost->fields.overwirteMove < 0 )
-    v3 = 28;
-  this->fields.move = *(_DWORD *)((char *)&changeClassCost->klass + v3);
-  v4 = 48;
-  if ( changeClassCost->fields.overwirteAttack < 0 )
-    v4 = 32;
-  this->fields.attack = *(_DWORD *)((char *)&changeClassCost->klass + v4);
-  v5 = 52;
-  if ( changeClassCost->fields.overwirteWallAttack < 0 )
-    v5 = 36;
-  this->fields.wallAttack = *(_DWORD *)((char *)&changeClassCost->klass + v5);
-  v6 = 40;
-  if ( changeClassCost->fields.overwirteBaseActionPoint < 0 )
-    v6 = 24;
-  this->fields.baseActionPoint = *(_DWORD *)((char *)&changeClassCost->klass + v6);
+    sub_21FFECC(this, 0);
+  overwirteBaseActionPoint = changeClassCost->fields.overwirteBaseActionPoint;
+  if ( changeClassCost->fields.overwirteMove >= 0 )
+    v4 = 44;
+  else
+    v4 = 28;
+  overwirteWallAttack = changeClassCost->fields.overwirteWallAttack;
+  v6 = changeClassCost->fields.overwirteAttack < 0;
+  v7 = 32;
+  this->fields.move = *(_DWORD *)((char *)&changeClassCost->klass + v4);
+  if ( !v6 )
+    v7 = 48;
+  v8 = *(_DWORD *)((char *)&changeClassCost->klass + v7);
+  v9 = 52;
+  if ( overwirteWallAttack < 0 )
+    v9 = 36;
+  this->fields.attack = v8;
+  v10 = *(_DWORD *)((char *)&changeClassCost->klass + v9);
+  v11 = 40;
+  if ( overwirteBaseActionPoint < 0 )
+    v11 = 24;
+  this->fields.wallAttack = v10;
+  v12 = *(_DWORD *)((char *)&changeClassCost->klass + v11);
   this->fields._ClassId_k__BackingField = changeClassCost->fields._ClassId_k__BackingField;
+  this->fields.baseActionPoint = v12;
 }
 
 

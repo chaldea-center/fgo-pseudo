@@ -11,10 +11,10 @@ EventMissionItemListViewItem_o *EventMissionItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4E7189B & 1) == 0 )
+  if ( (byte_5932727 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventMissionItemListViewItem_TypeInfo);
-    byte_4E7189B = 1;
+    sub_21FFC50(&EventMissionItemListViewItem_TypeInfo);
+    byte_5932727 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -38,7 +38,7 @@ void EventMissionItemListViewObject__ModifyBoardImage(EventMissionItemListViewOb
   EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
   Item = EventMissionItemListViewObject__GetItem(this, v4);
   if ( !Item || !EventMissionItemDraw )
-    sub_1D0F30C(Item, v6);
+    sub_21FFECC(Item, v6);
   EventMissionItemListViewItemDraw__ModifyBoardImage(EventMissionItemDraw, Item->fields.bannerGroupId, 0);
 }
 
@@ -56,10 +56,10 @@ void EventMissionItemListViewObject__OnChangeAlphaAnim(
   EventMissionItemListViewItemDraw_o *EventMissionItemDraw; // x0
   __int64 v10; // x1
 
-  if ( (byte_4E7189C & 1) == 0 )
+  if ( (byte_5932728 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventMissionItemListViewManager_TypeInfo);
-    byte_4E7189C = 1;
+    sub_21FFC50(&EventMissionItemListViewManager_TypeInfo);
+    byte_5932728 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -81,7 +81,7 @@ void EventMissionItemListViewObject__OnChangeAlphaAnim(
     }
     EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, v4);
     if ( !EventMissionItemDraw )
-      sub_1D0F30C(0, v10);
+      sub_21FFECC(0, v10);
     EventMissionItemListViewItemDraw__OnChangeAlphaAnim(
       EventMissionItemDraw,
       v6,
@@ -94,33 +94,31 @@ void EventMissionItemListViewObject__OnChangeAlphaAnim(
 
 void EventMissionItemListViewObject__Update(EventMissionItemListViewObject_o *this, const MethodInfo *method)
 {
-  struct ListViewItem_o *linkItem; // x8
-  __int64 naturalAligment; // x11
-  EventMissionItemListViewItem_c *v5; // x10
-  EventMissionItemListViewItem_o *v6; // x20
+  struct ListViewItem_o *linkItem; // x20
+  __int64 naturalAligment; // x10
   EventMissionItemListViewItemDraw_o *EventMissionItemDraw; // x0
-  __int64 v8; // x1
+  __int64 v6; // x1
 
-  if ( (byte_4E7189A & 1) == 0 )
+  if ( (byte_5932726 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventMissionItemListViewItem_TypeInfo);
-    byte_4E7189A = 1;
+    sub_21FFC50(&EventMissionItemListViewItem_TypeInfo);
+    byte_5932726 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
   {
     naturalAligment = EventMissionItemListViewItem_TypeInfo->_2.naturalAligment;
-    if ( linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
+    if ( linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+      && (EventMissionItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == EventMissionItemListViewItem_TypeInfo )
     {
-      v5 = (EventMissionItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1];
-      v6 = v5 == EventMissionItemListViewItem_TypeInfo ? (EventMissionItemListViewItem_o *)this->fields.linkItem : 0LL;
-      if ( v5 == EventMissionItemListViewItem_TypeInfo )
-      {
-        EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
-        if ( !EventMissionItemDraw )
-          sub_1D0F30C(0, v8);
-        EventMissionItemListViewItemDraw__UpdateItem(EventMissionItemDraw, v6, this->fields.dispMode, 0);
-      }
+      EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
+      if ( !EventMissionItemDraw )
+        sub_21FFECC(0, v6);
+      EventMissionItemListViewItemDraw__UpdateItem(
+        EventMissionItemDraw,
+        (EventMissionItemListViewItem_o *)linkItem,
+        this->fields.dispMode,
+        0);
     }
   }
 }
@@ -133,10 +131,10 @@ EventMissionItemListViewItemDraw_o *EventMissionItemListViewObject__get_EventMis
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4E71899 & 1) == 0 )
+  if ( (byte_5932725 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventMissionItemListViewItemDraw_TypeInfo);
-    byte_4E71899 = 1;
+    sub_21FFC50(&EventMissionItemListViewItemDraw_TypeInfo);
+    byte_5932725 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

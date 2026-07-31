@@ -1,28 +1,29 @@
 void ClassBoardAddClassDialog___ctor(ClassBoardAddClassDialog_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
+  __int64 v10; // x1
 
-  if ( (byte_4E7B314 & 1) == 0 )
+  if ( (byte_593C39C & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ServantClassIconComponent__TypeInfo);
-    byte_4E7B314 = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_ServantClassIconComponent__TypeInfo);
+    byte_593C39C = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ServantClassIconComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantClassIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ServantClassIconComponent___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantClassIconComponent___ctor__);
   this->fields.iconList = (struct System_Collections_Generic_List_ServantClassIconComponent__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.iconList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.iconList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, v10);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -32,30 +33,30 @@ void ClassBoardAddClassDialog__Close(
         System_Action_o *closeCallback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   System_Action_o *v10; // x20
 
-  if ( (byte_4E7B311 & 1) == 0 )
+  if ( (byte_593C399 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_ClassBoardAddClassDialog_OnCloseEnd__);
-    byte_4E7B311 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_ClassBoardAddClassDialog_OnCloseEnd__);
+    byte_593C399 = 1;
   }
   this->fields.closeCallback = closeCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.closeCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallback,
     (int32_t)closeCallback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ClassBoardAddClassDialog_OnCloseEnd__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -74,12 +75,12 @@ void ClassBoardAddClassDialog__CreateServantClassIconComponents(
   Il2CppObject *iconPrefab; // x20
   Il2CppObject *v9; // x21
   System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   struct System_Object_array *items; // x8
   _QWORD *v18; // x9
   __int64 v19; // x10
@@ -87,73 +88,70 @@ void ClassBoardAddClassDialog__CreateServantClassIconComponents(
   Il2CppClass **v21; // x0
 
   v4 = this;
-  if ( (byte_4E7B313 & 1) == 0 )
+  if ( (byte_593C39B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Count__);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (ClassBoardAddClassDialog_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B313 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Count__);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (ClassBoardAddClassDialog_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C39B = 1;
   }
   iconList = v4->fields.iconList;
   if ( !iconList )
 LABEL_17:
-    sub_1D0F30C(this, *(_QWORD *)&count);
+    sub_21FFECC(this, *(_QWORD *)&count);
   size = iconList->fields._size;
-  if ( size < count )
+  v7 = count - size;
+  if ( count > size && v7 >= 1 )
   {
-    v7 = count - size;
-    if ( count - size >= 1 )
+    do
     {
-      do
+      iconPrefab = (Il2CppObject *)v4->fields.iconPrefab;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&count);
+      v9 = UnityEngine_Object__Instantiate_object_(
+             iconPrefab,
+             (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0, 0) )
       {
-        iconPrefab = (Il2CppObject *)v4->fields.iconPrefab;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v9 = UnityEngine_Object__Instantiate_object_(
-               iconPrefab,
-               (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0, 0) )
+        GameObjectExtensions__SafeSetParent(
+          (UnityEngine_GameObject_o *)v9,
+          (UnityEngine_Component_o *)v4->fields.useIconListParent,
+          0);
+        if ( !v9 )
+          goto LABEL_17;
+        v10 = (System_Collections_Generic_List_object__o *)v4->fields.iconList;
+        this = (ClassBoardAddClassDialog_o *)UnityEngine_GameObject__GetComponent_object_(
+                                               (UnityEngine_GameObject_o *)v9,
+                                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
+        if ( !v10 )
+          goto LABEL_17;
+        items = v10->fields._items;
+        v18 = Method_System_Collections_Generic_List_ServantClassIconComponent__Add__;
+        ++v10->fields._version;
+        if ( !items )
+          goto LABEL_17;
+        v19 = v10->fields._size;
+        v20 = this;
+        if ( (unsigned int)v19 >= LODWORD(items->max_length) )
         {
-          GameObjectExtensions__SafeSetParent(
-            (UnityEngine_GameObject_o *)v9,
-            (UnityEngine_Component_o *)v4->fields.useIconListParent,
-            0);
-          if ( !v9 )
-            goto LABEL_17;
-          v10 = (System_Collections_Generic_List_object__o *)v4->fields.iconList;
-          this = (ClassBoardAddClassDialog_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                 (UnityEngine_GameObject_o *)v9,
-                                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
-          if ( !v10 )
-            goto LABEL_17;
-          items = v10->fields._items;
-          v18 = Method_System_Collections_Generic_List_ServantClassIconComponent__Add__;
-          ++v10->fields._version;
-          if ( !items )
-            goto LABEL_17;
-          v19 = v10->fields._size;
-          v20 = this;
-          if ( (unsigned int)v19 >= LODWORD(items->max_length) )
-          {
-            System_Collections_Generic_List_object___AddWithResize(
-              v10,
-              (Il2CppObject *)this,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
-          }
-          else
-          {
-            v21 = &items->obj.klass + v19;
-            v10->fields._size = v19 + 1;
-            v21[4] = (Il2CppClass *)v20;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
-          }
+          System_Collections_Generic_List_object___AddWithResize(
+            v10,
+            (Il2CppObject *)this,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
-        --v7;
+        else
+        {
+          v21 = &items->obj.klass + v19;
+          v10->fields._size = v19 + 1;
+          v21[4] = (Il2CppClass *)v20;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
+        }
       }
-      while ( v7 );
+      --v7;
     }
+    while ( v7 );
   }
 }
 
@@ -171,43 +169,44 @@ void ClassBoardAddClassDialog__OnClickCloseButton(ClassBoardAddClassDialog_o *th
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E7B310 & 1) == 0 )
+  if ( (byte_593C398 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ClassBoardAddClassDialog_OnClickCloseButton__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E7B310 = 1;
+    sub_21FFC50(&Method_ClassBoardAddClassDialog_OnClickCloseButton__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_593C398 = 1;
   }
   v2 = Method_ClassBoardAddClassDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_ClassBoardAddClassDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1D0F0CC(Method_ClassBoardAddClassDialog_OnClickCloseButton__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1D0F098(v2, v2[4]);
+    v2 = (_QWORD *)sub_21FFC68(Method_ClassBoardAddClassDialog_OnClickCloseButton__);
+  v3 = (System_Reflection_MethodBase_o *)sub_21FFC34(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 0, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   CommonUI__CloseClassBoardAddClassDialog((CommonUI_o *)Instance, 0);
 }
 
 
 void ClassBoardAddClassDialog__OnCloseEnd(ClassBoardAddClassDialog_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_closeCallback; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_closeCallback; // x0
   System_Action_o *closeCallback; // t1
 
   closeCallback = this->fields.closeCallback;
-  p_closeCallback = (GrandQuestFolderBoardItem_o *)&this->fields.closeCallback;
+  p_closeCallback = (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallback;
   p_closeCallback->klass = 0;
-  sub_1D0F058(p_closeCallback, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4(p_closeCallback, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(closeCallback, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClassBoardAddClassDialog__Open(
         ClassBoardAddClassDialog_o *this,
         int32_t classBaseId,
@@ -217,58 +216,58 @@ void ClassBoardAddClassDialog__Open(
   ServantClassMaster_o *Master_object; // x0
   __int64 v8; // x1
   int32_t PlayableGrandBeastBaseClassId; // w22
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   bool v16; // w23
   struct UILabel_o *grandContentLabel; // x1
   struct UnityEngine_Transform_o *grandIconListParent; // x1
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
   struct UIScrollView_o *grandScrollView; // x1
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
   int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
+  bool v30; // w6
+  bool v31; // w7
   struct UnityEngine_GameObject_o *grandScrollArea; // x1
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
   int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
+  bool v37; // w6
+  bool v38; // w7
   bool v39; // w1
   struct UILabel_o *contentLabel; // x1
   struct UnityEngine_Transform_o *iconListParent; // x1
-  int32_t v42; // w2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
   int32_t v45; // w5
-  int64_t v46; // x6
-  System_String_o *v47; // x7
+  bool v46; // w6
+  bool v47; // w7
   struct UIScrollView_o *scrollView; // x1
-  int32_t v49; // w2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
+  System_String_o *v49; // x2
+  System_String_o *v50; // x3
+  int32_t v51; // w4
   int32_t v52; // w5
-  int64_t v53; // x6
-  System_String_o *v54; // x7
+  bool v53; // w6
+  bool v54; // w7
   struct UnityEngine_GameObject_o *scrollArea; // x1
-  int32_t v56; // w2
-  int32_t v57; // w3
-  System_String_o *v58; // x4
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
   int32_t v59; // w5
-  int64_t v60; // x6
-  System_String_o *v61; // x7
+  bool v60; // w6
+  bool v61; // w7
   const MethodInfo *v62; // x2
   __int64 v63; // x1
   UnityEngine_GameObject_o *gameObject; // x0
@@ -276,61 +275,65 @@ void ClassBoardAddClassDialog__Open(
   const MethodInfo *v66; // x2
   il2cpp_array_size_t max_length; // x8
   unsigned __int64 v68; // x24
-  int32_t *m_Items; // x27
+  int32_t *m_Items; // x26
+  __int64 v70; // x1
   Il2CppObject *Item; // x25
+  __int64 v72; // x1
   UILabel_o *useContentLabel; // x21
-  System_String_o *v72; // x22
-  long double inited; // q0
-  _QWORD *v74; // x23
-  __int64 v75; // x8
-  __int64 v76; // x0
-  __int64 v77; // x0
-  int v78; // w8
-  System_Collections_Generic_List_Enumerator_object__o v79; // [xsp+0h] [xbp-A0h] BYREF
+  __int64 v74; // x1
+  System_String_o *v75; // x22
+  long double v76; // q0
+  _QWORD *v77; // x23
+  __int64 v78; // x8
+  __int64 v79; // x0
+  __int64 v80; // x0
+  __int64 v81; // x1
+  int v82; // w8
+  System_Collections_Generic_List_Enumerator_object__o v83; // [xsp+0h] [xbp-A0h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v81; // [xsp+20h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v85; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4E7B30F & 1) == 0 )
+  if ( (byte_593C397 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Empty_object___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ServantClassMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3398/*"CLASS_BOARD_ADD_CLASS_DIALOG_CLASS_ICON_TEXT_BEAST"*/);
-    sub_1D0F0B4(&StringLiteral_3401/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_CONTENT_BEAST"*/);
-    sub_1D0F0B4(&StringLiteral_3399/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/);
-    byte_4E7B30F = 1;
+    sub_21FFC50(&Method_System_Array_Empty_object___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_ServantClassMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3497/*"CLASS_BOARD_ADD_CLASS_DIALOG_CLASS_ICON_TEXT_BEAST"*/);
+    sub_21FFC50(&StringLiteral_3500/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_CONTENT_BEAST"*/);
+    sub_21FFC50(&StringLiteral_3498/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/);
+    byte_593C397 = 1;
   }
-  memset(&v81, 0, sizeof(v81));
+  memset(&v85, 0, sizeof(v85));
   entity = 0;
   if ( !classIds || !classIds->max_length )
     return;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ServantClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ServantClassMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&classBaseId);
+  Master_object = (ServantClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantClassMaster___);
   if ( !Master_object )
     goto LABEL_89;
   PlayableGrandBeastBaseClassId = ServantClassMaster__GetPlayableGrandBeastBaseClassId(Master_object, 0);
   v16 = System_Linq_Enumerable__Contains_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)classIds,
           PlayableGrandBeastBaseClassId,
-          (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
+          (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
   if ( v16 )
   {
     grandContentLabel = this->fields.grandContentLabel;
     this->fields.useContentLabel = grandContentLabel;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useContentLabel,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useContentLabel,
       (int32_t)grandContentLabel,
       v10,
       v11,
@@ -340,8 +343,8 @@ void ClassBoardAddClassDialog__Open(
       v15);
     grandIconListParent = this->fields.grandIconListParent;
     this->fields.useIconListParent = grandIconListParent;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useIconListParent,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useIconListParent,
       (int32_t)grandIconListParent,
       v19,
       v20,
@@ -351,8 +354,8 @@ void ClassBoardAddClassDialog__Open(
       v24);
     grandScrollView = this->fields.grandScrollView;
     this->fields.useScrollView = grandScrollView;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useScrollView,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useScrollView,
       (int32_t)grandScrollView,
       v26,
       v27,
@@ -362,8 +365,8 @@ void ClassBoardAddClassDialog__Open(
       v31);
     grandScrollArea = this->fields.grandScrollArea;
     this->fields.useScrollArea = grandScrollArea;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useScrollArea,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useScrollArea,
       (int32_t)grandScrollArea,
       v33,
       v34,
@@ -430,8 +433,8 @@ void ClassBoardAddClassDialog__Open(
   {
     contentLabel = this->fields.contentLabel;
     this->fields.useContentLabel = contentLabel;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useContentLabel,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useContentLabel,
       (int32_t)contentLabel,
       v10,
       v11,
@@ -441,8 +444,8 @@ void ClassBoardAddClassDialog__Open(
       v15);
     iconListParent = this->fields.iconListParent;
     this->fields.useIconListParent = iconListParent;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useIconListParent,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useIconListParent,
       (int32_t)iconListParent,
       v42,
       v43,
@@ -452,8 +455,8 @@ void ClassBoardAddClassDialog__Open(
       v47);
     scrollView = this->fields.scrollView;
     this->fields.useScrollView = scrollView;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useScrollView,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useScrollView,
       (int32_t)scrollView,
       v49,
       v50,
@@ -463,8 +466,8 @@ void ClassBoardAddClassDialog__Open(
       v54);
     scrollArea = this->fields.scrollArea;
     this->fields.useScrollArea = scrollArea;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.useScrollArea,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.useScrollArea,
       (int32_t)scrollArea,
       v56,
       v57,
@@ -533,24 +536,26 @@ void ClassBoardAddClassDialog__Open(
   if ( !Master_object )
     goto LABEL_89;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v79,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v83,
     (System_Collections_Generic_List_object__o *)Master_object,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_ServantClassIconComponent__GetEnumerator__);
-  v81 = v79;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantClassIconComponent__GetEnumerator__);
+  v85 = v83;
+  v83.fields._list = 0;
+  *(_QWORD *)&v83.fields._index = &v85;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v81,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__MoveNext__) )
+            &v85,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__MoveNext__) )
   {
-    if ( !v81.fields._current )
-      sub_1D0F30C(0, v63);
-    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v81.fields._current, 0);
+    if ( !v85.fields._current )
+      sub_21FFECC(0, v63);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v85.fields._current, 0);
     if ( !gameObject )
-      sub_1D0F30C(0, v65);
+      sub_21FFECC(0, v65);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v81,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__Dispose__);
+    &v85,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantClassIconComponent__Dispose__);
   max_length = classIds->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -566,15 +571,15 @@ void ClassBoardAddClassDialog__Open(
         Master_object = (ServantClassMaster_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)Master_object,
                                                   v68,
-                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
+                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
         if ( v68 >= LODWORD(classIds->max_length) )
           goto LABEL_92;
         if ( !Master_object )
           break;
-        ServantClassIconComponent__Set_42439768((ServantClassIconComponent_o *)Master_object, m_Items[v68], 3, 0);
+        ServantClassIconComponent__Set_48002988((ServantClassIconComponent_o *)Master_object, m_Items[v68], 3, 0);
         if ( v68 >= LODWORD(classIds->max_length) )
 LABEL_92:
-          sub_1D0F314(Master_object);
+          sub_21FFED4(Master_object);
         if ( m_Items[v68] == PlayableGrandBeastBaseClassId )
         {
           Master_object = (ServantClassMaster_o *)this->fields.iconList;
@@ -583,10 +588,10 @@ LABEL_92:
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)Master_object,
                    v68,
-                   (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
-          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Master_object = (ServantClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3398/*"CLASS_BOARD_ADD_CLASS_DIALOG_CLASS_ICON_TEXT_BEAST"*/, 0);
+                   (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
+          if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v70);
+          Master_object = (ServantClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3497/*"CLASS_BOARD_ADD_CLASS_DIALOG_CLASS_ICON_TEXT_BEAST"*/, 0);
           if ( !Item )
             break;
           ServantClassIconComponent__OverwriteTextNameLabel(
@@ -600,7 +605,7 @@ LABEL_92:
         Master_object = (ServantClassMaster_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)Master_object,
                                                   v68,
-                                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
+                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__);
         if ( !Master_object )
           break;
         Master_object = (ServantClassMaster_o *)UnityEngine_Component__get_gameObject(
@@ -615,55 +620,55 @@ LABEL_92:
         goto LABEL_59;
     }
 LABEL_89:
-    sub_1D0F30C(Master_object, v8);
+    sub_21FFECC(Master_object, v8);
   }
 LABEL_59:
   ClassBoardAddClassDialog__SetupText(this, classBaseId, v66);
   if ( v16 )
   {
     useContentLabel = this->fields.useContentLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v72 = LocalizationManager__Get((System_String_o *)StringLiteral_3401/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_CONTENT_BEAST"*/, 0);
-    v74 = Method_System_Array_Empty_object___;
-    v75 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-    if ( !v75 )
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v72);
+    v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3500/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_CONTENT_BEAST"*/, 0);
+    v77 = Method_System_Array_Empty_object___;
+    v78 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
+    if ( !v78 )
     {
-      sub_1CE5198(Method_System_Array_Empty_object___);
-      v75 = v74[7];
+      sub_2237B54(Method_System_Array_Empty_object___);
+      v78 = v77[7];
     }
-    v76 = *(_QWORD *)(v75 + 16);
-    if ( (*(_BYTE *)(v76 + 309) & 1) == 0 )
-      v76 = sub_1CE513C(inited);
-    if ( !*(_DWORD *)(v76 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v76);
-    v77 = *(_QWORD *)(v74[7] + 16LL);
-    if ( (*(_BYTE *)(v77 + 309) & 1) == 0 )
-      v77 = sub_1CE513C(inited);
-    Master_object = (ServantClassMaster_o *)System_String__Format_65604216(
-                                              v72,
-                                              **(System_Object_array ***)(v77 + 184),
+    v79 = *(_QWORD *)(v78 + 16);
+    if ( (*(_WORD *)(v79 + 309) & 1) == 0 )
+      v79 = sub_2237AF8(v76);
+    if ( !*(_DWORD *)(v79 + 228) )
+      *(__n128 *)&v76 = j_il2cpp_runtime_class_init_0(v79, v74);
+    v80 = *(_QWORD *)(v77[7] + 16LL);
+    if ( (*(_WORD *)(v80 + 309) & 1) == 0 )
+      v80 = sub_2237AF8(v76);
+    Master_object = (ServantClassMaster_o *)System_String__Format_75484712(
+                                              v75,
+                                              **(System_Object_array ***)(v80 + 184),
                                               0);
     if ( !useContentLabel )
       goto LABEL_89;
   }
   else
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ServantClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v72);
+    Master_object = (ServantClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
     if ( !Master_object )
       goto LABEL_89;
     if ( !DataMasterBase_object__object__int___TryGetEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
             &entity,
             classBaseId,
-            (const MethodInfo_3535BC8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
+            (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
       goto LABEL_81;
     useContentLabel = this->fields.useContentLabel;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = (ServantClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3399/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/, 0);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v81);
+    Master_object = (ServantClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3498/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/, 0);
     if ( !entity )
       goto LABEL_89;
     Master_object = (ServantClassMaster_o *)System_String__Format(
@@ -681,7 +686,7 @@ LABEL_81:
     goto LABEL_89;
   Master_object = (ServantClassMaster_o *)UnityEngine_Component__GetComponent_object_(
                                             (UnityEngine_Component_o *)Master_object,
-                                            (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !Master_object )
     goto LABEL_89;
   ((void (__fastcall *)(ServantClassMaster_o *, const MethodInfo *))Master_object->klass->vtable._8_ReplacedForThread.methodPtr)(
@@ -691,70 +696,75 @@ LABEL_81:
   if ( !Master_object )
     goto LABEL_89;
   if ( SLODWORD(classIds->max_length) > 4 )
-    v78 = 1;
+    v82 = 1;
   else
-    v78 = 4;
-  HIDWORD(Master_object[1].klass) = v78;
+    v82 = 4;
+  HIDWORD(Master_object[1].klass) = v82;
   UIScrollView__ResetPosition((UIScrollView_o *)Master_object, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClassBoardAddClassDialog__SetupText(
         ClassBoardAddClassDialog_o *this,
         int32_t classBaseId,
         const MethodInfo *method)
 {
+  int v5; // w8
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
   UILabel_o *titleLabel; // x20
+  __int64 v9; // x1
   bool IsGrand; // w21
-  System_String_o **v9; // x8
+  System_String_o **v11; // x8
+  __int64 v12; // x1
   UILabel_o *closeButtonLabel; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E7B312 & 1) == 0 )
+  if ( (byte_593C39A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3400/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_3402/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_TITLE"*/);
-    byte_4E7B312 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3499/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_3501/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_TITLE"*/);
+    byte_593C39A = 1;
   }
+  v5 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  if ( !v5 )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&classBaseId);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_17;
   DataMasterBase_object__object__int___TryGetEntity(
     Master_object,
     &entity,
     classBaseId,
-    (const MethodInfo_3535BC8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
   if ( !entity )
     goto LABEL_17;
   titleLabel = this->fields.titleLabel;
   IsGrand = ClassBoardBaseEntity__IsGrand((ClassBoardBaseEntity_o *)entity, 0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = (System_String_o **)(IsGrand ? &StringLiteral_3402/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_TITLE"*/ : &StringLiteral_3400/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(*v9, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9);
+  v11 = (System_String_o **)(IsGrand ? &StringLiteral_3501/*"CLASS_BOARD_ADD_GRAND_CLASS_DIALOG_TITLE"*/ : &StringLiteral_3499/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(*v11, 0);
   if ( !titleLabel )
     goto LABEL_17;
   UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0);
   closeButtonLabel = this->fields.closeButtonLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                  (System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/,
                                                                   0);
   if ( !closeButtonLabel )
 LABEL_17:
-    sub_1D0F30C(Master_object, v6);
+    sub_21FFECC(Master_object, v7);
   UILabel__set_text(closeButtonLabel, (System_String_o *)Master_object, 0);
 }
 

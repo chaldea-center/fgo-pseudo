@@ -6,7 +6,7 @@ void WarBoardAPIGameSetRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_39576564(
+  WarBoardAPIRequestTask___ctor_45133660(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -19,44 +19,45 @@ void WarBoardAPIGameSetRequestTask__SetRequest(WarBoardAPIGameSetRequestTask_o *
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
+  __int64 v5; // x2
   WarBoardData_o *monitor; // x20
-  WarBoardFinishRequest_o *v6; // x21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  WarBoardFinishRequest_o *v7; // x21
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E752A7 & 1) == 0 )
+  if ( (byte_593622D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_NetworkManager_getRequest_WarBoardFinishRequest___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E752A7 = 1;
+    sub_21FFC50(&Method_NetworkManager_getRequest_WarBoardFinishRequest___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_593622D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v5);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
+               (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
   if ( !monitor
-    || (v6 = (WarBoardFinishRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0), !v6) )
+    || (v7 = (WarBoardFinishRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0), !v7) )
   {
 LABEL_9:
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
   WarBoardFinishRequest__beginRequest(
-    v6,
+    v7,
     (int32_t)Instance,
     this->fields.gameResult,
     monitor->fields.winCondId,
     monitor->fields.winCondGroup,
     0);
-  this->fields.request = (struct RequestBase_o *)v6;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.request, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+  this->fields.request = (struct RequestBase_o *)v7;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }

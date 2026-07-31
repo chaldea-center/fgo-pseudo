@@ -6,24 +6,25 @@ void CriFsLoadAssetBundleRequest___ctor(
         const MethodInfo *method)
 {
   const MethodInfo *v9; // x3
-  struct CriFsLoadFileRequest_o *File_31711240; // x0
-  const MethodInfo *v11; // x2
+  struct CriFsLoadFileRequest_o *File_36922008; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4E7084F & 1) == 0 )
+  if ( (byte_59314F7 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    byte_4E7084F = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    byte_59314F7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._path_k__BackingField = path;
-  sub_1D0F058(&this->fields._path_k__BackingField, path);
-  File_31711240 = CriFsUtility__LoadFile_31711240(binder, path, readUnitSize, v9);
-  this->fields.loadFileReq = File_31711240;
-  sub_1D0F058(&this->fields.loadFileReq, File_31711240);
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v11);
+  sub_21FFBF4(&this->fields._path_k__BackingField, path);
+  File_36922008 = CriFsUtility__LoadFile_36922008(binder, path, readUnitSize, v9);
+  this->fields.loadFileReq = File_36922008;
+  sub_21FFBF4(&this->fields.loadFileReq, File_36922008);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v11, v12);
+  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v12);
 }
 
 
@@ -37,13 +38,13 @@ void CriFsLoadAssetBundleRequest__Dispose(
   struct CriFsLoadFileRequest_o **p_loadFileReq; // x19
   struct CriFsLoadFileRequest_o *loadFileReq; // t1
 
-  if ( (byte_4E70851 & 1) == 0 )
+  if ( (byte_59314F9 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriDisposableObjectManager_TypeInfo);
-    byte_4E70851 = 1;
+    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
+    byte_59314F9 = 1;
   }
-  if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
+  if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
   CriDisposableObjectManager__Unregister((CriDisposable_o *)this, (const MethodInfo *)disposing);
   loadFileReq = this->fields.loadFileReq;
   p_loadFileReq = &this->fields.loadFileReq;
@@ -54,7 +55,7 @@ void CriFsLoadAssetBundleRequest__Dispose(
       v4,
       v4->klass->vtable._5_Dispose.method);
     *p_loadFileReq = 0;
-    sub_1D0F058(p_loadFileReq, 0);
+    sub_21FFBF4(p_loadFileReq, 0);
   }
 }
 
@@ -72,10 +73,10 @@ void CriFsLoadAssetBundleRequest__Update(CriFsLoadAssetBundleRequest_o *this, co
   struct CriFsRequest_DoneDelegate_o *v11; // x8
   struct UnityEngine_AssetBundleCreateRequest_o *v12; // x0
 
-  if ( (byte_4E70850 & 1) == 0 )
+  if ( (byte_59314F8 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6203/*"Error occurred."*/);
-    byte_4E70850 = 1;
+    sub_21FFC50(&StringLiteral_6385/*"Error occurred."*/);
+    byte_59314F8 = 1;
   }
   p_loadFileReq = &this->fields.loadFileReq;
   loadFileReq = this->fields.loadFileReq;
@@ -85,9 +86,9 @@ void CriFsLoadAssetBundleRequest__Update(CriFsLoadAssetBundleRequest_o *this, co
     {
       if ( loadFileReq->fields._error_k__BackingField )
       {
-        v5 = StringLiteral_6203/*"Error occurred."*/;
-        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6203/*"Error occurred."*/;
-        sub_1D0F058(&this->fields._error_k__BackingField, v5);
+        v5 = StringLiteral_6385/*"Error occurred."*/;
+        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6385/*"Error occurred."*/;
+        sub_21FFBF4(&this->fields._error_k__BackingField, v5);
         doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
         this->fields._isDone_k__BackingField = 1;
         if ( doneDelegate_k__BackingField )
@@ -100,7 +101,7 @@ void CriFsLoadAssetBundleRequest__Update(CriFsLoadAssetBundleRequest_o *this, co
       {
         v12 = UnityEngine_AssetBundle__LoadFromMemoryAsync(loadFileReq->fields._bytes_k__BackingField, 0);
         this->fields.assetBundleReq = v12;
-        sub_1D0F058(&this->fields.assetBundleReq, v12);
+        sub_21FFBF4(&this->fields.assetBundleReq, v12);
       }
       v9 = (UnityEngine_AssetBundleCreateRequest_o *)*p_loadFileReq;
       if ( *p_loadFileReq )
@@ -109,11 +110,11 @@ void CriFsLoadAssetBundleRequest__Update(CriFsLoadAssetBundleRequest_o *this, co
           v9,
           v9->klass[1]._1.namespaze);
         *p_loadFileReq = 0;
-        sub_1D0F058(&this->fields.loadFileReq, 0);
+        sub_21FFBF4(&this->fields.loadFileReq, 0);
         return;
       }
 LABEL_18:
-      sub_1D0F30C(v9, v6);
+      sub_21FFECC(v9, v6);
     }
     return;
   }
@@ -138,7 +139,7 @@ LABEL_17:
       goto LABEL_18;
     assetBundle = UnityEngine_AssetBundleCreateRequest__get_assetBundle(v9, 0);
     this->fields._assetBundle_k__BackingField = assetBundle;
-    sub_1D0F058(&this->fields._assetBundle_k__BackingField, assetBundle);
+    sub_21FFBF4(&this->fields._assetBundle_k__BackingField, assetBundle);
     v11 = this->fields._doneDelegate_k__BackingField;
     this->fields._isDone_k__BackingField = 1;
     if ( v11 )
@@ -167,7 +168,7 @@ void CriFsLoadAssetBundleRequest__set_assetBundle(
         const MethodInfo *method)
 {
   this->fields._assetBundle_k__BackingField = value;
-  sub_1D0F058(&this->fields._assetBundle_k__BackingField, value);
+  sub_21FFBF4(&this->fields._assetBundle_k__BackingField, value);
 }
 
 
@@ -177,5 +178,5 @@ void CriFsLoadAssetBundleRequest__set_path(
         const MethodInfo *method)
 {
   this->fields._path_k__BackingField = value;
-  sub_1D0F058(&this->fields._path_k__BackingField, value);
+  sub_21FFBF4(&this->fields._path_k__BackingField, value);
 }

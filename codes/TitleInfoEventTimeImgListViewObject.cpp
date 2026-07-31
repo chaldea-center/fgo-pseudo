@@ -13,30 +13,38 @@ void TitleInfoEventTimeImgListViewObject__Init(
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
   struct TitleInfoEventTimeImgListViewDraw_o **p_itemDraw; // x20
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   const MethodInfo *v14; // x2
 
-  if ( (byte_4E75FFE & 1) == 0 )
+  if ( (byte_5936FA0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_4E75FFE = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
+    byte_5936FA0 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9, v10, v11, v12, v13),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)p_itemDraw,
+          (int32_t)Component_object,
+          v8,
+          v9,
+          v10,
+          v11,
+          v12,
+          v13),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0) )
   {
-    sub_1D0F30C(dispObject, *(_QWORD *)&state);
+    sub_21FFECC(dispObject, *(_QWORD *)&state);
   }
   TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
 }

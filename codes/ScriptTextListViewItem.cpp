@@ -6,26 +6,25 @@ void ScriptTextListViewItem___ctor(
 {
   Il2CppObject *v7; // x0
   struct System_String_o *v8; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E74C9A & 1) == 0 )
+  if ( (byte_5935C24 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16218/*"[{0:D4}] {1}"*/);
-    byte_4E74C9A = 1;
+    sub_21FFC50(&StringLiteral_16614/*"[{0:D4}] {1}"*/);
+    byte_5935C24 = 1;
   }
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   v15 = index + 1;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  v8 = System_String__Format_65604080((System_String_o *)StringLiteral_16218/*"[{0:D4}] {1}"*/, v7, (Il2CppObject *)lineText, 0);
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v15);
+  v8 = System_String__Format_75484576((System_String_o *)StringLiteral_16614/*"[{0:D4}] {1}"*/, v7, (Il2CppObject *)lineText, 0);
   this->fields.lineText = v8;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.lineText, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.lineText, (int32_t)v8, v9, v10, v11, v12, v13, v14);
 }
 
 

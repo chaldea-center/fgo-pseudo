@@ -12,19 +12,18 @@ void PointGroupNameEffectSubComponent__RecvParam(
   __int64 naturalAligment; // x10
   DataManager_o *Instance; // x0
   System_String_o **p_name; // x8
-  void *monitor; // x8
-  __int64 v9; // x9
-  int32_t v10; // w20
-  int32_t v11; // w21
+  int *monitor; // x8
+  int32_t v9; // w20
+  int32_t v10; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E78D73 & 1) == 0 )
+  if ( (byte_5939DC2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1D0F0B4(&RaceResultEffectParam_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E78D73 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_21FFC50(&RaceResultEffectParam_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5939DC2 = 1;
   }
   entity = 0;
   if ( param )
@@ -33,44 +32,40 @@ void PointGroupNameEffectSubComponent__RecvParam(
     if ( param->klass->_2.naturalAligment >= (unsigned int)naturalAligment
       && (RaceResultEffectParam_c *)param->klass->_2.typeHierarchy[naturalAligment - 1] == RaceResultEffectParam_TypeInfo )
     {
-      monitor = param[1].monitor;
+      monitor = (int *)param[1].monitor;
       if ( monitor )
       {
-        v9 = *((_QWORD *)monitor + 3);
-        if ( v9 )
+        if ( monitor[6] >= 3 )
         {
-          if ( (int)v9 >= 3 )
+          v9 = monitor[8];
+          v10 = monitor[12];
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          if ( !Instance )
+            goto LABEL_17;
+          Instance = (DataManager_o *)DataManager__GetMasterData_object_(
+                                        Instance,
+                                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+          if ( !Instance )
+            goto LABEL_17;
+          Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
+                                        (EventPointGroupMaster_o *)Instance,
+                                        &entity,
+                                        v9,
+                                        v10,
+                                        0);
+          if ( ((unsigned __int8)Instance & 1) != 0 )
           {
-            v10 = *((_DWORD *)monitor + 8);
-            v11 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-            if ( !Instance )
-              goto LABEL_18;
-            Instance = (DataManager_o *)DataManager__GetMasterData_object_(
-                                          Instance,
-                                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
-            if ( !Instance )
-              goto LABEL_18;
-            Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
-                                          (EventPointGroupMaster_o *)Instance,
-                                          &entity,
-                                          v10,
-                                          v11,
-                                          0);
-            if ( ((unsigned __int8)Instance & 1) != 0 )
+            if ( entity )
             {
-              if ( entity )
+              Instance = (DataManager_o *)this->fields.label;
+              if ( Instance )
               {
-                Instance = (DataManager_o *)this->fields.label;
-                if ( Instance )
-                {
-                  p_name = &entity->fields.name;
-                  goto LABEL_8;
-                }
+                p_name = &entity->fields.name;
+                goto LABEL_8;
               }
-LABEL_18:
-              sub_1D0F30C(Instance, param);
             }
+LABEL_17:
+            sub_21FFECC(Instance, param);
           }
         }
       }
@@ -78,7 +73,7 @@ LABEL_18:
   }
   Instance = (DataManager_o *)this->fields.label;
   if ( !Instance )
-    goto LABEL_18;
+    goto LABEL_17;
   p_name = (System_String_o **)&StringLiteral_1/*""*/;
 LABEL_8:
   UILabel__set_text((UILabel_o *)Instance, *p_name, 0);

@@ -23,12 +23,14 @@ bool IconLabelInfo__IsClear(IconLabelInfo_o *this, const MethodInfo *method)
 
 void IconLabelInfo__Set(IconLabelInfo_o *this, IconLabelInfo_o *info, const MethodInfo *method)
 {
+  int64_t time; // x8
+
   if ( !info )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
+  time = info->fields.time;
   *(_OWORD *)&this->fields.iconKind = *(_OWORD *)&info->fields.iconKind;
-  this->fields.time = info->fields.time;
-  this->fields.isHide = info->fields.isHide;
-  this->fields.isMaxHide = info->fields.isMaxHide;
+  this->fields.time = time;
+  *(_WORD *)&this->fields.isHide = *(_WORD *)&info->fields.isHide;
   *(_QWORD *)&this->fields.lv = *(_QWORD *)&info->fields.lv;
 }
 
@@ -67,7 +69,7 @@ void IconLabelInfo__SetTime(
 }
 
 
-void IconLabelInfo__Set_42279788(
+void IconLabelInfo__Set_47932852(
         IconLabelInfo_o *this,
         int32_t iconKind,
         int32_t data,

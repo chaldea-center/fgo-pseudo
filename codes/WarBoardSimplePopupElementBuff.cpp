@@ -15,89 +15,119 @@ bool WarBoardSimplePopupElementBuff__IsSerializeFieldNotNull(
         WarBoardSimplePopupElementBuff_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *titleLabel; // x20
+  __int64 v5; // x1
+  __int64 v6; // x2
   UnityEngine_Object_o *explanationLabel; // x20
+  __int64 v8; // x1
+  __int64 v9; // x2
   UnityEngine_Object_o *ItemIconParts; // x20
+  __int64 v11; // x1
+  __int64 v12; // x2
   UnityEngine_Object_o *effectIconParts; // x20
+  __int64 v14; // x1
+  __int64 v15; // x2
   UnityEngine_Object_o *wallIconParts; // x20
+  __int64 v17; // x1
+  __int64 v18; // x2
   UnityEngine_Object_o *itemIcon; // x20
+  __int64 v20; // x1
+  __int64 v21; // x2
   UnityEngine_Object_o *effectIcon; // x20
+  __int64 v23; // x1
+  __int64 v24; // x2
   UnityEngine_Object_o *effectIconBase; // x20
+  __int64 v26; // x1
+  __int64 v27; // x2
   UnityEngine_Object_o *wallIcon; // x20
+  __int64 v29; // x1
+  __int64 v30; // x2
   UnityEngine_Object_o *breakPointParent; // x20
+  __int64 v32; // x1
+  __int64 v33; // x2
   UnityEngine_Object_o *breakPointPrefab; // x20
+  __int64 v35; // x1
+  __int64 v36; // x2
   UnityEngine_Object_o *scrollView; // x20
+  __int64 v38; // x1
+  __int64 v39; // x2
   UnityEngine_Object_o *itemBaseImageIcon; // x19
 
-  if ( (byte_4E75321 & 1) == 0 )
+  if ( (byte_59362A7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E75321 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59362A7 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(titleLabel, 0, 0) )
     return 0;
   explanationLabel = (UnityEngine_Object_o *)this->fields.explanationLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Equality(explanationLabel, 0, 0) )
     return 0;
   ItemIconParts = (UnityEngine_Object_o *)this->fields.ItemIconParts;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
   if ( UnityEngine_Object__op_Equality(ItemIconParts, 0, 0) )
     return 0;
   effectIconParts = (UnityEngine_Object_o *)this->fields.effectIconParts;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
   if ( UnityEngine_Object__op_Equality(effectIconParts, 0, 0) )
     return 0;
   wallIconParts = (UnityEngine_Object_o *)this->fields.wallIconParts;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
   if ( UnityEngine_Object__op_Equality(wallIconParts, 0, 0) )
     return 0;
   itemIcon = (UnityEngine_Object_o *)this->fields.itemIcon;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
   if ( UnityEngine_Object__op_Equality(itemIcon, 0, 0) )
     return 0;
   effectIcon = (UnityEngine_Object_o *)this->fields.effectIcon;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
   if ( UnityEngine_Object__op_Equality(effectIcon, 0, 0) )
     return 0;
   effectIconBase = (UnityEngine_Object_o *)this->fields.effectIconBase;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
   if ( UnityEngine_Object__op_Equality(effectIconBase, 0, 0) )
     return 0;
   wallIcon = (UnityEngine_Object_o *)this->fields.wallIcon;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
   if ( UnityEngine_Object__op_Equality(wallIcon, 0, 0) )
     return 0;
   breakPointParent = (UnityEngine_Object_o *)this->fields.breakPointParent;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29, v30);
   if ( UnityEngine_Object__op_Equality(breakPointParent, 0, 0) )
     return 0;
   breakPointPrefab = (UnityEngine_Object_o *)this->fields.breakPointPrefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32, v33);
   if ( UnityEngine_Object__op_Equality(breakPointPrefab, 0, 0) )
     return 0;
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v35, v36);
   if ( UnityEngine_Object__op_Equality(scrollView, 0, 0) )
+  {
     return 0;
-  itemBaseImageIcon = (UnityEngine_Object_o *)this->fields.itemBaseImageIcon;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  return !UnityEngine_Object__op_Equality(itemBaseImageIcon, 0, 0);
+  }
+  else
+  {
+    itemBaseImageIcon = (UnityEngine_Object_o *)this->fields.itemBaseImageIcon;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
+    return !UnityEngine_Object__op_Equality(itemBaseImageIcon, 0, 0);
+  }
 }
 
 
@@ -105,18 +135,20 @@ void WarBoardSimplePopupElementBuff__OnRelease(WarBoardSimplePopupElementBuff_o 
 {
   WarBoardManager_o *Instance; // x0
   __int64 v3; // x1
+  const MethodInfo_476E8C0 *v4; // x8
 
-  if ( (byte_4E75327 & 1) == 0 )
+  if ( (byte_59362AD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E75327 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_59362AD = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
-    || (Instance->fields.isForceDispZoomSwitchUI = 0,
-        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
+    || (v4 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__,
+        Instance->fields.isForceDispZoomSwitchUI = 0,
+        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance(v4)) == 0) )
   {
-    sub_1D0F30C(Instance, v3);
+    sub_21FFECC(Instance, v3);
   }
   WarBoardManager__SetMapTouchEnable(Instance, 1, 0, 0);
 }
@@ -126,18 +158,20 @@ void WarBoardSimplePopupElementBuff__OnTouch(WarBoardSimplePopupElementBuff_o *t
 {
   WarBoardManager_o *Instance; // x0
   __int64 v3; // x1
+  const MethodInfo_476E8C0 *v4; // x8
 
-  if ( (byte_4E75326 & 1) == 0 )
+  if ( (byte_59362AC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E75326 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_59362AC = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
-    || (Instance->fields.isForceDispZoomSwitchUI = 1,
-        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
+    || (v4 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__,
+        Instance->fields.isForceDispZoomSwitchUI = 1,
+        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance(v4)) == 0) )
   {
-    sub_1D0F30C(Instance, v3);
+    sub_21FFECC(Instance, v3);
   }
   WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0);
 }
@@ -161,13 +195,13 @@ void WarBoardSimplePopupElementBuff__SetCondensedScaleTitleLabel(
     if ( titleLabel )
     {
       v5.fields.y = 0.5;
-      v5.fields.x = (float)(this->fields.titleLabelMaxWidth / v4) * 0.5;
       v5.fields.z = 1.0;
+      v5.fields.x = (float)(this->fields.titleLabelMaxWidth / v4) * 0.5;
       UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)titleLabel, v5, 0);
       return;
     }
 LABEL_6:
-    sub_1D0F30C(titleLabel, method);
+    sub_21FFECC(titleLabel, method);
   }
 }
 
@@ -187,11 +221,12 @@ void WarBoardSimplePopupElementBuff__SetUp(
   UISprite_o *itemBaseImageIcon; // x20
   int32_t itemEntityIconId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E75322 & 1) == 0 )
+  if ( (byte_59362A8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4E75322 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_59362A8 = 1;
   }
+  itemEntityIconId = 0;
   if ( WarBoardSimplePopupElementBuff__IsSerializeFieldNotNull(this, (const MethodInfo *)itemData) )
   {
     ItemIconParts = this->fields.ItemIconParts;
@@ -220,7 +255,7 @@ void WarBoardSimplePopupElementBuff__SetUp(
       goto LABEL_16;
     UILabel__set_text(explanationLabel, (System_String_o *)ItemIconParts, 0);
     itemIcon = this->fields.itemIcon;
-    ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !ItemIconParts
       || !itemIcon
       || (UISprite__set_atlas(itemIcon, *((UIAtlas_o **)ItemIconParts + 30), 0),
@@ -234,211 +269,206 @@ void WarBoardSimplePopupElementBuff__SetUp(
           !itemBaseImageIcon) )
     {
 LABEL_16:
-      sub_1D0F30C(ItemIconParts, v5);
+      sub_21FFECC(ItemIconParts, v5);
     }
     UISprite__set_spriteName(itemBaseImageIcon, (System_String_o *)ItemIconParts, 0);
   }
 }
 
 
-void WarBoardSimplePopupElementBuff__SetUp_39621616(
+void WarBoardSimplePopupElementBuff__SetUp_45178960(
         WarBoardSimplePopupElementBuff_o *this,
         WarBoardWallData_o *wallData,
         const MethodInfo *method)
 {
   __int64 v5; // x1
   char *ItemIconParts; // x0
-  __int64 breakPointMax_k__BackingField; // x22
+  __int64 breakPointMax_k__BackingField; // x21
   struct UIWidget_o *breakPointParent; // x8
-  unsigned int *v9; // x21
-  __int64 v10; // x24
-  unsigned __int64 v11; // x27
-  __int64 v12; // x25
-  char *v13; // x26
-  float v14; // s8
-  int v15; // w29
-  float v16; // s9
-  Il2CppObject *breakPointPrefab; // x22
-  UnityEngine_Transform_o *transform; // x23
-  UnityEngine_GameObject_o *v19; // x23
-  WarBoardBreakPointComponent_o *Component_object; // x22
+  float v9; // s8
+  unsigned int *v10; // x22
+  unsigned __int64 v11; // x26
+  MissionNaviTransitionBoardItem_o *v12; // x23
+  int v13; // w29
+  float v14; // s9
+  Il2CppObject *breakPointPrefab; // x24
+  __int64 v16; // x1
+  __int64 v17; // x2
+  UnityEngine_Transform_o *transform; // x25
+  UnityEngine_GameObject_o *v19; // x25
+  WarBoardBreakPointComponent_o *Component_object; // x24
   struct UIWidget_o *v21; // x8
-  __int64 v22; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  unsigned __int64 v22; // x25
+  __int64 v23; // x0
+  __int64 v24; // x1
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
   float maxSpacing; // s0
   UILabel_o *titleLabel; // x21
-  const MethodInfo *v31; // x1
+  const MethodInfo *v33; // x1
   UILabel_o *explanationLabel; // x21
   UISprite_o *wallIcon; // x21
-  UISprite_o *v34; // x20
-  WarBoardWallComponent_c *v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x2
+  UISprite_o *v38; // x20
+  WarBoardWallComponent_c *v39; // x0
   System_String_o *WALL_ICON_NAME; // x21
-  Il2CppObject *v37; // x0
-  __int64 v38; // x0
+  Il2CppObject *v41; // x0
+  __int64 v42; // x0
   int32_t wallImageId; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E75323 & 1) == 0 )
+  if ( (byte_59362A9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointComponent___);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1D0F0B4(&WarBoardBreakPointComponent___TypeInfo);
-    sub_1D0F0B4(&WarBoardWallComponent_TypeInfo);
-    byte_4E75323 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointComponent___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_21FFC50(&WarBoardBreakPointComponent___TypeInfo);
+    sub_21FFC50(&WarBoardWallComponent_TypeInfo);
+    byte_59362A9 = 1;
   }
   if ( WarBoardSimplePopupElementBuff__IsSerializeFieldNotNull(this, (const MethodInfo *)wallData) )
   {
     ItemIconParts = (char *)this->fields.ItemIconParts;
     if ( !ItemIconParts )
-      goto LABEL_26;
+      goto LABEL_35;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ItemIconParts, 0, 0);
     ItemIconParts = (char *)this->fields.effectIconParts;
     if ( !ItemIconParts )
-      goto LABEL_26;
+      goto LABEL_35;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ItemIconParts, 0, 0);
     ItemIconParts = (char *)this->fields.wallIconParts;
     if ( !ItemIconParts )
-      goto LABEL_26;
+      goto LABEL_35;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ItemIconParts, 1, 0);
     if ( wallData )
     {
       breakPointMax_k__BackingField = (unsigned int)wallData->fields._breakPointMax_k__BackingField;
-      ItemIconParts = (char *)sub_1D0F15C(
+      ItemIconParts = (char *)sub_21FFD10(
                                 WarBoardBreakPointComponent___TypeInfo,
                                 (unsigned int)breakPointMax_k__BackingField);
       breakPointParent = this->fields.breakPointParent;
       if ( !breakPointParent )
-        goto LABEL_26;
+        goto LABEL_35;
       if ( (int)breakPointMax_k__BackingField >= 1 )
       {
-        v9 = (unsigned int *)ItemIconParts;
-        v10 = 0;
+        v9 = 0.0;
+        v10 = (unsigned int *)ItemIconParts;
         v11 = 0;
-        v12 = breakPointMax_k__BackingField - 1;
-        v13 = ItemIconParts + 32;
-        v14 = 0.0;
-        v15 = 2 * breakPointMax_k__BackingField - 2;
-        v16 = (float)breakPointParent->fields.mWidth / (float)(int)breakPointMax_k__BackingField;
-        do
+        v12 = (MissionNaviTransitionBoardItem_o *)(ItemIconParts + 32);
+        v13 = 2 * breakPointMax_k__BackingField - 2;
+        v14 = (float)breakPointParent->fields.mWidth / (float)(int)breakPointMax_k__BackingField;
+        while ( 1 )
         {
+          ItemIconParts = (char *)this->fields.breakPointParent;
+          if ( !ItemIconParts )
+            break;
           breakPointPrefab = (Il2CppObject *)this->fields.breakPointPrefab;
-          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)breakPointParent, 0);
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          ItemIconParts = (char *)UnityEngine_Object__Instantiate_object__53335036(
+          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)ItemIconParts, 0);
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
+          ItemIconParts = (char *)UnityEngine_Object__Instantiate_object__59506996(
                                     breakPointPrefab,
                                     transform,
-                                    (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
+                                    (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
           if ( !ItemIconParts )
             break;
           v19 = (UnityEngine_GameObject_o *)ItemIconParts;
           Component_object = (WarBoardBreakPointComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                 (UnityEngine_GameObject_o *)ItemIconParts,
-                                                                (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointComponent___);
+                                                                (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointComponent___);
           ItemIconParts = (char *)UnityEngine_GameObject__get_transform(v19, 0);
           if ( !ItemIconParts )
             break;
-          v40.fields.y = 0.0;
-          v40.fields.z = 0.0;
-          v40.fields.x = v14;
-          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ItemIconParts, v40, 0);
+          v44.fields.y = 0.0;
+          v44.fields.z = 0.0;
+          v44.fields.x = v9;
+          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ItemIconParts, v44, 0);
           v21 = this->fields.breakPointParent;
           if ( !v21 )
             break;
           if ( !Component_object )
             break;
-          WarBoardBreakPointComponent__Initialize(Component_object, v15 + v21->fields.mDepth, v11 + 1, 0, 0, 1, 0);
-          if ( !v9 )
+          v22 = v11 + 1;
+          WarBoardBreakPointComponent__Initialize(Component_object, v13 + v21->fields.mDepth, v11 + 1, 0, 0, 1, 0);
+          if ( !v10 )
             break;
-          v22 = sub_1D0F1F0(Component_object, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
-          if ( !v22 )
+          v23 = sub_21FFDA4(Component_object, *(_QWORD *)(*(_QWORD *)v10 + 64LL));
+          if ( !v23 )
           {
-            v38 = sub_1D0F330();
-            sub_1D0F1DC(v38, 0);
+            v42 = sub_21FFEF0(0, v24);
+            sub_21FFD90(v42, 0);
           }
-          if ( v11 >= v9[6]
-            || (*(_QWORD *)&v13[8 * v11] = Component_object,
-                sub_1D0F058(
-                  (GrandQuestFolderBoardItem_o *)&v13[v10],
-                  (int32_t)Component_object,
-                  v23,
-                  v24,
-                  v25,
-                  v26,
-                  v27,
-                  v28),
-                v11 >= v9[6]) )
+          if ( v11 >= v10[6]
+            || (v12->klass = (MissionNaviTransitionBoardItem_c *)Component_object,
+                sub_21FFBF4(v12, (int32_t)Component_object, v25, v26, v27, v28, v29, v30),
+                v11 >= v10[6]) )
           {
-            sub_1D0F314(v22);
+            sub_21FFED4(v23);
           }
-          ItemIconParts = *(char **)&v13[8 * v11];
-          if ( !ItemIconParts )
+          ItemIconParts = (char *)v12->klass;
+          if ( !v12->klass )
             break;
           WarBoardBreakPointComponent__SetActive(
             (WarBoardBreakPointComponent_o *)ItemIconParts,
             (__int64)v11 < wallData->fields._breakPoint_k__BackingField,
             0,
             0);
-          if ( v12 == v11 )
-            goto LABEL_27;
           maxSpacing = Component_object->fields.maxSpacing;
-          breakPointParent = this->fields.breakPointParent;
-          v15 -= 2;
-          v10 += 8;
-          if ( maxSpacing >= v16 )
-            maxSpacing = v16;
-          v14 = v14 + maxSpacing;
+          v13 -= 2;
+          v12 = (MissionNaviTransitionBoardItem_o *)((char *)v12 + 8);
           ++v11;
+          if ( maxSpacing >= v14 )
+            maxSpacing = v14;
+          v9 = v9 + maxSpacing;
+          if ( breakPointMax_k__BackingField == v22 )
+            goto LABEL_26;
         }
-        while ( breakPointParent );
-LABEL_26:
-        sub_1D0F30C(ItemIconParts, v5);
+LABEL_35:
+        sub_21FFECC(ItemIconParts, v5);
       }
-LABEL_27:
+LABEL_26:
       titleLabel = this->fields.titleLabel;
       ItemIconParts = (char *)WarBoardWallData__get_wallName(wallData, 0);
       if ( !titleLabel )
-        goto LABEL_26;
+        goto LABEL_35;
       UILabel__set_text(titleLabel, (System_String_o *)ItemIconParts, 0);
-      WarBoardSimplePopupElementBuff__SetCondensedScaleTitleLabel(this, v31);
+      WarBoardSimplePopupElementBuff__SetCondensedScaleTitleLabel(this, v33);
       explanationLabel = this->fields.explanationLabel;
       ItemIconParts = (char *)WarBoardWallData__get_wallMessage(wallData, 0);
       if ( !explanationLabel )
-        goto LABEL_26;
+        goto LABEL_35;
       UILabel__set_text(explanationLabel, (System_String_o *)ItemIconParts, 0);
       wallIcon = this->fields.wallIcon;
-      ItemIconParts = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      ItemIconParts = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( !ItemIconParts || !wallIcon )
-        goto LABEL_26;
+        goto LABEL_35;
       UISprite__set_atlas(wallIcon, *((UIAtlas_o **)ItemIconParts + 32), 0);
-      v34 = this->fields.wallIcon;
-      v35 = WarBoardWallComponent_TypeInfo;
-      if ( !WarBoardWallComponent_TypeInfo->_2.cctor_finished )
+      v38 = this->fields.wallIcon;
+      v39 = WarBoardWallComponent_TypeInfo;
+      if ( !*(&WarBoardWallComponent_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(WarBoardWallComponent_TypeInfo);
-        v35 = WarBoardWallComponent_TypeInfo;
+        j_il2cpp_runtime_class_init_0(WarBoardWallComponent_TypeInfo, v36, v37);
+        v39 = WarBoardWallComponent_TypeInfo;
       }
-      WALL_ICON_NAME = v35->static_fields->WALL_ICON_NAME;
+      WALL_ICON_NAME = v39->static_fields->WALL_ICON_NAME;
       wallImageId = WarBoardWallData__get_wallImageId(wallData, 0);
-      v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &wallImageId);
-      ItemIconParts = (char *)System_String__Format(WALL_ICON_NAME, v37, 0);
-      if ( !v34 )
-        goto LABEL_26;
-      UISprite__set_spriteName(v34, (System_String_o *)ItemIconParts, 0);
+      v41 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &wallImageId);
+      ItemIconParts = (char *)System_String__Format(WALL_ICON_NAME, v41, 0);
+      if ( !v38 )
+        goto LABEL_35;
+      UISprite__set_spriteName(v38, (System_String_o *)ItemIconParts, 0);
     }
   }
 }
 
 
-void WarBoardSimplePopupElementBuff__SetUp_39622548(
+void WarBoardSimplePopupElementBuff__SetUp_45179868(
         WarBoardSimplePopupElementBuff_o *this,
         WarBoardEffectData_o *effectData,
         const MethodInfo *method)
@@ -459,14 +489,14 @@ void WarBoardSimplePopupElementBuff__SetUp_39622548(
   int32_t imageId_k__BackingField; // [xsp+8h] [xbp-28h] BYREF
   int32_t effectIconId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E75324 & 1) == 0 )
+  if ( (byte_59362AA & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_24110/*"square{0:D3}"*/);
-    sub_1D0F0B4(&StringLiteral_24108/*"squares"*/);
-    byte_4E75324 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_24840/*"square{0:D3}"*/);
+    sub_21FFC50(&StringLiteral_24838/*"squares"*/);
+    byte_59362AA = 1;
   }
+  effectIconId = 0;
   if ( WarBoardSimplePopupElementBuff__IsSerializeFieldNotNull(this, (const MethodInfo *)effectData) )
   {
     ItemIconParts = this->fields.ItemIconParts;
@@ -495,7 +525,7 @@ void WarBoardSimplePopupElementBuff__SetUp_39622548(
             {
               UILabel__set_text(explanationLabel, (System_String_o *)ItemIconParts, 0);
               effectIcon = this->fields.effectIcon;
-              ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+              ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
               if ( ItemIconParts )
               {
                 if ( effectIcon )
@@ -507,7 +537,7 @@ void WarBoardSimplePopupElementBuff__SetUp_39622548(
                   if ( v11 )
                   {
                     UISprite__set_spriteName(v11, (System_String_o *)ItemIconParts, 0);
-                    ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+                    ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
                     if ( ItemIconParts )
                     {
                       ItemIconParts = (void *)*((_QWORD *)ItemIconParts + 55);
@@ -519,7 +549,7 @@ void WarBoardSimplePopupElementBuff__SetUp_39622548(
                                    0);
                         effectIconBase = this->fields.effectIconBase;
                         v14 = Square;
-                        ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+                        ItemIconParts = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
                         if ( ItemIconParts )
                         {
                           if ( effectIconBase )
@@ -532,15 +562,15 @@ void WarBoardSimplePopupElementBuff__SetUp_39622548(
                               {
                                 if ( v15 )
                                 {
-                                  v17 = (System_String_o *)StringLiteral_24108/*"squares"*/;
+                                  v17 = (System_String_o *)StringLiteral_24838/*"squares"*/;
                                   goto LABEL_23;
                                 }
                               }
                               else
                               {
                                 imageId_k__BackingField = v14->fields._imageId_k__BackingField;
-                                v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId_k__BackingField);
-                                ItemIconParts = System_String__Format((System_String_o *)StringLiteral_24110/*"square{0:D3}"*/, v16, 0);
+                                v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId_k__BackingField);
+                                ItemIconParts = System_String__Format((System_String_o *)StringLiteral_24840/*"square{0:D3}"*/, v16, 0);
                                 if ( v15 )
                                 {
                                   v17 = (System_String_o *)ItemIconParts;
@@ -562,30 +592,31 @@ LABEL_23:
         }
       }
     }
-    sub_1D0F30C(ItemIconParts, v5);
+    sub_21FFECC(ItemIconParts, v5);
   }
 }
 
 
 void WarBoardSimplePopupElementBuff__Update(WarBoardSimplePopupElementBuff_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *scrollView; // x20
-  __int64 v4; // x1
-  UIScrollView_o *v5; // x0
+  __int64 v5; // x1
+  UIScrollView_o *v6; // x0
 
-  if ( (byte_4E75325 & 1) == 0 )
+  if ( (byte_59362AB & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E75325 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59362AB = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
   {
-    v5 = this->fields.scrollView;
-    if ( !v5 )
-      sub_1D0F30C(0, v4);
-    UIScrollView__UpdateScrollbars(v5, 0);
+    v6 = this->fields.scrollView;
+    if ( !v6 )
+      sub_21FFECC(0, v5);
+    UIScrollView__UpdateScrollbars(v6, 0);
   }
 }

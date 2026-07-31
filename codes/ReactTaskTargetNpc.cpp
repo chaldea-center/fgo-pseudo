@@ -17,10 +17,10 @@ BattleLogicTask_array *ReactTaskTargetNpc__CreateReactionTasksPartial(
   __int64 v10; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_4E7AA72 & 1) == 0 )
+  if ( (byte_593BAD3 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleLogicTask___TypeInfo);
-    byte_4E7AA72 = 1;
+    sub_21FFC50(&BattleLogicTask___TypeInfo);
+    byte_593BAD3 = 1;
   }
   logicNpcAi = (BattleLogicNpcAi_o *)((__int64 (__fastcall *)(ReactTaskTargetNpc_o *, ServantReactTaskCreator_o *, BattleLogic_o *, _QWORD, const MethodInfo *))this->klass->vtable._7_ExistTargetPriority.methodPtr)(
                                        this,
@@ -29,9 +29,9 @@ BattleLogicTask_array *ReactTaskTargetNpc__CreateReactionTasksPartial(
                                        (unsigned int)priority,
                                        this->klass->vtable._7_ExistTargetPriority.method);
   if ( ((unsigned __int8)logicNpcAi & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1D0F15C(BattleLogicTask___TypeInfo, 0);
+    return (BattleLogicTask_array *)sub_21FFD10(BattleLogicTask___TypeInfo, 0);
   if ( !logic || !creator || (logicNpcAi = logic->fields.logicNpcAi) == 0 )
-    sub_1D0F30C(logicNpcAi, v10);
+    sub_21FFECC(logicNpcAi, v10);
   return BattleLogicNpcAi__MakeAiCheckTask(logicNpcAi, creator->fields._ProcState_k__BackingField, v11);
 }
 
@@ -46,47 +46,47 @@ bool ReactTaskTargetNpc__ExistTargetPriority(
   __int64 v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  bool v15; // w6
+  bool v16; // w7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
   __int64 v23; // x8
   __int64 v24; // x8
   System_Collections_Generic_List_T__o *v25; // x19
   System_Func_object__bool__o *v26; // x20
 
-  if ( (byte_4E7AA73 & 1) == 0 )
+  if ( (byte_593BAD4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Any_AiNpcBattleServantData___);
-    sub_1D0F0B4(&System_Func_AiNpcBattleServantData__bool__TypeInfo);
-    sub_1D0F0B4(&Method_ReactTaskTargetNpc___c__DisplayClass1_0__ExistTargetPriority_b__0__);
-    sub_1D0F0B4(&ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
-    byte_4E7AA73 = 1;
+    sub_21FFC50(&Method_BasicHelper_Any_AiNpcBattleServantData___);
+    sub_21FFC50(&System_Func_AiNpcBattleServantData__bool__TypeInfo);
+    sub_21FFC50(&Method_ReactTaskTargetNpc___c__DisplayClass1_0__ExistTargetPriority_b__0__);
+    sub_21FFC50(&ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
+    byte_593BAD4 = 1;
   }
-  v8 = sub_1D0F300(ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
+  v8 = sub_21FFEBC(ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = creator,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 16), (int32_t)creator, v11, v12, v13, v14, v15, v16),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 16), (int32_t)creator, v11, v12, v13, v14, v15, v16),
         *(_QWORD *)(v8 + 24) = logic,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 24), (int32_t)logic, v17, v18, v19, v20, v21, v22),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 24), (int32_t)logic, v17, v18, v19, v20, v21, v22),
         v23 = *(_QWORD *)(v8 + 24),
         *(_DWORD *)(v8 + 32) = priority,
         !v23)
     || (v24 = *(_QWORD *)(v23 + 40)) == 0 )
   {
-    sub_1D0F30C(v9, v10);
+    sub_21FFECC(v9, v10);
   }
   v25 = *(System_Collections_Generic_List_T__o **)(v24 + 152);
-  v26 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_AiNpcBattleServantData__bool__TypeInfo);
+  v26 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_AiNpcBattleServantData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v26,
     (Il2CppObject *)v8,
@@ -95,7 +95,7 @@ bool ReactTaskTargetNpc__ExistTargetPriority(
   return BasicHelper__Any_object_(
            v25,
            (System_Func_T__bool__o *)v26,
-           (const MethodInfo_32382EC *)Method_BasicHelper_Any_AiNpcBattleServantData___);
+           (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_AiNpcBattleServantData___);
 }
 
 
@@ -116,7 +116,7 @@ bool ReactTaskTargetNpc___c__DisplayClass1_0___ExistTargetPriority_b__0(
 
   creator = this->fields.creator;
   if ( !creator )
-    sub_1D0F30C(0, svt);
+    sub_21FFECC(0, svt);
   return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, AiNpcBattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
            creator,
            this->fields.logic,

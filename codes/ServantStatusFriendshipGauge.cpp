@@ -1,9 +1,9 @@
 void ServantStatusFriendshipGauge___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E73D4F & 1) == 0 )
+  if ( (byte_59349D4 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantStatusFriendshipGauge_TypeInfo);
-    byte_4E73D4F = 1;
+    sub_21FFC50(&ServantStatusFriendshipGauge_TypeInfo);
+    byte_59349D4 = 1;
   }
   *ServantStatusFriendshipGauge_TypeInfo->static_fields = (struct ServantStatusFriendshipGauge_StaticFields)0xC0000000C1A00000LL;
 }
@@ -12,32 +12,32 @@ void ServantStatusFriendshipGauge___cctor(const MethodInfo *method)
 void ServantStatusFriendshipGauge___ctor(ServantStatusFriendshipGauge_o *this, const MethodInfo *method)
 {
   struct UISlider_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   struct UISlider_array *v10; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E73D4E & 1) == 0 )
+  if ( (byte_59349D3 & 1) == 0 )
   {
-    sub_1D0F0B4(&UISlider___TypeInfo);
-    byte_4E73D4E = 1;
+    sub_21FFC50(&UISlider___TypeInfo);
+    byte_59349D3 = 1;
   }
-  v3 = (struct UISlider_array *)sub_1D0F15C(UISlider___TypeInfo, 10);
+  v3 = (struct UISlider_array *)sub_21FFD10(UISlider___TypeInfo, 10);
   this->fields.gaugeSliderList = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (struct UISlider_array *)sub_1D0F15C(UISlider___TypeInfo, 10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (struct UISlider_array *)sub_21FFD10(UISlider___TypeInfo, 10);
   this->fields.overLimitGaugeSliderList = v10;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.overLimitGaugeSliderList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.overLimitGaugeSliderList,
     (int32_t)v10,
     v11,
     v12,
@@ -62,12 +62,12 @@ void ServantStatusFriendshipGauge__DisplayGauge(
   BalanceConfig_c *v10; // x0
   int DisableFriendshipExceed; // w22
 
-  if ( (byte_4E73D4C & 1) == 0 )
+  if ( (byte_59349D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    byte_4E73D4C = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    byte_59349D1 = 1;
   }
-  if ( maxRank <= 10 )
+  if ( maxRank < 11 )
   {
     ServantStatusFriendshipGauge__SetActiveContainer(this, 0, *(const MethodInfo **)&maxRank);
 LABEL_8:
@@ -75,9 +75,9 @@ LABEL_8:
     return;
   }
   v10 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *(_QWORD *)&currentRank, *(_QWORD *)&maxRank);
     v10 = BalanceConfig_TypeInfo;
   }
   DisableFriendshipExceed = v10->static_fields->DisableFriendshipExceed;
@@ -98,78 +98,90 @@ void ServantStatusFriendshipGauge__DisplayNomalGauge(
 {
   struct UISlider_array *gaugeSliderList; // x8
   ServantStatusFriendshipGauge_o *v8; // x20
-  __int64 v10; // x23
-  int max_length; // w9
-  Il2CppClass **v13; // x8
-  UnityEngine_Component_o *v14; // x22
-  float sy1; // s9
-  float x; // s11
+  signed __int64 v9; // x22
+  signed __int64 v10; // x23
+  signed __int64 v11; // x24
+  __int64 v12; // x25
+  unsigned __int64 max_length_low; // x9
+  Il2CppClass **v14; // x8
+  UnityEngine_Component_o *v15; // x21
+  float x; // s9
   float z; // s10
-  float v18; // s0
+  float sy1; // s11
+  float v19; // s0
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   gaugeSliderList = this->fields.gaugeSliderList;
   if ( !gaugeSliderList )
-LABEL_22:
-    sub_1D0F30C(this, *(_QWORD *)&currentRank);
+LABEL_24:
+    sub_21FFECC(this, *(_QWORD *)&currentRank);
   v8 = this;
-  v10 = 0;
+  v9 = 0;
+  v10 = currentRank;
+  v11 = maxRank;
+  v12 = (unsigned int)currentRank;
   while ( 1 )
   {
-    max_length = gaugeSliderList->max_length;
-    if ( (int)v10 >= max_length )
+    max_length_low = LODWORD(gaugeSliderList->max_length);
+    if ( v9 >= (int)max_length_low )
       break;
-    if ( (unsigned int)v10 >= max_length )
-      sub_1D0F314(this);
-    v13 = &gaugeSliderList->obj.klass + v10;
-    v14 = (UnityEngine_Component_o *)v13[4];
-    if ( !v14
-      || (this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_gameObject(
-                                                     (UnityEngine_Component_o *)v13[4],
-                                                     0)) == 0 )
+    if ( v9 >= max_length_low )
+      sub_21FFED4(this);
+    v14 = &gaugeSliderList->obj.klass + v9;
+    v15 = (UnityEngine_Component_o *)v14[4];
+    if ( v9 >= v11 )
     {
-LABEL_24:
-      sub_1D0F30C(this, *(_QWORD *)&currentRank);
-    }
-    if ( (int)v10 >= maxRank )
-    {
+      if ( !v15 )
+        goto LABEL_24;
+      this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_gameObject(
+                                                 (UnityEngine_Component_o *)v14[4],
+                                                 0);
+      if ( !this )
+        goto LABEL_24;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
     }
     else
     {
+      if ( !v15 )
+        goto LABEL_24;
+      this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_gameObject(
+                                                 (UnityEngine_Component_o *)v14[4],
+                                                 0);
+      if ( !this )
+        goto LABEL_24;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      if ( (unsigned int)v10 <= 4 )
+      if ( (unsigned __int64)v9 <= 4 )
       {
-        this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform(v14, 0);
+        this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform(v15, 0);
         if ( !this )
           goto LABEL_24;
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-        sy1 = v8->fields.sy1;
         x = localPosition.fields.x;
         z = localPosition.fields.z;
+        sy1 = v8->fields.sy1;
         if ( maxRank <= 5 )
           sy1 = (float)(sy1 + v8->fields.sy2) * 0.5;
-        this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform(v14, 0);
+        this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform(v15, 0);
         if ( !this )
           goto LABEL_24;
-        v20.fields.x = x;
-        v20.fields.y = sy1;
-        v20.fields.z = z;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v20, 0);
+        v21.fields.x = x;
+        v21.fields.y = sy1;
+        v21.fields.z = z;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v21, 0);
       }
-      if ( currentRank == (_DWORD)v10 )
-        v18 = fraction;
+      if ( v12 == v9 )
+        v19 = fraction;
       else
-        v18 = 0.0;
-      if ( (int)v10 < currentRank )
-        v18 = 1.0;
-      UIProgressBar__set_value((UIProgressBar_o *)v14, v18, 0);
+        v19 = 0.0;
+      if ( v9 < v10 )
+        v19 = 1.0;
+      UIProgressBar__set_value((UIProgressBar_o *)v15, v19, 0);
     }
     gaugeSliderList = v8->fields.gaugeSliderList;
-    ++v10;
+    ++v9;
     if ( !gaugeSliderList )
-      goto LABEL_22;
+      goto LABEL_24;
   }
 }
 
@@ -185,85 +197,100 @@ void ServantStatusFriendshipGauge__DisplayOverLimitGauge(
   int32_t v7; // w19
   ServantStatusFriendshipGauge_o *v8; // x20
   struct UISlider_array *overLimitGaugeSliderList; // x8
-  __int64 v10; // x22
-  int v11; // w24
-  int max_length; // w9
+  signed __int64 v10; // x23
+  unsigned __int64 v11; // x24
+  unsigned __int64 max_length_low; // x9
   Il2CppClass **v13; // x8
   UIProgressBar_o *v14; // x21
   float v15; // s0
   UnityEngine_GameObject_o *gameObject; // x0
-  ServantStatusFriendshipGauge_c *v17; // x8
-  UnityEngine_GameObject_o *v18; // x21
-  struct ServantStatusFriendshipGauge_StaticFields *static_fields; // x8
+  __int64 v17; // x1
+  __int64 v18; // x2
+  ServantStatusFriendshipGauge_c *v19; // x8
+  UnityEngine_GameObject_o *v20; // x21
+  int v21; // w9
   float POSITION_Y_DEFAULT; // s0
 
   v7 = currentRank;
   v8 = this;
-  if ( (byte_4E73D4D & 1) == 0 )
+  if ( (byte_59349D2 & 1) == 0 )
   {
-    this = (ServantStatusFriendshipGauge_o *)sub_1D0F0B4(&ServantStatusFriendshipGauge_TypeInfo);
-    byte_4E73D4D = 1;
+    this = (ServantStatusFriendshipGauge_o *)sub_21FFC50(&ServantStatusFriendshipGauge_TypeInfo);
+    byte_59349D2 = 1;
   }
   overLimitGaugeSliderList = v8->fields.overLimitGaugeSliderList;
   if ( !overLimitGaugeSliderList )
-LABEL_22:
-    sub_1D0F30C(this, *(_QWORD *)&currentRank);
-  v10 = 0;
-  v11 = maxRank - 10;
+LABEL_26:
+    sub_21FFECC(this, *(_QWORD *)&currentRank);
+  v10 = maxRank - 10;
+  v11 = 0;
   while ( 1 )
   {
-    max_length = overLimitGaugeSliderList->max_length;
-    if ( (int)v10 >= max_length )
+    max_length_low = LODWORD(overLimitGaugeSliderList->max_length);
+    if ( (__int64)v11 >= (int)max_length_low )
       break;
-    if ( (unsigned int)v10 >= max_length )
-      sub_1D0F314(this);
-    v13 = &overLimitGaugeSliderList->obj.klass + v10;
+    if ( v11 >= max_length_low )
+      sub_21FFED4(this);
+    v13 = &overLimitGaugeSliderList->obj.klass + v11;
     v14 = (UIProgressBar_o *)v13[4];
-    if ( v14 )
+    if ( (__int64)v11 >= v10 )
     {
+      if ( !v14 )
+        goto LABEL_26;
       this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)v13[4],
                                                  0);
-      if ( this )
+      if ( !this )
+        goto LABEL_26;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+    }
+    else
+    {
+      if ( !v14 )
+        goto LABEL_26;
+      this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_gameObject(
+                                                 (UnityEngine_Component_o *)v13[4],
+                                                 0);
+      if ( !this )
+        goto LABEL_26;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+      if ( v7 <= 10 )
+        v15 = fraction;
+      else
+        v15 = 1.0;
+      UIProgressBar__set_value(v14, v15, 0);
+      if ( v11 <= 4 )
       {
-        if ( (int)v10 >= v11 )
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v14, 0);
+        v19 = ServantStatusFriendshipGauge_TypeInfo;
+        v20 = gameObject;
+        v21 = *(&ServantStatusFriendshipGauge_TypeInfo->_2.cctor_finished + 1);
+        if ( (int)v10 <= 5 )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+          if ( !v21 )
+          {
+            j_il2cpp_runtime_class_init_0(ServantStatusFriendshipGauge_TypeInfo, v17, v18);
+            v19 = ServantStatusFriendshipGauge_TypeInfo;
+          }
+          POSITION_Y_DEFAULT = v19->static_fields->POSITION_Y_DEFAULT;
         }
         else
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-          if ( v7 <= 10 )
-            v15 = fraction;
-          else
-            v15 = 1.0;
-          UIProgressBar__set_value(v14, v15, 0);
-          if ( (unsigned int)v10 <= 4 )
+          if ( !v21 )
           {
-            gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v14, 0);
-            v17 = ServantStatusFriendshipGauge_TypeInfo;
-            v18 = gameObject;
-            if ( !ServantStatusFriendshipGauge_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(ServantStatusFriendshipGauge_TypeInfo);
-              v17 = ServantStatusFriendshipGauge_TypeInfo;
-            }
-            static_fields = v17->static_fields;
-            if ( v11 <= 5 )
-              POSITION_Y_DEFAULT = static_fields->POSITION_Y_DEFAULT;
-            else
-              POSITION_Y_DEFAULT = static_fields->POSITION_Y_OTHER;
-            GameObjectExtensions__SetLocalPositionY(v18, POSITION_Y_DEFAULT, 0);
+            j_il2cpp_runtime_class_init_0(ServantStatusFriendshipGauge_TypeInfo, v17, v18);
+            v19 = ServantStatusFriendshipGauge_TypeInfo;
           }
+          POSITION_Y_DEFAULT = v19->static_fields->POSITION_Y_OTHER;
         }
-        overLimitGaugeSliderList = v8->fields.overLimitGaugeSliderList;
-        ++v10;
-        --v7;
-        if ( overLimitGaugeSliderList )
-          continue;
+        GameObjectExtensions__SetLocalPositionY(v20, POSITION_Y_DEFAULT, 0);
       }
     }
-    goto LABEL_22;
+    overLimitGaugeSliderList = v8->fields.overLimitGaugeSliderList;
+    ++v11;
+    --v7;
+    if ( !overLimitGaugeSliderList )
+      goto LABEL_26;
   }
 }
 
@@ -272,83 +299,66 @@ void ServantStatusFriendshipGauge__Initialize(ServantStatusFriendshipGauge_o *th
 {
   ServantStatusFriendshipGauge_o *v2; // x19
   struct UISlider_array *gaugeSliderList; // x8
-  il2cpp_array_size_t max_length; // x9
-  int v5; // w10
-  struct UISlider_array *overLimitGaugeSliderList; // x10
-  int v7; // w10
-  int v8; // w11
-  struct UISlider_array *v9; // x8
-  int v10; // w9
-  BalanceConfig_c *v11; // x0
+  __int64 v4; // x2
+  struct UISlider_array *v5; // x8
+  int max_length; // w9
+  BalanceConfig_c *v7; // x0
   UISprite_o *overLimitGaugeSprite; // x19
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4E73D4A & 1) == 0 )
+  if ( (byte_59349CF & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    this = (ServantStatusFriendshipGauge_o *)sub_1D0F0B4(&StringLiteral_20727/*"img_bondsgage_11"*/);
-    byte_4E73D4A = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    this = (ServantStatusFriendshipGauge_o *)sub_21FFC50(&StringLiteral_21283/*"img_bondsgage_11"*/);
+    byte_59349CF = 1;
   }
   gaugeSliderList = v2->fields.gaugeSliderList;
-  if ( !gaugeSliderList )
-    goto LABEL_24;
-  max_length = gaugeSliderList->max_length;
-  v5 = -1;
-  do
-    ++v5;
-  while ( v5 < (int)max_length );
-  overLimitGaugeSliderList = v2->fields.overLimitGaugeSliderList;
-  if ( !overLimitGaugeSliderList )
-    goto LABEL_24;
-  v7 = overLimitGaugeSliderList->max_length;
-  v8 = -1;
-  do
-    ++v8;
-  while ( v8 < v7 );
-  if ( !(_DWORD)max_length )
-    goto LABEL_25;
+  if ( !gaugeSliderList || !v2->fields.overLimitGaugeSliderList )
+    goto LABEL_20;
+  if ( !LODWORD(gaugeSliderList->max_length) )
+    goto LABEL_21;
   this = (ServantStatusFriendshipGauge_o *)gaugeSliderList->m_Items[0];
   if ( !this
     || (this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)this,
                                                    0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
-        v9 = v2->fields.gaugeSliderList,
+        v5 = v2->fields.gaugeSliderList,
         v2->fields.sy1 = localPosition.fields.y,
-        !v9) )
+        !v5) )
   {
-LABEL_24:
-    sub_1D0F30C(this, method);
+LABEL_20:
+    sub_21FFECC(this, method);
   }
-  v10 = v9->max_length;
-  if ( v10 < 5 )
-    goto LABEL_18;
-  if ( v10 == 5 )
-LABEL_25:
-    sub_1D0F314(this);
-  this = (ServantStatusFriendshipGauge_o *)v9->m_Items[5];
+  max_length = v5->max_length;
+  if ( max_length < 5 )
+    goto LABEL_14;
+  if ( max_length == 5 )
+LABEL_21:
+    sub_21FFED4(this);
+  this = (ServantStatusFriendshipGauge_o *)v5->m_Items[5];
   if ( !this )
-    goto LABEL_24;
+    goto LABEL_20;
   this = (ServantStatusFriendshipGauge_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this )
-    goto LABEL_24;
+    goto LABEL_20;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-LABEL_18:
+LABEL_14:
   v2->fields.sy2 = localPosition.fields.y;
-  v11 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v7 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v11 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v4);
+    v7 = BalanceConfig_TypeInfo;
   }
-  if ( v11->static_fields->DisableFriendshipExceed <= 0 )
+  if ( v7->static_fields->DisableFriendshipExceed <= 0 )
   {
     overLimitGaugeSprite = v2->fields.overLimitGaugeSprite;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_20727/*"img_bondsgage_11"*/, 0);
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v4);
+    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_21283/*"img_bondsgage_11"*/, 0);
   }
 }
 
@@ -363,24 +373,27 @@ void ServantStatusFriendshipGauge__Set(
         const MethodInfo *method)
 {
   BalanceConfig_c *v11; // x0
+  bool v12; // zf
   UIExtrusionLabel_o *levelLabel; // x21
   System_String_o *NumberFormat; // x0
-  System_String_o *v14; // x1
+  System_String_o *v15; // x1
   UILabel_o *maxLevelLabel; // x21
+  __int64 v17; // x1
+  __int64 v18; // x2
   UILabel_o *latePointLabel; // x21
-  const MethodInfo *v17; // x3
-  int32_t v18; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
+  const MethodInfo *v20; // x3
+  int32_t v21; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v22; // [xsp+Ch] [xbp-34h] BYREF
 
-  v18 = maxRank;
-  v19 = currentRank;
-  if ( (byte_4E73D4B & 1) == 0 )
+  v21 = maxRank;
+  v22 = currentRank;
+  if ( (byte_59349D0 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_15021/*"UNIT_REST_NONE"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E73D4B = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_15386/*"UNIT_REST_NONE"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59349D0 = 1;
   }
   if ( this->fields.isInit )
   {
@@ -388,52 +401,55 @@ void ServantStatusFriendshipGauge__Set(
     ServantStatusFriendshipGauge__Initialize(this, *(const MethodInfo **)&currentRank);
   }
   v11 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *(_QWORD *)&currentRank, *(_QWORD *)&maxRank);
     v11 = BalanceConfig_TypeInfo;
   }
-  if ( v11->static_fields->DisableFriendshipExceed <= 0 && late != -1 && maxRank == currentRank )
+  if ( v11->static_fields->DisableFriendshipExceed <= 0 )
   {
-    fraction = 0.0;
-    late = 0;
+    v12 = late != -1 && maxRank == currentRank;
+    if ( v12 )
+      late = 0;
+    if ( v12 )
+      fraction = 0.0;
   }
   levelLabel = this->fields.levelLabel;
-  NumberFormat = System_Int32__ToString((int32_t)&v19, 0);
+  NumberFormat = System_Int32__ToString((int32_t)&v22, 0);
   if ( !levelLabel )
-    goto LABEL_20;
+    goto LABEL_27;
   UIExtrusionLabel__set_text(levelLabel, NumberFormat, 0);
   maxLevelLabel = this->fields.maxLevelLabel;
-  NumberFormat = System_Int32__ToString((int32_t)&v18, 0);
+  NumberFormat = System_Int32__ToString((int32_t)&v21, 0);
   if ( !maxLevelLabel )
-    goto LABEL_20;
+    goto LABEL_27;
   UILabel__set_text(maxLevelLabel, NumberFormat, 0);
   latePointLabel = this->fields.latePointLabel;
   if ( late > 0 )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
     NumberFormat = LocalizationManager__GetNumberFormat(late, 0);
-    goto LABEL_16;
+    goto LABEL_23;
   }
   if ( (late & 0x80000000) == 0 )
   {
-    v14 = (System_String_o *)StringLiteral_1/*""*/;
+    v15 = (System_String_o *)StringLiteral_1/*""*/;
     if ( latePointLabel )
-      goto LABEL_17;
-LABEL_20:
-    sub_1D0F30C(NumberFormat, v14);
+      goto LABEL_24;
+LABEL_27:
+    sub_21FFECC(NumberFormat, v15);
   }
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_15021/*"UNIT_REST_NONE"*/, 0);
-LABEL_16:
-  v14 = NumberFormat;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
+  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_15386/*"UNIT_REST_NONE"*/, 0);
+LABEL_23:
+  v15 = NumberFormat;
   if ( !latePointLabel )
-    goto LABEL_20;
-LABEL_17:
-  UILabel__set_text(latePointLabel, v14, 0);
-  ServantStatusFriendshipGauge__DisplayGauge(this, v19, v18, fraction, v17);
+    goto LABEL_27;
+LABEL_24:
+  UILabel__set_text(latePointLabel, v15, 0);
+  ServantStatusFriendshipGauge__DisplayGauge(this, v22, v21, fraction, v20);
 }
 
 
@@ -450,7 +466,7 @@ void ServantStatusFriendshipGauge__SetActiveContainer(
     || (UnityEngine_GameObject__SetActive(nomalGaugeContainer, !isOverLimit, 0),
         (nomalGaugeContainer = this->fields.overLimitGaugeContainer) == 0) )
   {
-    sub_1D0F30C(nomalGaugeContainer, isOverLimit);
+    sub_21FFECC(nomalGaugeContainer, isOverLimit);
   }
   UnityEngine_GameObject__SetActive(nomalGaugeContainer, isOverLimit, 0);
 }

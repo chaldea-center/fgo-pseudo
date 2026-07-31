@@ -7,25 +7,25 @@ void SetCombineData___ctor(SetCombineData_o *this, const MethodInfo *method)
 
 void SetCombineData__Clear(SetCombineData_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
   *(_WORD *)&this->fields.isAdjustMax = 0;
   *(_QWORD *)&this->fields.selectSum = 0;
   *(_QWORD *)&this->fields.getExp = 0;
   *(_QWORD *)&this->fields.getHpAdjustVal = 0;
   this->fields.materialUsrSvtIdList = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3, v4, v5, v6, v7);
   this->fields.svtEqMaterialList = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.svtEqMaterialList, 0, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.svtEqMaterialList, 0, v9, v10, v11, v12, v13, v14);
 }

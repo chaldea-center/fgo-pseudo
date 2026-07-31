@@ -12,55 +12,52 @@ void BMSymbol__MarkAsChanged(BMSymbol_o *this, const MethodInfo *method)
 
 bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *method)
 {
-  _BOOL8 v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  __int64 v6; // x1
+  _BOOL8 v7; // x0
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
   struct UISpriteData_o *Sprite; // x1
   struct UISpriteData_o **p_mSprite; // x21
+  __int64 v16; // x1
   UnityEngine_Object_o *texture; // x20
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  int *v22; // x8
-  float v23; // s11
-  float v24; // s10
-  float v25; // s9
-  float v26; // s8
-  int32_t v27; // w21
-  int32_t v28; // w0
-  const MethodInfo *v29; // x2
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  int32_t v24; // w21
+  int32_t v25; // w0
+  const MethodInfo *v26; // x2
   struct UISpriteData_o *mSprite; // x8
   int32_t paddingLeft; // w9
-  __int64 v32; // d0
-  int32_t paddingRight; // w8
-  UnityEngine_Rect_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t paddingTop; // w10
+  __int64 v30; // d0
+  UnityEngine_Rect_o rect; // [xsp+0h] [xbp-40h]
+  UnityEngine_Rect_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7BE86 & 1) == 0 )
+  if ( (byte_593CDD7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BE86 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CDD7 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, atlas);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)atlas, 0, 0) )
     return 0;
   if ( !this->fields.mIsValid )
   {
     if ( System_String__IsNullOrEmpty(this->fields.spriteName, 0) )
       return 0;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)atlas, 0, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)atlas, 0, 0);
     Sprite = 0;
-    if ( v6 )
+    if ( v7 )
     {
       if ( !atlas )
         goto LABEL_25;
@@ -68,64 +65,53 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
     }
     this->fields.mSprite = Sprite;
     p_mSprite = &this->fields.mSprite;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v8, v9, v10, v11, v12, v13);
     if ( !this->fields.mSprite )
       return this->fields.mSprite != 0;
     if ( atlas )
     {
       texture = (UnityEngine_Object_o *)UIAtlas__get_texture(atlas, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v6 = UnityEngine_Object__op_Equality(texture, 0, 0);
-      if ( v6 )
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
+      v7 = UnityEngine_Object__op_Equality(texture, 0, 0);
+      if ( v7 )
       {
         *p_mSprite = 0;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, 0, v16, v17, v18, v19, v20, v21);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v18, v19, v20, v21, v22, v23);
         return this->fields.mSprite != 0;
       }
-      v22 = (int *)*p_mSprite;
       if ( *p_mSprite )
       {
-        v23 = (float)v22[6];
-        v24 = (float)v22[7];
-        v25 = (float)v22[8];
-        v26 = (float)v22[9];
-        this->fields.mUV.fields.m_XMin = v23;
-        this->fields.mUV.fields.m_YMin = v24;
-        this->fields.mUV.fields.m_Width = v25;
-        this->fields.mUV.fields.m_Height = v26;
+        rect = (UnityEngine_Rect_o)vcvtq_f32_s32(*(int32x4_t *)&(*p_mSprite)->fields.x);
+        this->fields.mUV = rect;
         if ( texture )
         {
-          v27 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))texture->klass[1]._1.image)(
+          v24 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))texture->klass[1]._1.image)(
                   texture,
                   texture->klass[1]._1.gc_desc);
-          v28 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))texture->klass[1]._1.byval_arg.data)(
+          v25 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))texture->klass[1]._1.byval_arg.data)(
                   texture,
                   *(_QWORD *)&texture->klass[1]._1.byval_arg.bits);
-          v34.fields.m_XMin = v23;
-          v34.fields.m_YMin = v24;
-          v34.fields.m_Width = v25;
-          v34.fields.m_Height = v26;
-          v35 = NGUIMath__ConvertToTexCoords(v34, v27, v28, v29);
+          v32 = NGUIMath__ConvertToTexCoords(rect, v24, v25, v26);
           mSprite = this->fields.mSprite;
-          this->fields.mUV = v35;
+          this->fields.mUV = v32;
           if ( mSprite )
           {
             paddingLeft = mSprite->fields.paddingLeft;
+            paddingTop = mSprite->fields.paddingTop;
             this->fields.mOffsetX = paddingLeft;
-            this->fields.mOffsetY = mSprite->fields.paddingTop;
-            v32 = *(_QWORD *)&mSprite->fields.width;
-            *(_QWORD *)&this->fields.mWidth = v32;
-            paddingRight = mSprite->fields.paddingRight;
+            this->fields.mOffsetY = paddingTop;
+            v30 = *(_QWORD *)&mSprite->fields.width;
+            *(_QWORD *)&this->fields.mWidth = v30;
+            this->fields.mAdvance = v30 + paddingLeft + mSprite->fields.paddingRight;
             this->fields.mIsValid = 1;
-            this->fields.mAdvance = v32 + paddingLeft + paddingRight;
             return this->fields.mSprite != 0;
           }
         }
       }
     }
 LABEL_25:
-    sub_1D0F30C(v6, Sprite);
+    sub_21FFECC(v7, Sprite);
   }
   return this->fields.mSprite != 0;
 }
@@ -153,7 +139,7 @@ int32_t BMSymbol__get_length(BMSymbol_o *this, const MethodInfo *method)
   {
     sequence = this->fields.sequence;
     if ( !sequence )
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     mLength = sequence->fields._stringLength;
     this->fields.mLength = mLength;
   }

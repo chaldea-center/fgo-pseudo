@@ -1,28 +1,56 @@
 void CostumeListViewItemDraw___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
+  int32_t v4; // w5
+  bool v5; // w6
+  bool v6; // w7
+  int32_t v7; // w1
+  int32_t v8; // w1
   struct CostumeListViewItemDraw_StaticFields *static_fields; // x0
-  __int64 v3; // x1
-  struct CostumeListViewItemDraw_StaticFields *v4; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  int32_t v16; // w1
+  struct CostumeListViewItemDraw_StaticFields *v17; // x0
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
 
-  if ( (byte_4E7139E & 1) == 0 )
+  if ( (byte_5932155 & 1) == 0 )
   {
-    sub_1D0F0B4(&CostumeListViewItemDraw_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20554/*"icon_costume_01"*/);
-    sub_1D0F0B4(&StringLiteral_20556/*"icon_costume_03"*/);
-    sub_1D0F0B4(&StringLiteral_20555/*"icon_costume_02"*/);
-    byte_4E7139E = 1;
+    sub_21FFC50(&CostumeListViewItemDraw_TypeInfo);
+    sub_21FFC50(&StringLiteral_21105/*"icon_costume_01"*/);
+    sub_21FFC50(&StringLiteral_21107/*"icon_costume_03"*/);
+    sub_21FFC50(&StringLiteral_21106/*"icon_costume_02"*/);
+    byte_5932155 = 1;
   }
-  CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK = (struct System_String_o *)StringLiteral_20554/*"icon_costume_01"*/;
-  sub_1D0F058(CostumeListViewItemDraw_TypeInfo->static_fields, StringLiteral_20554/*"icon_costume_01"*/);
-  v1 = StringLiteral_20555/*"icon_costume_02"*/;
+  v7 = StringLiteral_21105/*"icon_costume_01"*/;
+  CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK = (struct System_String_o *)StringLiteral_21105/*"icon_costume_01"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)CostumeListViewItemDraw_TypeInfo->static_fields,
+    v7,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v8 = StringLiteral_21106/*"icon_costume_02"*/;
   static_fields = CostumeListViewItemDraw_TypeInfo->static_fields;
-  static_fields->RELEASE_NG_MARK = (struct System_String_o *)StringLiteral_20555/*"icon_costume_02"*/;
-  sub_1D0F058(&static_fields->RELEASE_NG_MARK, v1);
-  v3 = StringLiteral_20556/*"icon_costume_03"*/;
-  v4 = CostumeListViewItemDraw_TypeInfo->static_fields;
-  v4->RELEASE_ALREADY_GET_MARK = (struct System_String_o *)StringLiteral_20556/*"icon_costume_03"*/;
-  sub_1D0F058(&v4->RELEASE_ALREADY_GET_MARK, v3);
+  static_fields->RELEASE_NG_MARK = (struct System_String_o *)StringLiteral_21106/*"icon_costume_02"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->RELEASE_NG_MARK, v8, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_21107/*"icon_costume_03"*/;
+  v17 = CostumeListViewItemDraw_TypeInfo->static_fields;
+  v17->RELEASE_ALREADY_GET_MARK = (struct System_String_o *)StringLiteral_21107/*"icon_costume_03"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->RELEASE_ALREADY_GET_MARK, v16, v18, v19, v20, v21, v22, v23);
 }
 
 
@@ -45,23 +73,25 @@ void CostumeListViewItemDraw__SetCostumeIcon(
   int32_t iconId; // t1
   UISprite_o *v10; // x21
   System_String_o *v11; // x0
-  System_String_o *v12; // x20
-  UnityEngine_Transform_o *v13; // x20
-  int v14; // s0 OVERLAPPED
-  float v15; // s1
-  int v16; // s2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  System_String_o *v14; // x20
+  UnityEngine_Transform_o *v15; // x20
+  float v16; // s1
+  int v17; // s0 OVERLAPPED
+  int v18; // s2
 
-  if ( (byte_4E7139D & 1) == 0 )
+  if ( (byte_5932154 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_24364/*"svt_costume_icon_"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7139D = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_25100/*"svt_costume_icon_"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5932154 = 1;
   }
   costomIcon = (UnityEngine_Object_o *)this->fields.costomIcon;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, svtCostumeEntity, method);
   if ( UnityEngine_Object__op_Inequality(costomIcon, 0, 0) )
   {
     transform = this->fields.costomIcon;
@@ -80,10 +110,10 @@ void CostumeListViewItemDraw__SetCostumeIcon(
       {
         v10 = this->fields.costomIcon;
         v11 = System_Int32__ToString(v8, 0);
-        v12 = System_String__Concat_65562772((System_String_o *)StringLiteral_24364/*"svt_costume_icon_"*/, v11, 0);
-        if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        if ( AtlasManager__SetEventSprite(v10, v12, 0) )
+        v14 = System_String__Concat_75438412((System_String_o *)StringLiteral_25100/*"svt_costume_icon_"*/, v11, 0);
+        if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v12, v13);
+        if ( AtlasManager__SetEventSprite(v10, v14, 0) )
         {
           transform = this->fields.costomIcon;
           if ( transform )
@@ -105,7 +135,7 @@ void CostumeListViewItemDraw__SetCostumeIcon(
                                               0);
                   if ( this->fields.canReleaseMark )
                   {
-                    v13 = (UnityEngine_Transform_o *)transform;
+                    v15 = (UnityEngine_Transform_o *)transform;
                     transform = (UISprite_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this->fields.canReleaseMark,
                                                 0);
@@ -114,14 +144,14 @@ void CostumeListViewItemDraw__SetCostumeIcon(
                       transform = (UISprite_o *)UnityEngine_GameObject__get_activeInHierarchy(
                                                   (UnityEngine_GameObject_o *)transform,
                                                   0);
-                      if ( v13 )
+                      if ( v15 )
                       {
-                        v14 = -1036779520;
-                        v15 = -32.0;
+                        v16 = -32.0;
+                        v17 = -1036779520;
+                        v18 = 0;
                         if ( ((unsigned __int8)transform & 1) == 0 )
-                          v15 = -45.0;
-                        v16 = 0;
-                        UnityEngine_Transform__set_localPosition(v13, *(UnityEngine_Vector3_o *)&v14, 0);
+                          v16 = -45.0;
+                        UnityEngine_Transform__set_localPosition(v15, *(UnityEngine_Vector3_o *)&v17, 0);
                         transform = this->fields.costomIcon;
                         if ( transform )
                         {
@@ -136,7 +166,7 @@ void CostumeListViewItemDraw__SetCostumeIcon(
             }
           }
 LABEL_25:
-          sub_1D0F30C(transform, v6);
+          sub_21FFECC(transform, v6);
         }
       }
     }
@@ -153,15 +183,15 @@ void CostumeListViewItemDraw__SetInput(
   __int64 v6; // x1
   UILabel_o *maskOnText; // x0
 
-  if ( (byte_4E7139C & 1) == 0 )
+  if ( (byte_5932153 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7139C = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5932153 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item, method);
   if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
   {
     maskOnText = (UILabel_o *)this->fields.baseButton;
@@ -200,7 +230,7 @@ void CostumeListViewItemDraw__SetInput(
         }
       }
 LABEL_20:
-      sub_1D0F30C(maskOnText, v6);
+      sub_21FFECC(maskOnText, v6);
     }
     maskOnText = (UILabel_o *)this->fields.maskSprite;
     if ( !maskOnText )
@@ -224,378 +254,340 @@ void CostumeListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   UILabel_o *costumeNameLb; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
   UnityEngine_Object_o *baseButton; // x21
   struct ServantCostumeEntity_o *costumeEntity; // x8
-  struct ServantCostumeEntity_o *v10; // x8
-  const MethodInfo *v11; // x2
-  UISprite_o *v12; // x21
-  System_String_o *RELEASE_NG_MARK; // x1
+  struct ServantCostumeEntity_o *v12; // x8
+  const MethodInfo *v13; // x2
+  int32_t releaseType; // w8
+  UISprite_o *v15; // x21
+  System_String_o *RELEASE_OK_MARK; // x1
+  __int64 v17; // x1
+  __int64 v18; // x2
+  UILabel_o *v19; // x21
+  System_String_o *v20; // x22
+  Il2CppObject *v21; // x0
+  UnityEngine_GameObject_o *v22; // x0
+  UnityEngine_GameObject_o *v23; // x0
+  __int64 v24; // x2
+  __int64 v25; // x2
+  struct ServantCostumeEntity_o *v26; // x8
+  UISprite_o *faceIcon; // x21
+  int32_t svtId; // w22
+  int32_t id; // w23
+  const MethodInfo *v30; // x2
+  __int64 v31; // x1
+  __int64 v32; // x2
   UILabel_o *canReleaseMark; // x21
+  __int64 v34; // x2
   UISprite_o *releaseStatusInfo; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v17; // x0
-  UILabel_o *v18; // x21
-  System_String_o *v19; // x22
-  Il2CppObject *v20; // x0
-  UnityEngine_GameObject_o *v21; // x0
-  UnityEngine_GameObject_o *v22; // x0
-  struct ServantCostumeEntity_o *v23; // x8
-  UISprite_o *faceIcon; // x21
-  int32_t id; // w22
-  int32_t svtId; // w23
-  const MethodInfo *v27; // x2
-  UnityEngine_Color_o v28; // [xsp+0h] [xbp-70h] BYREF
-  UnityEngine_Color_o v29; // [xsp+10h] [xbp-60h] BYREF
-  UnityEngine_Color_o v30; // [xsp+20h] [xbp-50h] BYREF
-  UnityEngine_Color_o color; // [xsp+30h] [xbp-40h] BYREF
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v37; // x0
+  UnityEngine_Color_o v38; // [xsp+0h] [xbp-70h] BYREF
+  UnityEngine_Color_o color; // [xsp+10h] [xbp-60h] BYREF
+  UnityEngine_Color_o v40; // [xsp+20h] [xbp-50h] BYREF
+  UnityEngine_Color_o v41; // [xsp+30h] [xbp-40h] BYREF
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E7139B & 1) == 0 )
+  if ( (byte_5932152 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&CostumeListViewItemDraw_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_423/*"#E6FF00"*/);
-    sub_1D0F0B4(&StringLiteral_426/*"#FF8E00"*/);
-    sub_1D0F0B4(&StringLiteral_425/*"#FEEF99"*/);
-    sub_1D0F0B4(&StringLiteral_3873/*"COSTUME_CAN_RELEASE"*/);
-    sub_1D0F0B4(&StringLiteral_5599/*"EVENT_COMBINE_COSTUME"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_420/*"#E1A545"*/);
-    sub_1D0F0B4(&StringLiteral_5600/*"EVENT_COMBINE_COSTUME_ITEM"*/);
-    byte_4E7139B = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&CostumeListViewItemDraw_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_448/*"#E6FF00"*/);
+    sub_21FFC50(&StringLiteral_451/*"#FF8E00"*/);
+    sub_21FFC50(&StringLiteral_450/*"#FEEF99"*/);
+    sub_21FFC50(&StringLiteral_3973/*"COSTUME_CAN_RELEASE"*/);
+    sub_21FFC50(&StringLiteral_5730/*"EVENT_COMBINE_COSTUME"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_445/*"#E1A545"*/);
+    sub_21FFC50(&StringLiteral_5731/*"EVENT_COMBINE_COSTUME_ITEM"*/);
+    byte_5932152 = 1;
   }
+  *(_QWORD *)&v41.fields.r = 0;
+  *(_QWORD *)&v41.fields.b = 0;
+  *(_QWORD *)&v40.fields.r = 0;
+  *(_QWORD *)&v40.fields.b = 0;
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
-  *(_QWORD *)&v30.fields.r = 0;
-  *(_QWORD *)&v30.fields.b = 0;
-  *(_QWORD *)&v29.fields.r = 0;
-  *(_QWORD *)&v29.fields.b = 0;
-  *(_QWORD *)&v28.fields.r = 0;
-  *(_QWORD *)&v28.fields.b = 0;
+  *(_QWORD *)&v38.fields.r = 0;
+  *(_QWORD *)&v38.fields.b = 0;
   if ( item && mode )
   {
     costumeNameLb = this->fields.costumeNameLb;
-    if ( costumeNameLb )
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
+    costumeNameLb = this->fields.costumeDetailLb;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
+    costumeNameLb = this->fields.maskOnText;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
+    costumeNameLb = (UILabel_o *)this->fields.maskSprite;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
+    costumeNameLb = this->fields.canReleaseMark;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
+    costumeNameLb = (UILabel_o *)this->fields.releaseStatusInfo;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
+    baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
+    costumeNameLb = (UILabel_o *)UnityEngine_Object__op_Inequality(baseButton, 0, 0);
+    if ( ((unsigned __int8)costumeNameLb & 1) != 0 )
     {
-      UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
-      costumeNameLb = this->fields.costumeDetailLb;
-      if ( costumeNameLb )
-      {
-        UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
-        costumeNameLb = this->fields.maskOnText;
-        if ( costumeNameLb )
-        {
-          UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
-          costumeNameLb = (UILabel_o *)this->fields.maskSprite;
-          if ( costumeNameLb )
-          {
-            costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                           (UnityEngine_Component_o *)costumeNameLb,
-                                           0);
-            if ( costumeNameLb )
-            {
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
-              costumeNameLb = this->fields.canReleaseMark;
-              if ( costumeNameLb )
-              {
-                costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                               (UnityEngine_Component_o *)costumeNameLb,
-                                               0);
-                if ( costumeNameLb )
-                {
-                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
-                  costumeNameLb = (UILabel_o *)this->fields.releaseStatusInfo;
-                  if ( costumeNameLb )
-                  {
-                    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                   (UnityEngine_Component_o *)costumeNameLb,
-                                                   0);
-                    if ( costumeNameLb )
-                    {
-                      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
-                      baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-                      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                      costumeNameLb = (UILabel_o *)UnityEngine_Object__op_Inequality(baseButton, 0, 0);
-                      if ( ((unsigned __int8)costumeNameLb & 1) != 0 )
-                      {
-                        costumeNameLb = (UILabel_o *)this->fields.baseButton;
-                        if ( !costumeNameLb )
-                          goto LABEL_81;
-                        ((void (__fastcall *)(UILabel_o *, __int64, const MethodInfo *))costumeNameLb->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
-                          costumeNameLb,
-                          1,
-                          costumeNameLb->klass->vtable._5_get_isAnchoredVertically.method);
-                        costumeNameLb = (UILabel_o *)this->fields.baseButton;
-                        if ( !costumeNameLb )
-                          goto LABEL_81;
-                        costumeNameLb = (UILabel_o *)((__int64 (__fastcall *)(UILabel_o *, _QWORD, __int64, const MethodInfo *))costumeNameLb->klass->vtable._14_OnEnable.methodPtr)(
-                                                       costumeNameLb,
-                                                       0,
-                                                       1,
-                                                       costumeNameLb->klass->vtable._14_OnEnable.method);
-                      }
-                      costumeEntity = item->fields.costumeEntity;
-                      if ( costumeEntity )
-                      {
-                        costumeNameLb = this->fields.costumeNameLb;
-                        if ( costumeNameLb )
-                        {
-                          UILabel__set_text(costumeNameLb, costumeEntity->fields.name, 0);
-                          v10 = item->fields.costumeEntity;
-                          if ( v10 )
-                          {
-                            WrapControlText__textAdjust(this->fields.costumeDetailLb, v10->fields.detail, 19, 0, 0);
-                            if ( item->fields.isNotHaveReleaseItem )
-                            {
-                              WrapControlText__textAdjust(this->fields.maskOnText, item->fields.closedMessage, 22, 0, 0);
-                              costumeNameLb = (UILabel_o *)this->fields.maskSprite;
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                             (UnityEngine_Component_o *)costumeNameLb,
-                                                             0);
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
-                            }
-                            else
-                            {
-                              costumeNameLb = (UILabel_o *)this->fields.maskSprite;
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                             (UnityEngine_Component_o *)costumeNameLb,
-                                                             0);
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
-                              costumeNameLb = this->fields.maskOnText;
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
-                              costumeNameLb = (UILabel_o *)this->fields.releaseStatusInfo;
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                             (UnityEngine_Component_o *)costumeNameLb,
-                                                             0);
-                              if ( !costumeNameLb )
-                                goto LABEL_81;
-                              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
-                              switch ( item->fields.releaseType )
-                              {
-                                case 0:
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                                 (UnityEngine_Component_o *)costumeNameLb,
-                                                                 0);
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
-                                  canReleaseMark = this->fields.canReleaseMark;
-                                  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                  costumeNameLb = (UILabel_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_3873/*"COSTUME_CAN_RELEASE"*/,
-                                                                 0);
-                                  if ( !canReleaseMark )
-                                    goto LABEL_81;
-                                  UILabel__set_text(canReleaseMark, (System_String_o *)costumeNameLb, 0);
-                                  releaseStatusInfo = this->fields.releaseStatusInfo;
-                                  costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
-                                  if ( !CostumeListViewItemDraw_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo);
-                                  if ( !releaseStatusInfo )
-                                    goto LABEL_81;
-                                  UISprite__set_spriteName(
-                                    releaseStatusInfo,
-                                    CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK,
-                                    0);
-                                  UnityEngine_ColorUtility__TryParseHtmlString(
-                                    (System_String_o *)StringLiteral_423/*"#E6FF00"*/,
-                                    &color,
-                                    0);
-                                  UnityEngine_ColorUtility__TryParseHtmlString(
-                                    (System_String_o *)StringLiteral_426/*"#FF8E00"*/,
-                                    &v30,
-                                    0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_gradientBottom(costumeNameLb, color, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_gradientTop(costumeNameLb, v30, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UIWidget__set_width((UIWidget_o *)costumeNameLb, 118, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_fontSize(costumeNameLb, 19, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  gameObject = UnityEngine_Component__get_gameObject(
-                                                 (UnityEngine_Component_o *)costumeNameLb,
-                                                 0);
-                                  v32.fields.x = -268.9;
-                                  v32.fields.y = -40.2;
-                                  v32.fields.z = 0.0;
-                                  GameObjectExtensions__SetLocalPosition(gameObject, v32, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  v17 = UnityEngine_Component__get_gameObject(
-                                          (UnityEngine_Component_o *)costumeNameLb,
-                                          0);
-                                  GameObjectExtensions__SetLocalScaleX(v17, 1.0, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_spacingX(costumeNameLb, 0, 0);
-                                  break;
-                                case 1:
-                                case 5:
-                                  v12 = this->fields.releaseStatusInfo;
-                                  costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
-                                  if ( !CostumeListViewItemDraw_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo);
-                                  if ( !v12 )
-                                    goto LABEL_81;
-                                  RELEASE_NG_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_NG_MARK;
-                                  goto LABEL_74;
-                                case 3:
-                                  v12 = this->fields.releaseStatusInfo;
-                                  costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
-                                  if ( !CostumeListViewItemDraw_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo);
-                                  if ( !v12 )
-                                    goto LABEL_81;
-                                  RELEASE_NG_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_ALREADY_GET_MARK;
-                                  goto LABEL_74;
-                                case 4:
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                                                 (UnityEngine_Component_o *)costumeNameLb,
-                                                                 0);
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
-                                  v18 = this->fields.canReleaseMark;
-                                  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5599/*"EVENT_COMBINE_COSTUME"*/, 0);
-                                  v20 = (Il2CppObject *)LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_5600/*"EVENT_COMBINE_COSTUME_ITEM"*/,
-                                                          0);
-                                  costumeNameLb = (UILabel_o *)System_String__Format(v19, v20, 0);
-                                  if ( !v18 )
-                                    goto LABEL_81;
-                                  UILabel__set_text(v18, (System_String_o *)costumeNameLb, 0);
-                                  UnityEngine_ColorUtility__TryParseHtmlString(
-                                    (System_String_o *)StringLiteral_420/*"#E1A545"*/,
-                                    &v29,
-                                    0);
-                                  UnityEngine_ColorUtility__TryParseHtmlString(
-                                    (System_String_o *)StringLiteral_425/*"#FEEF99"*/,
-                                    &v28,
-                                    0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_gradientBottom(costumeNameLb, v29, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_gradientTop(costumeNameLb, v28, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  ((void (__fastcall *)(UILabel_o *, const MethodInfo *))costumeNameLb->klass->vtable._33_MakePixelPerfect.methodPtr)(
-                                    costumeNameLb,
-                                    costumeNameLb->klass->vtable._33_MakePixelPerfect.method);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UIWidget__set_width((UIWidget_o *)costumeNameLb, 154, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_fontSize(costumeNameLb, 18, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  v21 = UnityEngine_Component__get_gameObject(
-                                          (UnityEngine_Component_o *)costumeNameLb,
-                                          0);
-                                  v33.fields.z = 0.0;
-                                  v33.fields.x = -270.0;
-                                  v33.fields.y = -40.0;
-                                  GameObjectExtensions__SetLocalPosition(v21, v33, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  v22 = UnityEngine_Component__get_gameObject(
-                                          (UnityEngine_Component_o *)costumeNameLb,
-                                          0);
-                                  GameObjectExtensions__SetLocalScaleX(v22, 0.6, 0);
-                                  costumeNameLb = this->fields.canReleaseMark;
-                                  if ( !costumeNameLb )
-                                    goto LABEL_81;
-                                  UILabel__set_spacingX(costumeNameLb, -1, 0);
-                                  v12 = this->fields.releaseStatusInfo;
-                                  costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
-                                  if ( !CostumeListViewItemDraw_TypeInfo->_2.cctor_finished )
-                                    j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo);
-                                  if ( !v12 )
-                                    goto LABEL_81;
-                                  RELEASE_NG_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK;
-LABEL_74:
-                                  UISprite__set_spriteName(v12, RELEASE_NG_MARK, 0);
-                                  break;
-                                default:
-                                  break;
-                              }
-                            }
-                            CostumeListViewItemDraw__SetCostumeIcon(this, 0, v11);
-                            if ( !item->fields.baseSvt )
-                              return;
-                            v23 = item->fields.costumeEntity;
-                            if ( v23 )
-                            {
-                              faceIcon = this->fields.faceIcon;
-                              svtId = v23->fields.svtId;
-                              id = v23->fields.id;
-                              if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-                                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                              AtlasManager__SetFaceImage(faceIcon, svtId, id, 1, 0, 0, 0);
-                              CostumeListViewItemDraw__SetCostumeIcon(this, item->fields.costumeEntity, v27);
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+      costumeNameLb = (UILabel_o *)this->fields.baseButton;
+      if ( !costumeNameLb )
+        goto LABEL_86;
+      ((void (__fastcall *)(UILabel_o *, __int64, const MethodInfo *))costumeNameLb->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
+        costumeNameLb,
+        1,
+        costumeNameLb->klass->vtable._5_get_isAnchoredVertically.method);
+      costumeNameLb = (UILabel_o *)this->fields.baseButton;
+      if ( !costumeNameLb )
+        goto LABEL_86;
+      costumeNameLb = (UILabel_o *)((__int64 (__fastcall *)(UILabel_o *, _QWORD, __int64, const MethodInfo *))costumeNameLb->klass->vtable._14_OnEnable.methodPtr)(
+                                     costumeNameLb,
+                                     0,
+                                     1,
+                                     costumeNameLb->klass->vtable._14_OnEnable.method);
     }
-LABEL_81:
-    sub_1D0F30C(costumeNameLb, item);
+    costumeEntity = item->fields.costumeEntity;
+    if ( !costumeEntity )
+      goto LABEL_86;
+    costumeNameLb = this->fields.costumeNameLb;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UILabel__set_text(costumeNameLb, costumeEntity->fields.name, 0);
+    v12 = item->fields.costumeEntity;
+    if ( !v12 )
+      goto LABEL_86;
+    WrapControlText__textAdjust(this->fields.costumeDetailLb, v12->fields.detail, 19, 0, 0);
+    if ( item->fields.isNotHaveReleaseItem )
+    {
+      WrapControlText__textAdjust(this->fields.maskOnText, item->fields.closedMessage, 22, 0, 0);
+      costumeNameLb = (UILabel_o *)this->fields.maskSprite;
+      if ( !costumeNameLb )
+        goto LABEL_86;
+      costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+      if ( !costumeNameLb )
+        goto LABEL_86;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
+      goto LABEL_64;
+    }
+    costumeNameLb = (UILabel_o *)this->fields.maskSprite;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 0, 0);
+    costumeNameLb = this->fields.maskOnText;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0);
+    costumeNameLb = (UILabel_o *)this->fields.releaseStatusInfo;
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+    if ( !costumeNameLb )
+      goto LABEL_86;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
+    releaseType = item->fields.releaseType;
+    if ( releaseType <= 2 )
+    {
+      if ( !releaseType )
+      {
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
+        canReleaseMark = this->fields.canReleaseMark;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31, v32);
+        costumeNameLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3973/*"COSTUME_CAN_RELEASE"*/, 0);
+        if ( !canReleaseMark )
+          goto LABEL_86;
+        UILabel__set_text(canReleaseMark, (System_String_o *)costumeNameLb, 0);
+        releaseStatusInfo = this->fields.releaseStatusInfo;
+        costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
+        if ( !*(&CostumeListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo, item, v34);
+        if ( !releaseStatusInfo )
+          goto LABEL_86;
+        UISprite__set_spriteName(releaseStatusInfo, CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_448/*"#E6FF00"*/, &v41, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_451/*"#FF8E00"*/, &v40, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_gradientBottom(costumeNameLb, v41, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_gradientTop(costumeNameLb, v40, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UIWidget__set_width((UIWidget_o *)costumeNameLb, 118, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_fontSize(costumeNameLb, 19, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        v43.fields.z = 0.0;
+        v43.fields.x = -268.9;
+        v43.fields.y = -40.2;
+        GameObjectExtensions__SetLocalPosition(gameObject, v43, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        GameObjectExtensions__SetLocalScaleX(v37, 1.0, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_spacingX(costumeNameLb, 0, 0);
+LABEL_64:
+        CostumeListViewItemDraw__SetCostumeIcon(this, 0, v13);
+        if ( !item->fields.baseSvt )
+          return;
+        v26 = item->fields.costumeEntity;
+        if ( v26 )
+        {
+          faceIcon = this->fields.faceIcon;
+          svtId = v26->fields.svtId;
+          id = v26->fields.id;
+          if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item, v25);
+          AtlasManager__SetFaceImage(faceIcon, svtId, id, 1, 0, 0, 0);
+          CostumeListViewItemDraw__SetCostumeIcon(this, item->fields.costumeEntity, v30);
+          return;
+        }
+LABEL_86:
+        sub_21FFECC(costumeNameLb, item);
+      }
+      if ( releaseType != 1 )
+        goto LABEL_64;
+    }
+    else if ( releaseType != 5 )
+    {
+      if ( releaseType == 4 )
+      {
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        costumeNameLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)costumeNameLb, 1, 0);
+        v19 = this->fields.canReleaseMark;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
+        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5730/*"EVENT_COMBINE_COSTUME"*/, 0);
+        v21 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5731/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
+        costumeNameLb = (UILabel_o *)System_String__Format(v20, v21, 0);
+        if ( !v19 )
+          goto LABEL_86;
+        UILabel__set_text(v19, (System_String_o *)costumeNameLb, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_445/*"#E1A545"*/, &color, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_450/*"#FEEF99"*/, &v38, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_gradientBottom(costumeNameLb, color, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_gradientTop(costumeNameLb, v38, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        ((void (__fastcall *)(UILabel_o *, const MethodInfo *))costumeNameLb->klass->vtable._33_MakePixelPerfect.methodPtr)(
+          costumeNameLb,
+          costumeNameLb->klass->vtable._33_MakePixelPerfect.method);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UIWidget__set_width((UIWidget_o *)costumeNameLb, 154, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_fontSize(costumeNameLb, 18, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        v42.fields.z = 0.0;
+        v42.fields.x = -270.0;
+        v42.fields.y = -40.0;
+        GameObjectExtensions__SetLocalPosition(v22, v42, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costumeNameLb, 0);
+        GameObjectExtensions__SetLocalScaleX(v23, 0.6, 0);
+        costumeNameLb = this->fields.canReleaseMark;
+        if ( !costumeNameLb )
+          goto LABEL_86;
+        UILabel__set_spacingX(costumeNameLb, -1, 0);
+        v15 = this->fields.releaseStatusInfo;
+        costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
+        if ( !*(&CostumeListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo, item, v24);
+        if ( !v15 )
+          goto LABEL_86;
+        RELEASE_OK_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK;
+      }
+      else
+      {
+        if ( releaseType != 3 )
+          goto LABEL_64;
+        v15 = this->fields.releaseStatusInfo;
+        costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
+        if ( !*(&CostumeListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo, item, v13);
+        if ( !v15 )
+          goto LABEL_86;
+        RELEASE_OK_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_ALREADY_GET_MARK;
+      }
+      goto LABEL_63;
+    }
+    v15 = this->fields.releaseStatusInfo;
+    costumeNameLb = (UILabel_o *)CostumeListViewItemDraw_TypeInfo;
+    if ( !*(&CostumeListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CostumeListViewItemDraw_TypeInfo, item, v13);
+    if ( !v15 )
+      goto LABEL_86;
+    RELEASE_OK_MARK = CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_NG_MARK;
+LABEL_63:
+    UISprite__set_spriteName(v15, RELEASE_OK_MARK, 0);
+    goto LABEL_64;
   }
 }

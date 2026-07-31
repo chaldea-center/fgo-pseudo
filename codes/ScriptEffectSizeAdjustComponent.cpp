@@ -6,81 +6,77 @@ void ScriptEffectSizeAdjustComponent___ctor(ScriptEffectSizeAdjustComponent_o *t
 
 void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x2
   Il2CppObject *Instance; // x20
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *effectObjectTransform; // x20
-  float x; // s8
-  float32x2_t v6; // d9
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float32x2_t v8; // d1
-  unsigned __int64 v9; // d1
-  ScriptManager_o *v10; // x0
-  __int64 v11; // x1
+  float32x2_t v9; // d9
+  float z; // s8
+  float32x2_t *static_fields; // x8
+  float32x2_t v12; // d0
+  ScriptManager_o *v13; // x0
+  __int64 v14; // x1
   int32_t UiRootActiveHeight; // w0
-  int32_t v13; // w20
-  ManagerConfig_c *v14; // x8
-  float v15; // s0
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v16; // x2
+  int32_t v17; // w20
+  float v18; // s0
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E76452 & 1) == 0 )
+  if ( (byte_59373FC & 1) == 0 )
   {
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4E76452 = 1;
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_59373FC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
     effectObjectTransform = (UnityEngine_Object_o *)this->fields.effectObjectTransform;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
     if ( !UnityEngine_Object__op_Equality(effectObjectTransform, 0, 0) )
     {
-      x = this->fields.defaultScale.fields.x;
-      v6.n64_u64[0] = *(unsigned __int64 *)&this->fields.defaultScale.fields.y;
-      if ( !byte_4E70C99 )
+      v9.n64_u64[0] = *(unsigned __int64 *)&this->fields.defaultScale.fields.x;
+      z = this->fields.defaultScale.fields.z;
+      if ( !byte_5931940 )
       {
-        sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-        byte_4E70C99 = 1;
+        sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+        byte_5931940 = 1;
       }
-      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      v8.n64_u64[0] = vsub_f32(v6, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
-      v9 = vmul_f32(v8, v8).n64_u64[0];
-      if ( (float)(*((float *)&v9 + 1)
-                 + (float)((float)((float)(x - static_fields->zeroVector.fields.x)
-                                 * (float)(x - static_fields->zeroVector.fields.x))
-                         + *(float *)&v9)) >= 1.0e-10 )
+      static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+      v12.n64_u64[0] = vsub_f32(v9, (float32x2_t)static_fields->n64_u64[0]).n64_u64[0];
+      if ( (float)((float)((float)(z - static_fields[1].n64_f32[0]) * (float)(z - static_fields[1].n64_f32[0]))
+                 + vaddv_f32(vmul_f32(v12, v12))) >= 1.0e-10 )
       {
-        v10 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-        if ( !v10 )
+        v13 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+        if ( !v13 )
           goto LABEL_20;
-        UiRootActiveHeight = ScriptManager__GetUiRootActiveHeight(v10, 0);
+        UiRootActiveHeight = ScriptManager__GetUiRootActiveHeight(v13, 0);
         if ( UiRootActiveHeight )
         {
-          v13 = UiRootActiveHeight;
+          v17 = UiRootActiveHeight;
           if ( UiRootActiveHeight != this->fields.oldUiRootActiveHeight )
           {
-            v14 = ManagerConfig_TypeInfo;
-            if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+            if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v14, v16);
+            v13 = (ScriptManager_o *)this->fields.effectObjectTransform;
+            if ( v13 )
             {
-              j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-              v14 = ManagerConfig_TypeInfo;
-            }
-            v10 = (ScriptManager_o *)this->fields.effectObjectTransform;
-            if ( v10 )
-            {
-              v15 = (float)v13 / (float)v14->static_fields->HEIGHT;
-              v16.fields.z = v15 * this->fields.defaultScale.fields.z;
-              v16.fields.y = v15 * this->fields.defaultScale.fields.y;
-              v16.fields.x = v15 * this->fields.defaultScale.fields.x;
-              UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v10, v16, 0);
-              this->fields.oldUiRootActiveHeight = v13;
+              v18 = (float)v17 / (float)ManagerConfig_TypeInfo->static_fields->HEIGHT;
+              v19.fields.z = this->fields.defaultScale.fields.z * v18;
+              v19.fields.y = this->fields.defaultScale.fields.y * v18;
+              v19.fields.x = this->fields.defaultScale.fields.x * v18;
+              UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v13, v19, 0);
+              this->fields.oldUiRootActiveHeight = v17;
               return;
             }
 LABEL_20:
-            sub_1D0F30C(v10, v11);
+            sub_21FFECC(v13, v14);
           }
         }
       }
@@ -94,12 +90,12 @@ void ScriptEffectSizeAdjustComponent__Start(ScriptEffectSizeAdjustComponent_o *t
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
   const MethodInfo *v12; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -108,12 +104,12 @@ void ScriptEffectSizeAdjustComponent__Start(ScriptEffectSizeAdjustComponent_o *t
     || (this->fields.defaultScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1D0F30C(gameObject, v4);
+    sub_21FFECC(gameObject, v4);
   }
   transform = UnityEngine_GameObject__get_transform(gameObject, 0);
   this->fields.effectObjectTransform = transform;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.effectObjectTransform,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.effectObjectTransform,
     (int32_t)transform,
     v6,
     v7,

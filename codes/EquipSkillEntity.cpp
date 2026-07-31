@@ -1,27 +1,27 @@
 void EquipSkillEntity___ctor(EquipSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77532 & 1) == 0 )
+  if ( (byte_5938503 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77532 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938503 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EquipSkillEntity__CreatePK(int32_t equipId, int32_t num, const MethodInfo *method)
 {
-  if ( (byte_4E77531 & 1) == 0 )
+  if ( (byte_5938502 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4E77531 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5938502 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            equipId,
            num,
-           (const MethodInfo_324D340 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

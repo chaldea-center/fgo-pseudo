@@ -1,26 +1,26 @@
 void LogoMain___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
+  __int64 v7; // x1
   struct LogoMain_StaticFields *static_fields; // x0
-  int32_t v8; // w1
 
-  if ( (byte_4E74DE1 & 1) == 0 )
+  if ( (byte_5935DE9 & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_8600/*"LogoPlay"*/);
-    byte_4E74DE1 = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&StringLiteral_8848/*"LogoPlay"*/);
+    byte_5935DE9 = 1;
   }
+  v7 = StringLiteral_8848/*"LogoPlay"*/;
   static_fields = LogoMain_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->FADEIN_TIME = 0x3F0000003F000000LL;
   static_fields->FADEWAIT_TIME = 1.0;
-  v8 = StringLiteral_8600/*"LogoPlay"*/;
-  static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_8600/*"LogoPlay"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->SAVE_KEY, v8, v1, v2, v3, v4, v5, v6);
+  static_fields->SAVE_KEY = (struct System_String_o *)v7;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->SAVE_KEY, v7, v1, v2, v3, v4, v5, v6);
   LogoMain_TypeInfo->static_fields->isPlayLogo = 1;
 }
 
@@ -33,25 +33,28 @@ void LogoMain___ctor(LogoMain_o *this, const MethodInfo *method)
 
 void LogoMain__EndFadein(LogoMain_o *this, const MethodInfo *method)
 {
-  LogoMain_c *v3; // x0
+  __int64 v2; // x2
+  LogoMain_c *v4; // x0
+  int v5; // w8
 
-  if ( (byte_4E74DDB & 1) == 0 )
+  if ( (byte_5935DE3 & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_6671/*"Fadeout"*/);
-    byte_4E74DDB = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&StringLiteral_6872/*"Fadeout"*/);
+    byte_5935DE3 = 1;
   }
+  v4 = LogoMain_TypeInfo;
+  v5 = *(&LogoMain_TypeInfo->_2.cctor_finished + 1);
   this->fields.status = 2;
-  v3 = LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  if ( !v5 )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v3 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v4, method, v2);
+    v4 = LogoMain_TypeInfo;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6671/*"Fadeout"*/,
-    v3->static_fields->FADEWAIT_TIME,
+    (System_String_o *)StringLiteral_6872/*"Fadeout"*/,
+    v4->static_fields->FADEWAIT_TIME,
     0);
 }
 
@@ -61,98 +64,103 @@ void LogoMain__EndFadeout(LogoMain_o *this, const MethodInfo *method)
   LogoMain_o *v2; // x19
   struct UnityEngine_GameObject_array *logoList; // x8
   __int64 index; // x9
-  int32_t v5; // w8
+  System_String_o *v5; // x1
+  int v6; // w8
 
   v2 = this;
-  if ( (byte_4E74DDD & 1) == 0 )
+  if ( (byte_5935DE5 & 1) == 0 )
   {
-    this = (LogoMain_o *)sub_1D0F0B4(&StringLiteral_6669/*"Fadein"*/);
-    byte_4E74DDD = 1;
+    this = (LogoMain_o *)sub_21FFC50(&StringLiteral_6870/*"Fadein"*/);
+    byte_5935DE5 = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
     goto LABEL_7;
   index = v2->fields.index;
   if ( (unsigned int)index >= LODWORD(logoList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (LogoMain_o *)logoList->m_Items[index];
   if ( !this )
 LABEL_7:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  v5 = v2->fields.index;
+  v5 = (System_String_o *)StringLiteral_6870/*"Fadein"*/;
+  v6 = v2->fields.index + 1;
   v2->fields.status = 4;
-  v2->fields.index = v5 + 1;
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_6669/*"Fadein"*/, 0.2, 0);
+  v2->fields.index = v6;
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, v5, 0.2, 0);
 }
 
 
 void LogoMain__EndLogo(LogoMain_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *v3; // x0
+  __int64 v2; // x2
+  UnityEngine_GameObject_o *v4; // x0
+  intptr_t m_CachedPtr; // x9
   struct UnityEngine_GameObject_array *logoList; // x8
-  __int64 v5; // x21
+  __int64 v7; // x21
   int max_length; // w9
   UnityEngine_Object_o *fsm; // x20
   struct System_Action_o *callbackFunc; // x8
 
-  if ( (byte_4E74DDE & 1) == 0 )
+  if ( (byte_5935DE6 & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5501/*"END_LOGO"*/);
-    byte_4E74DDE = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_5633/*"END_LOGO"*/);
+    byte_5935DE6 = 1;
   }
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-  if ( !byte_4E74E8F )
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, method, v2);
+  if ( !byte_5935E94 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    byte_4E74E8F = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    byte_5935E94 = 1;
   }
-  v3 = (UnityEngine_GameObject_o *)LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v4 = (UnityEngine_GameObject_o *)LogoMain_TypeInfo;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v3 = (UnityEngine_GameObject_o *)LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, method, v2);
+    v4 = (UnityEngine_GameObject_o *)LogoMain_TypeInfo;
   }
-  *(_BYTE *)(v3[7].fields.m_CachedPtr + 25) = 0;
+  m_CachedPtr = v4[7].fields.m_CachedPtr;
   logoList = this->fields.logoList;
   this->fields.status = 0;
+  *(_BYTE *)(m_CachedPtr + 25) = 0;
   if ( !logoList )
     goto LABEL_15;
-  v5 = 0;
+  v7 = 0;
   while ( 1 )
   {
     max_length = logoList->max_length;
-    if ( (int)v5 >= max_length )
+    if ( (int)v7 >= max_length )
       break;
-    if ( (unsigned int)v5 >= max_length )
-      sub_1D0F314(v3);
-    v3 = logoList->m_Items[v5];
-    if ( v3 )
+    if ( (unsigned int)v7 >= max_length )
+      sub_21FFED4(v4);
+    v4 = logoList->m_Items[v7];
+    if ( v4 )
     {
-      UnityEngine_GameObject__SetActive(v3, 0, 0);
+      UnityEngine_GameObject__SetActive(v4, 0, 0);
       logoList = this->fields.logoList;
-      ++v5;
+      ++v7;
       if ( logoList )
         continue;
     }
     goto LABEL_15;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(fsm, 0, 0) )
   {
-    v3 = (UnityEngine_GameObject_o *)this->fields.fsm;
-    if ( v3 )
+    v4 = (UnityEngine_GameObject_o *)this->fields.fsm;
+    if ( v4 )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v3, (System_String_o *)StringLiteral_5501/*"END_LOGO"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v4, (System_String_o *)StringLiteral_5633/*"END_LOGO"*/, 0);
       goto LABEL_21;
     }
 LABEL_15:
-    sub_1D0F30C(v3, method);
+    sub_21FFECC(v4, method);
   }
 LABEL_21:
   callbackFunc = this->fields.callbackFunc;
@@ -169,19 +177,21 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
   struct UnityEngine_GameObject_array *logoList; // x8
   __int64 index; // x9
   int max_length; // w10
+  __int64 v6; // x1
+  __int64 v7; // x2
   Il2CppObject *Instance; // x20
-  LogoMain_c *v7; // x8
+  LogoMain_c *v9; // x8
   float FADEIN_TIME; // s8
-  System_Action_o *v9; // x21
+  System_Action_o *v11; // x21
 
   v2 = this;
-  if ( (byte_4E74DDA & 1) == 0 )
+  if ( (byte_5935DE2 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_LogoMain_EndFadein__);
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    this = (LogoMain_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E74DDA = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_LogoMain_EndFadein__);
+    sub_21FFC50(&LogoMain_TypeInfo);
+    this = (LogoMain_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5935DE2 = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
@@ -192,29 +202,29 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
   {
     v2->fields.status = 1;
     if ( (unsigned int)index >= max_length )
-      sub_1D0F314(this);
+      sub_21FFED4(this);
     this = (LogoMain_o *)logoList->m_Items[index];
     if ( this )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v7 = LogoMain_TypeInfo;
-      if ( !LogoMain_TypeInfo->_2.cctor_finished )
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v9 = LogoMain_TypeInfo;
+      if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-        v7 = LogoMain_TypeInfo;
+        j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v6, v7);
+        v9 = LogoMain_TypeInfo;
       }
-      FADEIN_TIME = v7->static_fields->FADEIN_TIME;
-      v9 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-      System_Action___ctor(v9, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
+      FADEIN_TIME = v9->static_fields->FADEIN_TIME;
+      v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      System_Action___ctor(v11, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
       if ( Instance )
       {
-        CommonUI__maskFadein((CommonUI_o *)Instance, FADEIN_TIME, v9, 0);
+        CommonUI__maskFadein((CommonUI_o *)Instance, FADEIN_TIME, v11, 0);
         return;
       }
     }
 LABEL_12:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   LogoMain__EndLogo(v2, method);
 }
@@ -226,317 +236,343 @@ void LogoMain__FadeinFirst(LogoMain_o *this, const MethodInfo *method)
   struct UnityEngine_GameObject_array *logoList; // x8
   __int64 index; // x9
   Il2CppObject *Instance; // x0
-  LogoMain_c *v6; // x8
-  CommonUI_o *v7; // x20
+  __int64 v6; // x1
+  __int64 v7; // x2
+  LogoMain_c *v8; // x8
+  CommonUI_o *v9; // x20
   float FADEIN_TIME; // s8
-  System_Action_o *v9; // x21
+  System_Action_o *v11; // x21
 
   v2 = this;
-  if ( (byte_4E74DD9 & 1) == 0 )
+  if ( (byte_5935DE1 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_LogoMain_EndFadein__);
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    this = (LogoMain_o *)sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E74DD9 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_LogoMain_EndFadein__);
+    sub_21FFC50(&LogoMain_TypeInfo);
+    this = (LogoMain_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5935DE1 = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
     goto LABEL_10;
   index = v2->fields.index;
   if ( (unsigned int)index >= LODWORD(logoList->max_length) )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   this = (LogoMain_o *)logoList->m_Items[index];
   if ( !this )
     goto LABEL_10;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = LogoMain_TypeInfo;
-  v7 = (CommonUI_o *)Instance;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = LogoMain_TypeInfo;
+  v9 = (CommonUI_o *)Instance;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v6 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v6, v7);
+    v8 = LogoMain_TypeInfo;
   }
-  FADEIN_TIME = v6->static_fields->FADEIN_TIME;
-  v9 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v9, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
-  if ( !v7 )
+  FADEIN_TIME = v8->static_fields->FADEIN_TIME;
+  v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
+  if ( !v9 )
 LABEL_10:
-    sub_1D0F30C(this, method);
-  CommonUI__maskFadein(v7, FADEIN_TIME, v9, 0);
+    sub_21FFECC(this, method);
+  CommonUI__maskFadein(v9, FADEIN_TIME, v11, 0);
 }
 
 
 void LogoMain__Fadeout(LogoMain_o *this, const MethodInfo *method)
 {
+  const MethodInfo_476E8C0 *v3; // x0
   Il2CppObject *Instance; // x0
-  LogoMain_c *v4; // x8
-  CommonUI_o *v5; // x20
+  __int64 v5; // x1
+  __int64 v6; // x2
+  LogoMain_c *v7; // x8
+  CommonUI_o *v8; // x20
   float FADEOUT_TIME; // s8
-  System_Action_o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
+  System_Action_o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_4E74DDC & 1) == 0 )
+  if ( (byte_5935DE4 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_LogoMain_EndFadeout__);
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E74DDC = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_LogoMain_EndFadeout__);
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5935DE4 = 1;
   }
+  v3 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
   this->fields.status = 3;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v4 = LogoMain_TypeInfo;
-  v5 = (CommonUI_o *)Instance;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  Instance = SingletonMonoBehaviour_object___get_Instance(v3);
+  v7 = LogoMain_TypeInfo;
+  v8 = (CommonUI_o *)Instance;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v4 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v5, v6);
+    v7 = LogoMain_TypeInfo;
   }
-  FADEOUT_TIME = v4->static_fields->FADEOUT_TIME;
-  v7 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_LogoMain_EndFadeout__, 0);
-  if ( !v5 )
-    sub_1D0F30C(v8, v9);
-  CommonUI__maskFadeout(v5, 2, FADEOUT_TIME, v7, 0);
+  FADEOUT_TIME = v7->static_fields->FADEOUT_TIME;
+  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_LogoMain_EndFadeout__, 0);
+  if ( !v8 )
+    sub_21FFECC(v11, v12);
+  CommonUI__maskFadeout(v8, 2, FADEOUT_TIME, v10, 0);
 }
 
 
 void LogoMain__Init(LogoMain_o *this, PlayMakerFSM_o *fsm, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   const MethodInfo *v15; // x1
 
   this->fields.fsm = fsm;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.fsm, (int32_t)fsm, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.fsm,
+    (int32_t)fsm,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.callbackFunc = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v9, v10, v11, v12, v13, v14);
-  LogoMain__Init_38921556(this, v15);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v9, v10, v11, v12, v13, v14);
+  LogoMain__Init_44555788(this, v15);
 }
 
 
-void LogoMain__Init_38921556(LogoMain_o *this, const MethodInfo *method)
+void LogoMain__Init_44555788(LogoMain_o *this, const MethodInfo *method)
 {
-  LogoMain_c *v3; // x0
-  ManagerConfig_c *v4; // x0
-  LogoMain_c *v5; // x8
+  __int64 v2; // x2
+  LogoMain_c *v4; // x0
+  int v5; // w9
+  ManagerConfig_c *v6; // x8
+  int v7; // w10
+  struct ManagerConfig_StaticFields *static_fields; // x9
+  LogoMain_c *v9; // x0
   System_String_o *AppVer; // x21
   System_String_o *String; // x0
-  LogoMain_c *v8; // x0
+  __int64 v12; // x1
+  __int64 v13; // x2
+  LogoMain_c *v14; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v10; // x1
+  const MethodInfo *v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x2
   UnityEngine_Object_o *parent; // x20
   UnityEngine_Transform_o *transform; // x20
   int32_t layer; // w0
-  const MethodInfo *v14; // x3
+  const MethodInfo *v22; // x3
   struct UnityEngine_GameObject_array *logoList; // x8
-  il2cpp_array_size_t max_length; // x9
-  unsigned int v17; // w20
+  __int64 v24; // x21
+  int max_length; // w9
+  System_String_o *v26; // x1
   System_Collections_IEnumerator_o *progressBarCRW; // x1
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  struct System_Collections_IEnumerator_o *v25; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
+  struct System_Collections_IEnumerator_o *v34; // x0
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
 
-  if ( (byte_4E74DD8 & 1) == 0 )
+  if ( (byte_5935DE0 & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_22704/*"none"*/);
-    sub_1D0F0B4(&StringLiteral_6670/*"FadeinFirst"*/);
-    byte_4E74DD8 = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_23350/*"none"*/);
+    sub_21FFC50(&StringLiteral_6871/*"FadeinFirst"*/);
+    byte_5935DE0 = 1;
   }
-  v3 = LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v4 = LogoMain_TypeInfo;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v3 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, method, v2);
+    v4 = LogoMain_TypeInfo;
   }
-  v3->static_fields->isPlayLogo = 0;
-  if ( !byte_4E74E8F )
+  v5 = (unsigned __int8)byte_5935E94;
+  v4->static_fields->isPlayLogo = 0;
+  if ( !v5 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    v3 = LogoMain_TypeInfo;
-    byte_4E74E8F = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    v4 = LogoMain_TypeInfo;
+    byte_5935E94 = 1;
   }
-  if ( !v3->_2.cctor_finished )
+  if ( !*(&v4->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v3);
-    v3 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v4, method, v2);
+    v4 = LogoMain_TypeInfo;
   }
-  v3->static_fields->_isPlaying_k__BackingField = 1;
-  v4 = ManagerConfig_TypeInfo;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v6 = ManagerConfig_TypeInfo;
+  v7 = *(&ManagerConfig_TypeInfo->_2.cctor_finished + 1);
+  v4->static_fields->_isPlaying_k__BackingField = 1;
+  if ( !v7 )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v6, method, v2);
+    v6 = ManagerConfig_TypeInfo;
   }
-  if ( !v4->static_fields->UseMock )
+  static_fields = v6->static_fields;
+  if ( !static_fields->UseMock )
   {
-    if ( !v4->_2.cctor_finished )
+    if ( !*(&v6->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      v4 = ManagerConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6, method, v2);
+      static_fields = ManagerConfig_TypeInfo->static_fields;
     }
-    v5 = LogoMain_TypeInfo;
-    AppVer = v4->static_fields->AppVer;
-    if ( !LogoMain_TypeInfo->_2.cctor_finished )
+    v9 = LogoMain_TypeInfo;
+    AppVer = static_fields->AppVer;
+    if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-      v5 = LogoMain_TypeInfo;
+      j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, method, v2);
+      v9 = LogoMain_TypeInfo;
     }
-    String = UnityEngine_PlayerPrefs__GetString(v5->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22704/*"none"*/, 0);
+    String = UnityEngine_PlayerPrefs__GetString(v9->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_23350/*"none"*/, 0);
     if ( System_String__op_Inequality(String, AppVer, 0) )
     {
-      v8 = LogoMain_TypeInfo;
-      if ( !LogoMain_TypeInfo->_2.cctor_finished )
+      v14 = LogoMain_TypeInfo;
+      if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-        v8 = LogoMain_TypeInfo;
+        j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v12, v13);
+        v14 = LogoMain_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetString(v8->static_fields->SAVE_KEY, AppVer, 0);
+      UnityEngine_PlayerPrefs__SetString(v14->static_fields->SAVE_KEY, AppVer, 0);
       UnityEngine_PlayerPrefs__Save(0);
     }
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    goto LABEL_46;
+    goto LABEL_36;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    goto LABEL_46;
+    goto LABEL_36;
   parent = (UnityEngine_Object_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)gameObject, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(parent, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      goto LABEL_46;
+      goto LABEL_36;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)gameObject, 0);
     if ( !gameObject )
-      goto LABEL_46;
+      goto LABEL_36;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !gameObject )
-      goto LABEL_46;
+      goto LABEL_36;
     layer = UnityEngine_GameObject__get_layer(gameObject, 0);
-    LogoMain__SetChildInit(this, transform, layer, v14);
+    LogoMain__SetChildInit(this, transform, layer, v22);
   }
   logoList = this->fields.logoList;
   if ( !logoList )
-    goto LABEL_46;
-  max_length = logoList->max_length;
-  if ( max_length )
+    goto LABEL_36;
+  if ( logoList->max_length )
   {
-    if ( (int)max_length >= 1 )
+    v24 = 0;
+    while ( 1 )
     {
-      v17 = 0;
-      while ( 1 )
+      max_length = logoList->max_length;
+      if ( (int)v24 >= max_length )
+        break;
+      if ( (unsigned int)v24 >= max_length )
+        sub_21FFED4(gameObject);
+      gameObject = logoList->m_Items[v24];
+      if ( gameObject )
       {
-        if ( v17 >= (unsigned int)max_length )
-          sub_1D0F314(gameObject);
-        gameObject = logoList->m_Items[v17];
-        if ( !gameObject )
-          break;
         UnityEngine_GameObject__SetActive(gameObject, 0, 0);
         logoList = this->fields.logoList;
-        if ( !logoList )
-          break;
-        LODWORD(max_length) = logoList->max_length;
-        if ( (int)++v17 >= (int)max_length )
-          goto LABEL_37;
+        ++v24;
+        if ( logoList )
+          continue;
       }
-LABEL_46:
-      sub_1D0F30C(gameObject, v10);
+      goto LABEL_36;
     }
-LABEL_37:
-    this->fields.index = 0;
+    v26 = (System_String_o *)StringLiteral_6871/*"FadeinFirst"*/;
     this->fields.status = 4;
-    UnityEngine_MonoBehaviour__Invoke(
-      (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_6670/*"FadeinFirst"*/,
-      0.1,
-      0);
+    this->fields.index = 0;
+    UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, v26, 0.1, 0);
   }
   else
   {
-    LogoMain__EndLogo(this, v10);
+    LogoMain__EndLogo(this, v16);
   }
   progressBarCRW = this->fields.progressBarCRW;
   if ( progressBarCRW )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, progressBarCRW, 0);
     this->fields.progressBarCRW = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.progressBarCRW, 0, v19, v20, v21, v22, v23, v24);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.progressBarCRW, 0, v28, v29, v30, v31, v32, v33);
   }
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !gameObject )
-    goto LABEL_46;
-  if ( AssetManager__GetDownloadSize((AssetManager_o *)gameObject, 0) < 1 )
+    goto LABEL_36;
+  if ( AssetManager__GetDownloadSize((AssetManager_o *)gameObject, 0) >= 1 )
   {
-    gameObject = this->fields.miniProgressBarBase;
-    if ( !gameObject )
-      goto LABEL_46;
-    UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-  }
-  else
-  {
-    v25 = LogoMain__ProgressBarCR(this, v10);
-    this->fields.progressBarCRW = v25;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.progressBarCRW, (int32_t)v25, v26, v27, v28, v29, v30, v31);
-    UnityEngine_MonoBehaviour__StartCoroutine_73344676(
+    v34 = LogoMain__ProgressBarCR(this, v16);
+    this->fields.progressBarCRW = v34;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.progressBarCRW,
+      (int32_t)v34,
+      v35,
+      v36,
+      v37,
+      v38,
+      v39,
+      v40);
+    UnityEngine_MonoBehaviour__StartCoroutine_83231452(
       (UnityEngine_MonoBehaviour_o *)this,
       this->fields.progressBarCRW,
       0);
+    return;
   }
+  gameObject = this->fields.miniProgressBarBase;
+  if ( !gameObject )
+LABEL_36:
+    sub_21FFECC(gameObject, v16);
+  UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
 
-void LogoMain__Init_38922420(LogoMain_o *this, System_Action_o *callback, const MethodInfo *method)
+void LogoMain__Init_44556648(LogoMain_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   const MethodInfo *v16; // x1
 
   this->fields.fsm = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.fsm, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fsm, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
   this->fields.callbackFunc = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v10,
     v11,
@@ -544,54 +580,58 @@ void LogoMain__Init_38922420(LogoMain_o *this, System_Action_o *callback, const 
     v13,
     v14,
     v15);
-  LogoMain__Init_38921556(this, v16);
+  LogoMain__Init_44555788(this, v16);
 }
 
 
 bool LogoMain__IsPLayLogo(const MethodInfo *method)
 {
-  LogoMain_c *v1; // x0
-  ManagerConfig_c *v2; // x0
-  LogoMain_c *v4; // x8
+  __int64 v1; // x1
+  __int64 v2; // x2
+  LogoMain_c *v3; // x0
+  ManagerConfig_c *v4; // x0
+  struct ManagerConfig_StaticFields *static_fields; // x8
+  LogoMain_c *v7; // x0
   System_String_o *AppVer; // x19
   System_String_o *String; // x0
 
-  if ( (byte_4E74DD7 & 1) == 0 )
+  if ( (byte_5935DDF & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22704/*"none"*/);
-    byte_4E74DD7 = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    sub_21FFC50(&StringLiteral_23350/*"none"*/);
+    byte_5935DDF = 1;
   }
-  v1 = LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v3 = LogoMain_TypeInfo;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v1 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v1, v2);
+    v3 = LogoMain_TypeInfo;
   }
-  if ( !v1->static_fields->isPlayLogo )
+  if ( !v3->static_fields->isPlayLogo )
     return 0;
-  v2 = ManagerConfig_TypeInfo;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v4 = ManagerConfig_TypeInfo;
+  if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v1, v2);
+    v4 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  static_fields = v4->static_fields;
+  if ( static_fields->UseMock )
     return 1;
-  if ( !v2->_2.cctor_finished )
+  if ( !*(&v4->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v2);
-    v2 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v4, v1, v2);
+    static_fields = ManagerConfig_TypeInfo->static_fields;
   }
-  v4 = LogoMain_TypeInfo;
-  AppVer = v2->static_fields->AppVer;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v7 = LogoMain_TypeInfo;
+  AppVer = static_fields->AppVer;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v4 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v1, v2);
+    v7 = LogoMain_TypeInfo;
   }
-  String = UnityEngine_PlayerPrefs__GetString(v4->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22704/*"none"*/, 0);
+  String = UnityEngine_PlayerPrefs__GetString(v7->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_23350/*"none"*/, 0);
   return System_String__op_Inequality(String, AppVer, 0);
 }
 
@@ -605,23 +645,23 @@ void LogoMain__OnClick(LogoMain_o *this, const MethodInfo *method)
 System_Collections_IEnumerator_o *LogoMain__ProgressBarCR(LogoMain_o *this, const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E74DE0 & 1) == 0 )
+  if ( (byte_5935DE8 & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain__ProgressBarCR_d__33_TypeInfo);
-    byte_4E74DE0 = 1;
+    sub_21FFC50(&LogoMain__ProgressBarCR_d__33_TypeInfo);
+    byte_5935DE8 = 1;
   }
-  v3 = sub_1D0F300(LogoMain__ProgressBarCR_d__33_TypeInfo);
+  v3 = sub_21FFEBC(LogoMain__ProgressBarCR_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -634,178 +674,184 @@ void LogoMain__Quit(LogoMain_o *this, const MethodInfo *method)
   this->fields.status = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
 
 void LogoMain__SetChildInit(LogoMain_o *this, UnityEngine_Transform_o *tf, int32_t layer, const MethodInfo *method)
 {
-  LogoMain_o *v6; // x21
-  __int64 v7; // x1
-  System_Collections_IEnumerator_o *Enumerator; // x19
+  LogoMain_o *v6; // x20
+  System_Collections_IEnumerator_o *Enumerator; // x0
+  __int64 v8; // x1
   System_Collections_IEnumerator_c *klass; // x8
   __int64 v10; // x9
-  int32_t *p_offset; // x10
+  int *p_offset; // x10
   __int64 v12; // x0
   System_Collections_IEnumerator_c *v13; // x8
   __int64 v14; // x9
   System_Collections_IEnumerator_c **v15; // x10
   __int64 v16; // x0
   UnityEngine_Transform_o *v17; // x0
-  const MethodInfo *v18; // x3
+  __int64 v18; // x2
+  const MethodInfo *v19; // x3
   __int64 naturalAligment; // x10
-  __int64 v20; // x0
-  __int64 v21; // x8
-  __int64 v22; // x19
-  __int64 v23; // x9
-  int *v24; // x10
-  __int64 v25; // x0
+  __int64 v21; // x0
+  __int64 v22; // x8
+  __int64 v23; // x20
+  __int64 v24; // x9
+  int *v25; // x10
+  __int64 v26; // x0
+  System_Collections_IEnumerator_o *v27; // [xsp+28h] [xbp-38h]
 
   v6 = this;
-  if ( (byte_4E74DDF & 1) == 0 )
+  if ( (byte_5935DE7 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    this = (LogoMain_o *)sub_1D0F0B4(&UnityEngine_Transform_TypeInfo);
-    byte_4E74DDF = 1;
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    this = (LogoMain_o *)sub_21FFC50(&UnityEngine_Transform_TypeInfo);
+    byte_5935DE7 = 1;
   }
-  if ( !tf || (this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0)) == 0 )
-LABEL_35:
-    sub_1D0F30C(this, tf);
-  if ( UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0) != layer )
+  if ( !tf )
+    goto LABEL_37;
+  this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0);
+  if ( !this )
+    goto LABEL_37;
+  if ( UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0) == layer )
+    return;
+  this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0);
+  if ( !this )
+LABEL_37:
+    sub_21FFECC(this, tf);
+  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0);
+  Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0);
+  v27 = Enumerator;
+  while ( 1 )
   {
-    this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0);
-    if ( !this )
-      goto LABEL_35;
-    UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0);
-    Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0);
-    if ( !Enumerator )
-      sub_1D0F30C(0, v7);
-    while ( 1 )
+    if ( !v27 )
+      goto LABEL_36;
+    klass = v27->klass;
+    v10 = *(unsigned __int16 *)&v27->klass->_2.rank;
+    if ( *(_WORD *)&v27->klass->_2.rank )
     {
-      klass = Enumerator->klass;
-      v10 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-      if ( *(_WORD *)&Enumerator->klass->_2.rank )
+      p_offset = &klass->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        p_offset = &klass->_1.interfaceOffsets->offset;
-        while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          --v10;
-          p_offset += 4;
-          if ( !v10 )
-            goto LABEL_12;
-        }
-        v12 = (__int64)&klass->vtable[*p_offset];
+        --v10;
+        p_offset += 4;
+        if ( !v10 )
+          goto LABEL_13;
       }
-      else
-      {
-LABEL_12:
-        v12 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
-      }
-      if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v12)(
-              Enumerator,
-              *(_QWORD *)(v12 + 8))
-          & 1) == 0 )
-        break;
-      v13 = Enumerator->klass;
-      v14 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-      if ( *(_WORD *)&Enumerator->klass->_2.rank )
-      {
-        v15 = (System_Collections_IEnumerator_c **)&v13->_1.interfaceOffsets->offset;
-        while ( *(v15 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          --v14;
-          v15 += 2;
-          if ( !v14 )
-            goto LABEL_19;
-        }
-        v16 = (__int64)&v13->vtable[*(_DWORD *)v15 + 1];
-      }
-      else
-      {
-LABEL_19:
-        v16 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
-      }
-      v17 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
-                                         Enumerator,
-                                         *(_QWORD *)(v16 + 8));
-      if ( v17 )
-      {
-        naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
-        if ( v17->klass->_2.naturalAligment < (unsigned int)naturalAligment
-          || (UnityEngine_Transform_c *)v17->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
-        {
-          sub_1D0F6A8(v17);
-          goto LABEL_35;
-        }
-      }
-      LogoMain__SetChildInit(v6, v17, layer, v18);
+      v12 = (__int64)&klass->vtable[*p_offset];
     }
-    v20 = sub_1D0F1F0(Enumerator, System_IDisposable_TypeInfo);
-    if ( v20 )
+    else
     {
-      v21 = *(_QWORD *)v20;
-      v22 = v20;
-      v23 = *(unsigned __int16 *)(*(_QWORD *)v20 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v20 + 302LL) )
-      {
-        v24 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v24 - 1) != System_IDisposable_TypeInfo )
-        {
-          --v23;
-          v24 += 4;
-          if ( !v23 )
-            goto LABEL_30;
-        }
-        v25 = v21 + 16LL * *v24 + 312;
-      }
-      else
-      {
-LABEL_30:
-        v25 = sub_1CE5430(v20, System_IDisposable_TypeInfo, 0);
-      }
-      (*(void (__fastcall **)(__int64, _QWORD))v25)(v22, *(_QWORD *)(v25 + 8));
+LABEL_13:
+      v12 = sub_2237E2C(v27, System_Collections_IEnumerator_TypeInfo, 0);
     }
+    if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v12)(v27, *(_QWORD *)(v12 + 8)) & 1) == 0 )
+      break;
+    v13 = v27->klass;
+    v14 = *(unsigned __int16 *)&v27->klass->_2.rank;
+    if ( *(_WORD *)&v27->klass->_2.rank )
+    {
+      v15 = (System_Collections_IEnumerator_c **)&v13->_1.interfaceOffsets->offset;
+      while ( *(v15 - 1) != System_Collections_IEnumerator_TypeInfo )
+      {
+        --v14;
+        v15 += 2;
+        if ( !v14 )
+          goto LABEL_20;
+      }
+      v16 = (__int64)&v13->vtable[*(_DWORD *)v15 + 1];
+    }
+    else
+    {
+LABEL_20:
+      v16 = sub_2237E2C(v27, System_Collections_IEnumerator_TypeInfo, 1);
+    }
+    v17 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
+                                       v27,
+                                       *(_QWORD *)(v16 + 8));
+    if ( v17 )
+    {
+      naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
+      if ( v17->klass->_2.naturalAligment < (unsigned int)naturalAligment
+        || (UnityEngine_Transform_c *)v17->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
+      {
+        sub_220024C(v17, UnityEngine_Transform_TypeInfo, v18, v19);
+LABEL_36:
+        sub_21FFECC(Enumerator, v8);
+      }
+    }
+    LogoMain__SetChildInit(v6, v17, layer, v19);
+  }
+  v21 = sub_21FFDA4(v27, System_IDisposable_TypeInfo);
+  if ( v21 )
+  {
+    v22 = *(_QWORD *)v21;
+    v23 = v21;
+    v24 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+    {
+      v25 = (int *)(*(_QWORD *)(v22 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
+      {
+        --v24;
+        v25 += 4;
+        if ( !v24 )
+          goto LABEL_31;
+      }
+      v26 = v22 + 16LL * *v25 + 312;
+    }
+    else
+    {
+LABEL_31:
+      v26 = sub_2237E2C(v21, System_IDisposable_TypeInfo, 0);
+    }
+    (*(void (__fastcall **)(__int64, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
   }
 }
 
 
 bool LogoMain__get_isPlaying(const MethodInfo *method)
 {
-  LogoMain_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x2
+  LogoMain_c *v3; // x0
 
-  if ( (byte_4E74DD5 & 1) == 0 )
+  if ( (byte_5935DDD & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    byte_4E74DD5 = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    byte_5935DDD = 1;
   }
-  v1 = LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v3 = LogoMain_TypeInfo;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v1 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, v1, v2);
+    v3 = LogoMain_TypeInfo;
   }
-  return v1->static_fields->_isPlaying_k__BackingField;
+  return v3->static_fields->_isPlaying_k__BackingField;
 }
 
 
 void LogoMain__set_isPlaying(bool value, const MethodInfo *method)
 {
-  LogoMain_c *v3; // x0
+  __int64 v2; // x2
+  LogoMain_c *v4; // x0
 
-  if ( (byte_4E74DD6 & 1) == 0 )
+  if ( (byte_5935DDE & 1) == 0 )
   {
-    sub_1D0F0B4(&LogoMain_TypeInfo);
-    byte_4E74DD6 = 1;
+    sub_21FFC50(&LogoMain_TypeInfo);
+    byte_5935DDE = 1;
   }
-  v3 = LogoMain_TypeInfo;
-  if ( !LogoMain_TypeInfo->_2.cctor_finished )
+  v4 = LogoMain_TypeInfo;
+  if ( !*(&LogoMain_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-    v3 = LogoMain_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo, method, v2);
+    v4 = LogoMain_TypeInfo;
   }
-  v3->static_fields->_isPlaying_k__BackingField = value;
+  v4->static_fields->_isPlaying_k__BackingField = value;
 }
 
 
@@ -821,209 +867,267 @@ void LogoMain__ProgressBarCR_d__33___ctor(
 
 bool LogoMain__ProgressBarCR_d__33__MoveNext(LogoMain__ProgressBarCR_d__33_o *this, const MethodInfo *method)
 {
-  LogoMain__ProgressBarCR_d__33_o *v2; // x19
+  __int64 v2; // x2
+  int32_t _1__state; // w8
   struct LogoMain_o *_4__this; // x20
-  UnityEngine_WaitForEndOfFrame_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
-  bool result; // w0
+  System_String_o *miniProgressBarBase; // x0
+  __int64 v7; // x1
+  __int64 v8; // x2
   UILabel_o *miniProgressBarLabel; // x20
-  UnityEngine_WaitForEndOfFrame_o *v13; // x20
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  int v21; // w8
-  int64_t DownloadSize; // x0
-  float sliderValue_5__2; // s1
-  float v24; // s0
-  UnityEngine_WaitForEndOfFrame_o *v25; // x20
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
-  UnityEngine_WaitForSeconds_o *v32; // x20
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
-  int v39; // w8
-  int64_t v40; // x0
-  __int64 v41; // x20
-  UnityEngine_WaitForEndOfFrame_o *v42; // x21
-  int32_t v43; // w2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  int32_t v46; // w5
-  int64_t v47; // x6
-  System_String_o *v48; // x7
-  UnityEngine_WaitForEndOfFrame_o *v49; // x20
-  int32_t v50; // w2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
-  int32_t v53; // w5
-  int64_t v54; // x6
-  System_String_o *v55; // x7
-  UnityEngine_WaitForSeconds_o *v56; // x20
-  int32_t v57; // w2
-  int32_t v58; // w3
-  System_String_o *v59; // x4
-  int32_t v60; // w5
-  int64_t v61; // x6
-  System_String_o *v62; // x7
+  UnityEngine_WaitForEndOfFrame_o *v10; // x20
+  Il2CppObject **p__2__current; // x19
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  int v18; // w8
+  float v19; // s0
+  float v20; // s0
+  UnityEngine_WaitForEndOfFrame_o *v21; // x20
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  UnityEngine_WaitForEndOfFrame_o *v28; // x20
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  __int64 v35; // x0
+  __int64 DownloadSize; // x20
+  UnityEngine_WaitForEndOfFrame_o *v37; // x21
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  int32_t v44; // w8
+  UnityEngine_WaitForEndOfFrame_o *v45; // x20
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
+  UnityEngine_WaitForSeconds_o *v52; // x20
+  System_String_o *v53; // x2
+  System_String_o *v54; // x3
+  int32_t v55; // w4
+  int32_t v56; // w5
+  bool v57; // w6
+  bool v58; // w7
+  UnityEngine_WaitForSeconds_o *v59; // x20
+  System_String_o *v60; // x2
+  System_String_o *v61; // x3
+  int32_t v62; // w4
+  int32_t v63; // w5
+  bool v64; // w6
+  bool v65; // w7
 
-  v2 = this;
-  if ( (byte_4E74DE2 & 1) == 0 )
+  if ( (byte_5935DEA & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (LogoMain__ProgressBarCR_d__33_o *)sub_1D0F0B4(&StringLiteral_3831/*"CONNECT_LOAD_MESSAGE3"*/);
-    byte_4E74DE2 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_21FFC50(&StringLiteral_3931/*"CONNECT_LOAD_MESSAGE3"*/);
+    byte_5935DEA = 1;
   }
-  _4__this = v2->fields.__4__this;
-  switch ( v2->fields.__1__state )
+  _1__state = this->fields.__1__state;
+  _4__this = this->fields.__4__this;
+  miniProgressBarBase = 0;
+  if ( _1__state > 3 )
   {
-    case 0:
-      v2->fields._sliderValue_5__2 = 0.0;
-      v2->fields.__1__state = -1;
-      v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1D0F300(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v4, 0);
-      v2->fields.__2__current = (Il2CppObject *)v4;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.__2__current, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-      result = 1;
-      v2->fields.__1__state = 1;
-      return result;
-    case 1:
-      v2->fields.__1__state = -1;
-      if ( !_4__this )
-        goto LABEL_40;
-      this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarBase;
-      if ( !this )
-        goto LABEL_40;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarSlider;
-      if ( !this )
-        goto LABEL_40;
-      UIProgressBar__set_value((UIProgressBar_o *)this, v2->fields._sliderValue_5__2, 0);
-      miniProgressBarLabel = _4__this->fields.miniProgressBarLabel;
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      this = (LogoMain__ProgressBarCR_d__33_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"CONNECT_LOAD_MESSAGE3"*/, 0);
-      if ( !miniProgressBarLabel )
-        goto LABEL_40;
-      UILabel__set_text(miniProgressBarLabel, (System_String_o *)this, 0);
-      v13 = (UnityEngine_WaitForEndOfFrame_o *)sub_1D0F300(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v13, 0);
-      v2->fields.__2__current = (Il2CppObject *)v13;
-      p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1D0F058(p__2__current, (int32_t)v13, v15, v16, v17, v18, v19, v20);
-      v21 = 2;
-      goto LABEL_30;
-    case 2:
-      v2->fields.__1__state = -1;
-      if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      DownloadSize = AssetManager__getDownloadSize(0);
-      v2->fields._allSize_5__3 = DownloadSize;
-      if ( DownloadSize < 1 )
-        return 0;
-      goto LABEL_23;
-    case 3:
-      sliderValue_5__2 = v2->fields._sliderValue_5__2;
-      v24 = (float)(1.0 - (float)((float)v2->fields._size_5__4 / (float)v2->fields._allSize_5__3)) * 0.99;
-      v2->fields.__1__state = -1;
-      if ( sliderValue_5__2 >= v24 )
-        goto LABEL_20;
-      if ( !_4__this )
-        goto LABEL_40;
-      this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarSlider;
-      v2->fields._sliderValue_5__2 = v24;
-      if ( !this )
-        goto LABEL_40;
-      UIProgressBar__set_value((UIProgressBar_o *)this, v24, 0);
-LABEL_20:
-      v25 = (UnityEngine_WaitForEndOfFrame_o *)sub_1D0F300(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v25, 0);
-      v2->fields.__2__current = (Il2CppObject *)v25;
-      p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1D0F058(p__2__current, (int32_t)v25, v26, v27, v28, v29, v30, v31);
-      v21 = 4;
-      goto LABEL_30;
-    case 4:
-      v2->fields.__1__state = -1;
-      v32 = (UnityEngine_WaitForSeconds_o *)sub_1D0F300(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v32, 0.1, 0);
-      v2->fields.__2__current = (Il2CppObject *)v32;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.__2__current, (int32_t)v32, v33, v34, v35, v36, v37, v38);
-      v39 = 5;
-      goto LABEL_37;
-    case 5:
-      v2->fields.__1__state = -1;
-LABEL_23:
-      if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      v40 = AssetManager__getDownloadSize(0);
-      v2->fields._size_5__4 = v40;
-      v41 = v40;
-      v42 = (UnityEngine_WaitForEndOfFrame_o *)sub_1D0F300(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v42, 0);
-      v2->fields.__2__current = (Il2CppObject *)v42;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.__2__current, (int32_t)v42, v43, v44, v45, v46, v47, v48);
-      if ( v41 < 1 )
-        v39 = 6;
-      else
-        v39 = 3;
-      goto LABEL_37;
-    case 6:
-      v2->fields.__1__state = -1;
-      if ( !_4__this )
-        goto LABEL_40;
-      this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarSlider;
-      if ( !this )
-        goto LABEL_40;
-      UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0);
-      v49 = (UnityEngine_WaitForEndOfFrame_o *)sub_1D0F300(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v49, 0);
-      v2->fields.__2__current = (Il2CppObject *)v49;
-      p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1D0F058(p__2__current, (int32_t)v49, v50, v51, v52, v53, v54, v55);
-      v21 = 7;
-LABEL_30:
-      LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = v21;
-      return 1;
-    case 7:
-      v2->fields.__1__state = -1;
-      v56 = (UnityEngine_WaitForSeconds_o *)sub_1D0F300(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v56, 0.1, 0);
-      v2->fields.__2__current = (Il2CppObject *)v56;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.__2__current, (int32_t)v56, v57, v58, v59, v60, v61, v62);
-      v39 = 8;
+    if ( _1__state > 5 )
+    {
+      if ( _1__state != 6 )
+      {
+        if ( _1__state != 7 )
+        {
+          if ( _1__state != 8 )
+            return (char)miniProgressBarBase;
+          this->fields.__1__state = -1;
+          if ( _4__this )
+          {
+            miniProgressBarBase = (System_String_o *)_4__this->fields.miniProgressBarBase;
+            if ( miniProgressBarBase )
+            {
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)miniProgressBarBase, 0, 0);
 LABEL_37:
-      v2->fields.__1__state = v39;
-      return 1;
-    case 8:
-      v2->fields.__1__state = -1;
-      if ( !_4__this || (this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarBase) == 0 )
-LABEL_40:
-        sub_1D0F30C(this, method);
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-      return 0;
-    default:
-      return 0;
+              LOBYTE(miniProgressBarBase) = 0;
+              return (char)miniProgressBarBase;
+            }
+          }
+LABEL_48:
+          sub_21FFECC(miniProgressBarBase, method);
+        }
+        this->fields.__1__state = -1;
+        v59 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+        UnityEngine_WaitForSeconds___ctor(v59, 0.1, 0);
+        this->fields.__2__current = (Il2CppObject *)v59;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
+          (int32_t)v59,
+          v60,
+          v61,
+          v62,
+          v63,
+          v64,
+          v65);
+        v44 = 8;
+        goto LABEL_45;
+      }
+      this->fields.__1__state = -1;
+      if ( !_4__this )
+        goto LABEL_48;
+      miniProgressBarBase = (System_String_o *)_4__this->fields.miniProgressBarSlider;
+      if ( !miniProgressBarBase )
+        goto LABEL_48;
+      UIProgressBar__set_value((UIProgressBar_o *)miniProgressBarBase, 1.0, 0);
+      v45 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      UnityEngine_WaitForEndOfFrame___ctor(v45, 0);
+      this->fields.__2__current = (Il2CppObject *)v45;
+      p__2__current = &this->fields.__2__current;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v45, v46, v47, v48, v49, v50, v51);
+      v18 = 7;
+LABEL_41:
+      *((_DWORD *)p__2__current - 2) = v18;
+LABEL_46:
+      LOBYTE(miniProgressBarBase) = 1;
+      return (char)miniProgressBarBase;
+    }
+    if ( _1__state == 4 )
+    {
+      this->fields.__1__state = -1;
+      v52 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v52, 0.1, 0);
+      this->fields.__2__current = (Il2CppObject *)v52;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
+        (int32_t)v52,
+        v53,
+        v54,
+        v55,
+        v56,
+        v57,
+        v58);
+      v44 = 5;
+LABEL_45:
+      this->fields.__1__state = v44;
+      goto LABEL_46;
+    }
+    this->fields.__1__state = -1;
+LABEL_33:
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
+    DownloadSize = AssetManager__getDownloadSize(0);
+    this->fields._size_5__4 = DownloadSize;
+    v37 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    UnityEngine_WaitForEndOfFrame___ctor(v37, 0);
+    this->fields.__2__current = (Il2CppObject *)v37;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
+      (int32_t)v37,
+      v38,
+      v39,
+      v40,
+      v41,
+      v42,
+      v43);
+    if ( DownloadSize < 1 )
+      v44 = 6;
+    else
+      v44 = 3;
+    goto LABEL_45;
   }
+  if ( _1__state > 1 )
+  {
+    if ( _1__state != 2 )
+    {
+      v19 = 1.0 - (float)((float)this->fields._size_5__4 / (float)this->fields._allSize_5__3);
+      this->fields.__1__state = -1;
+      v20 = v19 * 0.99;
+      if ( this->fields._sliderValue_5__2 < v20 )
+      {
+        if ( !_4__this )
+          goto LABEL_48;
+        miniProgressBarBase = (System_String_o *)_4__this->fields.miniProgressBarSlider;
+        this->fields._sliderValue_5__2 = v20;
+        if ( !miniProgressBarBase )
+          goto LABEL_48;
+        UIProgressBar__set_value((UIProgressBar_o *)miniProgressBarBase, v20, 0);
+      }
+      v21 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      UnityEngine_WaitForEndOfFrame___ctor(v21, 0);
+      this->fields.__2__current = (Il2CppObject *)v21;
+      p__2__current = &this->fields.__2__current;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v21, v22, v23, v24, v25, v26, v27);
+      v18 = 4;
+      goto LABEL_41;
+    }
+    this->fields.__1__state = -1;
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
+    v35 = AssetManager__getDownloadSize(0);
+    this->fields._allSize_5__3 = v35;
+    if ( v35 < 1 )
+      goto LABEL_37;
+    goto LABEL_33;
+  }
+  if ( _1__state )
+  {
+    if ( _1__state != 1 )
+      return (char)miniProgressBarBase;
+    this->fields.__1__state = -1;
+    if ( !_4__this )
+      goto LABEL_48;
+    miniProgressBarBase = (System_String_o *)_4__this->fields.miniProgressBarBase;
+    if ( !miniProgressBarBase )
+      goto LABEL_48;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)miniProgressBarBase, 1, 0);
+    miniProgressBarBase = (System_String_o *)_4__this->fields.miniProgressBarSlider;
+    if ( !miniProgressBarBase )
+      goto LABEL_48;
+    UIProgressBar__set_value((UIProgressBar_o *)miniProgressBarBase, this->fields._sliderValue_5__2, 0);
+    miniProgressBarLabel = _4__this->fields.miniProgressBarLabel;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7, v8);
+    miniProgressBarBase = LocalizationManager__Get((System_String_o *)StringLiteral_3931/*"CONNECT_LOAD_MESSAGE3"*/, 0);
+    if ( !miniProgressBarLabel )
+      goto LABEL_48;
+    UILabel__set_text(miniProgressBarLabel, miniProgressBarBase, 0);
+    v10 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    UnityEngine_WaitForEndOfFrame___ctor(v10, 0);
+    this->fields.__2__current = (Il2CppObject *)v10;
+    p__2__current = &this->fields.__2__current;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v10, v12, v13, v14, v15, v16, v17);
+    v18 = 2;
+    goto LABEL_41;
+  }
+  this->fields.__1__state = -1;
+  this->fields._sliderValue_5__2 = 0.0;
+  v28 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+  UnityEngine_WaitForEndOfFrame___ctor(v28, 0);
+  this->fields.__2__current = (Il2CppObject *)v28;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
+    (int32_t)v28,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34);
+  LOBYTE(miniProgressBarBase) = 1;
+  this->fields.__1__state = 1;
+  return (char)miniProgressBarBase;
 }
 
 
@@ -1043,11 +1147,11 @@ void __noreturn LogoMain__ProgressBarCR_d__33__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_LogoMain__ProgressBarCR_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_LogoMain__ProgressBarCR_d__33_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

@@ -1,12 +1,12 @@
 void CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7B7D6 & 1) == 0 )
+  if ( (byte_593C858 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonEffectComponent_TypeInfo);
-    byte_4E7B7D6 = 1;
+    sub_21FFC50(&CommonEffectComponent_TypeInfo);
+    byte_593C858 = 1;
   }
-  if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+  if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0);
 }
 
@@ -24,27 +24,28 @@ void CommandCodeEffectComponent__EndEffectFunc(CommandCodeEffectComponent_o *thi
 void CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x20
-  Il2CppObject *v4; // x19
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
+  Il2CppObject *v5; // x19
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4E7B7D5 & 1) == 0 )
+  if ( (byte_593C857 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B7D5 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C857 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-  v4 = UnityEngine_Component__GetComponent_object_(
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+  v5 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Animation___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( v5 )
+         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
+  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( v6 )
   {
     if ( Component_object )
     {
@@ -52,16 +53,16 @@ void CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectComponent_o *thi
       return;
     }
 LABEL_14:
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v6, v7);
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v4, 0, 0);
-  if ( v5 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v5, 0, 0);
+  if ( v6 )
   {
-    if ( !v4 )
+    if ( !v5 )
       goto LABEL_14;
-    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v4, 0);
+    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v5, 0);
   }
 }
 
@@ -84,29 +85,31 @@ void CommandCodeEffectComponent__PlayDetachEffect(CommandCodeEffectComponent_o *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandCodeEffectComponent__SetCommandCodeImg(
         CommandCodeEffectComponent_o *this,
         int32_t commandCodeId,
         const MethodInfo *method)
 {
   UnityEngine_Object_o *commandCodeImg; // x21
-  UISprite_o *v6; // x20
+  __int64 v6; // x1
+  UISprite_o *v7; // x20
 
-  if ( (byte_4E7B7D4 & 1) == 0 )
+  if ( (byte_593C856 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B7D4 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C856 = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&commandCodeId);
   if ( UnityEngine_Object__op_Inequality(commandCodeImg, 0, 0) )
   {
-    v6 = this->fields.commandCodeImg;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetCommandCodeIcon(v6, commandCodeId, 0);
+    v7 = this->fields.commandCodeImg;
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6);
+    AtlasManager__SetCommandCodeIcon(v7, commandCodeId, 0);
   }
 }
 
@@ -116,19 +119,19 @@ void CommandCodeEffectComponent__SetDestroyEffectCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   if ( callback )
   {
     this->fields.destroyEffectCallback = callback;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.destroyEffectCallback,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.destroyEffectCallback,
       (int32_t)callback,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,
@@ -143,19 +146,19 @@ void CommandCodeEffectComponent__SetDetachEffect(
         System_Action_o *action,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.commandCodeDetachAction,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.commandCodeDetachAction,
       (int32_t)action,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,
@@ -170,19 +173,19 @@ void CommandCodeEffectComponent__SetEndEffectCallbak(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.endEffectCallback,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.endEffectCallback,
       (int32_t)callback,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,

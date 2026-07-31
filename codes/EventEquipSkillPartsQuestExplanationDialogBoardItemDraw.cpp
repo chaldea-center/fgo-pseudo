@@ -24,17 +24,17 @@ void EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
   int32_t SkillId_k__BackingField; // w22
 
   v4 = this;
-  if ( (byte_4E716CE & 1) == 0 )
+  if ( (byte_5932483 & 1) == 0 )
   {
-    this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)sub_1D0F0B4(&AtlasManager_TypeInfo);
-    byte_4E716CE = 1;
+    this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_5932483 = 1;
   }
   if ( !item )
     goto LABEL_9;
   icon = v4->fields.icon;
   SkillId_k__BackingField = item->fields._SkillId_k__BackingField;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item, method);
   AtlasManager__SetSkillIcon(icon, SkillId_k__BackingField, 0);
   this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)v4->fields.nameLabel;
   if ( !this
@@ -42,7 +42,7 @@ void EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
         (this = (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)v4->fields.nameLabel) == 0) )
   {
 LABEL_9:
-    sub_1D0F30C(this, item);
+    sub_21FFECC(this, item);
   }
   UILabel__SetCondensedScale((UILabel_o *)this, 280, 0, 0);
   WrapControlText__textAdjust(v4->fields.detailLabel, item->fields._Detail_k__BackingField, 16, 0, 0);

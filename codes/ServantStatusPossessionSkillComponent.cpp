@@ -2,10 +2,10 @@ void ServantStatusPossessionSkillComponent___cctor(const MethodInfo *method)
 {
   struct ServantStatusPossessionSkillComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4E7516D & 1) == 0 )
+  if ( (byte_5935D39 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantStatusPossessionSkillComponent_TypeInfo);
-    byte_4E7516D = 1;
+    sub_21FFC50(&ServantStatusPossessionSkillComponent_TypeInfo);
+    byte_5935D39 = 1;
   }
   static_fields = ServantStatusPossessionSkillComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->SkillListMax = 0x6900000002LL;
@@ -18,32 +18,33 @@ void ServantStatusPossessionSkillComponent___ctor(
         ServantStatusPossessionSkillComponent_o *this,
         const MethodInfo *method)
 {
-  ServantStatusPossessionSkillComponent_c *v3; // x0
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  __int64 v2; // x2
+  ServantStatusPossessionSkillComponent_c *v4; // x0
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v5; // x0
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E7516C & 1) == 0 )
+  if ( (byte_5935D38 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantStatusPossessionSkillComponent_EachSkill___TypeInfo);
-    sub_1D0F0B4(&ServantStatusPossessionSkillComponent_TypeInfo);
-    byte_4E7516C = 1;
+    sub_21FFC50(&ServantStatusPossessionSkillComponent_EachSkill___TypeInfo);
+    sub_21FFC50(&ServantStatusPossessionSkillComponent_TypeInfo);
+    byte_5935D38 = 1;
   }
-  v3 = ServantStatusPossessionSkillComponent_TypeInfo;
-  if ( !ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished )
+  v4 = ServantStatusPossessionSkillComponent_TypeInfo;
+  if ( !*(&ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo);
-    v3 = ServantStatusPossessionSkillComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo, method, v2);
+    v4 = ServantStatusPossessionSkillComponent_TypeInfo;
   }
-  v4 = (struct ServantStatusPossessionSkillComponent_EachSkill_array *)sub_1D0F15C(
+  v5 = (struct ServantStatusPossessionSkillComponent_EachSkill_array *)sub_21FFD10(
                                                                          ServantStatusPossessionSkillComponent_EachSkill___TypeInfo,
-                                                                         v3->static_fields->SkillListMax);
-  this->fields.skillList = v4;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.skillList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+                                                                         v4->static_fields->SkillListMax);
+  this->fields.skillList = v5;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.skillList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -66,50 +67,52 @@ void ServantStatusPossessionSkillComponent__Set(
   ServantStatusPossessionSkillComponent_o *v8; // x22
   ServantStatusPossessionSkillComponent_o *chargeDataLabel; // x24
   ServantStatusPossessionSkillComponent_o *v10; // x1
-  unsigned __int64 v11; // x26
-  int32_t v12; // w24
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v13; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v14; // x8
+  __int64 v11; // x2
+  unsigned __int64 v12; // x24
+  int32_t v13; // w27
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v14; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v15; // x8
   struct ServantStatusPossessionSkillComponent_EachSkill_array *skillList; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v16; // x8
-  const MethodInfo *v17; // x6
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v18; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v17; // x8
+  const MethodInfo *v18; // x6
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v19; // x8
   struct System_Int32_array *skillIds; // x9
   struct System_String_array *titles; // x10
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v21; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v22; // x23
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v22; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v23; // x23
   System_String_o *CondLabelColor; // x0
   float r; // s8
   float g; // s9
   float b; // s10
   float a; // s11
   System_String_o *CondSpriteColor; // x0
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v29; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v30; // x8
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v31; // x8
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v30; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v31; // x8
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v32; // x8
   unsigned __int64 max_length_low; // x9
-  ServantStatusPossessionSkillComponent_EachSkill_o *v33; // x10
-  const MethodInfo *v34; // x6
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v35; // x8
-  struct ServantStatusPossessionSkillComponent_EachSkill_array *v36; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v37; // x8
-  ServantStatusPossessionSkillComponent_EachSkill_o *v38; // x8
-  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  ServantStatusPossessionSkillComponent_EachSkill_o *v34; // x10
+  ServantStatusPossessionSkillComponent_EachSkill_o *v35; // x8
+  const MethodInfo *v36; // x6
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v37; // x8
+  struct ServantStatusPossessionSkillComponent_EachSkill_array *v38; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v39; // x8
+  ServantStatusPossessionSkillComponent_EachSkill_o *v40; // x8
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v44; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Color_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v46; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   v8 = this;
-  if ( (byte_4E7516B & 1) == 0 )
+  if ( (byte_5935D37 & 1) == 0 )
   {
-    sub_1D0F0B4(&ServantStatusPossessionSkillComponent_TypeInfo);
-    this = (ServantStatusPossessionSkillComponent_o *)sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7516B = 1;
+    sub_21FFC50(&ServantStatusPossessionSkillComponent_TypeInfo);
+    this = (ServantStatusPossessionSkillComponent_o *)sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935D37 = 1;
   }
   if ( !info )
-    goto LABEL_62;
+    goto LABEL_65;
   if ( info->fields.lv < 0 || info->fields.charge < 0 )
   {
     this = (ServantStatusPossessionSkillComponent_o *)v8->fields.chargeTitleSprite;
@@ -129,37 +132,37 @@ void ServantStatusPossessionSkillComponent__Set(
         }
       }
     }
-LABEL_62:
-    sub_1D0F30C(this, info);
+LABEL_65:
+    sub_21FFECC(this, info);
   }
   this = (ServantStatusPossessionSkillComponent_o *)v8->fields.chargeTitleSprite;
   if ( !this )
-    goto LABEL_62;
+    goto LABEL_65;
   this = (ServantStatusPossessionSkillComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)this,
                                                       0);
   if ( !this )
-    goto LABEL_62;
+    goto LABEL_65;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   chargeDataLabel = (ServantStatusPossessionSkillComponent_o *)v8->fields.chargeDataLabel;
   this = (ServantStatusPossessionSkillComponent_o *)System_Int32__ToString((int)info + 24, 0);
   if ( !chargeDataLabel )
-    goto LABEL_62;
+    goto LABEL_65;
   v10 = this;
   this = chargeDataLabel;
 LABEL_14:
   UILabel__set_text((UILabel_o *)this, (System_String_o *)v10, 0);
-  v11 = 0;
   v12 = 0;
+  v13 = 0;
   while ( 1 )
   {
     this = (ServantStatusPossessionSkillComponent_o *)ServantStatusPossessionSkillComponent_TypeInfo;
-    if ( !ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished )
+    if ( !*(&ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo);
+      j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo, info, v11);
       this = (ServantStatusPossessionSkillComponent_o *)ServantStatusPossessionSkillComponent_TypeInfo;
     }
-    if ( (__int64)v11 >= (__int64)this[2].fields.chargeTitleSprite->klass )
+    if ( (__int64)v12 >= (__int64)this[2].fields.chargeTitleSprite->klass )
       break;
     if ( servantSkillAddEntity
       && (this = (ServantStatusPossessionSkillComponent_o *)BasicHelper__IsNullOrEmpty(
@@ -169,121 +172,129 @@ LABEL_14:
     {
       skillList = v8->fields.skillList;
       if ( !skillList )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(skillList->max_length) )
-LABEL_63:
-        sub_1D0F314(this);
-      v16 = skillList->m_Items[v11];
-      if ( !v16 )
-        goto LABEL_62;
-      this = (ServantStatusPossessionSkillComponent_o *)v16->fields.baseObject;
+        goto LABEL_65;
+      if ( v12 >= LODWORD(skillList->max_length) )
+        goto LABEL_66;
+      v17 = skillList->m_Items[v12];
+      if ( !v17 )
+        goto LABEL_65;
+      this = (ServantStatusPossessionSkillComponent_o *)v17->fields.baseObject;
       if ( !this )
-        goto LABEL_62;
+        goto LABEL_65;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      v18 = v8->fields.skillList;
-      if ( !v18 )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(v18->max_length) )
-        goto LABEL_63;
+      v19 = v8->fields.skillList;
+      if ( !v19 )
+        goto LABEL_65;
+      if ( v12 >= LODWORD(v19->max_length) )
+        goto LABEL_66;
       skillIds = servantSkillAddEntity->fields.skillIds;
       if ( !skillIds )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(skillIds->max_length) )
-        goto LABEL_63;
+        goto LABEL_65;
+      if ( v12 >= LODWORD(skillIds->max_length) )
+        goto LABEL_66;
       titles = servantSkillAddEntity->fields.titles;
       if ( !titles )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(titles->max_length) )
-        goto LABEL_63;
-      this = (ServantStatusPossessionSkillComponent_o *)v18->m_Items[v11];
+        goto LABEL_65;
+      if ( v12 >= LODWORD(titles->max_length) )
+        goto LABEL_66;
+      this = (ServantStatusPossessionSkillComponent_o *)v19->m_Items[v12];
       if ( !this )
-        goto LABEL_62;
+        goto LABEL_65;
       ServantStatusPossessionSkillComponent_EachSkill__Set(
         (ServantStatusPossessionSkillComponent_EachSkill_o *)this,
         info,
-        skillIds->m_Items[v11],
+        skillIds->m_Items[v12],
         servantLimitAddEntity,
         1,
-        titles->m_Items[v11],
-        v17);
-      v21 = v8->fields.skillList;
-      if ( !v21 )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(v21->max_length) )
-        goto LABEL_63;
-      v22 = v21->m_Items[v11];
-      CondLabelColor = ServantSkillAddEntity__GetCondLabelColor(servantSkillAddEntity, 0);
-      v39.fields.r = 0.0;
-      v39.fields.g = 0.0;
-      v39.fields.b = 0.0;
-      v39.fields.a = 1.0;
-      v40 = ColorHelper__ParseColorCode_45504796(CondLabelColor, v39, 0);
-      r = v40.fields.r;
-      g = v40.fields.g;
-      b = v40.fields.b;
-      a = v40.fields.a;
-      CondSpriteColor = ServantSkillAddEntity__GetCondSpriteColor(servantSkillAddEntity, 0);
-      v41.fields.r = 1.0;
-      v41.fields.g = 1.0;
-      v41.fields.b = 1.0;
-      v41.fields.a = 1.0;
-      v42 = ColorHelper__ParseColorCode_45504796(CondSpriteColor, v41, 0);
+        titles->m_Items[v12],
+        v18);
+      v22 = v8->fields.skillList;
       if ( !v22 )
-        goto LABEL_62;
-      v44 = v42;
-      v43.fields.r = r;
-      v43.fields.g = g;
-      v43.fields.b = b;
-      v43.fields.a = a;
-      ServantStatusPossessionSkillComponent_EachSkill__SetCondColor(v22, v43, v44, (const MethodInfo *)info);
-      v29 = v8->fields.skillList;
-      if ( !v29 )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(v29->max_length) )
-        goto LABEL_63;
-      v30 = v29->m_Items[v11];
+        goto LABEL_65;
+      if ( v12 >= LODWORD(v22->max_length) )
+        goto LABEL_66;
+      v23 = v22->m_Items[v12];
+      CondLabelColor = ServantSkillAddEntity__GetCondLabelColor(servantSkillAddEntity, 0);
+      v41.fields.r = 0.0;
+      v41.fields.g = 0.0;
+      v41.fields.b = 0.0;
+      v41.fields.a = 1.0;
+      v42 = ColorHelper__ParseColorCode_51093332(CondLabelColor, v41, 0);
+      r = v42.fields.r;
+      g = v42.fields.g;
+      b = v42.fields.b;
+      a = v42.fields.a;
+      CondSpriteColor = ServantSkillAddEntity__GetCondSpriteColor(servantSkillAddEntity, 0);
+      v43.fields.r = 1.0;
+      v43.fields.g = 1.0;
+      v43.fields.b = 1.0;
+      v43.fields.a = 1.0;
+      v44 = ColorHelper__ParseColorCode_51093332(CondSpriteColor, v43, 0);
+      if ( !v23 )
+        goto LABEL_65;
+      v46 = v44;
+      v45.fields.r = r;
+      v45.fields.g = g;
+      v45.fields.b = b;
+      v45.fields.a = a;
+      ServantStatusPossessionSkillComponent_EachSkill__SetCondColor(v23, v45, v46, (const MethodInfo *)info);
+      v30 = v8->fields.skillList;
       if ( !v30 )
-        goto LABEL_62;
-      GameObjectExtensions__SetLocalPositionY(v30->fields.baseObject, (float)-v12, 0);
-      v31 = v8->fields.skillList;
+        goto LABEL_65;
+      if ( v12 >= LODWORD(v30->max_length) )
+        goto LABEL_66;
+      v31 = v30->m_Items[v12];
       if ( !v31 )
-        goto LABEL_62;
-      max_length_low = LODWORD(v31->max_length);
-      if ( v11 >= max_length_low )
-        goto LABEL_63;
-      v33 = v31->m_Items[v11];
-      if ( !v33 )
-        goto LABEL_62;
+        goto LABEL_65;
+      GameObjectExtensions__SetLocalPositionY(v31->fields.baseObject, (float)-v13, 0);
+      v32 = v8->fields.skillList;
+      if ( !v32 )
+        goto LABEL_65;
+      max_length_low = LODWORD(v32->max_length);
+      if ( v12 >= max_length_low )
+        goto LABEL_66;
+      v34 = v32->m_Items[v12];
+      if ( !v34 )
+        goto LABEL_65;
     }
     else
     {
-      v13 = v8->fields.skillList;
-      if ( !v13 )
-        goto LABEL_62;
-      if ( v11 >= LODWORD(v13->max_length) )
-        goto LABEL_63;
-      v14 = v13->m_Items[v11];
-      if ( !v14 )
-        goto LABEL_62;
-      this = (ServantStatusPossessionSkillComponent_o *)v14->fields.baseObject;
-      if ( v11 )
+      v14 = v8->fields.skillList;
+      if ( v12 )
       {
+        if ( !v14 )
+          goto LABEL_65;
+        if ( v12 >= LODWORD(v14->max_length) )
+          goto LABEL_66;
+        v15 = v14->m_Items[v12];
+        if ( !v15 )
+          goto LABEL_65;
+        this = (ServantStatusPossessionSkillComponent_o *)v15->fields.baseObject;
         if ( !this )
-          goto LABEL_62;
+          goto LABEL_65;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-        goto LABEL_60;
-      }
-      if ( !this )
-        goto LABEL_62;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      v35 = v8->fields.skillList;
-      if ( !v35 )
-        goto LABEL_62;
-      if ( !LODWORD(v35->max_length) )
         goto LABEL_63;
-      this = (ServantStatusPossessionSkillComponent_o *)v35->m_Items[0];
+      }
+      if ( !v14 )
+        goto LABEL_65;
+      if ( !LODWORD(v14->max_length) )
+LABEL_66:
+        sub_21FFED4(this);
+      v35 = v14->m_Items[0];
+      if ( !v35 )
+        goto LABEL_65;
+      this = (ServantStatusPossessionSkillComponent_o *)v35->fields.baseObject;
       if ( !this )
-        goto LABEL_62;
+        goto LABEL_65;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+      v37 = v8->fields.skillList;
+      if ( !v37 )
+        goto LABEL_65;
+      if ( !LODWORD(v37->max_length) )
+        goto LABEL_66;
+      this = (ServantStatusPossessionSkillComponent_o *)v37->m_Items[0];
+      if ( !this )
+        goto LABEL_65;
       ServantStatusPossessionSkillComponent_EachSkill__Set(
         (ServantStatusPossessionSkillComponent_EachSkill_o *)this,
         info,
@@ -291,40 +302,41 @@ LABEL_63:
         servantLimitAddEntity,
         0,
         (System_String_o *)StringLiteral_1/*""*/,
-        v34);
-      v36 = v8->fields.skillList;
-      if ( !v36 )
-        goto LABEL_62;
-      if ( !LODWORD(v36->max_length) )
-        goto LABEL_63;
-      v37 = v36->m_Items[0];
-      if ( !v37 )
-        goto LABEL_62;
-      GameObjectExtensions__SetLocalPositionY(v37->fields.baseObject, (float)-v12, 0);
-      v31 = v8->fields.skillList;
-      if ( !v31 )
-        goto LABEL_62;
-      max_length_low = LODWORD(v31->max_length);
-      if ( !LODWORD(v31->max_length) )
-        goto LABEL_63;
-      v33 = v31->m_Items[0];
-      if ( !v33 )
-        goto LABEL_62;
+        v36);
+      v38 = v8->fields.skillList;
+      if ( !v38 )
+        goto LABEL_65;
+      if ( !LODWORD(v38->max_length) )
+        goto LABEL_66;
+      v39 = v38->m_Items[0];
+      if ( !v39 )
+        goto LABEL_65;
+      GameObjectExtensions__SetLocalPositionY(v39->fields.baseObject, (float)-v13, 0);
+      v32 = v8->fields.skillList;
+      if ( !v32 )
+        goto LABEL_65;
+      max_length_low = LODWORD(v32->max_length);
+      if ( !LODWORD(v32->max_length) )
+        goto LABEL_66;
+      v34 = v32->m_Items[0];
+      if ( !v34 )
+        goto LABEL_65;
     }
-    if ( v11 >= max_length_low )
-      goto LABEL_63;
-    v38 = v31->m_Items[v11];
-    if ( !v38 )
-      goto LABEL_62;
-    v12 += v33->fields._Height_k__BackingField;
-    v8->fields._IsNeedAddAdjust_k__BackingField = v38->fields._IsNeedAddAdjust_k__BackingField;
-LABEL_60:
-    ++v11;
+    if ( v12 >= max_length_low )
+      goto LABEL_66;
+    v40 = v32->m_Items[v12];
+    if ( !v40 )
+      goto LABEL_65;
+    v13 += v34->fields._Height_k__BackingField;
+    v8->fields._IsNeedAddAdjust_k__BackingField = v40->fields._IsNeedAddAdjust_k__BackingField;
+LABEL_63:
+    ++v12;
   }
-  v8->fields._Height_k__BackingField = v12;
+  v8->fields._Height_k__BackingField = v13;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusPossessionSkillComponent__SetActive(
         ServantStatusPossessionSkillComponent_o *this,
         bool flag,
@@ -334,7 +346,7 @@ void ServantStatusPossessionSkillComponent__SetActive(
 
   baseObject = this->fields.baseObject;
   if ( !baseObject )
-    sub_1D0F30C(0, flag);
+    sub_21FFECC(0, flag);
   UnityEngine_GameObject__SetActive(baseObject, flag, 0);
 }
 
@@ -391,217 +403,238 @@ void ServantStatusPossessionSkillComponent_EachSkill__Set(
         const MethodInfo *method)
 {
   UILabel_o *nameLabel; // x0
+  __int64 v14; // x1
+  __int64 v15; // x2
   int lv; // w2
-  float v15; // s8
-  System_String_o *OverwriteSkillName_44078084; // x0
-  System_String_o *v17; // x0
-  System_String_o *v18; // x8
+  float v17; // s8
+  System_String_o *OverwriteSkillName_49661944; // x0
+  int32_t id; // w8
+  System_String_o *v20; // x0
+  System_String_o *v21; // x8
+  _BOOL4 isUse; // w9
+  __int64 v23; // x1
+  __int64 v24; // x2
   UILabel_o *explanationLabel; // x23
-  System_String_o *v20; // x24
-  ServantStatusPossessionSkillComponent_c *v21; // x0
-  struct UILabel_o *v22; // x8
-  ServantStatusPossessionSkillComponent_c *v23; // x0
+  System_String_o *v26; // x24
+  ServantStatusPossessionSkillComponent_c *v27; // x0
+  __int64 v28; // x2
+  struct UILabel_o *v29; // x8
+  ServantStatusPossessionSkillComponent_c *v30; // x0
   int32_t mHeight; // w10
   struct ServantStatusPossessionSkillComponent_StaticFields *static_fields; // x9
   int32_t SkillPitch; // w8
-  int32_t v27; // w23
+  int32_t v34; // w23
+  int v35; // w9
   struct ServantSkillStrengthStatus_o **p_strengthStatus; // x23
   UnityEngine_Object_o *strengthStatus; // x24
+  __int64 v38; // x2
+  __int64 v39; // x1
+  __int64 v40; // x2
   UnityEngine_Object_o *gameObject; // x24
   System_String_o *PATH; // x24
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
-  UnityEngine_Vector2Int_o v40; // x6
-  UnityEngine_Object_o *v41; // x22
-  UnityEngine_Object_o *v42; // x22
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
+  UnityEngine_Vector2Int_o v51; // x6
+  __int64 v52; // x1
+  __int64 v53; // x2
+  UnityEngine_Object_o *v54; // x22
+  __int64 v55; // x1
+  __int64 v56; // x2
+  UnityEngine_Object_o *v57; // x22
+  __int64 v58; // x2
   UILabel_o *condLabel; // x20
+  __int64 v60; // x1
+  __int64 v61; // x2
   int32_t Height_k__BackingField; // w20
   float MultiSkillPosY; // s0
-  int v46; // w21
-  int v47; // w8
+  int v64; // w21
+  int v65; // w8
   System_String_o *explanation; // [xsp+10h] [xbp-70h] BYREF
   System_String_o *title; // [xsp+18h] [xbp-68h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-58h] BYREF
-  UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v69; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7516E & 1) == 0 )
+  if ( (byte_5935D3A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&ServantSkillStrengthStatus_TypeInfo);
-    sub_1D0F0B4(&ServantStatusPossessionSkillComponent_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7516E = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&ServantSkillStrengthStatus_TypeInfo);
+    sub_21FFC50(&ServantStatusPossessionSkillComponent_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935D3A = 1;
   }
+  nameLabel = this->fields.nameLabel;
   entity = 0;
   explanation = 0;
   title = 0;
-  nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   nameLabel = this->fields.explanationLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   nameLabel = this->fields.condLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   nameLabel = (UILabel_o *)this->fields.condSprite;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   nameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)nameLabel, 0, 0);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  nameLabel = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SkillMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v14, v15);
+  nameLabel = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   nameLabel = (UILabel_o *)DataMasterBase_object__object__int___TryGetEntity(
                              (DataMasterBase_TMaster__TEntity__PKType__o *)nameLabel,
                              &entity,
                              skillId,
-                             (const MethodInfo_3535BC8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                             (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)nameLabel & 1) == 0 )
     return;
   if ( !info )
-    goto LABEL_86;
+    goto LABEL_88;
   lv = info->fields.lv;
   if ( lv < 0 )
-    v15 = 0.5;
+    v17 = 0.5;
   else
-    v15 = 1.0;
+    v17 = 1.0;
   if ( !servantLimitAddEntity
-    || (OverwriteSkillName_44078084 = ServantLimitAddEntity__GetOverwriteSkillName_44078084(
+    || (OverwriteSkillName_49661944 = ServantLimitAddEntity__GetOverwriteSkillName_49661944(
                                         servantLimitAddEntity,
                                         skillId,
                                         lv,
                                         info->fields.title,
                                         0)) == 0 )
   {
-    OverwriteSkillName_44078084 = info->fields.title;
+    OverwriteSkillName_49661944 = info->fields.title;
   }
+  id = info->fields.id;
   explanation = info->fields.explanation;
-  title = OverwriteSkillName_44078084;
-  if ( info->fields.id != skillId )
+  title = OverwriteSkillName_49661944;
+  if ( id != skillId )
   {
     nameLabel = (UILabel_o *)entity;
     if ( !entity )
-      goto LABEL_86;
+      goto LABEL_88;
     SkillEntity__GetEffectExplanation((SkillEntity_o *)entity, &title, &explanation, info->fields.lv, 0, 0);
     if ( servantLimitAddEntity )
-      v17 = ServantLimitAddEntity__GetOverwriteSkillName_44078084(
+      v20 = ServantLimitAddEntity__GetOverwriteSkillName_49661944(
               servantLimitAddEntity,
               skillId,
               info->fields.lv,
               title,
               0);
     else
-      v17 = 0;
-    v18 = title;
-    if ( v17 )
-      v18 = v17;
-    title = v18;
-    if ( !info->fields.isUse )
+      v20 = 0;
+    v21 = title;
+    isUse = info->fields.isUse;
+    if ( v20 )
+      v21 = v20;
+    title = v21;
+    if ( !isUse )
       explanation = info->fields.explanation;
   }
   nameLabel = (UILabel_o *)this->fields.icon;
   if ( !nameLabel )
-    goto LABEL_86;
-  SkillIconComponent__Set_42473032((SkillIconComponent_o *)nameLabel, skillId, info->fields.lv, 0);
+    goto LABEL_88;
+  SkillIconComponent__Set_48036300((SkillIconComponent_o *)nameLabel, skillId, info->fields.lv, 0);
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__set_text(nameLabel, title, 0);
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
-    goto LABEL_86;
-  v51.fields.a = 1.0;
-  v51.fields.r = v15;
-  v51.fields.g = v15;
-  v51.fields.b = v15;
-  UIWidget__set_color((UIWidget_o *)nameLabel, v51, 0);
+    goto LABEL_88;
+  v69.fields.r = v17;
+  v69.fields.g = v17;
+  v69.fields.b = v17;
+  v69.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)nameLabel, v69, 0);
   nameLabel = this->fields.explanationLabel;
   if ( !nameLabel )
-    goto LABEL_86;
-  v52.fields.a = 1.0;
-  v52.fields.r = v15;
-  v52.fields.g = v15;
-  v52.fields.b = v15;
-  UIWidget__set_color((UIWidget_o *)nameLabel, v52, 0);
+    goto LABEL_88;
+  v70.fields.r = v17;
+  v70.fields.g = v17;
+  v70.fields.b = v17;
+  v70.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)nameLabel, v70, 0);
   explanationLabel = this->fields.explanationLabel;
-  v20 = explanation;
-  v21 = ServantStatusPossessionSkillComponent_TypeInfo;
-  if ( !ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished )
+  v26 = explanation;
+  v27 = ServantStatusPossessionSkillComponent_TypeInfo;
+  if ( !*(&ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo);
-    v21 = ServantStatusPossessionSkillComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo, v23, v24);
+    v27 = ServantStatusPossessionSkillComponent_TypeInfo;
   }
   nameLabel = (UILabel_o *)WrapControlText__textBBCodeAdjust(
                              explanationLabel,
-                             v20,
-                             v21->static_fields->DetailFontSize,
-                             v21->static_fields->DetailFontSize,
+                             v26,
+                             v27->static_fields->DetailFontSize,
+                             v27->static_fields->DetailFontSize,
                              0);
-  v22 = this->fields.explanationLabel;
-  if ( !v22 )
-    goto LABEL_86;
-  v23 = ServantStatusPossessionSkillComponent_TypeInfo;
-  mHeight = v22->fields.mHeight;
+  v29 = this->fields.explanationLabel;
+  if ( !v29 )
+    goto LABEL_88;
+  v30 = ServantStatusPossessionSkillComponent_TypeInfo;
+  mHeight = v29->fields.mHeight;
   static_fields = ServantStatusPossessionSkillComponent_TypeInfo->static_fields;
   SkillPitch = static_fields->SkillPitch;
-  v27 = static_fields->ExplanationLabelAdjustHeight + mHeight;
-  if ( v27 >= SkillPitch )
+  v34 = static_fields->ExplanationLabelAdjustHeight + mHeight;
+  if ( v34 >= SkillPitch )
   {
     SkillPitch = static_fields->ExplanationLabelAdjustHeight + mHeight;
   }
-  else if ( !ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished )
+  else if ( !*(&ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo);
-    v23 = ServantStatusPossessionSkillComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo, info, v28);
+    v30 = ServantStatusPossessionSkillComponent_TypeInfo;
     SkillPitch = ServantStatusPossessionSkillComponent_TypeInfo->static_fields->SkillPitch;
   }
+  v35 = *(&v30->_2.cctor_finished + 1);
   this->fields._Height_k__BackingField = SkillPitch;
-  if ( !v23->_2.cctor_finished )
+  if ( !v35 )
   {
-    j_il2cpp_runtime_class_init_0(v23);
-    v23 = ServantStatusPossessionSkillComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v30, info, v28);
+    v30 = ServantStatusPossessionSkillComponent_TypeInfo;
   }
-  if ( v27 - v23->static_fields->SkillPitch >= 11 )
+  if ( v34 - v30->static_fields->SkillPitch >= 11 )
     this->fields._IsNeedAddAdjust_k__BackingField = 1;
   if ( (info->fields.lv & 0x80000000) == 0 )
   {
     p_strengthStatus = &this->fields.strengthStatus;
     strengthStatus = (UnityEngine_Object_o *)this->fields.strengthStatus;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, info, v28);
     if ( UnityEngine_Object__op_Inequality(strengthStatus, 0, 0) )
     {
       nameLabel = (UILabel_o *)*p_strengthStatus;
       if ( !*p_strengthStatus )
-        goto LABEL_86;
+        goto LABEL_88;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                              (UnityEngine_Component_o *)nameLabel,
                                              0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_73359484(gameObject, 0);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39, v40);
+      UnityEngine_Object__Destroy_83246496(gameObject, 0);
     }
-    if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
+    if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, info, v38);
     nameLabel = this->fields.nameLabel;
     if ( nameLabel )
     {
@@ -612,21 +645,21 @@ void ServantStatusPossessionSkillComponent_EachSkill__Set(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)nameLabel,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
         *p_strengthStatus = (struct ServantSkillStrengthStatus_o *)Component_object;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.strengthStatus,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.strengthStatus,
           (int32_t)Component_object,
-          v34,
-          v35,
-          v36,
-          v37,
-          v38,
-          v39);
+          v45,
+          v46,
+          v47,
+          v48,
+          v49,
+          v50);
         nameLabel = (UILabel_o *)*p_strengthStatus;
         if ( *p_strengthStatus )
         {
-          v40 = (UnityEngine_Vector2Int_o)0x1600000018LL;
+          v51 = (UnityEngine_Vector2Int_o)0x1600000018LL;
           ServantSkillStrengthStatus__Set(
             (ServantSkillStrengthStatus_o *)nameLabel,
             this->fields.nameLabel,
@@ -634,7 +667,7 @@ void ServantStatusPossessionSkillComponent_EachSkill__Set(
             info->fields.skillRecord,
             24,
             1,
-            v40,
+            v51,
             360,
             0,
             0);
@@ -642,55 +675,62 @@ void ServantStatusPossessionSkillComponent_EachSkill__Set(
         }
       }
     }
-LABEL_86:
-    sub_1D0F30C(nameLabel, info);
+LABEL_88:
+    sub_21FFECC(nameLabel, info);
   }
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__SetCondensedScale(nameLabel, 360, 0, 0);
-  v41 = (UnityEngine_Object_o *)this->fields.strengthStatus;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v41, 0, 0) )
+  v54 = (UnityEngine_Object_o *)this->fields.strengthStatus;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v52, v53);
+  if ( UnityEngine_Object__op_Inequality(v54, 0, 0) )
   {
     nameLabel = (UILabel_o *)this->fields.strengthStatus;
     if ( !nameLabel )
-      goto LABEL_86;
-    v42 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(v42, 0);
+      goto LABEL_88;
+    v57 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v55, v56);
+    UnityEngine_Object__Destroy_83246496(v57, 0);
   }
 LABEL_65:
   nameLabel = (UILabel_o *)this->fields.condSprite;
-  if ( !nameLabel )
-    goto LABEL_86;
-  nameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
-  if ( !nameLabel )
-    goto LABEL_86;
   if ( !multiFlg )
   {
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)nameLabel, 0, 0);
-    nameLabel = this->fields.condLabel;
     if ( nameLabel )
     {
-      UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
-      return;
+      nameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
+      if ( nameLabel )
+      {
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)nameLabel, 0, 0);
+        nameLabel = this->fields.condLabel;
+        if ( nameLabel )
+        {
+          UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
+          return;
+        }
+      }
     }
-    goto LABEL_86;
+    goto LABEL_88;
   }
+  if ( !nameLabel )
+    goto LABEL_88;
+  nameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)nameLabel, 0);
+  if ( !nameLabel )
+    goto LABEL_88;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)nameLabel, 1, 0);
   nameLabel = this->fields.condLabel;
   if ( !nameLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__set_text(nameLabel, condTitle, 0);
   nameLabel = (UILabel_o *)ServantStatusPossessionSkillComponent_TypeInfo;
   condLabel = this->fields.condLabel;
-  if ( !ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo);
+  if ( !*(&ServantStatusPossessionSkillComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ServantStatusPossessionSkillComponent_TypeInfo, info, v58);
   if ( !condLabel )
-    goto LABEL_86;
+    goto LABEL_88;
   UILabel__SetCondensedScale(
     condLabel,
     ServantStatusPossessionSkillComponent_TypeInfo->static_fields->CondTitleMaxWidth,
@@ -703,24 +743,25 @@ LABEL_65:
   Height_k__BackingField = this->fields._Height_k__BackingField;
   MultiSkillPosY = ServantStatusPossessionSkillComponent_TypeInfo->static_fields->MultiSkillPosY;
   if ( MultiSkillPosY == INFINITY )
-    v46 = 0x80000000;
+    v64 = 0x80000000;
   else
-    v46 = (int)MultiSkillPosY;
-  if ( !byte_4E72499 )
+    v64 = (int)MultiSkillPosY;
+  if ( !byte_5932DF6 )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E72499 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_5932DF6 = 1;
   }
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( v46 >= 0 )
-    v47 = v46;
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v60, v61);
+  if ( v64 >= 0 )
+    v65 = v64;
   else
-    v47 = -v46;
-  this->fields._Height_k__BackingField = v47 + Height_k__BackingField;
+    v65 = -v64;
+  this->fields._Height_k__BackingField = v65 + Height_k__BackingField;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusPossessionSkillComponent_EachSkill__SetActive(
         ServantStatusPossessionSkillComponent_EachSkill_o *this,
         bool flag,
@@ -730,7 +771,7 @@ void ServantStatusPossessionSkillComponent_EachSkill__SetActive(
 
   baseObject = this->fields.baseObject;
   if ( !baseObject )
-    sub_1D0F30C(0, flag);
+    sub_21FFECC(0, flag);
   UnityEngine_GameObject__SetActive(baseObject, flag, 0);
 }
 
@@ -757,7 +798,7 @@ void ServantStatusPossessionSkillComponent_EachSkill__SetCondColor(
         UIWidget__set_color(condSprite, spriteColor, 0),
         (condSprite = (UIWidget_o *)this->fields.condLabel) == 0) )
   {
-    sub_1D0F30C(condSprite, method);
+    sub_21FFECC(condSprite, method);
   }
   v10.fields.b = b;
   v10.fields.a = a;

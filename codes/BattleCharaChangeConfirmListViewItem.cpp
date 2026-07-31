@@ -6,25 +6,25 @@ void BattleCharaChangeConfirmListViewItem___ctor(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *nextData,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  bool v15; // w6
+  bool v16; // w7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SvtId_k__BackingField = svtId;
   this->fields._LimitCount_k__BackingField = limitCount;
   this->fields._NowData_k__BackingField = nowData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._NowData_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._NowData_k__BackingField,
     (int32_t)nowData,
     v11,
     v12,
@@ -33,8 +33,8 @@ void BattleCharaChangeConfirmListViewItem___ctor(
     v15,
     v16);
   this->fields._NextData_k__BackingField = nextData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._NextData_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._NextData_k__BackingField,
     (int32_t)nextData,
     v17,
     v18,
@@ -86,36 +86,36 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
         System_Int32_array *classSkillArray,
         const MethodInfo *method)
 {
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  bool v17; // w6
+  bool v18; // w7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
+  bool v23; // w6
+  bool v24; // w7
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
   int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
+  bool v29; // w6
+  bool v30; // w7
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
   int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  bool v35; // w6
+  bool v36; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._DispLimitCount_k__BackingField = dispLimitCount;
   this->fields._TreasureDeviceInfo_k__BackingField = tdInfo;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField,
     (int32_t)tdInfo,
     v13,
     v14,
@@ -124,8 +124,8 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v17,
     v18);
   this->fields._SkillInfoArray_k__BackingField = skillInfoArray;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._SkillInfoArray_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._SkillInfoArray_k__BackingField,
     (int32_t)skillInfoArray,
     v19,
     v20,
@@ -134,8 +134,8 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v23,
     v24);
   this->fields._Status_k__BackingField = status;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Status_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Status_k__BackingField,
     (int32_t)status,
     v25,
     v26,
@@ -144,8 +144,8 @@ void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
     v29,
     v30);
   this->fields._ClassPassiveSkillArray_k__BackingField = classSkillArray;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ClassPassiveSkillArray_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ClassPassiveSkillArray_k__BackingField,
     (int32_t)classSkillArray,
     v31,
     v32,

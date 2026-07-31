@@ -9,26 +9,29 @@ System_Collections_IEnumerator_o *CriFsRequest__CheckDone(CriFsRequest_o *this, 
 {
   __int64 v3; // x20
 
-  if ( (byte_4E7084A & 1) == 0 )
+  if ( (byte_59314F2 & 1) == 0 )
   {
-    sub_1D0F0B4(&CriFsRequest__CheckDone_d__23_TypeInfo);
-    byte_4E7084A = 1;
+    sub_21FFC50(&CriFsRequest__CheckDone_d__23_TypeInfo);
+    byte_59314F2 = 1;
   }
-  v3 = sub_1D0F300(CriFsRequest__CheckDone_d__23_TypeInfo);
+  v3 = sub_21FFEBC(CriFsRequest__CheckDone_d__23_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058(v3 + 32, this);
+  sub_21FFBF4(v3 + 32, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
 void CriFsRequest__Dispose(CriFsRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E70849 & 1) == 0 )
+  __int64 v3; // x1
+  __int64 v4; // x2
+
+  if ( (byte_59314F1 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_GC_TypeInfo);
-    byte_4E70849 = 1;
+    sub_21FFC50(&System_GC_TypeInfo);
+    byte_59314F1 = 1;
   }
   if ( !this->fields._isDisposed_k__BackingField )
   {
@@ -37,14 +40,14 @@ void CriFsRequest__Dispose(CriFsRequest_o *this, const MethodInfo *method)
       1,
       this->klass->vtable._7_Dispose.method);
     this->fields._isDisposed_k__BackingField = 1;
-    if ( !System_GC_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
+    if ( !*(&System_GC_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_GC_TypeInfo, v3, v4);
     System_GC__SuppressFinalize((Il2CppObject *)this, 0);
   }
 }
 
 
-void CriFsRequest__Dispose_31708788(CriFsRequest_o *this, bool disposing, const MethodInfo *method)
+void CriFsRequest__Dispose_36919480(CriFsRequest_o *this, bool disposing, const MethodInfo *method)
 {
   ;
 }
@@ -64,16 +67,19 @@ void CriFsRequest__Done(CriFsRequest_o *this, const MethodInfo *method)
 }
 
 
-// positive sp value has been detected, the output may be wrong!
 void CriFsRequest__Finalize(CriFsRequest_o *this, const MethodInfo *method)
 {
+  CriFsRequest_o *v2; // [xsp+18h] [xbp-18h]
+
+  v2 = this;
   if ( !this->fields._isDisposed_k__BackingField )
   {
     ((void (__fastcall *)(CriFsRequest_o *, _QWORD, const MethodInfo *))this->klass->vtable._7_Dispose.methodPtr)(
       this,
       0,
       this->klass->vtable._7_Dispose.method);
-    this->fields._isDisposed_k__BackingField = 1;
+    this = v2;
+    v2->fields._isDisposed_k__BackingField = 1;
   }
   System_Object__Finalize((Il2CppObject *)this, 0);
 }
@@ -101,8 +107,8 @@ UnityEngine_YieldInstruction_o *CriFsRequest__WaitForDone(
 
   v4 = CriFsRequest__CheckDone(this, (const MethodInfo *)mb);
   if ( !mb )
-    sub_1D0F30C(v4, v5);
-  return (UnityEngine_YieldInstruction_o *)UnityEngine_MonoBehaviour__StartCoroutine_73344676(mb, v4, 0);
+    sub_21FFECC(v4, v5);
+  return (UnityEngine_YieldInstruction_o *)UnityEngine_MonoBehaviour__StartCoroutine_83231452(mb, v4, 0);
 }
 
 
@@ -133,14 +139,14 @@ bool CriFsRequest__get_isDone(CriFsRequest_o *this, const MethodInfo *method)
 void CriFsRequest__set_doneDelegate(CriFsRequest_o *this, CriFsRequest_DoneDelegate_o *value, const MethodInfo *method)
 {
   this->fields._doneDelegate_k__BackingField = value;
-  sub_1D0F058(&this->fields._doneDelegate_k__BackingField, value);
+  sub_21FFBF4(&this->fields._doneDelegate_k__BackingField, value);
 }
 
 
 void CriFsRequest__set_error(CriFsRequest_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields._error_k__BackingField = value;
-  sub_1D0F058(&this->fields._error_k__BackingField, value);
+  sub_21FFBF4(&this->fields._error_k__BackingField, value);
 }
 
 
@@ -174,14 +180,14 @@ void CriFsRequest_DoneDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1D0F058(&this->fields.m_target, object);
+  sub_21FFBF4(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) != 0 )
+  if ( (sub_21FFD28(method) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1B31978;
+      v9 = sub_1FE9320;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_17;
@@ -193,41 +199,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v11 = sub_1D0F16C(method);
-        v12 = sub_1D0F700(method);
+        v11 = sub_21FFD20(method);
+        v12 = sub_22002A4(method);
         if ( (v11 & 1) != 0 )
         {
           if ( (v12 & 1) != 0 )
-            v9 = sub_1B31A74;
+            v9 = sub_1FE9418;
           else
-            v9 = sub_1B31A38;
+            v9 = sub_1FE93DC;
         }
         else if ( (v12 & 1) != 0 )
         {
-          v9 = sub_1B319B4;
+          v9 = sub_1FE9358;
         }
         else
         {
-          v9 = sub_1B31988;
+          v9 = sub_1FE9330;
         }
       }
       else
       {
-        v9 = sub_1B31958;
+        v9 = sub_1FE9304;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v13, 0);
+      v13 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v13, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1B31910;
+  this->fields.extra_arg = (intptr_t)sub_1FE92BC;
 }
 
 
@@ -241,7 +247,7 @@ System_IAsyncResult_o *CriFsRequest_DoneDelegate__BeginInvoke(
   CriFsRequest_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = request;
-  return (System_IAsyncResult_o *)sub_1D0F068(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, &v6, callback, object);
 }
 
 
@@ -250,7 +256,7 @@ void CriFsRequest_DoneDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 
@@ -287,12 +293,12 @@ bool CriFsRequest__CheckDone_d__23__MoveNext(CriFsRequest__CheckDone_d__23_o *th
   _4__this = this->fields.__4__this;
   this->fields.__1__state = -1;
   if ( !_4__this )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   if ( _4__this->fields._isDone_k__BackingField )
     return 0;
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
-  sub_1D0F058(&this->fields.__2__current, 0);
+  sub_21FFBF4(&this->fields.__2__current, 0);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -315,11 +321,11 @@ void __noreturn CriFsRequest__CheckDone_d__23__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_CriFsRequest__CheckDone_d__23_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_CriFsRequest__CheckDone_d__23_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

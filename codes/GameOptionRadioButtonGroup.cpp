@@ -1,25 +1,25 @@
 void GameOptionRadioButtonGroup___ctor(GameOptionRadioButtonGroup_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E7253E & 1) == 0 )
+  if ( (byte_5933464 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameOptionToggleButton__TypeInfo);
-    byte_4E7253E = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameOptionToggleButton__TypeInfo);
+    byte_5933464 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameOptionToggleButton__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameOptionToggleButton__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameOptionToggleButton___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameOptionToggleButton___ctor__);
   this->fields.radioButtonList = (struct System_Collections_Generic_List_GameOptionToggleButton__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.radioButtonList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.radioButtonList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -28,34 +28,35 @@ void GameOptionRadioButtonGroup__ClearLabels(GameOptionRadioButtonGroup_o *this,
 {
   System_Collections_Generic_List_object__o *radioButtonList; // x0
   int32_t v4; // w20
+  __int64 v5; // x1
+  __int64 v6; // x2
   UnityEngine_Object_o *Label; // x21
 
-  if ( (byte_4E7253B & 1) == 0 )
+  if ( (byte_5933461 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&string_TypeInfo);
-    byte_4E7253B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933461 = 1;
   }
   radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
   if ( !radioButtonList )
 LABEL_15:
-    sub_1D0F30C(radioButtonList, method);
+    sub_21FFECC(radioButtonList, method);
   v4 = 0;
   while ( v4 < radioButtonList->fields._size )
   {
     radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      radioButtonList,
                                                                      v4,
-                                                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+                                                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
     if ( !radioButtonList )
       goto LABEL_15;
     Label = (UnityEngine_Object_o *)GameOptionToggleButton__get_Label(
                                       (GameOptionToggleButton_o *)radioButtonList,
                                       method);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
     if ( UnityEngine_Object__op_Inequality(Label, 0, 0) )
     {
       radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
@@ -64,7 +65,7 @@ LABEL_15:
       radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                        radioButtonList,
                                                                        v4,
-                                                                       (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+                                                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
       if ( !radioButtonList )
         goto LABEL_15;
       radioButtonList = (System_Collections_Generic_List_object__o *)GameOptionToggleButton__get_Label(
@@ -72,7 +73,7 @@ LABEL_15:
                                                                        method);
       if ( !radioButtonList )
         goto LABEL_15;
-      UILabel__set_text((UILabel_o *)radioButtonList, string_TypeInfo->static_fields->Empty, 0);
+      UILabel__set_text((UILabel_o *)radioButtonList, **(System_String_o ***)(qword_594C0B8 + 184), 0);
     }
     radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
     ++v4;
@@ -87,51 +88,51 @@ void GameOptionRadioButtonGroup__DeselectAll(GameOptionRadioButtonGroup_o *this,
   System_Collections_Generic_List_object__o *radioButtonList; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x2
-  System_Collections_Generic_List_Enumerator_object__o v6; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v6; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E7253C & 1) == 0 )
+  if ( (byte_5933462 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
-    byte_4E7253C = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
+    byte_5933462 = 1;
   }
-  memset(&v6, 0, sizeof(v6));
   radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
+  memset(&v6, 0, sizeof(v6));
   if ( !radioButtonList )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v6,
     radioButtonList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v6,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__) )
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__) )
   {
     if ( !v6.fields._current )
-      sub_1D0F30C(0, v4);
+      sub_21FFECC(0, v4);
     GameOptionToggleButton__ChangeSelectedState((GameOptionToggleButton_o *)v6.fields._current, 0, v5);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v6,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
 }
 
 
 void GameOptionRadioButtonGroup__Init(GameOptionRadioButtonGroup_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
 
   this->fields.selectedCallback = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.selectedCallback, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectedCallback, 0, v2, v3, v4, v5, v6, v7);
   GameOptionRadioButtonGroup__ClearLabels(this, v9);
   GameOptionRadioButtonGroup__DeselectAll(this, v10);
 }
@@ -145,32 +146,32 @@ void GameOptionRadioButtonGroup__SelectButton(
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   System_Collections_Generic_List_object__o *radioButtonList; // x20
   System_Predicate_object__o *v15; // x22
   int32_t Index; // w1
   const MethodInfo *v17; // x3
 
-  if ( (byte_4E72539 & 1) == 0 )
+  if ( (byte_593345F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__FindIndex__);
-    sub_1D0F0B4(&System_Predicate_GameOptionToggleButton__TypeInfo);
-    sub_1D0F0B4(&Method_GameOptionRadioButtonGroup___c__DisplayClass4_0__SelectButton_b__0__);
-    sub_1D0F0B4(&GameOptionRadioButtonGroup___c__DisplayClass4_0_TypeInfo);
-    byte_4E72539 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__FindIndex__);
+    sub_21FFC50(&System_Predicate_GameOptionToggleButton__TypeInfo);
+    sub_21FFC50(&Method_GameOptionRadioButtonGroup___c__DisplayClass4_0__SelectButton_b__0__);
+    sub_21FFC50(&GameOptionRadioButtonGroup___c__DisplayClass4_0_TypeInfo);
+    byte_593345F = 1;
   }
-  v5 = sub_1D0F300(GameOptionRadioButtonGroup___c__DisplayClass4_0_TypeInfo);
+  v5 = sub_21FFEBC(GameOptionRadioButtonGroup___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = selectedButton,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)selectedButton, v8, v9, v10, v11, v12, v13),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)selectedButton, v8, v9, v10, v11, v12, v13),
         radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList,
-        v15 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_GameOptionToggleButton__TypeInfo),
+        v15 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_GameOptionToggleButton__TypeInfo),
         System_Predicate_object____ctor(
           v15,
           (Il2CppObject *)v5,
@@ -178,12 +179,12 @@ void GameOptionRadioButtonGroup__SelectButton(
           0),
         !radioButtonList) )
   {
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
   Index = System_Collections_Generic_List_object___FindIndex(
             radioButtonList,
             (System_Predicate_T__o *)v15,
-            (const MethodInfo_395CC68 *)Method_System_Collections_Generic_List_GameOptionToggleButton__FindIndex__);
+            (const MethodInfo_4450380 *)Method_System_Collections_Generic_List_GameOptionToggleButton__FindIndex__);
   GameOptionRadioButtonGroup__SelectButtonByIndex(this, Index, 1, v17);
 }
 
@@ -196,50 +197,44 @@ void GameOptionRadioButtonGroup__SelectButtonByIndex(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *radioButtonList; // x0
-  int32_t size; // w8
-  int32_t v9; // w22
-  const MethodInfo *v10; // x2
+  int32_t v8; // w22
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4E72538 & 1) == 0 )
+  if ( (byte_593345E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_int___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
-    byte_4E72538 = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_int___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+    byte_593345E = 1;
   }
   radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
   if ( !radioButtonList )
-    goto LABEL_13;
-  size = radioButtonList->fields._size;
-  if ( size > index )
+LABEL_9:
+    sub_21FFECC(radioButtonList, *(_QWORD *)&index);
+  if ( radioButtonList->fields._size > index )
   {
-    if ( size >= 1 )
+    v8 = 0;
+    while ( v8 < radioButtonList->fields._size )
     {
-      v9 = 0;
-      while ( 1 )
+      radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                       radioButtonList,
+                                                                       v8,
+                                                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+      if ( radioButtonList )
       {
-        radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
-                                                                         radioButtonList,
-                                                                         v9,
-                                                                         (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
-        if ( !radioButtonList )
-          break;
-        GameOptionToggleButton__ChangeSelectedState((GameOptionToggleButton_o *)radioButtonList, index == v9, v10);
+        GameOptionToggleButton__ChangeSelectedState((GameOptionToggleButton_o *)radioButtonList, index == v8, v9);
         radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
-        if ( !radioButtonList )
-          break;
-        if ( ++v9 >= radioButtonList->fields._size )
-          goto LABEL_10;
+        ++v8;
+        if ( radioButtonList )
+          continue;
       }
-LABEL_13:
-      sub_1D0F30C(radioButtonList, *(_QWORD *)&index);
+      goto LABEL_9;
     }
-LABEL_10:
     if ( needNotify )
       ActionExtensions__Call_int_(
         (System_Action_T__o *)this->fields.selectedCallback,
         index,
-        (const MethodInfo_31931E8 *)Method_ActionExtensions_Call_int___);
+        (const MethodInfo_36CDE6C *)Method_ActionExtensions_Call_int___);
   }
 }
 
@@ -251,39 +246,37 @@ void GameOptionRadioButtonGroup__SetButtonEnableWithCollider(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *radioButtonList; // x0
-  bool v6; // w19
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E7253D & 1) == 0 )
+  if ( (byte_5933463 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
-    byte_4E7253D = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
+    byte_5933463 = 1;
   }
-  memset(&v9, 0, sizeof(v9));
   radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
+  memset(&v8, 0, sizeof(v8));
   if ( !radioButtonList )
-    sub_1D0F30C(0, isEnable);
+    sub_21FFECC(0, isEnable);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     radioButtonList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
-  v6 = isEnable;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameOptionToggleButton__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v9,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__) )
+            &v8,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__MoveNext__) )
   {
-    if ( !v9.fields._current )
-      sub_1D0F30C(0, v7);
-    GameOptionToggleButton__SetButtonEnableWithCollider((GameOptionToggleButton_o *)v9.fields._current, v6, v8);
+    if ( !v8.fields._current )
+      sub_21FFECC(0, v6);
+    GameOptionToggleButton__SetButtonEnableWithCollider((GameOptionToggleButton_o *)v8.fields._current, isEnable, v7);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v9,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
+    &v8,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameOptionToggleButton__Dispose__);
 }
 
 
@@ -292,17 +285,17 @@ void GameOptionRadioButtonGroup__SetButtonSelectedCallback(
         System_Action_int__o *selectedCallback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.selectedCallback = selectedCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.selectedCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.selectedCallback,
     (int32_t)selectedCallback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -318,19 +311,21 @@ void GameOptionRadioButtonGroup__SetLabels(
 {
   System_Collections_Generic_List_object__o *radioButtonList; // x0
   signed __int64 v6; // x21
+  __int64 v7; // x1
+  __int64 v8; // x2
   UnityEngine_Object_o *Label; // x22
 
-  if ( (byte_4E7253A & 1) == 0 )
+  if ( (byte_5933460 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7253A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933460 = 1;
   }
   radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
   if ( !radioButtonList )
 LABEL_18:
-    sub_1D0F30C(radioButtonList, texts);
+    sub_21FFECC(radioButtonList, texts);
   v6 = 0;
   while ( v6 < radioButtonList->fields._size )
   {
@@ -341,14 +336,14 @@ LABEL_18:
     radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      radioButtonList,
                                                                      v6,
-                                                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+                                                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
     if ( !radioButtonList )
       goto LABEL_18;
     Label = (UnityEngine_Object_o *)GameOptionToggleButton__get_Label(
                                       (GameOptionToggleButton_o *)radioButtonList,
                                       (const MethodInfo *)texts);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( UnityEngine_Object__op_Inequality(Label, 0, 0) )
     {
       radioButtonList = (System_Collections_Generic_List_object__o *)this->fields.radioButtonList;
@@ -357,14 +352,14 @@ LABEL_18:
       radioButtonList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                        radioButtonList,
                                                                        v6,
-                                                                       (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
+                                                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameOptionToggleButton__get_Item__);
       if ( !radioButtonList )
         goto LABEL_18;
       radioButtonList = (System_Collections_Generic_List_object__o *)GameOptionToggleButton__get_Label(
                                                                        (GameOptionToggleButton_o *)radioButtonList,
                                                                        (const MethodInfo *)texts);
       if ( v6 >= (unsigned __int64)LODWORD(texts->max_length) )
-        sub_1D0F314(radioButtonList);
+        sub_21FFED4(radioButtonList);
       if ( !radioButtonList )
         goto LABEL_18;
       UILabel__set_text((UILabel_o *)radioButtonList, texts->m_Items[v6], 0);
@@ -392,21 +387,23 @@ bool GameOptionRadioButtonGroup___c__DisplayClass4_0___SelectButton_b__0(
 {
   GameOptionRadioButtonGroup___c__DisplayClass4_0_o *v4; // x19
   UIButton_o *Button; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *selectedButton; // x19
-  UnityEngine_Object_o *v7; // x20
+  UnityEngine_Object_o *v9; // x20
 
   v4 = this;
-  if ( (byte_4E7253F & 1) == 0 )
+  if ( (byte_5933465 & 1) == 0 )
   {
-    this = (GameOptionRadioButtonGroup___c__DisplayClass4_0_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7253F = 1;
+    this = (GameOptionRadioButtonGroup___c__DisplayClass4_0_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933465 = 1;
   }
   if ( !x )
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, x);
   Button = GameOptionToggleButton__get_Button(x, (const MethodInfo *)x);
   selectedButton = (UnityEngine_Object_o *)v4->fields.selectedButton;
-  v7 = (UnityEngine_Object_o *)Button;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  return UnityEngine_Object__op_Equality(v7, selectedButton, 0);
+  v9 = (UnityEngine_Object_o *)Button;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
+  return UnityEngine_Object__op_Equality(v9, selectedButton, 0);
 }

@@ -1,15 +1,21 @@
+void EventInfoScoreRecordCardComponent___ctor(EventInfoScoreRecordCardComponent_o *this, const MethodInfo *method)
+{
+  EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
+}
+
+
 bool EventInfoScoreRecordCardComponent__IsBusy(EventInfoScoreRecordCardComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *scoreRecordCardDialogInstance; // x19
 
-  if ( (byte_4E793A1 & 1) == 0 )
+  if ( (byte_593A44C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793A1 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A44C = 1;
   }
   scoreRecordCardDialogInstance = (UnityEngine_Object_o *)this->fields.scoreRecordCardDialogInstance;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   return UnityEngine_Object__op_Inequality(scoreRecordCardDialogInstance, 0, 0);
 }
 
@@ -17,101 +23,104 @@ bool EventInfoScoreRecordCardComponent__IsBusy(EventInfoScoreRecordCardComponent
 void EventInfoScoreRecordCardComponent__OnTap(EventInfoScoreRecordCardComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *scoreRecordCardDialog; // x20
+  __int64 v4; // x1
   UnityEngine_Object_o *baseTransform; // x20
+  __int64 v6; // x1
   struct ScoreRecordCardDialog_o **p_scoreRecordCardDialogInstance; // x20
   UnityEngine_Object_o *scoreRecordCardDialogInstance; // x21
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
-  Il2CppObject *v9; // x21
+  _QWORD *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
+  Il2CppObject *v11; // x21
   UnityEngine_Component_o *Instance; // x0
-  __int64 v11; // x1
+  __int64 v13; // x1
   UnityEngine_Transform_o *klass; // x22
-  Il2CppObject *v13; // x21
+  Il2CppObject *v15; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  UnityEngine_Object_o *v21; // x22
-  ScoreRecordCardDialog_o *v22; // x21
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  __int64 v23; // x1
+  UnityEngine_Object_o *v24; // x22
+  ScoreRecordCardDialog_o *v25; // x21
   float x; // s8
   float y; // s9
   float z; // s10
-  System_Action_o *v26; // x22
+  System_Action_o *v29; // x22
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793A0 & 1) == 0 )
+  if ( (byte_593A44B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoScoreRecordCardComponent_OnTap__);
-    sub_1D0F0B4(&Method_EventInfoScoreRecordCardComponent__OnTap_b__3_0__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ScoreRecordCardDialog___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E793A0 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_EventInfoScoreRecordCardComponent_OnTap__);
+    sub_21FFC50(&Method_EventInfoScoreRecordCardComponent__OnTap_b__3_0__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ScoreRecordCardDialog___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_593A44B = 1;
   }
   scoreRecordCardDialog = (UnityEngine_Object_o *)this->fields.scoreRecordCardDialog;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Equality(scoreRecordCardDialog, 0, 0) )
   {
     baseTransform = (UnityEngine_Object_o *)this->fields.baseTransform;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
     if ( !UnityEngine_Object__op_Equality(baseTransform, 0, 0) )
     {
       p_scoreRecordCardDialogInstance = &this->fields.scoreRecordCardDialogInstance;
       scoreRecordCardDialogInstance = (UnityEngine_Object_o *)this->fields.scoreRecordCardDialogInstance;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       if ( !UnityEngine_Object__op_Inequality(scoreRecordCardDialogInstance, 0, 0) )
       {
-        v7 = Method_EventInfoScoreRecordCardComponent_OnTap__;
+        v9 = Method_EventInfoScoreRecordCardComponent_OnTap__;
         if ( (*((_BYTE *)Method_EventInfoScoreRecordCardComponent_OnTap__ + 83) & 2) != 0 )
-          v7 = (_QWORD *)sub_1D0F0CC(Method_EventInfoScoreRecordCardComponent_OnTap__);
-        v8 = (System_Reflection_MethodBase_o *)sub_1D0F098(v7, v7[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
-        v9 = (Il2CppObject *)this->fields.scoreRecordCardDialog;
-        Instance = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v9 = (_QWORD *)sub_21FFC68(Method_EventInfoScoreRecordCardComponent_OnTap__);
+        v10 = (System_Reflection_MethodBase_o *)sub_21FFC34(v9, v9[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
+        v11 = (Il2CppObject *)this->fields.scoreRecordCardDialog;
+        Instance = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( Instance )
         {
           klass = (UnityEngine_Transform_o *)Instance[5].klass;
-          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          v13 = UnityEngine_Object__Instantiate_object__53335036(
-                  v9,
+          if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+          v15 = UnityEngine_Object__Instantiate_object__59506996(
+                  v11,
                   klass,
-                  (const MethodInfo_32DD3FC *)Method_UnityEngine_Object_Instantiate_GameObject____80459208);
-          Instance = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v13, 0, 0);
+                  (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+          Instance = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0, 0);
           if ( ((unsigned __int8)Instance & 1) != 0 )
             return;
-          if ( v13 )
+          if ( v15 )
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
-                                 (UnityEngine_GameObject_o *)v13,
-                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ScoreRecordCardDialog___);
+                                 (UnityEngine_GameObject_o *)v15,
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScoreRecordCardDialog___);
             *p_scoreRecordCardDialogInstance = (struct ScoreRecordCardDialog_o *)Component_object;
-            sub_1D0F058(
-              (GrandQuestFolderBoardItem_o *)&this->fields.scoreRecordCardDialogInstance,
+            sub_21FFBF4(
+              (MissionNaviTransitionBoardItem_o *)&this->fields.scoreRecordCardDialogInstance,
               (int32_t)Component_object,
-              v15,
-              v16,
               v17,
               v18,
               v19,
-              v20);
-            v21 = (UnityEngine_Object_o *)*p_scoreRecordCardDialogInstance;
-            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            if ( UnityEngine_Object__op_Equality(v21, 0, 0) )
+              v20,
+              v21,
+              v22);
+            v24 = (UnityEngine_Object_o *)*p_scoreRecordCardDialogInstance;
+            if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+            if ( UnityEngine_Object__op_Equality(v24, 0, 0) )
             {
-              if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              UnityEngine_Object__Destroy_73359484((UnityEngine_Object_o *)v13, 0);
+              if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+              UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)v15, 0);
               return;
             }
             Instance = (UnityEngine_Component_o *)this->fields.baseTransform;
@@ -124,23 +133,23 @@ void EventInfoScoreRecordCardComponent__OnTap(EventInfoScoreRecordCardComponent_
                 Instance = (UnityEngine_Component_o *)this->fields.baseTransform;
                 if ( Instance )
                 {
-                  v22 = this->fields.scoreRecordCardDialogInstance;
+                  v25 = this->fields.scoreRecordCardDialogInstance;
                   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)Instance, 0);
                   x = position.fields.x;
                   y = position.fields.y;
                   z = position.fields.z;
-                  v26 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+                  v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
                   System_Action___ctor(
-                    v26,
+                    v29,
                     (Il2CppObject *)this,
                     Method_EventInfoScoreRecordCardComponent__OnTap_b__3_0__,
                     0);
-                  if ( v22 )
+                  if ( v25 )
                   {
-                    v28.fields.x = x;
-                    v28.fields.y = y;
-                    v28.fields.z = z;
-                    ScoreRecordCardDialog__Setup(v22, v28, v26, 0);
+                    v31.fields.x = x;
+                    v31.fields.y = y;
+                    v31.fields.z = z;
+                    ScoreRecordCardDialog__Setup(v25, v31, v29, 0);
                     Instance = (UnityEngine_Component_o *)*p_scoreRecordCardDialogInstance;
                     if ( *p_scoreRecordCardDialogInstance )
                     {
@@ -153,7 +162,7 @@ void EventInfoScoreRecordCardComponent__OnTap(EventInfoScoreRecordCardComponent_
             }
           }
         }
-        sub_1D0F30C(Instance, v11);
+        sub_21FFECC(Instance, v13);
       }
     }
   }
@@ -165,35 +174,36 @@ void EventInfoScoreRecordCardComponent___OnTap_b__3_0(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *baseTransform; // x0
-  GrandQuestFolderBoardItem_o *p_scoreRecordCardDialogInstance; // x19
+  MissionNaviTransitionBoardItem_o *p_scoreRecordCardDialogInstance; // x19
   struct ScoreRecordCardDialog_o *scoreRecordCardDialogInstance; // t1
+  __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E793A2 & 1) == 0 )
+  if ( (byte_593A44D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793A2 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A44D = 1;
   }
   baseTransform = (UnityEngine_Component_o *)this->fields.baseTransform;
   if ( !baseTransform
     || (baseTransform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(baseTransform, 0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseTransform, 1, 0),
         scoreRecordCardDialogInstance = this->fields.scoreRecordCardDialogInstance,
-        p_scoreRecordCardDialogInstance = (GrandQuestFolderBoardItem_o *)&this->fields.scoreRecordCardDialogInstance,
+        p_scoreRecordCardDialogInstance = (MissionNaviTransitionBoardItem_o *)&this->fields.scoreRecordCardDialogInstance,
         (baseTransform = (UnityEngine_Component_o *)scoreRecordCardDialogInstance) == 0) )
   {
-    sub_1D0F30C(baseTransform, method);
+    sub_21FFECC(baseTransform, method);
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(baseTransform, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_73359484(gameObject, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+  UnityEngine_Object__Destroy_83246496(gameObject, 0);
   p_scoreRecordCardDialogInstance->klass = 0;
-  sub_1D0F058(p_scoreRecordCardDialogInstance, 0, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4(p_scoreRecordCardDialogInstance, 0, v8, v9, v10, v11, v12, v13);
 }

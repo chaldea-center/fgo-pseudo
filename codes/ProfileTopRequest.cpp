@@ -6,12 +6,12 @@ void ProfileTopRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E79240 & 1) == 0 )
+  if ( (byte_593A294 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24494/*"targetUserIds"*/);
-    byte_4E79240 = 1;
+    sub_21FFC50(&StringLiteral_25232/*"targetUserIds"*/);
+    byte_593A294 = 1;
   }
-  RequestBase__addField_45601344((RequestBase_o *)this, (System_String_o *)StringLiteral_24494/*"targetUserIds"*/, &targetUserIds->obj, v3);
+  RequestBase__addField_51191900((RequestBase_o *)this, (System_String_o *)StringLiteral_25232/*"targetUserIds"*/, &targetUserIds->obj, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -24,12 +24,12 @@ void ProfileTopRequest__beginRequestFriendCode(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E79241 & 1) == 0 )
+  if ( (byte_593A295 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20042/*"friendCode"*/);
-    byte_4E79241 = 1;
+    sub_21FFC50(&StringLiteral_20567/*"friendCode"*/);
+    byte_593A295 = 1;
   }
-  RequestBase__addField_45601604((RequestBase_o *)this, (System_String_o *)StringLiteral_20042/*"friendCode"*/, friendCode, v3);
+  RequestBase__addField_51187332((RequestBase_o *)this, (System_String_o *)StringLiteral_20567/*"friendCode"*/, friendCode, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -38,16 +38,16 @@ System_String_o *ProfileTopRequest__getURL(ProfileTopRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E7923F & 1) == 0 )
+  if ( (byte_593A293 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_23256/*"profile/top"*/);
-    byte_4E7923F = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_23932/*"profile/top"*/);
+    byte_593A293 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_23256/*"profile/top"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_23932/*"profile/top"*/, 0);
 }
 
 
@@ -61,29 +61,29 @@ void ProfileTopRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4E79242 & 1) == 0 )
+  if ( (byte_593A296 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E79242 = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A296 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(18, responseList, 0);
   if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22821/*"ok"*/;
+    v8 = &StringLiteral_23468/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22648/*"ng"*/;
+    v8 = &StringLiteral_23290/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

@@ -9,17 +9,17 @@ BattleServantData_array *ReactTaskTargetEnemy__TargetServants(
   System_Collections_Generic_IEnumerable_BattleServantData__o *v7; // x0
 
   v4 = this;
-  if ( (byte_4E7AA71 & 1) == 0 )
+  if ( (byte_593BAD2 & 1) == 0 )
   {
-    this = (ReactTaskTargetEnemy_o *)sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-    byte_4E7AA71 = 1;
+    this = (ReactTaskTargetEnemy_o *)sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    byte_593BAD2 = 1;
   }
   if ( !data
     || (Filter_k__BackingField = v4->fields._Filter_k__BackingField,
         this = (ReactTaskTargetEnemy_o *)BattleData__getFieldEnemyServantList(data, 1, 0),
         !Filter_k__BackingField) )
   {
-    sub_1D0F30C(this, data);
+    sub_21FFECC(this, data);
   }
   v7 = ReactTaskTargetFilter__Apply(
          Filter_k__BackingField,
@@ -27,5 +27,5 @@ BattleServantData_array *ReactTaskTargetEnemy__TargetServants(
          v6);
   return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
                                       (System_Collections_Generic_IEnumerable_TSource__o *)v7,
-                                      (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                                      (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }

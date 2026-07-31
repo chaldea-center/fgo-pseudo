@@ -42,7 +42,7 @@ bool CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(
   sort = CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1D0F30C(sort, method);
+    sub_21FFECC(sort, method);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
            *((System_Int32_array **)sort + 31),
            this->fields.sort,
@@ -54,25 +54,25 @@ CharaGraphCommandCodeListViewItem_o *CommandCodeCharaGraphFilterLogic__get_Comma
         CommandCodeCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_listViewItem; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_listViewItem; // x0
   CharaGraphCommandCodeListViewItem_o *listViewItem; // x19
   __int64 naturalAligment; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
   CommandCodeCharaGraphFilterLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4E76950 & 1) == 0 )
+  if ( (byte_59378FE & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    byte_4E76950 = 1;
+    sub_21FFC50(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    byte_59378FE = 1;
   }
-  p_listViewItem = (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem;
+  p_listViewItem = (MissionNaviTransitionBoardItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
   if ( listViewItem )
     return listViewItem;
@@ -83,10 +83,10 @@ CharaGraphCommandCodeListViewItem_o *CommandCodeCharaGraphFilterLogic__get_Comma
     && (CharaGraphCommandCodeListViewItem_c *)listViewItem->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphCommandCodeListViewItem_TypeInfo )
   {
     item = this->fields.item;
-    p_listViewItem->klass = (GrandQuestFolderBoardItem_c *)listViewItem;
-    sub_1D0F058(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
+    p_listViewItem->klass = (MissionNaviTransitionBoardItem_c *)listViewItem;
+    sub_21FFBF4(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1D0F6A8(this->fields.item);
+  sub_220024C(this->fields.item, CharaGraphCommandCodeListViewItem_TypeInfo, v2, v3);
   return (CharaGraphCommandCodeListViewItem_o *)CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
 }

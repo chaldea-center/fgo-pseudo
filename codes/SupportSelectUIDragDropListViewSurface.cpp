@@ -19,17 +19,17 @@ void SupportSelectUIDragDropListViewSurface__set_DropObject(
         SupportSelectListViewDropObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.dropObject = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.dropObject,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.dropObject,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

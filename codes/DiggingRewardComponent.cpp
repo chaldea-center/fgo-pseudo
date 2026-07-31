@@ -1,9 +1,9 @@
 void DiggingRewardComponent___ctor(DiggingRewardComponent_o *this, const MethodInfo *method)
 {
-  __asm { FMOV            V1.2S, #1.0 }
-  *(_QWORD *)&this->fields.rareRewardSize.fields.x = _D1;
+  __asm { FMOV            V0.2S, #1.0 }
   this->fields.rareRewardSize.fields.z = 0.0;
   *(_QWORD *)&this->fields.rewardDepth = 0xD0000000FLL;
+  *(_QWORD *)&this->fields.rareRewardSize.fields.x = _D0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -29,14 +29,27 @@ void DiggingRewardComponent__Initialize(
         DiggingInfo_RewardInfos_o *rewardInfo,
         const MethodInfo *method)
 {
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
   struct DiggingInfo_RewardInfos_o **p_rewardInfo; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x1
+  __int64 v11; // x1
+  const MethodInfo *v12; // x1
 
   this->fields.rewardInfo = rewardInfo;
   p_rewardInfo = &this->fields.rewardInfo;
-  sub_1D0F058(&this->fields.rewardInfo, rewardInfo);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.rewardInfo,
+    (int32_t)rewardInfo,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*p_rewardInfo
     || !gameObject
@@ -47,10 +60,10 @@ void DiggingRewardComponent__Initialize(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.rewardIconSprite) == 0)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
-    sub_1D0F30C(gameObject, v6);
+    sub_21FFECC(gameObject, v11);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-  DiggingRewardComponent__SetRewardImage(this, v7);
+  DiggingRewardComponent__SetRewardImage(this, v12);
 }
 
 
@@ -60,7 +73,7 @@ bool DiggingRewardComponent__IsReveived(DiggingRewardComponent_o *this, const Me
 
   rewardInfo = this->fields.rewardInfo;
   if ( !rewardInfo )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rewardInfo->fields.isReceived == 1;
 }
 
@@ -71,7 +84,7 @@ bool DiggingRewardComponent__IsSize2(DiggingRewardComponent_o *this, const Metho
 
   rewardInfo = this->fields.rewardInfo;
   if ( !rewardInfo )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return rewardInfo->fields.priority == 0;
 }
 
@@ -83,7 +96,7 @@ void DiggingRewardComponent__Reveal(DiggingRewardComponent_o *this, const Method
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
 
@@ -95,7 +108,7 @@ void DiggingRewardComponent__SetImageGray(DiggingRewardComponent_o *this, const 
 
   rewardImageSprite = (UIWidget_o *)this->fields.rewardImageSprite;
   if ( !rewardImageSprite )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   v3.fields.r = 0.5;
   v3.fields.g = 0.5;
   v3.fields.b = 0.5;
@@ -135,65 +148,72 @@ void DiggingRewardComponent__SetRewardImage(DiggingRewardComponent_o *this, cons
   UISprite_o *v12; // x21
   struct DiggingInfo_RewardInfos_o *v13; // x8
   int m_CachedPtr_high; // w8
-  void *monitor; // x22
-  Il2CppClass *klass; // x23
-  void *v17; // x22
-  Il2CppClass *v18; // x23
-  int32_t v19; // w22
-  int32_t v20; // w22
+  Il2CppClass *klass; // x22
+  void *monitor; // x23
+  __int64 v17; // x2
+  Il2CppClass *v18; // x22
+  void *v19; // x23
+  __int64 v20; // x1
+  __int64 v21; // x2
+  int32_t v22; // w22
+  int32_t v23; // w22
   UISprite_o *rewardImageSprite; // x22
+  __int64 v25; // x1
+  __int64 v26; // x2
   int32_t ImageId; // w23
+  Il2CppClass *v28; // x24
+  void *v29; // x25
   UISprite_o *rewardIconSprite; // x23
-  void *v24; // x24
-  Il2CppClass *v25; // x25
-  int32_t v26; // w24
-  ItemEntity_o *v27; // [xsp+0h] [xbp-50h] BYREF
+  __int64 v31; // x1
+  __int64 v32; // x2
+  int32_t v33; // w24
+  ItemEntity_o *v34; // [xsp+0h] [xbp-50h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v30; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v31; // 0:x0.16
-  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v37; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
+  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E71BE4 & 1) == 0 )
+  if ( (byte_59329A0 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&ImageLimitCount_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E71BE4 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int__GetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_21FFC50(&ImageLimitCount_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59329A0 = 1;
   }
-  v27 = 0;
+  v34 = 0;
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_63;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
   rewardInfo = this->fields.rewardInfo;
   if ( !rewardInfo || !Instance )
     goto LABEL_63;
   v6 = DataMasterBase_object__object__int___GetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          rewardInfo->fields.diggingRewardId,
-         (const MethodInfo_3535B7C *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int__GetEntity__);
+         (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int__GetEntity__);
   if ( !v6 )
     return;
   v7 = v6;
   monitor_high = HIDWORD(v6[1].monitor);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_63;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !Instance )
     goto LABEL_63;
   Instance = (DataManager_o *)GiftMaster__getDataById((GiftMaster_o *)Instance, (int32_t)v7[1].monitor, 0);
@@ -210,63 +230,63 @@ LABEL_11:
   if ( (unsigned int)(m_CachedPtr_high - 6) < 2 )
   {
 LABEL_26:
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_63;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_63;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   &entity,
                                   (int32_t)v10->fields.m_CancellationTokenSource,
-                                  (const MethodInfo_3535BC8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) == 0 )
       goto LABEL_11;
     if ( !entity )
       goto LABEL_63;
     klass = entity[1].klass;
     monitor = entity[1].monitor;
-    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v29.fields.currentCryptoKey = klass;
-    *(_QWORD *)&v29.fields.fakeValue = monitor;
-    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v29, 0);
+    if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4, v9);
+    *(_QWORD *)&v36.fields.currentCryptoKey = klass;
+    *(_QWORD *)&v36.fields.fakeValue = monitor;
+    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v36, 0);
     if ( (int)Instance < 1 )
     {
-      v20 = 0;
+      v23 = 0;
     }
     else
     {
       if ( !entity )
         goto LABEL_63;
       v18 = entity[1].klass;
-      v17 = entity[1].monitor;
-      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v30.fields.currentCryptoKey = v18;
-      *(_QWORD *)&v30.fields.fakeValue = v17;
-      v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v30, 0);
-      if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-      Instance = (DataManager_o *)ImageLimitCount__GetImageLimitCount(v19, 0, 0);
-      v20 = (int)Instance;
+      v19 = entity[1].monitor;
+      if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4, v17);
+      *(_QWORD *)&v37.fields.currentCryptoKey = v18;
+      *(_QWORD *)&v37.fields.fakeValue = v19;
+      v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v37, 0);
+      if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, v20, v21);
+      Instance = (DataManager_o *)ImageLimitCount__GetImageLimitCount(v22, 0, 0);
+      v23 = (int)Instance;
     }
     if ( entity )
     {
+      v28 = entity[1].klass;
+      v29 = entity[1].monitor;
       rewardIconSprite = (UISprite_o *)this->fields.rewardIconSprite;
-      v25 = entity[1].klass;
-      v24 = entity[1].monitor;
-      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v31.fields.currentCryptoKey = v25;
-      *(_QWORD *)&v31.fields.fakeValue = v24;
-      v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v31, 0);
-      if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetFaceImage(rewardIconSprite, v26, v20, 1, 0, 0, 0);
+      if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4, v17);
+      *(_QWORD *)&v38.fields.currentCryptoKey = v28;
+      *(_QWORD *)&v38.fields.fakeValue = v29;
+      v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v38, 0);
+      if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v31, v32);
+      AtlasManager__SetFaceImage(rewardIconSprite, v33, v23, 1, 0, 0, 0);
       Instance = (DataManager_o *)this->fields.rewardIconSprite;
       if ( Instance )
       {
@@ -288,7 +308,7 @@ LABEL_26:
       }
     }
 LABEL_63:
-    sub_1D0F30C(Instance, v4);
+    sub_21FFECC(Instance, v4);
   }
   if ( m_CachedPtr_high != 2 )
   {
@@ -301,47 +321,45 @@ LABEL_50:
   }
   if ( SLODWORD(Instance->fields.m_CancellationTokenSource) < 1 )
     goto LABEL_11;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_63;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_63;
   DataMasterBase_object__object__int___TryGetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-    (Il2CppObject **)&v27,
+    (Il2CppObject **)&v34,
     (int32_t)v10->fields.m_CancellationTokenSource,
-    (const MethodInfo_3535BC8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-  Instance = (DataManager_o *)v27;
-  if ( !v27 )
+    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+  Instance = (DataManager_o *)v34;
+  if ( !v34 )
     goto LABEL_63;
-  Instance = (DataManager_o *)ItemEntity__GetImageId(v27, 0);
+  Instance = (DataManager_o *)ItemEntity__GetImageId(v34, 0);
   if ( (int)Instance < 1 )
     goto LABEL_11;
-  Instance = (DataManager_o *)v27;
-  if ( !v27 )
+  Instance = (DataManager_o *)v34;
+  if ( !v34 )
     goto LABEL_63;
-  if ( v27->fields.type != 29 )
+  if ( v34->fields.type != 29 )
   {
-    Instance = (DataManager_o *)ItemEntity__GetImageId(v27, 0);
+    Instance = (DataManager_o *)ItemEntity__GetImageId(v34, 0);
     goto LABEL_50;
   }
   rewardImageSprite = this->fields.rewardImageSprite;
-  ImageId = ItemEntity__GetImageId(v27, 0);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  ImageId = ItemEntity__GetImageId(v34, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v25, v26);
   Instance = (DataManager_o *)AtlasManager__SetCoin(rewardImageSprite, ImageId, 0);
   v11 = 1;
 LABEL_12:
-  if ( monitor_high
-    || !(v11 & 1
-       | (0x61u >> (BYTE4(v10->fields.m_CachedPtr) - 1)) & ((unsigned int)(HIDWORD(v10->fields.m_CachedPtr) - 1) < 7)) )
+  if ( monitor_high || !(v11 & 1 | (HIDWORD(v10->fields.m_CachedPtr) < 8) & (0xC2u >> HIDWORD(v10->fields.m_CachedPtr))) )
   {
     v12 = this->fields.rewardImageSprite;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v4, v9);
     Instance = (DataManager_o *)AtlasManager__SetItem(v12, monitor_high, 0);
   }
   v13 = this->fields.rewardInfo;
@@ -352,11 +370,11 @@ LABEL_12:
     Instance = (DataManager_o *)this->fields.rewardImageSprite;
     if ( !Instance )
       goto LABEL_63;
-    v32.fields.r = 0.5;
-    v32.fields.g = 0.5;
-    v32.fields.b = 0.5;
-    v32.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)Instance, v32, 0);
+    v39.fields.r = 0.5;
+    v39.fields.g = 0.5;
+    v39.fields.b = 0.5;
+    v39.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)Instance, v39, 0);
     v13 = this->fields.rewardInfo;
     if ( !v13 )
       goto LABEL_63;
@@ -372,7 +390,7 @@ void DiggingRewardComponent__SetScaleAndDepth(
         const MethodInfo *method)
 {
   UIWidget_o *rewardImageSprite; // x0
-  int32_t *p_rewardDepth; // x8
+  int32_t rewardDepth; // w1
 
   if ( !IsRareReward )
   {
@@ -383,12 +401,12 @@ void DiggingRewardComponent__SetScaleAndDepth(
       rewardImageSprite = (UIWidget_o *)this->fields.rewardIconSprite;
       if ( rewardImageSprite )
       {
-        p_rewardDepth = &this->fields.rewardDepth;
+        rewardDepth = this->fields.rewardDepth;
         goto LABEL_9;
       }
     }
 LABEL_10:
-    sub_1D0F30C(rewardImageSprite, IsRareReward);
+    sub_21FFECC(rewardImageSprite, IsRareReward);
   }
   rewardImageSprite = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !rewardImageSprite )
@@ -401,7 +419,7 @@ LABEL_10:
   rewardImageSprite = (UIWidget_o *)this->fields.rewardIconSprite;
   if ( !rewardImageSprite )
     goto LABEL_10;
-  p_rewardDepth = &this->fields.rareRewardDepth;
+  rewardDepth = this->fields.rareRewardDepth;
 LABEL_9:
-  UIWidget__set_depth(rewardImageSprite, *p_rewardDepth, 0);
+  UIWidget__set_depth(rewardImageSprite, rewardDepth, 0);
 }

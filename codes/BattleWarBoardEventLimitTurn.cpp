@@ -1,28 +1,30 @@
 void BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
-  __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  Il2CppClass *v3; // x0
+  __int64 v4; // x0
+  __int64 v5; // x1
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E7A223 & 1) == 0 )
+  if ( (byte_593B287 & 1) == 0 )
   {
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E7A223 = 1;
+    sub_21FFC50(&int___TypeInfo);
+    byte_593B287 = 1;
   }
+  v3 = int___TypeInfo;
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = sub_1D0F15C(int___TypeInfo, 1);
-  if ( !v3 )
-    sub_1D0F30C(0, v4);
-  if ( !*(_DWORD *)(v3 + 24) )
-    sub_1D0F314(v3);
-  *(_DWORD *)(v3 + 32) = 3;
-  this->fields.defTurnEffect = (struct System_Int32_array *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.defTurnEffect, v3, v5, v6, v7, v8, v9, v10);
+  v4 = sub_21FFD10(v3, 1);
+  if ( !v4 )
+    sub_21FFECC(0, v5);
+  if ( !*(_DWORD *)(v4 + 24) )
+    sub_21FFED4(v4);
+  *(_DWORD *)(v4 + 32) = 3;
+  this->fields.defTurnEffect = (struct System_Int32_array *)v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.defTurnEffect, v4, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -38,21 +40,21 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
   int limitAct; // w9
   int32_t *v9; // x9
   int32_t *v10; // x9
-  System_Int32_array *TurnEffectArray_48100968; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_Int32_array *TurnEffectArray_53560780; // x0
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   struct System_Int32_array *turnEffect; // x8
-  System_Int32_array *TurnEffectArray_48101252; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
+  System_Int32_array *TurnEffectArray_53561064; // x1
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
 
   if ( !battleEvent )
     goto LABEL_15;
@@ -72,14 +74,14 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
       : &v5->fields.defEffectType;
   Data_k__BackingField->fields.turnEffectType = *v10;
   if ( !stage
-    || (TurnEffectArray_48100968 = BattleTurnLimitUtil__GetTurnEffectArray_48100968(
+    || (TurnEffectArray_53560780 = BattleTurnLimitUtil__GetTurnEffectArray_53560780(
                                      (int32_t)this,
                                      stage->fields.script,
                                      0),
-        Data_k__BackingField->fields.turnEffect = TurnEffectArray_48100968,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
-          (int32_t)TurnEffectArray_48100968,
+        Data_k__BackingField->fields.turnEffect = TurnEffectArray_53560780,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
+          (int32_t)TurnEffectArray_53560780,
           v12,
           v13,
           v14,
@@ -89,18 +91,18 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
         (turnEffect = Data_k__BackingField->fields.turnEffect) == 0) )
   {
 LABEL_15:
-    sub_1D0F30C(this, battleEvent);
+    sub_21FFECC(this, battleEvent);
   }
   if ( !turnEffect->max_length )
   {
-    TurnEffectArray_48101252 = BattleTurnLimitUtil__GetTurnEffectArray_48101252(
+    TurnEffectArray_53561064 = BattleTurnLimitUtil__GetTurnEffectArray_53561064(
                                  Data_k__BackingField->fields.limitTurnCount,
                                  v5->fields.defTurnEffect,
                                  0);
-    Data_k__BackingField->fields.turnEffect = TurnEffectArray_48101252;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
-      (int32_t)TurnEffectArray_48101252,
+    Data_k__BackingField->fields.turnEffect = TurnEffectArray_53561064;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
+      (int32_t)TurnEffectArray_53561064,
       v20,
       v21,
       v22,

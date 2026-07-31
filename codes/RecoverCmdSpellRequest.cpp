@@ -3,12 +3,12 @@ void RecoverCmdSpellRequest__beginRequest(RecoverCmdSpellRequest_o *this, int32_
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E7925C & 1) == 0 )
+  if ( (byte_593A2B0 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_18445/*"commandSpellId"*/);
-    byte_4E7925C = 1;
+    sub_21FFC50(&StringLiteral_18932/*"commandSpellId"*/);
+    byte_593A2B0 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18445/*"commandSpellId"*/, itemId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18932/*"commandSpellId"*/, itemId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -17,16 +17,16 @@ System_String_o *RecoverCmdSpellRequest__getURL(RecoverCmdSpellRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4E7925B & 1) == 0 )
+  if ( (byte_593A2AF & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_18444/*"commandSpell/use"*/);
-    byte_4E7925B = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_18931/*"commandSpell/use"*/);
+    byte_593A2AF = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_65562772(BaseUrl, (System_String_o *)StringLiteral_18444/*"commandSpell/use"*/, 0);
+  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18931/*"commandSpell/use"*/, 0);
 }
 
 
@@ -40,29 +40,29 @@ void RecoverCmdSpellRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4E7925D & 1) == 0 )
+  if ( (byte_593A2B1 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E7925D = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593A2B1 = 1;
   }
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(46, responseList, 0);
   if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22821/*"ok"*/;
+    v8 = &StringLiteral_23468/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22648/*"ng"*/;
+    v8 = &StringLiteral_23290/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

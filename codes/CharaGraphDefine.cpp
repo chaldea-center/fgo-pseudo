@@ -3,11 +3,8 @@ void CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(
         bool isResetSwap,
         const MethodInfo *method)
 {
-  bool v3; // w20
-
-  v3 = isResetSwap;
   System_Object___ctor((Il2CppObject *)this, 0);
-  this->fields._IsResetSwap_k__BackingField = v3;
+  this->fields._IsResetSwap_k__BackingField = isResetSwap;
 }
 
 
@@ -23,22 +20,22 @@ UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEnt
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *p_userGameEntity; // x19
+  MissionNaviTransitionBoardItem_o *p_userGameEntity; // x19
   UserGameEntity_o *userGameEntity; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  p_userGameEntity = (GrandQuestFolderBoardItem_o *)&this->fields.userGameEntity;
+  p_userGameEntity = (MissionNaviTransitionBoardItem_o *)&this->fields.userGameEntity;
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0);
-    p_userGameEntity->klass = (GrandQuestFolderBoardItem_c *)userGameEntity;
-    sub_1D0F058(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
+    p_userGameEntity->klass = (MissionNaviTransitionBoardItem_c *)userGameEntity;
+    sub_21FFBF4(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

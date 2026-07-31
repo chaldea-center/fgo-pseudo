@@ -1,11 +1,11 @@
 void SvtClassAttri___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E765C0 & 1) == 0 )
+  if ( (byte_593756C & 1) == 0 )
   {
-    sub_1D0F0B4(&SvtClassAttri_TypeInfo);
-    byte_4E765C0 = 1;
+    sub_21FFC50(&SvtClassAttri_TypeInfo);
+    byte_593756C = 1;
   }
-  SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
+  *SvtClassAttri_TypeInfo->static_fields = (struct SvtClassAttri_StaticFields)0x500000006LL;
 }
 
 
@@ -17,31 +17,30 @@ void SvtClassAttri___ctor(SvtClassAttri_o *this, const MethodInfo *method)
 
 bool SvtClassAttri__IsExtraClass(int32_t classId, const MethodInfo *method)
 {
-  return (unsigned int)(classId - 1) > 6;
+  return (unsigned int)(classId - 8) < 0xFFFFFFF9;
 }
 
 
 bool SvtClassAttri__IsExtraClass1(int32_t classId, const MethodInfo *method)
 {
-  return (classId | 2) == 0xB || classId == 23;
+  return ((unsigned int)classId < 0x18) & (0x800A00u >> classId);
 }
 
 
 bool SvtClassAttri__IsExtraClass2(int32_t classId, const MethodInfo *method)
 {
-  bool result; // w0
+  int v2; // w8
+  int v3; // w9
 
-  if ( classId > 25 )
-  {
-    result = 1;
-    if ( classId == 28 || classId == 33 )
-      return result;
-    return 0;
-  }
-  result = 1;
-  if ( classId != 10 && classId != 25 )
-    return 0;
-  return result;
+  if ( classId <= 25 )
+    v2 = 10;
+  else
+    v2 = 28;
+  if ( classId <= 25 )
+    v3 = 25;
+  else
+    v3 = 33;
+  return v2 == classId || v3 == classId;
 }
 
 
@@ -59,19 +58,19 @@ float SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const Met
   int32_t RelationId; // w20
   int32_t v9; // w1
 
-  if ( (byte_4E765BF & 1) == 0 )
+  if ( (byte_593756B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E765BF = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_593756B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
+                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
   {
-    sub_1D0F30C(Instance, v6);
+    sub_21FFECC(Instance, v6);
   }
   v7 = (ServantClassMaster_o *)Instance;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0);

@@ -14,112 +14,117 @@ void GrandServantListMenuLayout__Initialize(
   __int64 v9; // x23
   __int64 v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
   struct PlayMakerFSM_o *v24; // x1
   struct PlayMakerFSM_o **p_fsm; // x20
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
   int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
-  System_Collections_Generic_IEnumerable_T__o *v32; // x19
-  System_Action_object__o *v33; // x20
+  bool v30; // w6
+  bool v31; // w7
+  System_Action_GrandServantListItemSlot__c *v32; // x0
+  System_Collections_Generic_IEnumerable_T__o *v33; // x21
+  System_Action_object__o *v34; // x19
 
-  if ( (byte_4E7223E & 1) == 0 )
+  if ( (byte_593323B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_1D0F0B4(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_1D0F0B4(&Method_GrandServantListMenuLayout___c__DisplayClass3_0__Initialize_b__0__);
-    sub_1D0F0B4(&GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
-    byte_4E7223E = 1;
+    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_21FFC50(&Method_GrandServantListMenuLayout___c__DisplayClass3_0__Initialize_b__0__);
+    sub_21FFC50(&GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
+    byte_593323B = 1;
   }
-  v9 = sub_1D0F300(GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
+  v9 = sub_21FFEBC(GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   *(_QWORD *)(v9 + 16) = fsm;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)fsm, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)fsm, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = prefab;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)prefab, v18, v19, v20, v21, v22, v23);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)prefab, v18, v19, v20, v21, v22, v23);
   v24 = *(struct PlayMakerFSM_o **)(v9 + 16);
   this->fields.fsm = v24;
   p_fsm = &this->fields.fsm;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_fsm, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_fsm, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  v32 = System_Action_GrandServantListItemSlot__TypeInfo;
+  v33 = (System_Collections_Generic_IEnumerable_T__o *)*(p_fsm - 2);
   *((_BYTE *)p_fsm - 8) = displayKind;
-  v32 = (System_Collections_Generic_IEnumerable_T__o *)*(p_fsm - 2);
-  v33 = (System_Action_object__o *)sub_1D0F300(System_Action_GrandServantListItemSlot__TypeInfo);
+  v34 = (System_Action_object__o *)sub_21FFEBC(v32);
   System_Action_object____ctor(
-    v33,
+    v34,
     (Il2CppObject *)v9,
     Method_GrandServantListMenuLayout___c__DisplayClass3_0__Initialize_b__0__,
     0);
   BasicHelper__ForEach_object_(
-    v32,
-    (System_Action_T__o *)v33,
-    (const MethodInfo_323AF0C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    v33,
+    (System_Action_T__o *)v34,
+    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
 void GrandServantListMenuLayout__Release(GrandServantListMenuLayout_o *this, const MethodInfo *method)
 {
-  GrandServantListMenuLayout___c_c *v3; // x0
+  __int64 v2; // x2
+  GrandServantListMenuLayout___c_c *v4; // x0
   System_Collections_Generic_IEnumerable_T__o *slots; // x19
+  struct GrandServantListMenuLayout___c_StaticFields *static_fields; // x8
   System_Action_object__o *_9__4_0; // x20
-  Il2CppObject *v6; // x21
-  struct GrandServantListMenuLayout___c_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  Il2CppObject *v8; // x21
+  struct GrandServantListMenuLayout___c_StaticFields *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E7223F & 1) == 0 )
+  if ( (byte_593323C & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_1D0F0B4(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_1D0F0B4(&Method_GrandServantListMenuLayout___c__Release_b__4_0__);
-    sub_1D0F0B4(&GrandServantListMenuLayout___c_TypeInfo);
-    byte_4E7223F = 1;
+    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_21FFC50(&Method_GrandServantListMenuLayout___c__Release_b__4_0__);
+    sub_21FFC50(&GrandServantListMenuLayout___c_TypeInfo);
+    byte_593323C = 1;
   }
-  v3 = GrandServantListMenuLayout___c_TypeInfo;
+  v4 = GrandServantListMenuLayout___c_TypeInfo;
   slots = (System_Collections_Generic_IEnumerable_T__o *)this->fields.slots;
-  if ( !GrandServantListMenuLayout___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&GrandServantListMenuLayout___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(GrandServantListMenuLayout___c_TypeInfo);
-    v3 = GrandServantListMenuLayout___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(GrandServantListMenuLayout___c_TypeInfo, method, v2);
+    v4 = GrandServantListMenuLayout___c_TypeInfo;
   }
-  _9__4_0 = (System_Action_object__o *)v3->static_fields->__9__4_0;
+  static_fields = v4->static_fields;
+  _9__4_0 = (System_Action_object__o *)static_fields->__9__4_0;
   if ( !_9__4_0 )
   {
-    if ( !v3->_2.cctor_finished )
+    if ( !*(&v4->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v3);
-      v3 = GrandServantListMenuLayout___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v4, method, v2);
+      static_fields = GrandServantListMenuLayout___c_TypeInfo->static_fields;
     }
-    v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__4_0 = (System_Action_object__o *)sub_1D0F300(System_Action_GrandServantListItemSlot__TypeInfo);
-    System_Action_object____ctor(_9__4_0, v6, Method_GrandServantListMenuLayout___c__Release_b__4_0__, 0);
-    static_fields = GrandServantListMenuLayout___c_TypeInfo->static_fields;
-    static_fields->__9__4_0 = (struct System_Action_GrandServantListItemSlot__o *)_9__4_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v8, v9, v10, v11, v12, v13);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__4_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_GrandServantListItemSlot__TypeInfo);
+    System_Action_object____ctor(_9__4_0, v8, Method_GrandServantListMenuLayout___c__Release_b__4_0__, 0);
+    v9 = GrandServantListMenuLayout___c_TypeInfo->static_fields;
+    v9->__9__4_0 = (struct System_Action_GrandServantListItemSlot__o *)_9__4_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__4_0, (int32_t)_9__4_0, v10, v11, v12, v13, v14, v15);
   }
   BasicHelper__ForEach_object_(
     slots,
     (System_Action_T__o *)_9__4_0,
-    (const MethodInfo_323AF0C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
@@ -143,11 +148,11 @@ void GrandServantListMenuLayout__SetItemSlotActive(
     if ( !slots )
       goto LABEL_6;
     if ( !LODWORD(slots->max_length) )
-      sub_1D0F314(IsNullOrEmpty);
+      sub_21FFED4(IsNullOrEmpty);
     IsNullOrEmpty = (UnityEngine_Component_o *)slots->m_Items[0];
     if ( !IsNullOrEmpty )
 LABEL_6:
-      sub_1D0F30C(IsNullOrEmpty, v6);
+      sub_21FFECC(IsNullOrEmpty, v6);
     gameObject = UnityEngine_Component__get_gameObject(IsNullOrEmpty, 0);
     Parent = (UnityEngine_Component_o *)GameObjectExtensions__GetParent(gameObject, 0);
     BasicHelper__SetActiveSafely(Parent, value, 0);
@@ -163,31 +168,31 @@ void GrandServantListMenuLayout__UpdateView(
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   System_Collections_Generic_IEnumerable_T__o *slots; // x19
   System_Action_object__o *v15; // x20
 
-  if ( (byte_4E72240 & 1) == 0 )
+  if ( (byte_593323D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_1D0F0B4(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_1D0F0B4(&Method_GrandServantListMenuLayout___c__DisplayClass5_0__UpdateView_b__0__);
-    sub_1D0F0B4(&GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
-    byte_4E72240 = 1;
+    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_21FFC50(&Method_GrandServantListMenuLayout___c__DisplayClass5_0__UpdateView_b__0__);
+    sub_21FFC50(&GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
+    byte_593323D = 1;
   }
-  v5 = sub_1D0F300(GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
+  v5 = sub_21FFEBC(GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   *(_QWORD *)(v5 + 16) = grandServantListData;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)grandServantListData, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)grandServantListData, v8, v9, v10, v11, v12, v13);
   slots = (System_Collections_Generic_IEnumerable_T__o *)this->fields.slots;
-  v15 = (System_Action_object__o *)sub_1D0F300(System_Action_GrandServantListItemSlot__TypeInfo);
+  v15 = (System_Action_object__o *)sub_21FFEBC(System_Action_GrandServantListItemSlot__TypeInfo);
   System_Action_object____ctor(
     v15,
     (Il2CppObject *)v5,
@@ -196,30 +201,30 @@ void GrandServantListMenuLayout__UpdateView(
   BasicHelper__ForEach_object_(
     slots,
     (System_Action_T__o *)v15,
-    (const MethodInfo_323AF0C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
 void GrandServantListMenuLayout___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E72241 & 1) == 0 )
+  if ( (byte_593323E & 1) == 0 )
   {
-    sub_1D0F0B4(&GrandServantListMenuLayout___c_TypeInfo);
-    byte_4E72241 = 1;
+    sub_21FFC50(&GrandServantListMenuLayout___c_TypeInfo);
+    byte_593323E = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(GrandServantListMenuLayout___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(GrandServantListMenuLayout___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GrandServantListMenuLayout___c_TypeInfo->static_fields->__9 = (struct GrandServantListMenuLayout___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)GrandServantListMenuLayout___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)GrandServantListMenuLayout___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -242,7 +247,7 @@ void GrandServantListMenuLayout___c___Release_b__4_0(
         const MethodInfo *method)
 {
   if ( !slot )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   GrandServantListItemSlot__Release(slot, (const MethodInfo *)slot);
 }
 
@@ -263,7 +268,7 @@ void GrandServantListMenuLayout___c__DisplayClass3_0___Initialize_b__0(
   const MethodInfo *v3; // x3
 
   if ( !slot )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   GrandServantListItemSlot__Initialize(slot, this->fields.fsm, this->fields.prefab, v3);
 }
 
@@ -282,6 +287,6 @@ void GrandServantListMenuLayout___c__DisplayClass5_0___UpdateView_b__0(
         const MethodInfo *method)
 {
   if ( !slot )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   GrandServantListItemSlot__UpdateView(slot, this->fields.grandServantListData, method);
 }

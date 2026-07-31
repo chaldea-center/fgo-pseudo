@@ -1,13 +1,13 @@
 void PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77C89 & 1) == 0 )
+  if ( (byte_5938CA6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E77C89 = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_5938CA6 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
         int32_t followerType,
         const MethodInfo *method)
 {
-  struct FollowerInfo_array *followerInfo; // x10
+  struct FollowerInfo_array *followerInfo; // x9
   int max_length; // w8
-  __int64 v6; // x9
-  FollowerInfo_o **m_Items; // x10
+  FollowerInfo_o **i; // x9
+  FollowerInfo_o *result; // x0
 
   followerInfo = this->fields.followerInfo;
   if ( !followerInfo )
@@ -34,22 +34,15 @@ FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
   max_length = followerInfo->max_length;
   if ( max_length < 1 )
     return 0;
-  v6 = 0;
-  m_Items = followerInfo->m_Items;
-  while ( 1 )
+  for ( i = followerInfo->m_Items; ; ++i )
   {
-    if ( (unsigned int)v6 >= max_length )
-      sub_1D0F314(this);
-    this = (PickupUserFollowerEntity_o *)m_Items[v6];
-    if ( !this )
-      sub_1D0F30C(0, followerId);
-    if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
-      && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
-    {
+    result = *i;
+    if ( !*i )
+      sub_21FFECC(0, followerId);
+    if ( result->fields.userId == followerId && (followerType == -1 || result->fields.type == followerType) )
       break;
-    }
-    if ( (int)++v6 >= max_length )
+    if ( !--max_length )
       return 0;
   }
-  return (FollowerInfo_o *)this;
+  return result;
 }

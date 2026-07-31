@@ -1,6 +1,6 @@
 void CreateComboStartSkillTask___ctor(CreateComboStartSkillTask_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0);
+  CreateSkillTaskFromBuffAction___ctor((CreateSkillTaskFromBuffAction_o *)this, 0);
 }
 
 
@@ -11,20 +11,15 @@ bool CreateComboStartSkillTask__IsCreatable(
         const MethodInfo *method)
 {
   if ( !arg )
-    goto LABEL_9;
-  this = (CreateComboStartSkillTask_o *)arg->fields._ActSvt_k__BackingField;
-  if ( !this )
-    goto LABEL_9;
-  if ( BYTE3(this[32].klass) )
+    goto LABEL_8;
+  if ( BattleAddSkillTaskAroundTargetTask_Argument__get_IsActorEnemy(arg, 0) )
     return 1;
-  this = (CreateComboStartSkillTask_o *)((__int64 (__fastcall *)(CreateComboStartSkillTask_o *, void *))this->klass[1]._1.properties)(
-                                          this,
-                                          this->klass[1]._1.methods);
+  this = (CreateComboStartSkillTask_o *)BattleAddSkillTaskAroundTargetTask_Argument__get_IsAiNpc(arg, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 1;
   if ( !logic || (this = (CreateComboStartSkillTask_o *)logic->fields.logicnomal) == 0 )
-LABEL_9:
-    sub_1D0F30C(this, logic);
+LABEL_8:
+    sub_21FFECC(this, logic);
   return BattleLogicNomal__IsComboStart((BattleLogicNomal_o *)this, 0);
 }
 
@@ -36,16 +31,16 @@ BuffList_ACTION_array *CreateComboStartSkillTask__get_TargetActs(
   BuffList_ACTION_array *result; // x0
   __int64 v3; // x1
 
-  if ( (byte_4E7A7BB & 1) == 0 )
+  if ( (byte_593B8E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&BuffList_ACTION___TypeInfo);
-    byte_4E7A7BB = 1;
+    sub_21FFC50(&BuffList_ACTION___TypeInfo);
+    byte_593B8E3 = 1;
   }
-  result = (BuffList_ACTION_array *)sub_1D0F15C(BuffList_ACTION___TypeInfo, 1);
+  result = (BuffList_ACTION_array *)sub_21FFD10(BuffList_ACTION___TypeInfo, 1);
   if ( !result )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   if ( !LODWORD(result->max_length) )
-    sub_1D0F314(result);
+    sub_21FFED4(result);
   result->m_Items[0] = 148;
   return result;
 }

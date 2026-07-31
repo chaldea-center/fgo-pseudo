@@ -14,19 +14,19 @@ TweenWidth_o *TweenWidth__Begin(UIWidget_o *widget, float duration, int32_t widt
   UnityEngine_Behaviour_o *v9; // x21
 
   v6 = widget;
-  if ( (byte_4E7BFE3 & 1) == 0 )
+  if ( (byte_593CF2C & 1) == 0 )
   {
-    widget = (UIWidget_o *)sub_1D0F0B4(&Method_UITweener_Begin_TweenWidth___);
-    byte_4E7BFE3 = 1;
+    widget = (UIWidget_o *)sub_21FFC50(&Method_UITweener_Begin_TweenWidth___);
+    byte_593CF2C = 1;
   }
   if ( !v6
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0),
         (widget = (UIWidget_o *)UITweener__Begin_object_(
                                   gameObject,
                                   duration,
-                                  (const MethodInfo_332666C *)Method_UITweener_Begin_TweenWidth___)) == 0) )
+                                  (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenWidth___)) == 0) )
   {
-    sub_1D0F30C(widget, *(_QWORD *)&width);
+    sub_21FFECC(widget, *(_QWORD *)&width);
   }
   v9 = (UnityEngine_Behaviour_o *)widget;
   *(_DWORD *)&widget->fields.mRootSet = v6->fields.mWidth;
@@ -40,6 +40,7 @@ TweenWidth_o *TweenWidth__Begin(UIWidget_o *widget, float duration, int32_t widt
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TweenWidth__OnUpdate(TweenWidth_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
   float v6; // s9
@@ -52,37 +53,40 @@ void TweenWidth__OnUpdate(TweenWidth_o *this, float factor, bool isFinished, con
   double v13; // d1
   double v14; // d1
   int32_t v15; // w1
+  __int64 v16; // x1
   UITable_o **p_mTable; // x20
   UnityEngine_Object_o *mTable; // x21
-  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
   UnityEngine_GameObject_o *gameObject; // x21
-  Il2CppObject *v20; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  UnityEngine_Object_o *v27; // x21
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
+  __int64 v29; // x1
+  UnityEngine_Object_o *v30; // x21
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4E7BFE2 & 1) == 0 )
+  if ( (byte_593CF2B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_NGUITools_FindInParents_UITable___);
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFE2 = 1;
+    sub_21FFC50(&Method_NGUITools_FindInParents_UITable___);
+    sub_21FFC50(&NGUITools_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF2B = 1;
   }
   v6 = (float)(1.0 - factor) * (float)this->fields.from;
   v7 = (float)this->fields.to * factor;
-  if ( !byte_4E71453 )
+  if ( !byte_593220B )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E71453 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593220B = 1;
   }
   v8 = v6 + v7;
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, isFinished);
   v9 = v8;
   v11 = modf(v8, &iptr);
   if ( v8 >= 0.0 )
@@ -92,8 +96,8 @@ void TweenWidth__OnUpdate(TweenWidth_o *this, float factor, bool isFinished, con
       v12 = floor(v9 + 0.5);
       goto LABEL_17;
     }
-    v12 = iptr;
     v13 = 1.0;
+    v12 = iptr;
   }
   else
   {
@@ -118,22 +122,22 @@ LABEL_17:
   {
     p_mTable = &this->fields.mTable;
     mTable = (UnityEngine_Object_o *)this->fields.mTable;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
     if ( !UnityEngine_Object__op_Equality(mTable, 0, 0) )
       goto LABEL_31;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !NGUITools_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v20 = NGUITools__FindInParents_object_(
+    if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v20);
+    v22 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_32DB22C *)Method_NGUITools_FindInParents_UITable___);
-    *p_mTable = (UITable_o *)v20;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mTable, (int32_t)v20, v21, v22, v23, v24, v25, v26);
-    v27 = (UnityEngine_Object_o *)*p_mTable;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v27, 0, 0) )
+            (const MethodInfo_38BD680 *)Method_NGUITools_FindInParents_UITable___);
+    *p_mTable = (UITable_o *)v22;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mTable, (int32_t)v22, v23, v24, v25, v26, v27, v28);
+    v30 = (UnityEngine_Object_o *)*p_mTable;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29);
+    if ( UnityEngine_Object__op_Equality(v30, 0, 0) )
     {
       this->fields.updateTable = 0;
     }
@@ -141,7 +145,7 @@ LABEL_17:
     {
 LABEL_31:
       if ( !*p_mTable )
-        sub_1D0F30C(0, v18);
+        sub_21FFECC(0, v19);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }
@@ -171,7 +175,7 @@ void TweenWidth__SetEndToCurrentValue(TweenWidth_o *this, const MethodInfo *meth
 
   cachedWidget = TweenWidth__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   this->fields.to = cachedWidget->fields.mWidth;
 }
 
@@ -183,7 +187,7 @@ void TweenWidth__SetStartToCurrentValue(TweenWidth_o *this, const MethodInfo *me
 
   cachedWidget = TweenWidth__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   this->fields.from = cachedWidget->fields.mWidth;
 }
 
@@ -192,30 +196,30 @@ UIWidget_o *TweenWidth__get_cachedWidget(TweenWidth_o *this, const MethodInfo *m
 {
   UnityEngine_Object_o *mWidget; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7BFE1 & 1) == 0 )
+  if ( (byte_593CF2A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFE1 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF2A = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(mWidget, 0, 0) )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.mWidget,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
       (int32_t)Component_object,
       v5,
       v6,
@@ -235,7 +239,7 @@ int32_t TweenWidth__get_value(TweenWidth_o *this, const MethodInfo *method)
 
   cachedWidget = TweenWidth__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return cachedWidget->fields.mWidth;
 }
 
@@ -247,7 +251,7 @@ int32_t TweenWidth__get_width(TweenWidth_o *this, const MethodInfo *method)
 
   cachedWidget = TweenWidth__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return cachedWidget->fields.mWidth;
 }
 
@@ -261,7 +265,7 @@ void TweenWidth__set_value(TweenWidth_o *this, int32_t value, const MethodInfo *
 
   cachedWidget = TweenWidth__get_cachedWidget(this, *(const MethodInfo **)&value);
   if ( !cachedWidget )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   UIWidget__set_width(cachedWidget, value, v6);
 }
 

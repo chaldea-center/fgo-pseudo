@@ -4,6 +4,7 @@ void ItemType___ctor(ItemType_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodInfo *method)
 {
   __int64 *v5; // x8
@@ -11,15 +12,14 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E765AD & 1) == 0 )
+  if ( (byte_5937559 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_10974/*"QP_UNIT"*/);
-    sub_1D0F0B4(&StringLiteral_8638/*"MANA_UNIT"*/);
-    sub_1D0F0B4(&StringLiteral_12576/*"STONE_UNIT"*/);
-    sub_1D0F0B4(&StringLiteral_6628/*"FRIEND_POINT_UNIT"*/);
-    byte_4E765AD = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_11269/*"QP_UNIT"*/);
+    sub_21FFC50(&StringLiteral_8886/*"MANA_UNIT"*/);
+    sub_21FFC50(&StringLiteral_12895/*"STONE_UNIT"*/);
+    sub_21FFC50(&StringLiteral_6829/*"FRIEND_POINT_UNIT"*/);
+    byte_5937559 = 1;
   }
   if ( type <= 13 )
   {
@@ -27,44 +27,44 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
     {
       if ( type == 5 )
       {
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_8638/*"MANA_UNIT"*/;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
+        v5 = &StringLiteral_8886/*"MANA_UNIT"*/;
       }
       else
       {
         if ( type != 13 )
           goto LABEL_19;
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_6628/*"FRIEND_POINT_UNIT"*/;
+        if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
+        v5 = &StringLiteral_6829/*"FRIEND_POINT_UNIT"*/;
       }
 LABEL_13:
       v6 = LocalizationManager__Get((System_String_o *)*v5, 0);
       v9 = num;
-      v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
+      v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9);
       return System_String__Format(v6, v7, 0);
     }
     if ( type == 1 )
     {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v5 = &StringLiteral_10974/*"QP_UNIT"*/;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
+      v5 = &StringLiteral_11269/*"QP_UNIT"*/;
       goto LABEL_13;
     }
     if ( type != 2 )
       goto LABEL_19;
 LABEL_10:
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = &StringLiteral_12576/*"STONE_UNIT"*/;
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
+    v5 = &StringLiteral_12895/*"STONE_UNIT"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
     goto LABEL_10;
 LABEL_19:
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
   return LocalizationManager__GetUnitInfo(num, 0);
 }
 
@@ -81,33 +81,39 @@ System_String_o *ItemType__GetCountableString(int32_t type, const MethodInfo *me
 
 bool ItemType__IsCountableWithPlus(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)type <= 0xE && ((1 << type) & 0x6002) != 0 || type == 16;
+  return ((unsigned int)type < 0x11) & (0x16002u >> type);
 }
 
 
 System_String_o *ItemType__get_CrossOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4E765AB & 1) == 0 )
+  __int64 v1; // x1
+  __int64 v2; // x2
+
+  if ( (byte_5937557 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3738/*"COMMON_COUNT_OPERATOR_CROSS"*/);
-    byte_4E765AB = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3837/*"COMMON_COUNT_OPERATOR_CROSS"*/);
+    byte_5937557 = 1;
   }
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3738/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v1, v2);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3837/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
 }
 
 
 System_String_o *ItemType__get_PlusOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4E765AC & 1) == 0 )
+  __int64 v1; // x1
+  __int64 v2; // x2
+
+  if ( (byte_5937558 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3739/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_4E765AC = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_3838/*"COMMON_COUNT_OPERATOR_PLUS"*/);
+    byte_5937558 = 1;
   }
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v1, v2);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3838/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
 }

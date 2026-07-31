@@ -19,17 +19,16 @@ void BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
   struct System_String_array *commandBtnSpriteNameList; // x8
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E7B002 & 1) == 0 )
+  if ( (byte_593C14A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
-    sub_1D0F0B4(&System_Enum_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B002 = 1;
+    sub_21FFC50(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C14A = 1;
   }
-  result = 0;
   btnAtlas = (UnityEngine_Object_o *)this->fields.btnAtlas;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  result = 0;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, selBtnInfo);
   v8 = UnityEngine_Object__op_Equality(btnAtlas, 0, 0);
   if ( !v8 )
   {
@@ -39,18 +38,18 @@ void BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
     if ( !selBtnInfo )
       goto LABEL_14;
     Name_k__BackingField = selBtnInfo->fields._Name_k__BackingField;
-    if ( !System_Enum_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
+    if ( !*(_DWORD *)(qword_594C0C0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_594C0C0, v9);
     v8 = System_Enum__TryParse_Int32Enum_(
            Name_k__BackingField,
            &result,
-           (const MethodInfo_3255E5C *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
+           (const MethodInfo_382E0BC *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
     commandBtnSpriteNameList = this->fields.commandBtnSpriteNameList;
     if ( !commandBtnSpriteNameList )
 LABEL_14:
-      sub_1D0F30C(v8, v9);
+      sub_21FFECC(v8, v9);
     if ( (unsigned int)result >= LODWORD(commandBtnSpriteNameList->max_length) )
-      sub_1D0F314(v8);
+      sub_21FFED4(v8);
     UISprite__set_spriteName(btn, commandBtnSpriteNameList->m_Items[result], 0);
     ((void (__fastcall *)(UISprite_o *, const MethodInfo *))btn->klass->vtable._33_MakePixelPerfect.methodPtr)(
       btn,

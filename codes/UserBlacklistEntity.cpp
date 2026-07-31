@@ -1,27 +1,27 @@
 void UserBlacklistEntity___ctor(UserBlacklistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78423 & 1) == 0 )
+  if ( (byte_5939451 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E78423 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5939451 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserBlacklistEntity__CreatePK(int64_t userId, int64_t targetUserId, const MethodInfo *method)
 {
-  if ( (byte_4E78421 & 1) == 0 )
+  if ( (byte_593944F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__long___);
-    byte_4E78421 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_593944F = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            targetUserId,
-           (const MethodInfo_324D4CC *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_38210F4 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -39,27 +39,27 @@ int64_t UserBlacklistEntity__getOtherUserId(UserBlacklistEntity_o *this, const M
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4E78422 & 1) == 0 )
+  if ( (byte_5939450 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E78422 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5939450 = 1;
   }
   userId = this->fields.userId;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
   v4 = NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
     v4 = NetworkManager_TypeInfo;
   }
-  v5 = 24;
-  if ( userId != v4->static_fields->userIdNumber )
-    v5 = 16;
+  v5 = 16;
+  if ( userId == v4->static_fields->userIdNumber )
+    v5 = 24;
   return *(int64_t *)((char *)&this->klass + v5);
 }

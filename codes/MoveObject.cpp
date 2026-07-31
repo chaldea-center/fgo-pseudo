@@ -50,26 +50,24 @@ void MoveObject__Play(
         const MethodInfo *method)
 {
   float v14; // s10
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  bool v19; // w6
+  bool v20; // w7
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   System_Action_o *mProcessAct; // x0
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  this->fields.mFrom = from;
-  this->fields.mTo.fields.x = to.fields.x;
   this->fields.mIsMoving = 1;
-  this->fields.mTo.fields.y = to.fields.y;
-  this->fields.mTo.fields.z = to.fields.z;
+  this->fields.mFrom = from;
+  this->fields.mTo = to;
   if ( sec <= 0.0 )
     v14 = 0.0001;
   else
@@ -77,13 +75,21 @@ void MoveObject__Play(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
   v28 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
   this->fields.mProcessAct = procAct;
   this->fields.mNow = v28;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v21, v22, v23, v24, v25, v26);
-  this->fields.mEasingType = easingType;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mProcessAct,
+    (int32_t)procAct,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   mProcessAct = this->fields.mProcessAct;
+  this->fields.mEasingType = easingType;
   this->fields.mDelay = delay;
   this->fields.mIsSkip = 0;
   ActionExtensions__Call(mProcessAct, 0);
@@ -137,7 +143,7 @@ void MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
   float mStartTime; // s8
   float mDelay; // s9
   float v5; // s0
-  bool v6; // nf
+  float v6; // s1
   float v7; // s0
   float v8; // s8
   struct System_Action_o *mProcessAct; // x8
@@ -153,9 +159,13 @@ void MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
     {
       v5 = (float)(UnityEngine_Time__get_time(0) - (float)(this->fields.mStartTime + this->fields.mDelay))
          / this->fields.mTime;
-      v6 = v5 < 0.0;
-      v7 = fminf(v5, 1.0);
-      if ( v6 )
+      if ( v5 <= 1.0 )
+        v6 = v5;
+      else
+        v6 = 1.0;
+      if ( v5 >= 0.0 )
+        v7 = v6;
+      else
         v7 = 0.0;
       if ( this->fields.mIsSkip )
         v8 = 1.0;

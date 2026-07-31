@@ -1,18 +1,17 @@
 void CommandCodeSkillReleaseMaster___ctor(CommandCodeSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77497 & 1) == 0 )
+  if ( (byte_5938465 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
-    byte_4E77497 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
+    byte_5938465 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    262,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
+    264,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 CommandCodeSkillReleaseEntity_o *CommandCodeSkillReleaseMaster__GetEntity(
         CommandCodeSkillReleaseMaster_o *this,
         int32_t commandCodeId,
@@ -23,25 +22,19 @@ CommandCodeSkillReleaseEntity_o *CommandCodeSkillReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77495 & 1) == 0 )
+  if ( (byte_5938463 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
-    byte_4E77495 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
+    byte_5938463 = 1;
   }
-  PK = (Il2CppObject *)CommandCodeSkillReleaseEntity__CreatePK(
-                         commandCodeId,
-                         num,
-                         priority,
-                         idx,
-                         *(const MethodInfo **)&idx);
+  PK = (Il2CppObject *)CommandCodeSkillReleaseEntity__CreatePK(commandCodeId, num, priority, idx, 0);
   return (CommandCodeSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_353AADC *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
+                                              (const MethodInfo_3EE2044 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool CommandCodeSkillReleaseMaster__TryGetEntity(
         CommandCodeSkillReleaseMaster_o *this,
         CommandCodeSkillReleaseEntity_o **entity,
@@ -53,26 +46,20 @@ bool CommandCodeSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77496 & 1) == 0 )
+  if ( (byte_5938464 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
-    byte_4E77496 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
+    byte_5938464 = 1;
   }
-  PK = (Il2CppObject *)CommandCodeSkillReleaseEntity__CreatePK(
-                         commandCodeId,
-                         num,
-                         priority,
-                         idx,
-                         *(const MethodInfo **)&priority);
+  PK = (Il2CppObject *)CommandCodeSkillReleaseEntity__CreatePK(commandCodeId, num, priority, idx, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool CommandCodeSkillReleaseMaster__isUse(
         CommandCodeSkillReleaseMaster_o *this,
         int32_t commandCodeId,
@@ -84,7 +71,7 @@ bool CommandCodeSkillReleaseMaster__isUse(
   int32_t condGroup; // w29
   bool isUse; // w8
   int32_t v12; // w24
-  bool v13; // w19
+  char v13; // w19
   System_String_o *Primarykey; // x25
   __int64 *lookup; // x0
   __int64 v16; // x1
@@ -93,34 +80,28 @@ bool CommandCodeSkillReleaseMaster__isUse(
   __int64 v19; // x9
   System_Collections_Generic_IReadOnlyDictionary_string__CommandCodeSkillReleaseEntity__c **v20; // x10
   __int64 v21; // x0
-  const MethodInfo *v22; // x2
-  CommandCodeSkillReleaseEntity_o *v25; // [xsp+8h] [xbp-68h] BYREF
+  CommandCodeSkillReleaseEntity_o *v24; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4E77498 & 1) == 0 )
+  if ( (byte_5938466 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__get_lookup__);
-    sub_1D0F0B4(&System_Collections_Generic_IReadOnlyDictionary_string__CommandCodeSkillReleaseEntity__TypeInfo);
-    byte_4E77498 = 1;
+    sub_21FFC50(&Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__get_lookup__);
+    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__CommandCodeSkillReleaseEntity__TypeInfo);
+    byte_5938466 = 1;
   }
   condGroup = 0;
   isUse = 1;
   v12 = 1;
-  v25 = 0;
+  v24 = 0;
   while ( 1 )
   {
     v13 = isUse;
-    Primarykey = CommandCodeSkillReleaseEntity__getCreatePrimarykey(
-                   commandCodeId,
-                   num,
-                   priority,
-                   v12,
-                   *(const MethodInfo **)&beforeClearQuestId);
+    Primarykey = CommandCodeSkillReleaseEntity__getCreatePrimarykey(commandCodeId, num, priority, v12, 0);
     lookup = (__int64 *)DataMasterBase_object__object__object___get_lookup(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                          (const MethodInfo_353867C *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__get_lookup__);
+                          (const MethodInfo_3EDFD10 *)Method_DataMasterBase_CommandCodeSkillReleaseMaster__CommandCodeSkillReleaseEntity__string__get_lookup__);
     if ( !lookup )
-LABEL_19:
-      sub_1D0F30C(lookup, v16);
+LABEL_20:
+      sub_21FFECC(lookup, v16);
     v17 = *lookup;
     v18 = lookup;
     v19 = *(unsigned __int16 *)(*lookup + 302);
@@ -139,7 +120,7 @@ LABEL_19:
     else
     {
 LABEL_9:
-      v21 = sub_1CE5430(
+      v21 = sub_2237E2C(
               lookup,
               System_Collections_Generic_IReadOnlyDictionary_string__CommandCodeSkillReleaseEntity__TypeInfo,
               1);
@@ -147,27 +128,30 @@ LABEL_9:
     if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, CommandCodeSkillReleaseEntity_o **, _QWORD))v21)(
             v18,
             Primarykey,
-            &v25,
+            &v24,
             *(_QWORD *)(v21 + 8))
         & 1) == 0 )
-      return v13;
-    lookup = (__int64 *)v25;
-    if ( !v25 )
-      goto LABEL_19;
+      return v13 & 1;
+    lookup = (__int64 *)v24;
+    if ( !v24 )
+      goto LABEL_20;
     ++v12;
-    if ( condGroup == v25->fields.condGroup )
+    if ( condGroup == v24->fields.condGroup )
     {
       isUse = 0;
-      if ( v13 )
+      if ( (v13 & 1) != 0 )
         goto LABEL_17;
     }
     else
     {
-      condGroup = v25->fields.condGroup;
-      if ( v13 )
-        return v13;
+      condGroup = v24->fields.condGroup;
+      if ( (v13 & 1) != 0 )
+      {
+        v13 = 1;
+        return v13 & 1;
+      }
 LABEL_17:
-      isUse = CommandCodeSkillReleaseEntity__isUse(v25, beforeClearQuestId, v22);
+      isUse = CommandCodeSkillReleaseEntity__isUse(v24, beforeClearQuestId, 0);
     }
   }
 }

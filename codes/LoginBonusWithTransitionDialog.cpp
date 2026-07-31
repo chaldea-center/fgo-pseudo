@@ -23,65 +23,66 @@ void LoginBonusWithTransitionDialog__Open(
   __int64 v14; // x25
   System_String_o *buttonDecideLabel; // x0
   GiftEntity_o *v16; // x1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
+  bool v21; // w6
+  bool v22; // w7
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
   int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v27; // w6
+  bool v28; // w7
   CommonConfirmDialog_ClickDelegate_o *v29; // x23
-  int32_t v30; // w2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
   int32_t v33; // w5
-  int64_t v34; // x6
-  System_String_o *v35; // x7
+  bool v34; // w6
+  bool v35; // w7
+  __int64 v36; // x1
   UILabel_o *buttonCancelLabel; // x23
   UILabel_o *titleLabel; // x22
   System_Collections_Generic_Dictionary_string__object__o *TransitionDialog; // x0
   UILabel_o *messageLabel; // x22
-  System_Collections_Generic_Dictionary_string__object__o *v40; // x0
-  System_Action_o *v41; // x20
+  System_Collections_Generic_Dictionary_string__object__o *v41; // x0
+  System_Action_o *v42; // x20
 
-  if ( (byte_4E7A879 & 1) == 0 )
+  if ( (byte_593B890 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_CommonConfirmDialog_EndOpen__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__);
-    sub_1D0F0B4(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1D0F0B4(&StringLiteral_18894/*"detail"*/);
-    sub_1D0F0B4(&StringLiteral_22583/*"name"*/);
-    byte_4E7A879 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_21FFC50(&Method_CommonConfirmDialog_EndOpen__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__);
+    sub_21FFC50(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_21FFC50(&StringLiteral_19396/*"detail"*/);
+    sub_21FFC50(&StringLiteral_23220/*"name"*/);
+    byte_593B890 = 1;
   }
-  v14 = sub_1D0F300(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
+  v14 = sub_21FFEBC(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0);
   if ( !v14 )
     goto LABEL_15;
   *(_QWORD *)(v14 + 16) = onDecideCallback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v14 + 16), (int32_t)onDecideCallback, v17, v18, v19, v20, v21, v22);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 16), (int32_t)onDecideCallback, v17, v18, v19, v20, v21, v22);
   *(_QWORD *)(v14 + 24) = onCancelCallback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v14 + 24), (int32_t)onCancelCallback, v23, v24, v25, v26, v27, v28);
-  v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 24), (int32_t)onCancelCallback, v23, v24, v25, v26, v27, v28);
+  v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v29,
     (Il2CppObject *)v14,
     Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__,
     0);
   this->fields.clickFunc = v29;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)v29, v30, v31, v32, v33, v34, v35);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)v29, v30, v31, v32, v33, v34, v35);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3724/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v36);
+  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !buttonCancelLabel )
     goto LABEL_15;
   UILabel__set_text(buttonCancelLabel, buttonDecideLabel, 0);
@@ -93,29 +94,29 @@ void LoginBonusWithTransitionDialog__Open(
     goto LABEL_15;
   titleLabel = this->fields.titleLabel;
   TransitionDialog = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0);
-  buttonDecideLabel = EntityScriptUtil__GetStringValue(TransitionDialog, (System_String_o *)StringLiteral_22583/*"name"*/, 0, 0);
+  buttonDecideLabel = EntityScriptUtil__GetStringValue(TransitionDialog, (System_String_o *)StringLiteral_23220/*"name"*/, 0, 0);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, buttonDecideLabel, 0);
   messageLabel = this->fields.messageLabel;
-  v40 = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0);
-  buttonDecideLabel = EntityScriptUtil__GetStringValue(v40, (System_String_o *)StringLiteral_18894/*"detail"*/, 0, 0);
+  v41 = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0);
+  buttonDecideLabel = EntityScriptUtil__GetStringValue(v41, (System_String_o *)StringLiteral_19396/*"detail"*/, 0, 0);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, buttonDecideLabel, 0), !giftMst)
     || (buttonDecideLabel = (System_String_o *)GiftMaster__getDataById(giftMst, bonusData->fields.giftId, 0)) == 0
     || (v16 = (GiftEntity_o *)buttonDecideLabel, (buttonDecideLabel = (System_String_o *)this->fields.bonusItemIcon) == 0) )
   {
 LABEL_15:
-    sub_1D0F30C(buttonDecideLabel, v16);
+    sub_21FFECC(buttonDecideLabel, v16);
   }
   ItemIconComponent__SetGift((ItemIconComponent_o *)buttonDecideLabel, v16, v16->fields.num, 0, 0);
-  v41 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v41, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v41, 0, 0, 0);
+  v42 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(v42, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v42, 0, 0, 0);
 }
 
 
-void LoginBonusWithTransitionDialog__Open_48259600(
+void LoginBonusWithTransitionDialog__Open_53797708(
         LoginBonusWithTransitionDialog_o *this,
         CommonUI_CampaignDirectBonusData_o *bonusData,
         GiftMaster_o *giftMst,
@@ -154,7 +155,7 @@ void LoginBonusWithTransitionDialog__Open_48259600(
     || (v18 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)buttonDecide, 0), !v11) )
   {
 LABEL_10:
-    sub_1D0F30C(buttonDecide, bonusData);
+    sub_21FFECC(buttonDecide, bonusData);
   }
   v13 = 0;
   v14 = y;
@@ -179,41 +180,43 @@ void LoginBonusWithTransitionDialog___c__DisplayClass1_0___Open_b__0(
   __int64 v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
+  const MethodInfo_476E8C0 *v14; // x0
   Il2CppObject *Instance; // x19
-  System_Action_o *v15; // x20
+  System_Action_o *v16; // x20
 
-  if ( (byte_4E7A87A & 1) == 0 )
+  if ( (byte_593B891 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__);
-    sub_1D0F0B4(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
-    byte_4E7A87A = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__);
+    sub_21FFC50(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
+    byte_593B891 = 1;
   }
-  v5 = sub_1D0F300(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
+  v5 = sub_21FFEBC(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        v14 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
         *(_BYTE *)(v5 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v15 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance(v14),
+        v16 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
         System_Action___ctor(
-          v15,
+          v16,
           (Il2CppObject *)v5,
           Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__,
           0),
         !Instance) )
   {
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
-  CommonUI__CloseLoginBonusWithTransitionDialog((CommonUI_o *)Instance, v15, 0);
+  CommonUI__CloseLoginBonusWithTransitionDialog((CommonUI_o *)Instance, v16, 0);
 }
 
 
@@ -230,13 +233,22 @@ void LoginBonusWithTransitionDialog___c__DisplayClass1_1___Open_b__1(
         const MethodInfo *method)
 {
   struct LoginBonusWithTransitionDialog___c__DisplayClass1_0_o *CS___8__locals1; // x8
-  __int64 v3; // x9
+  System_Action_o **p_onCancelCallback; // x8
 
   CS___8__locals1 = this->fields.CS___8__locals1;
+  if ( !this->fields.isDecide )
+  {
+    if ( CS___8__locals1 )
+    {
+      p_onCancelCallback = &CS___8__locals1->fields.onCancelCallback;
+      goto LABEL_6;
+    }
+LABEL_7:
+    sub_21FFECC(this, method);
+  }
   if ( !CS___8__locals1 )
-    sub_1D0F30C(this, method);
-  v3 = 24;
-  if ( this->fields.isDecide )
-    v3 = 16;
-  ActionExtensions__Call(*(System_Action_o **)((char *)&CS___8__locals1->klass + v3), 0);
+    goto LABEL_7;
+  p_onCancelCallback = &CS___8__locals1->fields.onDecideCallback;
+LABEL_6:
+  ActionExtensions__Call(*p_onCancelCallback, 0);
 }

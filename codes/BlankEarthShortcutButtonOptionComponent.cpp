@@ -1,9 +1,9 @@
 void BlankEarthShortcutButtonOptionComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E73DD1 & 1) == 0 )
+  if ( (byte_5934D0E & 1) == 0 )
   {
-    sub_1D0F0B4(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    byte_4E73DD1 = 1;
+    sub_21FFC50(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    byte_5934D0E = 1;
   }
   BlankEarthShortcutButtonOptionComponent_TypeInfo->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL = 60;
 }
@@ -23,38 +23,40 @@ bool BlankEarthShortcutButtonOptionComponent__CheckUpdateText(
         const MethodInfo *method)
 {
   int64_t Time; // x0
-  BlankEarthShortcutButtonOptionComponent_c *v5; // x8
+  __int64 v5; // x1
+  __int64 v6; // x2
+  BlankEarthShortcutButtonOptionComponent_c *v7; // x8
   int64_t lastUpdatedTime; // x23
-  int64_t v7; // x20
-  int64_t v8; // x20
+  int64_t v9; // x20
+  int64_t v10; // x20
   int64_t OPTION_COMPONENT_UPDATE_INTERVAL; // x22
 
-  if ( (byte_4E73DD0 & 1) == 0 )
+  if ( (byte_5934D0D & 1) == 0 )
   {
-    sub_1D0F0B4(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E73DD0 = 1;
+    sub_21FFC50(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934D0D = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, ent, method);
   Time = NetworkManager__getTime(0);
-  v5 = BlankEarthShortcutButtonOptionComponent_TypeInfo;
+  v7 = BlankEarthShortcutButtonOptionComponent_TypeInfo;
   lastUpdatedTime = this->fields.lastUpdatedTime;
-  v7 = Time;
-  if ( !BlankEarthShortcutButtonOptionComponent_TypeInfo->_2.cctor_finished )
+  v9 = Time;
+  if ( !*(&BlankEarthShortcutButtonOptionComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    v5 = BlankEarthShortcutButtonOptionComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BlankEarthShortcutButtonOptionComponent_TypeInfo, v5, v6);
+    v7 = BlankEarthShortcutButtonOptionComponent_TypeInfo;
   }
-  v8 = v7 - lastUpdatedTime;
-  OPTION_COMPONENT_UPDATE_INTERVAL = v5->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL;
-  if ( v8 >= OPTION_COMPONENT_UPDATE_INTERVAL )
+  v10 = v9 - lastUpdatedTime;
+  OPTION_COMPONENT_UPDATE_INTERVAL = v7->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL;
+  if ( v10 >= OPTION_COMPONENT_UPDATE_INTERVAL )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
     this->fields.lastUpdatedTime = NetworkManager__getTime(0);
   }
-  return v8 >= OPTION_COMPONENT_UPDATE_INTERVAL;
+  return v10 >= OPTION_COMPONENT_UPDATE_INTERVAL;
 }
 
 
@@ -67,28 +69,30 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
 {
   int64_t Time; // x0
   __int64 v8; // x1
+  __int64 v9; // x2
   UILabel_o *behindLabel; // x22
-  System_String_o *v10; // x23
   int64_t v11; // x21
+  System_String_o *v12; // x23
   int64_t messageClosedAt; // x20
   Il2CppObject *RestTime2; // x0
-  struct UILabel_o *v14; // x8
-  __int128 v15; // kr00_16 OVERLAPPED
-  UnityEngine_Color_o v16; // [xsp+0h] [xbp-40h] BYREF
+  System_String_o *v15; // x1
+  bool v16; // w8
+  __int128 v17; // kr00_16 OVERLAPPED
+  UnityEngine_Color_o v18; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4E73DCF & 1) == 0 )
+  if ( (byte_5934D0C & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E73DCF = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934D0C = 1;
   }
-  *(_QWORD *)&v16.fields.r = 0;
-  *(_QWORD *)&v16.fields.b = 0;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  *(_QWORD *)&v18.fields.r = 0;
+  *(_QWORD *)&v18.fields.b = 0;
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, ent, isInit);
   Time = NetworkManager__getTime(0);
   if ( !ent )
-    goto LABEL_24;
+    goto LABEL_25;
   Time = (int64_t)BlankEarthSpotNavimenuEntity__GetMessageInfoCondCheck(ent, Time, isInit, 0);
   if ( !Time )
   {
@@ -104,44 +108,46 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
         return;
       }
     }
-    goto LABEL_24;
+    goto LABEL_25;
   }
   behindLabel = this->fields.behindLabel;
-  v10 = *(System_String_o **)(Time + 16);
   v11 = Time;
   if ( *(_DWORD *)(Time + 40) == 1 )
   {
+    v12 = *(System_String_o **)(Time + 16);
     messageClosedAt = ent->fields.messageClosedAt;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v9);
     RestTime2 = (Il2CppObject *)LocalizationManager__GetRestTime2(messageClosedAt, -1, 0);
-    Time = (int64_t)System_String__Format(v10, RestTime2, 0);
+    Time = (int64_t)System_String__Format(v12, RestTime2, 0);
     if ( !behindLabel )
-      goto LABEL_24;
-    v10 = (System_String_o *)Time;
+      goto LABEL_25;
+    v15 = (System_String_o *)Time;
   }
-  else if ( !behindLabel )
+  else
   {
-    goto LABEL_24;
+    if ( !behindLabel )
+      goto LABEL_25;
+    v15 = *(System_String_o **)(Time + 16);
   }
-  UILabel__set_text(behindLabel, v10, 0);
-  Time = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v11 + 24), &v16, 0);
-  v14 = this->fields.behindLabel;
-  if ( (Time & 1) == 0 )
+  UILabel__set_text(behindLabel, v15, 0);
+  v16 = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v11 + 24), &v18, 0);
+  Time = (int64_t)this->fields.behindLabel;
+  if ( !v16 )
   {
-    if ( v14 )
+    if ( Time )
     {
-      *(_QWORD *)&v15 = __PAIR64__(1.0, 1.0);
-      *((_QWORD *)&v15 + 1) = __PAIR64__(1.0, 1.0);
-      goto LABEL_22;
+      *(_QWORD *)&v17 = __PAIR64__(1.0, 1.0);
+      *((_QWORD *)&v17 + 1) = __PAIR64__(1.0, 1.0);
+      goto LABEL_23;
     }
-LABEL_24:
-    sub_1D0F30C(Time, v8);
+LABEL_25:
+    sub_21FFECC(Time, v8);
   }
-  if ( !v14 )
-    goto LABEL_24;
-  *(_QWORD *)&v15 = *(_QWORD *)&v16.fields.b;
-  *((_QWORD *)&v15 + 1) = *(_QWORD *)&v16.fields.r;
-LABEL_22:
-  UIWidget__set_color((UIWidget_o *)this->fields.behindLabel, *(UnityEngine_Color_o *)((char *)&v15 + 8), 0);
+  if ( !Time )
+    goto LABEL_25;
+  *(_QWORD *)&v17 = *(_QWORD *)&v18.fields.b;
+  *((_QWORD *)&v17 + 1) = *(_QWORD *)&v18.fields.r;
+LABEL_23:
+  UIWidget__set_color((UIWidget_o *)Time, *(UnityEngine_Color_o *)((char *)&v17 + 8), 0);
 }

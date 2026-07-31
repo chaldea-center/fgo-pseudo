@@ -9,18 +9,18 @@ void ServantAiActArgument___ctor(
         const MethodInfo *method)
 {
   ServantAiActArgument_o *v9; // x21
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
 
   v9 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, procState, *(const MethodInfo **)&procState);
   v9->fields._SvtData_k__BackingField = svtData;
   v9 = (ServantAiActArgument_o *)((char *)v9 + 40);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v9, (int32_t)svtData, v10, v11, v12, v13, v14, v15);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v9, (int32_t)svtData, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isNoMessage;
 }
 
@@ -30,11 +30,11 @@ void ServantAiActArgument__InitCommonTask(
         BaseAiActBattleLogicTask_o *task,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   ServantAiActArgument_o *v8; // x20
   struct AiBaseEntity_o *AiEnt_k__BackingField; // x8
   struct System_String_o *infoText; // x1
@@ -47,10 +47,10 @@ void ServantAiActArgument__InitCommonTask(
       goto LABEL_10;
     infoText = AiEnt_k__BackingField->fields.infoText;
     task->fields.motionMessage = infoText;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&task->fields.motionMessage,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&task->fields.motionMessage,
       (int32_t)infoText,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,
@@ -65,7 +65,7 @@ void ServantAiActArgument__InitCommonTask(
     return;
   if ( !task )
 LABEL_10:
-    sub_1D0F30C(this, task);
+    sub_21FFECC(this, task);
   task->fields.isForcedSpeedOne = 1;
 }
 
@@ -88,7 +88,7 @@ int32_t ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *this, const M
 
   SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
   if ( !SvtData_k__BackingField )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return SvtData_k__BackingField->fields.uniqueId;
 }
 
@@ -104,17 +104,17 @@ void ServantAiActArgument__set_SvtData(
         BattleServantData_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._SvtData_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._SvtData_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._SvtData_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

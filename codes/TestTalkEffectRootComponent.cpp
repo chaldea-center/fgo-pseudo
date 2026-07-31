@@ -9,43 +9,44 @@ void TestTalkEffectRootComponent__beginInitialize(TestTalkEffectRootComponent_o 
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E74DB7 & 1) == 0 )
+  if ( (byte_5935DBF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4E74DB7 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_5935DBF = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void TestTalkEffectRootComponent__beginStartUp(TestTalkEffectRootComponent_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_42858752((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_48429240((SceneRootComponent_o *)this, 0);
 }
 
 
 bool TestTalkEffectRootComponent__setupTestEffectPrefab(TestTalkEffectRootComponent_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
+  UnityEngine_GameObject_o *testEffectPrefab; // x20
   UnityEngine_GameObject_o *testBackEffectPrefab; // x21
-  UnityEngine_GameObject_o *testEffectPrefab; // x22
   UnityEngine_GameObject_o *testCharaBackEffectPrefab; // x19
-  UnityEngine_GameObject_o *testCharaEffectPrefab; // x20
+  UnityEngine_GameObject_o *testCharaEffectPrefab; // x22
 
-  if ( (byte_4E74DB8 & 1) == 0 )
+  if ( (byte_5935DC0 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonEffectManager_TypeInfo);
-    byte_4E74DB8 = 1;
+    sub_21FFC50(&CommonEffectManager_TypeInfo);
+    byte_5935DC0 = 1;
   }
   testEffectPrefab = this->fields.testEffectPrefab;
   testBackEffectPrefab = this->fields.testBackEffectPrefab;
   testCharaEffectPrefab = this->fields.testCharaEffectPrefab;
   testCharaBackEffectPrefab = this->fields.testCharaBackEffectPrefab;
-  if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
+  if ( !*(&CommonEffectManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo, method, v2);
   CommonEffectManager__SetTestEffectPrefab(
     testEffectPrefab,
     testBackEffectPrefab,

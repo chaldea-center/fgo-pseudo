@@ -1,14 +1,14 @@
 void ViewGachaFeaturedServantMaster___ctor(ViewGachaFeaturedServantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7878F & 1) == 0 )
+  if ( (byte_59397D3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
-    byte_4E7878F = 1;
+    sub_21FFC50(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
+    byte_59397D3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    508,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
+    510,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
 }
 
 
@@ -20,7 +20,7 @@ System_Int32_array *ViewGachaFeaturedServantMaster__GetFeaturedServantIds(
   const MethodInfo *v3; // x3
   _BOOL8 v6; // x0
   __int64 v7; // x1
-  long double inited; // q0
+  long double v8; // q0
   System_Int32_array **p_svtIds; // x8
   _QWORD *v10; // x19
   __int64 v11; // x8
@@ -28,17 +28,17 @@ System_Int32_array *ViewGachaFeaturedServantMaster__GetFeaturedServantIds(
   __int64 v13; // x0
   ViewGachaFeaturedServantEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E78791 & 1) == 0 )
+  if ( (byte_59397D5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Empty_int___);
-    byte_4E78791 = 1;
+    sub_21FFC50(&Method_System_Array_Empty_int___);
+    byte_59397D5 = 1;
   }
   entity = 0;
   v6 = ViewGachaFeaturedServantMaster__TryGetEntity(this, &entity, gachaId, v3);
   if ( v6 )
   {
     if ( !entity )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     p_svtIds = &entity->fields.svtIds;
   }
   else
@@ -47,17 +47,17 @@ System_Int32_array *ViewGachaFeaturedServantMaster__GetFeaturedServantIds(
     v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v11 )
     {
-      sub_1CE5198(Method_System_Array_Empty_int___);
+      sub_2237B54(Method_System_Array_Empty_int___);
       v11 = v10[7];
     }
     v12 = *(_QWORD *)(v11 + 16);
-    if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1CE513C(inited);
-    if ( !*(_DWORD *)(v12 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v12);
+    if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
+      v12 = sub_2237AF8(v8);
+    if ( !*(_DWORD *)(v12 + 228) )
+      *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(v12, v7);
     v13 = *(_QWORD *)(v10[7] + 16LL);
-    if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1CE513C(inited);
+    if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
+      v13 = sub_2237AF8(v8);
     p_svtIds = *(System_Int32_array ***)(v13 + 184);
   }
   return *p_svtIds;
@@ -72,15 +72,15 @@ bool ViewGachaFeaturedServantMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E78790 & 1) == 0 )
+  if ( (byte_59397D4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
-    byte_4E78790 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
+    byte_59397D4 = 1;
   }
   PK = (Il2CppObject *)ViewGachaFeaturedServantEntity__CreatePK(gachaId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
 }

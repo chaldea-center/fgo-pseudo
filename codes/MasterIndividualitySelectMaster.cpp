@@ -1,14 +1,14 @@
 void MasterIndividualitySelectMaster___ctor(MasterIndividualitySelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77BBB & 1) == 0 )
+  if ( (byte_5938BD8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
-    byte_4E77BBB = 1;
+    sub_21FFC50(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
+    byte_5938BD8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    553,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
+    555,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string___ctor__);
 }
 
 
@@ -22,10 +22,10 @@ MasterIndividualitySelectEntity_o *MasterIndividualitySelectMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77BBC & 1) == 0 )
+  if ( (byte_5938BD9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
-    byte_4E77BBC = 1;
+    sub_21FFC50(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
+    byte_5938BD9 = 1;
   }
   PK = (Il2CppObject *)MasterIndividualitySelectEntity__CreatePK(
                          questId,
@@ -35,7 +35,7 @@ MasterIndividualitySelectEntity_o *MasterIndividualitySelectMaster__GetEntity(
   return (MasterIndividualitySelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_353AADC *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
+                                                (const MethodInfo_3EE2044 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__GetEntity__);
 }
 
 
@@ -50,17 +50,17 @@ bool MasterIndividualitySelectMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77BBD & 1) == 0 )
+  if ( (byte_5938BDA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
-    byte_4E77BBD = 1;
+    sub_21FFC50(&Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
+    byte_5938BDA = 1;
   }
   PK = (Il2CppObject *)MasterIndividualitySelectEntity__CreatePK(questId, phase, priority, *(const MethodInfo **)&phase);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_MasterIndividualitySelectMaster__MasterIndividualitySelectEntity__string__TryGetEntity__);
 }
 
 
@@ -74,97 +74,102 @@ bool MasterIndividualitySelectMaster__TryGetEntityArray(
   __int64 v9; // x23
   __int64 v10; // x0
   __int64 v11; // x1
-  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x20
-  System_Func_object__bool__o *v13; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
-  MasterIndividualitySelectMaster___c_c *v15; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v16; // x20
+  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x22
+  System_Func_MasterIndividualitySelectEntity__bool__c *v13; // x0
+  System_Func_object__bool__o *v14; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
+  __int64 v16; // x1
+  MasterIndividualitySelectMaster___c_c *v17; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x20
+  struct MasterIndividualitySelectMaster___c_StaticFields *static_fields; // x9
   System_Func_object__int__o *_9__0_1; // x21
-  Il2CppObject *v18; // x22
-  struct MasterIndividualitySelectMaster___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
-  System_Object_array *v27; // x0
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  Il2CppObject *v21; // x22
+  struct MasterIndividualitySelectMaster___c_StaticFields *v22; // x0
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
+  System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
+  System_Object_array *v30; // x0
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
 
-  if ( (byte_4E77BBA & 1) == 0 )
+  if ( (byte_5938BD7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
-    sub_1D0F0B4(&System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
-    sub_1D0F0B4(&System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
-    sub_1D0F0B4(&Method_MasterIndividualitySelectMaster___c__TryGetEntityArray_b__0_1__);
-    sub_1D0F0B4(&Method_MasterIndividualitySelectMaster___c__DisplayClass0_0__TryGetEntityArray_b__0__);
-    sub_1D0F0B4(&MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1D0F0B4(&MasterIndividualitySelectMaster___c_TypeInfo);
-    byte_4E77BBA = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
+    sub_21FFC50(&System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
+    sub_21FFC50(&System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
+    sub_21FFC50(&Method_MasterIndividualitySelectMaster___c__TryGetEntityArray_b__0_1__);
+    sub_21FFC50(&Method_MasterIndividualitySelectMaster___c__DisplayClass0_0__TryGetEntityArray_b__0__);
+    sub_21FFC50(&MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
+    sub_21FFC50(&MasterIndividualitySelectMaster___c_TypeInfo);
+    byte_5938BD7 = 1;
   }
-  v9 = sub_1D0F300(MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
+  v9 = sub_21FFEBC(MasterIndividualitySelectMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_12;
+  list = this->fields.list;
+  v13 = System_Func_MasterIndividualitySelectEntity__bool__TypeInfo;
   *(_DWORD *)(v9 + 16) = questId;
   *(_DWORD *)(v9 + 20) = questPhase;
-  list = this->fields.list;
-  v13 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MasterIndividualitySelectEntity__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_21FFEBC(v13);
   System_Func_object__bool____ctor(
-    v13,
+    v14,
     (Il2CppObject *)v9,
     Method_MasterIndividualitySelectMaster___c__DisplayClass0_0__TryGetEntityArray_b__0__,
     0);
-  v14 = System_Linq_Enumerable__Where_object_(
+  v15 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
-  v15 = MasterIndividualitySelectMaster___c_TypeInfo;
-  v16 = v14;
-  if ( !MasterIndividualitySelectMaster___c_TypeInfo->_2.cctor_finished )
+          (System_Func_TSource__bool__o *)v14,
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_MasterIndividualitySelectEntity___);
+  v17 = MasterIndividualitySelectMaster___c_TypeInfo;
+  v18 = v15;
+  if ( !*(&MasterIndividualitySelectMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MasterIndividualitySelectMaster___c_TypeInfo);
-    v15 = MasterIndividualitySelectMaster___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MasterIndividualitySelectMaster___c_TypeInfo, v16);
+    v17 = MasterIndividualitySelectMaster___c_TypeInfo;
   }
-  _9__0_1 = (System_Func_object__int__o *)v15->static_fields->__9__0_1;
+  static_fields = v17->static_fields;
+  _9__0_1 = (System_Func_object__int__o *)static_fields->__9__0_1;
   if ( !_9__0_1 )
   {
-    if ( !v15->_2.cctor_finished )
+    if ( !*(&v17->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v15);
-      v15 = MasterIndividualitySelectMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v17, v16);
+      static_fields = MasterIndividualitySelectMaster___c_TypeInfo->static_fields;
     }
-    v18 = (Il2CppObject *)v15->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1D0F300(System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
+    v21 = (Il2CppObject *)static_fields->__9;
+    _9__0_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_MasterIndividualitySelectEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
-      v18,
+      v21,
       Method_MasterIndividualitySelectMaster___c__TryGetEntityArray_b__0_1__,
       0);
-    static_fields = MasterIndividualitySelectMaster___c_TypeInfo->static_fields;
-    static_fields->__9__0_1 = (struct System_Func_MasterIndividualitySelectEntity__int__o *)_9__0_1;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_1, (int32_t)_9__0_1, v20, v21, v22, v23, v24, v25);
+    v22 = MasterIndividualitySelectMaster___c_TypeInfo->static_fields;
+    v22->__9__0_1 = (struct System_Func_MasterIndividualitySelectEntity__int__o *)_9__0_1;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v22->__9__0_1, (int32_t)_9__0_1, v23, v24, v25, v26, v27, v28);
   }
-  v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
-                                                               v16,
+  v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+                                                               v18,
                                                                (System_Func_TSource__TKey__o *)_9__0_1,
-                                                               (const MethodInfo_327F654 *)Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
-  v27 = System_Linq_Enumerable__ToArray_object_(
-          v26,
-          (const MethodInfo_328FDE8 *)Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
-  *entityArray = (MasterIndividualitySelectEntity_array *)v27;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)entityArray, (int32_t)v27, v28, v29, v30, v31, v32, v33);
+                                                               (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_MasterIndividualitySelectEntity__int___);
+  v30 = System_Linq_Enumerable__ToArray_object_(
+          v29,
+          (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_MasterIndividualitySelectEntity___);
+  *entityArray = (MasterIndividualitySelectEntity_array *)v30;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)entityArray, (int32_t)v30, v31, v32, v33, v34, v35, v36);
   if ( !*entityArray )
 LABEL_12:
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   return LODWORD((*entityArray)->max_length) != 0;
 }
 
@@ -172,23 +177,23 @@ LABEL_12:
 void MasterIndividualitySelectMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E77BBE & 1) == 0 )
+  if ( (byte_5938BDB & 1) == 0 )
   {
-    sub_1D0F0B4(&MasterIndividualitySelectMaster___c_TypeInfo);
-    byte_4E77BBE = 1;
+    sub_21FFC50(&MasterIndividualitySelectMaster___c_TypeInfo);
+    byte_5938BDB = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(MasterIndividualitySelectMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(MasterIndividualitySelectMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MasterIndividualitySelectMaster___c_TypeInfo->static_fields->__9 = (struct MasterIndividualitySelectMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)MasterIndividualitySelectMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)MasterIndividualitySelectMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -211,7 +216,7 @@ int32_t MasterIndividualitySelectMaster___c___TryGetEntityArray_b__0_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.priority;
 }
 
@@ -230,6 +235,6 @@ bool MasterIndividualitySelectMaster___c__DisplayClass0_0___TryGetEntityArray_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.questId == this->fields.questId && x->fields.phase == this->fields.questPhase;
 }

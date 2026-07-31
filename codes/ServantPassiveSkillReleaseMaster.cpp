@@ -1,14 +1,14 @@
 void ServantPassiveSkillReleaseMaster___ctor(ServantPassiveSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E780C7 & 1) == 0 )
+  if ( (byte_59390E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
-    byte_4E780C7 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    byte_59390E3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    253,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    255,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -23,16 +23,16 @@ ServantPassiveSkillReleaseEntity_o *ServantPassiveSkillReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E780C5 & 1) == 0 )
+  if ( (byte_59390E1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
-    byte_4E780C5 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+    byte_59390E1 = 1;
   }
   PK = (Il2CppObject *)ServantPassiveSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&idx);
   return (ServantPassiveSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                  PK,
-                                                 (const MethodInfo_353AADC *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+                                                 (const MethodInfo_3EE2044 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -48,10 +48,10 @@ bool ServantPassiveSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E780C6 & 1) == 0 )
+  if ( (byte_59390E2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
-    byte_4E780C6 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+    byte_59390E2 = 1;
   }
   PK = (Il2CppObject *)ServantPassiveSkillReleaseEntity__CreatePK(
                          svtId,
@@ -63,7 +63,7 @@ bool ServantPassiveSkillReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -92,11 +92,11 @@ bool ServantPassiveSkillReleaseMaster__isUse(
   const MethodInfo *v24; // x5
   int32_t *v28; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4E780C8 & 1) == 0 )
+  if ( (byte_59390E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
-    sub_1D0F0B4(&System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo);
-    byte_4E780C8 = 1;
+    sub_21FFC50(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
+    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo);
+    byte_59390E4 = 1;
   }
   v13 = 0;
   v14 = 1;
@@ -112,10 +112,10 @@ bool ServantPassiveSkillReleaseMaster__isUse(
                    *(const MethodInfo **)&dispLimitCount);
     lookup = DataMasterBase_object__object__object___get_lookup(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-               (const MethodInfo_353867C *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
+               (const MethodInfo_3EDFD10 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
     if ( !lookup )
-LABEL_19:
-      sub_1D0F30C(lookup, v18);
+LABEL_20:
+      sub_21FFECC(lookup, v18);
     klass = lookup->klass;
     v20 = lookup;
     v21 = *(unsigned __int16 *)&lookup->klass->_2.rank;
@@ -134,7 +134,7 @@ LABEL_19:
     else
     {
 LABEL_9:
-      v23 = sub_1CE5430(
+      v23 = sub_2237E2C(
               lookup,
               System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo,
               1);
@@ -147,7 +147,7 @@ LABEL_9:
     if ( ((unsigned __int8)lookup & 1) == 0 )
       return v15;
     if ( !v28 )
-      goto LABEL_19;
+      goto LABEL_20;
     ++v14;
     if ( v13 == v28[11] )
     {
@@ -159,7 +159,7 @@ LABEL_9:
     {
       v13 = v28[11];
       if ( v15 )
-        return v15;
+        return 1;
 LABEL_17:
       isBaseResult = ServantPassiveSkillReleaseEntity__IsUseInternal(
                        dispLimitCount,

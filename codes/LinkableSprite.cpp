@@ -18,7 +18,7 @@ void LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const MethodInfo *
         (v4 = this->fields.mUiSprite) == 0)
     || (mUiSprite = this->fields.mCollider) == 0 )
   {
-    sub_1D0F30C(mUiSprite, method);
+    sub_21FFECC(mUiSprite, method);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -38,7 +38,7 @@ void LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const
     || (UIWidget__set_width(mUiSprite, w, 0), (mUiSprite = (UIWidget_o *)this->fields.mUiSprite) == 0)
     || (UIWidget__set_height(mUiSprite, h, 0), (mUiSprite = (UIWidget_o *)this->fields.mCollider) == 0) )
   {
-    sub_1D0F30C(mUiSprite, *(_QWORD *)&w);
+    sub_21FFECC(mUiSprite, *(_QWORD *)&w);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -49,20 +49,20 @@ void LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const
 
 void LinkableSprite__SetUp(LinkableSprite_o *this, int32_t lnkType, System_String_o *lnkUrl, const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_String_o **p_linkUrl; // x0
 
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)p_linkUrl,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)p_linkUrl,
     (int32_t)lnkUrl,
-    (int32_t)lnkUrl,
-    (int32_t)method,
+    lnkUrl,
+    (System_String_o *)method,
     v4,
     v5,
     v6,

@@ -1,14 +1,14 @@
 void UpdateProfileDialogInfoMaster___ctor(UpdateProfileDialogInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78412 & 1) == 0 )
+  if ( (byte_5939440 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string___ctor__);
-    byte_4E78412 = 1;
+    sub_21FFC50(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string___ctor__);
+    byte_5939440 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    395,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string___ctor__);
+    397,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ UpdateProfileDialogInfoEntity_o *UpdateProfileDialogInfoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E78410 & 1) == 0 )
+  if ( (byte_593943E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__GetEntity__);
-    byte_4E78410 = 1;
+    sub_21FFC50(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__GetEntity__);
+    byte_593943E = 1;
   }
   PK = (Il2CppObject *)UpdateProfileDialogInfoEntity__CreatePK(svtId, *(const MethodInfo **)&svtId);
   return (UpdateProfileDialogInfoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_353AADC *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__GetEntity__);
+                                              (const MethodInfo_3EE2044 *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__GetEntity__);
 }
 
 
@@ -37,163 +37,172 @@ UpdateProfileDialogInfoEntity_array *UpdateProfileDialogInfoMaster__GetUpdatePro
         UpdateProfileDialogInfoMaster_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x20
+  System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
-  System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v6; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
+  __int64 list; // x0
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x0
+  __int64 v7; // x1
+  System_Collections_Generic_IEnumerator_T__o *i; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v9; // x9
-  int32_t *p_offset; // x10
-  __int64 v11; // x0
-  System_Collections_Generic_IEnumerator_T__c *v12; // x8
-  __int64 v13; // x9
-  int32_t *v14; // x10
-  __int64 v15; // x0
-  Il2CppObject *v16; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  Il2CppObject *v23; // x1
+  __int64 v10; // x9
+  int *p_offset; // x10
+  __int64 v12; // x0
+  System_Collections_Generic_IEnumerator_T__c *v13; // x8
+  __int64 v14; // x9
+  int *v15; // x10
+  __int64 v16; // x0
+  Il2CppObject *v17; // x0
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  Il2CppObject *v24; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Collections_Generic_IEnumerator_T__c *v28; // x8
-  __int64 v29; // x9
-  int32_t *v30; // x10
-  __int64 v31; // x0
+  Il2CppClass **v28; // x0
+  System_Collections_Generic_IEnumerator_T__c *v29; // x8
+  __int64 v30; // x9
+  int *v31; // x10
+  __int64 v32; // x0
+  System_Collections_Generic_IEnumerator_T__o *v34; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4E78413 & 1) == 0 )
+  if ( (byte_5939441 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_UpdateProfileDialogInfoEntity__GetEnumerator__);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_UpdateProfileDialogInfoEntity__TypeInfo);
-    byte_4E78413 = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_UpdateProfileDialogInfoEntity__GetEnumerator__);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_UpdateProfileDialogInfoEntity__TypeInfo);
+    byte_5939441 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UpdateProfileDialogInfoEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UpdateProfileDialogInfoEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity___ctor__);
+  list = (__int64)this->fields.list;
   if ( !list )
-    goto LABEL_34;
+    goto LABEL_40;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
-                 list,
-                 (const MethodInfo_34CD418 *)Method_System_Collections_ObjectModel_Collection_UpdateProfileDialogInfoEntity__GetEnumerator__);
+                 (System_Collections_ObjectModel_Collection_T__o *)list,
+                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_UpdateProfileDialogInfoEntity__GetEnumerator__);
+  v34 = Enumerator;
   if ( !Enumerator )
-    sub_1D0F30C(0, v6);
-  while ( 1 )
+    sub_21FFECC(Enumerator, v7);
+  for ( i = Enumerator; ; i = v34 )
   {
-    klass = Enumerator->klass;
-    v9 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    klass = i->klass;
+    v10 = *(unsigned __int16 *)&i->klass->_2.rank;
+    if ( *(_WORD *)&i->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v9;
+        --v10;
         p_offset += 4;
-        if ( !v9 )
-          goto LABEL_9;
+        if ( !v10 )
+          goto LABEL_10;
       }
-      v11 = (__int64)&klass->vtable[*p_offset];
+      v12 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
-LABEL_9:
-      v11 = sub_1CE5430(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_10:
+      v12 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
-            Enumerator,
-            *(_QWORD *)(v11 + 8))
-        & 1) == 0 )
+    list = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v12)(
+             i,
+             *(_QWORD *)(v12 + 8));
+    if ( (list & 1) == 0 )
       break;
-    v12 = Enumerator->klass;
-    v13 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-    if ( *(_WORD *)&Enumerator->klass->_2.rank )
+    if ( !v34 )
+      sub_21FFECC(list, v4);
+    v13 = v34->klass;
+    v14 = *(unsigned __int16 *)&v34->klass->_2.rank;
+    if ( *(_WORD *)&v34->klass->_2.rank )
     {
-      v14 = &v12->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__c **)v14 - 1) != System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo )
+      v15 = &v13->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__c **)v15 - 1) != System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo )
       {
-        --v13;
-        v14 += 4;
-        if ( !v13 )
-          goto LABEL_16;
+        --v14;
+        v15 += 4;
+        if ( !v14 )
+          goto LABEL_18;
       }
-      v15 = (__int64)&v12->vtable[*v14];
+      v16 = (__int64)&v13->vtable[*v15];
     }
     else
     {
-LABEL_16:
-      v15 = sub_1CE5430(Enumerator, System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo, 0);
+LABEL_18:
+      v16 = sub_2237E2C(v34, System_Collections_Generic_IEnumerator_UpdateProfileDialogInfoEntity__TypeInfo, 0);
     }
-    v16 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
-                            Enumerator,
-                            *(_QWORD *)(v15 + 8));
-    v23 = v16;
-    if ( v16 )
+    v17 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v16)(
+                            v34,
+                            *(_QWORD *)(v16 + 8));
+    v24 = v17;
+    if ( v17 )
     {
-      if ( !v3 )
-        sub_1D0F30C(v16, v16);
-      items = v3->fields._items;
-      v25 = Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__Add__;
-      ++v3->fields._version;
-      if ( !items )
-        sub_1D0F30C(v16, v16);
+      if ( !v3
+        || (items = v3->fields._items,
+            v26 = Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__Add__,
+            ++v3->fields._version,
+            !items) )
+      {
+        sub_21FFECC(v17, v17);
+      }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
-          v16,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          v17,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
-        v27 = &items->obj.klass + size;
+        v28 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v27[4] = (Il2CppClass *)v23;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v27 + 4), (int32_t)v23, v17, v18, v19, v20, v21, v22);
+        v28[4] = (Il2CppClass *)v24;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v24, v18, v19, v20, v21, v22, v23);
       }
     }
   }
-  v28 = Enumerator->klass;
-  v29 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
-  if ( *(_WORD *)&Enumerator->klass->_2.rank )
+  if ( v34 )
   {
-    v30 = &v28->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v30 - 1) != System_IDisposable_TypeInfo )
+    v29 = v34->klass;
+    v30 = *(unsigned __int16 *)&v34->klass->_2.rank;
+    if ( *(_WORD *)&v34->klass->_2.rank )
     {
-      --v29;
-      v30 += 4;
-      if ( !v29 )
-        goto LABEL_28;
+      v31 = &v29->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v31 - 1) != System_IDisposable_TypeInfo )
+      {
+        --v30;
+        v31 += 4;
+        if ( !v30 )
+          goto LABEL_33;
+      }
+      v32 = (__int64)&v29->vtable[*v31];
     }
-    v31 = (__int64)&v28->vtable[*v30];
+    else
+    {
+LABEL_33:
+      v32 = sub_2237E2C(v34, System_IDisposable_TypeInfo, 0);
+    }
+    list = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(
+             v34,
+             *(_QWORD *)(v32 + 8));
   }
-  else
-  {
-LABEL_28:
-    v31 = sub_1CE5430(Enumerator, System_IDisposable_TypeInfo, 0);
-  }
-  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(
-                                                             Enumerator,
-                                                             *(_QWORD *)(v31 + 8));
   if ( !v3 )
-LABEL_34:
-    sub_1D0F30C(list, v4);
+LABEL_40:
+    sub_21FFECC(list, v4);
   return (UpdateProfileDialogInfoEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                   v3,
-                                                  (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__ToArray__);
+                                                  (const MethodInfo_445164C *)Method_System_Collections_Generic_List_UpdateProfileDialogInfoEntity__ToArray__);
 }
 
 
@@ -205,15 +214,15 @@ bool UpdateProfileDialogInfoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E78411 & 1) == 0 )
+  if ( (byte_593943F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__TryGetEntity__);
-    byte_4E78411 = 1;
+    sub_21FFC50(&Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__TryGetEntity__);
+    byte_593943F = 1;
   }
   PK = (Il2CppObject *)UpdateProfileDialogInfoEntity__CreatePK(svtId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UpdateProfileDialogInfoMaster__UpdateProfileDialogInfoEntity__string__TryGetEntity__);
 }

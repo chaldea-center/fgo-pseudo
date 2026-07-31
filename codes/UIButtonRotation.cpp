@@ -4,12 +4,13 @@ void UIButtonRotation___ctor(UIButtonRotation_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float z; // s1
   struct UnityEngine_Vector3_StaticFields *v6; // x8
-  float v7; // s1
+  __int64 v7; // d0
+  float v8; // s1
 
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -17,10 +18,11 @@ void UIButtonRotation___ctor(UIButtonRotation_o *this, const MethodInfo *method)
   *(_QWORD *)&this->fields.hover.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.hover.fields.z = z;
   v6 = v3->static_fields;
-  v7 = v6->zeroVector.fields.z;
-  *(_QWORD *)&this->fields.pressed.fields.x = *(_QWORD *)&v6->zeroVector.fields.x;
-  this->fields.pressed.fields.z = v7;
+  v7 = *(_QWORD *)&v6->zeroVector.fields.x;
+  v8 = v6->zeroVector.fields.z;
   this->fields.duration = 0.2;
+  *(_QWORD *)&this->fields.pressed.fields.x = v7;
+  this->fields.pressed.fields.z = v8;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -30,19 +32,20 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
   UnityEngine_Object_o *tweenTarget; // x20
   __int64 v4; // x1
   struct UnityEngine_Transform_o *v5; // x0
+  __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4E7BD74 & 1) == 0 )
+  if ( (byte_593CCC7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_TweenRotation___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BD74 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_TweenRotation___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CCC7 = 1;
   }
   if ( this->fields.mStarted )
   {
     tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     if ( UnityEngine_Object__op_Inequality(tweenTarget, 0, 0) )
     {
       v5 = this->fields.tweenTarget;
@@ -50,9 +53,9 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
         goto LABEL_14;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v5,
-                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       v5 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
                                                (UnityEngine_Object_o *)Component_object,
                                                0,
@@ -66,7 +69,7 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
           return;
         }
 LABEL_14:
-        sub_1D0F30C(v5, v4);
+        sub_21FFECC(v5, v4);
       }
     }
   }
@@ -75,47 +78,54 @@ LABEL_14:
 
 void UIButtonRotation__OnEnable(UIButtonRotation_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *gameObject; // x20
-  bool IsHighlighted; // w1
-  const MethodInfo *v5; // x2
+  bool IsHighlighted; // w8
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4E7BD73 & 1) == 0 )
+  if ( (byte_593CCC6 & 1) == 0 )
   {
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E7BD73 = 1;
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_593CCC6 = 1;
   }
   if ( this->fields.mStarted )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !UICamera_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
     IsHighlighted = UICamera__IsHighlighted(gameObject, 0);
-    UIButtonRotation__OnHover(this, IsHighlighted, v5);
+    UIButtonRotation__OnHover(this, IsHighlighted, v6);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIButtonRotation__OnHover(UIButtonRotation_o *this, bool isOver, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   UnityEngine_Component_o *tweenTarget; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   float duration; // s8
-  float x; // s12
+  float x; // s11
+  UnityEngine_GameObject_o *v10; // x19
   float z; // s9
-  float y; // s11
-  float w; // s10
-  UnityEngine_GameObject_o *v13; // x19
-  float v14; // s6
-  float v15; // s7
-  float v16; // s4
-  float v17; // s5
-  float v18; // s16
-  float v19; // s19
-  float v20; // s5
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v23; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  float y; // s10
+  float w; // s12
+  unsigned __int64 v14; // d0 OVERLAPPED
+  float v15; // s2
+  int v16; // s1
+  float v17; // s18
+  float v18; // s4
+  float v19; // s6
+  float v20; // s7
+  float v21; // s16
+  float v22; // s18
+  float v23; // s4
+  float v24; // s5
+  float v25; // s6
+  float v26; // s7
+  UnityEngine_Quaternion_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v28; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -127,44 +137,48 @@ void UIButtonRotation__OnHover(UIButtonRotation_o *this, bool isOver, const Meth
     gameObject = UnityEngine_Component__get_gameObject(tweenTarget, 0);
     duration = this->fields.duration;
     x = this->fields.mRot.fields.x;
+    v10 = gameObject;
     y = this->fields.mRot.fields.y;
     z = this->fields.mRot.fields.z;
     w = this->fields.mRot.fields.w;
-    v13 = gameObject;
     if ( isOver )
     {
-      v21.fields.x = this->fields.hover.fields.x * 0.017453;
-      v21.fields.y = this->fields.hover.fields.y * 0.017453;
-      v21.fields.z = this->fields.hover.fields.z * 0.017453;
-      v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v21, 0);
-      v14 = y * v22.fields.z;
-      v15 = z * v22.fields.y;
-      v16 = (float)(w * v22.fields.x) + (float)(x * v22.fields.w);
-      v17 = (float)(w * v22.fields.y) + (float)(y * v22.fields.w);
-      v18 = (float)(w * v22.fields.w) - (float)(x * v22.fields.x);
-      v22.fields.w = (float)(x * v22.fields.y) + (float)((float)(w * v22.fields.z) + (float)(z * v22.fields.w));
-      v19 = x * v22.fields.z;
-      v22.fields.z = z * v22.fields.z;
-      v20 = (float)(z * v22.fields.x) + v17;
-      z = v22.fields.w - (float)(y * v22.fields.x);
-      v22.fields.x = v18 - (float)(y * v22.fields.y);
-      x = (float)(v14 + v16) - v15;
-      y = v20 - v19;
-      w = v22.fields.x - v22.fields.z;
+      v14 = vmul_f32(*(float32x2_t *)&this->fields.hover.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
+      v15 = this->fields.hover.fields.z * 0.017453;
+      v16 = HIDWORD(v14);
+      v27 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v14, 0);
+      v17 = x * v27.fields.x;
+      v18 = (float)(w * v27.fields.x) + (float)(x * v27.fields.w);
+      v19 = (float)(w * v27.fields.y) + (float)(y * v27.fields.w);
+      v20 = z * v27.fields.x;
+      v27.fields.x = y * v27.fields.x;
+      v21 = (float)(w * v27.fields.z) + (float)(z * v27.fields.w);
+      v27.fields.w = (float)(w * v27.fields.w) - v17;
+      v22 = y * v27.fields.y;
+      v23 = (float)(y * v27.fields.z) + v18;
+      v24 = v20 + v19;
+      v25 = x * v27.fields.z;
+      v27.fields.z = z * v27.fields.z;
+      v26 = (float)(x * v27.fields.y) + v21;
+      x = v23 - (float)(z * v27.fields.y);
+      y = v24 - v25;
+      z = v26 - v27.fields.x;
+      w = (float)(v27.fields.w - v22) - v27.fields.z;
     }
-    v23.fields.x = x;
-    v23.fields.y = y;
-    v23.fields.z = z;
-    v23.fields.w = w;
-    tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v13, duration, v23, 0);
+    v28.fields.x = x;
+    v28.fields.y = y;
+    v28.fields.z = z;
+    v28.fields.w = w;
+    tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v10, duration, v28, 0);
     if ( !tweenTarget )
 LABEL_10:
-      sub_1D0F30C(tweenTarget, v5);
+      sub_21FFECC(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
@@ -176,35 +190,45 @@ void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const M
   float y; // s10
   float z; // s11
   float w; // s12
-  float v14; // s23
-  float v15; // s6
-  float v16; // s4
-  float v17; // s5
-  float v18; // s16
-  float v19; // s19
-  float v20; // s12
-  float v21; // s11
-  float v22; // s9
-  float v23; // s10
-  UnityEngine_GameObject_o *v24; // x21
+  unsigned __int64 v14; // d0 OVERLAPPED
+  float v15; // s2
+  int v16; // s1
+  float v17; // s18
+  float v18; // s4
+  float v19; // s5
+  float v20; // s19
+  float v21; // s7
+  float v22; // s16
+  float v23; // s2
+  float v24; // s4
+  float v25; // s5
+  float v26; // s3
+  float v27; // s11
+  float v28; // s10
+  float v29; // s9
+  __int64 v30; // x1
+  UnityEngine_GameObject_o *v31; // x21
   bool IsHighlighted; // w0
-  float v26; // s6
-  float v27; // s7
-  float v28; // s4
-  float v29; // s5
-  float v30; // s16
-  float v31; // s19
-  float v32; // s5
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v37; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  float v33; // s12
+  unsigned __int64 v34; // d0 OVERLAPPED
+  float v35; // s2
+  int v36; // s1
+  float v37; // s18
+  float v38; // s4
+  float v39; // s7
+  float v40; // s16
+  float v41; // s4
+  float v42; // s5
+  float v43; // s6
+  float v44; // s7
+  UnityEngine_Quaternion_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v47; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4E7BD75 & 1) == 0 )
+  if ( (byte_593CCC8 & 1) == 0 )
   {
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E7BD75 = 1;
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_593CCC8 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -212,7 +236,7 @@ void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const M
       UIButtonRotation__Start(this, v5);
     tweenTarget = (UnityEngine_Component_o *)this->fields.tweenTarget;
     if ( !tweenTarget )
-      goto LABEL_16;
+      goto LABEL_17;
     gameObject = UnityEngine_Component__get_gameObject(tweenTarget, 0);
     duration = this->fields.duration;
     v9 = gameObject;
@@ -222,91 +246,100 @@ void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const M
       y = this->fields.mRot.fields.y;
       z = this->fields.mRot.fields.z;
       w = this->fields.mRot.fields.w;
-      v33.fields.x = this->fields.pressed.fields.x * 0.017453;
-      v33.fields.y = this->fields.pressed.fields.y * 0.017453;
-      v33.fields.z = this->fields.pressed.fields.z * 0.017453;
-      v35 = UnityEngine_Quaternion__Internal_FromEulerRad(v33, 0);
-      v14 = w * v35.fields.w;
-      v15 = y * v35.fields.z;
-      v16 = (float)(w * v35.fields.x) + (float)(x * v35.fields.w);
-      v17 = (float)(w * v35.fields.y) + (float)(y * v35.fields.w);
-      v35.fields.w = (float)(w * v35.fields.z) + (float)(z * v35.fields.w);
-      v18 = v14 - (float)(x * v35.fields.x);
-      v19 = x * v35.fields.z;
-      v35.fields.z = z * v35.fields.z;
-      v20 = (float)(v15 + v16) - (float)(z * v35.fields.y);
-      v21 = (float)((float)(z * v35.fields.x) + v17) - v19;
-      v22 = (float)((float)(x * v35.fields.y) + v35.fields.w) - (float)(y * v35.fields.x);
-      v23 = (float)(v18 - (float)(y * v35.fields.y)) - v35.fields.z;
+      v14 = vmul_f32(*(float32x2_t *)&this->fields.pressed.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
+      v15 = this->fields.pressed.fields.z * 0.017453;
+      v16 = HIDWORD(v14);
+      v45 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v14, 0);
+      v17 = x * v45.fields.x;
+      v18 = (float)(w * v45.fields.x) + (float)(x * v45.fields.w);
+      v19 = y * v45.fields.z;
+      v20 = x * v45.fields.z;
+      v21 = z * v45.fields.x;
+      v45.fields.x = y * v45.fields.x;
+      v22 = (float)(w * v45.fields.z) + (float)(z * v45.fields.w);
+      v23 = z * v45.fields.z;
+      v24 = v19 + v18;
+      v25 = v21 + (float)((float)(w * v45.fields.y) + (float)(y * v45.fields.w));
+      v26 = (float)((float)(w * v45.fields.w) - v17) - (float)(y * v45.fields.y);
+      v27 = v24 - (float)(z * v45.fields.y);
+      v28 = v25 - v20;
+      v29 = (float)((float)(x * v45.fields.y) + v22) - v45.fields.x;
     }
     else
     {
-      v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      if ( !UICamera_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      IsHighlighted = UICamera__IsHighlighted(v24, 0);
-      v20 = this->fields.mRot.fields.x;
-      v21 = this->fields.mRot.fields.y;
-      v22 = this->fields.mRot.fields.z;
-      v23 = this->fields.mRot.fields.w;
-      if ( IsHighlighted )
+      v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v30);
+      IsHighlighted = UICamera__IsHighlighted(v31, 0);
+      v27 = this->fields.mRot.fields.x;
+      v28 = this->fields.mRot.fields.y;
+      v29 = this->fields.mRot.fields.z;
+      v33 = this->fields.mRot.fields.w;
+      if ( !IsHighlighted )
       {
-        v34.fields.x = this->fields.hover.fields.x * 0.017453;
-        v34.fields.y = this->fields.hover.fields.y * 0.017453;
-        v34.fields.z = this->fields.hover.fields.z * 0.017453;
-        v36 = UnityEngine_Quaternion__Internal_FromEulerRad(v34, 0);
-        v26 = v21 * v36.fields.z;
-        v27 = v22 * v36.fields.y;
-        v28 = (float)(v23 * v36.fields.x) + (float)(v20 * v36.fields.w);
-        v29 = (float)(v23 * v36.fields.y) + (float)(v21 * v36.fields.w);
-        v30 = (float)(v23 * v36.fields.w) - (float)(v20 * v36.fields.x);
-        v36.fields.w = (float)(v20 * v36.fields.y) + (float)((float)(v23 * v36.fields.z) + (float)(v22 * v36.fields.w));
-        v31 = v20 * v36.fields.z;
-        v36.fields.z = v22 * v36.fields.z;
-        v32 = (float)(v22 * v36.fields.x) + v29;
-        v22 = v36.fields.w - (float)(v21 * v36.fields.x);
-        v36.fields.x = v30 - (float)(v21 * v36.fields.y);
-        v20 = (float)(v26 + v28) - v27;
-        v21 = v32 - v31;
-        v23 = v36.fields.x - v36.fields.z;
+LABEL_14:
+        v47.fields.x = v27;
+        v47.fields.y = v28;
+        v47.fields.z = v29;
+        v47.fields.w = v33;
+        tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v9, duration, v47, 0);
+        if ( tweenTarget )
+        {
+          LODWORD(tweenTarget[1].monitor) = 3;
+          return;
+        }
+LABEL_17:
+        sub_21FFECC(tweenTarget, v5);
       }
+      v34 = vmul_f32(*(float32x2_t *)&this->fields.hover.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
+      v35 = this->fields.hover.fields.z * 0.017453;
+      v36 = HIDWORD(v34);
+      v46 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v34, 0);
+      v37 = v27 * v46.fields.x;
+      v38 = (float)(v33 * v46.fields.x) + (float)(v27 * v46.fields.w);
+      v39 = v29 * v46.fields.x;
+      v46.fields.x = v28 * v46.fields.x;
+      v40 = (float)(v33 * v46.fields.z) + (float)(v29 * v46.fields.w);
+      v41 = (float)(v28 * v46.fields.z) + v38;
+      v42 = v39 + (float)((float)(v33 * v46.fields.y) + (float)(v28 * v46.fields.w));
+      v43 = v27 * v46.fields.z;
+      v23 = v29 * v46.fields.z;
+      v44 = (float)(v27 * v46.fields.y) + v40;
+      v26 = (float)((float)(v33 * v46.fields.w) - v37) - (float)(v28 * v46.fields.y);
+      v27 = v41 - (float)(v29 * v46.fields.y);
+      v28 = v42 - v43;
+      v29 = v44 - v46.fields.x;
     }
-    v37.fields.x = v20;
-    v37.fields.y = v21;
-    v37.fields.z = v22;
-    v37.fields.w = v23;
-    tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v9, duration, v37, 0);
-    if ( !tweenTarget )
-LABEL_16:
-      sub_1D0F30C(tweenTarget, v5);
-    LODWORD(tweenTarget[1].monitor) = 3;
+    v33 = v26 - v23;
+    goto LABEL_14;
   }
 }
 
 
 void UIButtonRotation__OnSelect(UIButtonRotation_o *this, bool isSelected, const MethodInfo *method)
 {
-  const MethodInfo *v5; // x2
-  UICamera_c *v6; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  UICamera_c *v7; // x0
 
-  if ( (byte_4E7BD76 & 1) == 0 )
+  if ( (byte_593CCC9 & 1) == 0 )
   {
-    sub_1D0F0B4(&UICamera_TypeInfo);
-    byte_4E7BD76 = 1;
+    sub_21FFC50(&UICamera_TypeInfo);
+    byte_593CCC9 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     if ( !isSelected )
       goto LABEL_8;
-    v6 = UICamera_TypeInfo;
-    if ( !UICamera_TypeInfo->_2.cctor_finished )
+    v7 = UICamera_TypeInfo;
+    if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      v6 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v5);
+      v7 = UICamera_TypeInfo;
     }
-    if ( v6->static_fields->currentScheme == 2 )
+    if ( v7->static_fields->currentScheme == 2 )
 LABEL_8:
-      UIButtonRotation__OnHover(this, isSelected, v5);
+      UIButtonRotation__OnHover(this, isSelected, v6);
   }
 }
 
@@ -317,31 +350,31 @@ void UIButtonRotation__Start(UIButtonRotation_o *this, const MethodInfo *method)
   UnityEngine_Object_o *tweenTarget; // x21
   __int64 v5; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
-  if ( (byte_4E7BD72 & 1) == 0 )
+  if ( (byte_593CCC5 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BD72 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CCC5 = 1;
   }
   if ( !this->fields.mStarted )
   {
     p_tweenTarget = &this->fields.tweenTarget;
     tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
     this->fields.mStarted = 1;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     if ( UnityEngine_Object__op_Equality(tweenTarget, 0, 0) )
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.tweenTarget = transform;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&this->fields.tweenTarget,
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&this->fields.tweenTarget,
         (int32_t)transform,
         v7,
         v8,
@@ -351,7 +384,7 @@ void UIButtonRotation__Start(UIButtonRotation_o *this, const MethodInfo *method)
         v12);
     }
     if ( !*p_tweenTarget )
-      sub_1D0F30C(0, v5);
+      sub_21FFECC(0, v5);
     this->fields.mRot = UnityEngine_Transform__get_localRotation(*p_tweenTarget, 0);
   }
 }

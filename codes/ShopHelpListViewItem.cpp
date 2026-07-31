@@ -4,16 +4,16 @@ void ShopHelpListViewItem___ctor(
         ShopHelpItemInfo_o *info,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.info, (int32_t)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -23,7 +23,7 @@ System_String_o *ShopHelpListViewItem__get_ImageName(ShopHelpListViewItem_o *thi
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -36,22 +36,23 @@ ShopHelpItemInfo_o *ShopHelpListViewItem__get_Info(ShopHelpListViewItem_o *this,
 
 System_String_o *ShopHelpListViewItem__get_InfoText(ShopHelpListViewItem_o *this, const MethodInfo *method)
 {
-  ShopHelpListViewItem_o *v2; // x19
+  __int64 v2; // x2
+  ShopHelpListViewItem_o *v3; // x19
   struct ShopHelpItemInfo_o *info; // x8
   System_String_o *TextCode_k__BackingField; // x19
 
-  v2 = this;
-  if ( (byte_4E737D6 & 1) == 0 )
+  v3 = this;
+  if ( (byte_593472D & 1) == 0 )
   {
-    this = (ShopHelpListViewItem_o *)sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E737D6 = 1;
+    this = (ShopHelpListViewItem_o *)sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_593472D = 1;
   }
-  info = v2->fields.info;
+  info = v3->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
   return LocalizationManager__Get(TextCode_k__BackingField, 0);
 }
 
@@ -62,7 +63,7 @@ bool ShopHelpListViewItem__get_IsStone(ShopHelpListViewItem_o *this, const Metho
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields._Kind_k__BackingField == 6;
 }
 
@@ -73,6 +74,6 @@ int32_t ShopHelpListViewItem__get_LineCount(ShopHelpListViewItem_o *this, const 
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields._Line_k__BackingField;
 }

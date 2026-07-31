@@ -1,43 +1,43 @@
 void WebConnectMenu___ctor(WebConnectMenu_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_4E74D39 & 1) == 0 )
+  if ( (byte_5935CB9 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E74D39 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935CB9 = 1;
   }
-  v9 = StringLiteral_1/*""*/;
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.settingConnectPath = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.settingConnectPath, v9, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.settingConnectPath, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 void WebConnectMenu__Callback(WebConnectMenu_o *this, bool result, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_callbackFunc; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_callbackFunc; // x0
   struct WebConnectMenu_CallbackFunc_o *v9; // x20
   struct WebConnectMenu_CallbackFunc_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+  p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
   v9 = callbackFunc;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1D0F058(p_callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -55,7 +55,7 @@ void WebConnectMenu__Close(WebConnectMenu_o *this, const MethodInfo *method)
   menuRootObject = this->fields.menuRootObject;
   this->fields.state = 0;
   if ( !menuRootObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UnityEngine_GameObject__SetActive(menuRootObject, 0, 0);
 }
 
@@ -65,18 +65,18 @@ void WebConnectMenu__EndInput(WebConnectMenu_o *this, const MethodInfo *method)
   UnityEngine_Component_o *wwwPathInput; // x0
   UIInput_o *v4; // x20
   struct System_String_o *value; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E74D37 & 1) == 0 )
+  if ( (byte_5935CB7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E74D37 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935CB7 = 1;
   }
   if ( this->fields.state )
   {
@@ -85,14 +85,14 @@ void WebConnectMenu__EndInput(WebConnectMenu_o *this, const MethodInfo *method)
       goto LABEL_11;
     wwwPathInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 wwwPathInput,
-                                                (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                                (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !wwwPathInput )
       goto LABEL_11;
     v4 = (UIInput_o *)wwwPathInput;
     value = UIInput__get_value((UIInput_o *)wwwPathInput, 0);
     this->fields.settingConnectPath = value;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.settingConnectPath,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.settingConnectPath,
       (int32_t)value,
       v6,
       v7,
@@ -109,7 +109,7 @@ void WebConnectMenu__EndInput(WebConnectMenu_o *this, const MethodInfo *method)
           (wwwPathInput = (UnityEngine_Component_o *)this->fields.cancelButton) == 0) )
     {
 LABEL_11:
-      sub_1D0F30C(wwwPathInput, method);
+      sub_21FFECC(wwwPathInput, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)wwwPathInput, 0, 0);
     UnityEngine_Input__set_imeCompositionMode(0, 0);
@@ -140,37 +140,47 @@ void WebConnectMenu__OnClickDecide(WebConnectMenu_o *this, const MethodInfo *met
 {
   UILineInput_o *wwwPathInput; // x0
   struct System_String_o *Text; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   System_String_o *selectConnectPath; // x20
   System_Action_o *v12; // x21
+  __int64 v13; // x1
+  __int64 v14; // x2
 
-  if ( (byte_4E74D38 & 1) == 0 )
+  if ( (byte_5935CB8 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_WebConnectMenu_OnEndWebView__);
-    sub_1D0F0B4(&WebViewManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E74D38 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_WebConnectMenu_OnEndWebView__);
+    sub_21FFC50(&WebViewManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5935CB8 = 1;
   }
   if ( this->fields.state == 1 )
   {
     wwwPathInput = this->fields.wwwPathInput;
     if ( !wwwPathInput )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
     Text = UILineInput__GetText(wwwPathInput, 0);
     this->fields.selectConnectPath = Text;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.selectConnectPath, (int32_t)Text, v5, v6, v7, v8, v9, v10);
-    this->fields.state = 2;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.selectConnectPath,
+      (int32_t)Text,
+      v5,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10);
     selectConnectPath = this->fields.selectConnectPath;
-    v12 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    this->fields.state = 2;
+    v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(v12, (Il2CppObject *)this, Method_WebConnectMenu_OnEndWebView__, 0);
-    if ( !WebViewManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
+    if ( !*(&WebViewManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo, v13, v14);
     WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, selectConnectPath, v12, 0);
   }
 }
@@ -186,26 +196,26 @@ void WebConnectMenu__OnEndWebView(WebConnectMenu_o *this, const MethodInfo *meth
 
 void WebConnectMenu__Open(WebConnectMenu_o *this, WebConnectMenu_CallbackFunc_o *callback, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   __int64 v10; // x1
   UnityEngine_GameObject_o *menuRootObject; // x0
 
-  if ( (byte_4E74D36 & 1) == 0 )
+  if ( (byte_5935CB6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    byte_4E74D36 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    byte_5935CB6 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,
@@ -225,10 +235,10 @@ void WebConnectMenu__Open(WebConnectMenu_o *this, WebConnectMenu_CallbackFunc_o 
           (menuRootObject = (UnityEngine_GameObject_o *)this->fields.wwwPathInput) == 0)
       || (menuRootObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                          (UnityEngine_Component_o *)menuRootObject,
-                                                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0 )
+                                                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0 )
     {
 LABEL_12:
-      sub_1D0F30C(menuRootObject, v10);
+      sub_21FFECC(menuRootObject, v10);
     }
     UIInput__set_value((UIInput_o *)menuRootObject, this->fields.settingConnectPath, 0);
     this->fields.state = 1;
@@ -245,16 +255,18 @@ void WebConnectMenu__add_callbackFunc(
   System_Delegate_o *v6; // x21
   struct WebConnectMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  WebConnectMenu_o *v11; // x0
-  WebConnectMenu_CallbackFunc_o *v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  WebConnectMenu_o *v13; // x0
+  WebConnectMenu_CallbackFunc_o *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4E74D34 & 1) == 0 )
+  if ( (byte_5935CB4 & 1) == 0 )
   {
-    sub_1D0F0B4(&WebConnectMenu_CallbackFunc_TypeInfo);
-    byte_4E74D34 = 1;
+    sub_21FFC50(&WebConnectMenu_CallbackFunc_TypeInfo);
+    byte_5935CB4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -267,14 +279,14 @@ void WebConnectMenu__add_callbackFunc(
       if ( (WebConnectMenu_CallbackFunc_c *)v8->klass != WebConnectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  WebConnectMenu__remove_callbackFunc(v11, v12, v13);
+  sub_220024C(v8, WebConnectMenu_CallbackFunc_TypeInfo, v9, v10);
+  WebConnectMenu__remove_callbackFunc(v13, v14, v15);
 }
 
 
@@ -287,16 +299,18 @@ void WebConnectMenu__remove_callbackFunc(
   System_Delegate_o *v6; // x21
   struct WebConnectMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  WebConnectMenu_o *v11; // x0
-  WebConnectMenu_CallbackFunc_o *v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  WebConnectMenu_o *v13; // x0
+  WebConnectMenu_CallbackFunc_o *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4E74D35 & 1) == 0 )
+  if ( (byte_5935CB5 & 1) == 0 )
   {
-    sub_1D0F0B4(&WebConnectMenu_CallbackFunc_TypeInfo);
-    byte_4E74D35 = 1;
+    sub_21FFC50(&WebConnectMenu_CallbackFunc_TypeInfo);
+    byte_5935CB5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -309,14 +323,14 @@ void WebConnectMenu__remove_callbackFunc(
       if ( (WebConnectMenu_CallbackFunc_c *)v8->klass != WebConnectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  WebConnectMenu__Open(v11, v12, v13);
+  sub_220024C(v8, WebConnectMenu_CallbackFunc_TypeInfo, v9, v10);
+  WebConnectMenu__Open(v13, v14, v15);
 }
 
 
@@ -326,10 +340,10 @@ void WebConnectMenu_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -339,23 +353,23 @@ void WebConnectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -367,9 +381,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3AF84;
+  this->fields.invoke_impl = (intptr_t)sub_1FF5FC8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3AF3C;
+  this->fields.extra_arg = (intptr_t)&loc_1FF5F80;
 }
 
 
@@ -380,18 +394,13 @@ System_IAsyncResult_o *WebConnectMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-38h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = result;
-  if ( (byte_4E74D3A & 1) == 0 )
-  {
-    sub_1D0F0B4(&bool_TypeInfo);
-    byte_4E74D3A = 1;
-  }
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -400,7 +409,7 @@ void WebConnectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

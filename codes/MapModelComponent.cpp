@@ -1,7 +1,7 @@
 void MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_D354B0;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_E92990;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -36,10 +36,10 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v19 = layer;
   locationPrefix = this->fields.locationPrefix;
+  v19 = layer;
   v5 = System_Int32__ToString((int32_t)&v19, 0);
-  v6 = System_String__Concat_65562772(locationPrefix, v5, 0);
+  v6 = System_String__Concat_75438412(locationPrefix, v5, 0);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
@@ -51,10 +51,10 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
     v12 = v10 - 4;
     if ( (int)v10 - 4 >= max_length )
     {
-      if ( !byte_4E70C99 )
+      if ( !byte_5931940 )
       {
-        sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-        byte_4E70C99 = 1;
+        sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+        byte_5931940 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       x = static_fields->zeroVector.fields.x;
@@ -79,10 +79,10 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   v18 = this->fields.cameraLocationObjectList;
   if ( !v18 )
 LABEL_8:
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   if ( v12 >= LODWORD(v18->max_length) )
 LABEL_15:
-    sub_1D0F314(v6);
+    sub_21FFED4(v6);
   *(UnityEngine_Vector3_o *)&x = GameObjectExtensions__GetLocalPosition(
                                    (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
                                    0);
@@ -100,29 +100,29 @@ void MapModelComponent__PlayAnimation(
         System_Action_o *endAction,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   char *effectAction; // x0
 
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 5) = endAction,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)(effectAction + 40),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)(effectAction + 40),
           (int32_t)endAction,
-          (int32_t)endAction,
-          (int32_t)method,
+          (System_String_o *)endAction,
+          (System_String_o *)method,
           v4,
           v5,
           v6,
           v7),
         (effectAction = (char *)this->fields.animationComponent) == 0) )
   {
-    sub_1D0F30C(effectAction, animationName);
+    sub_21FFECC(effectAction, animationName);
   }
-  SimpleAnimation__Play_68509268((SimpleAnimation_o *)effectAction, animationName, 0);
+  SimpleAnimation__Play_78338864((SimpleAnimation_o *)effectAction, animationName, 0);
 }
 
 

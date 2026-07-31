@@ -2,54 +2,54 @@ void SampleEventListViewItemDraw___cctor(const MethodInfo *method)
 {
   __int64 v1; // x0
   __int64 v2; // x1
-  int32_t v3; // w2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
+  bool v7; // w6
+  bool v8; // w7
   __int64 v9; // x19
   int32_t v10; // w1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   int32_t v17; // w1
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
 
-  if ( (byte_4E74D96 & 1) == 0 )
+  if ( (byte_5935D9E & 1) == 0 )
   {
-    sub_1D0F0B4(&SampleEventListViewItemDraw_TypeInfo);
-    sub_1D0F0B4(&string___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16973/*"ai_quest_free"*/);
-    sub_1D0F0B4(&StringLiteral_16972/*"ai_quest_event"*/);
-    byte_4E74D96 = 1;
+    sub_21FFC50(&SampleEventListViewItemDraw_TypeInfo);
+    sub_21FFC50(&string___TypeInfo);
+    sub_21FFC50(&StringLiteral_17390/*"ai_quest_free"*/);
+    sub_21FFC50(&StringLiteral_17389/*"ai_quest_event"*/);
+    byte_5935D9E = 1;
   }
-  v1 = sub_1D0F15C(string___TypeInfo, 2);
+  v1 = sub_21FFD10(string___TypeInfo, 2);
   if ( !v1 )
-    sub_1D0F30C(0, v2);
+    sub_21FFECC(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v10 = StringLiteral_16972/*"ai_quest_event"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_16972/*"ai_quest_event"*/,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
-        *(_DWORD *)(v9 + 24) <= 1u) )
+    || (v10 = StringLiteral_17389/*"ai_quest_event"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_17389/*"ai_quest_event"*/,
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
+        (*(_DWORD *)(v9 + 24) & 0xFFFFFFFE) == 0) )
   {
-    sub_1D0F314(v1);
+    sub_21FFED4(v1);
   }
-  v17 = StringLiteral_16973/*"ai_quest_free"*/;
-  *(_QWORD *)(v9 + 40) = StringLiteral_16973/*"ai_quest_free"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_17390/*"ai_quest_free"*/;
+  *(_QWORD *)(v9 + 40) = StringLiteral_17390/*"ai_quest_free"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
   SampleEventListViewItemDraw_TypeInfo->static_fields->eventTypeSpriteList = (struct System_String_array *)v9;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)SampleEventListViewItemDraw_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)SampleEventListViewItemDraw_TypeInfo->static_fields,
     v9,
     v18,
     v19,
@@ -79,84 +79,82 @@ void SampleEventListViewItemDraw__SetItem(
   UISprite_o *iconImageSprite; // x22
   UILabel_o *eventTextLabel; // x0
   UIWidget_OnDimensionsChanged_c *klass; // x8
+  __int64 v11; // x1
+  __int64 v12; // x2
   Il2CppObject *Component_object; // x21
-  float v12; // s0 OVERLAPPED
-  float v13; // s3
-  float v14; // s1
-  float v15; // s2
+  float v14; // s0 OVERLAPPED
+  float v15; // s3
+  float v16; // s1
+  float v17; // s2
 
   v5 = item;
-  if ( (byte_4E74D95 & 1) == 0 )
+  if ( (byte_5935D9D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&SampleEventListViewItemDraw_TypeInfo);
-    byte_4E74D95 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&SampleEventListViewItemDraw_TypeInfo);
+    byte_5935D9D = 1;
   }
-  if ( v5 && mode )
+  if ( !v5 || !mode )
   {
-    eventType = v5->fields.eventType;
-    if ( this->fields.eventType != eventType )
+    this->fields.eventType = -1;
+    return;
+  }
+  eventType = v5->fields.eventType;
+  if ( this->fields.eventType != eventType )
+  {
+    iconImageSprite = this->fields.iconImageSprite;
+    eventTextLabel = (UILabel_o *)SampleEventListViewItemDraw_TypeInfo;
+    if ( !*(&SampleEventListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
     {
-      iconImageSprite = this->fields.iconImageSprite;
+      j_il2cpp_runtime_class_init_0(SampleEventListViewItemDraw_TypeInfo, item, *(_QWORD *)&mode);
       eventTextLabel = (UILabel_o *)SampleEventListViewItemDraw_TypeInfo;
-      if ( !SampleEventListViewItemDraw_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(SampleEventListViewItemDraw_TypeInfo);
-        eventTextLabel = (UILabel_o *)SampleEventListViewItemDraw_TypeInfo;
-      }
-      klass = eventTextLabel->fields.onChange->klass;
-      if ( !klass )
-        goto LABEL_27;
-      if ( (unsigned int)eventType >= LODWORD(klass->_1.namespaze) )
-        sub_1D0F314(eventTextLabel);
-      if ( !iconImageSprite )
-        goto LABEL_27;
-      UISprite__set_spriteName(iconImageSprite, *((System_String_o **)&klass->_1.byval_arg.data + eventType), 0);
-      this->fields.eventType = eventType;
     }
-    item = (SampleEventListViewItem_o *)v5->fields.eventText;
-    if ( item )
-    {
-      eventTextLabel = this->fields.eventTextLabel;
-      if ( !eventTextLabel )
-        goto LABEL_27;
-      UILabel__set_text(eventTextLabel, (System_String_o *)item, 0);
-    }
-    eventTextLabel = (UILabel_o *)this->fields.iconImageSprite;
-    if ( eventTextLabel )
-    {
-      eventTextLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)eventTextLabel, 0);
-      if ( eventTextLabel )
-      {
-        Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)eventTextLabel,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-        if ( ((unsigned __int8)eventTextLabel & 1) != 0 )
-        {
-          if ( !Component_object )
-            goto LABEL_27;
-          UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
-        }
-        eventTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-        v12 = 1.0;
-        if ( mode == 1 )
-          v12 = 0.5;
-        if ( eventTextLabel )
-        {
-          v13 = 1.0;
-          v14 = v12;
-          v15 = v12;
-          UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v12, 0);
-          return;
-        }
-      }
-    }
-LABEL_27:
-    sub_1D0F30C(eventTextLabel, item);
+    klass = eventTextLabel->fields.onChange->klass;
+    if ( !klass )
+      goto LABEL_27;
+    if ( (unsigned int)eventType >= LODWORD(klass->_1.namespaze) )
+      sub_21FFED4(eventTextLabel);
+    if ( !iconImageSprite )
+      goto LABEL_27;
+    UISprite__set_spriteName(iconImageSprite, *((System_String_o **)&klass->_1.byval_arg.data + eventType), 0);
+    this->fields.eventType = eventType;
   }
-  this->fields.eventType = -1;
+  item = (SampleEventListViewItem_o *)v5->fields.eventText;
+  if ( item )
+  {
+    eventTextLabel = this->fields.eventTextLabel;
+    if ( !eventTextLabel )
+      goto LABEL_27;
+    UILabel__set_text(eventTextLabel, (System_String_o *)item, 0);
+  }
+  eventTextLabel = (UILabel_o *)this->fields.iconImageSprite;
+  if ( !eventTextLabel )
+    goto LABEL_27;
+  eventTextLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)eventTextLabel, 0);
+  if ( !eventTextLabel )
+    goto LABEL_27;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       (UnityEngine_GameObject_o *)eventTextLabel,
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
+  eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( ((unsigned __int8)eventTextLabel & 1) != 0 )
+  {
+    if ( !Component_object )
+      goto LABEL_27;
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
+  }
+  eventTextLabel = (UILabel_o *)this->fields.baseImageTexture;
+  if ( !eventTextLabel )
+LABEL_27:
+    sub_21FFECC(eventTextLabel, item);
+  v14 = 1.0;
+  v15 = 1.0;
+  if ( mode == 1 )
+    v14 = 0.5;
+  v16 = v14;
+  v17 = v14;
+  UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v14, 0);
 }

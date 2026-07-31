@@ -1,26 +1,28 @@
 void BattleServantShowBuffComponent___ctor(BattleServantShowBuffComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_Collections_Generic_List_GameObject__c *v3; // x0
+  System_Collections_Generic_List_object__o *v4; // x20
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7AFC7 & 1) == 0 )
+  if ( (byte_593C031 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4E7AFC7 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_593C031 = 1;
   }
+  v3 = System_Collections_Generic_List_GameObject__TypeInfo;
   this->fields.maxLine = 2;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v3);
   System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.objList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+    v4,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.objList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -32,25 +34,26 @@ void BattleServantShowBuffComponent__CreateBuffObj(
 {
   UnityEngine_GameObject_o *Object; // x19
   const MethodInfo *v6; // x3
-  BattleServantBuffIconComponent_o *Component_object; // x0
+  Il2CppObject *Component_object; // x0
   __int64 v8; // x1
   struct BattleBuffData_ShowBuffData_array *datalist; // x8
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  intptr_t m_CachedPtr; // x8
-  _QWORD *v17; // x9
-  __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v19; // x8
+  bool v14; // w6
+  bool v15; // w7
+  System_Collections_Generic_List_object__o *objList; // x8
+  struct System_Object_array *items; // x9
+  _QWORD *v18; // x10
+  __int64 size; // x11
+  Il2CppClass **v20; // x0
 
-  if ( (byte_4E7AFC0 & 1) == 0 )
+  if ( (byte_593C02A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    byte_4E7AFC0 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    byte_593C02A = 1;
   }
   Object = BaseMonoBehaviour__createObject(
              (BaseMonoBehaviour_o *)this,
@@ -62,39 +65,42 @@ void BattleServantShowBuffComponent__CreateBuffObj(
   if ( !Object )
     goto LABEL_12;
   UnityEngine_GameObject__SetActive(Object, 1, 0);
-  Component_object = (BattleServantBuffIconComponent_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                           Object,
-                                                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       Object,
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
   datalist = this->fields.datalist;
   if ( !datalist )
     goto LABEL_12;
   if ( LODWORD(datalist->max_length) <= index )
-    sub_1D0F314(Component_object);
+    sub_21FFED4(Component_object);
   if ( !Component_object
-    || (BattleServantBuffIconComponent__setIcon_49033464(Component_object, datalist->m_Items[index], 0),
-        (Component_object = (BattleServantBuffIconComponent_o *)this->fields.objList) == 0)
-    || (m_CachedPtr = Component_object->fields.m_CachedPtr,
-        v17 = Method_System_Collections_Generic_List_GameObject__Add__,
-        ++HIDWORD(Component_object->fields.m_CancellationTokenSource),
-        !m_CachedPtr) )
+    || (BattleServantBuffIconComponent__setIcon_54623520(
+          (BattleServantBuffIconComponent_o *)Component_object,
+          datalist->m_Items[index],
+          0),
+        (objList = (System_Collections_Generic_List_object__o *)this->fields.objList) == 0)
+    || (items = objList->fields._items,
+        v18 = Method_System_Collections_Generic_List_GameObject__Add__,
+        ++objList->fields._version,
+        !items) )
   {
 LABEL_12:
-    sub_1D0F30C(Component_object, v8);
+    sub_21FFECC(Component_object, v8);
   }
-  m_CancellationTokenSource_low = SLODWORD(Component_object->fields.m_CancellationTokenSource);
-  if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(m_CachedPtr + 24) )
+  size = objList->fields._size;
+  if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      (System_Collections_Generic_List_object__o *)Component_object,
+      objList,
       (Il2CppObject *)Object,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v19 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
-    LODWORD(Component_object->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-    *(_QWORD *)(v19 + 32) = Object;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 32), (int32_t)Object, v10, v11, v12, v13, v14, v15);
+    v20 = &items->obj.klass + size;
+    objList->fields._size = size + 1;
+    v20[4] = (Il2CppClass *)Object;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)Object, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -103,19 +109,19 @@ void BattleServantShowBuffComponent__HideBuffObject(BattleServantShowBuffCompone
 {
   System_Collections_Generic_List_object__o *objList; // x0
   int32_t v4; // w20
-  struct System_Object_array *items; // x10
+  struct System_Object_array *items; // x11
   struct BattleBuffData_ShowBuffData_array *datalist; // x8
   int max_length; // w9
-  int v8; // w10
-  unsigned int v9; // w11
-  BattleBuffData_ShowBuffData_o *v10; // x12
+  int v8; // w11
+  int v9; // w12
+  BattleBuffData_ShowBuffData_o *v10; // x13
 
-  if ( (byte_4E7AFC1 & 1) == 0 )
+  if ( (byte_593C02B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4E7AFC1 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_593C02B = 1;
   }
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
@@ -126,12 +132,12 @@ void BattleServantShowBuffComponent__HideBuffObject(BattleServantShowBuffCompone
     objList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              objList,
                                                              v4,
-                                                             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !objList )
       goto LABEL_18;
     objList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                              (UnityEngine_GameObject_o *)objList,
-                                                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !objList )
       goto LABEL_18;
     items = objList[2].fields._items;
@@ -147,21 +153,21 @@ void BattleServantShowBuffComponent__HideBuffObject(BattleServantShowBuffCompone
         v9 = 0;
         while ( 1 )
         {
-          if ( v9 >= max_length )
-            sub_1D0F314(objList);
+          if ( max_length == v9 )
+            sub_21FFED4(objList);
           v10 = datalist->m_Items[v9];
           if ( !v10 )
             break;
           if ( v8 == v10->fields.addOrder )
             goto LABEL_17;
-          if ( (int)++v9 >= max_length )
+          if ( (max_length & ~(max_length >> 31)) == ++v9 )
             goto LABEL_16;
         }
 LABEL_18:
-        sub_1D0F30C(objList, method);
+        sub_21FFECC(objList, method);
       }
 LABEL_16:
-      BattleServantBuffIconComponent__setIcon_49033464((BattleServantBuffIconComponent_o *)objList, 0, 0);
+      BattleServantBuffIconComponent__setIcon_54623520((BattleServantBuffIconComponent_o *)objList, 0, 0);
     }
 LABEL_17:
     objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
@@ -184,12 +190,12 @@ void BattleServantShowBuffComponent__NewBuff(
   Il2CppObject *Item; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4E7AFC3 & 1) == 0 )
+  if ( (byte_593C02D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4E7AFC3 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_593C02D = 1;
   }
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
@@ -205,12 +211,12 @@ void BattleServantShowBuffComponent__NewBuff(
     objList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              objList,
                                                              v6,
-                                                             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !objList )
       goto LABEL_10;
     objList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                              (UnityEngine_GameObject_o *)objList,
-                                                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !objList )
       goto LABEL_10;
     if ( !objList[2].fields._items )
@@ -224,19 +230,19 @@ void BattleServantShowBuffComponent__NewBuff(
   if ( !datalist )
     goto LABEL_10;
   if ( LODWORD(datalist->max_length) <= index )
-    sub_1D0F314(objList);
-  BattleServantBuffIconComponent__setIcon_49033464(
+    sub_21FFED4(objList);
+  BattleServantBuffIconComponent__setIcon_54623520(
     (BattleServantBuffIconComponent_o *)objList,
     datalist->m_Items[index],
     0);
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
 LABEL_10:
-    sub_1D0F30C(objList, *(_QWORD *)&index);
+    sub_21FFECC(objList, *(_QWORD *)&index);
   Item = System_Collections_Generic_List_object___get_Item(
            objList,
            v6,
-           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   BattleServantShowBuffComponent__UpdatePosition(this, (UnityEngine_GameObject_o *)Item, index, v9);
 }
 
@@ -248,37 +254,38 @@ void BattleServantShowBuffComponent__UpdateActiveBuffList(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *objList; // x0
-  int32_t v6; // w20
-  bool v7; // w21
+  int32_t v6; // w21
 
-  if ( (byte_4E7AFC4 & 1) == 0 )
+  if ( (byte_593C02E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4E7AFC4 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_593C02E = 1;
   }
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
 LABEL_11:
-    sub_1D0F30C(objList, isPlayFlashEffect);
+    sub_21FFECC(objList, isPlayFlashEffect);
   v6 = 0;
-  v7 = isPlayFlashEffect;
   while ( v6 < objList->fields._size )
   {
     objList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              objList,
                                                              v6,
-                                                             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( objList )
     {
       objList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                (UnityEngine_GameObject_o *)objList,
-                                                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
       if ( objList )
       {
         if ( objList[2].fields._items )
-          BattleServantBuffIconComponent__UpdateActiveBuff((BattleServantBuffIconComponent_o *)objList, v7, 0);
+          BattleServantBuffIconComponent__UpdateActiveBuff(
+            (BattleServantBuffIconComponent_o *)objList,
+            isPlayFlashEffect,
+            0);
         objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
         ++v6;
         if ( objList )
@@ -306,12 +313,12 @@ bool BattleServantShowBuffComponent__UpdateBuff(
   const MethodInfo *v11; // x3
 
   v3 = index;
-  if ( (byte_4E7AFC2 & 1) == 0 )
+  if ( (byte_593C02C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4E7AFC2 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_593C02C = 1;
   }
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
@@ -325,12 +332,12 @@ bool BattleServantShowBuffComponent__UpdateBuff(
     objList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              objList,
                                                              v6,
-                                                             (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !objList )
       goto LABEL_14;
     objList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                              (UnityEngine_GameObject_o *)objList,
-                                                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !objList )
       goto LABEL_14;
     items = objList[2].fields._items;
@@ -340,7 +347,7 @@ bool BattleServantShowBuffComponent__UpdateBuff(
       if ( !datalist )
         goto LABEL_14;
       if ( LODWORD(datalist->max_length) <= v3 )
-        sub_1D0F314(objList);
+        sub_21FFED4(objList);
       *(_QWORD *)&index = datalist->m_Items[v3];
       if ( !*(_QWORD *)&index )
         goto LABEL_14;
@@ -352,18 +359,18 @@ bool BattleServantShowBuffComponent__UpdateBuff(
     if ( !objList )
       goto LABEL_14;
   }
-  BattleServantBuffIconComponent__setIcon_49033464(
+  BattleServantBuffIconComponent__setIcon_54623520(
     (BattleServantBuffIconComponent_o *)objList,
     *(BattleBuffData_ShowBuffData_o **)&index,
     0);
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
 LABEL_14:
-    sub_1D0F30C(objList, *(_QWORD *)&index);
+    sub_21FFECC(objList, *(_QWORD *)&index);
   Item = System_Collections_Generic_List_object___get_Item(
            objList,
            v6,
-           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   BattleServantShowBuffComponent__UpdatePosition(this, (UnityEngine_GameObject_o *)Item, v3, v11);
   return v6 < size;
 }
@@ -379,25 +386,25 @@ void BattleServantShowBuffComponent__UpdateConditionBuffList(
   BattleServantShowBuffComponent_o *v5; // x21
   unsigned __int64 v6; // x26
   __int64 v7; // x22
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   BattleBuffData_ShowBuffData_o *v14; // x1
   __int64 v15; // x23
   System_Collections_Generic_IEnumerable_TSource__o *datalist; // x24
   System_Func_object__bool__o *v17; // x25
 
   v5 = this;
-  if ( (byte_4E7AFC5 & 1) == 0 )
+  if ( (byte_593C02F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_ShowBuffData___);
-    sub_1D0F0B4(&System_Func_BattleBuffData_ShowBuffData__bool__TypeInfo);
-    sub_1D0F0B4(&Method_BattleServantShowBuffComponent___c__DisplayClass14_0__UpdateConditionBuffList_b__0__);
-    this = (BattleServantShowBuffComponent_o *)sub_1D0F0B4(&BattleServantShowBuffComponent___c__DisplayClass14_0_TypeInfo);
-    byte_4E7AFC5 = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_ShowBuffData___);
+    sub_21FFC50(&System_Func_BattleBuffData_ShowBuffData__bool__TypeInfo);
+    sub_21FFC50(&Method_BattleServantShowBuffComponent___c__DisplayClass14_0__UpdateConditionBuffList_b__0__);
+    this = (BattleServantShowBuffComponent_o *)sub_21FFC50(&BattleServantShowBuffComponent___c__DisplayClass14_0_TypeInfo);
+    byte_593C02F = 1;
   }
   if ( !conditionBuffList )
     goto LABEL_13;
@@ -406,27 +413,27 @@ void BattleServantShowBuffComponent__UpdateConditionBuffList(
     v6 = 0;
     while ( 1 )
     {
-      v7 = sub_1D0F300(BattleServantShowBuffComponent___c__DisplayClass14_0_TypeInfo);
+      v7 = sub_21FFEBC(BattleServantShowBuffComponent___c__DisplayClass14_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v7, 0);
       if ( v6 >= LODWORD(conditionBuffList->max_length) )
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       if ( !v7 )
         break;
       v14 = conditionBuffList->m_Items[v6];
       *(_QWORD *)(v7 + 16) = v14;
       v15 = v7 + 16;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)v14, v8, v9, v10, v11, v12, v13);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)v14, v8, v9, v10, v11, v12, v13);
       datalist = (System_Collections_Generic_IEnumerable_TSource__o *)v5->fields.datalist;
-      v17 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_BattleBuffData_ShowBuffData__bool__TypeInfo);
+      v17 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BattleBuffData_ShowBuffData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v17,
         (Il2CppObject *)v7,
         Method_BattleServantShowBuffComponent___c__DisplayClass14_0__UpdateConditionBuffList_b__0__,
         0);
-      this = (BattleServantShowBuffComponent_o *)System_Linq_Enumerable__FirstOrDefault_object__52923832(
+      this = (BattleServantShowBuffComponent_o *)System_Linq_Enumerable__FirstOrDefault_object__59044732(
                                                    datalist,
                                                    (System_Func_TSource__bool__o *)v17,
-                                                   (const MethodInfo_3278DB8 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_ShowBuffData___);
+                                                   (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_ShowBuffData___);
       if ( this )
       {
         if ( !*(_QWORD *)v15 )
@@ -437,7 +444,7 @@ void BattleServantShowBuffComponent__UpdateConditionBuffList(
         goto LABEL_12;
     }
 LABEL_13:
-    sub_1D0F30C(this, conditionBuffList);
+    sub_21FFECC(this, conditionBuffList);
   }
 LABEL_12:
   BattleServantShowBuffComponent__UpdateActiveBuffList(v5, isPlayFlashEffect, (const MethodInfo *)isPlayFlashEffect);
@@ -450,9 +457,9 @@ void BattleServantShowBuffComponent__UpdatePosition(
         int32_t index,
         const MethodInfo *method)
 {
-  int32_t maxCount; // w21
-  int32_t maxLine; // w22
-  BattleServantShowBuffComponent_o *v6; // x20
+  int32_t maxLine; // w21
+  int32_t maxCount; // w22
+  BattleServantShowBuffComponent_o *v6; // x19
   int v8; // w8
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -462,10 +469,10 @@ void BattleServantShowBuffComponent__UpdatePosition(
         v6 = this,
         (this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__get_transform(obj, 0)) == 0) )
   {
-    sub_1D0F30C(this, obj);
+    sub_21FFECC(this, obj);
   }
   v8 = index / maxCount;
-  if ( index / maxCount > maxLine )
+  if ( index / maxCount >= maxLine )
     v8 = maxLine;
   v9.fields.y = v6->fields.addPos.fields.y * (float)v8;
   v9.fields.x = v6->fields.addPos.fields.x * (float)(index % maxCount);
@@ -480,109 +487,103 @@ void BattleServantShowBuffComponent__UpdateShowConditionBuffDataReady(
         const MethodInfo *method)
 {
   BattleServantShowBuffComponent___c_c *v5; // x0
+  struct BattleServantShowBuffComponent___c_StaticFields *static_fields; // x8
   System_Func_object__int__o *_9__15_0; // x21
-  Il2CppObject *v7; // x22
-  struct BattleServantShowBuffComponent___c_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  Il2CppObject *v8; // x22
+  struct BattleServantShowBuffComponent___c_StaticFields *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
   System_Collections_Generic_Dictionary_int__object__o *Item; // x0
-  __int64 v16; // x1
+  __int64 v17; // x1
   System_Collections_Generic_List_object__o *objList; // x8
-  System_Collections_Generic_Dictionary_int__object__o *v18; // x20
-  int32_t v19; // w21
+  System_Collections_Generic_Dictionary_int__object__o *v19; // x20
+  int32_t v20; // w21
   UnityEngine_GameObject_c *buckets; // x8
-  BattleServantBuffIconComponent_o *v21; // x22
+  BattleServantBuffIconComponent_o *v22; // x22
   Il2CppObject *value; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E7AFC6 & 1) == 0 )
+  if ( (byte_593C030 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__BattleBuffData_ShowBuffData__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToDictionary_BattleBuffData_ShowBuffData__int___);
-    sub_1D0F0B4(&System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1D0F0B4(&Method_BattleServantShowBuffComponent___c__UpdateShowConditionBuffDataReady_b__15_0__);
-    sub_1D0F0B4(&BattleServantShowBuffComponent___c_TypeInfo);
-    byte_4E7AFC6 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__BattleBuffData_ShowBuffData__TryGetValue__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToDictionary_BattleBuffData_ShowBuffData__int___);
+    sub_21FFC50(&System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_21FFC50(&Method_BattleServantShowBuffComponent___c__UpdateShowConditionBuffDataReady_b__15_0__);
+    sub_21FFC50(&BattleServantShowBuffComponent___c_TypeInfo);
+    byte_593C030 = 1;
   }
   v5 = BattleServantShowBuffComponent___c_TypeInfo;
   value = 0;
-  if ( !BattleServantShowBuffComponent___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&BattleServantShowBuffComponent___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BattleServantShowBuffComponent___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleServantShowBuffComponent___c_TypeInfo, showConditionBuffArray);
     v5 = BattleServantShowBuffComponent___c_TypeInfo;
   }
-  _9__15_0 = (System_Func_object__int__o *)v5->static_fields->__9__15_0;
+  static_fields = v5->static_fields;
+  _9__15_0 = (System_Func_object__int__o *)static_fields->__9__15_0;
   if ( !_9__15_0 )
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v5->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = BattleServantShowBuffComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, showConditionBuffArray);
+      static_fields = BattleServantShowBuffComponent___c_TypeInfo->static_fields;
     }
-    v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__15_0 = (System_Func_object__int__o *)sub_1D0F300(System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__15_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__15_0,
-      v7,
+      v8,
       Method_BattleServantShowBuffComponent___c__UpdateShowConditionBuffDataReady_b__15_0__,
       0);
-    static_fields = BattleServantShowBuffComponent___c_TypeInfo->static_fields;
-    static_fields->__9__15_0 = (struct System_Func_BattleBuffData_ShowBuffData__int__o *)_9__15_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__15_0,
-      (int32_t)_9__15_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v9 = BattleServantShowBuffComponent___c_TypeInfo->static_fields;
+    v9->__9__15_0 = (struct System_Func_BattleBuffData_ShowBuffData__int__o *)_9__15_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__15_0, (int32_t)_9__15_0, v10, v11, v12, v13, v14, v15);
   }
   Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Linq_Enumerable__ToDictionary_object__int_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)showConditionBuffArray,
                                                                    (System_Func_TSource__TKey__o *)_9__15_0,
-                                                                   (const MethodInfo_329033C *)Method_System_Linq_Enumerable_ToDictionary_BattleBuffData_ShowBuffData__int___);
+                                                                   (const MethodInfo_3868BB8 *)Method_System_Linq_Enumerable_ToDictionary_BattleBuffData_ShowBuffData__int___);
   objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
   if ( !objList )
 LABEL_19:
-    sub_1D0F30C(Item, v16);
-  v18 = Item;
-  v19 = 0;
-  while ( v19 < objList->fields._size )
+    sub_21FFECC(Item, v17);
+  v19 = Item;
+  v20 = 0;
+  while ( v20 < objList->fields._size )
   {
     Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      objList,
-                                                                     v19,
-                                                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                     v20,
+                                                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( Item )
     {
       Item = (System_Collections_Generic_Dictionary_int__object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                        (UnityEngine_GameObject_o *)Item,
-                                                                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
       if ( Item )
       {
         buckets = (UnityEngine_GameObject_c *)Item[1].fields._buckets;
-        v21 = (BattleServantBuffIconComponent_o *)Item;
+        v22 = (BattleServantBuffIconComponent_o *)Item;
         if ( buckets )
         {
-          if ( !v18 )
+          if ( !v19 )
             goto LABEL_19;
           Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
-                                                                           v18,
+                                                                           v19,
                                                                            HIDWORD(buckets->_1.byval_arg.data),
                                                                            &value,
-                                                                           (const MethodInfo_35A9994 *)Method_System_Collections_Generic_Dictionary_int__BattleBuffData_ShowBuffData__TryGetValue__);
+                                                                           (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__BattleBuffData_ShowBuffData__TryGetValue__);
           if ( ((unsigned __int8)Item & 1) != 0 )
-            BattleServantBuffIconComponent__UpdateShowBuffDataReady(v21, (BattleBuffData_ShowBuffData_o *)value, 0);
+            BattleServantBuffIconComponent__UpdateShowBuffDataReady(v22, (BattleBuffData_ShowBuffData_o *)value, 0);
         }
         objList = (System_Collections_Generic_List_object__o *)this->fields.objList;
-        ++v19;
+        ++v20;
         if ( objList )
           continue;
       }
@@ -597,11 +598,11 @@ void BattleServantShowBuffComponent__setBuffList(
         BattleBuffData_ShowBuffData_array *buffList,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct BattleBuffData_ShowBuffData_array **p_datalist; // x20
   const MethodInfo *v11; // x1
   System_Collections_Generic_List_object__o *updated; // x0
@@ -609,29 +610,27 @@ void BattleServantShowBuffComponent__setBuffList(
   const MethodInfo *v14; // x2
   struct BattleBuffData_ShowBuffData_array *datalist; // x8
   int32_t v16; // w21
-  il2cpp_array_size_t max_length; // x8
-  struct System_Collections_Generic_List_GameObject__o *objList; // x9
-  int32_t size; // w9
-  int v20; // w10
-  int v21; // w23
-  int32_t v22; // w22
+  int v17; // w9
+  struct System_Collections_Generic_List_GameObject__o *objList; // x10
+  int v19; // w25
+  int32_t v20; // w22
   struct System_Object_array *items; // x8
-  struct BattleBuffData_ShowBuffData_array *v24; // x9
-  BattleBuffData_ShowBuffData_o *v25; // x9
+  struct BattleBuffData_ShowBuffData_array *v22; // x9
+  BattleBuffData_ShowBuffData_o *v23; // x9
 
-  if ( (byte_4E7AFBF & 1) == 0 )
+  if ( (byte_593C029 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4E7AFBF = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_593C029 = 1;
   }
   this->fields.datalist = buffList;
   p_datalist = &this->fields.datalist;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.datalist,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.datalist,
     (int32_t)buffList,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -640,88 +639,90 @@ void BattleServantShowBuffComponent__setBuffList(
   BattleServantShowBuffComponent__HideBuffObject(this, v11);
   datalist = this->fields.datalist;
   if ( !datalist )
-    goto LABEL_13;
+    goto LABEL_32;
   v16 = 0;
   while ( 1 )
   {
-    max_length = datalist->max_length;
-    if ( v16 >= (int)max_length )
+    if ( v16 >= SLODWORD(datalist->max_length) )
       return;
+    v17 = this->fields.maxLine * this->fields.maxCount;
     objList = this->fields.objList;
-    if ( !objList )
-      goto LABEL_13;
-    size = objList->fields._size;
-    v20 = this->fields.maxLine * this->fields.maxCount;
-    if ( v20 <= v16 )
+    if ( v17 <= v16 )
       break;
-    if ( size <= v16 )
+    if ( objList )
     {
-      BattleServantShowBuffComponent__CreateBuffObj(this, v16, v14);
+      if ( objList->fields._size <= v16 )
+      {
+        BattleServantShowBuffComponent__CreateBuffObj(this, v16, v14);
+      }
+      else
+      {
+        updated = (System_Collections_Generic_List_object__o *)BattleServantShowBuffComponent__UpdateBuff(
+                                                                 this,
+                                                                 v16,
+                                                                 v14);
+        if ( ((unsigned __int8)updated & 1) == 0 )
+          BattleServantShowBuffComponent__NewBuff(this, v16, v14);
+      }
+      datalist = *p_datalist;
+      ++v16;
+      if ( *p_datalist )
+        continue;
     }
-    else
-    {
-      updated = (System_Collections_Generic_List_object__o *)BattleServantShowBuffComponent__UpdateBuff(this, v16, v14);
-      if ( ((unsigned __int8)updated & 1) == 0 )
-        BattleServantShowBuffComponent__NewBuff(this, v16, v14);
-    }
-    datalist = *p_datalist;
-    ++v16;
-    if ( !*p_datalist )
-      goto LABEL_13;
+    goto LABEL_32;
   }
-  v21 = size - v20;
-  if ( size - v20 >= 1 && v16 < (int)max_length )
+  if ( !objList )
+LABEL_32:
+    sub_21FFECC(updated, v13);
+  v19 = objList->fields._size - v17;
+  while ( v16 < SLODWORD(datalist->max_length) && v19 >= 1 )
   {
-    while ( 1 )
+    updated = (System_Collections_Generic_List_object__o *)this->fields.objList;
+    if ( updated )
     {
-      updated = (System_Collections_Generic_List_object__o *)this->fields.objList;
-      if ( !updated )
-        break;
-      v22 = 0;
-      while ( v22 < updated->fields._size )
+      v20 = 0;
+      while ( v20 < updated->fields._size )
       {
         updated = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  updated,
-                                                                 v22,
-                                                                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                 v20,
+                                                                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         if ( !updated )
-          goto LABEL_13;
+          goto LABEL_32;
         updated = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                  (UnityEngine_GameObject_o *)updated,
-                                                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
         if ( !updated )
-          goto LABEL_13;
+          goto LABEL_32;
         items = updated[2].fields._items;
         if ( items )
         {
-          v24 = *p_datalist;
+          v22 = *p_datalist;
           if ( !*p_datalist )
-            goto LABEL_13;
-          if ( (unsigned int)v16 >= LODWORD(v24->max_length) )
-            sub_1D0F314(updated);
-          v25 = v24->m_Items[v16];
-          if ( !v25 )
-            goto LABEL_13;
-          if ( HIDWORD(items->m_Items[0]) == v25->fields.addOrder )
+            goto LABEL_32;
+          if ( (unsigned int)v16 >= LODWORD(v22->max_length) )
+            sub_21FFED4(updated);
+          v23 = v22->m_Items[v16];
+          if ( !v23 )
+            goto LABEL_32;
+          if ( HIDWORD(items->m_Items[0]) == v23->fields.addOrder )
           {
-            BattleServantBuffIconComponent__setIcon_49033464((BattleServantBuffIconComponent_o *)updated, 0, 0);
-            --v21;
+            BattleServantBuffIconComponent__setIcon_54623520((BattleServantBuffIconComponent_o *)updated, 0, 0);
+            --v19;
             break;
           }
         }
         updated = (System_Collections_Generic_List_object__o *)this->fields.objList;
-        ++v22;
+        ++v20;
         if ( !updated )
-          goto LABEL_13;
+          goto LABEL_32;
       }
-      if ( !*p_datalist )
-        break;
-      if ( v21 >= 1 && ++v16 < SLODWORD((*p_datalist)->max_length) )
+      datalist = *p_datalist;
+      ++v16;
+      if ( *p_datalist )
         continue;
-      return;
     }
-LABEL_13:
-    sub_1D0F30C(updated, v13);
+    goto LABEL_32;
   }
 }
 
@@ -729,23 +730,23 @@ LABEL_13:
 void BattleServantShowBuffComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7AFC8 & 1) == 0 )
+  if ( (byte_593C032 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleServantShowBuffComponent___c_TypeInfo);
-    byte_4E7AFC8 = 1;
+    sub_21FFC50(&BattleServantShowBuffComponent___c_TypeInfo);
+    byte_593C032 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(BattleServantShowBuffComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(BattleServantShowBuffComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleServantShowBuffComponent___c_TypeInfo->static_fields->__9 = (struct BattleServantShowBuffComponent___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)BattleServantShowBuffComponent___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)BattleServantShowBuffComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -768,7 +769,7 @@ int32_t BattleServantShowBuffComponent___c___UpdateShowConditionBuffDataReady_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.addOrder;
 }
 
@@ -789,6 +790,6 @@ bool BattleServantShowBuffComponent___c__DisplayClass14_0___UpdateConditionBuffL
   struct BattleBuffData_ShowBuffData_o *condBuff; // x8
 
   if ( !x || (condBuff = this->fields.condBuff) == 0 )
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, x);
   return x->fields.addOrder == condBuff->fields.addOrder;
 }

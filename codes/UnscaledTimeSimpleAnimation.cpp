@@ -22,7 +22,7 @@ void UnscaledTimeSimpleAnimation__ApplyUpdateMode(UnscaledTimeSimpleAnimation_o 
            this,
            this->klass->vtable._9_GetAnimatorUpdateMode.method);
     if ( !m_Animator )
-      sub_1D0F30C(v4, v5);
+      sub_21FFECC(v4, v5);
     UnityEngine_Animator__set_updateMode(m_Animator, v4, 0);
     *(_QWORD *)&v7.fields.m_Version = ((unsigned int (__fastcall *)(UnscaledTimeSimpleAnimation_o *, const MethodInfo *))this->klass->vtable._10_GetDirectorUpdateMode.methodPtr)(
                                         this,
@@ -48,11 +48,19 @@ int32_t UnscaledTimeSimpleAnimation__GetDirectorUpdateMode(
         UnscaledTimeSimpleAnimation_o *this,
         const MethodInfo *method)
 {
-  if ( this->fields.m_AnimatePhysics )
-    return 1;
-  if ( this->fields.m_UseUnscaledTime )
-    return 2;
-  return 1;
+  _BOOL4 m_AnimatePhysics; // w9
+  int32_t result; // w0
+
+  m_AnimatePhysics = this->fields.m_AnimatePhysics;
+  result = 1;
+  if ( !m_AnimatePhysics )
+  {
+    if ( this->fields.m_UseUnscaledTime )
+      return 2;
+    else
+      return 1;
+  }
+  return result;
 }
 
 
@@ -67,11 +75,11 @@ void UnscaledTimeSimpleAnimation__set_useUnscaledTime(
         bool value,
         const MethodInfo *method)
 {
-  UnscaledTimeSimpleAnimation_c *klass; // x8
+  Il2CppMethodPointer methodPtr; // x2
+  const MethodInfo *v4; // x8
 
-  klass = this->klass;
+  methodPtr = this->klass->vtable._4_ApplyUpdateMode.methodPtr;
+  v4 = this->klass->vtable._4_ApplyUpdateMode.method;
   this->fields.m_UseUnscaledTime = value;
-  ((void (__fastcall *)(UnscaledTimeSimpleAnimation_o *, const MethodInfo *))klass->vtable._4_ApplyUpdateMode.methodPtr)(
-    this,
-    klass->vtable._4_ApplyUpdateMode.method);
+  ((void (__fastcall *)(UnscaledTimeSimpleAnimation_o *, const MethodInfo *))methodPtr)(this, v4);
 }

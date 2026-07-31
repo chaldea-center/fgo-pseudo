@@ -1,28 +1,29 @@
 void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *method)
 {
-  BalanceConfig_c *v3; // x0
-  struct System_Int32_array *v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  __int64 v3; // x1
+  BalanceConfig_c *v4; // x0
+  struct System_Int32_array *v5; // x0
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E771CE & 1) == 0 )
+  if ( (byte_5938193 & 1) == 0 )
   {
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E771CE = 1;
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&int___TypeInfo);
+    byte_5938193 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v4 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v3 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v3);
+    v4 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct System_Int32_array *)sub_1D0F15C(int___TypeInfo, (unsigned int)v3->static_fields->DeckMainMemberMax);
-  this->fields.uniqueIds = v4;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.uniqueIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v5 = (struct System_Int32_array *)sub_21FFD10(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
+  this->fields.uniqueIds = v5;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.uniqueIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }

@@ -3,16 +3,24 @@ void TutorialCommunicateAdapter___ctor(
         System_Action_TutorialCommunicateAdapter__o *onGetRequest,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.onGetRequest = onGetRequest;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.onGetRequest, (int32_t)onGetRequest, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onGetRequest,
+    (int32_t)onGetRequest,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -21,32 +29,33 @@ void TutorialCommunicateAdapter__SendRequest(
         EventTutorialEntity_o *entity,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  System_Action_T__o *onGetRequest; // x0
+  const MethodInfo_36CDF5C *v11; // x2
 
-  if ( (byte_4E770D8 & 1) == 0 )
+  if ( (byte_5938093 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
-    byte_4E770D8 = 1;
+    sub_21FFC50(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    byte_5938093 = 1;
   }
   this->fields._EventTutorialEntity_k__BackingField = entity;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)entity,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
+  onGetRequest = (System_Action_T__o *)this->fields.onGetRequest;
+  v11 = (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___;
   this->fields._IsPerformanceBusy_k__BackingField = 1;
-  ActionExtensions__Call_object_(
-    (System_Action_T__o *)this->fields.onGetRequest,
-    (Il2CppObject *)this,
-    (const MethodInfo_31932D8 *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+  ActionExtensions__Call_object_(onGetRequest, (Il2CppObject *)this, v11);
 }
 
 
@@ -75,17 +84,17 @@ void TutorialCommunicateAdapter__set_EventTutorialEntity(
         EventTutorialEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._EventTutorialEntity_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

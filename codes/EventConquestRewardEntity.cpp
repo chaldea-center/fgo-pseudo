@@ -1,15 +1,15 @@
 void EventConquestRewardEntity___ctor(EventConquestRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E775CF & 1) == 0 )
+  if ( (byte_59385A2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E775CF = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59385A2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
   this->fields.objectNum = 0;
-  *(_OWORD *)&this->fields.eventId = xmmword_D34D10;
+  *(_OWORD *)&this->fields.eventId = xmmword_E93360;
 }
 
 
@@ -20,17 +20,17 @@ System_String_o *EventConquestRewardEntity__CreatePK(
         int32_t objectId,
         const MethodInfo *method)
 {
-  if ( (byte_4E775D0 & 1) == 0 )
+  if ( (byte_59385A3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4E775D0 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_59385A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            questId,
            objectType,
            objectId,
-           (const MethodInfo_324DC90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

@@ -1,40 +1,40 @@
 void RemovedBuffInfo___ctor(RemovedBuffInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  if ( (byte_4E7A749 & 1) == 0 )
+  if ( (byte_593B6B7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-    byte_4E7A749 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    byte_593B6B7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedAllBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedLinkedBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v10;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
     (int32_t)v10,
     v11,
     v12,
@@ -53,10 +53,10 @@ void RemovedBuffInfo__AddBuffs(
 {
   System_Collections_Generic_List_object__o *RemovedAllBuffList_k__BackingField; // x0
 
-  if ( (byte_4E7A74A & 1) == 0 )
+  if ( (byte_593B6B8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
-    byte_4E7A74A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    byte_593B6B8 = 1;
   }
   RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._RemovedAllBuffList_k__BackingField;
   if ( !RemovedAllBuffList_k__BackingField )
@@ -64,7 +64,7 @@ void RemovedBuffInfo__AddBuffs(
   System_Collections_Generic_List_object___AddRange(
     RemovedAllBuffList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-    (const MethodInfo_395C61C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( asLinkedBuff )
   {
     RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._RemovedLinkedBuffList_k__BackingField;
@@ -73,11 +73,11 @@ void RemovedBuffInfo__AddBuffs(
       System_Collections_Generic_List_object___AddRange(
         RemovedAllBuffList_k__BackingField,
         (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-        (const MethodInfo_395C61C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+        (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
       return;
     }
 LABEL_8:
-    sub_1D0F30C(RemovedAllBuffList_k__BackingField, buffDataEnumerable);
+    sub_21FFECC(RemovedAllBuffList_k__BackingField, buffDataEnumerable);
   }
 }
 
@@ -85,28 +85,33 @@ LABEL_8:
 bool RemovedBuffInfo__get_ExistRemoveBuff(RemovedBuffInfo_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_List_BattleBuffData_BuffData__o *RemovedAllBuffList_k__BackingField; // x8
+  System_Nullable_int__o v4; // x0
   int32_t size; // w1
-  System_Nullable_int__o v5; // x0
-  struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v7; // [xsp+8h] [xbp-18h] BYREF
+  bool v6; // cc
+  struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v8; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4E7A748 & 1) == 0 )
+  if ( (byte_593B6B6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
-    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
-    sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
-    byte_4E7A748 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
+    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_int___ctor__);
+    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
+    byte_593B6B6 = 1;
   }
   RemovedAllBuffList_k__BackingField = this->fields._RemovedAllBuffList_k__BackingField;
   if ( RemovedAllBuffList_k__BackingField )
   {
+    v4 = (System_Nullable_int__o)&v8;
     size = RemovedAllBuffList_k__BackingField->fields._size;
-    v5 = (System_Nullable_int__o)&v7;
-    v7 = 0;
-    System_Nullable_int____ctor(v5, size, (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
-    RemovedAllBuffList_k__BackingField = v7;
+    v8 = 0;
+    System_Nullable_int____ctor(v4, size, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
+    RemovedAllBuffList_k__BackingField = v8;
   }
-  return (unsigned __int8)RemovedAllBuffList_k__BackingField != 0 && SHIDWORD(RemovedAllBuffList_k__BackingField) > 0;
+  if ( (_BYTE)RemovedAllBuffList_k__BackingField )
+    v6 = SHIDWORD(RemovedAllBuffList_k__BackingField) <= 0;
+  else
+    v6 = 1;
+  return !v6;
 }
 
 
@@ -131,14 +136,22 @@ void RemovedBuffInfo__set_RemovedAllBuffList(
         System_Collections_Generic_List_BattleBuffData_BuffData__o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._RemovedAllBuffList_k__BackingField = value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)value,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -147,17 +160,17 @@ void RemovedBuffInfo__set_RemovedLinkedBuffList(
         System_Collections_Generic_List_BattleBuffData_BuffData__o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._RemovedLinkedBuffList_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

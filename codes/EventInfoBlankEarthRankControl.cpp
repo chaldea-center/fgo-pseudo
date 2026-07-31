@@ -1,68 +1,79 @@
 void EventInfoBlankEarthRankControl___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
+  bool v5; // w6
+  bool v6; // w7
   int32_t v7; // w1
+  int32_t v8; // w1
   struct EventInfoBlankEarthRankControl_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  struct EventInfoBlankEarthRankControl_StaticFields *v15; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
   int32_t v16; // w1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  int32_t v23; // w1
-  struct EventInfoBlankEarthRankControl_StaticFields *v24; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  struct EventInfoBlankEarthRankControl_StaticFields *v17; // x0
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  int32_t v24; // w1
+  struct EventInfoBlankEarthRankControl_StaticFields *v25; // x0
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
 
-  if ( (byte_4E778E8 & 1) == 0 )
+  if ( (byte_5938716 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20930/*"img_rank_bg"*/);
-    sub_1D0F0B4(&StringLiteral_20929/*"img_rank_"*/);
-    sub_1D0F0B4(&StringLiteral_17485/*"bit_orderrank_change"*/);
-    sub_1D0F0B4(&StringLiteral_17486/*"bit_orderrank_change_{0:00}"*/);
-    byte_4E778E8 = 1;
+    sub_21FFC50(&EventInfoBlankEarthRankControl_TypeInfo);
+    sub_21FFC50(&StringLiteral_21491/*"img_rank_bg"*/);
+    sub_21FFC50(&StringLiteral_21490/*"img_rank_"*/);
+    sub_21FFC50(&StringLiteral_17930/*"bit_orderrank_change"*/);
+    sub_21FFC50(&StringLiteral_17931/*"bit_orderrank_change_{0:00}"*/);
+    byte_5938716 = 1;
   }
-  EventInfoBlankEarthRankControl_TypeInfo->static_fields->BLANK_EARTH_RANK_BG_NAME = (struct System_String_o *)StringLiteral_20930/*"img_rank_bg"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)EventInfoBlankEarthRankControl_TypeInfo->static_fields,
-    StringLiteral_20930/*"img_rank_bg"*/,
+  v7 = StringLiteral_21491/*"img_rank_bg"*/;
+  EventInfoBlankEarthRankControl_TypeInfo->static_fields->BLANK_EARTH_RANK_BG_NAME = (struct System_String_o *)StringLiteral_21491/*"img_rank_bg"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)EventInfoBlankEarthRankControl_TypeInfo->static_fields,
+    v7,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = StringLiteral_20929/*"img_rank_"*/;
+  v8 = StringLiteral_21490/*"img_rank_"*/;
   static_fields = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  static_fields->BLANK_EARTH_RANK_SP_NAME = (struct System_String_o *)StringLiteral_20929/*"img_rank_"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->BLANK_EARTH_RANK_SP_NAME, v7, v9, v10, v11, v12, v13, v14);
-  v15 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  v15->DEFALUT_RANK_ID = 1;
-  v16 = StringLiteral_17485/*"bit_orderrank_change"*/;
-  v15->ORDERRANK_CHANGE_PREFAB_NAME = (struct System_String_o *)StringLiteral_17485/*"bit_orderrank_change"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v15->ORDERRANK_CHANGE_PREFAB_NAME, v16, v17, v18, v19, v20, v21, v22);
-  v23 = StringLiteral_17486/*"bit_orderrank_change_{0:00}"*/;
-  v24 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  v24->ORDERRANK_CHANGE_ANIM_NAME = (struct System_String_o *)StringLiteral_17486/*"bit_orderrank_change_{0:00}"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v24->ORDERRANK_CHANGE_ANIM_NAME, v23, v25, v26, v27, v28, v29, v30);
+  static_fields->BLANK_EARTH_RANK_SP_NAME = (struct System_String_o *)StringLiteral_21490/*"img_rank_"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&static_fields->BLANK_EARTH_RANK_SP_NAME,
+    v8,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
+  v16 = StringLiteral_17930/*"bit_orderrank_change"*/;
+  v17 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
+  v17->ORDERRANK_CHANGE_PREFAB_NAME = (struct System_String_o *)StringLiteral_17930/*"bit_orderrank_change"*/;
+  v17 = (struct EventInfoBlankEarthRankControl_StaticFields *)((char *)v17 + 24);
+  LODWORD(v17[-1].ORDERRANK_CHANGE_ANIM_NAME) = 1;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v17, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_17931/*"bit_orderrank_change_{0:00}"*/;
+  v25 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
+  v25->ORDERRANK_CHANGE_ANIM_NAME = (struct System_String_o *)StringLiteral_17931/*"bit_orderrank_change_{0:00}"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->ORDERRANK_CHANGE_ANIM_NAME, v24, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -70,11 +81,11 @@ void EventInfoBlankEarthRankControl___ctor(EventInfoBlankEarthRankControl_o *thi
 {
   unsigned __int64 v2; // d0
 
-  v2 = vdup_n_s32(0x3E99999Au).n64_u64[0];
   this->fields.fadeMethod = 6;
+  v2 = vdup_n_s32(0x3E99999Au).n64_u64[0];
+  this->fields.fadeBgmVolume = 0.3;
   *(_QWORD *)&this->fields.fadeOutDurationTime = v2;
   *(_QWORD *)&this->fields.fadeOutBgmTime = v2;
-  this->fields.fadeBgmVolume = 0.3;
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
 }
 
@@ -98,25 +109,26 @@ void EventInfoBlankEarthRankControl__EndAction(
 void EventInfoBlankEarthRankControl__FadeInBgmVolume(EventInfoBlankEarthRankControl_o *this, const MethodInfo *method)
 {
   System_String_o *BgmName; // x0
-  float fadeInBgmTime; // s8
-  System_String_o *v5; // x19
-  float DEFAULT_VOLUME; // s9
+  __int64 v4; // x1
+  float fadeInBgmTime; // s9
+  System_String_o *v6; // x19
+  float DEFAULT_VOLUME; // s8
 
-  if ( (byte_4E778E7 & 1) == 0 )
+  if ( (byte_5938715 & 1) == 0 )
   {
-    sub_1D0F0B4(&BgmManager_TypeInfo);
-    sub_1D0F0B4(&SoundManager_TypeInfo);
-    byte_4E778E7 = 1;
+    sub_21FFC50(&BgmManager_TypeInfo);
+    sub_21FFC50(&SoundManager_TypeInfo);
+    byte_5938715 = 1;
   }
-  if ( !BgmManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
+  if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method);
   BgmName = BgmManager__GetBgmName(0);
   fadeInBgmTime = this->fields.fadeInBgmTime;
-  v5 = BgmName;
+  v6 = BgmName;
   DEFAULT_VOLUME = BgmManager_TypeInfo->static_fields->DEFAULT_VOLUME;
-  if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm_42889060(v5, DEFAULT_VOLUME, fadeInBgmTime, 0);
+  if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v4);
+  SoundManager__playBgm_48459752(v6, DEFAULT_VOLUME, fadeInBgmTime, 0);
 }
 
 
@@ -127,119 +139,119 @@ void EventInfoBlankEarthRankControl__FadeInSprite(EventInfoBlankEarthRankControl
   System_String_o *BLANK_EARTH_RANK_SP_NAME; // x21
   Il2CppObject *v6; // x0
   System_String_o *v7; // x0
-  System_String_o *v8; // x21
-  __int64 v9; // x1
-  UnityEngine_Component_o *v10; // x0
+  __int64 v8; // x1
+  System_String_o *v9; // x21
+  __int64 v10; // x1
+  UnityEngine_Component_o *v11; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  UITweener_o *v12; // x20
-  EventInfoBlankEarthRankControl___c_c *v13; // x0
+  UITweener_o *v13; // x20
+  __int64 v14; // x1
+  EventInfoBlankEarthRankControl___c_c *v15; // x0
+  int32_t fadeMethod; // w8
+  int v17; // w9
+  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x8
   EventDelegate_Callback_o *_9__27_0; // x19
-  Il2CppObject *v15; // x21
-  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  Il2CppObject *v20; // x21
+  struct EventInfoBlankEarthRankControl___c_StaticFields *v21; // x0
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
   int32_t currentRankId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E778E5 & 1) == 0 )
+  if ( (byte_5938713 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&EventDelegate_Callback_TypeInfo);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__FadeInSprite_b__27_0__);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl___c_TypeInfo);
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenAlpha___);
-    sub_1D0F0B4(&StringLiteral_25583/*"{0:00}"*/);
-    byte_4E778E5 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
+    sub_21FFC50(&EventInfoBlankEarthRankControl_TypeInfo);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__FadeInSprite_b__27_0__);
+    sub_21FFC50(&EventInfoBlankEarthRankControl___c_TypeInfo);
+    sub_21FFC50(&Method_UITweener_Begin_TweenAlpha___);
+    sub_21FFC50(&StringLiteral_26390/*"{0:00}"*/);
+    byte_5938713 = 1;
   }
   v3 = EventInfoBlankEarthRankControl_TypeInfo;
   rankSprite = this->fields.rankSprite;
-  if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, method);
     v3 = EventInfoBlankEarthRankControl_TypeInfo;
   }
   BLANK_EARTH_RANK_SP_NAME = v3->static_fields->BLANK_EARTH_RANK_SP_NAME;
   currentRankId = this->fields.currentRankId;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentRankId);
-  v7 = System_String__Format((System_String_o *)StringLiteral_25583/*"{0:00}"*/, v6, 0);
-  v8 = System_String__Concat_65562772(BLANK_EARTH_RANK_SP_NAME, v7, 0);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(rankSprite, v8, 0);
-  v10 = (UnityEngine_Component_o *)this->fields.rankSprite;
-  if ( !v10
-    || (gameObject = UnityEngine_Component__get_gameObject(v10, 0),
-        (v10 = (UnityEngine_Component_o *)UITweener__Begin_object_(
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &currentRankId);
+  v7 = System_String__Format((System_String_o *)StringLiteral_26390/*"{0:00}"*/, v6, 0);
+  v9 = System_String__Concat_75438412(BLANK_EARTH_RANK_SP_NAME, v7, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v8);
+  AtlasManager__SetEventUI(rankSprite, v9, 0);
+  v11 = (UnityEngine_Component_o *)this->fields.rankSprite;
+  if ( !v11
+    || (gameObject = UnityEngine_Component__get_gameObject(v11, 0),
+        (v11 = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                             gameObject,
                                             this->fields.fadeInDurationTime,
-                                            (const MethodInfo_332666C *)Method_UITweener_Begin_TweenAlpha___)) == 0) )
+                                            (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenAlpha___)) == 0) )
   {
-    sub_1D0F30C(v10, v9);
+    sub_21FFECC(v11, v10);
   }
-  v12 = (UITweener_o *)v10;
-  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v10, 1, 0);
-  v12[1].klass = (UITweener_c *)0x3F80000000000000LL;
-  v12->fields.method = this->fields.fadeMethod;
-  v13 = EventInfoBlankEarthRankControl___c_TypeInfo;
-  if ( !EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished )
+  v13 = (UITweener_o *)v11;
+  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v11, 1, 0);
+  v15 = EventInfoBlankEarthRankControl___c_TypeInfo;
+  fadeMethod = this->fields.fadeMethod;
+  v17 = *(&EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished + 1);
+  v13[1].klass = (UITweener_c *)0x3F80000000000000LL;
+  v13->fields.method = fadeMethod;
+  if ( !v17 )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl___c_TypeInfo);
-    v13 = EventInfoBlankEarthRankControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v15, v14);
+    v15 = EventInfoBlankEarthRankControl___c_TypeInfo;
   }
-  _9__27_0 = v13->static_fields->__9__27_0;
+  static_fields = v15->static_fields;
+  _9__27_0 = static_fields->__9__27_0;
   if ( !_9__27_0 )
   {
-    if ( !v13->_2.cctor_finished )
+    if ( !*(&v15->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v13);
-      v13 = EventInfoBlankEarthRankControl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v15, v14);
+      static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
     }
-    v15 = (Il2CppObject *)v13->static_fields->__9;
-    _9__27_0 = (EventDelegate_Callback_o *)sub_1D0F300(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(_9__27_0, v15, Method_EventInfoBlankEarthRankControl___c__FadeInSprite_b__27_0__, 0);
-    static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
-    static_fields->__9__27_0 = _9__27_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__27_0,
-      (int32_t)_9__27_0,
-      v17,
-      v18,
-      v19,
-      v20,
-      v21,
-      v22);
+    v20 = (Il2CppObject *)static_fields->__9;
+    _9__27_0 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(_9__27_0, v20, Method_EventInfoBlankEarthRankControl___c__FadeInSprite_b__27_0__, 0);
+    v21 = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
+    v21->__9__27_0 = _9__27_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->__9__27_0, (int32_t)_9__27_0, v22, v23, v24, v25, v26, v27);
   }
-  UITweener__SetOnFinished(v12, _9__27_0, 0);
+  UITweener__SetOnFinished(v13, _9__27_0, 0);
 }
 
 
 void EventInfoBlankEarthRankControl__FadeOutBgmVolume(EventInfoBlankEarthRankControl_o *this, const MethodInfo *method)
 {
   System_String_o *BgmName; // x0
-  float fadeBgmVolume; // s9
-  float fadeOutBgmTime; // s8
-  System_String_o *v6; // x19
+  __int64 v4; // x1
+  float fadeBgmVolume; // s8
+  float fadeOutBgmTime; // s9
+  System_String_o *v7; // x19
 
-  if ( (byte_4E778E6 & 1) == 0 )
+  if ( (byte_5938714 & 1) == 0 )
   {
-    sub_1D0F0B4(&BgmManager_TypeInfo);
-    sub_1D0F0B4(&SoundManager_TypeInfo);
-    byte_4E778E6 = 1;
+    sub_21FFC50(&BgmManager_TypeInfo);
+    sub_21FFC50(&SoundManager_TypeInfo);
+    byte_5938714 = 1;
   }
-  if ( !BgmManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
+  if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method);
   BgmName = BgmManager__GetBgmName(0);
   fadeBgmVolume = this->fields.fadeBgmVolume;
   fadeOutBgmTime = this->fields.fadeOutBgmTime;
-  v6 = BgmName;
-  if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm_42889060(v6, fadeBgmVolume, fadeOutBgmTime, 0);
+  v7 = BgmName;
+  if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v4);
+  SoundManager__playBgm_48459752(v7, fadeBgmVolume, fadeOutBgmTime, 0);
 }
 
 
@@ -248,11 +260,12 @@ void EventInfoBlankEarthRankControl__FadeOutSprite(EventInfoBlankEarthRankContro
   UnityEngine_Component_o *rankSprite; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UITweener_o *v5; // x20
+  int32_t fadeMethod; // w8
 
-  if ( (byte_4E778E4 & 1) == 0 )
+  if ( (byte_5938712 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenAlpha___);
-    byte_4E778E4 = 1;
+    sub_21FFC50(&Method_UITweener_Begin_TweenAlpha___);
+    byte_5938712 = 1;
   }
   rankSprite = (UnityEngine_Component_o *)this->fields.rankSprite;
   if ( !rankSprite
@@ -260,14 +273,15 @@ void EventInfoBlankEarthRankControl__FadeOutSprite(EventInfoBlankEarthRankContro
         (rankSprite = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                                    gameObject,
                                                    this->fields.fadeOutDurationTime,
-                                                   (const MethodInfo_332666C *)Method_UITweener_Begin_TweenAlpha___)) == 0) )
+                                                   (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenAlpha___)) == 0) )
   {
-    sub_1D0F30C(rankSprite, method);
+    sub_21FFECC(rankSprite, method);
   }
   v5 = (UITweener_o *)rankSprite;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)rankSprite, 1, 0);
+  fadeMethod = this->fields.fadeMethod;
   v5[1].klass = (UITweener_c *)1065353216;
-  v5->fields.method = this->fields.fadeMethod;
+  v5->fields.method = fadeMethod;
   UITweener__PlayForward(v5, 0);
 }
 
@@ -279,37 +293,37 @@ int32_t EventInfoBlankEarthRankControl__GetCurrentBlankEarthRank(
   TerminalPramsManager_c *v2; // x0
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4E778E2 & 1) == 0 )
+  if ( (byte_5938710 & 1) == 0 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E778E2 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5938710 = 1;
   }
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E74A80 )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
+  if ( !byte_5935A11 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E74A80 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5935A11 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     v2 = TerminalPramsManager_TypeInfo;
   }
   if ( v2->static_fields->_BlankEarthRank_k__BackingField < 1 )
     return 0;
-  if ( !v2->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v2);
-  if ( !byte_4E74A80 )
+  if ( !*(&v2->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v2, method);
+  if ( !byte_5935A11 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E74A80 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5935A11 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
   }
   return v3->static_fields->_BlankEarthRank_k__BackingField;
@@ -322,54 +336,48 @@ void EventInfoBlankEarthRankControl__Initialization(
         const MethodInfo *method)
 {
   EventInfoBlankEarthRankControl___c_c *v5; // x0
+  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x8
   System_Action_o *_9__17_0; // x21
-  Il2CppObject *v7; // x22
-  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  Il2CppObject *v8; // x22
+  struct EventInfoBlankEarthRankControl___c_StaticFields *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E778DD & 1) == 0 )
+  if ( (byte_593870B & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__Initialization_b__17_0__);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl___c_TypeInfo);
-    byte_4E778DD = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__Initialization_b__17_0__);
+    sub_21FFC50(&EventInfoBlankEarthRankControl___c_TypeInfo);
+    byte_593870B = 1;
   }
   v5 = EventInfoBlankEarthRankControl___c_TypeInfo;
-  if ( !EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl___c_TypeInfo, entity);
     v5 = EventInfoBlankEarthRankControl___c_TypeInfo;
   }
-  _9__17_0 = v5->static_fields->__9__17_0;
+  static_fields = v5->static_fields;
+  _9__17_0 = static_fields->__9__17_0;
   if ( !_9__17_0 )
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v5->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = EventInfoBlankEarthRankControl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, entity);
+      static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
     }
-    v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__17_0 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(_9__17_0, v7, Method_EventInfoBlankEarthRankControl___c__Initialization_b__17_0__, 0);
-    static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
-    static_fields->__9__17_0 = _9__17_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__17_0,
-      (int32_t)_9__17_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__17_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(_9__17_0, v8, Method_EventInfoBlankEarthRankControl___c__Initialization_b__17_0__, 0);
+    v9 = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
+    v9->__9__17_0 = _9__17_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__17_0, (int32_t)_9__17_0, v10, v11, v12, v13, v14, v15);
   }
   if ( !this )
-    sub_1D0F30C(v5, entity);
+    sub_21FFECC(v5, entity);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, entity, _9__17_0, 0);
 }
 
@@ -379,37 +387,37 @@ bool EventInfoBlankEarthRankControl__IsAnimSkipRank(EventInfoBlankEarthRankContr
   TerminalPramsManager_c *v2; // x0
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4E778E0 & 1) == 0 )
+  if ( (byte_593870E & 1) == 0 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E778E0 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_593870E = 1;
   }
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E73D01 )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
+  if ( !byte_5934CC7 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E73D01 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5934CC7 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     v2 = TerminalPramsManager_TypeInfo;
   }
   if ( !v2->static_fields->_IsOrdealCallWarClear_k__BackingField )
     return 0;
-  if ( !v2->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v2);
-  if ( !byte_4E7132C )
+  if ( !*(&v2->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v2, method);
+  if ( !byte_593205C )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E7132C = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_593205C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
   }
   return v3->static_fields->_QuestId_k__BackingField == 4000326;
@@ -427,9 +435,7 @@ bool EventInfoBlankEarthRankControl__IsChangedRank(
   CurrentBlankEarthRank = EventInfoBlankEarthRankControl__GetCurrentBlankEarthRank(
                             this,
                             *(const MethodInfo **)&currentRankId);
-  if ( CurrentBlankEarthRank )
-    LOBYTE(CurrentBlankEarthRank) = CurrentBlankEarthRank < currentRankId;
-  return CurrentBlankEarthRank;
+  return CurrentBlankEarthRank && CurrentBlankEarthRank < currentRankId;
 }
 
 
@@ -454,217 +460,232 @@ void EventInfoBlankEarthRankControl__PlayRankChangeAnim(
   __int64 v5; // x21
   void *v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   System_Action_o **v14; // x20
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  EventInfoBlankEarthRankControl_c *v21; // x0
-  UnityEngine_GameObject_o *v22; // x0
-  UnityEngine_GameObject_o **v23; // x22
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
-  UnityEngine_Object_o *v30; // x23
-  UnityEngine_GameObject_o *v31; // x23
+  bool v19; // w6
+  bool v20; // w7
+  __int64 v21; // x1
+  EventInfoBlankEarthRankControl_c *v22; // x0
+  UnityEngine_GameObject_o *v23; // x0
+  UnityEngine_GameObject_o **v24; // x22
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  __int64 v31; // x1
+  UnityEngine_Object_o *v32; // x23
+  UnityEngine_GameObject_o *v33; // x23
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v35; // x1
   Il2CppObject *Component_object; // x23
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
-  System_Action_o *v40; // x24
-  Il2CppObject *v41; // x25
-  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x0
-  int32_t v43; // w2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  int32_t v46; // w5
-  int64_t v47; // x6
-  System_String_o *v48; // x7
-  System_Action_o *v49; // x24
-  System_Action_o *v50; // x24
-  System_Action_o *v51; // x24
-  System_Action_o *v52; // x24
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
+  struct EventInfoBlankEarthRankControl___c_StaticFields *static_fields; // x8
+  System_Action_o *_9__25_0; // x24
+  Il2CppObject *v45; // x25
+  struct EventInfoBlankEarthRankControl___c_StaticFields *v46; // x0
+  System_String_o *v47; // x2
+  System_String_o *v48; // x3
+  int32_t v49; // w4
+  int32_t v50; // w5
+  bool v51; // w6
+  bool v52; // w7
   System_Action_o *v53; // x24
-  int32_t v54; // w2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
-  int32_t v57; // w5
-  int64_t v58; // x6
-  System_String_o *v59; // x7
-  EventInfoBlankEarthRankControl_c *v60; // x0
-  int32_t currentRankId; // w9
+  System_Action_o *v54; // x24
+  System_Action_o *v55; // x24
+  System_Action_o *v56; // x24
+  System_Action_o *v57; // x24
+  System_String_o *v58; // x2
+  System_String_o *v59; // x3
+  int32_t v60; // w4
+  int32_t v61; // w5
+  bool v62; // w6
+  bool v63; // w7
+  __int64 v64; // x1
+  EventInfoBlankEarthRankControl_c *v65; // x0
+  int32_t currentRankId; // w10
   System_String_o *ORDERRANK_CHANGE_ANIM_NAME; // x19
-  Il2CppObject *v63; // x0
-  System_String_o *v64; // x19
-  Il2CppObject *v65; // x21
+  Il2CppObject *v68; // x0
+  System_String_o *v69; // x19
+  __int64 v70; // x1
+  Il2CppObject *v71; // x21
+  __int64 v72; // x1
   UnityEngine_Object_o *Clip; // x22
-  int32_t v67; // [xsp+Ch] [xbp-54h] BYREF
+  int32_t v74; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4E778E3 & 1) == 0 )
+  if ( (byte_5938711 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__PlayRankChangeAnim_b__25_0__);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__1__);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__2__);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__3__);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__4__);
-    sub_1D0F0B4(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__5__);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl___c__DisplayClass25_0_TypeInfo);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl___c_TypeInfo);
-    byte_4E778E3 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&EventInfoBlankEarthRankControl_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__PlayRankChangeAnim_b__25_0__);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__1__);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__2__);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__3__);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__4__);
+    sub_21FFC50(&Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__5__);
+    sub_21FFC50(&EventInfoBlankEarthRankControl___c__DisplayClass25_0_TypeInfo);
+    sub_21FFC50(&EventInfoBlankEarthRankControl___c_TypeInfo);
+    byte_5938711 = 1;
   }
-  v5 = sub_1D0F300(EventInfoBlankEarthRankControl___c__DisplayClass25_0_TypeInfo);
+  v5 = sub_21FFEBC(EventInfoBlankEarthRankControl___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_32;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 32) = callback;
   v14 = (System_Action_o **)(v5 + 32);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)callback, v15, v16, v17, v18, v19, v20);
-  v21 = EventInfoBlankEarthRankControl_TypeInfo;
-  if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)callback, v15, v16, v17, v18, v19, v20);
+  v22 = EventInfoBlankEarthRankControl_TypeInfo;
+  if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
-    v21 = EventInfoBlankEarthRankControl_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, v21);
+    v22 = EventInfoBlankEarthRankControl_TypeInfo;
   }
-  v22 = EventInfoUIBase__InstantiateFromEventUIAssetData(
+  v23 = EventInfoUIBase__InstantiateFromEventUIAssetData(
           (EventInfoUIBase_o *)this,
-          v21->static_fields->ORDERRANK_CHANGE_PREFAB_NAME,
+          v22->static_fields->ORDERRANK_CHANGE_PREFAB_NAME,
           0);
-  *(_QWORD *)(v5 + 24) = v22;
-  v23 = (UnityEngine_GameObject_o **)(v5 + 24);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)v22, v24, v25, v26, v27, v28, v29);
-  v30 = *(UnityEngine_Object_o **)(v5 + 24);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(v30, 0, 0) )
+  *(_QWORD *)(v5 + 24) = v23;
+  v24 = (UnityEngine_GameObject_o **)(v5 + 24);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)v23, v25, v26, v27, v28, v29, v30);
+  v32 = *(UnityEngine_Object_o **)(v5 + 24);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31);
+  if ( !UnityEngine_Object__op_Inequality(v32, 0, 0) )
     goto LABEL_31;
-  v31 = *v23;
+  v33 = *v24;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SafeSetParent_37349004(v31, gameObject, 0);
-  v6 = *v23;
-  if ( !*v23 )
+  GameObjectExtensions__SafeSetParent_42881912(v33, gameObject, 0);
+  v6 = *v24;
+  if ( !*v24 )
     goto LABEL_32;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v6,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v35);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     goto LABEL_31;
   v6 = EventInfoBlankEarthRankControl___c_TypeInfo;
-  if ( !EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventInfoBlankEarthRankControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl___c_TypeInfo, v7);
     v6 = EventInfoBlankEarthRankControl___c_TypeInfo;
   }
-  v40 = *(System_Action_o **)(*((_QWORD *)v6 + 23) + 16LL);
-  if ( !v40 )
+  static_fields = (struct EventInfoBlankEarthRankControl___c_StaticFields *)*((_QWORD *)v6 + 23);
+  _9__25_0 = static_fields->__9__25_0;
+  if ( !_9__25_0 )
   {
-    if ( !*((_DWORD *)v6 + 56) )
+    if ( !*((_DWORD *)v6 + 57) )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = EventInfoBlankEarthRankControl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6, v7);
+      static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
     }
-    v41 = (Il2CppObject *)**((_QWORD **)v6 + 23);
-    v40 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(v40, v41, Method_EventInfoBlankEarthRankControl___c__PlayRankChangeAnim_b__25_0__, 0);
-    static_fields = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
-    static_fields->__9__25_0 = v40;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__25_0, (int32_t)v40, v43, v44, v45, v46, v47, v48);
+    v45 = (Il2CppObject *)static_fields->__9;
+    _9__25_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(_9__25_0, v45, Method_EventInfoBlankEarthRankControl___c__PlayRankChangeAnim_b__25_0__, 0);
+    v46 = EventInfoBlankEarthRankControl___c_TypeInfo->static_fields;
+    v46->__9__25_0 = _9__25_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v46->__9__25_0, (int32_t)_9__25_0, v47, v48, v49, v50, v51, v52);
   }
   if ( !Component_object )
     goto LABEL_32;
-  Component_object[2].klass = (Il2CppClass *)v40;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&Component_object[2], (int32_t)v40, v34, v35, v36, v37, v38, v39);
-  v49 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(
-    v49,
-    (Il2CppObject *)v5,
-    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__1__,
-    0);
-  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 0, v49, 0);
-  v50 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(
-    v50,
-    (Il2CppObject *)v5,
-    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__2__,
-    0);
-  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 1, v50, 0);
-  v51 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(
-    v51,
-    (Il2CppObject *)v5,
-    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__3__,
-    0);
-  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 2, v51, 0);
-  v52 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(
-    v52,
-    (Il2CppObject *)v5,
-    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__4__,
-    0);
-  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 3, v52, 0);
-  v53 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  Component_object[2].klass = (Il2CppClass *)_9__25_0;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&Component_object[2], (int32_t)_9__25_0, v37, v38, v39, v40, v41, v42);
+  v53 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(
     v53,
     (Il2CppObject *)v5,
+    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__1__,
+    0);
+  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 0, v53, 0);
+  v54 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v54,
+    (Il2CppObject *)v5,
+    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__2__,
+    0);
+  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 1, v54, 0);
+  v55 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v55,
+    (Il2CppObject *)v5,
+    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__3__,
+    0);
+  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 2, v55, 0);
+  v56 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v56,
+    (Il2CppObject *)v5,
+    Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__4__,
+    0);
+  CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 3, v56, 0);
+  v57 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v57,
+    (Il2CppObject *)v5,
     Method_EventInfoBlankEarthRankControl___c__DisplayClass25_0__PlayRankChangeAnim_b__5__,
     0);
-  Component_object[2].monitor = v53;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&Component_object[2].monitor, (int32_t)v53, v54, v55, v56, v57, v58, v59);
-  v60 = EventInfoBlankEarthRankControl_TypeInfo;
-  if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+  Component_object[2].monitor = v57;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&Component_object[2].monitor,
+    (int32_t)v57,
+    v58,
+    v59,
+    v60,
+    v61,
+    v62,
+    v63);
+  v65 = EventInfoBlankEarthRankControl_TypeInfo;
+  if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
-    v60 = EventInfoBlankEarthRankControl_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, v64);
+    v65 = EventInfoBlankEarthRankControl_TypeInfo;
   }
   currentRankId = this->fields.currentRankId;
-  ORDERRANK_CHANGE_ANIM_NAME = v60->static_fields->ORDERRANK_CHANGE_ANIM_NAME;
-  v67 = currentRankId;
-  v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67);
-  v6 = System_String__Format(ORDERRANK_CHANGE_ANIM_NAME, v63, 0);
-  if ( !*v23 )
+  ORDERRANK_CHANGE_ANIM_NAME = v65->static_fields->ORDERRANK_CHANGE_ANIM_NAME;
+  v74 = currentRankId;
+  v68 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v74);
+  v6 = System_String__Format(ORDERRANK_CHANGE_ANIM_NAME, v68, 0);
+  if ( !*v24 )
     goto LABEL_32;
-  v64 = (System_String_o *)v6;
-  v65 = UnityEngine_GameObject__GetComponent_object_(
-          *v23,
-          (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v65, 0, 0);
+  v69 = (System_String_o *)v6;
+  v71 = UnityEngine_GameObject__GetComponent_object_(
+          *v24,
+          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v70);
+  v6 = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v71, 0, 0);
   if ( ((unsigned __int8)v6 & 1) == 0 )
     goto LABEL_31;
-  if ( !v65 )
+  if ( !v71 )
 LABEL_32:
-    sub_1D0F30C(v6, v7);
-  Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)v65, v64, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    sub_21FFECC(v6, v7);
+  Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)v71, v69, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v72);
   if ( UnityEngine_Object__op_Inequality(Clip, 0, 0) )
   {
-    UnityEngine_Animation__Play_73101556((UnityEngine_Animation_o *)v65, v64, 0);
+    UnityEngine_Animation__Play_82865240((UnityEngine_Animation_o *)v71, v69, 0);
     return;
   }
 LABEL_31:
@@ -672,6 +693,7 @@ LABEL_31:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoBlankEarthRankControl__SaveCurrentBlankEarthRank(
         EventInfoBlankEarthRankControl_o *this,
         int32_t rank,
@@ -679,22 +701,22 @@ void EventInfoBlankEarthRankControl__SaveCurrentBlankEarthRank(
 {
   TerminalPramsManager_c *v4; // x0
 
-  if ( (byte_4E778E1 & 1) == 0 )
+  if ( (byte_593870F & 1) == 0 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E778E1 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_593870F = 1;
   }
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E74A78 )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, *(_QWORD *)&rank);
+  if ( !byte_5935A08 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E74A78 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5935A08 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, *(_QWORD *)&rank);
     v4 = TerminalPramsManager_TypeInfo;
   }
   v4->static_fields->_BlankEarthRank_k__BackingField = rank;
@@ -707,71 +729,76 @@ void EventInfoBlankEarthRankControl__SetBlankEarthRank(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *rankSprite; // x20
-  EventInfoBlankEarthRankControl_c *v4; // x0
+  __int64 v4; // x1
+  EventInfoBlankEarthRankControl_c *v5; // x0
+  int v6; // w8
   int32_t DEFALUT_RANK_ID; // w20
   Il2CppObject *Master_object; // x0
-  const MethodInfo *v7; // x1
+  const MethodInfo *v9; // x1
   struct System_Int32_array *commonReleaseIds; // x8
-  CommonReleaseMaster_o *v9; // x21
-  unsigned __int64 v10; // x23
+  CommonReleaseMaster_o *v11; // x21
+  unsigned __int64 v12; // x23
   unsigned __int64 max_length_low; // x9
   EventInfoBlankEarthRankControl_c *CurrentBlankEarthRank; // x0
-  const MethodInfo *v13; // x1
-  const MethodInfo *v14; // x2
-  EventInfoBlankEarthRankControl_c *v15; // x0
-  UISprite_o *v16; // x19
+  const MethodInfo *v15; // x1
+  const MethodInfo *v16; // x2
+  __int64 v17; // x1
+  EventInfoBlankEarthRankControl_c *v18; // x0
+  UISprite_o *v19; // x19
+  struct EventInfoBlankEarthRankControl_StaticFields *static_fields; // x8
   System_String_o *BLANK_EARTH_RANK_SP_NAME; // x21
-  Il2CppObject *v18; // x0
-  System_String_o *v19; // x0
-  System_String_o *v20; // x20
-  int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x0
+  __int64 v24; // x1
+  System_String_o *v25; // x20
+  int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E778DF & 1) == 0 )
+  if ( (byte_593870D & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25583/*"{0:00}"*/);
-    byte_4E778DF = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&EventInfoBlankEarthRankControl_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_26390/*"{0:00}"*/);
+    byte_593870D = 1;
   }
   rankSprite = (UnityEngine_Object_o *)this->fields.rankSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Equality(rankSprite, 0, 0) )
   {
+    v5 = EventInfoBlankEarthRankControl_TypeInfo;
+    v6 = *(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1);
     this->fields.isPlayAnim = 0;
-    v4 = EventInfoBlankEarthRankControl_TypeInfo;
-    if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+    if ( !v6 )
     {
-      j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
-      v4 = EventInfoBlankEarthRankControl_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, v4);
+      v5 = EventInfoBlankEarthRankControl_TypeInfo;
     }
-    DEFALUT_RANK_ID = v4->static_fields->DEFALUT_RANK_ID;
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+    DEFALUT_RANK_ID = v5->static_fields->DEFALUT_RANK_ID;
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v4);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
     commonReleaseIds = this->fields.commonReleaseIds;
     if ( !commonReleaseIds )
 LABEL_16:
-      sub_1D0F30C(Master_object, v7);
-    v9 = (CommonReleaseMaster_o *)Master_object;
-    v10 = 0;
+      sub_21FFECC(Master_object, v9);
+    v11 = (CommonReleaseMaster_o *)Master_object;
+    v12 = 0;
     while ( 1 )
     {
       max_length_low = LODWORD(commonReleaseIds->max_length);
-      if ( (__int64)v10 >= (int)max_length_low )
+      if ( (__int64)v12 >= (int)max_length_low )
         break;
-      if ( v10 >= max_length_low )
-        sub_1D0F314(Master_object);
-      if ( v9 )
+      if ( v12 >= max_length_low )
+        sub_21FFED4(Master_object);
+      if ( v11 )
       {
-        Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v9, commonReleaseIds->m_Items[v10], 0, 0, 0);
+        Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v11, commonReleaseIds->m_Items[v12], 0, 0, 0);
         commonReleaseIds = this->fields.commonReleaseIds;
+        ++v12;
         DEFALUT_RANK_ID += (unsigned __int8)Master_object & 1;
-        ++v10;
         if ( commonReleaseIds )
           continue;
       }
@@ -780,20 +807,20 @@ LABEL_16:
     this->fields.currentRankId = DEFALUT_RANK_ID;
     CurrentBlankEarthRank = (EventInfoBlankEarthRankControl_c *)EventInfoBlankEarthRankControl__GetCurrentBlankEarthRank(
                                                                   (EventInfoBlankEarthRankControl_o *)Master_object,
-                                                                  v7);
+                                                                  v9);
     if ( (_DWORD)CurrentBlankEarthRank && (int)CurrentBlankEarthRank < DEFALUT_RANK_ID )
     {
       CurrentBlankEarthRank = EventInfoBlankEarthRankControl_TypeInfo;
-      if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+      if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
+        j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, v15);
         CurrentBlankEarthRank = EventInfoBlankEarthRankControl_TypeInfo;
       }
       if ( DEFALUT_RANK_ID > CurrentBlankEarthRank->static_fields->DEFALUT_RANK_ID )
       {
         CurrentBlankEarthRank = (EventInfoBlankEarthRankControl_c *)EventInfoBlankEarthRankControl__IsAnimSkipRank(
                                                                       (EventInfoBlankEarthRankControl_o *)CurrentBlankEarthRank,
-                                                                      v13);
+                                                                      v15);
         if ( ((unsigned __int8)CurrentBlankEarthRank & 1) == 0 )
         {
           --DEFALUT_RANK_ID;
@@ -804,22 +831,23 @@ LABEL_16:
     EventInfoBlankEarthRankControl__SaveCurrentBlankEarthRank(
       (EventInfoBlankEarthRankControl_o *)CurrentBlankEarthRank,
       DEFALUT_RANK_ID,
-      v14);
-    v15 = EventInfoBlankEarthRankControl_TypeInfo;
-    v16 = this->fields.rankSprite;
-    if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+      v16);
+    v18 = EventInfoBlankEarthRankControl_TypeInfo;
+    v19 = this->fields.rankSprite;
+    if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
-      v15 = EventInfoBlankEarthRankControl_TypeInfo;
+      j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, v17);
+      v18 = EventInfoBlankEarthRankControl_TypeInfo;
     }
-    BLANK_EARTH_RANK_SP_NAME = v15->static_fields->BLANK_EARTH_RANK_SP_NAME;
-    v21 = DEFALUT_RANK_ID;
-    v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-    v19 = System_String__Format((System_String_o *)StringLiteral_25583/*"{0:00}"*/, v18, 0);
-    v20 = System_String__Concat_65562772(BLANK_EARTH_RANK_SP_NAME, v19, 0);
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v16, v20, 0);
+    static_fields = v18->static_fields;
+    v26 = DEFALUT_RANK_ID;
+    BLANK_EARTH_RANK_SP_NAME = static_fields->BLANK_EARTH_RANK_SP_NAME;
+    v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v26);
+    v23 = System_String__Format((System_String_o *)StringLiteral_26390/*"{0:00}"*/, v22, 0);
+    v25 = System_String__Concat_75438412(BLANK_EARTH_RANK_SP_NAME, v23, 0);
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v24);
+    AtlasManager__SetEventUI(v19, v25, 0);
   }
 }
 
@@ -830,67 +858,68 @@ void EventInfoBlankEarthRankControl__Setup(
         const MethodInfo *method)
 {
   UISprite_o *bgSprite; // x20
-  UnityEngine_Object_o *v5; // x20
-  const MethodInfo *v6; // x1
-  UISprite_o *v7; // x20
-  EventInfoBlankEarthRankControl_c *v8; // x0
+  __int64 v5; // x1
+  UnityEngine_Object_o *v6; // x20
+  const MethodInfo *v7; // x1
+  UISprite_o *v8; // x20
+  EventInfoBlankEarthRankControl_c *v9; // x0
   System_String_o *BLANK_EARTH_RANK_BG_NAME; // x21
 
-  if ( (byte_4E778DE & 1) == 0 )
+  if ( (byte_593870C & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_17397/*"bgSprite"*/);
-    sub_1D0F0B4(&StringLiteral_23427/*"rankSprite"*/);
-    byte_4E778DE = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&EventInfoBlankEarthRankControl_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_17839/*"bgSprite"*/);
+    sub_21FFC50(&StringLiteral_24107/*"rankSprite"*/);
+    byte_593870C = 1;
   }
   bgSprite = this->fields.bgSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_17397/*"bgSprite"*/, 0);
-  AtlasManager__SetEventUI(this->fields.rankSprite, (System_String_o *)StringLiteral_23427/*"rankSprite"*/, 0);
-  v5 = (UnityEngine_Object_o *)this->fields.bgSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v5, 0, 0) )
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, entity);
+  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_17839/*"bgSprite"*/, 0);
+  AtlasManager__SetEventUI(this->fields.rankSprite, (System_String_o *)StringLiteral_24107/*"rankSprite"*/, 0);
+  v6 = (UnityEngine_Object_o *)this->fields.bgSprite;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  if ( UnityEngine_Object__op_Inequality(v6, 0, 0) )
   {
-    v7 = this->fields.bgSprite;
-    v8 = EventInfoBlankEarthRankControl_TypeInfo;
-    if ( !EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished )
+    v8 = this->fields.bgSprite;
+    v9 = EventInfoBlankEarthRankControl_TypeInfo;
+    if ( !*(&EventInfoBlankEarthRankControl_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo);
-      v8 = EventInfoBlankEarthRankControl_TypeInfo;
+      j_il2cpp_runtime_class_init_0(EventInfoBlankEarthRankControl_TypeInfo, v7);
+      v9 = EventInfoBlankEarthRankControl_TypeInfo;
     }
-    BLANK_EARTH_RANK_BG_NAME = v8->static_fields->BLANK_EARTH_RANK_BG_NAME;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v7, BLANK_EARTH_RANK_BG_NAME, 0);
+    BLANK_EARTH_RANK_BG_NAME = v9->static_fields->BLANK_EARTH_RANK_BG_NAME;
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v7);
+    AtlasManager__SetEventUI(v8, BLANK_EARTH_RANK_BG_NAME, 0);
   }
-  EventInfoBlankEarthRankControl__SetBlankEarthRank(this, v6);
+  EventInfoBlankEarthRankControl__SetBlankEarthRank(this, v7);
 }
 
 
 void EventInfoBlankEarthRankControl___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E778E9 & 1) == 0 )
+  if ( (byte_5938717 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventInfoBlankEarthRankControl___c_TypeInfo);
-    byte_4E778E9 = 1;
+    sub_21FFC50(&EventInfoBlankEarthRankControl___c_TypeInfo);
+    byte_5938717 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(EventInfoBlankEarthRankControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(EventInfoBlankEarthRankControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoBlankEarthRankControl___c_TypeInfo->static_fields->__9 = (struct EventInfoBlankEarthRankControl___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)EventInfoBlankEarthRankControl___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)EventInfoBlankEarthRankControl___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -947,7 +976,7 @@ void EventInfoBlankEarthRankControl___c__DisplayClass25_0___PlayRankChangeAnim_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   EventInfoBlankEarthRankControl__FadeOutSprite(_4__this, method);
 }
 
@@ -960,7 +989,7 @@ void EventInfoBlankEarthRankControl___c__DisplayClass25_0___PlayRankChangeAnim_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   EventInfoBlankEarthRankControl__FadeInSprite(_4__this, method);
 }
 
@@ -973,7 +1002,7 @@ void EventInfoBlankEarthRankControl___c__DisplayClass25_0___PlayRankChangeAnim_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   EventInfoBlankEarthRankControl__FadeOutBgmVolume(_4__this, method);
 }
 
@@ -986,7 +1015,7 @@ void EventInfoBlankEarthRankControl___c__DisplayClass25_0___PlayRankChangeAnim_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   EventInfoBlankEarthRankControl__FadeInBgmVolume(_4__this, method);
 }
 
@@ -995,27 +1024,28 @@ void EventInfoBlankEarthRankControl___c__DisplayClass25_0___PlayRankChangeAnim_b
         EventInfoBlankEarthRankControl___c__DisplayClass25_0_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *animGameObject; // x20
-  EventInfoBlankEarthRankControl_o *v4; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  EventInfoBlankEarthRankControl_o *v5; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
   struct EventInfoBlankEarthRankControl_o *_4__this; // x8
   System_Action_o *callback; // x19
 
-  if ( (byte_4E778EA & 1) == 0 )
+  if ( (byte_5938718 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E778EA = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5938718 = 1;
   }
   GameObjectHelper__SetActiveSafely(this->fields.animGameObject, 0, 0);
   animGameObject = (UnityEngine_Object_o *)this->fields.animGameObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_73359484(animGameObject, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  UnityEngine_Object__Destroy_83246496(animGameObject, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v5, v6);
   callback = this->fields.callback;
-  EventInfoBlankEarthRankControl__SaveCurrentBlankEarthRank(v4, _4__this->fields.currentRankId, v6);
+  EventInfoBlankEarthRankControl__SaveCurrentBlankEarthRank(v5, _4__this->fields.currentRankId, v7);
   ActionExtensions__Call(callback, 0);
 }

@@ -10,22 +10,23 @@ int32_t RandomUtility__GetRandomRangeIndex(System_Int32_array *weightArray, int3
   __int64 v6; // x0
   __int64 v7; // x1
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v9; // x21
-  int32_t v11; // w1
+  unsigned __int64 v9; // x2
+  signed __int64 v10; // x23
+  int32_t v12; // w1
 
-  if ( (byte_4E76BC7 & 1) == 0 )
+  if ( (byte_5937B69 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_WeightRate_int___ctor__);
-    sub_1D0F0B4(&Method_WeightRate_int__getData__);
-    sub_1D0F0B4(&Method_WeightRate_int__getTotalWeight__);
-    sub_1D0F0B4(&Method_WeightRate_int__setWeight__);
-    sub_1D0F0B4(&WeightRate_int__TypeInfo);
-    byte_4E76BC7 = 1;
+    sub_21FFC50(&Method_WeightRate_int___ctor__);
+    sub_21FFC50(&Method_WeightRate_int__getData__);
+    sub_21FFC50(&Method_WeightRate_int__getTotalWeight__);
+    sub_21FFC50(&Method_WeightRate_int__setWeight__);
+    sub_21FFC50(&WeightRate_int__TypeInfo);
+    byte_5937B69 = 1;
   }
   if ( !weightArray || !weightArray->max_length )
     return defValue;
-  v5 = (WeightRate_int__o *)sub_1D0F300(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v5, (const MethodInfo_3D9B2FC *)Method_WeightRate_int___ctor__);
+  v5 = (WeightRate_int__o *)sub_21FFEBC(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v5, (const MethodInfo_3D6E5DC *)Method_WeightRate_int___ctor__);
   max_length = weightArray->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -33,24 +34,26 @@ int32_t RandomUtility__GetRandomRangeIndex(System_Int32_array *weightArray, int3
     while ( 1 )
     {
       if ( v9 >= (unsigned int)max_length )
-        sub_1D0F314(v6);
+        sub_21FFED4(v6);
       if ( !v5 )
         break;
+      v10 = v9 + 1;
       WeightRate_int___setWeight(
         v5,
         weightArray->m_Items[v9],
         v9,
-        (const MethodInfo_3D9A818 *)Method_WeightRate_int__setWeight__);
+        (const MethodInfo_3D6DA50 *)Method_WeightRate_int__setWeight__);
       LODWORD(max_length) = weightArray->max_length;
-      if ( (__int64)++v9 >= (int)max_length )
+      v9 = v10;
+      if ( v10 >= (int)max_length )
         goto LABEL_13;
     }
-LABEL_15:
-    sub_1D0F30C(v6, v7);
+LABEL_14:
+    sub_21FFECC(v6, v7);
   }
   if ( !v5 )
-    goto LABEL_15;
+    goto LABEL_14;
 LABEL_13:
-  v11 = UnityEngine_Random__Range_73319196(0, v5->fields.totalweight, 0);
-  return WeightRate_int___getData(v5, v11, (const MethodInfo_3D9AC8C *)Method_WeightRate_int__getData__);
+  v12 = UnityEngine_Random__Range_83187376(0, v5->fields.totalweight, 0);
+  return WeightRate_int___getData(v5, v12, (const MethodInfo_3D6DEE8 *)Method_WeightRate_int__getData__);
 }

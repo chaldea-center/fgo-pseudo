@@ -4,6 +4,7 @@ void DebugListSelectCellComponent___ctor(DebugListSelectCellComponent_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void DebugListSelectCellComponent__Set(
         DebugListSelectCellComponent_o *this,
         System_String_o *id,
@@ -12,44 +13,50 @@ void DebugListSelectCellComponent__Set(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_String_o **p_id; // x22
   __int64 v12; // x1
   UILabel_o *v13; // x0
-  struct System_Action_string__int__o **p_callback; // x21
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
 
   this->fields.id = id;
   p_id = &this->fields.id;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.id,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.id,
     (int32_t)id,
-    index,
-    (int32_t)callback,
-    (System_String_o *)method,
+    *(System_String_o **)&index,
+    (System_String_o *)callback,
+    (int32_t)method,
     v5,
     v6,
     v7);
   v13 = (UILabel_o *)*(p_id - 1);
   if ( !v13 )
-    sub_1D0F30C(0, v12);
+    sub_21FFECC(0, v12);
   UILabel__set_text(v13, this->fields.id, 0);
   this->fields.callback = callback;
-  p_callback = &this->fields.callback;
-  *((_DWORD *)p_callback - 2) = index;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_callback, (int32_t)callback, v15, v16, v17, v18, v19, v20);
+  this->fields.index = index;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
+    (int32_t)callback,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
 }
 
 
 void DebugListSelectCellComponent__Tap(DebugListSelectCellComponent_o *this, const MethodInfo *method)
 {
-  struct System_Action_string__int__o *callback; // x8
+  struct System_Action_string__int__o *callback; // x9
 
   callback = this->fields.callback;
   if ( callback )

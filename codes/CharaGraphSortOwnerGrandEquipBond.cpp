@@ -1,23 +1,23 @@
 void CharaGraphSortOwnerGrandEquipBond___ctor(CharaGraphSortOwnerGrandEquipBond_o *this, const MethodInfo *method)
 {
   CharaGraphSortManageUnitServantEquip_o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E72202 & 1) == 0 )
+  if ( (byte_59331FF & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaGraphSortManageUnitGrandEquip_TypeInfo);
-    byte_4E72202 = 1;
+    sub_21FFC50(&CharaGraphSortManageUnitGrandEquip_TypeInfo);
+    byte_59331FF = 1;
   }
-  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1D0F300(CharaGraphSortManageUnitGrandEquip_TypeInfo);
+  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_21FFEBC(CharaGraphSortManageUnitGrandEquip_TypeInfo);
   CharaGraphSortManageUnitServantEquip___ctor(v3, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
     v5,
@@ -41,12 +41,12 @@ System_String_o *CharaGraphSortOwnerGrandEquipBond__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandEquipBond_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4E72201 & 1) == 0 )
+  if ( (byte_59331FE & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_4431/*"CharaGraphSort_GrandEquip_Bond"*/);
-    byte_4E72201 = 1;
+    sub_21FFC50(&StringLiteral_4554/*"CharaGraphSort_GrandEquip_Bond"*/);
+    byte_59331FE = 1;
   }
-  return (System_String_o *)StringLiteral_4431/*"CharaGraphSort_GrandEquip_Bond"*/;
+  return (System_String_o *)StringLiteral_4554/*"CharaGraphSort_GrandEquip_Bond"*/;
 }
 
 
@@ -55,17 +55,17 @@ void CharaGraphSortOwnerGrandEquipBond__set_ServantEquipSortManageUnit(
         CharaGraphSortManageUnitBase_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

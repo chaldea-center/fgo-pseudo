@@ -17,21 +17,21 @@ System_String_o *GrandServantAssetSetting__GetImageName(
   Il2CppObject *object; // x0
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4E72212 & 1) == 0 )
+  if ( (byte_593320F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
-    sub_1D0F0B4(&System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
-    sub_1D0F0B4(&Method_GrandServantAssetSetting___c__DisplayClass8_0__GetImageName_b__0__);
-    sub_1D0F0B4(&GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E72212 = 1;
+    sub_21FFC50(&Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
+    sub_21FFC50(&System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
+    sub_21FFC50(&Method_GrandServantAssetSetting___c__DisplayClass8_0__GetImageName_b__0__);
+    sub_21FFC50(&GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593320F = 1;
   }
-  v6 = sub_1D0F300(GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
+  v6 = sub_21FFEBC(GrandServantAssetSetting___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   *(_DWORD *)(v6 + 16) = frameType;
-  v9 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GrandServantAssetSetting_FrameTypeData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v6,
@@ -40,7 +40,7 @@ System_String_o *GrandServantAssetSetting__GetImageName(
   object = BasicHelper__Find_object_(
              (System_Object_array *)list,
              (System_Func_T__bool__o *)v9,
-             (const MethodInfo_3238EB8 *)Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
+             (const MethodInfo_37DD66C *)Method_BasicHelper_Find_GrandServantAssetSetting_FrameTypeData___);
   p_monitor = (System_String_o **)&object[1].monitor;
   if ( !object )
     p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
@@ -50,28 +50,31 @@ System_String_o *GrandServantAssetSetting__GetImageName(
 
 GrandServantAssetSetting_o *GrandServantAssetSetting__GetInstance(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x2
   GrandServantAssetSetting_o *result; // x0
 
-  if ( (byte_4E7220F & 1) == 0 )
+  if ( (byte_593320C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_GrandServantAssetSetting___);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_7240/*"GrandServantList"*/);
-    sub_1D0F0B4(&StringLiteral_7238/*"GrandServantAssetSetting"*/);
-    byte_4E7220F = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_GrandServantAssetSetting___);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_7445/*"GrandServantList"*/);
+    sub_21FFC50(&StringLiteral_7443/*"GrandServantAssetSetting"*/);
+    byte_593320C = 1;
   }
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  result = (GrandServantAssetSetting_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_7240/*"GrandServantList"*/, 0);
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v1, v2);
+  result = (GrandServantAssetSetting_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_7445/*"GrandServantList"*/, 0);
   if ( result )
-    return (GrandServantAssetSetting_o *)AssetData__GetObject_object__52624444(
+    return (GrandServantAssetSetting_o *)AssetData__GetObject_object__58323140(
                                            (AssetData_o *)result,
-                                           (System_String_o *)StringLiteral_7238/*"GrandServantAssetSetting"*/,
-                                           (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GrandServantAssetSetting___);
+                                           (System_String_o *)StringLiteral_7443/*"GrandServantAssetSetting"*/,
+                                           (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GrandServantAssetSetting___);
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandServantAssetSetting__SetGrandServantListBackgroundSprite(
         GrandServantAssetSetting_o *this,
         UISprite_o *sprite,
@@ -84,17 +87,18 @@ void GrandServantAssetSetting__SetGrandServantListBackgroundSprite(
   System_String_o *grandServantListBackgroundSpriteNameBase; // x20
   Il2CppObject *v12; // x0
   System_String_o *ImageName; // x0
-  System_String_o *v14; // x20
-  int v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v14; // x1
+  __int64 v15; // x2
+  System_String_o *v16; // x20
+  int v17; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E72210 & 1) == 0 )
+  if ( (byte_593320D & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    byte_4E72210 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_593320D = 1;
   }
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, sprite, *(_QWORD *)&frameType);
   FrameId = (GrandServantAssetSetting_o *)AtlasManager__GetFrameId(classId, 0);
   if ( (int)FrameId <= 0 )
   {
@@ -107,17 +111,18 @@ void GrandServantAssetSetting__SetGrandServantListBackgroundSprite(
   else
   {
     grandServantListBackgroundSpriteNameBase = this->fields.grandServantListBackgroundSpriteNameBase;
-    v15 = (int)FrameId;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
+    v17 = (int)FrameId;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
     ImageName = System_String__Format(grandServantListBackgroundSpriteNameBase, v12, 0);
   }
-  v14 = ImageName;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetGrandServantListImage(sprite, v14, 0);
+  v16 = ImageName;
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v15);
+  AtlasManager__SetGrandServantListImage(sprite, v16, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandServantAssetSetting__SetGrandServantListFrameSprite(
         GrandServantAssetSetting_o *this,
         UISprite_o *sprite,
@@ -130,17 +135,18 @@ void GrandServantAssetSetting__SetGrandServantListFrameSprite(
   System_String_o *grandServantListFrameSpriteNameBase; // x20
   Il2CppObject *v12; // x0
   System_String_o *ImageName; // x0
-  System_String_o *v14; // x20
-  int v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v14; // x1
+  __int64 v15; // x2
+  System_String_o *v16; // x20
+  int v17; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E72211 & 1) == 0 )
+  if ( (byte_593320E & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    byte_4E72211 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_593320E = 1;
   }
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, sprite, *(_QWORD *)&frameType);
   FrameId = (GrandServantAssetSetting_o *)AtlasManager__GetFrameId(classId, 0);
   if ( (int)FrameId <= 0 )
   {
@@ -153,14 +159,14 @@ void GrandServantAssetSetting__SetGrandServantListFrameSprite(
   else
   {
     grandServantListFrameSpriteNameBase = this->fields.grandServantListFrameSpriteNameBase;
-    v15 = (int)FrameId;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
+    v17 = (int)FrameId;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
     ImageName = System_String__Format(grandServantListFrameSpriteNameBase, v12, 0);
   }
-  v14 = ImageName;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetGrandServantListImage(sprite, v14, 0);
+  v16 = ImageName;
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v15);
+  AtlasManager__SetGrandServantListImage(sprite, v16, 0);
 }
 
 
@@ -202,6 +208,6 @@ bool GrandServantAssetSetting___c__DisplayClass8_0___GetImageName_b__0(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return data->fields.frameType == this->fields.frameType;
 }

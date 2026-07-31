@@ -1,26 +1,26 @@
 void ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *method)
 {
   ChainableActionBase_o *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v7; // w6
+  bool v8; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v2->fields.endCallback = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields, 0, v3, v4, v5, v6, v7, v8);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields, 0, v3, v4, v5, v6, v7, v8);
   v2->fields.nextAction = 0;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v2, 0, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v2, 0, v9, v10, v11, v12, v13, v14);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -45,15 +45,15 @@ void ChainableActionBase__End(ChainableActionBase_o *this, const MethodInfo *met
 
 void ChainableActionBase__Execute(ChainableActionBase_o *this, const MethodInfo *method)
 {
-  ChainableActionBase_c *klass; // x8
+  const MethodInfo *v2; // x1
+  Il2CppMethodPointer methodPtr; // x2
 
   if ( !this->fields._IsExecuted_k__BackingField )
   {
-    klass = this->klass;
+    methodPtr = this->klass->vtable._4_unknown.methodPtr;
+    v2 = this->klass->vtable._4_unknown.method;
     this->fields._IsExecuted_k__BackingField = 1;
-    ((void (__fastcall *)(ChainableActionBase_o *, const MethodInfo *))klass->vtable._4_unknown.methodPtr)(
-      this,
-      klass->vtable._4_unknown.method);
+    ((void (__fastcall *)(ChainableActionBase_o *, const MethodInfo *))methodPtr)(this, v2);
   }
 }
 
@@ -65,57 +65,55 @@ ChainableActionBase_o *ChainableActionBase__Final(
 {
   ChainableActionBase_o *v4; // x20
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v6; // x22
-  System_Delegate_o **p_fields; // x21
-  System_Delegate_o *v8; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  System_Action_c *v15; // x1
+  unsigned __int64 i; // x21
+  System_Delegate_o *v7; // x0
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
+  System_Action_c *v14; // x1
 
   v4 = this;
-  if ( (byte_4E7BC91 & 1) == 0 )
+  if ( (byte_593CBE8 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_1D0F0B4(&System_Action_TypeInfo);
-    byte_4E7BC91 = 1;
+    this = (ChainableActionBase_o *)sub_21FFC50(&System_Action_TypeInfo);
+    byte_593CBE8 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_1D0F30C(this, endCallbacks);
+      sub_21FFECC(this, endCallbacks);
     max_length = endCallbacks->max_length;
     if ( (int)max_length >= 1 )
     {
-      v6 = 0;
-      p_fields = (System_Delegate_o **)&v4->fields;
-      do
+      for ( i = 0; (__int64)i < (int)max_length; ++i )
       {
-        if ( v6 >= (unsigned int)max_length )
+        if ( i >= (unsigned int)max_length )
           goto LABEL_16;
-        v8 = System_Delegate__Combine(*p_fields, (System_Delegate_o *)endCallbacks->m_Items[v6], 0);
-        if ( v8 )
+        v7 = System_Delegate__Combine(
+               (System_Delegate_o *)v4->fields.endCallback,
+               (System_Delegate_o *)endCallbacks->m_Items[i],
+               0);
+        if ( v7 )
         {
-          v15 = System_Action_TypeInfo;
-          if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
-            || (*p_fields = v8, (System_Action_c *)v8->klass != v15) )
+          v14 = System_Action_TypeInfo;
+          if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
+            || (v4->fields.endCallback = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v14) )
           {
-            sub_1D0F6A8(v8);
+            sub_220024C(v7, v14, v8);
 LABEL_16:
-            sub_1D0F314(this);
+            sub_21FFED4(this);
           }
         }
         else
         {
-          *p_fields = 0;
+          v4->fields.endCallback = 0;
         }
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields, (int32_t)v7, v8, v9, v10, v11, v12, v13);
         LODWORD(max_length) = endCallbacks->max_length;
-        ++v6;
       }
-      while ( (__int64)v6 < (int)max_length );
     }
   }
   return v4;
@@ -127,17 +125,17 @@ void ChainableActionBase__SetNextAction(
         System_Action_o *nextAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.nextAction = nextAction;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.nextAction,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.nextAction,
     (int32_t)nextAction,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

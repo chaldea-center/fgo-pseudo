@@ -10,19 +10,21 @@ void FsmEventDataList__Finalize(FsmEventDataList_o *this, const MethodInfo *meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 FsmEventData_o *FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_1D0F30C(this, index);
+    sub_21FFECC(this, *(_QWORD *)&index);
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   return eventDataList->m_Items[index];
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
@@ -32,15 +34,16 @@ System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1D0F30C(this, index);
+    sub_21FFECC(this, *(_QWORD *)&index);
   return v4->fields.eventData;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
@@ -50,15 +53,16 @@ System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t in
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1D0F30C(this, index);
+    sub_21FFECC(this, *(_QWORD *)&index);
   return v4->fields.title;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x21
@@ -67,14 +71,14 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v9; // x8
 
-  if ( (byte_4E78DAC & 1) == 0 )
+  if ( (byte_5939DFB & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78DAC = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939DFB = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
   v6 = (PlayMakerFSM_o *)UnityEngine_Object__op_Inequality(targetFSM, 0, 0);
   if ( ((unsigned __int8)v6 & 1) != 0 )
   {
@@ -82,11 +86,11 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
     if ( !eventDataList )
       goto LABEL_12;
     if ( LODWORD(eventDataList->max_length) <= index )
-      sub_1D0F314(v6);
+      sub_21FFED4(v6);
     v9 = eventDataList->m_Items[index];
     if ( !v9 || (v6 = this->fields.targetFSM) == 0 )
 LABEL_12:
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     PlayMakerFSM__SendEvent(v6, v9->fields.eventData, 0);
   }
 }
@@ -113,35 +117,36 @@ PlayMakerFSM_o *FsmEventDataList__get_TargetFSM(FsmEventDataList_o *this, const 
 void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const MethodInfo *method)
 {
   struct FsmEventData_array *v5; // x8
-  GrandQuestFolderBoardItem_o *p_eventDataList; // x19
+  MissionNaviTransitionBoardItem_o *p_eventDataList; // x19
   struct FsmEventData_array *eventDataList; // t1
-  int max_length; // w22
+  int max_length; // w21
   __int64 v9; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   unsigned int *v17; // x20
-  unsigned __int64 v18; // x23
-  signed __int64 v19; // x24
-  __int64 v20; // x25
-  GrandQuestFolderBoardItem_o *v21; // x21
-  GrandQuestFolderBoardItem_c *klass; // x8
+  signed __int64 v18; // x24
+  unsigned __int64 v19; // x23
+  MissionNaviTransitionBoardItem_o *v20; // x21
+  __int64 v21; // x26
+  MissionNaviTransitionBoardItem_c *klass; // x8
   FsmEventData_o *v23; // x22
   const MethodInfo *v24; // x1
-  __int64 v25; // x0
+  __int64 v25; // x1
+  __int64 v26; // x0
 
-  if ( (byte_4E78DAB & 1) == 0 )
+  if ( (byte_5939DFA & 1) == 0 )
   {
-    sub_1D0F0B4(&FsmEventData___TypeInfo);
-    sub_1D0F0B4(&FsmEventData_TypeInfo);
-    byte_4E78DAB = 1;
+    sub_21FFC50(&FsmEventData___TypeInfo);
+    sub_21FFC50(&FsmEventData_TypeInfo);
+    byte_5939DFA = 1;
   }
   eventDataList = this->fields.eventDataList;
-  p_eventDataList = (GrandQuestFolderBoardItem_o *)&this->fields.eventDataList;
+  p_eventDataList = (MissionNaviTransitionBoardItem_o *)&this->fields.eventDataList;
   v5 = eventDataList;
   if ( eventDataList )
     max_length = v5->max_length;
@@ -149,73 +154,73 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
     max_length = 0;
   if ( max_length != value )
   {
-    v9 = sub_1D0F15C(FsmEventData___TypeInfo, (unsigned int)value);
+    v9 = sub_21FFD10(FsmEventData___TypeInfo, (unsigned int)value);
     v17 = (unsigned int *)v9;
     if ( value >= 1 )
     {
-      v18 = 0;
-      v19 = max_length;
-      v20 = (unsigned int)value;
-      v21 = (GrandQuestFolderBoardItem_o *)(v9 + 32);
+      v18 = max_length;
+      v19 = 0;
+      v20 = (MissionNaviTransitionBoardItem_o *)(v9 + 32);
+      v21 = (unsigned int)value;
       do
       {
-        if ( (__int64)v18 >= v19 )
+        if ( (__int64)v19 >= v18 )
         {
-          v23 = (FsmEventData_o *)sub_1D0F300(FsmEventData_TypeInfo);
+          v23 = (FsmEventData_o *)sub_21FFEBC(FsmEventData_TypeInfo);
           FsmEventData___ctor(v23, v24);
           if ( !v17 )
 LABEL_20:
-            sub_1D0F30C(v9, v10);
+            sub_21FFECC(v9, v10);
         }
         else
         {
           klass = p_eventDataList->klass;
           if ( !p_eventDataList->klass )
             goto LABEL_20;
-          if ( v18 >= LODWORD(klass->_1.namespaze) )
+          if ( v19 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_1D0F314(v9);
+            sub_21FFED4(v9);
           if ( !v17 )
             goto LABEL_20;
-          v23 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v18);
+          v23 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v19);
         }
         if ( v23 )
         {
-          v9 = sub_1D0F1F0(v23, *(_QWORD *)(*(_QWORD *)v17 + 64LL));
+          v9 = sub_21FFDA4(v23, *(_QWORD *)(*(_QWORD *)v17 + 64LL));
           if ( !v9 )
           {
-            v25 = sub_1D0F330(0);
-            sub_1D0F1DC(v25, 0);
+            v26 = sub_21FFEF0(0, v25);
+            sub_21FFD90(v26, 0);
           }
         }
-        if ( v18 >= v17[6] )
+        if ( v19 >= v17[6] )
           goto LABEL_21;
-        v21->klass = (GrandQuestFolderBoardItem_c *)v23;
-        sub_1D0F058(v21, (int32_t)v23, v11, v12, v13, v14, v15, v16);
-        ++v18;
-        v21 = (GrandQuestFolderBoardItem_o *)((char *)v21 + 8);
+        v20->klass = (MissionNaviTransitionBoardItem_c *)v23;
+        sub_21FFBF4(v20, (int32_t)v23, v11, v12, v13, v14, v15, v16);
+        ++v19;
+        v20 = (MissionNaviTransitionBoardItem_o *)((char *)v20 + 8);
       }
-      while ( v20 != v18 );
+      while ( v21 != v19 );
     }
-    p_eventDataList->klass = (GrandQuestFolderBoardItem_c *)v17;
-    sub_1D0F058(p_eventDataList, (int32_t)v17, v11, v12, v13, v14, v15, v16);
+    p_eventDataList->klass = (MissionNaviTransitionBoardItem_c *)v17;
+    sub_21FFBF4(p_eventDataList, (int32_t)v17, v11, v12, v13, v14, v15, v16);
   }
 }
 
 
 void FsmEventDataList__set_TargetFSM(FsmEventDataList_o *this, PlayMakerFSM_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.targetFSM = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.targetFSM,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.targetFSM,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

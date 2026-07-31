@@ -4,14 +4,14 @@ bool NguiLocalizationManager__ContainsKey(System_String_o *key, const MethodInfo
   struct System_Func_string__bool__o *containsKeyFunc; // x8
 
   v2 = key;
-  if ( (byte_4E7BD09 & 1) == 0 )
+  if ( (byte_593CC5C & 1) == 0 )
   {
-    key = (System_String_o *)sub_1D0F0B4(&NguiLocalizationManager_TypeInfo);
-    byte_4E7BD09 = 1;
+    key = (System_String_o *)sub_21FFC50(&NguiLocalizationManager_TypeInfo);
+    byte_593CC5C = 1;
   }
   containsKeyFunc = NguiLocalizationManager_TypeInfo->static_fields->containsKeyFunc;
   if ( !containsKeyFunc )
-    sub_1D0F30C(key, method);
+    sub_21FFECC(key, method);
   return ((__int64 (__fastcall *)(intptr_t, System_String_o *, intptr_t))containsKeyFunc->fields.invoke_impl)(
            containsKeyFunc->fields.method_code,
            v2,
@@ -25,14 +25,14 @@ System_String_o *NguiLocalizationManager__Get(System_String_o *key, const Method
   struct System_Func_string__string__o *getFunc; // x8
 
   v2 = key;
-  if ( (byte_4E7BD0A & 1) == 0 )
+  if ( (byte_593CC5D & 1) == 0 )
   {
-    key = (System_String_o *)sub_1D0F0B4(&NguiLocalizationManager_TypeInfo);
-    byte_4E7BD0A = 1;
+    key = (System_String_o *)sub_21FFC50(&NguiLocalizationManager_TypeInfo);
+    byte_593CC5D = 1;
   }
   getFunc = NguiLocalizationManager_TypeInfo->static_fields->getFunc;
   if ( !getFunc )
-    sub_1D0F30C(key, method);
+    sub_21FFECC(key, method);
   return (System_String_o *)((__int64 (__fastcall *)(intptr_t, System_String_o *, intptr_t))getFunc->fields.invoke_impl)(
                               getFunc->fields.method_code,
                               v2,
@@ -44,21 +44,21 @@ void NguiLocalizationManager__RegisterContainsKeyFunc(
         System_Func_string__bool__o *containsKeyFunc,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7BD07 & 1) == 0 )
+  if ( (byte_593CC5A & 1) == 0 )
   {
-    sub_1D0F0B4(&NguiLocalizationManager_TypeInfo);
-    byte_4E7BD07 = 1;
+    sub_21FFC50(&NguiLocalizationManager_TypeInfo);
+    byte_593CC5A = 1;
   }
   NguiLocalizationManager_TypeInfo->static_fields->containsKeyFunc = containsKeyFunc;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)NguiLocalizationManager_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)NguiLocalizationManager_TypeInfo->static_fields,
     (int32_t)containsKeyFunc,
     v2,
     v3,
@@ -71,20 +71,20 @@ void NguiLocalizationManager__RegisterContainsKeyFunc(
 
 void NguiLocalizationManager__RegisterGetFunc(System_Func_string__string__o *getFunc, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct NguiLocalizationManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4E7BD08 & 1) == 0 )
+  if ( (byte_593CC5B & 1) == 0 )
   {
-    sub_1D0F0B4(&NguiLocalizationManager_TypeInfo);
-    byte_4E7BD08 = 1;
+    sub_21FFC50(&NguiLocalizationManager_TypeInfo);
+    byte_593CC5B = 1;
   }
   static_fields = NguiLocalizationManager_TypeInfo->static_fields;
   static_fields->getFunc = getFunc;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->getFunc, (int32_t)getFunc, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->getFunc, (int32_t)getFunc, v2, v3, v4, v5, v6, v7);
 }

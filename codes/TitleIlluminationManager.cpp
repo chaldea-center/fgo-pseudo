@@ -1,11 +1,11 @@
 void TitleIlluminationManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E74E0E & 1) == 0 )
+  if ( (byte_5935E13 & 1) == 0 )
   {
-    sub_1D0F0B4(&TitleIlluminationManager_TypeInfo);
-    byte_4E74E0E = 1;
+    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
+    byte_5935E13 = 1;
   }
-  *(_OWORD *)&TitleIlluminationManager_TypeInfo->static_fields->IlluminationPoolCount = xmmword_D34C00;
+  *(_OWORD *)&TitleIlluminationManager_TypeInfo->static_fields->IlluminationPoolCount = xmmword_E931D0;
 }
 
 
@@ -19,78 +19,84 @@ void TitleIlluminationManager___ctor(TitleIlluminationManager_o *this, const Met
 
 void TitleIlluminationManager__CreateIllumination(TitleIlluminationManager_o *this, const MethodInfo *method)
 {
-  TitleIlluminationManager_o *v2; // x19
+  __int64 v2; // x2
+  TitleIlluminationManager_o *v3; // x19
   struct TitleIlluminationManager_IlluminationInfo_array *IlluminationObjects; // x8
   int max_length; // w9
-  int v5; // w10
-  TitleIlluminationManager_IlluminationInfo_o *v6; // x22
+  int v6; // w11
+  TitleIlluminationManager_IlluminationInfo_o *v7; // x22
   struct System_Collections_Generic_List_GameObject__o *IlluminationPool; // x8
-  TitleIlluminationManager_c *v8; // x0
+  TitleIlluminationManager_c *v9; // x0
   int IlluminationWidth; // w8
-  int v10; // w9
-  int32_t v11; // w20
+  int v11; // w9
+  int32_t v12; // w20
   int32_t IlluminationHeight; // w8
-  int v13; // w9
-  int32_t v14; // w21
-  const MethodInfo *v15; // x3
+  int v14; // w9
+  int32_t v15; // w10
+  int32_t v16; // w21
+  const MethodInfo *v17; // x3
 
-  v2 = this;
-  if ( (byte_4E74E0B & 1) == 0 )
+  v3 = this;
+  if ( (byte_5935E10 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    this = (TitleIlluminationManager_o *)sub_1D0F0B4(&TitleIlluminationManager_TypeInfo);
-    byte_4E74E0B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (TitleIlluminationManager_o *)sub_21FFC50(&TitleIlluminationManager_TypeInfo);
+    byte_5935E10 = 1;
   }
-  IlluminationObjects = v2->fields.IlluminationObjects;
+  IlluminationObjects = v3->fields.IlluminationObjects;
   if ( !IlluminationObjects )
-    goto LABEL_23;
+    goto LABEL_26;
   max_length = IlluminationObjects->max_length;
   if ( max_length < 1 )
     return;
-  v5 = 0;
+  v6 = 0;
   while ( 1 )
   {
-    if ( max_length == v5 )
-      sub_1D0F314(this);
-    v6 = IlluminationObjects->m_Items[v5];
-    if ( !v6 )
-      goto LABEL_23;
-    if ( !v6->fields.exists )
+    if ( max_length == v6 )
+      sub_21FFED4(this);
+    v7 = IlluminationObjects->m_Items[v6];
+    if ( !v7 )
+      goto LABEL_26;
+    if ( !v7->fields.exists )
       break;
-    if ( max_length == ++v5 )
+    if ( (max_length & ~(max_length >> 31)) == ++v6 )
       return;
   }
-  IlluminationPool = v2->fields.IlluminationPool;
+  IlluminationPool = v3->fields.IlluminationPool;
   if ( !IlluminationPool )
-LABEL_23:
-    sub_1D0F30C(this, method);
+LABEL_26:
+    sub_21FFECC(this, method);
   if ( IlluminationPool->fields._size )
   {
-    v8 = TitleIlluminationManager_TypeInfo;
-    if ( !TitleIlluminationManager_TypeInfo->_2.cctor_finished )
+    v9 = TitleIlluminationManager_TypeInfo;
+    if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo);
-      v8 = TitleIlluminationManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, method, v2);
+      v9 = TitleIlluminationManager_TypeInfo;
     }
-    IlluminationWidth = v8->static_fields->IlluminationWidth;
+    IlluminationWidth = v9->static_fields->IlluminationWidth;
     if ( IlluminationWidth <= 0 )
-      v10 = -IlluminationWidth;
+      v11 = -IlluminationWidth;
     else
-      v10 = 1 - IlluminationWidth;
-    v11 = UnityEngine_Random__Range_73319196(v10 >> 1, IlluminationWidth / 2, 0);
+      v11 = 1 - IlluminationWidth;
+    v12 = UnityEngine_Random__Range_83187376(v11 >> 1, IlluminationWidth / 2, 0);
     IlluminationHeight = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
     if ( IlluminationHeight <= 0 )
-      v13 = -IlluminationHeight;
+      v14 = -IlluminationHeight;
     else
-      v13 = 1 - IlluminationHeight;
-    v14 = UnityEngine_Random__Range_73319196(v13 >> 1, IlluminationHeight / 2, 0);
-    v6->fields.x = v11;
-    v6->fields.y = v14;
-    v6->fields.restCount = UnityEngine_Random__Range_73319196(6, 9, 0);
-    v6->fields.moveTime = 0.0;
-    v6->fields.exists = 1;
-    TitleIlluminationManager__SpawnIllumination(v2, v11, v14, v15);
-    ++v2->fields.IlluminationCount;
+      v14 = 1 - IlluminationHeight;
+    if ( IlluminationHeight >= 0 )
+      v15 = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
+    else
+      v15 = IlluminationHeight + 1;
+    v16 = UnityEngine_Random__Range_83187376(v14 >> 1, v15 >> 1, 0);
+    v7->fields.x = v12;
+    v7->fields.y = v16;
+    v7->fields.restCount = UnityEngine_Random__Range_83187376(6, 9, 0);
+    v7->fields.moveTime = 0.0;
+    v7->fields.exists = 1;
+    TitleIlluminationManager__SpawnIllumination(v3, v12, v16, v17);
+    ++v3->fields.IlluminationCount;
   }
 }
 
@@ -98,91 +104,103 @@ LABEL_23:
 void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, const MethodInfo *method)
 {
   struct TitleIlluminationManager_IlluminationInfo_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   unsigned __int64 v10; // x22
   __int64 v11; // x24
   unsigned int *IlluminationObjects; // x25
   Il2CppObject *v13; // x21
   __int64 transform; // x0
   __int64 v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  System_Collections_Generic_List_object__o *v22; // x21
+  bool v20; // w6
+  bool v21; // w7
+  __int64 v22; // x1
+  System_Collections_Generic_List_object__o *v23; // x21
   struct System_Collections_Generic_List_GameObject__o **p_IlluminationPool; // x20
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  __int64 v31; // x1
+  __int64 v32; // x2
   int32_t i; // w27
-  TitleIlluminationManager_c *v31; // x0
+  TitleIlluminationManager_c *v34; // x0
   Il2CppObject *IlluminationPrefab; // x22
-  UnityEngine_GameObject_o *v33; // x22
-  UnityEngine_Transform_o *v34; // x23
-  UnityEngine_Transform_o *v35; // x23
-  UnityEngine_Transform_o *v36; // x23
+  UnityEngine_GameObject_o *v36; // x22
   UnityEngine_Transform_o *v37; // x23
-  int32_t v38; // w2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  int32_t v41; // w5
-  int64_t v42; // x6
-  System_String_o *v43; // x7
-  __int64 v44; // x8
-  _QWORD *v45; // x9
-  __int64 v46; // x10
+  UnityEngine_Transform_o *v38; // x23
+  UnityEngine_Transform_o *v39; // x23
+  UnityEngine_Transform_o *v40; // x23
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
   __int64 v47; // x8
-  System_Collections_Generic_List_object__o *v48; // x20
-  GrandQuestFolderBoardItem_o *p_IlluminationDisp; // x19
-  int32_t v50; // w2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
-  int32_t v53; // w5
-  int64_t v54; // x6
-  System_String_o *v55; // x7
-  System_Array_o *v56; // x19
-  System_RuntimeFieldHandle_o v57; // x1
-  int32_t v58; // w2
-  int32_t v59; // w3
-  System_String_o *v60; // x4
-  int32_t v61; // w5
-  int64_t v62; // x6
-  System_String_o *v63; // x7
-  TitleIlluminationManager_c *v64; // x0
+  _QWORD *v48; // x9
+  __int64 v49; // x10
+  __int64 v50; // x8
+  System_Collections_Generic_List_object__o *v51; // x20
+  MissionNaviTransitionBoardItem_o *p_IlluminationDisp; // x19
+  System_String_o *v53; // x2
+  System_String_o *v54; // x3
+  int32_t v55; // w4
+  int32_t v56; // w5
+  bool v57; // w6
+  bool v58; // w7
+  System_Array_o *v59; // x19
+  System_RuntimeFieldHandle_o v60; // x1
+  __int64 v61; // x1
+  System_String_o *v62; // x2
+  System_String_o *v63; // x3
+  int32_t v64; // w4
+  int32_t v65; // w5
+  bool v66; // w6
+  bool v67; // w7
+  TitleIlluminationManager_c *v68; // x0
   struct TitleIlluminationManager_StaticFields *static_fields; // x0
-  __int64 v66; // x0
-  __int128 v67; // [xsp+0h] [xbp-80h] BYREF
-  __int64 v68; // [xsp+10h] [xbp-70h]
+  __int64 v70; // x0
+  __int128 v71; // [xsp+0h] [xbp-80h] BYREF
+  __int64 v72; // [xsp+10h] [xbp-70h]
 
-  if ( (byte_4E74E09 & 1) == 0 )
+  if ( (byte_5935E0E & 1) == 0 )
   {
-    sub_1D0F0B4(&TitleIlluminationManager_IlluminationInfo___TypeInfo);
-    sub_1D0F0B4(&TitleIlluminationManager_IlluminationInfo_TypeInfo);
-    sub_1D0F0B4(&int_____TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&TitleIlluminationManager_TypeInfo);
-    sub_1D0F0B4(&Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4);
-    byte_4E74E09 = 1;
+    sub_21FFC50(&TitleIlluminationManager_IlluminationInfo___TypeInfo);
+    sub_21FFC50(&TitleIlluminationManager_IlluminationInfo_TypeInfo);
+    sub_21FFC50(&int_____TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
+    sub_21FFC50(&Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4);
+    byte_5935E0E = 1;
   }
-  v3 = (struct TitleIlluminationManager_IlluminationInfo_array *)sub_1D0F15C(
+  v3 = (struct TitleIlluminationManager_IlluminationInfo_array *)sub_21FFD10(
                                                                    TitleIlluminationManager_IlluminationInfo___TypeInfo,
                                                                    (unsigned int)this->fields.IlluminationCountMax);
   this->fields.IlluminationObjects = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.IlluminationObjects, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationObjects,
+    (int32_t)v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   if ( this->fields.IlluminationCountMax >= 1 )
   {
     v10 = 0;
@@ -190,154 +208,170 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
     do
     {
       IlluminationObjects = (unsigned int *)this->fields.IlluminationObjects;
-      v13 = (Il2CppObject *)sub_1D0F300(TitleIlluminationManager_IlluminationInfo_TypeInfo);
+      v13 = (Il2CppObject *)sub_21FFEBC(TitleIlluminationManager_IlluminationInfo_TypeInfo);
       System_Object___ctor(v13, 0);
       if ( !IlluminationObjects )
 LABEL_37:
-        sub_1D0F30C(transform, v15);
+        sub_21FFECC(transform, v15);
       if ( v13 )
       {
-        transform = sub_1D0F1F0(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
+        transform = sub_21FFDA4(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
         if ( !transform )
         {
-          v66 = sub_1D0F330();
-          sub_1D0F1DC(v66, 0);
+          v70 = sub_21FFEF0(0, v22);
+          sub_21FFD90(v70, 0);
         }
       }
       if ( v10 >= IlluminationObjects[6] )
-        sub_1D0F314(transform);
+        sub_21FFED4(transform);
       *(_QWORD *)&IlluminationObjects[v11] = v13;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&IlluminationObjects[v11], (int32_t)v13, v16, v17, v18, v19, v20, v21);
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&IlluminationObjects[v11],
+        (int32_t)v13,
+        v16,
+        v17,
+        v18,
+        v19,
+        v20,
+        v21);
       ++v10;
       v11 += 2;
     }
     while ( (__int64)v10 < this->fields.IlluminationCountMax );
   }
-  v22 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v23 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v22,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.IlluminationPool = (struct System_Collections_Generic_List_GameObject__o *)v22;
+    v23,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.IlluminationPool = (struct System_Collections_Generic_List_GameObject__o *)v23;
   p_IlluminationPool = &this->fields.IlluminationPool;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.IlluminationPool, (int32_t)v22, v24, v25, v26, v27, v28, v29);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationPool,
+    (int32_t)v23,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30);
   for ( i = 0; ; ++i )
   {
-    v31 = TitleIlluminationManager_TypeInfo;
-    if ( !TitleIlluminationManager_TypeInfo->_2.cctor_finished )
+    v34 = TitleIlluminationManager_TypeInfo;
+    if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo);
-      v31 = TitleIlluminationManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v31, v32);
+      v34 = TitleIlluminationManager_TypeInfo;
     }
-    if ( i >= v31->static_fields->IlluminationPoolCount )
+    if ( i >= v34->static_fields->IlluminationPoolCount )
       break;
     IlluminationPrefab = (Il2CppObject *)this->fields.IlluminationPrefab;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31, v32);
     transform = (__int64)UnityEngine_Object__Instantiate_object_(
                            IlluminationPrefab,
-                           (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_37;
-    v33 = (UnityEngine_GameObject_o *)transform;
+    v36 = (UnityEngine_GameObject_o *)transform;
     transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
     if ( !this->fields.TargetPanel )
       goto LABEL_37;
-    v34 = (UnityEngine_Transform_o *)transform;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.TargetPanel, 0);
-    if ( !v34 )
-      goto LABEL_37;
-    UnityEngine_Transform__set_parent(v34, (UnityEngine_Transform_o *)transform, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v33, 0);
-    v35 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4E70C99 )
-    {
-      transform = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
-    }
-    if ( !v35 )
-      goto LABEL_37;
-    UnityEngine_Transform__set_localPosition(v35, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v33, 0);
-    v36 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4E70C99 )
-    {
-      transform = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
-    }
-    if ( !v36 )
-      goto LABEL_37;
-    UnityEngine_Transform__set_localEulerAngles(v36, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v33, 0);
     v37 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4E70C9E )
-    {
-      transform = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C9E = 1;
-    }
+    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.TargetPanel, 0);
     if ( !v37 )
       goto LABEL_37;
-    UnityEngine_Transform__set_localScale(v37, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-    UnityEngine_GameObject__SetActive(v33, 0, 0);
+    UnityEngine_Transform__set_parent(v37, (UnityEngine_Transform_o *)transform, 0);
+    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    v38 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_5931940 )
+    {
+      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
+    }
+    if ( !v38 )
+      goto LABEL_37;
+    UnityEngine_Transform__set_localPosition(v38, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    v39 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_5931940 )
+    {
+      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
+    }
+    if ( !v39 )
+      goto LABEL_37;
+    UnityEngine_Transform__set_localEulerAngles(v39, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    v40 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_5931945 )
+    {
+      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931945 = 1;
+    }
+    if ( !v40 )
+      goto LABEL_37;
+    UnityEngine_Transform__set_localScale(v40, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+    UnityEngine_GameObject__SetActive(v36, 0, 0);
     transform = (__int64)*p_IlluminationPool;
     if ( !*p_IlluminationPool )
       goto LABEL_37;
-    v44 = *(_QWORD *)(transform + 16);
-    v45 = Method_System_Collections_Generic_List_GameObject__Add__;
+    v47 = *(_QWORD *)(transform + 16);
+    v48 = Method_System_Collections_Generic_List_GameObject__Add__;
     ++*(_DWORD *)(transform + 28);
-    if ( !v44 )
+    if ( !v47 )
       goto LABEL_37;
-    v46 = *(int *)(transform + 24);
-    if ( (unsigned int)v46 >= *(_DWORD *)(v44 + 24) )
+    v49 = *(int *)(transform + 24);
+    if ( (unsigned int)v49 >= *(_DWORD *)(v47 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)transform,
-        (Il2CppObject *)v33,
-        *(const MethodInfo_395C410 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+        (Il2CppObject *)v36,
+        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
     }
     else
     {
-      v47 = v44 + 8 * v46;
-      *(_DWORD *)(transform + 24) = v46 + 1;
-      *(_QWORD *)(v47 + 32) = v33;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v47 + 32), (int32_t)v33, v38, v39, v40, v41, v42, v43);
+      v50 = v47 + 8 * v49;
+      *(_DWORD *)(transform + 24) = v49 + 1;
+      *(_QWORD *)(v50 + 32) = v36;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v36, v41, v42, v43, v44, v45, v46);
     }
   }
-  v48 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v51 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v48,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.IlluminationDisp = (struct System_Collections_Generic_List_GameObject__o *)v48;
-  p_IlluminationDisp = (GrandQuestFolderBoardItem_o *)&this->fields.IlluminationDisp;
-  sub_1D0F058(p_IlluminationDisp, (int32_t)v48, v50, v51, v52, v53, v54, v55);
+    v51,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.IlluminationDisp = (struct System_Collections_Generic_List_GameObject__o *)v51;
+  p_IlluminationDisp = (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationDisp;
+  sub_21FFBF4(p_IlluminationDisp, (int32_t)v51, v53, v54, v55, v56, v57, v58);
   p_IlluminationDisp->fields.index = 0;
-  v67 = xmmword_D69740;
-  v68 = 2;
-  v56 = (System_Array_o *)sub_1D0F164(int_____TypeInfo, &v67);
-  v57.fields.value = Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_66261996(v56, v57, 0);
-  v64 = TitleIlluminationManager_TypeInfo;
-  if ( !TitleIlluminationManager_TypeInfo->_2.cctor_finished )
+  v72 = 2;
+  v71 = xmmword_ED0728;
+  v59 = (System_Array_o *)sub_21FFD18(int_____TypeInfo, &v71);
+  v60.fields.value = Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v59, v60, 0);
+  v68 = TitleIlluminationManager_TypeInfo;
+  if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo);
-    v64 = TitleIlluminationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v61, v62);
+    v68 = TitleIlluminationManager_TypeInfo;
   }
-  static_fields = v64->static_fields;
-  static_fields->DirTable = (struct System_Int32_array *)v56;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->DirTable, (int32_t)v56, v58, v59, v60, v61, v62, v63);
+  static_fields = v68->static_fields;
+  static_fields->DirTable = (struct System_Int32_array *)v59;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->DirTable, (int32_t)v59, v62, v63, v64, v65, v66, v67);
 }
 
 
 void TitleIlluminationManager__OnDestroy(TitleIlluminationManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.IlluminationPrefab = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.IlluminationPrefab, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationPrefab, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -349,12 +383,12 @@ void TitleIlluminationManager__ReturnIllumination(
   TitleIlluminationManager_o *v4; // x20
   System_Collections_Generic_List_object__o *IlluminationDisp; // x21
   System_Collections_Generic_List_object__o *IlluminationPool; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   struct System_Object_array *items; // x8
   _QWORD *v14; // x9
   __int64 size; // x10
@@ -362,11 +396,11 @@ void TitleIlluminationManager__ReturnIllumination(
   Il2CppClass **v17; // x0
 
   v4 = this;
-  if ( (byte_4E74E0A & 1) == 0 )
+  if ( (byte_5935E0F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    this = (TitleIlluminationManager_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Remove__);
-    byte_4E74E0A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    this = (TitleIlluminationManager_o *)sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Remove__);
+    byte_5935E0F = 1;
   }
   if ( !obj )
     goto LABEL_11;
@@ -380,7 +414,7 @@ void TitleIlluminationManager__ReturnIllumination(
     || (System_Collections_Generic_List_object___Remove(
           IlluminationDisp,
           (Il2CppObject *)this,
-          (const MethodInfo_395D938 *)Method_System_Collections_Generic_List_GameObject__Remove__),
+          (const MethodInfo_445101C *)Method_System_Collections_Generic_List_GameObject__Remove__),
         IlluminationPool = (System_Collections_Generic_List_object__o *)v4->fields.IlluminationPool,
         this = (TitleIlluminationManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)obj, 0),
         !IlluminationPool)
@@ -390,7 +424,7 @@ void TitleIlluminationManager__ReturnIllumination(
         !items) )
   {
 LABEL_11:
-    sub_1D0F30C(this, obj);
+    sub_21FFECC(this, obj);
   }
   size = IlluminationPool->fields._size;
   v16 = this;
@@ -399,14 +433,14 @@ LABEL_11:
     System_Collections_Generic_List_object___AddWithResize(
       IlluminationPool,
       (Il2CppObject *)this,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
-    IlluminationPool->fields._size = size + 1;
     v17 = &items->obj.klass + size;
+    IlluminationPool->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v16;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -420,30 +454,31 @@ void TitleIlluminationManager__SpawnIllumination(
 {
   System_Collections_Generic_List_object__o *IlluminationPool; // x0
   UnityEngine_GameObject_o *v8; // x22
-  const MethodInfo *v9; // x5
-  TitleIlluminationComponent_o *v10; // x22
+  __int64 v9; // x2
+  const MethodInfo *v10; // x5
+  TitleIlluminationComponent_o *v11; // x22
   System_Collections_Generic_List_object__o *IlluminationDisp; // x19
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v20; // x9
   __int64 size; // x10
-  System_Collections_Generic_List_object__o *v21; // x1
-  Il2CppClass **v22; // x0
+  System_Collections_Generic_List_object__o *v22; // x1
+  Il2CppClass **v23; // x0
 
-  if ( (byte_4E74E0C & 1) == 0 )
+  if ( (byte_5935E11 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__RemoveAt__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1D0F0B4(&TitleIlluminationManager_TypeInfo);
-    byte_4E74E0C = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
+    byte_5935E11 = 1;
   }
   IlluminationPool = (System_Collections_Generic_List_object__o *)this->fields.IlluminationPool;
   if ( !IlluminationPool )
@@ -453,65 +488,65 @@ void TitleIlluminationManager__SpawnIllumination(
   IlluminationPool = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     IlluminationPool,
                                                                     0,
-                                                                    (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   if ( !this->fields.IlluminationPool )
     goto LABEL_17;
   v8 = (UnityEngine_GameObject_o *)IlluminationPool;
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)this->fields.IlluminationPool,
     0,
-    (const MethodInfo_395DBE4 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
   if ( !v8 )
     goto LABEL_17;
   IlluminationPool = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     v8,
-                                                                    (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
-  v10 = (TitleIlluminationComponent_o *)IlluminationPool;
-  if ( !TitleIlluminationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo);
-  if ( !v10 )
+                                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
+  v11 = (TitleIlluminationComponent_o *)IlluminationPool;
+  if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, *(_QWORD *)&x, v9);
+  if ( !v11 )
     goto LABEL_17;
   TitleIlluminationComponent__Setup(
-    v10,
+    v11,
     x,
     y,
     TitleIlluminationManager_TypeInfo->static_fields->IlluminationSize,
     this->fields.FadeSpeed,
     this,
-    v9);
+    v10);
   IlluminationPool = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
-                                                                    (UnityEngine_Component_o *)v10,
+                                                                    (UnityEngine_Component_o *)v11,
                                                                     0);
   if ( !IlluminationPool
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IlluminationPool, 1, 0),
         IlluminationDisp = (System_Collections_Generic_List_object__o *)this->fields.IlluminationDisp,
         IlluminationPool = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
-                                                                          (UnityEngine_Component_o *)v10,
+                                                                          (UnityEngine_Component_o *)v11,
                                                                           0),
         !IlluminationDisp)
     || (items = IlluminationDisp->fields._items,
-        v19 = Method_System_Collections_Generic_List_GameObject__Add__,
+        v20 = Method_System_Collections_Generic_List_GameObject__Add__,
         ++IlluminationDisp->fields._version,
         !items) )
   {
 LABEL_17:
-    sub_1D0F30C(IlluminationPool, *(_QWORD *)&x);
+    sub_21FFECC(IlluminationPool, *(_QWORD *)&x);
   }
   size = IlluminationDisp->fields._size;
-  v21 = IlluminationPool;
+  v22 = IlluminationPool;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       IlluminationDisp,
       (Il2CppObject *)IlluminationPool,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
+    v23 = &items->obj.klass + size;
     IlluminationDisp->fields._size = size + 1;
-    v22 = &items->obj.klass + size;
-    v22[4] = (Il2CppClass *)v21;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v21, v12, v13, v14, v15, v16, v17);
+    v23[4] = (Il2CppClass *)v22;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v22, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -538,16 +573,16 @@ void TitleIlluminationManager__Update(TitleIlluminationManager_o *this, const Me
   const MethodInfo *v7; // x1
   float v8; // s0
   _BOOL4 Spawn; // w8
-  struct System_Int32_array *IlluminationPopFrames; // x8
+  struct System_Int32_array *IlluminationPopFrames; // x9
   __int64 v11; // x20
   unsigned __int64 max_length_low; // x10
-  unsigned __int64 v13; // x9
+  unsigned __int64 v13; // x8
   float v14; // s0
   float v15; // s1
   float v16; // s0
-  int v17; // w8
+  int v17; // w9
   int v18; // w10
-  struct System_Int32_array *IlluminationPopProb; // x8
+  struct System_Int32_array *IlluminationPopProb; // x9
   int v20; // w24
 
   deltaTime = UnityEngine_Time__get_deltaTime(0);
@@ -561,7 +596,7 @@ void TitleIlluminationManager__Update(TitleIlluminationManager_o *this, const Me
     IlluminationPopFrames = this->fields.IlluminationPopFrames;
     if ( !IlluminationPopFrames )
 LABEL_17:
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     v11 = 8;
     while ( 1 )
     {
@@ -575,9 +610,9 @@ LABEL_17:
       v15 = this->fields.PopTime / v14;
       v16 = PopTime / v14;
       v17 = (int)v15;
-      v18 = (int)v16;
       if ( v15 == INFINITY )
         v17 = 0x80000000;
+      v18 = (int)v16;
       if ( v16 == INFINITY )
         v18 = 0x80000000;
       if ( v18 != v17 )
@@ -587,9 +622,9 @@ LABEL_17:
           goto LABEL_17;
         if ( v13 >= LODWORD(IlluminationPopProb->max_length) )
 LABEL_19:
-          sub_1D0F314(v6);
+          sub_21FFED4(v6);
         v20 = *((_DWORD *)&IlluminationPopProb->obj.klass + v11);
-        v6 = UnityEngine_Random__Range_73319196(0, 100, 0);
+        v6 = UnityEngine_Random__Range_83187376(0, 100, 0);
         if ( (int)v6 < v20 )
           TitleIlluminationManager__CreateIllumination(this, v7);
       }
@@ -609,153 +644,167 @@ void TitleIlluminationManager__UpdateIllumination(
 {
   TitleIlluminationManager_o *v4; // x19
   struct TitleIlluminationManager_IlluminationInfo_array *IlluminationObjects; // x22
-  int max_length; // w8
-  int i; // w23
+  unsigned __int64 max_length_low; // x8
+  unsigned __int64 v7; // x23
   TitleIlluminationManager_IlluminationInfo_o *v8; // x26
-  float v9; // s0
-  int v10; // w28
-  int v11; // w27
-  const MethodInfo *v12; // x3
-  TitleIlluminationManager_c *v13; // x8
-  unsigned int v14; // w20
+  float MoveSpeed; // s1
+  float v10; // s0
+  unsigned int v11; // w27
+  __int64 v12; // x2
+  const MethodInfo *v13; // x3
+  TitleIlluminationManager_c *v14; // x8
+  unsigned int v15; // w20
   struct TitleIlluminationManager_StaticFields *static_fields; // x9
-  struct System_Int32_array *DirTable; // x10
+  struct System_Int32_array *DirTable; // x11
   Il2CppArrayBounds *bounds; // x14
-  int32_t y; // w11
+  int32_t y; // w10
   il2cpp_array_size_t length; // x13
-  il2cpp_array_size_t v20; // x14
-  char *v21; // x10
-  int32_t v22; // w20
-  int32_t v23; // w21
+  il2cpp_array_size_t v21; // x14
+  char *v22; // x11
+  int32_t v23; // w20
+  int32_t v24; // w21
   int IlluminationWidth; // w10
-  int v25; // w11
+  int v26; // w11
   int32_t IlluminationHeight; // w9
-  int v27; // w10
-  int v28; // w8
-  __int64 v29; // d0
-  int v30; // w8
-  bool v31; // zf
+  int v28; // w10
+  int v29; // w8
+  __int64 v30; // d0
+  int v31; // w8
+  bool v32; // zf
+  int32_t IlluminationCount; // w8
 
   v4 = this;
-  if ( (byte_4E74E0D & 1) == 0 )
+  if ( (byte_5935E12 & 1) == 0 )
   {
-    this = (TitleIlluminationManager_o *)sub_1D0F0B4(&TitleIlluminationManager_TypeInfo);
-    byte_4E74E0D = 1;
+    this = (TitleIlluminationManager_o *)sub_21FFC50(&TitleIlluminationManager_TypeInfo);
+    byte_5935E12 = 1;
   }
   IlluminationObjects = v4->fields.IlluminationObjects;
   if ( IlluminationObjects )
   {
-    max_length = IlluminationObjects->max_length;
-    if ( max_length >= 1 )
+    max_length_low = LODWORD(IlluminationObjects->max_length);
+    if ( (int)max_length_low >= 1 )
     {
-      for ( i = 0; i < max_length; ++i )
+      v7 = 0;
+      do
       {
-        if ( i >= (unsigned int)max_length )
-LABEL_46:
-          sub_1D0F314(this);
-        v8 = IlluminationObjects->m_Items[i];
+        if ( v7 >= max_length_low )
+LABEL_48:
+          sub_21FFED4(this);
+        v8 = IlluminationObjects->m_Items[v7];
         if ( !v8 )
-LABEL_47:
-          sub_1D0F30C(this, method);
+LABEL_49:
+          sub_21FFECC(this, method);
         if ( v8->fields.exists )
         {
-          v9 = v8->fields.moveTime + delta;
-          v8->fields.moveTime = v9;
-          if ( v9 >= v4->fields.MoveSpeed )
+          MoveSpeed = v4->fields.MoveSpeed;
+          v10 = v8->fields.moveTime + delta;
+          v8->fields.moveTime = v10;
+          if ( v10 >= MoveSpeed )
           {
-            v10 = 10;
+            v11 = 10;
             v8->fields.moveTime = 0.0;
-            do
+            while ( 1 )
             {
-              v11 = v10;
-              this = (TitleIlluminationManager_o *)UnityEngine_Random__Range_73319196(0, 3, 0);
-              v13 = TitleIlluminationManager_TypeInfo;
-              v14 = (unsigned int)this;
-              if ( !TitleIlluminationManager_TypeInfo->_2.cctor_finished )
+              this = (TitleIlluminationManager_o *)UnityEngine_Random__Range_83187376(0, 3, 0);
+              v14 = TitleIlluminationManager_TypeInfo;
+              v15 = (unsigned int)this;
+              if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
               {
-                j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo);
-                v13 = TitleIlluminationManager_TypeInfo;
+                j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, method, v12);
+                v14 = TitleIlluminationManager_TypeInfo;
               }
-              static_fields = v13->static_fields;
+              static_fields = v14->static_fields;
               DirTable = static_fields->DirTable;
               if ( !DirTable )
-                goto LABEL_47;
+                goto LABEL_49;
               bounds = DirTable->bounds;
               y = v8->fields.y;
               if ( (y & 1u) >= LODWORD(bounds->length) )
-                goto LABEL_46;
+                goto LABEL_48;
               length = bounds[1].length;
-              if ( v14 >= (unsigned int)length )
-                goto LABEL_46;
-              v20 = bounds[2].length;
-              if ( (unsigned int)v20 < 2 )
-                goto LABEL_46;
-              v21 = (char *)DirTable + 4 * v20 * ((int)v14 + length * (y & 1));
-              --v10;
-              v22 = v8->fields.x + *((_DWORD *)v21 + 8);
-              v23 = *((_DWORD *)v21 + 9) + y;
-              if ( v22 != v8->fields.prevX || v23 != v8->fields.prevY )
+              if ( v15 >= (unsigned int)length )
+                goto LABEL_48;
+              v21 = bounds[2].length;
+              if ( (unsigned int)v21 < 2 )
+                goto LABEL_48;
+              v22 = (char *)DirTable + 4 * v21 * ((int)v15 + length * (y & 1));
+              v23 = v8->fields.x + *((_DWORD *)v22 + 8);
+              v24 = *((_DWORD *)v22 + 9) + y;
+              if ( v23 == v8->fields.prevX && v24 == v8->fields.prevY )
+                goto LABEL_34;
+              if ( !*(&v14->_2.cctor_finished + 1) )
               {
-                if ( !v13->_2.cctor_finished )
-                {
-                  j_il2cpp_runtime_class_init_0(v13);
-                  v13 = TitleIlluminationManager_TypeInfo;
-                  static_fields = TitleIlluminationManager_TypeInfo->static_fields;
-                }
+                j_il2cpp_runtime_class_init_0(v14, method, v12);
+                v14 = TitleIlluminationManager_TypeInfo;
+                static_fields = TitleIlluminationManager_TypeInfo->static_fields;
+              }
+              IlluminationWidth = static_fields->IlluminationWidth;
+              v26 = IlluminationWidth <= 0 ? -IlluminationWidth : 1 - IlluminationWidth;
+              if ( v23 < v26 >> 1 )
+                goto LABEL_34;
+              if ( !*(&v14->_2.cctor_finished + 1) )
+              {
+                j_il2cpp_runtime_class_init_0(v14, method, v12);
+                v14 = TitleIlluminationManager_TypeInfo;
+                static_fields = TitleIlluminationManager_TypeInfo->static_fields;
                 IlluminationWidth = static_fields->IlluminationWidth;
-                v25 = IlluminationWidth <= 0 ? -IlluminationWidth : 1 - IlluminationWidth;
-                if ( v22 >= v25 >> 1 )
+              }
+              if ( v23 > IlluminationWidth / 2 )
+                goto LABEL_34;
+              if ( !*(&v14->_2.cctor_finished + 1) )
+              {
+                j_il2cpp_runtime_class_init_0(v14, method, v12);
+                v14 = TitleIlluminationManager_TypeInfo;
+                static_fields = TitleIlluminationManager_TypeInfo->static_fields;
+              }
+              IlluminationHeight = static_fields->IlluminationHeight;
+              v28 = IlluminationHeight <= 0 ? -IlluminationHeight : 1 - IlluminationHeight;
+              if ( v24 < v28 >> 1 )
+              {
+LABEL_34:
+                if ( v11 < 2 )
+                  goto LABEL_43;
+              }
+              else
+              {
+                if ( !*(&v14->_2.cctor_finished + 1) )
                 {
-                  if ( !v13->_2.cctor_finished )
+                  j_il2cpp_runtime_class_init_0(v14, method, v12);
+                  IlluminationHeight = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
+                }
+                if ( IlluminationHeight >= 0 )
+                  v29 = IlluminationHeight;
+                else
+                  v29 = IlluminationHeight + 1;
+                if ( v24 <= v29 >> 1 || v11 <= 1 )
+                {
+LABEL_43:
+                  v30 = *(_QWORD *)&v8->fields.x;
+                  v8->fields.x = v23;
+                  v8->fields.y = v24;
+                  *(_QWORD *)&v8->fields.prevX = v30;
+                  TitleIlluminationManager__SpawnIllumination(v4, v23, v24, v13);
+                  v31 = v8->fields.restCount - 1;
+                  v32 = v8->fields.restCount == 1;
+                  v8->fields.restCount = v31;
+                  if ( v31 < 0 || v32 )
                   {
-                    j_il2cpp_runtime_class_init_0(v13);
-                    v13 = TitleIlluminationManager_TypeInfo;
-                    static_fields = TitleIlluminationManager_TypeInfo->static_fields;
-                    IlluminationWidth = static_fields->IlluminationWidth;
+                    IlluminationCount = v4->fields.IlluminationCount;
+                    v8->fields.exists = 0;
+                    v4->fields.IlluminationCount = IlluminationCount - 1;
                   }
-                  if ( v22 <= IlluminationWidth / 2 )
-                  {
-                    if ( !v13->_2.cctor_finished )
-                    {
-                      j_il2cpp_runtime_class_init_0(v13);
-                      v13 = TitleIlluminationManager_TypeInfo;
-                      static_fields = TitleIlluminationManager_TypeInfo->static_fields;
-                    }
-                    IlluminationHeight = static_fields->IlluminationHeight;
-                    v27 = IlluminationHeight <= 0 ? -IlluminationHeight : 1 - IlluminationHeight;
-                    if ( v23 >= v27 >> 1 )
-                    {
-                      if ( !v13->_2.cctor_finished )
-                      {
-                        j_il2cpp_runtime_class_init_0(v13);
-                        IlluminationHeight = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
-                      }
-                      v28 = IlluminationHeight >= 0 ? IlluminationHeight : IlluminationHeight + 1;
-                      if ( v23 <= v28 >> 1 )
-                        break;
-                    }
-                  }
+                  break;
                 }
               }
-            }
-            while ( v11 > 1 );
-            v29 = *(_QWORD *)&v8->fields.x;
-            v8->fields.x = v22;
-            v8->fields.y = v23;
-            *(_QWORD *)&v8->fields.prevX = v29;
-            TitleIlluminationManager__SpawnIllumination(v4, v22, v23, v12);
-            v30 = v8->fields.restCount - 1;
-            v31 = v8->fields.restCount == 1;
-            v8->fields.restCount = v30;
-            if ( v30 < 0 || v31 )
-            {
-              --v4->fields.IlluminationCount;
-              v8->fields.exists = 0;
+              --v11;
             }
           }
         }
-        max_length = IlluminationObjects->max_length;
+        max_length_low = LODWORD(IlluminationObjects->max_length);
+        ++v7;
       }
+      while ( (int)v7 < (int)max_length_low );
     }
   }
 }

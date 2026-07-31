@@ -14,16 +14,19 @@ void EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, const Metho
 
 void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t AutoPlayMode; // w8
-  UnityEngine_Object_o *v4; // x20
+  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_c *v6; // x0
+  int v7; // w9
   UIEquipGraphV_o *uiEquipGraphV; // x0
-  int32_t v6; // w1
+  int32_t v9; // w1
 
-  if ( (byte_4E74B6E & 1) == 0 )
+  if ( (byte_5935B00 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_2518/*"AutoPlayView"*/);
-    byte_4E74B6E = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_2611/*"AutoPlayView"*/);
+    byte_5935B00 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -32,21 +35,27 @@ void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, cons
     this->fields.AutoPlayMode = 3;
     if ( uiEquipGraphV )
     {
-      v6 = 1;
-      goto LABEL_14;
+      v9 = 1;
+      goto LABEL_16;
     }
 LABEL_21:
-    sub_1D0F30C(uiEquipGraphV, method);
+    sub_21FFECC(uiEquipGraphV, method);
   }
   if ( AutoPlayMode == 1 )
   {
     uiEquipGraphV = this->fields.uiEquipGraphV;
-    this->fields.AutoPlayMode = 2;
     this->fields._rotbtn_k__BackingField = 0;
+    this->fields.AutoPlayMode = 2;
     if ( uiEquipGraphV )
     {
       UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0);
-      goto LABEL_17;
+LABEL_17:
+      UnityEngine_MonoBehaviour__Invoke(
+        (UnityEngine_MonoBehaviour_o *)this,
+        (System_String_o *)StringLiteral_2611/*"AutoPlayView"*/,
+        this->fields.AutoPlayInterval,
+        0);
+      return;
     }
     goto LABEL_21;
   }
@@ -59,12 +68,14 @@ LABEL_21:
   }
   else
   {
+    v5 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
+    v6 = UnityEngine_Object_TypeInfo;
     this->fields.AutoPlayMode = 1;
+    v7 = *(&v6->_2.cctor_finished + 1);
     this->fields._rotbtn_k__BackingField = 1;
-    v4 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
+    if ( !v7 )
+      j_il2cpp_runtime_class_init_0(v6, method, v2);
+    if ( UnityEngine_Object__op_Inequality(v5, 0, 0) )
     {
       uiEquipGraphV = this->fields.uiEquipGraphV;
       if ( uiEquipGraphV )
@@ -73,16 +84,10 @@ LABEL_21:
         uiEquipGraphV = this->fields.uiEquipGraphV;
         if ( uiEquipGraphV )
         {
-          v6 = 2;
-LABEL_14:
-          UIEquipGraphV__SetAllButton(uiEquipGraphV, v6, 0);
-LABEL_17:
-          UnityEngine_MonoBehaviour__Invoke(
-            (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_2518/*"AutoPlayView"*/,
-            this->fields.AutoPlayInterval,
-            0);
-          return;
+          v9 = 2;
+LABEL_16:
+          UIEquipGraphV__SetAllButton(uiEquipGraphV, v9, 0);
+          goto LABEL_17;
         }
       }
       goto LABEL_21;
@@ -103,7 +108,7 @@ void EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *this, const 
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   ScriptManager__OnClickFowardView(scriptManager, 0);
 }
 
@@ -114,30 +119,38 @@ void EquipGraphViewModeState__OnClickAutoPlayButton(
         bool isSetting,
         const MethodInfo *method)
 {
+  int autobtn_k__BackingField; // w8
   UnityEngine_Behaviour_o *autoPlaySprite; // x0
-  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x1
 
+  autobtn_k__BackingField = this->fields._autobtn_k__BackingField;
   if ( !isSetting )
-    this->fields._autobtn_k__BackingField ^= 1u;
-  autoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.autoPlaySprite;
-  if ( !autoPlaySprite )
-    goto LABEL_9;
-  if ( this->fields._autobtn_k__BackingField )
   {
-    UnityEngine_Behaviour__set_enabled(autoPlaySprite, 1, 0);
-    autoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.quickAutoPlaySprite;
-    this->fields._quickAutobtn_k__BackingField = 0;
+    autobtn_k__BackingField ^= 1u;
+    this->fields._autobtn_k__BackingField = autobtn_k__BackingField;
+  }
+  autoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.autoPlaySprite;
+  if ( autobtn_k__BackingField )
+  {
     if ( autoPlaySprite )
     {
-      UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
-      this->fields.AutoPlayMode = 0;
-      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
-      EquipGraphViewModeState__AutoPlayView(this, v5);
-      return;
+      UnityEngine_Behaviour__set_enabled(autoPlaySprite, 1, 0);
+      autoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.quickAutoPlaySprite;
+      this->fields._quickAutobtn_k__BackingField = 0;
+      if ( autoPlaySprite )
+      {
+        UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
+        this->fields.AutoPlayMode = 0;
+        UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
+        EquipGraphViewModeState__AutoPlayView(this, v6);
+        return;
+      }
     }
-LABEL_9:
-    sub_1D0F30C(autoPlaySprite, isSetting);
+LABEL_10:
+    sub_21FFECC(autoPlaySprite, isSetting);
   }
+  if ( !autoPlaySprite )
+    goto LABEL_10;
   UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
   if ( !this->fields._quickAutobtn_k__BackingField )
     UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -150,37 +163,45 @@ void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
         bool isSetting,
         const MethodInfo *method)
 {
+  int quickAutobtn_k__BackingField; // w8
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_4E74B6D & 1) == 0 )
+  if ( (byte_5935AFF & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6927/*"FowardView"*/);
-    byte_4E74B6D = 1;
+    sub_21FFC50(&StringLiteral_7128/*"FowardView"*/);
+    byte_5935AFF = 1;
   }
+  quickAutobtn_k__BackingField = this->fields._quickAutobtn_k__BackingField;
   if ( !isSetting )
-    this->fields._quickAutobtn_k__BackingField ^= 1u;
-  quickAutoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.quickAutoPlaySprite;
-  if ( !quickAutoPlaySprite )
-    goto LABEL_11;
-  if ( this->fields._quickAutobtn_k__BackingField )
   {
-    UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 1, 0);
-    quickAutoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.autoPlaySprite;
-    this->fields._autobtn_k__BackingField = 0;
+    quickAutobtn_k__BackingField ^= 1u;
+    this->fields._quickAutobtn_k__BackingField = quickAutobtn_k__BackingField;
+  }
+  quickAutoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.quickAutoPlaySprite;
+  if ( quickAutobtn_k__BackingField )
+  {
     if ( quickAutoPlaySprite )
     {
-      UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
-      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
-      UnityEngine_MonoBehaviour__Invoke(
-        (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6927/*"FowardView"*/,
-        this->fields.AutoPlayInterval,
-        0);
-      return;
+      UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 1, 0);
+      quickAutoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.autoPlaySprite;
+      this->fields._autobtn_k__BackingField = 0;
+      if ( quickAutoPlaySprite )
+      {
+        UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
+        UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
+        UnityEngine_MonoBehaviour__Invoke(
+          (UnityEngine_MonoBehaviour_o *)this,
+          (System_String_o *)StringLiteral_7128/*"FowardView"*/,
+          this->fields.AutoPlayInterval,
+          0);
+        return;
+      }
     }
-LABEL_11:
-    sub_1D0F30C(quickAutoPlaySprite, isSetting);
+LABEL_12:
+    sub_21FFECC(quickAutoPlaySprite, isSetting);
   }
+  if ( !quickAutoPlaySprite )
+    goto LABEL_12;
   UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
   if ( !this->fields._autobtn_k__BackingField )
     UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);

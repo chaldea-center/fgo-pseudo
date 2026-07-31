@@ -1,7 +1,6 @@
 void BattleWaitFinishMovieTask___ctor(BattleWaitFinishMovieTask_o *this, const MethodInfo *method)
 {
-  BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
-  this->fields.actiontype = 79;
+  BaseAiActBattleLogicTask___ctor((BaseAiActBattleLogicTask_o *)this, 79, 0);
 }
 
 
@@ -12,12 +11,12 @@ BattleActionData_o *BattleWaitFinishMovieTask__MakeActionData(
 {
   BattleWaitFinishMovieActionData_o *v3; // x19
 
-  if ( (byte_4E7AAE8 & 1) == 0 )
+  if ( (byte_593BC1F & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleWaitFinishMovieActionData_TypeInfo);
-    byte_4E7AAE8 = 1;
+    sub_21FFC50(&BattleWaitFinishMovieActionData_TypeInfo);
+    byte_593BC1F = 1;
   }
-  v3 = (BattleWaitFinishMovieActionData_o *)sub_1D0F300(BattleWaitFinishMovieActionData_TypeInfo);
+  v3 = (BattleWaitFinishMovieActionData_o *)sub_21FFEBC(BattleWaitFinishMovieActionData_TypeInfo);
   BattleWaitFinishMovieActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

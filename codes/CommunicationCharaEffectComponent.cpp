@@ -1,12 +1,12 @@
 void CommunicationCharaEffectComponent___ctor(CommunicationCharaEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78D50 & 1) == 0 )
+  if ( (byte_5939D96 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonEffectComponent_TypeInfo);
-    byte_4E78D50 = 1;
+    sub_21FFC50(&CommonEffectComponent_TypeInfo);
+    byte_5939D96 = 1;
   }
-  if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+  if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0);
 }
 
@@ -41,7 +41,7 @@ void CommunicationCharaEffectComponent__EndDispFigure(
         !v4) )
   {
 LABEL_10:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   callback = v4->fields.callback;
   if ( callback )
@@ -51,6 +51,7 @@ LABEL_10:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommunicationCharaEffectComponent__SetFace(
         CommunicationCharaEffectComponent_o *this,
         int32_t faceType,
@@ -60,20 +61,20 @@ void CommunicationCharaEffectComponent__SetFace(
   __int64 v6; // x1
   UIStandFigureRender_o *v7; // x0
 
-  if ( (byte_4E78D4F & 1) == 0 )
+  if ( (byte_5939D95 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78D4F = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939D95 = 1;
   }
   figure = (UnityEngine_Object_o *)this->fields.figure;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&faceType);
   if ( UnityEngine_Object__op_Inequality(figure, 0, 0) )
   {
     v7 = (UIStandFigureRender_o *)this->fields.figure;
     if ( !v7 )
-      sub_1D0F30C(0, v6);
-    UIStandFigureRender__SetFace_45444308(v7, faceType, 0.0, 0);
+      sub_21FFECC(0, v6);
+    UIStandFigureRender__SetFace_51032680(v7, faceType, 0.0, 0);
   }
 }
 
@@ -83,11 +84,11 @@ void CommunicationCharaEffectComponent__SetParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   Il2CppClass *v10; // x8
   __int64 naturalAligment; // x9
   Il2CppObject *v12; // x10
@@ -101,20 +102,20 @@ void CommunicationCharaEffectComponent__SetParam(
   int32_t limitCount; // w22
   int32_t faceType; // w23
   System_Action_o *v22; // x24
-  struct UIStandFigureM_o *MeshPrefab_42108368; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
+  struct UIStandFigureM_o *MeshPrefab_47679776; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
   int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  bool v28; // w6
+  bool v29; // w7
 
-  if ( (byte_4E78D4E & 1) == 0 )
+  if ( (byte_5939D94 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_CommunicationCharaEffectComponent_EndDispFigure__);
-    sub_1D0F0B4(&CommunicationCharaEffectParam_TypeInfo);
-    byte_4E78D4E = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_CommunicationCharaEffectComponent_EndDispFigure__);
+    sub_21FFC50(&CommunicationCharaEffectParam_TypeInfo);
+    byte_5939D94 = 1;
   }
   if ( param )
   {
@@ -151,7 +152,15 @@ void CommunicationCharaEffectComponent__SetParam(
     this->fields.communicationCharaParam = 0;
     p_communicationCharaParam = &this->fields.communicationCharaParam;
   }
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_communicationCharaParam, v13, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)p_communicationCharaParam,
+    v13,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   ((void (__fastcall *)(CommunicationCharaEffectComponent_o *, _QWORD, _QWORD, const MethodInfo *))this->klass->vtable._8_Stop.methodPtr)(
     this,
     0,
@@ -174,15 +183,15 @@ void CommunicationCharaEffectComponent__SetParam(
         this->fields.isLoad = 1,
         !communicationCharaParam) )
   {
-    sub_1D0F30C(noiseEffect1, v15);
+    sub_21FFECC(noiseEffect1, v15);
   }
   figureBase = this->fields.figureBase;
   svtId = communicationCharaParam->fields.svtId;
   limitCount = communicationCharaParam->fields.limitCount;
   faceType = communicationCharaParam->fields.faceType;
-  v22 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+  v22 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
   System_Action___ctor(v22, (Il2CppObject *)this, Method_CommunicationCharaEffectComponent_EndDispFigure__, 0);
-  MeshPrefab_42108368 = StandFigureManager__CreateMeshPrefab_42108368(
+  MeshPrefab_47679776 = StandFigureManager__CreateMeshPrefab_47679776(
                           figureBase,
                           svtId,
                           limitCount,
@@ -191,10 +200,10 @@ void CommunicationCharaEffectComponent__SetParam(
                           v22,
                           0,
                           0);
-  this->fields.figure = MeshPrefab_42108368;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.figure,
-    (int32_t)MeshPrefab_42108368,
+  this->fields.figure = MeshPrefab_47679776;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.figure,
+    (int32_t)MeshPrefab_47679776,
     v24,
     v25,
     v26,
@@ -221,7 +230,7 @@ void CommunicationCharaEffectComponent__Update(CommunicationCharaEffectComponent
     {
       noiseEffect2 = this->fields.noiseEffect2;
       if ( !noiseEffect2 )
-        sub_1D0F30C(0, v4);
+        sub_21FFECC(0, v4);
       CommonEffectComponent__ForceStart(noiseEffect2, 0);
       this->fields.noiseCount = 2.0;
     }

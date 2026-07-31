@@ -1,13 +1,13 @@
 void ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77F9B & 1) == 0 )
+  if ( (byte_5938FBA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E77F9B = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_5938FBA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_4E77F98 & 1) == 0 )
+  if ( (byte_5938FB7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
-    byte_4E77F98 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+    byte_5938FB7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -30,7 +30,7 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_324E1D4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_3821E18 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -53,37 +53,39 @@ System_String_o *ServantCostumeReleaseEntity__CreatePrimaryKey(
 bool ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
   int32_t condType; // w20
+  int v4; // w8
   int32_t svtId; // w20
   int64_t costumeId; // x19
-  int32_t v6; // w0
-  int32_t v7; // w1
+  int32_t v7; // w0
+  int32_t v8; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_4E77F99 & 1) == 0 )
+  if ( (byte_5938FB8 & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E77F99 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_5938FB8 = 1;
   }
   condType = this->fields.condType;
+  v4 = *(&CondType_TypeInfo->_2.cctor_finished + 1);
   if ( condType == 64 )
   {
     svtId = this->fields.svtId;
     costumeId = this->fields.costumeId;
-    if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    v6 = 64;
-    v7 = svtId;
+    if ( !v4 )
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
+    v7 = 64;
+    v8 = svtId;
   }
   else
   {
     condTargetId = this->fields.condTargetId;
     costumeId = this->fields.condNum;
-    if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    v6 = condType;
-    v7 = condTargetId;
+    if ( !v4 )
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
+    v7 = condType;
+    v8 = condTargetId;
   }
-  return CondType__IsOpen(v6, v7, costumeId, 0, 0, 0);
+  return CondType__IsOpen(v7, v8, costumeId, 0, 0, 0);
 }
 
 
@@ -94,12 +96,12 @@ bool ServantCostumeReleaseEntity__TryGetBaseSvtId(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4E77F9A & 1) == 0 )
+  if ( (byte_5938FB9 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17292/*"baseSvtId"*/);
-    byte_4E77F9A = 1;
+    sub_21FFC50(&StringLiteral_17734/*"baseSvtId"*/);
+    byte_5938FB9 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17292/*"baseSvtId"*/, 0, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17734/*"baseSvtId"*/, 0, 0);
   *baseSvtId = IntValue;
   return IntValue != 0;
 }

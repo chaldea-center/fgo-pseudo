@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void BattleLogicServantTask___ctor(
         BattleLogicServantTask_o *this,
         int32_t actionType,
@@ -7,16 +6,15 @@ void BattleLogicServantTask___ctor(
 {
   __int64 v7; // x0
   __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
+  int32_t v9; // w1
 
-  BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actionType);
+  BattleLogicTask___ctor((BattleLogicTask_o *)this, 0);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   if ( svtData->fields.isEnemy )
-    v10 = 3;
+    v9 = 3;
   else
-    v10 = 2;
-  BattleLogicTask__setActor((BattleLogicTask_o *)this, v10, svtData->fields.uniqueId, v9);
+    v9 = 2;
+  BattleLogicTask__setActor((BattleLogicTask_o *)this, v9, svtData->fields.uniqueId, 0);
 }

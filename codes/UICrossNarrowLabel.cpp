@@ -1,50 +1,49 @@
 void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78EBA & 1) == 0 )
+  if ( (byte_5939F0A & 1) == 0 )
   {
-    sub_1D0F0B4(&UILabel_TypeInfo);
-    byte_4E78EBA = 1;
+    sub_21FFC50(&UILabel_TypeInfo);
+    byte_5939F0A = 1;
   }
-  if ( !UILabel_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
+  if ( !*(&UILabel_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UILabel_TypeInfo, method);
   UILabel___ctor((UILabel_o *)this, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UICrossNarrowLabel__SetCrossNarrowText(
         UICrossNarrowLabel_o *this,
         System_String_o *text,
         const MethodInfo *method)
 {
-  int32_t mWidth; // w8
+  int32_t mWidth; // w9
   ManagerConfig_c *v6; // x0
-  float v7; // s10
+  float v7; // s8
   UnityEngine_Transform_o *transform; // x0
   __int64 v9; // x1
-  float y; // s8
-  float baseWidth; // s0
-  float v12; // s1
-  bool v13; // cc
-  float v14; // s0
-  float z; // s9
-  float value; // [xsp+Ch] [xbp-34h]
+  int32_t baseWidth; // w20
+  float y; // s9
+  float z; // s10
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  float v15; // s2
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E78EB9 & 1) == 0 )
+  if ( (byte_5939F09 & 1) == 0 )
   {
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    byte_4E78EB9 = 1;
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    byte_5939F09 = 1;
   }
   if ( !this->fields.isInit )
   {
     mWidth = this->fields.mWidth;
     this->fields.isInit = 1;
-    this->fields.baseWidth = mWidth;
     v6 = ManagerConfig_TypeInfo;
-    if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+    this->fields.baseWidth = mWidth;
+    if ( !*(&v6->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+      j_il2cpp_runtime_class_init_0(v6, text);
       v6 = ManagerConfig_TypeInfo;
     }
     UIWidget__set_width((UIWidget_o *)this, v6->static_fields->WIDTH, 0);
@@ -52,24 +51,20 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   UILabel__set_text((UILabel_o *)this, text, 0);
   LODWORD(v7) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)this, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  if ( !transform )
-    goto LABEL_12;
-  localScale = UnityEngine_Transform__get_localScale(transform, 0);
-  y = localScale.fields.y;
-  baseWidth = (float)this->fields.baseWidth;
-  v12 = baseWidth / v7;
-  v13 = v7 <= baseWidth;
-  v14 = 1.0;
-  if ( !v13 )
-    v14 = v12;
-  z = localScale.fields.z;
-  value = v14;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  if ( !transform )
-LABEL_12:
-    sub_1D0F30C(transform, v9);
-  v18.fields.x = value;
-  v18.fields.y = y;
-  v18.fields.z = z;
-  UnityEngine_Transform__set_localScale(transform, v18, 0);
+  if ( !transform
+    || (localScale = UnityEngine_Transform__get_localScale(transform, 0),
+        baseWidth = this->fields.baseWidth,
+        y = localScale.fields.y,
+        z = localScale.fields.z,
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
+  {
+    sub_21FFECC(transform, v9);
+  }
+  if ( v7 <= (float)baseWidth )
+    v13 = 1.0;
+  else
+    v13 = (float)baseWidth / v7;
+  v14 = y;
+  v15 = z;
+  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v13, 0);
 }

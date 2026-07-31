@@ -18,28 +18,28 @@ EquipPossessionSkillInfoComponent_o *EquipPossessionSkillInfoComponent__CreateEq
   Il2CppObject *Component_object; // x19
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E7B04B & 1) == 0 )
+  if ( (byte_593C190 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleServantConfConponent_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EquipPossessionSkillInfoComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B04B = 1;
+    sub_21FFC50(&BattleServantConfConponent_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EquipPossessionSkillInfoComponent___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C190 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, parentObj);
   v9 = UnityEngine_Object__Instantiate_object_(
          (Il2CppObject *)baseObj,
-         (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  GameObjectExtensions__SetParent_37348928((UnityEngine_GameObject_o *)v9, parentObj, 0);
+         (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  GameObjectExtensions__SetParent_42881836((UnityEngine_GameObject_o *)v9, parentObj, 0);
   if ( !v9 )
     goto LABEL_13;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0);
   GameObjectExtensions__ResetTransform((UnityEngine_GameObject_o *)v9, 0);
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v9, 0);
   v12 = transform;
-  if ( !BattleServantConfConponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo);
+  if ( !*(&BattleServantConfConponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo, v11);
   if ( !v12 )
     goto LABEL_13;
   v15.fields.z = 0.0;
@@ -48,7 +48,7 @@ EquipPossessionSkillInfoComponent_o *EquipPossessionSkillInfoComponent__CreateEq
   UnityEngine_Transform__set_localPosition(v12, v15, 0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v9,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EquipPossessionSkillInfoComponent___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EquipPossessionSkillInfoComponent___);
   transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
                                            (UnityEngine_Object_o *)Component_object,
                                            0,
@@ -61,7 +61,7 @@ EquipPossessionSkillInfoComponent_o *EquipPossessionSkillInfoComponent__CreateEq
       return (EquipPossessionSkillInfoComponent_o *)Component_object;
     }
 LABEL_13:
-    sub_1D0F30C(transform, v11);
+    sub_21FFECC(transform, v11);
   }
   return (EquipPossessionSkillInfoComponent_o *)Component_object;
 }
@@ -70,38 +70,42 @@ LABEL_13:
 void EquipPossessionSkillInfoComponent__Initialize(EquipPossessionSkillInfoComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *equipSkillSprite; // x20
+  __int64 v4; // x1
   UnityEngine_Object_o *equipSkillNameLabel; // x20
+  __int64 v6; // x1
   UnityEngine_Object_o *equipSkillConfLabel; // x20
+  __int64 v8; // x1
   UnityEngine_Object_o *NoEquipLabel; // x20
-  __int64 v7; // x1
+  __int64 v10; // x1
   UnityEngine_Component_o *gameObject; // x0
-  UILabel_o *v9; // x19
+  __int64 v12; // x1
+  UILabel_o *v13; // x19
 
-  if ( (byte_4E7B04C & 1) == 0 )
+  if ( (byte_593C191 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_2760/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/);
-    byte_4E7B04C = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_2854/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/);
+    byte_593C191 = 1;
   }
   equipSkillSprite = (UnityEngine_Object_o *)this->fields.equipSkillSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Equality(equipSkillSprite, 0, 0) )
   {
     equipSkillNameLabel = (UnityEngine_Object_o *)this->fields.equipSkillNameLabel;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
     if ( !UnityEngine_Object__op_Equality(equipSkillNameLabel, 0, 0) )
     {
       equipSkillConfLabel = (UnityEngine_Object_o *)this->fields.equipSkillConfLabel;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       if ( !UnityEngine_Object__op_Equality(equipSkillConfLabel, 0, 0) )
       {
         NoEquipLabel = (UnityEngine_Object_o *)this->fields.NoEquipLabel;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
         if ( !UnityEngine_Object__op_Equality(NoEquipLabel, 0, 0) )
         {
           gameObject = (UnityEngine_Component_o *)this->fields.equipSkillSprite;
@@ -132,14 +136,14 @@ void EquipPossessionSkillInfoComponent__Initialize(EquipPossessionSkillInfoCompo
           if ( !gameObject )
             goto LABEL_28;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
-          v9 = this->fields.NoEquipLabel;
-          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2760/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/, 0);
-          if ( !v9 )
+          v13 = this->fields.NoEquipLabel;
+          if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
+          gameObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2854/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/, 0);
+          if ( !v13 )
 LABEL_28:
-            sub_1D0F30C(gameObject, v7);
-          UILabel__set_text(v9, (System_String_o *)gameObject, 0);
+            sub_21FFECC(gameObject, v10);
+          UILabel__set_text(v13, (System_String_o *)gameObject, 0);
         }
       }
     }
@@ -160,10 +164,10 @@ float EquipPossessionSkillInfoComponent__SetSkill(
   struct UILabel_o *v11; // x8
   float result; // s0
 
-  if ( (byte_4E7B04D & 1) == 0 )
+  if ( (byte_593C192 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleServantConfConponent_TypeInfo);
-    byte_4E7B04D = 1;
+    sub_21FFC50(&BattleServantConfConponent_TypeInfo);
+    byte_593C192 = 1;
   }
   NoEquipLabel = (UnityEngine_Component_o *)this->fields.NoEquipLabel;
   if ( !NoEquipLabel )
@@ -207,8 +211,8 @@ float EquipPossessionSkillInfoComponent__SetSkill(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)NoEquipLabel, 1, 0);
   NoEquipLabel = (UnityEngine_Component_o *)BattleServantConfConponent_TypeInfo;
   equipSkillConfLabel = (UIWidget_o *)this->fields.equipSkillConfLabel;
-  if ( !BattleServantConfConponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo);
+  if ( !*(&BattleServantConfConponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo, *(_QWORD *)&skillId);
   if ( !equipSkillConfLabel )
     goto LABEL_23;
   UIWidget__set_height(
@@ -227,13 +231,13 @@ float EquipPossessionSkillInfoComponent__SetSkill(
   result = 0.0;
   if ( v11->fields.mHeight <= BattleServantConfConponent_TypeInfo->static_fields->EQIUP_SKILL_LABEL_DEFAULT_HEIGHT )
     return result;
-  if ( !BattleServantConfConponent_TypeInfo->_2.cctor_finished )
+  if ( !*(&BattleServantConfConponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleServantConfConponent_TypeInfo, *(_QWORD *)&skillId);
     v11 = this->fields.equipSkillConfLabel;
     if ( !v11 )
 LABEL_23:
-      sub_1D0F30C(NoEquipLabel, *(_QWORD *)&skillId);
+      sub_21FFECC(NoEquipLabel, *(_QWORD *)&skillId);
   }
   return (float)(BattleServantConfConponent_TypeInfo->static_fields->EQIUP_SKILL_LABEL_DEFAULT_HEIGHT
                - v11->fields.mHeight);
@@ -248,6 +252,6 @@ int32_t EquipPossessionSkillInfoComponent__get_EquipSkillConfLabelHeight(
 
   equipSkillConfLabel = this->fields.equipSkillConfLabel;
   if ( !equipSkillConfLabel )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return equipSkillConfLabel->fields.mHeight;
 }

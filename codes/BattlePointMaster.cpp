@@ -1,14 +1,14 @@
 void BattlePointMaster___ctor(BattlePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E772F6 & 1) == 0 )
+  if ( (byte_59382C3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
-    byte_4E772F6 = 1;
+    sub_21FFC50(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
+    byte_59382C3 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    511,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
+    513,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
 }
 
 
@@ -17,15 +17,14 @@ System_String_o *BattlePointMaster__GetGaugeAssetPath(int32_t battlePointId, con
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E772F4 & 1) == 0 )
+  if ( (byte_59382C1 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_3110/*"Battle/BattlePoint/Prefab/{0}"*/);
-    byte_4E772F4 = 1;
+    sub_21FFC50(&StringLiteral_3202/*"Battle/BattlePoint/Prefab/{0}"*/);
+    byte_59382C1 = 1;
   }
   v5 = battlePointId;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
-  return System_String__Format((System_String_o *)StringLiteral_3110/*"Battle/BattlePoint/Prefab/{0}"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v5);
+  return System_String__Format((System_String_o *)StringLiteral_3202/*"Battle/BattlePoint/Prefab/{0}"*/, v3, 0);
 }
 
 
@@ -36,21 +35,21 @@ bool BattlePointMaster__IsHideGaugeAllTime(BattlePointMaster_o *this, int32_t ba
   _BOOL4 v7; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E772F5 & 1) == 0 )
+  if ( (byte_59382C2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__);
-    byte_4E772F5 = 1;
+    sub_21FFC50(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__);
+    byte_59382C2 = 1;
   }
   entity = 0;
   v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          battlePointId,
-         (const MethodInfo_3535BC8 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__);
+         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__);
   if ( v5 )
   {
     if ( !entity )
-      sub_1D0F30C(v5, v6);
+      sub_21FFECC(v5, v6);
     return (*((unsigned __int8 *)&qword_20 + (_QWORD)entity) >> 1) & 1;
   }
   else

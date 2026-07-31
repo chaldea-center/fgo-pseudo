@@ -7,29 +7,29 @@ void ScriptActionAdvPrefabCameraLocator___ctor(ScriptActionAdvPrefabCameraLocato
 void ScriptActionAdvPrefabCameraLocator__Awake(ScriptActionAdvPrefabCameraLocator_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *targetRig; // x0
-  System_Object_array *ComponentsInChildren_object__53121128; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_Object_array *ComponentsInChildren_object__59262092; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E79384 & 1) == 0 )
+  if ( (byte_593A5ED & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-    byte_4E79384 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+    byte_593A5ED = 1;
   }
   targetRig = this->fields.targetRig;
   if ( !targetRig )
-    sub_1D0F30C(0, method);
-  ComponentsInChildren_object__53121128 = UnityEngine_GameObject__GetComponentsInChildren_object__53121128(
+    sub_21FFECC(0, method);
+  ComponentsInChildren_object__59262092 = UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
                                             targetRig,
-                                            (const MethodInfo_32A9068 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__53121128;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.targetCameras,
-    (int32_t)ComponentsInChildren_object__53121128,
+                                            (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+  this->fields.targetCameras = (struct UnityEngine_Camera_array *)ComponentsInChildren_object__59262092;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.targetCameras,
+    (int32_t)ComponentsInChildren_object__59262092,
     v5,
     v6,
     v7,
@@ -47,75 +47,77 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
   UnityEngine_Transform_o *v4; // x20
   UnityEngine_Transform_o *v5; // x20
   struct UnityEngine_Camera_array *targetCameras; // x8
-  int max_length; // w21
-  unsigned int v8; // w22
-  UnityEngine_Camera_o *v9; // x20
-  float v10; // s0
+  il2cpp_array_size_t max_length; // x21
+  __int64 v8; // x22
+  struct UnityEngine_Camera_array *v9; // x8
+  UnityEngine_Camera_o *v10; // x20
+  float v11; // s0
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   targetRig = this->fields.targetRig;
   if ( !targetRig )
-    goto LABEL_18;
+    goto LABEL_19;
   targetRig = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(targetRig, 0);
   if ( !this->fields.Locator )
-    goto LABEL_18;
+    goto LABEL_19;
   v4 = (UnityEngine_Transform_o *)targetRig;
   position = UnityEngine_Transform__get_position(this->fields.Locator, 0);
   if ( !v4 )
-    goto LABEL_18;
+    goto LABEL_19;
   UnityEngine_Transform__set_position(v4, position, 0);
   targetRig = this->fields.targetRig;
   if ( !targetRig )
-    goto LABEL_18;
+    goto LABEL_19;
   targetRig = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(targetRig, 0);
   if ( !this->fields.Locator )
-    goto LABEL_18;
+    goto LABEL_19;
   v5 = (UnityEngine_Transform_o *)targetRig;
   rotation = UnityEngine_Transform__get_rotation(this->fields.Locator, 0);
   if ( !v5 )
-    goto LABEL_18;
+    goto LABEL_19;
   UnityEngine_Transform__set_rotation(v5, rotation, 0);
   if ( this->fields.scaleToCameraParameter )
   {
     targetCameras = this->fields.targetCameras;
     if ( !targetCameras )
-      goto LABEL_18;
+      goto LABEL_19;
     max_length = targetCameras->max_length;
-    if ( max_length >= 1 )
+    if ( (int)max_length >= 1 )
     {
       v8 = 0;
-      do
+      while ( 1 )
       {
-        if ( v8 >= LODWORD(targetCameras->max_length) )
-          sub_1D0F314(targetRig);
+        v9 = this->fields.targetCameras;
+        if ( !v9 )
+          break;
+        if ( (unsigned int)v8 >= LODWORD(v9->max_length) )
+          sub_21FFED4(targetRig);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        v9 = targetCameras->m_Items[v8];
-        LODWORD(v10) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
-        if ( !v9 )
+        v10 = v9->m_Items[v8];
+        LODWORD(v11) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
+        if ( !v10 )
           break;
-        UnityEngine_Camera__set_nearClipPlane(v9, v10, 0);
+        UnityEngine_Camera__set_nearClipPlane(v10, v11, 0);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
         localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
-        UnityEngine_Camera__set_farClipPlane(v9, localScale.fields.y, 0);
+        UnityEngine_Camera__set_farClipPlane(v10, localScale.fields.y, 0);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        v13 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
-        UnityEngine_Camera__set_fieldOfView(v9, v13.fields.z, 0);
-        if ( max_length == ++v8 )
+        v14 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
+        UnityEngine_Camera__set_fieldOfView(v10, v14.fields.z, 0);
+        if ( (_DWORD)max_length == (_DWORD)++v8 )
           return;
-        targetCameras = this->fields.targetCameras;
       }
-      while ( targetCameras );
-LABEL_18:
-      sub_1D0F30C(targetRig, method);
+LABEL_19:
+      sub_21FFECC(targetRig, method);
     }
   }
 }

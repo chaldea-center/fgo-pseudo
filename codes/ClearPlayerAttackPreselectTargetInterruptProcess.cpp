@@ -22,7 +22,7 @@ void ClearPlayerAttackPreselectTargetInterruptProcess__AfterCreateAction(
   BattleData_o *data; // x8
 
   if ( !logic || (data = logic->fields.data) == 0 )
-    sub_1D0F30C(this, logic);
+    sub_21FFECC(this, logic);
   BattleData__ClearPlayerAttackPreselectTargetData(
     data,
     this->fields.activatorUniqueId,

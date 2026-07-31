@@ -1,14 +1,14 @@
 void WarBoardActionTrendConditionMaster___ctor(WarBoardActionTrendConditionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78807 & 1) == 0 )
+  if ( (byte_5939849 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
-    byte_4E78807 = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    byte_5939849 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    343,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    345,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
 }
 
 
@@ -18,50 +18,50 @@ bool WarBoardActionTrendConditionMaster__HasMatchCondition(
         int32_t *condType,
         const MethodInfo *method)
 {
-  int max_length; // w8
+  unsigned __int64 max_length_low; // x8
   WarBoardActionTrendConditionEntity_array *v5; // x21
   bool v6; // w23
-  int v9; // w24
+  unsigned __int64 v9; // x24
   WarBoardActionTrendConditionEntity_o *v10; // x8
   struct System_Int32_array *conditionTypes; // x25
-  il2cpp_array_size_t v12; // x8
+  il2cpp_array_size_t max_length; // x8
   unsigned __int64 v13; // x26
   unsigned int v14; // w22
 
   *condType = 0;
   if ( !condEntityArray )
 LABEL_17:
-    sub_1D0F30C(condEntityArray, matchCond);
-  max_length = condEntityArray->max_length;
+    sub_21FFECC(condEntityArray, matchCond);
+  max_length_low = LODWORD(condEntityArray->max_length);
   v5 = condEntityArray;
-  v6 = max_length > 0;
-  if ( max_length >= 1 )
+  v6 = (int)max_length_low > 0;
+  if ( (int)max_length_low >= 1 )
   {
     v9 = 0;
     while ( 1 )
     {
-      if ( v9 >= (unsigned int)max_length )
+      if ( v9 >= max_length_low )
 LABEL_18:
-        sub_1D0F314(condEntityArray);
+        sub_21FFED4(condEntityArray);
       v10 = v5->m_Items[v9];
       if ( !v10 )
         goto LABEL_17;
       conditionTypes = v10->fields.conditionTypes;
       if ( !conditionTypes )
         goto LABEL_17;
-      v12 = conditionTypes->max_length;
-      if ( (int)v12 >= 1 )
+      max_length = conditionTypes->max_length;
+      if ( (int)max_length >= 1 )
         break;
 LABEL_13:
-      max_length = v5->max_length;
-      v6 = ++v9 < max_length;
-      if ( v9 >= max_length )
+      max_length_low = LODWORD(v5->max_length);
+      v6 = (int)++v9 < (int)max_length_low;
+      if ( (int)v9 >= (int)max_length_low )
         return v6;
     }
     v13 = 0;
     while ( 1 )
     {
-      if ( v13 >= (unsigned int)v12 )
+      if ( v13 >= (unsigned int)max_length )
         goto LABEL_18;
       if ( !matchCond )
         goto LABEL_17;
@@ -73,8 +73,8 @@ LABEL_13:
                                                                       method);
       if ( ((unsigned __int8)condEntityArray & 1) != 0 )
         break;
-      LODWORD(v12) = conditionTypes->max_length;
-      if ( (__int64)++v13 >= (int)v12 )
+      LODWORD(max_length) = conditionTypes->max_length;
+      if ( (__int64)++v13 >= (int)max_length )
         goto LABEL_13;
     }
     *condType = v14;

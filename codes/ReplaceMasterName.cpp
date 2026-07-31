@@ -14,27 +14,27 @@ System_String_o *ReplaceMasterName__Replace(
   __int64 v5; // x1
   System_String_o *name; // x19
 
-  if ( (byte_4E7AC12 & 1) == 0 )
+  if ( (byte_593BC7B & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    byte_4E7AC12 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    byte_593BC7B = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1D0F30C(0, v5);
+    sub_21FFECC(0, v5);
   name = SelfUserGame->fields.name;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
   return LocalizationManager__ReplaceNameTag(name, 0, 0);
 }
 
 
 System_String_o *ReplaceMasterName__get_Tag(ReplaceMasterName_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7AC11 & 1) == 0 )
+  if ( (byte_593BC7A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21887/*"masterName"*/);
-    byte_4E7AC11 = 1;
+    sub_21FFC50(&StringLiteral_22508/*"masterName"*/);
+    byte_593BC7A = 1;
   }
-  return (System_String_o *)StringLiteral_21887/*"masterName"*/;
+  return (System_String_o *)StringLiteral_22508/*"masterName"*/;
 }

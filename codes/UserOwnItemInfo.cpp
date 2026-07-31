@@ -4,24 +4,24 @@ void UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo *method)
 }
 
 
-void UserOwnItemInfo___ctor_44991580(
+void UserOwnItemInfo___ctor_50580916(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   int64_t num; // x8
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
     v8,
@@ -45,23 +45,23 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_4E78C12 & 1) == 0 )
+  if ( (byte_5939C5B & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_long__get_HasValue__);
-    byte_4E78C12 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
+    byte_5939C5B = 1;
   }
   if ( !hasValue )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
     value = NetworkManager__getTime(0);
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1D0F30C(0, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_43733500(ItemEntity_k__BackingField, value, 0);
+    sub_21FFECC(0, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_49319480(ItemEntity_k__BackingField, value, 0);
 }
 
 
@@ -71,7 +71,7 @@ int32_t UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const MethodInfo *
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -90,17 +90,17 @@ int64_t UserOwnItemInfo__get_Num(UserOwnItemInfo_o *this, const MethodInfo *meth
 
 void UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEntity_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

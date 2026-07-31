@@ -4,17 +4,18 @@ void ServantCostumeEventBalloon___ctor(ServantCostumeEventBalloon_o *this, const
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantCostumeEventBalloon__Set(ServantCostumeEventBalloon_o *this, int32_t itemId, const MethodInfo *method)
 {
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_4E713C9 & 1) == 0 )
+  if ( (byte_5932180 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    byte_4E713C9 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_5932180 = 1;
   }
   itemSprite = this->fields.itemSprite;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&itemId, method);
   AtlasManager__SetItem(itemSprite, itemId, 0);
 }

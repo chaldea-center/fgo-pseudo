@@ -7,47 +7,56 @@ void ShopNotice___ctor(ShopNotice_o *this, const MethodInfo *method)
 void ShopNotice__CompareShopListNotice(ShopNotice_o *this, ShopListNotice_o *listNotice, const MethodInfo *method)
 {
   int32_t LimitedType_k__BackingField; // w21
-  System_Func_T1__T2__T3__T4__TResult__o *v6; // x22
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x2
+  System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__c *v6; // x0
+  System_Func_T1__T2__T3__T4__TResult__o *v7; // x22
+  const MethodInfo *v8; // x3
   const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x2
+  bool IsSpecialSummonable_k__BackingField; // w10
+  bool IsStartUpSummon_k__BackingField; // w11
+  int32_t v12; // w12
+  const MethodInfo *v13; // x2
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x2
   int64_t PeriodTimeLimit_k__BackingField; // x8
   int64_t ExchangeServatTimeLimit_k__BackingField; // x1
 
-  if ( (byte_4E737F1 & 1) == 0 )
+  if ( (byte_5934746 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
-    sub_1D0F0B4(&Method_ShopListNotice_GetShopLimitedType__);
-    byte_4E737F1 = 1;
+    sub_21FFC50(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
+    sub_21FFC50(&Method_ShopListNotice_GetShopLimitedType__);
+    byte_5934746 = 1;
   }
   if ( listNotice )
   {
-    this->fields._IsShowNew_k__BackingField |= listNotice->fields._IsShowNew_k__BackingField;
     LimitedType_k__BackingField = listNotice->fields._LimitedType_k__BackingField;
-    v6 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1D0F300(System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
+    v6 = System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo;
+    this->fields._IsShowNew_k__BackingField |= listNotice->fields._IsShowNew_k__BackingField;
+    v7 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_21FFEBC(v6);
     System_Func_bool__bool__bool__bool__Int32Enum____ctor(
-      v6,
+      v7,
       (Il2CppObject *)listNotice,
       Method_ShopListNotice_GetShopLimitedType__,
       0);
     ShopNotice__SetLimitedType(
       this,
       LimitedType_k__BackingField,
-      (System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *)v6,
-      v7);
+      (System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *)v7,
+      v8);
+    IsSpecialSummonable_k__BackingField = listNotice->fields._IsSpecialSummonable_k__BackingField;
+    IsStartUpSummon_k__BackingField = this->fields._IsStartUpSummon_k__BackingField;
+    v12 = listNotice->fields._LimitedType_k__BackingField;
     this->fields._IsIndefiniteExchangeServant_k__BackingField |= listNotice->fields._IsIndefiniteExchangeServant_k__BackingField;
-    this->fields._IsStartUpSummon_k__BackingField |= listNotice->fields._IsSpecialSummonable_k__BackingField;
-    if ( listNotice->fields._LimitedType_k__BackingField )
+    this->fields._IsStartUpSummon_k__BackingField = IsStartUpSummon_k__BackingField
+                                                 || IsSpecialSummonable_k__BackingField;
+    if ( v12 )
     {
-      ShopNotice__SetPeriodTimeLimit(this, listNotice->fields._PeriodTimeLimit_k__BackingField, v8);
-      ShopNotice__SetMonthlyTimeLimit(this, listNotice->fields._MonthlyTimeLimit_k__BackingField, v9);
+      ShopNotice__SetPeriodTimeLimit(this, listNotice->fields._PeriodTimeLimit_k__BackingField, v9);
+      ShopNotice__SetMonthlyTimeLimit(this, listNotice->fields._MonthlyTimeLimit_k__BackingField, v13);
       ShopNotice__SetExchangeServantTimeLimit(
         this,
         listNotice->fields._ExchangeServatTimeLimit_k__BackingField,
         listNotice->fields._ExchangeServantEventId_k__BackingField,
-        v10);
+        v14);
       PeriodTimeLimit_k__BackingField = listNotice->fields._PeriodTimeLimit_k__BackingField;
       if ( PeriodTimeLimit_k__BackingField >= listNotice->fields._MonthlyTimeLimit_k__BackingField )
         PeriodTimeLimit_k__BackingField = listNotice->fields._MonthlyTimeLimit_k__BackingField;
@@ -55,7 +64,7 @@ void ShopNotice__CompareShopListNotice(ShopNotice_o *this, ShopListNotice_o *lis
         ExchangeServatTimeLimit_k__BackingField = listNotice->fields._ExchangeServatTimeLimit_k__BackingField;
       else
         ExchangeServatTimeLimit_k__BackingField = PeriodTimeLimit_k__BackingField;
-      ShopNotice__SetMostRecentTimeLimit(this, ExchangeServatTimeLimit_k__BackingField, v11);
+      ShopNotice__SetMostRecentTimeLimit(this, ExchangeServatTimeLimit_k__BackingField, v15);
     }
   }
 }
@@ -67,6 +76,7 @@ bool ShopNotice__HasFlag(ShopNotice_o *this, int32_t flag, const MethodInfo *met
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ShopNotice__SetExchangeServantTimeLimit(
         ShopNotice_o *this,
         int64_t timeLimit,
@@ -75,13 +85,13 @@ void ShopNotice__SetExchangeServantTimeLimit(
 {
   int64_t ExchangeServantTimeLimit_k__BackingField; // x8
 
-  if ( (byte_4E737F4 & 1) == 0 )
+  if ( (byte_5934749 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E737F4 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934749 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, timeLimit, *(_QWORD *)&eventId);
   if ( NetworkManager__getTime(0) <= timeLimit )
   {
     ExchangeServantTimeLimit_k__BackingField = this->fields._ExchangeServantTimeLimit_k__BackingField;
@@ -97,7 +107,7 @@ void ShopNotice__SetExchangeServantTimeLimit(
 void ShopNotice__SetFlag(ShopNotice_o *this, int32_t type, const MethodInfo *method)
 {
   if ( (unsigned int)(type - 1) <= 3 )
-    type = dword_D366B0[type - 1];
+    type = *((_DWORD *)&xmmword_E93A30 + (unsigned int)(type - 1));
   this->fields.limitedTypeFlag |= type;
 }
 
@@ -131,16 +141,16 @@ void ShopNotice__SetLimitedType(
         System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *GetShopLimitedType,
         const MethodInfo *method)
 {
-  unsigned int v4; // w8
+  unsigned int v4; // w9
 
   if ( type && this->fields._LimitedType_k__BackingField != 30 )
   {
-    if ( (unsigned int)(type - 1) <= 3 )
-      *(_QWORD *)&type = dword_D366B0[type - 1];
+    if ( (unsigned int)type <= 4 )
+      *(_QWORD *)&type = *((unsigned int *)&xmmword_E93A30 + type - 1);
     v4 = this->fields.limitedTypeFlag | type;
     this->fields.limitedTypeFlag = v4;
     if ( !GetShopLimitedType )
-      sub_1D0F30C(this, *(_QWORD *)&type);
+      sub_21FFECC(this, *(_QWORD *)&type);
     this->fields._LimitedType_k__BackingField = ((__int64 (__fastcall *)(intptr_t, _QWORD, _QWORD, _QWORD, _QWORD, intptr_t))GetShopLimitedType->fields.invoke_impl)(
                                                   GetShopLimitedType->fields.method_code,
                                                   (v4 >> 1) & 1,
@@ -155,20 +165,28 @@ void ShopNotice__SetLimitedType(
 void ShopNotice__SetMonthlyTimeLimit(ShopNotice_o *this, int64_t timeLimit, const MethodInfo *method)
 {
   int64_t MonthlyTimeLimit_k__BackingField; // x8
+  int64_t v6; // x9
+  int64_t v7; // x8
 
-  if ( (byte_4E737F3 & 1) == 0 )
+  if ( (byte_5934748 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E737F3 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934748 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, timeLimit, method);
   if ( NetworkManager__getTime(0) <= timeLimit )
   {
     MonthlyTimeLimit_k__BackingField = this->fields._MonthlyTimeLimit_k__BackingField;
-    if ( MonthlyTimeLimit_k__BackingField > timeLimit || MonthlyTimeLimit_k__BackingField == 0 )
-      MonthlyTimeLimit_k__BackingField = timeLimit;
-    this->fields._MonthlyTimeLimit_k__BackingField = MonthlyTimeLimit_k__BackingField;
+    if ( MonthlyTimeLimit_k__BackingField >= timeLimit )
+      v6 = timeLimit;
+    else
+      v6 = this->fields._MonthlyTimeLimit_k__BackingField;
+    if ( MonthlyTimeLimit_k__BackingField )
+      v7 = v6;
+    else
+      v7 = timeLimit;
+    this->fields._MonthlyTimeLimit_k__BackingField = v7;
   }
 }
 
@@ -176,20 +194,28 @@ void ShopNotice__SetMonthlyTimeLimit(ShopNotice_o *this, int64_t timeLimit, cons
 void ShopNotice__SetMostRecentTimeLimit(ShopNotice_o *this, int64_t timeLimit, const MethodInfo *method)
 {
   int64_t MostRecentTimeLimit_k__BackingField; // x8
+  int64_t v6; // x9
+  int64_t v7; // x8
 
-  if ( (byte_4E737F5 & 1) == 0 )
+  if ( (byte_593474A & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E737F5 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_593474A = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, timeLimit, method);
   if ( NetworkManager__getTime(0) <= timeLimit )
   {
     MostRecentTimeLimit_k__BackingField = this->fields._MostRecentTimeLimit_k__BackingField;
-    if ( MostRecentTimeLimit_k__BackingField > timeLimit || MostRecentTimeLimit_k__BackingField == 0 )
-      MostRecentTimeLimit_k__BackingField = timeLimit;
-    this->fields._MostRecentTimeLimit_k__BackingField = MostRecentTimeLimit_k__BackingField;
+    if ( MostRecentTimeLimit_k__BackingField >= timeLimit )
+      v6 = timeLimit;
+    else
+      v6 = this->fields._MostRecentTimeLimit_k__BackingField;
+    if ( MostRecentTimeLimit_k__BackingField )
+      v7 = v6;
+    else
+      v7 = timeLimit;
+    this->fields._MostRecentTimeLimit_k__BackingField = v7;
   }
 }
 
@@ -197,20 +223,28 @@ void ShopNotice__SetMostRecentTimeLimit(ShopNotice_o *this, int64_t timeLimit, c
 void ShopNotice__SetPeriodTimeLimit(ShopNotice_o *this, int64_t timeLimit, const MethodInfo *method)
 {
   int64_t PeriodTimeLimit_k__BackingField; // x8
+  int64_t v6; // x9
+  int64_t v7; // x8
 
-  if ( (byte_4E737F2 & 1) == 0 )
+  if ( (byte_5934747 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E737F2 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934747 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, timeLimit, method);
   if ( NetworkManager__getTime(0) <= timeLimit )
   {
     PeriodTimeLimit_k__BackingField = this->fields._PeriodTimeLimit_k__BackingField;
-    if ( PeriodTimeLimit_k__BackingField > timeLimit || PeriodTimeLimit_k__BackingField == 0 )
-      PeriodTimeLimit_k__BackingField = timeLimit;
-    this->fields._PeriodTimeLimit_k__BackingField = PeriodTimeLimit_k__BackingField;
+    if ( PeriodTimeLimit_k__BackingField >= timeLimit )
+      v6 = timeLimit;
+    else
+      v6 = this->fields._PeriodTimeLimit_k__BackingField;
+    if ( PeriodTimeLimit_k__BackingField )
+      v7 = v6;
+    else
+      v7 = timeLimit;
+    this->fields._PeriodTimeLimit_k__BackingField = v7;
   }
 }
 

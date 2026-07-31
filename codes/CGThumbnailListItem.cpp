@@ -9,25 +9,30 @@ void CGThumbnailListItem___ctor(
         System_String_o *thumbnailPath,
         const MethodInfo *method)
 {
-  CGThumbnailListItem_o *v16; // x26
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
 
-  v16 = this;
   ListViewItem___ctor((ListViewItem_o *)this, 0);
-  v16->fields._ThumbnailSpritePath_k__BackingField = thumbnailPath;
-  v16 = (CGThumbnailListItem_o *)((char *)v16 + 136);
-  v16[-1].fields.loopIndex = itemIndex;
-  v16[-1].fields._Type_k__BackingField = id;
-  *(_DWORD *)&v16[-1].fields._HaveDifferenceCG_k__BackingField = priority;
-  LODWORD(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = cgType;
-  BYTE4(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = haveDifferenceCg;
-  BYTE5(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = isOpened;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v16, (int32_t)thumbnailPath, v17, v18, v19, v20, v21, v22);
+  this->fields._ThumbnailSpritePath_k__BackingField = thumbnailPath;
+  this->fields.index = itemIndex;
+  this->fields._Id_k__BackingField = id;
+  this->fields._Priority_k__BackingField = priority;
+  this->fields._Type_k__BackingField = cgType;
+  this->fields._HaveDifferenceCG_k__BackingField = haveDifferenceCg;
+  this->fields._IsOpened_k__BackingField = isOpened;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
+    (int32_t)thumbnailPath,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
 }
 
 
@@ -43,7 +48,7 @@ bool CGThumbnailListItem__SetSortValue(CGThumbnailListItem_o *this, ListViewSort
     return 0;
   this->fields.sortValue1 = this->fields._Priority_k__BackingField;
   if ( !sort )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   Filter = ListViewSort__GetFilter(sort, 101, 0);
   v8 = ListViewSort__GetFilter(sort, 100, 0);
   if ( Filter == v8 || Filter && this->fields._Type_k__BackingField == 1 )
@@ -117,17 +122,17 @@ void CGThumbnailListItem__set_ThumbnailSpritePath(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ThumbnailSpritePath_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

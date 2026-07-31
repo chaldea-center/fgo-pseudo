@@ -1,22 +1,24 @@
 void BattleServantChangeBarComponent___ctor(BattleServantChangeBarComponent_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_GameObject_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  Il2CppClass *v3; // x0
+  struct UnityEngine_GameObject_array *v4; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7AEFE & 1) == 0 )
+  if ( (byte_593BF67 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_GameObject___TypeInfo);
-    byte_4E7AEFE = 1;
+    sub_21FFC50(&UnityEngine_GameObject___TypeInfo);
+    byte_593BF67 = 1;
   }
+  v3 = UnityEngine_GameObject___TypeInfo;
   this->fields.isBoss = 1;
-  v3 = (struct UnityEngine_GameObject_array *)sub_1D0F15C(UnityEngine_GameObject___TypeInfo, 0);
-  this->fields.splitList = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.splitList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v4 = (struct UnityEngine_GameObject_array *)sub_21FFD10(v3, 0);
+  this->fields.splitList = v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.splitList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -32,80 +34,82 @@ void BattleServantChangeBarComponent__PlayHpBarEffect(
   __int64 v11; // x21
   void *AssetStorage; // x0
   __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  BattleDataDefine_c *v20; // x0
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
+  BattleDataDefine_c *v21; // x0
   System_String_o *ASSET_BATTLE_COMMON; // x25
-  Il2CppObject *Object_object__52624444; // x24
+  Il2CppObject *Object_object__58323140; // x24
   UnityEngine_Transform_o *transform; // x0
+  __int64 v25; // x1
   UnityEngine_Object_o *Object; // x23
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
-  Il2CppObject *v37; // x19
-  System_Action_o *v38; // x20
-  Il2CppObject *v39; // [xsp+0h] [xbp-60h] BYREF
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  Il2CppObject *v39; // x19
+  System_Action_o *v40; // x20
+  Il2CppObject *v41; // [xsp+0h] [xbp-60h] BYREF
   Il2CppObject *component; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4E7AEFD & 1) == 0 )
+  if ( (byte_593BF66 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_BattleServantChangeBarComponent___c__DisplayClass17_0__PlayHpBarEffect_b__0__);
-    sub_1D0F0B4(&BattleServantChangeBarComponent___c__DisplayClass17_0_TypeInfo);
-    byte_4E7AEFD = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&BattleDataDefine_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_BattleServantChangeBarComponent___c__DisplayClass17_0__PlayHpBarEffect_b__0__);
+    sub_21FFC50(&BattleServantChangeBarComponent___c__DisplayClass17_0_TypeInfo);
+    byte_593BF66 = 1;
   }
-  v39 = 0;
+  v41 = 0;
   component = 0;
-  v11 = sub_1D0F300(BattleServantChangeBarComponent___c__DisplayClass17_0_TypeInfo);
+  v11 = sub_21FFEBC(BattleServantChangeBarComponent___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_22;
   *(_QWORD *)(v11 + 16) = callBack;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)callBack, v14, v15, v16, v17, v18, v19);
-  v20 = BattleDataDefine_TypeInfo;
-  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v11 + 16), (int32_t)callBack, v14, v15, v16, v17, v18, v19);
+  v21 = BattleDataDefine_TypeInfo;
+  if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v20 = BattleDataDefine_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, v20);
+    v21 = BattleDataDefine_TypeInfo;
   }
-  ASSET_BATTLE_COMMON = v20->static_fields->ASSET_BATTLE_COMMON;
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+  ASSET_BATTLE_COMMON = v21->static_fields->ASSET_BATTLE_COMMON;
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v20);
   AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
   if ( !AssetStorage )
     goto LABEL_22;
-  Object_object__52624444 = AssetData__GetObject_object__52624444(
+  Object_object__58323140 = AssetData__GetObject_object__58323140(
                               (AssetData_o *)AssetStorage,
                               effectName,
-                              (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
+                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
                                      (BaseMonoBehaviour_o *)this,
-                                     (UnityEngine_GameObject_o *)Object_object__52624444,
+                                     (UnityEngine_GameObject_o *)Object_object__58323140,
                                      transform,
                                      0,
                                      0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
   AssetStorage = (void *)UnityEngine_Object__op_Equality(Object, 0, 0);
   if ( ((unsigned __int8)AssetStorage & 1) == 0 )
   {
@@ -114,64 +118,65 @@ void BattleServantChangeBarComponent__PlayHpBarEffect(
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            (UnityEngine_GameObject_o *)Object,
            &component,
-           (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
+           (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_BattleServantHpShiftPhaseEffectComponent___) )
     {
       AssetStorage = component;
       if ( !component )
         goto LABEL_22;
       component[13].monitor = updateHpBarFunc;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)((char *)AssetStorage + 216),
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)((char *)AssetStorage + 216),
         (int32_t)updateHpBarFunc,
-        v25,
-        v26,
         v27,
         v28,
         v29,
-        v30);
+        v30,
+        v31,
+        v32);
       AssetStorage = component;
       if ( !component )
         goto LABEL_22;
       component[14].klass = (Il2CppClass *)updateHpLabelFunc;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)((char *)AssetStorage + 224),
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)((char *)AssetStorage + 224),
         (int32_t)updateHpLabelFunc,
-        v31,
-        v32,
         v33,
         v34,
         v35,
-        v36);
+        v36,
+        v37,
+        v38);
     }
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            (UnityEngine_GameObject_o *)Object,
-           &v39,
-           (const MethodInfo_32A96D4 *)Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___) )
+           &v41,
+           (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_CommonEffectComponent___) )
     {
-      v37 = v39;
-      v38 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+      v39 = v41;
+      v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
       System_Action___ctor(
-        v38,
+        v40,
         (Il2CppObject *)v11,
         Method_BattleServantChangeBarComponent___c__DisplayClass17_0__PlayHpBarEffect_b__0__,
         0);
-      if ( v37 )
+      if ( v39 )
       {
-        ((void (__fastcall *)(Il2CppObject *, __int64, System_Action_o *, const MethodInfo *))v37->klass->vtable[8].methodPtr)(
-          v37,
+        ((void (__fastcall *)(Il2CppObject *, __int64, System_Action_o *, const MethodInfo *))v39->klass->vtable[8].methodPtr)(
+          v39,
           1,
-          v38,
-          v37->klass->vtable[8].method);
+          v40,
+          v39->klass->vtable[8].method);
         return;
       }
 LABEL_22:
-      sub_1D0F30C(AssetStorage, v13);
+      sub_21FFECC(AssetStorage, v13);
     }
     ActionExtensions__Call(*(System_Action_o **)(v11 + 16), 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantChangeBarComponent__setBarType(
         BattleServantChangeBarComponent_o *this,
         int32_t type,
@@ -185,106 +190,108 @@ void BattleServantChangeBarComponent__setBarType(
   UIAtlas_o *v11; // x21
   int32_t overwriteHpGaugeType; // w26
   UISprite_o *frontHpBart; // x22
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   System_Object_array *v20; // x23
   __int64 v21; // x0
   __int64 v22; // x1
-  UnityEngine_Object_o *splitSprite; // x22
-  UnityEngine_Object_o *v24; // x22
-  const MethodInfo *v25; // x2
-  const MethodInfo *v26; // x3
-  int32_t bartype; // w1
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  Il2CppObject *v34; // x24
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  __int64 v41; // x1
-  int32_t v42; // w2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  int32_t v45; // w5
-  int64_t v46; // x6
-  System_String_o *v47; // x7
-  Il2CppObject *v48; // x24
+  int32_t v23; // w1
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  Il2CppObject *v30; // x24
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
+  int32_t v37; // w1
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  Il2CppObject *v44; // x24
+  __int64 v45; // x1
   UnityEngine_Object_o *backHpBar; // x22
-  UISprite_o *v50; // x20
-  int32_t v51; // w2
-  int32_t v52; // w3
-  System_String_o *v53; // x4
-  int32_t v54; // w5
-  int64_t v55; // x6
-  System_String_o *v56; // x7
-  AssetData_o *v57; // x21
-  __int64 v58; // x1
-  int32_t v59; // w2
-  int32_t v60; // w3
-  System_String_o *v61; // x4
-  int32_t v62; // w5
-  int64_t v63; // x6
-  System_String_o *v64; // x7
-  __int64 v65; // x22
-  int32_t v66; // w2
-  int32_t v67; // w3
-  System_String_o *v68; // x4
-  int32_t v69; // w5
-  int64_t v70; // x6
-  System_String_o *v71; // x7
-  __int64 v72; // x1
-  int32_t v73; // w2
-  int32_t v74; // w3
-  System_String_o *v75; // x4
-  int32_t v76; // w5
-  int64_t v77; // x6
-  System_String_o *v78; // x7
-  __int64 v79; // x19
-  __int64 v80; // x0
-  int32_t v81; // [xsp+8h] [xbp-68h] BYREF
-  int32_t v82; // [xsp+Ch] [xbp-64h] BYREF
+  UISprite_o *v47; // x20
+  System_String_o *v48; // x2
+  System_String_o *v49; // x3
+  int32_t v50; // w4
+  int32_t v51; // w5
+  bool v52; // w6
+  bool v53; // w7
+  AssetData_o *v54; // x21
+  int32_t v55; // w1
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
+  int32_t v59; // w5
+  bool v60; // w6
+  bool v61; // w7
+  __int64 v62; // x22
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
+  int32_t v69; // w1
+  System_String_o *v70; // x2
+  System_String_o *v71; // x3
+  int32_t v72; // w4
+  int32_t v73; // w5
+  bool v74; // w6
+  bool v75; // w7
+  __int64 v76; // x19
+  __int64 v77; // x1
+  UnityEngine_Object_o *splitSprite; // x22
+  UnityEngine_Object_o *v79; // x22
+  const MethodInfo *v80; // x2
+  const MethodInfo *v81; // x3
+  int32_t bartype; // w1
+  __int64 v83; // x0
+  int32_t v84; // [xsp+8h] [xbp-68h] BYREF
+  int32_t v85; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4E7AEF9 & 1) == 0 )
+  if ( (byte_593BF62 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_GameObject____80369792);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16314/*"_"*/);
-    sub_1D0F0B4(&StringLiteral_3112/*"Battle/Common"*/);
-    sub_1D0F0B4(&StringLiteral_3134/*"BattleAssetUIAtlas"*/);
-    sub_1D0F0B4(&StringLiteral_20399/*"hp_gauge_"*/);
-    byte_4E7AEF9 = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_16714/*"_"*/);
+    sub_21FFC50(&StringLiteral_3204/*"Battle/Common"*/);
+    sub_21FFC50(&StringLiteral_3226/*"BattleAssetUIAtlas"*/);
+    sub_21FFC50(&StringLiteral_20946/*"hp_gauge_"*/);
+    byte_593BF62 = 1;
   }
   if ( !this->fields.isSuperBossNormal || this->fields.isSuperBossShift )
   {
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3112/*"Battle/Common"*/, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, *(_QWORD *)&type);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3204/*"Battle/Common"*/, 0);
     if ( !AssetStorage )
-      goto LABEL_72;
-    AssetStorage = (AssetData_o *)AssetData__GetObject_object__52624444(
+      goto LABEL_64;
+    AssetStorage = (AssetData_o *)AssetData__GetObject_object__58323140(
                                     AssetStorage,
-                                    (System_String_o *)StringLiteral_3134/*"BattleAssetUIAtlas"*/,
-                                    (const MethodInfo_322FC3C *)Method_AssetData_GetObject_GameObject____80369792);
+                                    (System_String_o *)StringLiteral_3226/*"BattleAssetUIAtlas"*/,
+                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
     if ( !AssetStorage )
-      goto LABEL_72;
+      goto LABEL_64;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)AssetStorage,
-                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     isSuperBossShift = this->fields.isSuperBossShift;
     v11 = (UIAtlas_o *)Component_object;
     this->fields.bartype = type;
@@ -296,196 +303,182 @@ void BattleServantChangeBarComponent__setBarType(
       else
         overwriteHpGaugeType = this->fields.overwriteHpGaugeType;
       if ( !AssetStorage )
-        goto LABEL_72;
+        goto LABEL_64;
       UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       frontHpBart = this->fields.frontHpBart;
-      AssetStorage = (AssetData_o *)sub_1D0F15C(object___TypeInfo, 4);
+      AssetStorage = (AssetData_o *)sub_21FFD10(object___TypeInfo, 4);
       if ( !AssetStorage )
-        goto LABEL_72;
+        goto LABEL_64;
       v20 = (System_Object_array *)AssetStorage;
-      v21 = StringLiteral_20399/*"hp_gauge_"*/;
-      if ( StringLiteral_20399/*"hp_gauge_"*/ )
+      v21 = StringLiteral_20946/*"hp_gauge_"*/;
+      if ( StringLiteral_20946/*"hp_gauge_"*/ )
       {
-        v21 = sub_1D0F1F0(StringLiteral_20399/*"hp_gauge_"*/, v20->obj.klass->_1.element_class);
+        v21 = sub_21FFDA4(StringLiteral_20946/*"hp_gauge_"*/, v20->obj.klass->_1.element_class);
         if ( !v21 )
-          goto LABEL_74;
-        v22 = StringLiteral_20399/*"hp_gauge_"*/;
-      }
-      else
-      {
-        v22 = 0;
+          goto LABEL_66;
       }
       if ( !LODWORD(v20->max_length) )
-        goto LABEL_73;
-      v20->m_Items[0] = (Il2CppObject *)v22;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)v20->m_Items, v22, v14, v15, v16, v17, v18, v19);
-      v82 = overwriteHpGaugeType;
-      v21 = j_il2cpp_value_box_0(int_TypeInfo, &v82);
-      v34 = (Il2CppObject *)v21;
+        goto LABEL_65;
+      v23 = StringLiteral_20946/*"hp_gauge_"*/;
+      v20->m_Items[0] = (Il2CppObject *)StringLiteral_20946/*"hp_gauge_"*/;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v20->m_Items, v23, v14, v15, v16, v17, v18, v19);
+      v85 = overwriteHpGaugeType;
+      v21 = j_il2cpp_value_box_0(qword_594C070, &v85);
+      v30 = (Il2CppObject *)v21;
       if ( v21 )
       {
-        v21 = sub_1D0F1F0(v21, v20->obj.klass->_1.element_class);
+        v21 = sub_21FFDA4(v21, v20->obj.klass->_1.element_class);
         if ( !v21 )
-          goto LABEL_74;
+          goto LABEL_66;
       }
-      if ( LODWORD(v20->max_length) <= 1 )
-        goto LABEL_73;
-      v20->m_Items[1] = v34;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v20->m_Items[1], (int32_t)v34, v28, v29, v30, v31, v32, v33);
-      v21 = StringLiteral_16314/*"_"*/;
-      if ( StringLiteral_16314/*"_"*/ )
+      if ( (v20->max_length & 0xFFFFFFFE) == 0 )
+        goto LABEL_65;
+      v20->m_Items[1] = v30;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->m_Items[1], (int32_t)v30, v24, v25, v26, v27, v28, v29);
+      v21 = StringLiteral_16714/*"_"*/;
+      if ( StringLiteral_16714/*"_"*/ )
       {
-        v21 = sub_1D0F1F0(StringLiteral_16314/*"_"*/, v20->obj.klass->_1.element_class);
+        v21 = sub_21FFDA4(StringLiteral_16714/*"_"*/, v20->obj.klass->_1.element_class);
         if ( !v21 )
-          goto LABEL_74;
-        v41 = StringLiteral_16314/*"_"*/;
-      }
-      else
-      {
-        v41 = 0;
+          goto LABEL_66;
       }
       if ( LODWORD(v20->max_length) <= 2 )
-        goto LABEL_73;
-      v20->m_Items[2] = (Il2CppObject *)v41;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v20->m_Items[2], v41, v35, v36, v37, v38, v39, v40);
-      v81 = shiftIndex + 1;
-      v21 = j_il2cpp_value_box_0(int_TypeInfo, &v81);
-      v48 = (Il2CppObject *)v21;
+        goto LABEL_65;
+      v37 = StringLiteral_16714/*"_"*/;
+      v20->m_Items[2] = (Il2CppObject *)StringLiteral_16714/*"_"*/;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->m_Items[2], v37, v31, v32, v33, v34, v35, v36);
+      v84 = shiftIndex + 1;
+      v21 = j_il2cpp_value_box_0(qword_594C070, &v84);
+      v44 = (Il2CppObject *)v21;
       if ( v21 )
       {
-        v21 = sub_1D0F1F0(v21, v20->obj.klass->_1.element_class);
+        v21 = sub_21FFDA4(v21, v20->obj.klass->_1.element_class);
         if ( !v21 )
-          goto LABEL_74;
+          goto LABEL_66;
       }
-      if ( LODWORD(v20->max_length) <= 3 )
-        goto LABEL_73;
-      v20->m_Items[3] = v48;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v20->m_Items[3], (int32_t)v48, v42, v43, v44, v45, v46, v47);
-      AssetStorage = (AssetData_o *)System_String__Concat_65601228(v20, 0);
+      if ( (v20->max_length & 0xFFFFFFFC) == 0 )
+        goto LABEL_65;
+      v20->m_Items[3] = v44;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->m_Items[3], (int32_t)v44, v38, v39, v40, v41, v42, v43);
+      AssetStorage = (AssetData_o *)System_String__Concat_75481816(v20, 0);
       if ( !frontHpBart )
-        goto LABEL_72;
+        goto LABEL_64;
       UISprite__set_spriteName(frontHpBart, (System_String_o *)AssetStorage, 0);
       backHpBar = (UnityEngine_Object_o *)this->fields.backHpBar;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v45);
       if ( UnityEngine_Object__op_Inequality(backHpBar, 0, 0) )
       {
         AssetStorage = (AssetData_o *)this->fields.backHpBar;
         if ( !AssetStorage )
-          goto LABEL_72;
+          goto LABEL_64;
         UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
-        v50 = this->fields.backHpBar;
-        AssetStorage = (AssetData_o *)sub_1D0F15C(object___TypeInfo, 4);
+        v47 = this->fields.backHpBar;
+        AssetStorage = (AssetData_o *)sub_21FFD10(object___TypeInfo, 4);
         if ( !AssetStorage )
-          goto LABEL_72;
-        v57 = AssetStorage;
-        v21 = StringLiteral_20399/*"hp_gauge_"*/;
-        if ( StringLiteral_20399/*"hp_gauge_"*/ )
+          goto LABEL_64;
+        v54 = AssetStorage;
+        v21 = StringLiteral_20946/*"hp_gauge_"*/;
+        if ( !StringLiteral_20946/*"hp_gauge_"*/ || (v21 = sub_21FFDA4(StringLiteral_20946/*"hp_gauge_"*/, v54->klass->_1.element_class)) != 0 )
         {
-          v21 = sub_1D0F1F0(StringLiteral_20399/*"hp_gauge_"*/, v57->klass->_1.element_class);
-          if ( !v21 )
-            goto LABEL_74;
-          v58 = StringLiteral_20399/*"hp_gauge_"*/;
-        }
-        else
-        {
-          v58 = 0;
-        }
-        if ( !LODWORD(v57->fields.name) )
-          goto LABEL_73;
-        v57->fields.attrib = (struct System_String_o *)v58;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&v57->fields.attrib, v58, v51, v52, v53, v54, v55, v56);
-        v82 = overwriteHpGaugeType;
-        v21 = j_il2cpp_value_box_0(int_TypeInfo, &v82);
-        v65 = v21;
-        if ( !v21 || (v21 = sub_1D0F1F0(v21, v57->klass->_1.element_class)) != 0 )
-        {
-          if ( LODWORD(v57->fields.name) <= 1 )
-            goto LABEL_73;
-          *(_QWORD *)&v57->fields.nowVersion = v65;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v57->fields.nowVersion, v65, v59, v60, v61, v62, v63, v64);
-          v21 = StringLiteral_16314/*"_"*/;
-          if ( StringLiteral_16314/*"_"*/ )
+          if ( !LODWORD(v54->fields.name) )
+            goto LABEL_65;
+          v55 = StringLiteral_20946/*"hp_gauge_"*/;
+          v54->fields.attrib = (struct System_String_o *)StringLiteral_20946/*"hp_gauge_"*/;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v54->fields.attrib, v55, v48, v49, v50, v51, v52, v53);
+          v85 = overwriteHpGaugeType;
+          v21 = j_il2cpp_value_box_0(qword_594C070, &v85);
+          v62 = v21;
+          if ( !v21 || (v21 = sub_21FFDA4(v21, v54->klass->_1.element_class)) != 0 )
           {
-            v21 = sub_1D0F1F0(StringLiteral_16314/*"_"*/, v57->klass->_1.element_class);
-            if ( !v21 )
-              goto LABEL_74;
-            v72 = StringLiteral_16314/*"_"*/;
-          }
-          else
-          {
-            v72 = 0;
-          }
-          if ( LODWORD(v57->fields.name) <= 2 )
-            goto LABEL_73;
-          *(_QWORD *)&v57->fields.size = v72;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v57->fields.size, v72, v66, v67, v68, v69, v70, v71);
-          v81 = shiftIndex;
-          v21 = j_il2cpp_value_box_0(int_TypeInfo, &v81);
-          v79 = v21;
-          if ( !v21 || (v21 = sub_1D0F1F0(v21, v57->klass->_1.element_class)) != 0 )
-          {
-            if ( LODWORD(v57->fields.name) > 3 )
+            if ( ((__int64)v54->fields.name & 0xFFFFFFFE) == 0 )
+              goto LABEL_65;
+            *(_QWORD *)&v54->fields.nowVersion = v62;
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v54->fields.nowVersion, v62, v56, v57, v58, v59, v60, v61);
+            v21 = StringLiteral_16714/*"_"*/;
+            if ( !StringLiteral_16714/*"_"*/ || (v21 = sub_21FFDA4(StringLiteral_16714/*"_"*/, v54->klass->_1.element_class)) != 0 )
             {
-              v57->fields.keyType = (struct System_String_o *)v79;
-              sub_1D0F058((GrandQuestFolderBoardItem_o *)&v57->fields.keyType, v79, v73, v74, v75, v76, v77, v78);
-              AssetStorage = (AssetData_o *)System_String__Concat_65601228((System_Object_array *)v57, 0);
-              if ( v50 )
+              if ( LODWORD(v54->fields.name) <= 2 )
+                goto LABEL_65;
+              v69 = StringLiteral_16714/*"_"*/;
+              *(_QWORD *)&v54->fields.size = StringLiteral_16714/*"_"*/;
+              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v54->fields.size, v69, v63, v64, v65, v66, v67, v68);
+              v84 = shiftIndex;
+              v21 = j_il2cpp_value_box_0(qword_594C070, &v84);
+              v76 = v21;
+              if ( !v21 || (v21 = sub_21FFDA4(v21, v54->klass->_1.element_class)) != 0 )
               {
-                UISprite__set_spriteName(v50, (System_String_o *)AssetStorage, 0);
-                return;
+                if ( ((__int64)v54->fields.name & 0xFFFFFFFC) != 0 )
+                {
+                  v54->fields.keyType = (struct System_String_o *)v76;
+                  sub_21FFBF4(
+                    (MissionNaviTransitionBoardItem_o *)&v54->fields.keyType,
+                    v76,
+                    v70,
+                    v71,
+                    v72,
+                    v73,
+                    v74,
+                    v75);
+                  AssetStorage = (AssetData_o *)System_String__Concat_75481816((System_Object_array *)v54, 0);
+                  if ( v47 )
+                  {
+                    UISprite__set_spriteName(v47, (System_String_o *)AssetStorage, 0);
+                    return;
+                  }
+LABEL_64:
+                  sub_21FFECC(AssetStorage, v8);
+                }
+LABEL_65:
+                sub_21FFED4(v21);
               }
-LABEL_72:
-              sub_1D0F30C(AssetStorage, v8);
             }
-LABEL_73:
-            sub_1D0F314(v21);
           }
         }
-LABEL_74:
-        v80 = sub_1D0F330(v21);
-        sub_1D0F1DC(v80, 0);
+LABEL_66:
+        v83 = sub_21FFEF0(v21, v22);
+        sub_21FFD90(v83, 0);
       }
     }
     else
     {
       AssetStorage = (AssetData_o *)this->fields.hpframe;
       if ( !AssetStorage )
-        goto LABEL_72;
+        goto LABEL_64;
       UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       AssetStorage = (AssetData_o *)this->fields.frontHpBart;
       if ( !AssetStorage )
-        goto LABEL_72;
+        goto LABEL_64;
       UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       AssetStorage = (AssetData_o *)this->fields.damageHpBart;
       if ( !AssetStorage )
-        goto LABEL_72;
+        goto LABEL_64;
       UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       splitSprite = (UnityEngine_Object_o *)this->fields.splitSprite;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v77);
       if ( UnityEngine_Object__op_Inequality(splitSprite, 0, 0) )
       {
         AssetStorage = (AssetData_o *)this->fields.splitSprite;
         if ( !AssetStorage )
-          goto LABEL_72;
+          goto LABEL_64;
         UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       }
-      v24 = (UnityEngine_Object_o *)this->fields.backHpBar;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v24, 0, 0) )
+      v79 = (UnityEngine_Object_o *)this->fields.backHpBar;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+      if ( UnityEngine_Object__op_Inequality(v79, 0, 0) )
       {
         AssetStorage = (AssetData_o *)this->fields.backHpBar;
         if ( !AssetStorage )
-          goto LABEL_72;
+          goto LABEL_64;
         UISprite__set_atlas((UISprite_o *)AssetStorage, v11, 0);
       }
       bartype = this->fields.bartype;
       if ( this->fields.isBoss )
-        BattleServantChangeBarComponent__setMpFrames(this, bartype, v25);
+        BattleServantChangeBarComponent__setMpFrames(this, bartype, v80);
       else
-        BattleServantChangeBarComponent__setHpFrames(this, bartype, shiftIndex, v26);
+        BattleServantChangeBarComponent__setHpFrames(this, bartype, shiftIndex, v81);
     }
   }
 }
@@ -502,332 +495,303 @@ void BattleServantChangeBarComponent__setHpFrames(
   System_String_o *v9; // x0
   __int64 v10; // x1
   UISprite_o *frontHpBart; // x22
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   System_Object_array *v18; // x23
   __int64 v19; // x0
   __int64 v20; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  Il2CppObject *v27; // x24
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  __int64 v34; // x1
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  Il2CppObject *v41; // x24
+  int32_t v21; // w1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  Il2CppObject *v28; // x24
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  int32_t v35; // w1
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  Il2CppObject *v42; // x24
   UISprite_o *damageHpBart; // x22
-  int32_t v43; // w2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  int32_t v46; // w5
-  int64_t v47; // x6
-  System_String_o *v48; // x7
-  System_Object_array *v49; // x23
-  __int64 v50; // x1
-  int32_t v51; // w2
-  int32_t v52; // w3
-  System_String_o *v53; // x4
-  int32_t v54; // w5
-  int64_t v55; // x6
-  System_String_o *v56; // x7
-  Il2CppObject *v57; // x24
-  int32_t v58; // w2
-  int32_t v59; // w3
-  System_String_o *v60; // x4
-  int32_t v61; // w5
-  int64_t v62; // x6
-  System_String_o *v63; // x7
-  __int64 v64; // x1
-  int32_t v65; // w2
-  int32_t v66; // w3
-  System_String_o *v67; // x4
-  int32_t v68; // w5
-  int64_t v69; // x6
-  System_String_o *v70; // x7
-  Il2CppObject *v71; // x24
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
+  int32_t v47; // w5
+  bool v48; // w6
+  bool v49; // w7
+  System_Object_array *v50; // x23
+  int32_t v51; // w1
+  System_String_o *v52; // x2
+  System_String_o *v53; // x3
+  int32_t v54; // w4
+  int32_t v55; // w5
+  bool v56; // w6
+  bool v57; // w7
+  Il2CppObject *v58; // x24
+  System_String_o *v59; // x2
+  System_String_o *v60; // x3
+  int32_t v61; // w4
+  int32_t v62; // w5
+  bool v63; // w6
+  bool v64; // w7
+  int32_t v65; // w1
+  System_String_o *v66; // x2
+  System_String_o *v67; // x3
+  int32_t v68; // w4
+  int32_t v69; // w5
+  bool v70; // w6
+  bool v71; // w7
+  Il2CppObject *v72; // x24
+  __int64 v73; // x1
   UnityEngine_Object_o *backHpBar; // x22
-  UISprite_o *v73; // x21
-  int32_t v74; // w2
-  int32_t v75; // w3
-  System_String_o *v76; // x4
-  int32_t v77; // w5
-  int64_t v78; // x6
-  System_String_o *v79; // x7
-  System_String_o *v80; // x22
-  __int64 v81; // x1
-  int32_t v82; // w2
-  int32_t v83; // w3
-  System_String_o *v84; // x4
-  int32_t v85; // w5
-  int64_t v86; // x6
-  System_String_o *v87; // x7
-  __int64 v88; // x20
-  int32_t v89; // w2
-  int32_t v90; // w3
-  System_String_o *v91; // x4
-  int32_t v92; // w5
-  int64_t v93; // x6
-  System_String_o *v94; // x7
-  __int64 v95; // x1
-  int32_t v96; // w2
-  int32_t v97; // w3
-  System_String_o *v98; // x4
-  int32_t v99; // w5
-  int64_t v100; // x6
-  System_String_o *v101; // x7
-  __int64 v102; // x19
-  __int64 v103; // x0
-  int v104; // [xsp+Ch] [xbp-74h] BYREF
-  int32_t v105; // [xsp+10h] [xbp-70h] BYREF
-  int v106; // [xsp+14h] [xbp-6Ch] BYREF
-  int32_t v107; // [xsp+18h] [xbp-68h] BYREF
-  int32_t v108; // [xsp+1Ch] [xbp-64h] BYREF
+  UISprite_o *v75; // x21
+  System_String_o *v76; // x2
+  System_String_o *v77; // x3
+  int32_t v78; // w4
+  int32_t v79; // w5
+  bool v80; // w6
+  bool v81; // w7
+  System_String_o *v82; // x22
+  int32_t v83; // w1
+  System_String_o *v84; // x2
+  System_String_o *v85; // x3
+  int32_t v86; // w4
+  int32_t v87; // w5
+  bool v88; // w6
+  bool v89; // w7
+  __int64 v90; // x20
+  System_String_o *v91; // x2
+  System_String_o *v92; // x3
+  int32_t v93; // w4
+  int32_t v94; // w5
+  bool v95; // w6
+  bool v96; // w7
+  int32_t v97; // w1
+  System_String_o *v98; // x2
+  System_String_o *v99; // x3
+  int32_t v100; // w4
+  int32_t v101; // w5
+  bool v102; // w6
+  bool v103; // w7
+  __int64 v104; // x19
+  __int64 v105; // x0
+  int v106; // [xsp+Ch] [xbp-74h] BYREF
+  int32_t v107; // [xsp+10h] [xbp-70h] BYREF
+  int v108; // [xsp+14h] [xbp-6Ch] BYREF
+  int32_t v109; // [xsp+18h] [xbp-68h] BYREF
+  int32_t v110; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4E7AEFA & 1) == 0 )
+  if ( (byte_593BF63 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16314/*"_"*/);
-    sub_1D0F0B4(&StringLiteral_20398/*"hp_frame_"*/);
-    sub_1D0F0B4(&StringLiteral_20399/*"hp_gauge_"*/);
-    sub_1D0F0B4(&StringLiteral_20396/*"hp_damage_"*/);
-    byte_4E7AEFA = 1;
+    sub_21FFC50(&object___TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_16714/*"_"*/);
+    sub_21FFC50(&StringLiteral_20945/*"hp_frame_"*/);
+    sub_21FFC50(&StringLiteral_20946/*"hp_gauge_"*/);
+    sub_21FFC50(&StringLiteral_20943/*"hp_damage_"*/);
+    byte_593BF63 = 1;
   }
   hpframe = this->fields.hpframe;
-  v108 = type;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v108);
-  v9 = System_String__Concat((Il2CppObject *)StringLiteral_20398/*"hp_frame_"*/, v8, 0);
+  v110 = type;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v110);
+  v9 = System_String__Concat((Il2CppObject *)StringLiteral_20945/*"hp_frame_"*/, v8, 0);
   if ( !hpframe )
-    goto LABEL_65;
+    goto LABEL_53;
   UISprite__set_spriteName(hpframe, v9, 0);
   frontHpBart = this->fields.frontHpBart;
-  v9 = (System_String_o *)sub_1D0F15C(object___TypeInfo, 4);
+  v9 = (System_String_o *)sub_21FFD10(object___TypeInfo, 4);
   if ( !v9 )
-    goto LABEL_65;
+    goto LABEL_53;
   v18 = (System_Object_array *)v9;
-  v19 = StringLiteral_20399/*"hp_gauge_"*/;
-  if ( StringLiteral_20399/*"hp_gauge_"*/ )
+  v19 = StringLiteral_20946/*"hp_gauge_"*/;
+  if ( StringLiteral_20946/*"hp_gauge_"*/ )
   {
-    v19 = sub_1D0F1F0(StringLiteral_20399/*"hp_gauge_"*/, v18->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(StringLiteral_20946/*"hp_gauge_"*/, v18->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
-    v20 = StringLiteral_20399/*"hp_gauge_"*/;
-  }
-  else
-  {
-    v20 = 0;
+      goto LABEL_52;
   }
   if ( !LODWORD(v18->max_length) )
-    goto LABEL_63;
-  v18->m_Items[0] = (Il2CppObject *)v20;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v18->m_Items, v20, v12, v13, v14, v15, v16, v17);
-  v107 = type;
-  v19 = j_il2cpp_value_box_0(int_TypeInfo, &v107);
-  v27 = (Il2CppObject *)v19;
+    goto LABEL_51;
+  v21 = StringLiteral_20946/*"hp_gauge_"*/;
+  v18->m_Items[0] = (Il2CppObject *)StringLiteral_20946/*"hp_gauge_"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v18->m_Items, v21, v12, v13, v14, v15, v16, v17);
+  v109 = type;
+  v19 = j_il2cpp_value_box_0(qword_594C070, &v109);
+  v28 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_1D0F1F0(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
+      goto LABEL_52;
   }
-  if ( LODWORD(v18->max_length) <= 1 )
-    goto LABEL_63;
-  v18->m_Items[1] = v27;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v18->m_Items[1], (int32_t)v27, v21, v22, v23, v24, v25, v26);
-  v19 = StringLiteral_16314/*"_"*/;
-  if ( StringLiteral_16314/*"_"*/ )
+  if ( (v18->max_length & 0xFFFFFFFE) == 0 )
+    goto LABEL_51;
+  v18->m_Items[1] = v28;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[1], (int32_t)v28, v22, v23, v24, v25, v26, v27);
+  v19 = StringLiteral_16714/*"_"*/;
+  if ( StringLiteral_16714/*"_"*/ )
   {
-    v19 = sub_1D0F1F0(StringLiteral_16314/*"_"*/, v18->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(StringLiteral_16714/*"_"*/, v18->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
-    v34 = StringLiteral_16314/*"_"*/;
-  }
-  else
-  {
-    v34 = 0;
+      goto LABEL_52;
   }
   if ( LODWORD(v18->max_length) <= 2 )
-    goto LABEL_63;
-  v18->m_Items[2] = (Il2CppObject *)v34;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v18->m_Items[2], v34, v28, v29, v30, v31, v32, v33);
-  v106 = shiftIndex + 1;
-  v19 = j_il2cpp_value_box_0(int_TypeInfo, &v106);
-  v41 = (Il2CppObject *)v19;
+    goto LABEL_51;
+  v35 = StringLiteral_16714/*"_"*/;
+  v18->m_Items[2] = (Il2CppObject *)StringLiteral_16714/*"_"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[2], v35, v29, v30, v31, v32, v33, v34);
+  v108 = shiftIndex + 1;
+  v19 = j_il2cpp_value_box_0(qword_594C070, &v108);
+  v42 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_1D0F1F0(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
+      goto LABEL_52;
   }
-  if ( LODWORD(v18->max_length) <= 3 )
-    goto LABEL_63;
-  v18->m_Items[3] = v41;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v18->m_Items[3], (int32_t)v41, v35, v36, v37, v38, v39, v40);
-  v9 = System_String__Concat_65601228(v18, 0);
+  if ( (v18->max_length & 0xFFFFFFFC) == 0 )
+    goto LABEL_51;
+  v18->m_Items[3] = v42;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[3], (int32_t)v42, v36, v37, v38, v39, v40, v41);
+  v9 = System_String__Concat_75481816(v18, 0);
   if ( !frontHpBart )
-    goto LABEL_65;
+    goto LABEL_53;
   UISprite__set_spriteName(frontHpBart, v9, 0);
   damageHpBart = this->fields.damageHpBart;
-  v9 = (System_String_o *)sub_1D0F15C(object___TypeInfo, 4);
+  v9 = (System_String_o *)sub_21FFD10(object___TypeInfo, 4);
   if ( !v9 )
-    goto LABEL_65;
-  v49 = (System_Object_array *)v9;
-  v19 = StringLiteral_20396/*"hp_damage_"*/;
-  if ( StringLiteral_20396/*"hp_damage_"*/ )
+    goto LABEL_53;
+  v50 = (System_Object_array *)v9;
+  v19 = StringLiteral_20943/*"hp_damage_"*/;
+  if ( StringLiteral_20943/*"hp_damage_"*/ )
   {
-    v19 = sub_1D0F1F0(StringLiteral_20396/*"hp_damage_"*/, v49->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(StringLiteral_20943/*"hp_damage_"*/, v50->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
-    v50 = StringLiteral_20396/*"hp_damage_"*/;
+      goto LABEL_52;
   }
-  else
-  {
-    v50 = 0;
-  }
-  if ( !LODWORD(v49->max_length) )
-    goto LABEL_63;
-  v49->m_Items[0] = (Il2CppObject *)v50;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v49->m_Items, v50, v43, v44, v45, v46, v47, v48);
-  v105 = type;
-  v19 = j_il2cpp_value_box_0(int_TypeInfo, &v105);
-  v57 = (Il2CppObject *)v19;
+  if ( !LODWORD(v50->max_length) )
+    goto LABEL_51;
+  v51 = StringLiteral_20943/*"hp_damage_"*/;
+  v50->m_Items[0] = (Il2CppObject *)StringLiteral_20943/*"hp_damage_"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v50->m_Items, v51, v44, v45, v46, v47, v48, v49);
+  v107 = type;
+  v19 = j_il2cpp_value_box_0(qword_594C070, &v107);
+  v58 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_1D0F1F0(v19, v49->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(v19, v50->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
+      goto LABEL_52;
   }
-  if ( LODWORD(v49->max_length) <= 1 )
-    goto LABEL_63;
-  v49->m_Items[1] = v57;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v49->m_Items[1], (int32_t)v57, v51, v52, v53, v54, v55, v56);
-  v19 = StringLiteral_16314/*"_"*/;
-  if ( StringLiteral_16314/*"_"*/ )
+  if ( (v50->max_length & 0xFFFFFFFE) == 0 )
+    goto LABEL_51;
+  v50->m_Items[1] = v58;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v50->m_Items[1], (int32_t)v58, v52, v53, v54, v55, v56, v57);
+  v19 = StringLiteral_16714/*"_"*/;
+  if ( StringLiteral_16714/*"_"*/ )
   {
-    v19 = sub_1D0F1F0(StringLiteral_16314/*"_"*/, v49->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(StringLiteral_16714/*"_"*/, v50->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
-    v64 = StringLiteral_16314/*"_"*/;
+      goto LABEL_52;
   }
-  else
-  {
-    v64 = 0;
-  }
-  if ( LODWORD(v49->max_length) <= 2 )
-    goto LABEL_63;
-  v49->m_Items[2] = (Il2CppObject *)v64;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v49->m_Items[2], v64, v58, v59, v60, v61, v62, v63);
-  v104 = shiftIndex + 1;
-  v19 = j_il2cpp_value_box_0(int_TypeInfo, &v104);
-  v71 = (Il2CppObject *)v19;
+  if ( LODWORD(v50->max_length) <= 2 )
+    goto LABEL_51;
+  v65 = StringLiteral_16714/*"_"*/;
+  v50->m_Items[2] = (Il2CppObject *)StringLiteral_16714/*"_"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v50->m_Items[2], v65, v59, v60, v61, v62, v63, v64);
+  v106 = shiftIndex + 1;
+  v19 = j_il2cpp_value_box_0(qword_594C070, &v106);
+  v72 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_1D0F1F0(v19, v49->obj.klass->_1.element_class);
+    v19 = sub_21FFDA4(v19, v50->obj.klass->_1.element_class);
     if ( !v19 )
-      goto LABEL_64;
+      goto LABEL_52;
   }
-  if ( LODWORD(v49->max_length) <= 3 )
-    goto LABEL_63;
-  v49->m_Items[3] = v71;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v49->m_Items[3], (int32_t)v71, v65, v66, v67, v68, v69, v70);
-  v9 = System_String__Concat_65601228(v49, 0);
+  if ( (v50->max_length & 0xFFFFFFFC) == 0 )
+    goto LABEL_51;
+  v50->m_Items[3] = v72;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v50->m_Items[3], (int32_t)v72, v66, v67, v68, v69, v70, v71);
+  v9 = System_String__Concat_75481816(v50, 0);
   if ( !damageHpBart )
-    goto LABEL_65;
+    goto LABEL_53;
   UISprite__set_spriteName(damageHpBart, v9, 0);
   backHpBar = (UnityEngine_Object_o *)this->fields.backHpBar;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v73);
   if ( UnityEngine_Object__op_Inequality(backHpBar, 0, 0) )
   {
-    v73 = this->fields.backHpBar;
-    v9 = (System_String_o *)sub_1D0F15C(object___TypeInfo, 4);
+    v75 = this->fields.backHpBar;
+    v9 = (System_String_o *)sub_21FFD10(object___TypeInfo, 4);
     if ( !v9 )
-      goto LABEL_65;
-    v80 = v9;
-    v19 = StringLiteral_20399/*"hp_gauge_"*/;
-    if ( StringLiteral_20399/*"hp_gauge_"*/ )
+      goto LABEL_53;
+    v82 = v9;
+    v19 = StringLiteral_20946/*"hp_gauge_"*/;
+    if ( !StringLiteral_20946/*"hp_gauge_"*/ || (v19 = sub_21FFDA4(StringLiteral_20946/*"hp_gauge_"*/, v82->klass->_1.element_class)) != 0 )
     {
-      v19 = sub_1D0F1F0(StringLiteral_20399/*"hp_gauge_"*/, v80->klass->_1.element_class);
-      if ( !v19 )
-        goto LABEL_64;
-      v81 = StringLiteral_20399/*"hp_gauge_"*/;
-    }
-    else
-    {
-      v81 = 0;
-    }
-    if ( !LODWORD(v80[1].klass) )
-      goto LABEL_63;
-    v80[1].monitor = (void *)v81;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v80[1].monitor, v81, v74, v75, v76, v77, v78, v79);
-    v108 = type;
-    v19 = j_il2cpp_value_box_0(int_TypeInfo, &v108);
-    v88 = v19;
-    if ( !v19 || (v19 = sub_1D0F1F0(v19, v80->klass->_1.element_class)) != 0 )
-    {
-      if ( LODWORD(v80[1].klass) <= 1 )
-        goto LABEL_63;
-      v80[1].fields = (System_String_Fields)v88;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v80[1].fields, v88, v82, v83, v84, v85, v86, v87);
-      v19 = StringLiteral_16314/*"_"*/;
-      if ( StringLiteral_16314/*"_"*/ )
+      if ( !LODWORD(v82[1].klass) )
+        goto LABEL_51;
+      v83 = StringLiteral_20946/*"hp_gauge_"*/;
+      v82[1].monitor = (void *)StringLiteral_20946/*"hp_gauge_"*/;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v82[1].monitor, v83, v76, v77, v78, v79, v80, v81);
+      v110 = type;
+      v19 = j_il2cpp_value_box_0(qword_594C070, &v110);
+      v90 = v19;
+      if ( !v19 || (v19 = sub_21FFDA4(v19, v82->klass->_1.element_class)) != 0 )
       {
-        v19 = sub_1D0F1F0(StringLiteral_16314/*"_"*/, v80->klass->_1.element_class);
-        if ( !v19 )
-          goto LABEL_64;
-        v95 = StringLiteral_16314/*"_"*/;
-      }
-      else
-      {
-        v95 = 0;
-      }
-      if ( LODWORD(v80[1].klass) <= 2 )
-        goto LABEL_63;
-      v80[2].klass = (System_String_c *)v95;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v80[2], v95, v89, v90, v91, v92, v93, v94);
-      v107 = shiftIndex;
-      v19 = j_il2cpp_value_box_0(int_TypeInfo, &v107);
-      v102 = v19;
-      if ( !v19 || (v19 = sub_1D0F1F0(v19, v80->klass->_1.element_class)) != 0 )
-      {
-        if ( LODWORD(v80[1].klass) > 3 )
+        if ( ((__int64)v82[1].klass & 0xFFFFFFFE) == 0 )
+          goto LABEL_51;
+        v82[1].fields = (System_String_Fields)v90;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v82[1].fields, v90, v84, v85, v86, v87, v88, v89);
+        v19 = StringLiteral_16714/*"_"*/;
+        if ( !StringLiteral_16714/*"_"*/ || (v19 = sub_21FFDA4(StringLiteral_16714/*"_"*/, v82->klass->_1.element_class)) != 0 )
         {
-          v80[2].monitor = (void *)v102;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&v80[2].monitor, v102, v96, v97, v98, v99, v100, v101);
-          v9 = System_String__Concat_65601228((System_Object_array *)v80, 0);
-          if ( v73 )
+          if ( LODWORD(v82[1].klass) <= 2 )
+            goto LABEL_51;
+          v97 = StringLiteral_16714/*"_"*/;
+          v82[2].klass = (System_String_c *)StringLiteral_16714/*"_"*/;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v82[2], v97, v91, v92, v93, v94, v95, v96);
+          v109 = shiftIndex;
+          v19 = j_il2cpp_value_box_0(qword_594C070, &v109);
+          v104 = v19;
+          if ( !v19 || (v19 = sub_21FFDA4(v19, v82->klass->_1.element_class)) != 0 )
           {
-            UISprite__set_spriteName(v73, v9, 0);
-            return;
+            if ( ((__int64)v82[1].klass & 0xFFFFFFFC) != 0 )
+            {
+              v82[2].monitor = (void *)v104;
+              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v82[2].monitor, v104, v98, v99, v100, v101, v102, v103);
+              v9 = System_String__Concat_75481816((System_Object_array *)v82, 0);
+              if ( v75 )
+              {
+                UISprite__set_spriteName(v75, v9, 0);
+                return;
+              }
+LABEL_53:
+              sub_21FFECC(v9, v10);
+            }
+LABEL_51:
+            sub_21FFED4(v19);
           }
-LABEL_65:
-          sub_1D0F30C(v9, v10);
         }
-LABEL_63:
-        sub_1D0F314(v19);
       }
     }
-LABEL_64:
-    v103 = sub_1D0F330(v19);
-    sub_1D0F1DC(v103, 0);
+LABEL_52:
+    v105 = sub_21FFEF0(v19, v20);
+    sub_21FFD90(v105, 0);
   }
 }
 
@@ -843,68 +807,69 @@ void BattleServantChangeBarComponent__setMpFrames(
   __int64 v8; // x1
   UISprite_o *frontHpBart; // x21
   Il2CppObject *v10; // x0
+  __int64 v11; // x1
   UnityEngine_Object_o *splitSprite; // x21
-  UISprite_o *v12; // x21
-  Il2CppObject *v13; // x0
+  __int64 v13; // x1
+  UISprite_o *v14; // x21
+  Il2CppObject *v15; // x0
   UnityEngine_Object_o *backHpBar; // x21
-  UISprite_o *v15; // x20
-  Il2CppObject *v16; // x0
-  int32_t v17; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
+  UISprite_o *v17; // x20
+  Il2CppObject *v18; // x0
+  int32_t v19; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E7AEFB & 1) == 0 )
+  if ( (byte_593BF64 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_22107/*"mp_framebg_"*/);
-    sub_1D0F0B4(&StringLiteral_19374/*"enemymp_"*/);
-    sub_1D0F0B4(&StringLiteral_22108/*"mp_mark_"*/);
-    sub_1D0F0B4(&StringLiteral_22106/*"mp_frame_"*/);
-    byte_4E7AEFB = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_22738/*"mp_framebg_"*/);
+    sub_21FFC50(&StringLiteral_19889/*"enemymp_"*/);
+    sub_21FFC50(&StringLiteral_22739/*"mp_mark_"*/);
+    sub_21FFC50(&StringLiteral_22737/*"mp_frame_"*/);
+    byte_593BF64 = 1;
   }
   hpframe = this->fields.hpframe;
-  v18 = type;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-  v7 = System_String__Concat((Il2CppObject *)StringLiteral_22106/*"mp_frame_"*/, v6, 0);
+  v20 = type;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+  v7 = System_String__Concat((Il2CppObject *)StringLiteral_22737/*"mp_frame_"*/, v6, 0);
   if ( !hpframe )
     goto LABEL_16;
   UISprite__set_spriteName(hpframe, v7, 0);
   frontHpBart = this->fields.frontHpBart;
-  v17 = type;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-  v7 = System_String__Concat((Il2CppObject *)StringLiteral_19374/*"enemymp_"*/, v10, 0);
+  v19 = type;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
+  v7 = System_String__Concat((Il2CppObject *)StringLiteral_19889/*"enemymp_"*/, v10, 0);
   if ( !frontHpBart )
     goto LABEL_16;
   UISprite__set_spriteName(frontHpBart, v7, 0);
   splitSprite = (UnityEngine_Object_o *)this->fields.splitSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
   if ( UnityEngine_Object__op_Inequality(splitSprite, 0, 0) )
   {
-    v12 = this->fields.splitSprite;
-    v18 = type;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-    v7 = System_String__Concat((Il2CppObject *)StringLiteral_22108/*"mp_mark_"*/, v13, 0);
-    if ( !v12 )
+    v14 = this->fields.splitSprite;
+    v20 = type;
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+    v7 = System_String__Concat((Il2CppObject *)StringLiteral_22739/*"mp_mark_"*/, v15, 0);
+    if ( !v14 )
       goto LABEL_16;
-    UISprite__set_spriteName(v12, v7, 0);
+    UISprite__set_spriteName(v14, v7, 0);
   }
   backHpBar = (UnityEngine_Object_o *)this->fields.backHpBar;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
   if ( UnityEngine_Object__op_Inequality(backHpBar, 0, 0) )
   {
-    v15 = this->fields.backHpBar;
-    v18 = type;
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
-    v7 = System_String__Concat((Il2CppObject *)StringLiteral_22107/*"mp_framebg_"*/, v16, 0);
-    if ( v15 )
+    v17 = this->fields.backHpBar;
+    v20 = type;
+    v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+    v7 = System_String__Concat((Il2CppObject *)StringLiteral_22738/*"mp_framebg_"*/, v18, 0);
+    if ( v17 )
     {
-      UISprite__set_spriteName(v15, v7, 0);
+      UISprite__set_spriteName(v17, v7, 0);
       return;
     }
 LABEL_16:
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   }
 }
 
@@ -918,16 +883,16 @@ void BattleServantChangeBarComponent__setSplitHp(
   BattleServantChangeBarComponent_o *v6; // x21
   struct UnityEngine_GameObject_array *splitList; // x8
   struct UnityEngine_GameObject_array **p_splitList; // x22
-  unsigned __int64 v9; // x25
+  unsigned __int64 v9; // x26
   unsigned __int64 max_length_low; // x9
   UnityEngine_Object_o *v11; // x23
   __int64 v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
   unsigned __int64 v19; // x24
   __int64 i; // x25
   UnityEngine_GameObject_o *gameObject; // x0
@@ -935,26 +900,26 @@ void BattleServantChangeBarComponent__setSplitHp(
   BattleServantChangeBarComponent_o *v23; // x23
   int mWidth; // w26
   __int64 v25; // x27
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
   int32_t v29; // w5
-  int64_t v30; // x6
-  System_String_o *v31; // x7
+  bool v30; // w6
+  bool v31; // w7
   struct UnityEngine_GameObject_array *v32; // x8
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4E7AEFC & 1) == 0 )
+  if ( (byte_593BF65 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_GameObject___TypeInfo);
-    this = (BattleServantChangeBarComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7AEFC = 1;
+    sub_21FFC50(&UnityEngine_GameObject___TypeInfo);
+    this = (BattleServantChangeBarComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BF65 = 1;
   }
   p_splitList = &v6->fields.splitList;
   splitList = v6->fields.splitList;
   if ( !splitList )
-    goto LABEL_24;
+    goto LABEL_10;
   v9 = 0;
   while ( 1 )
   {
@@ -962,24 +927,24 @@ void BattleServantChangeBarComponent__setSplitHp(
     if ( (__int64)v9 >= (int)max_length_low )
       break;
     if ( v9 >= max_length_low )
-LABEL_25:
-      sub_1D0F314(this);
+LABEL_24:
+      sub_21FFED4(this);
     v11 = (UnityEngine_Object_o *)splitList->m_Items[v9];
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_73359484(v11, 0);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, split);
+    UnityEngine_Object__Destroy_83246496(v11, 0);
     splitList = *p_splitList;
     ++v9;
     if ( !*p_splitList )
-      goto LABEL_24;
+      goto LABEL_10;
   }
   if ( maxHp >= 1 )
   {
     if ( !split )
-      goto LABEL_24;
-    v12 = sub_1D0F15C(UnityEngine_GameObject___TypeInfo, LODWORD(split->max_length));
+      goto LABEL_10;
+    v12 = sub_21FFD10(UnityEngine_GameObject___TypeInfo, LODWORD(split->max_length));
     *p_splitList = (struct UnityEngine_GameObject_array *)v12;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v6->fields.splitList, v12, v13, v14, v15, v16, v17, v18);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v6->fields.splitList, v12, v13, v14, v15, v16, v17, v18);
     if ( SLODWORD(split->max_length) >= 1 )
     {
       v19 = 0;
@@ -999,7 +964,7 @@ LABEL_25:
         if ( !frontHpBart )
           break;
         if ( v19 >= LODWORD(split->max_length) )
-          goto LABEL_25;
+          goto LABEL_24;
         v23 = this;
         if ( !this )
           break;
@@ -1010,23 +975,23 @@ LABEL_25:
                                                       0);
         if ( !this )
           break;
-        v33.fields.x = (double)mWidth * (double)(maxHp - v25) / (double)maxHp;
-        v33.fields.y = 0.0;
         v33.fields.z = 0.0;
+        v33.fields.y = 0.0;
+        v33.fields.x = (double)mWidth * (double)(maxHp - v25) / (double)maxHp;
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v33, 0);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v23, 1, 0);
         v32 = *p_splitList;
         if ( !*p_splitList )
           break;
         if ( v19 >= LODWORD(v32->max_length) )
-          goto LABEL_25;
+          goto LABEL_24;
         *(Il2CppClass **)((char *)&v32->obj.klass + i) = (Il2CppClass *)v23;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)((char *)v32 + i), (int32_t)v23, v26, v27, v28, v29, v30, v31);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)v32 + i), (int32_t)v23, v26, v27, v28, v29, v30, v31);
         if ( (__int64)++v19 >= SLODWORD(split->max_length) )
           return;
       }
-LABEL_24:
-      sub_1D0F30C(this, split);
+LABEL_10:
+      sub_21FFECC(this, split);
     }
   }
 }

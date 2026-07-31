@@ -19,18 +19,18 @@ UIAlphaMaskTexture_o *AlphaMaskTextureManager__Create(
   UnityEngine_Transform_o *v14; // x22
   UnityEngine_Transform_o *v15; // x22
 
-  if ( (byte_4E7AC2F & 1) == 0 )
+  if ( (byte_593BC98 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7AC2F = 1;
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BC98 = 1;
   }
   prefab = (Il2CppObject *)this->fields.prefab;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, root);
   transform = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object_(
                                            prefab,
-                                           (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
+                                           (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
   if ( !transform )
     goto LABEL_15;
   v12 = transform;
@@ -44,24 +44,24 @@ UIAlphaMaskTexture_o *AlphaMaskTextureManager__Create(
   UnityEngine_Transform__SetParent(v13, (UnityEngine_Transform_o *)transform, 0);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v12, 0);
   v14 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4E70C99 )
+  if ( !byte_5931940 )
   {
-    transform = (UnityEngine_Component_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C99 = 1;
+    transform = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931940 = 1;
   }
   if ( !v14 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v14, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v12, 0);
   v15 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4E70C9E )
+  if ( !byte_5931945 )
   {
-    transform = (UnityEngine_Component_o *)sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-    byte_4E70C9E = 1;
+    transform = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    byte_5931945 = 1;
   }
   if ( !v15 )
 LABEL_15:
-    sub_1D0F30C(transform, v11);
+    sub_21FFECC(transform, v11);
   UnityEngine_Transform__set_localScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   UIAlphaMaskTexture__SetAlphaMaskTexture((UIAlphaMaskTexture_o *)v12, loadName, callback, 0);
   return (UIAlphaMaskTexture_o *)v12;

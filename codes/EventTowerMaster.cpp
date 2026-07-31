@@ -1,14 +1,14 @@
 void EventTowerMaster___ctor(EventTowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7783A & 1) == 0 )
+  if ( (byte_5938930 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string___ctor__);
-    byte_4E7783A = 1;
+    sub_21FFC50(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string___ctor__);
+    byte_5938930 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    240,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string___ctor__);
+    242,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string___ctor__);
 }
 
 
@@ -20,50 +20,51 @@ EventTowerEntity_array *EventTowerMaster__GetDatas(EventTowerMaster_o *this, int
   int32_t Count; // w0
   int32_t v9; // w22
   int32_t v10; // w23
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   struct System_Object_array *items; // x8
   _QWORD *v18; // x9
   __int64 size; // x10
   Il2CppClass **v20; // x0
-  System_Comparison_T__o *v21; // x20
-  Il2CppObject *v22; // x21
-  struct EventTowerMaster___c_StaticFields *static_fields; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  struct EventTowerMaster___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__3_0; // x20
+  Il2CppObject *v23; // x21
+  struct EventTowerMaster___c_StaticFields *v24; // x0
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
 
-  if ( (byte_4E7783B & 1) == 0 )
+  if ( (byte_5938931 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Item__);
-    sub_1D0F0B4(&System_Comparison_EventTowerEntity__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventTowerEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventTowerEntity__Sort__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventTowerEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventTowerEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_EventTowerEntity__TypeInfo);
-    sub_1D0F0B4(&Method_EventTowerMaster___c__GetDatas_b__3_0__);
-    sub_1D0F0B4(&EventTowerMaster___c_TypeInfo);
-    byte_4E7783B = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Count__);
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Item__);
+    sub_21FFC50(&System_Comparison_EventTowerEntity__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventTowerEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventTowerEntity__Sort__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventTowerEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventTowerEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_EventTowerEntity__TypeInfo);
+    sub_21FFC50(&Method_EventTowerMaster___c__GetDatas_b__3_0__);
+    sub_21FFC50(&EventTowerMaster___c_TypeInfo);
+    byte_5938931 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_EventTowerEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventTowerEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_EventTowerEntity___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventTowerEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_23;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Count__);
+            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -76,7 +77,7 @@ EventTowerEntity_array *EventTowerMaster__GetDatas(EventTowerMaster_o *this, int
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v10,
-               (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Item__);
+               (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventTowerEntity__get_Item__);
       if ( list )
       {
         v6 = (Il2CppClass *)list;
@@ -95,14 +96,14 @@ EventTowerEntity_array *EventTowerMaster__GetDatas(EventTowerMaster_o *this, int
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               (Il2CppObject *)list,
-              *(const MethodInfo_395C410 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v20[4] = v6;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
+            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -110,39 +111,40 @@ EventTowerEntity_array *EventTowerMaster__GetDatas(EventTowerMaster_o *this, int
         goto LABEL_15;
     }
 LABEL_23:
-    sub_1D0F30C(list, v6);
+    sub_21FFECC(list, v6);
   }
 LABEL_15:
   list = EventTowerMaster___c_TypeInfo;
-  if ( !EventTowerMaster___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&EventTowerMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventTowerMaster___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventTowerMaster___c_TypeInfo, v6);
     list = EventTowerMaster___c_TypeInfo;
   }
-  v21 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v21 )
+  static_fields = (struct EventTowerMaster___c_StaticFields *)*((_QWORD *)list + 23);
+  _9__3_0 = (System_Comparison_T__o *)static_fields->__9__3_0;
+  if ( !_9__3_0 )
   {
-    if ( !*((_DWORD *)list + 56) )
+    if ( !*((_DWORD *)list + 57) )
     {
-      j_il2cpp_runtime_class_init_0(list);
-      list = EventTowerMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(list, v6);
+      static_fields = EventTowerMaster___c_TypeInfo->static_fields;
     }
-    v22 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v21 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_EventTowerEntity__TypeInfo);
-    System_Comparison_object____ctor(v21, v22, Method_EventTowerMaster___c__GetDatas_b__3_0__, 0);
-    static_fields = EventTowerMaster___c_TypeInfo->static_fields;
-    static_fields->__9__3_0 = (struct System_Comparison_EventTowerEntity__o *)v21;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__3_0, (int32_t)v21, v24, v25, v26, v27, v28, v29);
+    v23 = (Il2CppObject *)static_fields->__9;
+    _9__3_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventTowerEntity__TypeInfo);
+    System_Comparison_object____ctor(_9__3_0, v23, Method_EventTowerMaster___c__GetDatas_b__3_0__, 0);
+    v24 = EventTowerMaster___c_TypeInfo->static_fields;
+    v24->__9__3_0 = (struct System_Comparison_EventTowerEntity__o *)_9__3_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24->__9__3_0, (int32_t)_9__3_0, v25, v26, v27, v28, v29, v30);
   }
   if ( !v5 )
     goto LABEL_23;
-  System_Collections_Generic_List_object___Sort_60153556(
+  System_Collections_Generic_List_object___Sort_71636404(
     v5,
-    v21,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_EventTowerEntity__Sort__);
+    _9__3_0,
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventTowerEntity__Sort__);
   return (EventTowerEntity_array *)System_Collections_Generic_List_object___ToArray(
                                      v5,
-                                     (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_EventTowerEntity__ToArray__);
+                                     (const MethodInfo_445164C *)Method_System_Collections_Generic_List_EventTowerEntity__ToArray__);
 }
 
 
@@ -155,16 +157,16 @@ EventTowerEntity_o *EventTowerMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77838 & 1) == 0 )
+  if ( (byte_593892E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__GetEntity__);
-    byte_4E77838 = 1;
+    sub_21FFC50(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__GetEntity__);
+    byte_593892E = 1;
   }
   PK = (Il2CppObject *)EventTowerEntity__CreatePK(eventId, towerId, *(const MethodInfo **)&towerId);
   return (EventTowerEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_353AADC *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__GetEntity__);
+                                 (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__GetEntity__);
 }
 
 
@@ -178,40 +180,40 @@ bool EventTowerMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77839 & 1) == 0 )
+  if ( (byte_593892F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__TryGetEntity__);
-    byte_4E77839 = 1;
+    sub_21FFC50(&Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__TryGetEntity__);
+    byte_593892F = 1;
   }
   PK = (Il2CppObject *)EventTowerEntity__CreatePK(eventId, towerId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventTowerMaster__EventTowerEntity__string__TryGetEntity__);
 }
 
 
 void EventTowerMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7783C & 1) == 0 )
+  if ( (byte_5938932 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventTowerMaster___c_TypeInfo);
-    byte_4E7783C = 1;
+    sub_21FFC50(&EventTowerMaster___c_TypeInfo);
+    byte_5938932 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(EventTowerMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(EventTowerMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventTowerMaster___c_TypeInfo->static_fields->__9 = (struct EventTowerMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)EventTowerMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)EventTowerMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -235,6 +237,6 @@ int32_t EventTowerMaster___c___GetDatas_b__3_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   return a->fields.towerId - b->fields.towerId;
 }

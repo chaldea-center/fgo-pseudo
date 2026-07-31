@@ -1,12 +1,12 @@
 void WarBoardEventData___ctor(WarBoardEventData_o *this, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
-  *(_QWORD *)&this->fields._eventId_k__BackingField = -1;
   this->fields._firstPlayedTurn_k__BackingField = -1;
+  *(_QWORD *)&this->fields._eventId_k__BackingField = -1;
 }
 
 
-void WarBoardEventData___ctor_39452156(
+void WarBoardEventData___ctor_45010296(
         WarBoardEventData_o *this,
         int32_t id,
         int32_t playedTurn,
@@ -19,7 +19,7 @@ void WarBoardEventData___ctor_39452156(
 }
 
 
-void WarBoardEventData___ctor_39452204(
+void WarBoardEventData___ctor_45010344(
         WarBoardEventData_o *this,
         WarBoardEventData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -29,7 +29,7 @@ void WarBoardEventData___ctor_39452204(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   *(_QWORD *)&this->fields._eventId_k__BackingField = *(_QWORD *)&saveData->fields.eventId;
   this->fields._firstPlayedTurn_k__BackingField = saveData->fields.firstPlayedTurn;
 }
@@ -80,12 +80,12 @@ void WarBoardEventData__set_latestPlayedTurn(WarBoardEventData_o *this, int32_t 
 void WarBoardEventData_SaveData___ctor(WarBoardEventData_SaveData_o *this, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
-  *(_QWORD *)&this->fields.eventId = -1;
   this->fields.firstPlayedTurn = -1;
+  *(_QWORD *)&this->fields.eventId = -1;
 }
 
 
-void WarBoardEventData_SaveData___ctor_39442732(
+void WarBoardEventData_SaveData___ctor_45001200(
         WarBoardEventData_SaveData_o *this,
         WarBoardEventData_o *eventData,
         const MethodInfo *method)
@@ -95,7 +95,7 @@ void WarBoardEventData_SaveData___ctor_39442732(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !eventData )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   *(_QWORD *)&this->fields.eventId = *(_QWORD *)&eventData->fields._eventId_k__BackingField;
   this->fields.firstPlayedTurn = eventData->fields._firstPlayedTurn_k__BackingField;
 }

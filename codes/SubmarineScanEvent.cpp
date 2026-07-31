@@ -1,9 +1,9 @@
 void SubmarineScanEvent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E73EE7 & 1) == 0 )
+  if ( (byte_5934E1F & 1) == 0 )
   {
-    sub_1D0F0B4(&SubmarineScanEvent_TypeInfo);
-    byte_4E73EE7 = 1;
+    sub_21FFC50(&SubmarineScanEvent_TypeInfo);
+    byte_5934E1F = 1;
   }
   SubmarineScanEvent_TypeInfo->static_fields->NO_DIRECTION = -1;
 }
@@ -21,19 +21,18 @@ void SubmarineScanEvent___ctor(
 {
   __int64 v15; // x0
   __int64 v16; // x1
-  bool HasEnemyParts_k__BackingField; // w8
+  __int16 v17; // w8
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !panelData )
-    sub_1D0F30C(v15, v16);
+    sub_21FFECC(v15, v16);
   *(_QWORD *)&this->fields._HIndex_k__BackingField = *(_QWORD *)&panelData->fields._HIndex_k__BackingField;
-  this->fields._IsAlreadyOpened_k__BackingField = panelData->fields._IsOpened_k__BackingField;
-  HasEnemyParts_k__BackingField = panelData->fields._HasEnemyParts_k__BackingField;
+  v17 = *(_WORD *)&panelData->fields._IsOpened_k__BackingField;
+  this->fields._IsOpened_k__BackingField = isOpened;
   this->fields._Chain_k__BackingField = chain;
   this->fields._Direction_k__BackingField = direction;
-  this->fields._IsOpened_k__BackingField = isOpened;
   this->fields._IsHitObstacle_k__BackingField = isHitObstacle;
-  this->fields._HasEnemyParts_k__BackingField = HasEnemyParts_k__BackingField;
+  *(_WORD *)&this->fields._IsAlreadyOpened_k__BackingField = v17;
   this->fields._IsStopped_k__BackingField = isStopped;
 }
 

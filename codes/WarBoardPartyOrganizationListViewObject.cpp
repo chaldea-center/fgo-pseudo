@@ -19,40 +19,42 @@ void WarBoardPartyOrganizationListViewObject__Init(
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapEvent,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  __int64 v10; // x1
+  __int64 v11; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v11; // x1
-  const MethodInfo *v12; // x3
-  WarBoardPartyOrganizationListViewItemDraw_o *v13; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  WarBoardPartyOrganizationListViewItemDraw_o *v15; // x0
 
-  if ( (byte_4E7528E & 1) == 0 )
+  if ( (byte_5936215 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7528E = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5936215 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.onTapEvent,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.onTapEvent,
     (int32_t)onTapEvent,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v13 = this->fields.itemDraw;
-    if ( !v13 )
-      sub_1D0F30C(0, v11);
-    WarBoardPartyOrganizationListViewItemDraw__SetItem(v13, this->fields.listViewItem, 3, v12);
+    v15 = this->fields.itemDraw;
+    if ( !v15 )
+      sub_21FFECC(0, v13);
+    WarBoardPartyOrganizationListViewItemDraw__SetItem(v15, this->fields.listViewItem, 3, v14);
   }
 }
 
@@ -103,7 +105,7 @@ void WarBoardPartyOrganizationListViewObject__OnTapEvent(
         bool isLongTap,
         const MethodInfo *method)
 {
-  struct WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapEvent; // x9
+  struct WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapEvent; // x10
 
   if ( this->fields.isEnableTouch )
   {
@@ -173,17 +175,17 @@ void WarBoardPartyOrganizationListViewObject__SetItem(
         PartyOrganizationListViewItem_o *item,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.listViewItem = item;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.listViewItem,
     (int32_t)item,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

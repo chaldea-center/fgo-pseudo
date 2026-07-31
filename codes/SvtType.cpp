@@ -34,7 +34,7 @@ bool SvtType__IsEnemyCollectionDetail(int32_t type, const MethodInfo *method)
 }
 
 
-bool SvtType__IsEnemy_41813540(int32_t type, const MethodInfo *method)
+bool SvtType__IsEnemy_47384848(int32_t type, const MethodInfo *method)
 {
   return type == 4;
 }
@@ -48,13 +48,7 @@ bool SvtType__IsExpUp(int32_t type, const MethodInfo *method)
 
 bool SvtType__IsKeepServant(int32_t type, const MethodInfo *method)
 {
-  _BOOL4 v2; // w0
-
-  if ( (unsigned int)(type - 1) > 0xB )
-    LOBYTE(v2) = 0;
-  else
-    return (0x847u >> (type - 1)) & 1;
-  return v2;
+  return ((unsigned int)type < 0xD) & (0x108Eu >> type);
 }
 
 
@@ -72,25 +66,13 @@ bool SvtType__IsOrganization(int32_t type, const MethodInfo *method)
 
 bool SvtType__IsServant(int32_t type, const MethodInfo *method)
 {
-  _BOOL4 v2; // w0
-
-  if ( (unsigned int)(type - 1) > 4 )
-    LOBYTE(v2) = 0;
-  else
-    return (0x1Bu >> (type - 1)) & 1;
-  return v2;
+  return ((unsigned int)type < 6) & (0x36u >> type);
 }
 
 
 bool SvtType__IsServantCollection(int32_t type, const MethodInfo *method)
 {
-  _BOOL4 v2; // w0
-
-  if ( (unsigned int)(type - 1) > 8 )
-    LOBYTE(v2) = 0;
-  else
-    return (0x113u >> (type - 1)) & 1;
-  return v2;
+  return ((unsigned int)type < 0xA) & (0x226u >> type);
 }
 
 

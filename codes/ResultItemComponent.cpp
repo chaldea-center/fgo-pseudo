@@ -16,7 +16,7 @@ void ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *m
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
   {
-    sub_1D0F30C(baseObject, method);
+    sub_21FFECC(baseObject, method);
   }
   ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0);
 }
@@ -33,10 +33,12 @@ void ResultItemComponent__Set(
   ResultItemComponent_o *v6; // x22
   int32_t v7; // w20
   int32_t num; // w3
-  int64_t v10; // x3
+  int32_t type; // w1
+  int64_t v11; // x3
+  int32_t v12; // w2
 
   if ( !giftEnt )
-    goto LABEL_19;
+    goto LABEL_20;
   v5 = giftEnt;
   v6 = this;
   if ( giftEnt->fields.objectId < 1 )
@@ -47,36 +49,42 @@ void ResultItemComponent__Set(
   this = (ResultItemComponent_o *)this->fields.baseObject;
   v7 = overwriteItemId <= 0 ? giftEnt->fields.objectId : overwriteItemId;
   if ( !this )
-    goto LABEL_19;
+    goto LABEL_20;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   giftEnt = (GiftEntity_o *)(unsigned int)v5->fields.prioredIconId;
-  this = (ResultItemComponent_o *)v6->fields.itemIcon;
-  if ( (int)giftEnt >= 1 )
+  if ( (int)giftEnt < 1 )
   {
-    if ( this )
+    this = (ResultItemComponent_o *)v6->fields.itemIcon;
+    if ( count < 1 )
     {
-      if ( v5->fields.num <= 1 )
-        num = -1;
-      else
-        num = v5->fields.num;
-      ItemIconComponent__SetItemImage_42287580(
-        (ItemIconComponent_o *)this,
-        (int32_t)giftEnt,
-        v5->fields.objectId,
-        num,
-        0);
+      if ( this )
+      {
+        type = v5->fields.type;
+        v12 = v7;
+        v11 = -1;
+        goto LABEL_19;
+      }
+    }
+    else if ( this )
+    {
+      type = v5->fields.type;
+      v11 = (unsigned int)count;
+      v12 = v7;
+LABEL_19:
+      ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)this, type, v12, v11, 0, 0);
       return;
     }
-LABEL_19:
-    sub_1D0F30C(this, giftEnt);
+LABEL_20:
+    sub_21FFECC(this, giftEnt);
   }
+  this = (ResultItemComponent_o *)v6->fields.itemIcon;
   if ( !this )
-    goto LABEL_19;
-  if ( count < 1 )
-    v10 = -1;
+    goto LABEL_20;
+  if ( v5->fields.num <= 1 )
+    num = -1;
   else
-    v10 = (unsigned int)count;
-  ItemIconComponent__SetGift_42283820((ItemIconComponent_o *)this, v5->fields.type, v7, v10, 0, 0);
+    num = v5->fields.num;
+  ItemIconComponent__SetItemImage_47940588((ItemIconComponent_o *)this, (int32_t)giftEnt, v5->fields.objectId, num, 0);
 }
 
 
@@ -96,9 +104,9 @@ void ResultItemComponent__SetExtra(ResultItemComponent_o *this, int32_t imgId, i
       || (UnityEngine_GameObject__SetActive(baseObject, 1, 0),
           (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
     {
-      sub_1D0F30C(baseObject, *(_QWORD *)&imgId);
+      sub_21FFECC(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_42281484((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
+    ItemIconComponent__SetItemImage_47934504((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
   }
 }
 
@@ -117,7 +125,7 @@ void ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -137,7 +145,7 @@ void ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodI
   if ( !bonusSprite
     || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0)) == 0 )
   {
-    sub_1D0F30C(bonusSprite, method);
+    sub_21FFECC(bonusSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0);
 }

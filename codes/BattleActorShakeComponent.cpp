@@ -9,10 +9,10 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
 {
   __int64 transform; // x0
   __int64 v4; // x1
+  UnityEngine_Transform_o *v5; // x20
   float z; // s8
   float y; // s9
   float x; // s10
-  UnityEngine_Transform_o *v8; // x20
   float v9; // s0
   float elapsedTime; // s8
   UnityEngine_Transform_o *v11; // x19
@@ -22,10 +22,10 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
   {
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     v11 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4E70C99 )
+    if ( !byte_5931940 )
     {
-      transform = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-      byte_4E70C99 = 1;
+      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+      byte_5931940 = 1;
     }
     if ( v11 )
     {
@@ -38,23 +38,23 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
     return;
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this->fields.animationCurvel
-    || (y = this->fields.vector.fields.y,
+    || (v5 = (UnityEngine_Transform_o *)transform,
+        y = this->fields.vector.fields.y,
         z = this->fields.vector.fields.z,
         x = this->fields.vector.fields.x,
-        v8 = (UnityEngine_Transform_o *)transform,
         v9 = UnityEngine_AnimationCurve__Evaluate(
                this->fields.animationCurvel,
                this->fields.animationSpeed * this->fields.elapsedTime,
                0),
-        !v8) )
+        !v5) )
   {
 LABEL_11:
-    sub_1D0F30C(transform, v4);
+    sub_21FFECC(transform, v4);
   }
   v12.fields.z = z * v9;
   v12.fields.y = y * v9;
   v12.fields.x = x * v9;
-  UnityEngine_Transform__set_localPosition(v8, v12, 0);
+  UnityEngine_Transform__set_localPosition(v5, v12, 0);
   elapsedTime = this->fields.elapsedTime;
   this->fields.elapsedTime = elapsedTime + UnityEngine_Time__get_deltaTime(0);
 }

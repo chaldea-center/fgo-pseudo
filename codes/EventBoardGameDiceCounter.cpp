@@ -1,15 +1,21 @@
 void EventBoardGameDiceCounter___ctor(EventBoardGameDiceCounter_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+  int32_t v9; // w1
 
-  if ( (byte_4E715F5 & 1) == 0 )
+  if ( (byte_59323AA & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_20113/*"game1_count_"*/);
-    byte_4E715F5 = 1;
+    sub_21FFC50(&StringLiteral_20638/*"game1_count_"*/);
+    byte_59323AA = 1;
   }
-  v3 = StringLiteral_20113/*"game1_count_"*/;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_20113/*"game1_count_"*/;
-  sub_1D0F058(&this->fields.spriteName, v3);
+  v9 = StringLiteral_20638/*"game1_count_"*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_20638/*"game1_count_"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.spriteName, v9, v2, v3, v4, v5, v6, v7);
   this->fields.delayTime = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -25,7 +31,7 @@ void EventBoardGameDiceCounter__CountDown(EventBoardGameDiceCounter_o *this, con
   if ( currentNum >= 1 )
   {
     v5 = EventBoardGameDiceCounter__SetNum(this, currentNum - 1, v2);
-    UnityEngine_MonoBehaviour__StartCoroutine_73344676((UnityEngine_MonoBehaviour_o *)this, v5, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v5, 0);
   }
 }
 
@@ -36,19 +42,27 @@ System_Collections_IEnumerator_o *EventBoardGameDiceCounter__SetNum(
         const MethodInfo *method)
 {
   __int64 v5; // x21
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_4E715F4 & 1) == 0 )
+  if ( (byte_59323A9 & 1) == 0 )
   {
-    sub_1D0F0B4(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
-    byte_4E715F4 = 1;
+    sub_21FFC50(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
+    byte_59323A9 = 1;
   }
-  v5 = sub_1D0F300(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
+  v5 = sub_21FFEBC(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1D0F058(v5 + 32, this);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = num;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -61,13 +75,13 @@ void EventBoardGameDiceCounter__SetNumSprite(EventBoardGameDiceCounter_o *this, 
   __int64 v8; // x1
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  v9 = num;
   spriteName = this->fields.spriteName;
   counterSp = this->fields.counterSp;
+  v9 = num;
   v6 = System_Int32__ToString((int32_t)&v9, 0);
-  v7 = System_String__Concat_65562772(spriteName, v6, 0);
+  v7 = System_String__Concat_75438412(spriteName, v6, 0);
   if ( !counterSp )
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   UISprite__set_spriteName(counterSp, v7, 0);
   this->fields.currentNum = v9;
 }
@@ -95,46 +109,53 @@ bool EventBoardGameDiceCounter__SetNum_d__7__MoveNext(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  int32_t _1__state; // w8
+  int32_t _1__state; // w21
   struct EventBoardGameDiceCounter_o *_4__this; // x0
   float delayTime; // s8
   UnityEngine_WaitForSeconds_o *v7; // x20
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E715F6 & 1) == 0 )
+  if ( (byte_59323AB & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4E715F6 = 1;
+    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_59323AB = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
-  if ( _1__state == 1 )
-  {
-    this->fields.__1__state = -1;
-    if ( !_4__this )
-      goto LABEL_10;
-    EventBoardGameDiceCounter__SetNumSprite(_4__this, this->fields.num, v2);
-  }
-  else if ( !_1__state )
+  if ( !_1__state )
   {
     this->fields.__1__state = -1;
     if ( _4__this )
     {
       delayTime = _4__this->fields.delayTime;
-      v7 = (UnityEngine_WaitForSeconds_o *)sub_1D0F300(UnityEngine_WaitForSeconds_TypeInfo);
+      v7 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v7, delayTime, 0);
       this->fields.__2__current = (Il2CppObject *)v7;
       p__2__current = &this->fields.__2__current;
-      sub_1D0F058(p__2__current, v7);
-      result = 1;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
       *((_DWORD *)p__2__current - 2) = 1;
-      return result;
+      return _1__state == 0;
+    }
+    goto LABEL_10;
+  }
+  if ( _1__state == 1 )
+  {
+    this->fields.__1__state = -1;
+    if ( _4__this )
+    {
+      EventBoardGameDiceCounter__SetNumSprite(_4__this, this->fields.num, v2);
+      return _1__state == 0;
     }
 LABEL_10:
-    sub_1D0F30C(_4__this, method);
+    sub_21FFECC(_4__this, method);
   }
-  return 0;
+  return _1__state == 0;
 }
 
 
@@ -154,11 +175,11 @@ void __noreturn EventBoardGameDiceCounter__SetNum_d__7__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

@@ -4,6 +4,7 @@ void UserServantCoinListViewItemDraw___ctor(UserServantCoinListViewItemDraw_o *t
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UserServantCoinListViewItemDraw__SetInput(
         UserServantCoinListViewItemDraw_o *this,
         UserServantCoinListViewItem_o *item,
@@ -14,14 +15,14 @@ void UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_4E72B89 & 1) == 0 )
+  if ( (byte_5933B82 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E72B89 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5933B82 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item, isInput);
   if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
   {
     v7 = this->fields.baseButton;
@@ -32,7 +33,7 @@ void UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._5_set_isEnabled.method),
           (v7 = this->fields.baseButton) == 0) )
     {
-      sub_1D0F30C(v7, v6);
+      sub_21FFECC(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v7->klass->vtable._14_SetState.methodPtr)(
       v7,
@@ -57,11 +58,10 @@ void UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v12; // x0
   int v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E72B88 & 1) == 0 )
+  if ( (byte_5933B81 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25574/*"{0:#,0}"*/);
-    byte_4E72B88 = 1;
+    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
+    byte_5933B81 = 1;
   }
   if ( item && mode )
   {
@@ -89,11 +89,11 @@ void UserServantCoinListViewItemDraw__SetItem(
     if ( userSvtCoinEntity )
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v13 = (int)userSvtCoinEntity;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25574/*"{0:#,0}"*/, v12, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v13);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v12, 0);
     if ( !possessionNum )
 LABEL_15:
-      sub_1D0F30C(itemIcon, itemId);
+      sub_21FFECC(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0);
   }
 }

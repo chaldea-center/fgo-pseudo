@@ -9,19 +9,20 @@ int32_t ResponseCommandBase__ExecuteResponse(
 
 System_String_o *ResponseCommandBase__GetCommandName(ResponseCommandBase_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w19
+  __int64 v3; // x1
+  int32_t v4; // w19
 
-  if ( (byte_4E7927D & 1) == 0 )
+  if ( (byte_593A2D1 & 1) == 0 )
   {
-    sub_1D0F0B4(&ResponseCommandKind_TypeInfo);
-    byte_4E7927D = 1;
+    sub_21FFC50(&ResponseCommandKind_TypeInfo);
+    byte_593A2D1 = 1;
   }
-  v3 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, const MethodInfo *))this->klass->vtable._4_GetKind.methodPtr)(
+  v4 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, const MethodInfo *))this->klass->vtable._4_GetKind.methodPtr)(
          this,
          this->klass->vtable._4_GetKind.method);
-  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  return ResponseCommandKind__GetName(v3, 0);
+  if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, v3);
+  return ResponseCommandKind__GetName(v4, 0);
 }
 
 

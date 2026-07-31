@@ -9,16 +9,16 @@ void UIDragDropListViewSurface__DragEnd(UIDragDropListViewSurface_o *this, const
   Il2CppObject *Component_object; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E78ECC & 1) == 0 )
+  if ( (byte_5939F1C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4E78ECC = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_5939F1C = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 0, 0);
 }
 
@@ -28,15 +28,15 @@ void UIDragDropListViewSurface__DragStart(UIDragDropListViewSurface_o *this, con
   Il2CppObject *Component_object; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E78ECB & 1) == 0 )
+  if ( (byte_5939F1B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4E78ECB = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_5939F1B = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 1, 0);
 }

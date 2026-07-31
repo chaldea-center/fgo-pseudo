@@ -13,17 +13,19 @@ void DebugListViewItemDraw__SetItem(
 {
   System_String_o *titleText; // x1
   UILabel_o *eventTextLabel; // x0
+  __int64 v9; // x1
+  __int64 v10; // x2
   Il2CppObject *Component_object; // x21
-  float v10; // s0 OVERLAPPED
-  float v11; // s3
-  float v12; // s1
-  float v13; // s2
+  float v12; // s0 OVERLAPPED
+  float v13; // s3
+  float v14; // s1
+  float v15; // s2
 
-  if ( (byte_4E74ADA & 1) == 0 )
+  if ( (byte_5935A6F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E74ADA = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5935A6F = 1;
   }
   if ( item && mode )
   {
@@ -43,9 +45,9 @@ void DebugListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)eventTextLabel,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
         eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
         if ( ((unsigned __int8)eventTextLabel & 1) != 0 )
         {
@@ -54,20 +56,20 @@ void DebugListViewItemDraw__SetItem(
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
         }
         eventTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-        v10 = 1.0;
-        if ( mode == 1 )
-          v10 = 0.5;
         if ( eventTextLabel )
         {
-          v11 = 1.0;
-          v12 = v10;
-          v13 = v10;
-          UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v10, 0);
+          v12 = 1.0;
+          v13 = 1.0;
+          if ( mode == 1 )
+            v12 = 0.5;
+          v14 = v12;
+          v15 = v12;
+          UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v12, 0);
           return;
         }
       }
     }
 LABEL_20:
-    sub_1D0F30C(eventTextLabel, titleText);
+    sub_21FFECC(eventTextLabel, titleText);
   }
 }

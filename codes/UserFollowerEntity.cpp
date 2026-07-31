@@ -1,13 +1,13 @@
 void UserFollowerEntity___ctor(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7855A & 1) == 0 )
+  if ( (byte_5939595 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_long___ctor__);
-    byte_4E7855A = 1;
+    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
+    byte_5939595 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_353348C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -20,27 +20,19 @@ int64_t UserFollowerEntity__CreatePrimaryKey(UserFollowerEntity_o *this, const M
 bool UserFollowerEntity__IsValidFollower(UserFollowerEntity_o *this, int64_t followerId, const MethodInfo *method)
 {
   struct FollowerInfo_array *followerInfo; // x9
-  il2cpp_array_size_t max_length; // x8
-  bool result; // w0
-  __int64 v6; // x8
+  __int64 max_length; // x8
   FollowerInfo_o **i; // x9
 
   followerInfo = this->fields.followerInfo;
-  if ( !followerInfo )
+  if ( !followerInfo || (int)followerInfo->max_length < 1 )
     return 0;
-  max_length = followerInfo->max_length;
-  result = 0;
-  if ( max_length && (int)max_length >= 1 )
+  max_length = (unsigned int)followerInfo->max_length;
+  for ( i = followerInfo->m_Items; !*i || (*i)->fields.userId != followerId; ++i )
   {
-    v6 = (unsigned int)followerInfo->max_length;
-    for ( i = followerInfo->m_Items; !*i || (*i)->fields.userId != followerId; ++i )
-    {
-      if ( !--v6 )
-        return 0;
-    }
-    return 1;
+    if ( !--max_length )
+      return 0;
   }
-  return result;
+  return 1;
 }
 
 
@@ -50,10 +42,10 @@ FollowerInfo_o *UserFollowerEntity__getFollowerInfo(
         int32_t followerType,
         const MethodInfo *method)
 {
-  struct FollowerInfo_array *followerInfo; // x10
+  struct FollowerInfo_array *followerInfo; // x9
   int max_length; // w8
-  __int64 v6; // x9
-  FollowerInfo_o **m_Items; // x10
+  FollowerInfo_o **i; // x9
+  FollowerInfo_o *result; // x0
 
   followerInfo = this->fields.followerInfo;
   if ( !followerInfo )
@@ -61,35 +53,28 @@ FollowerInfo_o *UserFollowerEntity__getFollowerInfo(
   max_length = followerInfo->max_length;
   if ( max_length < 1 )
     return 0;
-  v6 = 0;
-  m_Items = followerInfo->m_Items;
-  while ( 1 )
+  for ( i = followerInfo->m_Items; ; ++i )
   {
-    if ( (unsigned int)v6 >= max_length )
-      sub_1D0F314(this);
-    this = (UserFollowerEntity_o *)m_Items[v6];
-    if ( !this )
-      sub_1D0F30C(0, followerId);
-    if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
-      && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
-    {
+    result = *i;
+    if ( !*i )
+      sub_21FFECC(0, followerId);
+    if ( result->fields.userId == followerId && (followerType == -1 || result->fields.type == followerType) )
       break;
-    }
-    if ( (int)++v6 >= max_length )
+    if ( !--max_length )
       return 0;
   }
-  return (FollowerInfo_o *)this;
+  return result;
 }
 
 
 bool UserFollowerEntity__isEnableData(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78559 & 1) == 0 )
+  if ( (byte_5939594 & 1) == 0 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E78559 = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5939594 = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   return NetworkManager__getTime(0) <= this->fields.expireAt;
 }

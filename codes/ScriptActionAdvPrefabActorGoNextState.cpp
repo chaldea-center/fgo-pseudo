@@ -13,24 +13,24 @@ void ScriptActionAdvPrefabActorGoNextState__OnStateEnter(
         int32_t layerIndex,
         const MethodInfo *method)
 {
-  struct ScriptActionAdvPrefabActorController_o *owner; // x8
-  __int128 v6; // q0
-  __int128 v7; // q1
-  UnityEngine_AnimatorStateInfo_o v8; // [xsp+0h] [xbp-40h] BYREF
+  ScriptActionAdvPrefabActorController_o *owner; // x0
+  __int128 v10; // q1
+  int32_t m_Loop; // w8
+  UnityEngine_AnimatorStateInfo_o v12; // [xsp+0h] [xbp-60h] BYREF
 
   owner = this->fields.owner;
   if ( !owner )
-    sub_1D0F30C(this, animator);
-  owner->fields._IsGoNext_k__BackingField = 1;
-  v7 = *(_OWORD *)&stateInfo->fields.m_Name;
-  v6 = *(_OWORD *)&stateInfo->fields.m_Length;
-  v8.fields.m_Loop = stateInfo->fields.m_Loop;
-  *(_OWORD *)&v8.fields.m_Name = v7;
-  *(_OWORD *)&v8.fields.m_Length = v6;
+    sub_21FFECC(0, animator);
+  ScriptActionAdvPrefabActorController__GoNext(owner, 0);
+  v10 = *(_OWORD *)&stateInfo->fields.m_Length;
+  m_Loop = stateInfo->fields.m_Loop;
+  *(_OWORD *)&v12.fields.m_Name = *(_OWORD *)&stateInfo->fields.m_Name;
+  *(_OWORD *)&v12.fields.m_Length = v10;
+  v12.fields.m_Loop = m_Loop;
   UnityEngine_StateMachineBehaviour__OnStateEnter(
     (UnityEngine_StateMachineBehaviour_o *)this,
     animator,
-    &v8,
+    &v12,
     layerIndex,
     0);
 }
@@ -41,12 +41,20 @@ void ScriptActionAdvPrefabActorGoNextState__SetOwner(
         ScriptActionAdvPrefabActorController_o *owner,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.owner = owner;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.owner,
+    (int32_t)owner,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

@@ -9,26 +9,26 @@ void TerminalBoardOptionTextData___ctor(
         const MethodInfo *method)
 {
   TerminalBoardOptionTextData_o *v12; // x23
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  bool v17; // w6
+  bool v18; // w7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
 
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._ForwardText_k__BackingField = forwardText;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v12->fields, (int32_t)forwardText, v13, v14, v15, v16, v17, v18);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->fields, (int32_t)forwardText, v13, v14, v15, v16, v17, v18);
   v12->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v12 = (TerminalBoardOptionTextData_o *)((char *)v12 + 32);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v12, (int32_t)behindTextFormat, v19, v20, v21, v22, v23, v24);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v12, (int32_t)behindTextFormat, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = itemImageId;
   HIDWORD(v12->monitor) = alignment;
 }
@@ -39,46 +39,44 @@ void TerminalBoardOptionTextData__SetParamsToBehindText(
         System_Object_array *args,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  il2cpp_array_size_t max_length; // x9
-  struct System_String_o *BehindTextFormat_k__BackingField; // x1
-  struct System_String_o *v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v6; // w6
+  bool v7; // w7
+  struct System_String_o *BehindTextFormat_k__BackingField; // x8
+  struct System_String_o *v10; // x0
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
 
   if ( !args )
-    sub_1D0F30C(this, 0);
-  max_length = args->max_length;
+    sub_21FFECC(this, 0);
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
-  if ( max_length )
+  if ( args->max_length )
   {
-    v12 = System_String__Format_65604216(this->fields._BehindTextFormat_k__BackingField, args, 0);
-    this->fields._BehindText_k__BackingField = v12;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
-      (int32_t)v12,
+    v10 = System_String__Format_75484712(this->fields._BehindTextFormat_k__BackingField, args, 0);
+    this->fields._BehindText_k__BackingField = v10;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
+      (int32_t)v10,
+      v11,
+      v12,
       v13,
       v14,
       v15,
-      v16,
-      v17,
-      v18);
+      v16);
   }
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
-      (int32_t)method,
+      (System_String_o *)method,
       v3,
       v4,
       v5,
@@ -135,17 +133,17 @@ void TerminalBoardOptionTextData__set_BehindText(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -159,17 +157,17 @@ void TerminalBoardOptionTextData__set_BehindTextFormat(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._BehindTextFormat_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -183,14 +181,22 @@ void TerminalBoardOptionTextData__set_ForwardText(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)value,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

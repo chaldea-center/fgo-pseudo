@@ -21,14 +21,14 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
   float v16; // s1
   float v17; // s2
 
-  if ( (byte_4E76C65 & 1) == 0 )
+  if ( (byte_5937C07 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E76C65 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5937C07 = 1;
   }
   col = (UnityEngine_Object_o *)this->fields.col;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, flg);
   if ( UnityEngine_Object__op_Inequality(col, 0, 0) )
   {
     v7 = this->fields.col;
@@ -37,39 +37,39 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
     UnityEngine_Collider__set_enabled(v7, flg, 0);
   }
   buttonsprite = (UnityEngine_Object_o *)this->fields.buttonsprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(buttonsprite, 0, 0) )
   {
     v7 = (UnityEngine_Collider_o *)this->fields.buttonsprite;
-    v9 = 0.5;
-    if ( flg )
-      v9 = 1.0;
     if ( !v7 )
       goto LABEL_23;
+    v9 = 0.5;
     v10 = 1.0;
+    if ( flg )
+      v9 = 1.0;
     v11 = v9;
     v12 = v9;
     UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v9, 0);
   }
   textlabel = (UnityEngine_Object_o *)this->fields.textlabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(textlabel, 0, 0) )
   {
     v7 = (UnityEngine_Collider_o *)this->fields.textlabel;
-    v14 = 0.5;
-    if ( flg )
-      v14 = 1.0;
     if ( v7 )
     {
+      v14 = 0.5;
       v15 = 1.0;
+      if ( flg )
+        v14 = 1.0;
       v16 = v14;
       v17 = v14;
       UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v14, 0);
       return;
     }
 LABEL_23:
-    sub_1D0F30C(v7, v6);
+    sub_21FFECC(v7, v6);
   }
 }

@@ -8,25 +8,25 @@ void MasterEquipSettingListViewItem___ctor(
         const MethodInfo *method)
 {
   MasterEquipSettingListViewItem_o *v11; // x23
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
+  bool v16; // w6
+  bool v17; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
   int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v22; // w6
+  bool v23; // w7
 
   v11 = this;
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v11->fields._EquipTexture_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v11->fields._EquipTexture_k__BackingField,
     (int32_t)equipTexture,
     v12,
     v13,
@@ -36,7 +36,7 @@ void MasterEquipSettingListViewItem___ctor(
     v17);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 136);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v11, (int32_t)shortName, v18, v19, v20, v21, v22, v23);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v11, (int32_t)shortName, v18, v19, v20, v21, v22, v23);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -55,17 +55,17 @@ void MasterEquipSettingListViewItem__ModifyItemTexture(
         UnityEngine_Texture2D_o *texture,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)texture,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -122,17 +122,17 @@ void MasterEquipSettingListViewItem__set_EquipTexture(
         UnityEngine_Texture2D_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

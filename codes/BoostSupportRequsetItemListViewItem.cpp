@@ -6,28 +6,31 @@ void BoostSupportRequsetItemListViewItem___ctor(
         System_Int32_array *recommendedBoostIds,
         const MethodInfo *method)
 {
+  __int64 v11; // x1
+  __int64 v12; // x2
   Il2CppObject *Master_object; // x0
-  __int64 v12; // x1
+  __int64 v14; // x1
   struct CommonConsumeEntity_array *IdEntityList; // x0
-  CommonReleaseMaster_o *v14; // x22
-  bool v15; // w0
+  CommonReleaseMaster_o *v16; // x22
+  bool v17; // w0
+  int32_t hideCommonReleaseId; // w1
 
-  if ( (byte_4E71062 & 1) == 0 )
+  if ( (byte_5931CF6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4E71062 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_5931CF6 = 1;
   }
-  ListViewItem___ctor_45157124((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
   this->fields.boostEntity = boostEntity;
-  sub_1D0F058(&this->fields.boostEntity, boostEntity);
+  sub_21FFBF4(&this->fields.boostEntity, boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_1D0F058(&this->fields.usrItemEntityList, usrItemEntityList);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  sub_21FFBF4(&this->fields.usrItemEntityList, usrItemEntityList);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11, v12);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !boostEntity
     || !Master_object
     || (IdEntityList = CommonConsumeMaster__GetIdEntityList(
@@ -35,12 +38,12 @@ void BoostSupportRequsetItemListViewItem___ctor(
                          boostEntity->fields.commonConsumeId,
                          0),
         this->fields.commonConsumeEntity = IdEntityList,
-        sub_1D0F058(&this->fields.commonConsumeEntity, IdEntityList),
-        (Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0) )
+        sub_21FFBF4(&this->fields.commonConsumeEntity, IdEntityList),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0) )
   {
-    sub_1D0F30C(Master_object, v12);
+    sub_21FFECC(Master_object, v14);
   }
-  v14 = (CommonReleaseMaster_o *)Master_object;
+  v16 = (CommonReleaseMaster_o *)Master_object;
   this->fields.isRelease = CommonReleaseMaster__IsOpen(
                              (CommonReleaseMaster_o *)Master_object,
                              boostEntity->fields.commonReleaseId,
@@ -48,14 +51,15 @@ void BoostSupportRequsetItemListViewItem___ctor(
                              0,
                              0);
   if ( recommendedBoostIds )
-    v15 = System_Linq_Enumerable__Contains_int_(
+    v17 = System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
             boostEntity->fields.id,
-            (const MethodInfo_326C62C *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
   else
-    v15 = 0;
-  this->fields.isRecommended = v15;
-  this->fields.isHide = CommonReleaseMaster__IsOpen(v14, boostEntity->fields.hideCommonReleaseId, 0, 0, 0);
+    v17 = 0;
+  hideCommonReleaseId = boostEntity->fields.hideCommonReleaseId;
+  this->fields.isRecommended = v17;
+  this->fields.isHide = CommonReleaseMaster__IsOpen(v16, hideCommonReleaseId, 0, 0, 0);
 }
 
 

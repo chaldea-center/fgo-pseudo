@@ -1,14 +1,15 @@
 void TreasureBoxEntity___ctor(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E783B8 & 1) == 0 )
+  const MethodInfo_3EDAD70 *v3; // x1
+
+  if ( (byte_59393E5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E783B8 = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_59393E5 = 1;
   }
+  v3 = (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__;
   this->fields.consumeItemId = -1;
-  DataEntityBase_int____ctor(
-    (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+  DataEntityBase_int____ctor((DataEntityBase_int__o *)this, v3);
 }
 
 
@@ -26,18 +27,18 @@ int32_t TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *this, const Me
   il2cpp_array_size_t max_length; // x8
   CommonConsumeEntity_o *v7; // x8
 
-  if ( (byte_4E783B7 & 1) == 0 )
+  if ( (byte_59393E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E783B7 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_59393E4 = 1;
   }
   result = this->fields.consumeItemId;
   if ( result <= 0 )
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
     if ( Master_object )
     {
       Master_object = CommonConsumeMaster__GetIdEntityList(
@@ -50,7 +51,7 @@ int32_t TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *this, const Me
         goto LABEL_13;
       }
       if ( !(_DWORD)max_length )
-        sub_1D0F314(Master_object);
+        sub_21FFED4(Master_object);
       v7 = Master_object->m_Items[0];
       if ( v7 )
       {
@@ -60,7 +61,7 @@ LABEL_13:
         return result;
       }
     }
-    sub_1D0F30C(Master_object, v5);
+    sub_21FFECC(Master_object, v5);
   }
   return result;
 }

@@ -5,20 +5,24 @@ void BattleTreasureDeviceCommandData___ctor(
 {
   __int64 v5; // x0
   __int64 v6; // x1
+  int32_t DispLimitCount; // w0
+  int32_t uniqueId; // w8
 
-  if ( (byte_4E7A700 & 1) == 0 )
+  if ( (byte_593B66F & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleCommandData_TypeInfo);
-    byte_4E7A700 = 1;
+    sub_21FFC50(&BattleCommandData_TypeInfo);
+    byte_593B66F = 1;
   }
-  if ( !BattleCommandData_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleCommandData_TypeInfo);
+  if ( !*(&BattleCommandData_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattleCommandData_TypeInfo, svtData);
   BattleCommandData___ctor((BattleCommandData_o *)this, (const MethodInfo *)svtData);
   if ( !svtData )
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   this->fields._type = BattleServantData__getTreasureDvcCardId(svtData, 0);
-  this->fields.svtlimit = BattleServantData__getDispLimitCount(svtData, 1, 0);
-  this->fields.uniqueId = svtData->fields.uniqueId;
+  DispLimitCount = BattleServantData__getDispLimitCount(svtData, 1, 0);
+  uniqueId = svtData->fields.uniqueId;
+  this->fields.svtlimit = DispLimitCount;
+  this->fields.uniqueId = uniqueId;
   this->fields.svtId = BattleServantData__getSvtId(svtData, 0);
   this->fields.treasureDvc = BattleServantData__getTreasureDvcId(svtData, 1, 0, 0);
 }

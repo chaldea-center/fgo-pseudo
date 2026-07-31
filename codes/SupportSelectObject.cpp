@@ -10,7 +10,7 @@ void SupportSelectObject__ActivateEquipOnly(SupportSelectObject_o *this, const M
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   SupportSelectItemDraw__ActivateEquipOnly(itemDraw, 0);
 }
 
@@ -21,19 +21,19 @@ void SupportSelectObject__AddDepth(SupportSelectObject_o *this, int32_t depth, c
   __int64 v6; // x1
   int max_length; // w8
   System_Object_array *v8; // x20
-  unsigned int v9; // w21
+  __int64 v9; // x21
 
-  if ( (byte_4E73BB4 & 1) == 0 )
+  if ( (byte_5934B7C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____80393040);
-    byte_4E73BB4 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____91505760);
+    byte_5934B7C = 1;
   }
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_32466AC *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____80393040);
+                                  (const MethodInfo_37EE304 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____91505760);
   if ( !ComponentsInChildren_object )
-    goto LABEL_11;
+    goto LABEL_10;
   max_length = ComponentsInChildren_object->max_length;
   v8 = ComponentsInChildren_object;
   if ( max_length >= 1 )
@@ -41,8 +41,8 @@ void SupportSelectObject__AddDepth(SupportSelectObject_o *this, int32_t depth, c
     v9 = 0;
     while ( 1 )
     {
-      if ( v9 >= max_length )
-        sub_1D0F314(ComponentsInChildren_object);
+      if ( (unsigned int)v9 >= max_length )
+        sub_21FFED4(ComponentsInChildren_object);
       ComponentsInChildren_object = (System_Object_array *)v8->m_Items[v9];
       if ( !ComponentsInChildren_object )
         break;
@@ -54,8 +54,8 @@ void SupportSelectObject__AddDepth(SupportSelectObject_o *this, int32_t depth, c
       if ( (int)++v9 >= max_length )
         return;
     }
-LABEL_11:
-    sub_1D0F30C(ComponentsInChildren_object, v6);
+LABEL_10:
+    sub_21FFECC(ComponentsInChildren_object, v6);
   }
 }
 
@@ -63,23 +63,31 @@ LABEL_11:
 void SupportSelectObject__Awake(SupportSelectObject_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E73BAD & 1) == 0 )
+  if ( (byte_5934B75 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SupportSelectItemDraw___);
-    byte_4E73BAD = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SupportSelectItemDraw___);
+    byte_5934B75 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SupportSelectItemDraw___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SupportSelectItemDraw___);
   this->fields.itemDraw = (struct SupportSelectItemDraw_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -88,18 +96,18 @@ void SupportSelectObject__ChangeEvent(
         EventCampaignEntity_array *changeEventFriendPoints,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v9; // x1
 
   this->fields.eventFriendPoints = changeEventFriendPoints;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)changeEventFriendPoints,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -111,41 +119,43 @@ void SupportSelectObject__ChangeEvent(
 
 void SupportSelectObject__ClearItem(SupportSelectObject_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  bool v6; // w6
+  bool v7; // w7
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
+  __int64 v15; // x1
+  __int64 v16; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v16; // x1
-  SupportSelectItemDraw_o *v17; // x0
+  __int64 v18; // x1
+  SupportSelectItemDraw_o *v19; // x0
 
-  if ( (byte_4E73BAE & 1) == 0 )
+  if ( (byte_5934B76 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73BAE = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934B76 = 1;
   }
   this->fields.supportServantData = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.supportServantData, 0, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData, 0, v2, v3, v4, v5, v6, v7);
   this->fields.callbackFunc = 0;
   *(_QWORD *)&this->fields.deckNum = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v9, v10, v11, v12, v13, v14);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v17 = this->fields.itemDraw;
-    if ( !v17 )
-      sub_1D0F30C(0, v16);
-    SupportSelectItemDraw__ClearItem(v17, 0);
+    v19 = this->fields.itemDraw;
+    if ( !v19 )
+      sub_21FFECC(0, v18);
+    SupportSelectItemDraw__ClearItem(v19, 0);
   }
 }
 
@@ -156,16 +166,16 @@ void SupportSelectObject__EndShowEquip(SupportSelectObject_o *this, bool isDecid
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4E73BB2 & 1) == 0 )
+  if ( (byte_5934B7A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E73BB2 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5934B7A = 1;
   }
   if ( isDecide )
     SupportSelectObject__ModifyItem(this, (const MethodInfo *)isDecide);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v6);
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -195,7 +205,7 @@ UserServantLeaderEntity_o *SupportSelectObject__GetLeaderInfo(SupportSelectObjec
   const MethodInfo *v2; // x2
 
   if ( !this->fields.supportServantData )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return SupportServantData__getUserServantLeaderEntity(this->fields.supportServantData, this->fields.classPos, v2);
 }
 
@@ -212,35 +222,36 @@ void SupportSelectObject__HideEquip(SupportSelectObject_o *this, const MethodInf
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   SupportSelectItemDraw__SetEquipAlpha(itemDraw, 0.0, 0);
 }
 
 
 void SupportSelectObject__ModifyItem(SupportSelectObject_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *itemDraw; // x20
   SupportServantData_o *supportServantData; // x1
-  SupportSelectItemDraw_o *v5; // x0
+  SupportSelectItemDraw_o *v6; // x0
 
-  if ( (byte_4E73BAF & 1) == 0 )
+  if ( (byte_5934B77 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73BAF = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934B77 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     supportServantData = this->fields.supportServantData;
     if ( supportServantData )
     {
-      v5 = this->fields.itemDraw;
-      if ( !v5 )
-        sub_1D0F30C(0, supportServantData);
+      v6 = this->fields.itemDraw;
+      if ( !v6 )
+        sub_21FFECC(0, supportServantData);
       SupportSelectItemDraw__SetItem(
-        v5,
+        v6,
         supportServantData,
         this->fields.classPos,
         this->fields.eventFriendPoints,
@@ -278,17 +289,19 @@ void SupportSelectObject__OnLongPressItem(SupportSelectObject_o *this, const Met
   int64_t Servant; // x0
   int64_t v8; // x20
   Il2CppObject *Entity; // x0
-  void *monitor; // x20
-  Il2CppClass *klass; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
+  __int64 v10; // x1
+  __int64 v11; // x2
+  Il2CppClass *klass; // x20
+  void *monitor; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4E73BB1 & 1) == 0 )
+  if ( (byte_5934B79 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E73BB1 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934B79 = 1;
   }
   if ( this->fields.callbackFunc )
   {
@@ -313,28 +326,28 @@ void SupportSelectObject__OnLongPressItem(SupportSelectObject_o *this, const Met
       if ( Servant >= 1 )
       {
         v8 = Servant;
-        supportServantData = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        supportServantData = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !supportServantData )
           goto LABEL_18;
         supportServantData = (SupportServantData_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)supportServantData,
-                                                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
         if ( !supportServantData )
           goto LABEL_18;
         Entity = DataMasterBase_object__object__long___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)supportServantData,
                    v8,
-                   (const MethodInfo_353832C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                   (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         if ( Entity )
         {
           klass = Entity[5].klass;
           monitor = Entity[5].monitor;
-          if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          *(_QWORD *)&v12.fields.currentCryptoKey = klass;
-          *(_QWORD *)&v12.fields.fakeValue = monitor;
-          supportServantData = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(
-                                                         v12,
+          if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10, v11);
+          *(_QWORD *)&v14.fields.currentCryptoKey = klass;
+          *(_QWORD *)&v14.fields.fakeValue = monitor;
+          supportServantData = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+                                                         v14,
                                                          0);
           if ( (int)supportServantData >= 1 )
           {
@@ -351,7 +364,7 @@ LABEL_8:
               return;
             }
 LABEL_18:
-            sub_1D0F30C(supportServantData, method);
+            sub_21FFECC(supportServantData, method);
           }
         }
       }
@@ -389,23 +402,25 @@ void SupportSelectObject__OnLongPressItemEquip(SupportSelectObject_o *this, cons
         return;
       }
 LABEL_7:
-      sub_1D0F30C(supportServantData, method);
+      sub_21FFECC(supportServantData, method);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SupportSelectObject__SetActiveDragSwapGuide(SupportSelectObject_o *this, bool flag, const MethodInfo *method)
 {
   SupportSelectItemDraw_o *itemDraw; // x0
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1D0F30C(0, flag);
+    sub_21FFECC(0, flag);
   SupportSelectItemDraw__SetActiveDragSwapGuide(itemDraw, flag, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SupportSelectObject__SetItem(
         SupportSelectObject_o *this,
         SupportServantData_o *supportServantData,
@@ -415,43 +430,45 @@ void SupportSelectObject__SetItem(
         SupportSelectMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *v7; // x7
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  bool v7; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
+  bool v18; // w6
+  bool v19; // w7
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
+  __int64 v26; // x1
+  __int64 v27; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v27; // x1
-  SupportSelectItemDraw_o *v28; // x0
+  __int64 v29; // x1
+  SupportSelectItemDraw_o *v30; // x0
 
-  if ( (byte_4E73BB0 & 1) == 0 )
+  if ( (byte_5934B78 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E73BB0 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5934B78 = 1;
   }
   this->fields.supportServantData = supportServantData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.supportServantData,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
-    deckNum,
-    classPos,
-    (System_String_o *)friendPointCampaigns,
+    *(System_String_o **)&deckNum,
+    *(System_String_o **)&classPos,
+    (int32_t)friendPointCampaigns,
     (int32_t)callback,
-    (int64_t)method,
+    (bool)method,
     v7);
   this->fields.deckNum = deckNum;
   this->fields.classPos = classPos;
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.eventFriendPoints,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     v14,
     v15,
@@ -460,8 +477,8 @@ void SupportSelectObject__SetItem(
     v18,
     v19);
   this->fields.callbackFunc = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v20,
     v21,
@@ -470,15 +487,15 @@ void SupportSelectObject__SetItem(
     v24,
     v25);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v28 = this->fields.itemDraw;
-    if ( !v28 )
-      sub_1D0F30C(0, v27);
+    v30 = this->fields.itemDraw;
+    if ( !v30 )
+      sub_21FFECC(0, v29);
     SupportSelectItemDraw__SetItem(
-      v28,
+      v30,
       this->fields.supportServantData,
       this->fields.classPos,
       this->fields.eventFriendPoints,
@@ -494,7 +511,7 @@ void SupportSelectObject__ShowEquip(SupportSelectObject_o *this, const MethodInf
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   SupportSelectItemDraw__SetEquipAlpha(itemDraw, 1.0, 0);
 }
 
@@ -508,16 +525,18 @@ void SupportSelectObject__add_callbackFunc(
   System_Delegate_o *v6; // x21
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  SupportSelectObject_o *v11; // x0
-  SupportSelectMenu_CallbackFunc_o *v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  SupportSelectObject_o *v13; // x0
+  SupportSelectMenu_CallbackFunc_o *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4E73BAB & 1) == 0 )
+  if ( (byte_5934B73 & 1) == 0 )
   {
-    sub_1D0F0B4(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_4E73BAB = 1;
+    sub_21FFC50(&SupportSelectMenu_CallbackFunc_TypeInfo);
+    byte_5934B73 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -530,14 +549,14 @@ void SupportSelectObject__add_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v8->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  SupportSelectObject__remove_callbackFunc(v11, v12, v13);
+  sub_220024C(v8, SupportSelectMenu_CallbackFunc_TypeInfo, v9, v10);
+  SupportSelectObject__remove_callbackFunc(v13, v14, v15);
 }
 
 
@@ -552,19 +571,18 @@ void SupportSelectObject__clickSelectItem(
   SupportSelectObject_o *v8; // x22
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
   struct SupportServantData_o *supportServantData; // x9
-  void (__fastcall *invoke_impl)(intptr_t, __int64, _QWORD, _QWORD, intptr_t); // x5
   intptr_t method_code; // x0
-  intptr_t v13; // x4
-  __int64 v14; // x1
-  _QWORD *v15; // x0
-  System_Reflection_MethodBase_o *v16; // x0
-  struct SupportSelectMenu_CallbackFunc_o *v17; // x8
+  intptr_t v12; // x4
+  __int64 v13; // x1
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+  void (__fastcall *invoke_impl)(intptr_t, __int64, _QWORD, _QWORD, intptr_t); // x5
 
   v8 = this;
-  if ( (byte_4E73BB3 & 1) == 0 )
+  if ( (byte_5934B7B & 1) == 0 )
   {
-    this = (SupportSelectObject_o *)sub_1D0F0B4(&Method_SupportSelectObject_clickSelectItem__);
-    byte_4E73BB3 = 1;
+    this = (SupportSelectObject_o *)sub_21FFC50(&Method_SupportSelectObject_clickSelectItem__);
+    byte_5934B7B = 1;
   }
   callbackFunc = v8->fields.callbackFunc;
   if ( callbackFunc )
@@ -574,46 +592,51 @@ void SupportSelectObject__clickSelectItem(
     {
       if ( supportServantData->fields.isFriendInfo )
       {
-        if ( supportServantData->fields.isSelectServant )
+        if ( !supportServantData->fields.isSelectServant )
         {
           invoke_impl = (void (__fastcall *)(intptr_t, __int64, _QWORD, _QWORD, intptr_t))callbackFunc->fields.invoke_impl;
           method_code = callbackFunc->fields.method_code;
-          v13 = callbackFunc->fields.method;
-          v14 = 8;
-        }
-        else
-        {
-          invoke_impl = (void (__fastcall *)(intptr_t, __int64, _QWORD, _QWORD, intptr_t))callbackFunc->fields.invoke_impl;
-          method_code = callbackFunc->fields.method_code;
-          v13 = callbackFunc->fields.method;
+          v12 = callbackFunc->fields.method;
           if ( result == 4 )
-            v14 = 10;
+            v13 = 10;
           else
-            v14 = 9;
+            v13 = 9;
+          goto LABEL_19;
         }
+        method_code = callbackFunc->fields.method_code;
+        v12 = callbackFunc->fields.method;
+        v13 = 8;
 LABEL_18:
-        invoke_impl(method_code, v14, (unsigned int)deckNum, (unsigned int)classPos, v13);
+        invoke_impl = (void (__fastcall *)(intptr_t, __int64, _QWORD, _QWORD, intptr_t))callbackFunc->fields.invoke_impl;
+LABEL_19:
+        invoke_impl(method_code, v13, (unsigned int)deckNum, (unsigned int)classPos, v12);
         return;
       }
-      v15 = Method_SupportSelectObject_clickSelectItem__;
+      v14 = Method_SupportSelectObject_clickSelectItem__;
       if ( (*((_BYTE *)Method_SupportSelectObject_clickSelectItem__ + 83) & 2) != 0 )
-        v15 = (_QWORD *)sub_1D0F0CC(Method_SupportSelectObject_clickSelectItem__);
-      v16 = (System_Reflection_MethodBase_o *)sub_1D0F098(v15, v15[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0, 0);
-      v17 = v8->fields.callbackFunc;
-      if ( v17 )
+        v14 = (_QWORD *)sub_21FFC68(Method_SupportSelectObject_clickSelectItem__);
+      v15 = (System_Reflection_MethodBase_o *)sub_21FFC34(v14, v14[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0);
+      callbackFunc = v8->fields.callbackFunc;
+      if ( result == 4 )
       {
-        invoke_impl = (void (__fastcall *)(intptr_t, __int64, _QWORD, _QWORD, intptr_t))v17->fields.invoke_impl;
-        method_code = v17->fields.method_code;
-        v13 = v17->fields.method;
-        if ( result == 4 )
-          v14 = 4;
-        else
-          v14 = 3;
+        if ( callbackFunc )
+        {
+          method_code = callbackFunc->fields.method_code;
+          v12 = callbackFunc->fields.method;
+          v13 = 4;
+          goto LABEL_18;
+        }
+      }
+      else if ( callbackFunc )
+      {
+        method_code = callbackFunc->fields.method_code;
+        v12 = callbackFunc->fields.method;
+        v13 = 3;
         goto LABEL_18;
       }
     }
-    sub_1D0F30C(this, *(_QWORD *)&result);
+    sub_21FFECC(this, *(_QWORD *)&result);
   }
 }
 
@@ -627,15 +650,17 @@ void SupportSelectObject__remove_callbackFunc(
   System_Delegate_o *v6; // x21
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // t1
   System_Delegate_o *v8; // x0
-  __int64 v9; // x0
-  bool v10; // zf
-  SupportSelectObject_o *v11; // x0
-  const MethodInfo *v12; // x1
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x0
+  bool v12; // zf
+  SupportSelectObject_o *v13; // x0
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4E73BAC & 1) == 0 )
+  if ( (byte_5934B74 & 1) == 0 )
   {
-    sub_1D0F0B4(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_4E73BAC = 1;
+    sub_21FFC50(&SupportSelectMenu_CallbackFunc_TypeInfo);
+    byte_5934B74 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -648,12 +673,12 @@ void SupportSelectObject__remove_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v8->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1D6AE88(p_callbackFunc, v8, v6);
-    v10 = v6 == (System_Delegate_o *)v9;
-    v6 = (System_Delegate_o *)v9;
-    if ( v10 )
+    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v12 = v11 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v11;
+    if ( v12 )
       return;
   }
-  sub_1D0F6A8(v8);
-  SupportSelectObject__Awake(v11, v12);
+  sub_220024C(v8, SupportSelectMenu_CallbackFunc_TypeInfo, v9, v10);
+  SupportSelectObject__Awake(v13, v14);
 }

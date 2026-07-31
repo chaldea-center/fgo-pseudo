@@ -17,15 +17,15 @@ float NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *this, const 
 {
   BattleDataDefine_c *v2; // x0
 
-  if ( (byte_4E7AA04 & 1) == 0 )
+  if ( (byte_593BA68 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
-    byte_4E7AA04 = 1;
+    sub_21FFC50(&BattleDataDefine_TypeInfo);
+    byte_593BA68 = 1;
   }
   v2 = BattleDataDefine_TypeInfo;
-  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, method);
     v2 = BattleDataDefine_TypeInfo;
   }
   return v2->static_fields->PERCENTAGE_DENOMINATOR;

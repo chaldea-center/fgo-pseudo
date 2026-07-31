@@ -1,31 +1,27 @@
 void CinemascopeSideFrame___ctor(CinemascopeSideFrame_o *this, bool show, bool hide, const MethodInfo *method)
 {
-  bool v4; // w20
-  bool v6; // w21
-
-  v4 = show;
-  v6 = hide;
   *(_WORD *)&this->fields.show = 257;
   System_Object___ctor((Il2CppObject *)this, 0);
-  this->fields.show = v4;
-  this->fields.hide = v6;
+  this->fields.show = show;
+  this->fields.hide = hide;
 }
 
 
 void CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4E715AC & 1) == 0 )
+  if ( (byte_5932361 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonUI_TypeInfo);
-    byte_4E715AC = 1;
+    sub_21FFC50(&CommonUI_TypeInfo);
+    byte_5932361 = 1;
   }
   if ( this->fields.hide )
   {
     tempForceObi_16_9 = this->fields.tempForceObi_16_9;
-    if ( !CommonUI_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
+    if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, method, v2);
     CommonUI__SetForceObi_16_9(tempForceObi_16_9, 0);
   }
 }
@@ -33,18 +29,19 @@ void CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const MethodInfo *
 
 void CinemascopeSideFrame__HideLater(CinemascopeSideFrame_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4E715AD & 1) == 0 )
+  if ( (byte_5932362 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonUI_TypeInfo);
-    byte_4E715AD = 1;
+    sub_21FFC50(&CommonUI_TypeInfo);
+    byte_5932362 = 1;
   }
   if ( !this->fields.hide )
   {
     tempForceObi_16_9 = this->fields.tempForceObi_16_9;
-    if ( !CommonUI_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
+    if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, method, v2);
     CommonUI__SetForceObi_16_9(tempForceObi_16_9, 0);
   }
 }
@@ -55,38 +52,50 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
         System_String_o *name,
         const MethodInfo *method)
 {
-  bool IsFullScreenMovie; // w19
-  bool v6; // w0
-  int32_t v7; // w19
-  System_Nullable_int__o v8; // x0
-  System_Nullable_int__o v10; // [xsp+8h] [xbp-28h] BYREF
+  _BOOL4 show; // w8
+  __int64 v6; // x1
+  __int64 v7; // x2
+  bool ForceObi_16_9; // w8
+  FSUtility_c *v9; // x0
+  int v10; // w9
+  __int64 v11; // x1
+  __int64 v12; // x2
+  bool IsFullScreenMovie; // w8
+  bool v14; // w21
+  int32_t v15; // w19
+  System_Nullable_int__o v16; // x0
+  System_Nullable_int__o v18; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E715AB & 1) == 0 )
+  if ( (byte_5932360 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonUI_TypeInfo);
-    sub_1D0F0B4(&FSUtility_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
-    byte_4E715AB = 1;
+    sub_21FFC50(&CommonUI_TypeInfo);
+    sub_21FFC50(&FSUtility_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_int___ctor__);
+    byte_5932360 = 1;
   }
-  v10 = 0;
-  if ( this->fields.show )
+  show = this->fields.show;
+  v18 = 0;
+  if ( show )
   {
-    if ( !CommonUI_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
-    this->fields.tempForceObi_16_9 = CommonUI__GetForceObi_16_9(0);
-    if ( !FSUtility_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
+    if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, name, method);
+    ForceObi_16_9 = CommonUI__GetForceObi_16_9(0);
+    v9 = FSUtility_TypeInfo;
+    v10 = *(&FSUtility_TypeInfo->_2.cctor_finished + 1);
+    this->fields.tempForceObi_16_9 = ForceObi_16_9;
+    if ( !v10 )
+      j_il2cpp_runtime_class_init_0(v9, v6, v7);
     IsFullScreenMovie = FSUtility__IsFullScreenMovie(name, 0);
-    if ( !CommonUI_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
-    v6 = !IsFullScreenMovie;
+    v14 = !IsFullScreenMovie;
     if ( IsFullScreenMovie )
-      v7 = 1344;
+      v15 = 1344;
     else
-      v7 = 1024;
-    CommonUI__SetForceObi_16_9(v6, 0);
-    v8 = (System_Nullable_int__o)&v10;
-    System_Nullable_int____ctor(v8, v7, (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
+      v15 = 1024;
+    if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v11, v12);
+    CommonUI__SetForceObi_16_9(v14, 0);
+    v16 = (System_Nullable_int__o)&v18;
+    System_Nullable_int____ctor(v16, v15, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
   }
-  return v10;
+  return v18;
 }

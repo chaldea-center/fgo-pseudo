@@ -6,13 +6,13 @@ void RealTime___ctor(RealTime_o *this, const MethodInfo *method)
 
 float RealTime__get_DeltaTimeInActive(const MethodInfo *method)
 {
-  bool v1; // cc
+  float timeScale; // s1
   float result; // s0
-  float deltaTime; // s0
+  float deltaTime; // s8
 
-  v1 = UnityEngine_Time__get_timeScale(0) <= 0.0;
+  timeScale = UnityEngine_Time__get_timeScale(0);
   result = 0.0;
-  if ( !v1 )
+  if ( timeScale > 0.0 )
   {
     deltaTime = UnityEngine_Time__get_deltaTime(0);
     return deltaTime / UnityEngine_Time__get_timeScale(0);

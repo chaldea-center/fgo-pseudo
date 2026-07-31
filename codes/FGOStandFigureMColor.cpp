@@ -1,8 +1,8 @@
 void FGOStandFigureMColor___ctor(FGOStandFigureMColor_o *this, const MethodInfo *method)
 {
-  __asm { FMOV            V1.4S, #1.0 }
-  this->fields.color = _Q1;
-  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_D36B10;
+  __asm { FMOV            V0.4S, #1.0 }
+  this->fields.color = _Q0;
+  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_E94AB0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -10,9 +10,9 @@ void FGOStandFigureMColor___ctor(FGOStandFigureMColor_o *this, const MethodInfo 
 void FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodInfo *method)
 {
   float32x2_t v2; // d0
-  int32x2_t v3; // d0
-  float32x2_t v4; // d2
-  int32x2_t v5; // d2
+  float32x2_t v3; // d1
+  int32x2_t v4; // d0
+  int32x2_t v5; // d1
   struct UnityEngine_MeshRenderer_array *renderers; // x20
   int max_length; // w8
   __int64 v9; // x21
@@ -21,12 +21,12 @@ void FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodIn
   v2.n64_u64[0] = vsub_f32(
                     *(float32x2_t *)&this->fields.backupColor.fields.r,
                     *(float32x2_t *)&this->fields.color.fields.r).n64_u64[0];
-  v3.n64_u64[0] = vmul_f32(v2, v2).n64_u64[0];
-  v4.n64_u64[0] = vsub_f32(
+  v3.n64_u64[0] = vsub_f32(
                     *(float32x2_t *)&this->fields.backupColor.fields.b,
                     *(float32x2_t *)&this->fields.color.fields.b).n64_u64[0];
-  v5.n64_u64[0] = vmul_f32(v4, v4).n64_u64[0];
-  if ( vadd_f32(vdup_lane_s32(v5, 1), vadd_f32(v5, vadd_f32(v3, vdup_lane_s32(v3, 1)))).n64_f32[0] >= 1.0e-10 )
+  v4.n64_u64[0] = vmul_f32(v2, v2).n64_u64[0];
+  v5.n64_u64[0] = vmul_f32(v3, v3).n64_u64[0];
+  if ( vadd_f32(vdup_lane_s32(v5, 1), vadd_f32(v5, vadd_f32(v4, vdup_lane_s32(v4, 1)))).n64_f32[0] >= 1.0e-10 )
   {
     renderers = this->fields.renderers;
     this->fields.backupColor = this->fields.color;
@@ -39,10 +39,10 @@ void FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodIn
         do
         {
           if ( (unsigned int)v9 >= max_length )
-            sub_1D0F314(this);
+            sub_21FFED4(this);
           material = (UnityEngine_Renderer_o *)renderers->m_Items[v9];
           if ( !material || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
-            sub_1D0F30C(material, method);
+            sub_21FFECC(material, method);
           UnityEngine_Material__set_color((UnityEngine_Material_o *)material, this->fields.color, 0);
           max_length = renderers->max_length;
           ++v9;

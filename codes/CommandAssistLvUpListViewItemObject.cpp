@@ -1,12 +1,14 @@
 void CommandAssistLvUpListViewItemObject___ctor(CommandAssistLvUpListViewItemObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E71B79 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5932935 & 1) == 0 )
   {
-    sub_1D0F0B4(&ListViewObject_TypeInfo);
-    byte_4E71B79 = 1;
+    sub_21FFC50(&ListViewObject_TypeInfo);
+    byte_5932935 = 1;
   }
-  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
+  if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
   ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
@@ -16,21 +18,35 @@ void CommandAssistLvUpListViewItemObject__Awake(CommandAssistLvUpListViewItemObj
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
-  if ( (byte_4E71B77 & 1) == 0 )
+  if ( (byte_5932933 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_CommandAssistLvUpListViewItemDraw___);
-    byte_4E71B77 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommandAssistLvUpListViewItemDraw___);
+    byte_5932933 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistLvUpListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistLvUpListViewItemDraw___);
   this->fields.itemDraw = (struct CommandAssistLvUpListViewItemDraw_o *)Component_object;
-  sub_1D0F058(&this->fields.itemDraw, Component_object);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -42,26 +58,31 @@ void CommandAssistLvUpListViewItemObject__SetItem(
 {
   __int64 v7; // x1
   const MethodInfo *v8; // x2
+  __int64 v9; // x3
   CommandAssistLvUpListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4E71B78 & 1) == 0 )
+  if ( (byte_5932934 & 1) == 0 )
   {
-    sub_1D0F0B4(&CommandAssistLvUpListViewItem_TypeInfo);
-    byte_4E71B78 = 1;
+    sub_21FFC50(&CommandAssistLvUpListViewItem_TypeInfo);
+    byte_5932934 = 1;
   }
-  ListViewObject__SetItem_45188780((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1D0F30C(itemDraw, v7);
+    sub_21FFECC(itemDraw, v7);
   if ( item )
   {
     naturalAligment = CommandAssistLvUpListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (CommandAssistLvUpListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != CommandAssistLvUpListViewItem_TypeInfo )
     {
-      itemDraw = (CommandAssistLvUpListViewItemDraw_o *)sub_1D0F6A8(item);
+      itemDraw = (CommandAssistLvUpListViewItemDraw_o *)sub_220024C(
+                                                          item,
+                                                          CommandAssistLvUpListViewItem_TypeInfo,
+                                                          v8,
+                                                          v9);
       goto LABEL_9;
     }
   }

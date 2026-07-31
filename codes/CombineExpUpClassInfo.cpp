@@ -2,14 +2,16 @@ void CombineExpUpClassInfo___cctor(const MethodInfo *method)
 {
   struct CombineExpUpClassInfo_StaticFields *static_fields; // x8
 
-  if ( (byte_4E713CB & 1) == 0 )
+  if ( (byte_5932182 & 1) == 0 )
   {
-    sub_1D0F0B4(&CombineExpUpClassInfo_TypeInfo);
-    byte_4E713CB = 1;
+    sub_21FFC50(&CombineExpUpClassInfo_TypeInfo);
+    byte_5932182 = 1;
   }
   static_fields = CombineExpUpClassInfo_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NUM4_CELL_WIDTH = 0x1F00000027LL;
-  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_D35F10;
+  static_fields->NUM6_CELL_WIDTH = 26;
+  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_E942F0;
+  *(_QWORD *)&static_fields->NUM5_GRID_POS_X = 0xC25C0000C2526666LL;
 }
 
 
@@ -36,68 +38,86 @@ void CombineExpUpClassInfo__Set(
         const MethodInfo *method)
 {
   CombineExpUpClassInfo_o *v12; // x19
-  __int64 v13; // x24
+  __int64 i; // x24
   struct ServantFaceIconComponent_array *expUpIconList; // x8
   unsigned int v15; // w26
   unsigned int v16; // w9
   unsigned int v17; // w8
+  int32_t v18; // w9
   struct UILabel_array *numLabelList; // x8
-  UILabel_o *v19; // x23
+  UILabel_o *v20; // x23
   struct UISprite_array *maskSpriteList; // x8
-  int32_t dispMax; // w8
-  struct ServantFaceIconComponent_array *v22; // x8
+  int dispMax; // w8
+  struct ServantFaceIconComponent_array *v23; // x8
+  UnityEngine_GameObject_o *v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x2
+  CombineExpUpClassInfo_c *v27; // x8
+  UnityEngine_GameObject_o *v28; // x23
+  float *p_NUM5_SCALE; // x8
+  struct ServantFaceIconComponent_array *v30; // x8
+  UnityEngine_GameObject_o *v31; // x0
+  __int64 v32; // x1
+  __int64 v33; // x2
+  CombineExpUpClassInfo_c *v34; // x8
+  struct ServantFaceIconComponent_array *v35; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  CombineExpUpClassInfo_c *v24; // x8
-  UnityEngine_GameObject_o *v25; // x23
-  __int64 v26; // x9
-  struct ServantFaceIconComponent_array *v27; // x8
-  UnityEngine_GameObject_o *v28; // x0
-  int32_t v29; // w8
-  struct UIGrid_o *v30; // x20
-  struct ServantFaceIconComponent_array *v31; // x8
-  struct ServantFaceIconComponent_array *v32; // x8
-  UnityEngine_GameObject_o *v33; // x0
-  float NUM5_GRID_POS_X; // s0
-  struct UIGrid_o *faceIconList; // x20
-  struct ServantFaceIconComponent_array *v36; // x8
-  struct ServantFaceIconComponent_array *v37; // x8
-  UnityEngine_GameObject_o *v38; // x0
-  UnityEngine_GameObject_o *v39; // x0
-  UnityEngine_GameObject_o *v40; // x0
-  struct UIGrid_o *v41; // x20
-  struct ServantFaceIconComponent_array *v42; // x8
+  __int64 v37; // x1
+  __int64 v38; // x2
+  CombineExpUpClassInfo_c *v39; // x8
+  __int64 v40; // x2
+  int v41; // w8
+  struct UIGrid_o *v42; // x20
   struct ServantFaceIconComponent_array *v43; // x8
-  int32_t v44; // [xsp+6Ch] [xbp-44h] BYREF
+  struct ServantFaceIconComponent_array *v44; // x8
+  struct ServantFaceIconComponent_array *v45; // x8
+  UnityEngine_GameObject_o *v46; // x0
+  float NUM5_GRID_POS_X; // s0
+  struct UIGrid_o *v48; // x20
+  struct ServantFaceIconComponent_array *v49; // x8
+  struct ServantFaceIconComponent_array *v50; // x8
+  struct ServantFaceIconComponent_array *v51; // x8
+  struct UIGrid_o *v52; // x20
+  struct ServantFaceIconComponent_array *v53; // x8
+  struct ServantFaceIconComponent_array *v54; // x8
+  struct ServantFaceIconComponent_array *v55; // x8
+  UnityEngine_GameObject_o *v56; // x0
+  UnityEngine_GameObject_o *v57; // x0
+  UnityEngine_GameObject_o *v58; // x0
+  struct UIGrid_o *faceIconList; // x20
+  struct ServantFaceIconComponent_array *v60; // x8
+  struct ServantFaceIconComponent_array *v61; // x8
+  struct ServantFaceIconComponent_array *v62; // x8
+  int32_t v63; // [xsp+6Ch] [xbp-44h] BYREF
 
   v12 = this;
-  if ( (byte_4E713CA & 1) == 0 )
+  if ( (byte_5932181 & 1) == 0 )
   {
-    this = (CombineExpUpClassInfo_o *)sub_1D0F0B4(&CombineExpUpClassInfo_TypeInfo);
-    byte_4E713CA = 1;
+    this = (CombineExpUpClassInfo_o *)sub_21FFC50(&CombineExpUpClassInfo_TypeInfo);
+    byte_5932181 = 1;
   }
-  v44 = 0;
+  v63 = 0;
   v12->fields.dispMinRarity = minRarity;
   v12->fields.dispMax = max;
   if ( max >= 1 )
   {
-    v13 = 4;
-    while ( 1 )
+    for ( i = 4; (int)i - 4 < v12->fields.dispMax; ++i )
     {
       expUpIconList = v12->fields.expUpIconList;
       if ( !expUpIconList )
-        goto LABEL_92;
-      v15 = v13 - 4;
-      if ( (unsigned int)(v13 - 4) >= LODWORD(expUpIconList->max_length) )
-        goto LABEL_93;
+        goto LABEL_131;
+      v15 = i - 4;
+      if ( (unsigned int)(i - 4) >= LODWORD(expUpIconList->max_length) )
+        goto LABEL_132;
       if ( !svtIdList )
-        goto LABEL_92;
-      v16 = v13 + v12->fields.dispMinRarity - 4;
+        goto LABEL_131;
+      v16 = i + v12->fields.dispMinRarity - 4;
       if ( v16 >= LODWORD(svtIdList->max_length) )
-        goto LABEL_93;
-      this = (CombineExpUpClassInfo_o *)*((_QWORD *)&expUpIconList->obj.klass + v13);
+        goto LABEL_132;
+      this = (CombineExpUpClassInfo_o *)*((_QWORD *)&expUpIconList->obj.klass + i);
       if ( !this )
-        goto LABEL_92;
-      ServantFaceIconComponent__Set_42458076(
+        goto LABEL_131;
+      ServantFaceIconComponent__Set_48021296(
         (ServantFaceIconComponent_o *)this,
         svtIdList->m_Items[v16],
         0,
@@ -118,166 +138,334 @@ void CombineExpUpClassInfo__Set(
         0,
         0);
       if ( !numList )
-        goto LABEL_92;
-      v17 = v13 + v12->fields.dispMinRarity - 4;
+        goto LABEL_131;
+      v17 = i + v12->fields.dispMinRarity - 4;
       if ( v17 >= LODWORD(numList->max_length) )
-        goto LABEL_93;
-      v44 = numList->m_Items[v17];
+        goto LABEL_132;
+      v18 = numList->m_Items[v17];
       numLabelList = v12->fields.numLabelList;
+      v63 = v18;
       if ( !numLabelList )
-        goto LABEL_92;
+        goto LABEL_131;
       if ( v15 >= LODWORD(numLabelList->max_length) )
-        goto LABEL_93;
-      v19 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + v13);
-      this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v44, 0);
-      if ( !v19 )
-        goto LABEL_92;
-      UILabel__set_text(v19, (System_String_o *)this, 0);
+        goto LABEL_132;
+      v20 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + i);
+      this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v63, 0);
+      if ( !v20 )
+        goto LABEL_131;
+      UILabel__set_text(v20, (System_String_o *)this, 0);
       maskSpriteList = v12->fields.maskSpriteList;
       if ( !maskSpriteList )
-        goto LABEL_92;
+        goto LABEL_131;
       if ( v15 >= LODWORD(maskSpriteList->max_length) )
-        goto LABEL_93;
-      this = (CombineExpUpClassInfo_o *)*((_QWORD *)&maskSpriteList->obj.klass + v13);
+        goto LABEL_132;
+      this = (CombineExpUpClassInfo_o *)*((_QWORD *)&maskSpriteList->obj.klass + i);
       if ( !this )
-        goto LABEL_92;
+        goto LABEL_131;
       this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !this )
-        goto LABEL_92;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v44 == 0, 0);
+        goto LABEL_131;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v63 == 0, 0);
       dispMax = v12->fields.dispMax;
-      if ( dispMax == 3 || dispMax == 5 )
-        break;
-      if ( dispMax == 4 )
+      if ( dispMax > 4 )
       {
-        v22 = v12->fields.expUpIconList;
-        if ( !v22 )
-          goto LABEL_92;
-        if ( v15 >= LODWORD(v22->max_length) )
-          goto LABEL_93;
-        this = (CombineExpUpClassInfo_o *)*((_QWORD *)&v22->obj.klass + v13);
-        if ( !this )
-          goto LABEL_92;
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        v24 = CombineExpUpClassInfo_TypeInfo;
-        v25 = gameObject;
-        if ( !CombineExpUpClassInfo_TypeInfo->_2.cctor_finished )
+        if ( dispMax == 5 )
         {
-          j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo);
-          v24 = CombineExpUpClassInfo_TypeInfo;
-        }
-        v26 = 8;
-LABEL_34:
-        GameObjectExtensions__SetLocalScale_37345220(
-          v25,
-          *(float *)((char *)&v24->static_fields->NUM4_CELL_WIDTH + v26),
-          0);
-      }
-      if ( (int)++v13 - 4 >= v12->fields.dispMax )
-        goto LABEL_36;
-    }
-    v27 = v12->fields.expUpIconList;
-    if ( !v27 )
-      goto LABEL_92;
-    if ( v15 >= LODWORD(v27->max_length) )
-      goto LABEL_93;
-    this = (CombineExpUpClassInfo_o *)*((_QWORD *)&v27->obj.klass + v13);
-    if ( !this )
-      goto LABEL_92;
-    v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v24 = CombineExpUpClassInfo_TypeInfo;
-    v25 = v28;
-    if ( !CombineExpUpClassInfo_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo);
-      v24 = CombineExpUpClassInfo_TypeInfo;
-    }
-    v26 = 12;
-    goto LABEL_34;
-  }
 LABEL_36:
+          v35 = v12->fields.expUpIconList;
+          if ( !v35 )
+            goto LABEL_131;
+          if ( v15 >= LODWORD(v35->max_length) )
+            goto LABEL_132;
+          this = (CombineExpUpClassInfo_o *)*((_QWORD *)&v35->obj.klass + i);
+          if ( !this )
+            goto LABEL_131;
+          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v39 = CombineExpUpClassInfo_TypeInfo;
+          v28 = gameObject;
+          if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+          {
+            j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, v37, v38);
+            v39 = CombineExpUpClassInfo_TypeInfo;
+          }
+          p_NUM5_SCALE = &v39->static_fields->NUM5_SCALE;
+          goto LABEL_42;
+        }
+        if ( dispMax == 6 )
+        {
+          v30 = v12->fields.expUpIconList;
+          if ( !v30 )
+            goto LABEL_131;
+          if ( v15 >= LODWORD(v30->max_length) )
+            goto LABEL_132;
+          this = (CombineExpUpClassInfo_o *)*((_QWORD *)&v30->obj.klass + i);
+          if ( !this )
+            goto LABEL_131;
+          v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v34 = CombineExpUpClassInfo_TypeInfo;
+          v28 = v31;
+          if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+          {
+            j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, v32, v33);
+            v34 = CombineExpUpClassInfo_TypeInfo;
+          }
+          p_NUM5_SCALE = &v34->static_fields->NUM6_SCALE;
+          goto LABEL_42;
+        }
+      }
+      else
+      {
+        if ( dispMax == 3 )
+          goto LABEL_36;
+        if ( dispMax == 4 )
+        {
+          v23 = v12->fields.expUpIconList;
+          if ( !v23 )
+            goto LABEL_131;
+          if ( v15 >= LODWORD(v23->max_length) )
+            goto LABEL_132;
+          this = (CombineExpUpClassInfo_o *)*((_QWORD *)&v23->obj.klass + i);
+          if ( !this )
+            goto LABEL_131;
+          v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v27 = CombineExpUpClassInfo_TypeInfo;
+          v28 = v24;
+          if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+          {
+            j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, v25, v26);
+            v27 = CombineExpUpClassInfo_TypeInfo;
+          }
+          p_NUM5_SCALE = &v27->static_fields->NUM4_SCALE;
+LABEL_42:
+          GameObjectExtensions__SetLocalScale_42878128(v28, *p_NUM5_SCALE, 0);
+        }
+      }
+    }
+  }
   this = (CombineExpUpClassInfo_o *)v12->fields.classIconInfo;
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   ServantClassIconComponent__SetImage((ServantClassIconComponent_o *)this, classId, 2, 0, 0, 0, 0);
-  v29 = v12->fields.dispMax;
-  if ( v29 == 3 )
+  v41 = v12->fields.dispMax;
+  if ( v41 > 4 )
   {
-    this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
-    faceIconList = v12->fields.faceIconList;
-    if ( !CombineExpUpClassInfo_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo);
-    if ( !faceIconList )
-      goto LABEL_92;
-    faceIconList->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH;
-    v36 = v12->fields.expUpIconList;
-    if ( !v36 )
-      goto LABEL_92;
-    if ( LODWORD(v36->max_length) > 3 )
+    if ( v41 == 5 )
     {
-      this = (CombineExpUpClassInfo_o *)v36->m_Items[3];
-      if ( !this )
-        goto LABEL_92;
-      this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      if ( !this )
-        goto LABEL_92;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-      v37 = v12->fields.expUpIconList;
-      if ( !v37 )
-        goto LABEL_92;
-      if ( LODWORD(v37->max_length) > 4 )
+      this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
+      faceIconList = v12->fields.faceIconList;
+      if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId, v40);
+      if ( !faceIconList )
+        goto LABEL_131;
+      v60 = v12->fields.expUpIconList;
+      faceIconList->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH;
+      if ( !v60 )
+        goto LABEL_131;
+      if ( (v60->max_length & 0xFFFFFFFC) != 0 )
       {
-        this = (CombineExpUpClassInfo_o *)v37->m_Items[4];
-        if ( this )
+        this = (CombineExpUpClassInfo_o *)v60->m_Items[3];
+        if ( !this )
+          goto LABEL_131;
+        this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+        if ( !this )
+          goto LABEL_131;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+        v61 = v12->fields.expUpIconList;
+        if ( !v61 )
+          goto LABEL_131;
+        if ( LODWORD(v61->max_length) > 4 )
         {
+          this = (CombineExpUpClassInfo_o *)v61->m_Items[4];
+          if ( !this )
+            goto LABEL_131;
           this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          if ( this )
+          if ( !this )
+            goto LABEL_131;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+          v62 = v12->fields.expUpIconList;
+          if ( !v62 )
+            goto LABEL_131;
+          if ( LODWORD(v62->max_length) > 5 )
           {
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-            this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
+            this = (CombineExpUpClassInfo_o *)v62->m_Items[5];
             if ( this )
             {
-              v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-              GameObjectExtensions__SetLocalPositionX(
-                v38,
-                CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X
-              + (float)(2 * CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH),
-                0);
-              this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
+              this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
+                                                  (UnityEngine_Component_o *)this,
+                                                  0);
               if ( this )
               {
-                this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
-                                                    (UnityEngine_Component_o *)this,
-                                                    0);
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+                this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
                 if ( this )
                 {
-                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-                  this = (CombineExpUpClassInfo_o *)v12->fields.num5DmyFrame;
+                  v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                  NUM5_GRID_POS_X = CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X;
+                  goto LABEL_124;
+                }
+              }
+            }
+            goto LABEL_131;
+          }
+        }
+      }
+    }
+    else
+    {
+      if ( v41 != 6 )
+        goto LABEL_129;
+      this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
+      v48 = v12->fields.faceIconList;
+      if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId, v40);
+      if ( !v48 )
+        goto LABEL_131;
+      v49 = v12->fields.expUpIconList;
+      v48->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM6_CELL_WIDTH;
+      if ( !v49 )
+        goto LABEL_131;
+      if ( (v49->max_length & 0xFFFFFFFC) != 0 )
+      {
+        this = (CombineExpUpClassInfo_o *)v49->m_Items[3];
+        if ( !this )
+          goto LABEL_131;
+        this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+        if ( !this )
+          goto LABEL_131;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+        v50 = v12->fields.expUpIconList;
+        if ( !v50 )
+          goto LABEL_131;
+        if ( LODWORD(v50->max_length) > 4 )
+        {
+          this = (CombineExpUpClassInfo_o *)v50->m_Items[4];
+          if ( !this )
+            goto LABEL_131;
+          this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          if ( !this )
+            goto LABEL_131;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+          v51 = v12->fields.expUpIconList;
+          if ( !v51 )
+            goto LABEL_131;
+          if ( LODWORD(v51->max_length) > 5 )
+          {
+            this = (CombineExpUpClassInfo_o *)v51->m_Items[5];
+            if ( this )
+            {
+              this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
+                                                  (UnityEngine_Component_o *)this,
+                                                  0);
+              if ( this )
+              {
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+                this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
+                if ( this )
+                {
+                  v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                  NUM5_GRID_POS_X = CombineExpUpClassInfo_TypeInfo->static_fields->NUM6_GRID_POS_X;
+                  goto LABEL_124;
+                }
+              }
+            }
+            goto LABEL_131;
+          }
+        }
+      }
+    }
+LABEL_132:
+    sub_21FFED4(this);
+  }
+  if ( v41 == 3 )
+  {
+    this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
+    v52 = v12->fields.faceIconList;
+    if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId, v40);
+    if ( !v52 )
+      goto LABEL_131;
+    v53 = v12->fields.expUpIconList;
+    v52->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH;
+    if ( !v53 )
+      goto LABEL_131;
+    if ( (v53->max_length & 0xFFFFFFFC) != 0 )
+    {
+      this = (CombineExpUpClassInfo_o *)v53->m_Items[3];
+      if ( !this )
+        goto LABEL_131;
+      this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      if ( !this )
+        goto LABEL_131;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+      v54 = v12->fields.expUpIconList;
+      if ( !v54 )
+        goto LABEL_131;
+      if ( LODWORD(v54->max_length) > 4 )
+      {
+        this = (CombineExpUpClassInfo_o *)v54->m_Items[4];
+        if ( !this )
+          goto LABEL_131;
+        this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+        if ( !this )
+          goto LABEL_131;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+        v55 = v12->fields.expUpIconList;
+        if ( !v55 )
+          goto LABEL_131;
+        if ( LODWORD(v55->max_length) > 5 )
+        {
+          this = (CombineExpUpClassInfo_o *)v55->m_Items[5];
+          if ( this )
+          {
+            this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+            if ( this )
+            {
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+              this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
+              if ( this )
+              {
+                v56 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                GameObjectExtensions__SetLocalPositionX(
+                  v56,
+                  CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X
+                + (float)(2 * CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH),
+                  0);
+                this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
+                if ( this )
+                {
+                  this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)this,
+                                                      0);
                   if ( this )
                   {
-                    this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
-                                                        (UnityEngine_Component_o *)this,
-                                                        0);
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+                    this = (CombineExpUpClassInfo_o *)v12->fields.num5DmyFrame;
                     if ( this )
                     {
-                      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-                      this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
+                      this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject(
+                                                          (UnityEngine_Component_o *)this,
+                                                          0);
                       if ( this )
                       {
-                        v39 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-                        GameObjectExtensions__SetLocalPositionX(
-                          v39,
-                          CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X,
-                          0);
+                        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
                         this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
                         if ( this )
                         {
-                          v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-                          GameObjectExtensions__SetLocalScale_37345220(
-                            v40,
-                            CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_SCALE,
+                          v57 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                          GameObjectExtensions__SetLocalPositionX(
+                            v57,
+                            CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X,
                             0);
-                          goto LABEL_90;
+                          this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
+                          if ( this )
+                          {
+                            v58 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                            GameObjectExtensions__SetLocalScale_42878128(
+                              v58,
+                              CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_SCALE,
+                              0);
+                            goto LABEL_129;
+                          }
                         }
                       }
                     }
@@ -286,175 +474,145 @@ LABEL_36:
               }
             }
           }
+          goto LABEL_131;
         }
-        goto LABEL_92;
       }
     }
-    goto LABEL_93;
+    goto LABEL_132;
   }
-  if ( v29 == 5 )
-  {
-    this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
-    v41 = v12->fields.faceIconList;
-    if ( !CombineExpUpClassInfo_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo);
-    if ( !v41 )
-      goto LABEL_92;
-    v41->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_CELL_WIDTH;
-    v42 = v12->fields.expUpIconList;
-    if ( !v42 )
-      goto LABEL_92;
-    if ( LODWORD(v42->max_length) > 3 )
-    {
-      this = (CombineExpUpClassInfo_o *)v42->m_Items[3];
-      if ( !this )
-        goto LABEL_92;
-      this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      if ( !this )
-        goto LABEL_92;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      v43 = v12->fields.expUpIconList;
-      if ( !v43 )
-        goto LABEL_92;
-      if ( LODWORD(v43->max_length) > 4 )
-      {
-        this = (CombineExpUpClassInfo_o *)v43->m_Items[4];
-        if ( this )
-        {
-          this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          if ( this )
-          {
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-            this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
-            if ( this )
-            {
-              v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-              NUM5_GRID_POS_X = CombineExpUpClassInfo_TypeInfo->static_fields->NUM5_GRID_POS_X;
-              goto LABEL_85;
-            }
-          }
-        }
-        goto LABEL_92;
-      }
-    }
-LABEL_93:
-    sub_1D0F314(this);
-  }
-  if ( v29 != 4 )
-    goto LABEL_90;
+  if ( v41 != 4 )
+    goto LABEL_129;
   this = (CombineExpUpClassInfo_o *)CombineExpUpClassInfo_TypeInfo;
-  v30 = v12->fields.faceIconList;
-  if ( !CombineExpUpClassInfo_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo);
-  if ( !v30 )
-    goto LABEL_92;
-  v30->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM4_CELL_WIDTH;
-  v31 = v12->fields.expUpIconList;
-  if ( !v31 )
-    goto LABEL_92;
-  if ( LODWORD(v31->max_length) <= 3 )
-    goto LABEL_93;
-  this = (CombineExpUpClassInfo_o *)v31->m_Items[3];
-  if ( !this
-    || (this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0), (v32 = v12->fields.expUpIconList) == 0) )
-  {
-LABEL_92:
-    sub_1D0F30C(this, *(_QWORD *)&classId);
-  }
-  if ( LODWORD(v32->max_length) <= 4 )
-    goto LABEL_93;
-  this = (CombineExpUpClassInfo_o *)v32->m_Items[4];
+  v42 = v12->fields.faceIconList;
+  if ( !*(&CombineExpUpClassInfo_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId, v40);
+  if ( !v42 )
+    goto LABEL_131;
+  v43 = v12->fields.expUpIconList;
+  v42->fields.cellWidth = (float)CombineExpUpClassInfo_TypeInfo->static_fields->NUM4_CELL_WIDTH;
+  if ( !v43 )
+    goto LABEL_131;
+  if ( (v43->max_length & 0xFFFFFFFC) == 0 )
+    goto LABEL_132;
+  this = (CombineExpUpClassInfo_o *)v43->m_Items[3];
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+  v44 = v12->fields.expUpIconList;
+  if ( !v44 )
+    goto LABEL_131;
+  if ( LODWORD(v44->max_length) <= 4 )
+    goto LABEL_132;
+  this = (CombineExpUpClassInfo_o *)v44->m_Items[4];
+  if ( !this
+    || (this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0), (v45 = v12->fields.expUpIconList) == 0) )
+  {
+LABEL_131:
+    sub_21FFECC(this, *(_QWORD *)&classId);
+  }
+  if ( LODWORD(v45->max_length) <= 5 )
+    goto LABEL_132;
+  this = (CombineExpUpClassInfo_o *)v45->m_Items[5];
+  if ( !this )
+    goto LABEL_131;
+  this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  if ( !this )
+    goto LABEL_131;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
   if ( !this )
-    goto LABEL_92;
-  v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    goto LABEL_131;
+  v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   NUM5_GRID_POS_X = CombineExpUpClassInfo_TypeInfo->static_fields->NUM4_GRID_POS_X;
-LABEL_85:
-  GameObjectExtensions__SetLocalPositionX(v33, NUM5_GRID_POS_X, 0);
+LABEL_124:
+  GameObjectExtensions__SetLocalPositionX(v46, NUM5_GRID_POS_X, 0);
   this = (CombineExpUpClassInfo_o *)v12->fields.dmyFrame;
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   this = (CombineExpUpClassInfo_o *)v12->fields.num5DmyFrame;
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-LABEL_90:
+LABEL_129:
   this = (CombineExpUpClassInfo_o *)v12->fields.faceIconList;
   if ( !this )
-    goto LABEL_92;
+    goto LABEL_131;
   ((void (__fastcall *)(CombineExpUpClassInfo_o *, Il2CppClass *))this->klass[1]._1.element_class)(
     this,
     this->klass[1]._1.castClass);
 }
 
 
-void CombineExpUpClassInfo__Set_32371712(
+void CombineExpUpClassInfo__Set_37727256(
         CombineExpUpClassInfo_o *this,
         System_Int32_array *numList,
         const MethodInfo *method)
 {
-  CombineExpUpClassInfo_o *v4; // x19
-  __int64 v5; // x22
-  unsigned int v6; // w8
+  int32_t dispMax; // w8
+  CombineExpUpClassInfo_o *v5; // x20
+  __int64 v6; // x22
+  unsigned int v7; // w23
+  unsigned int v8; // w8
+  int32_t v9; // w9
   struct UILabel_array *numLabelList; // x8
-  UILabel_o *v8; // x21
+  UILabel_o *v11; // x21
   struct UISprite_array *maskSpriteList; // x8
-  int32_t v10; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  v10 = 0;
-  if ( this->fields.dispMax >= 1 )
+  dispMax = this->fields.dispMax;
+  v13 = 0;
+  if ( dispMax >= 1 )
   {
     if ( numList )
     {
-      v4 = this;
-      v5 = 4;
+      v5 = this;
+      v6 = 4;
       while ( 1 )
       {
-        v6 = v5 + v4->fields.dispMinRarity - 4;
-        if ( v6 >= LODWORD(numList->max_length) )
+        v7 = v6 - 4;
+        v8 = v6 - 4 + v5->fields.dispMinRarity;
+        if ( v8 >= LODWORD(numList->max_length) )
           goto LABEL_15;
-        v10 = numList->m_Items[v6];
-        numLabelList = v4->fields.numLabelList;
+        v9 = numList->m_Items[v8];
+        numLabelList = v5->fields.numLabelList;
+        v13 = v9;
         if ( !numLabelList )
           break;
-        if ( (unsigned int)(v5 - 4) >= LODWORD(numLabelList->max_length) )
+        if ( v7 >= LODWORD(numLabelList->max_length) )
 LABEL_15:
-          sub_1D0F314(this);
-        v8 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + v5);
-        this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v10, 0);
-        if ( !v8 )
+          sub_21FFED4(this);
+        v11 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + v6);
+        this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v13, 0);
+        if ( !v11 )
           break;
-        UILabel__set_text(v8, (System_String_o *)this, 0);
-        maskSpriteList = v4->fields.maskSpriteList;
+        UILabel__set_text(v11, (System_String_o *)this, 0);
+        maskSpriteList = v5->fields.maskSpriteList;
         if ( !maskSpriteList )
           break;
-        if ( (unsigned int)(v5 - 4) >= LODWORD(maskSpriteList->max_length) )
+        if ( v7 >= LODWORD(maskSpriteList->max_length) )
           goto LABEL_15;
-        this = (CombineExpUpClassInfo_o *)*((_QWORD *)&maskSpriteList->obj.klass + v5);
+        this = (CombineExpUpClassInfo_o *)*((_QWORD *)&maskSpriteList->obj.klass + v6);
         if ( !this )
           break;
         this = (CombineExpUpClassInfo_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         if ( !this )
           break;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v10 == 0, 0);
-        if ( (int)++v5 - 4 >= v4->fields.dispMax )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v13 == 0, 0);
+        if ( (int)++v6 - 4 >= v5->fields.dispMax )
           return;
       }
     }
-    sub_1D0F30C(this, numList);
+    sub_21FFECC(this, numList);
   }
 }

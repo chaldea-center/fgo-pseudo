@@ -1,13 +1,13 @@
 void EventUiReleaseEntity___ctor(EventUiReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E779CB & 1) == 0 )
+  if ( (byte_59389DD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E779CB = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59389DD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.eventUiId = 0;
   *(_QWORD *)&this->fields.idx = 0;
   this->fields.condNum = 0;
@@ -21,16 +21,16 @@ System_String_o *EventUiReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4E779CC & 1) == 0 )
+  if ( (byte_59389DE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E779CC = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59389DE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventUiId,
            priority,
            idx,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

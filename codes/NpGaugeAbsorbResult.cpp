@@ -1,16 +1,16 @@
 void NpGaugeAbsorbResult___ctor(NpGaugeAbsorbResult_o *this, BaseNpGaugeConvert_o *convert, const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Convert_k__BackingField = convert;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Convert_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Convert_k__BackingField,
     (int32_t)convert,
     v5,
     v6,
@@ -21,9 +21,10 @@ void NpGaugeAbsorbResult___ctor(NpGaugeAbsorbResult_o *this, BaseNpGaugeConvert_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NpGaugeAbsorbResult__AddPoint(NpGaugeAbsorbResult_o *this, int32_t point, const MethodInfo *method)
 {
-  float Point_k__BackingField; // s0
+  float Point_k__BackingField; // s1
   struct BaseNpGaugeConvert_o *Convert_k__BackingField; // x0
   float Turn_k__BackingField; // s8
 
@@ -31,16 +32,17 @@ void NpGaugeAbsorbResult__AddPoint(NpGaugeAbsorbResult_o *this, int32_t point, c
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField + (float)point;
   if ( !Convert_k__BackingField )
-    sub_1D0F30C(0, point);
+    sub_21FFECC(0, *(_QWORD *)&point);
   Turn_k__BackingField = this->fields._Turn_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField
                                      + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._7_PointToTurn.methodPtr)(Convert_k__BackingField);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NpGaugeAbsorbResult__AddTurn(NpGaugeAbsorbResult_o *this, int32_t turn, const MethodInfo *method)
 {
-  float Turn_k__BackingField; // s0
+  float Turn_k__BackingField; // s1
   struct BaseNpGaugeConvert_o *Convert_k__BackingField; // x0
   float Point_k__BackingField; // s8
 
@@ -48,7 +50,7 @@ void NpGaugeAbsorbResult__AddTurn(NpGaugeAbsorbResult_o *this, int32_t turn, con
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField + (float)turn;
   if ( !Convert_k__BackingField )
-    sub_1D0F30C(0, turn);
+    sub_21FFECC(0, *(_QWORD *)&turn);
   Point_k__BackingField = this->fields._Point_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField
                                       + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._6_TurnToPoint.methodPtr)(Convert_k__BackingField);
@@ -78,17 +80,17 @@ void NpGaugeAbsorbResult__set_Convert(
         BaseNpGaugeConvert_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Convert_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Convert_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Convert_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

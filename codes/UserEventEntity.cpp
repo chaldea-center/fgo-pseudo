@@ -1,30 +1,30 @@
 void UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E784B7 & 1) == 0 )
+  if ( (byte_59394E5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E784B7 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59394E5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserEventEntity___ctor_44405584(
+void UserEventEntity___ctor_49990016(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4E784B8 & 1) == 0 )
+  if ( (byte_59394E6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E784B8 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59394E6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.updatedAt = 0;
@@ -36,15 +36,15 @@ void UserEventEntity___ctor_44405584(
 
 System_String_o *UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4E784B6 & 1) == 0 )
+  if ( (byte_59394E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4E784B6 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_59394E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_324D448 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -70,7 +70,7 @@ bool UserEventEntity__getScriptFlag(UserEventEntity_o *this, int32_t flagId, con
 
 bool UserEventEntity__getTutorialFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  if ( (unsigned int)(flagId - 1) <= 0x3F )
+  if ( (unsigned int)(flagId - 65) >= 0xFFFFFFC0 )
   {
     LODWORD(this) = ((unsigned int)this->fields.tutorial >> flagId) & 1;
   }

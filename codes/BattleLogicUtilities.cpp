@@ -6,7 +6,7 @@ void BattleLogicUtilities___ctor(BattleLogicUtilities_o *this, const MethodInfo 
 
 UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
         UnityEngine_Vector3_array *list,
-        const MethodInfo_323F80C *method)
+        const MethodInfo_37E3CB8 *method)
 {
   System_Random_o *v4; // x19
   Il2CppObject *v5; // x0
@@ -14,232 +14,226 @@ UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
   long double v7; // q0
   Il2CppObject *v8; // x22
   Il2CppClass *_0_T; // x21
+  __int64 v10; // x2
   void *monitor; // x21
-  Il2CppObject *v11; // x20
-  __int64 v12; // x22
-  __int64 v13; // x0
-  unsigned int v14; // w10
-  char *v15; // x8
-  char *v16; // x8
-  __int64 v17; // t1
-  __int64 v18; // d1
-  int v19; // s0
-  char *v20; // x11
-  char *v21; // x11
-  __int64 v22; // t1
-  int v23; // s3
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v25; // x0
-  const MethodInfo_323F968 *v26; // x1
+  UnityEngine_Vector3_array *v12; // x20
+  unsigned __int64 v13; // x23
+  _DWORD *v14; // x24
+  __int64 v15; // x0
+  char *v16; // x9
+  int v17; // s2
+  __int64 v18; // t1
+  __int64 v19; // d1
+  int v20; // s0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v22; // x0
+  const MethodInfo_37E3E1C *v23; // x1
 
   if ( !method->rgctx_data )
   {
-    sub_1D0F0B4(&System_Random_TypeInfo);
+    sub_21FFC50(&System_Random_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1CE5198(method);
+      sub_2237B54(method);
   }
-  v4 = (System_Random_o *)sub_1D0F300(System_Random_TypeInfo);
+  v4 = (System_Random_o *)sub_21FFEBC(System_Random_TypeInfo);
   System_Random___ctor(v4, 0);
   if ( !list )
     goto LABEL_18;
   v5 = System_Array__Clone((System_Array_o *)list, 0);
   v8 = v5;
   _0_T = method->rgctx_data->_0_T__;
-  if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
+  if ( (*((_WORD *)&_0_T->_2.bitflags2 + 1) & 1) == 0 )
   {
-    v5 = (Il2CppObject *)sub_1CE513C(v7);
+    v5 = (Il2CppObject *)sub_2237AF8(v7);
     _0_T = (Il2CppClass *)v5;
   }
   if ( !v8 )
     goto LABEL_18;
-  v5 = (Il2CppObject *)sub_1D0F1F0(v8, _0_T);
+  v5 = (Il2CppObject *)sub_21FFDA4(v8, _0_T);
   if ( v5 )
   {
     monitor = v5[1].monitor;
-    v11 = v5;
+    v12 = (UnityEngine_Vector3_array *)v5;
     if ( (int)monitor < 2 )
-      return (UnityEngine_Vector3_array *)v11;
+      return v12;
     if ( v4 )
     {
-      v12 = (unsigned int)v5[1].monitor + 1LL;
+      v13 = (unsigned int)v5[1].monitor + 1LL;
+      v14 = (_DWORD *)&v5[1].monitor + 3 * (unsigned int)monitor + 1;
       do
       {
-        v13 = ((__int64 (__fastcall *)(System_Random_o *, _QWORD, const MethodInfo *))v4->klass->vtable._7_Next.methodPtr)(
+        v15 = ((__int64 (__fastcall *)(System_Random_o *, _QWORD, const MethodInfo *))v4->klass->vtable._7_Next.methodPtr)(
                 v4,
                 (unsigned int)monitor,
                 v4->klass->vtable._7_Next.method);
-        v14 = (unsigned int)v11[1].monitor;
-        if ( (unsigned int)v13 >= v14 )
+        if ( (unsigned int)v15 >= (unsigned int)v12->max_length )
           goto LABEL_17;
-        v15 = (char *)v11 + 12 * (int)v13;
-        v17 = *((_QWORD *)v15 + 4);
-        v16 = v15 + 32;
-        v18 = v17;
-        LODWORD(monitor) = (_DWORD)monitor - 1;
-        v19 = *((_DWORD *)v16 + 2);
-        if ( (unsigned int)monitor >= v14
-          || (v20 = (char *)v11 + 12 * (unsigned int)monitor,
-              v22 = *((_QWORD *)v20 + 4),
-              v21 = v20 + 32,
-              v23 = *((_DWORD *)v21 + 2),
-              *(_QWORD *)v16 = v22,
-              *((_DWORD *)v16 + 2) = v23,
-              (unsigned int)monitor >= LODWORD(v11[1].monitor)) )
-        {
+        if ( v13 - 2 >= (unsigned int)v12->max_length )
+          goto LABEL_17;
+        v16 = (char *)v12 + 12 * (int)v15;
+        v17 = *v14;
+        v18 = *((_QWORD *)v16 + 4);
+        v16 += 32;
+        v19 = v18;
+        *(_QWORD *)v16 = *((_QWORD *)v14 - 1);
+        v20 = *((_DWORD *)v16 + 2);
+        *((_DWORD *)v16 + 2) = v17;
+        if ( v13 - 2 >= LODWORD(v12->max_length) )
 LABEL_17:
-          sub_1D0F314(v13);
-        }
-        --v12;
-        *(_QWORD *)v21 = v18;
-        *((_DWORD *)v21 + 2) = v19;
+          sub_21FFED4(v15);
+        --v13;
+        LODWORD(monitor) = (_DWORD)monitor - 1;
+        *((_QWORD *)v14 - 1) = v19;
+        *v14 = v20;
+        v14 -= 3;
       }
-      while ( v12 > 2 );
-      return (UnityEngine_Vector3_array *)v11;
+      while ( v13 > 2 );
+      return v12;
     }
 LABEL_18:
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   }
-  sub_1D0F6A8(v8);
-  return (UnityEngine_Vector3_array *)BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(v25, v26);
+  sub_220024C(v8, _0_T, v10);
+  return (UnityEngine_Vector3_array *)BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(v22, v23);
 }
 
 
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *list,
-        const MethodInfo_323F968 *method)
+        const MethodInfo_37E3E1C *method)
 {
   unsigned __int64 StatusReg; // x19
-  const MethodInfo_323F968_RGCTXs *rgctx_data; // x8
+  const MethodInfo_37E3E1C_RGCTXs *rgctx_data; // x8
   size_t actualSize; // x20
-  char *v7; // x22
+  char *v7; // x24
   Il2CppObject *v8; // x0
-  __int64 v9; // x1
+  unsigned __int64 monitor; // x1
   long double v10; // q0
-  Il2CppObject *v11; // x28
-  Il2CppClass *_0_T; // x27
-  void *monitor; // x27
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v14; // x26
-  __int64 v15; // x8
-  char *v16; // x23
-  _BYTE *_1_T; // x0
-  unsigned int max_length; // w19
-  char *v19; // x22
-  __int64 v20; // x21
-  __int64 native_size; // x24
-  long double v22; // q0
-  void *v23; // x23
-  unsigned int v24; // w21
-  long double v25; // q0
-  _QWORD v27[2]; // [xsp+0h] [xbp-40h] BYREF
-  char *v28; // [xsp+10h] [xbp-30h]
-  char *v29; // [xsp+18h] [xbp-28h]
-  System_Random_o *v30; // [xsp+20h] [xbp-20h]
-  __int64 v31; // [xsp+28h] [xbp-18h]
-  void *v32; // [xsp+30h] [xbp-10h]
-  __int64 v33; // [xsp+38h] [xbp-8h]
+  Il2CppObject *v11; // x27
+  Il2CppClass *_0_T; // x26
+  __int64 v13; // x2
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v14; // x25
+  __int64 v15; // x21
+  char *v16; // x26
+  void *_1_T; // x0
+  il2cpp_array_size_t max_length; // x8
+  Il2CppClass *klass; // x24
+  __int64 v20; // x22
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v21; // x19
+  Il2CppObject *v22; // x25
+  __int64 native_size; // x27
+  unsigned __int64 v24; // x21
+  unsigned __int64 v25; // x23
+  char *v26; // x27
+  long double v27; // q0
+  unsigned int v28; // w8
+  Il2CppObject *v29; // x19
+  char *v30; // x22
+  long double v31; // q0
+  unsigned __int64 v33; // [xsp+0h] [xbp-40h] BYREF
+  char *v34; // [xsp+8h] [xbp-38h]
+  System_Random_o *v35; // [xsp+10h] [xbp-30h]
+  __int64 v36; // [xsp+18h] [xbp-28h]
+  unsigned __int64 v37; // [xsp+20h] [xbp-20h]
+  Il2CppObject *v38; // [xsp+28h] [xbp-18h]
+  char *v39; // [xsp+30h] [xbp-10h]
+  __int64 v40; // [xsp+38h] [xbp-8h]
 
   StatusReg = _ReadStatusReg(TPIDR_EL0);
-  v33 = *(_QWORD *)(StatusReg + 40);
+  v40 = *(_QWORD *)(StatusReg + 40);
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1D0F0B4(&System_Random_TypeInfo);
+    sub_21FFC50(&System_Random_TypeInfo);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1CE5198(method);
+      sub_2237B54(method);
       rgctx_data = method->rgctx_data;
     }
   }
   actualSize = rgctx_data->_1_T->_2.actualSize;
-  v29 = (char *)v27 - ((actualSize + 15) & 0x1FFFFFFF0LL);
-  v7 = v29;
-  v32 = v29;
-  memset(v29, 0, actualSize);
-  v30 = (System_Random_o *)sub_1D0F300(System_Random_TypeInfo);
-  System_Random___ctor(v30, 0);
+  v39 = (char *)&v33 - ((actualSize + 15) & 0x1FFFFFFF0LL);
+  v7 = v39;
+  memset(v39, 0, actualSize);
+  v35 = (System_Random_o *)sub_21FFEBC(System_Random_TypeInfo);
+  System_Random___ctor(v35, 0);
   if ( !list )
-    goto LABEL_25;
+    goto LABEL_24;
   v8 = System_Array__Clone((System_Array_o *)list, 0);
   v11 = v8;
   _0_T = method->rgctx_data->_0_T__;
-  if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
+  if ( (*((_WORD *)&_0_T->_2.bitflags2 + 1) & 1) == 0 )
   {
-    v8 = (Il2CppObject *)sub_1CE513C(v10);
+    v8 = (Il2CppObject *)sub_2237AF8(v10);
     _0_T = (Il2CppClass *)v8;
   }
-  v27[1] = StatusReg;
   if ( !v11 )
-    goto LABEL_25;
-  v8 = (Il2CppObject *)sub_1D0F1F0(v11, _0_T);
+    goto LABEL_24;
+  v33 = StatusReg;
+  v8 = (Il2CppObject *)sub_21FFDA4(v11, _0_T);
   if ( !v8 )
-    sub_1D0F6A8(v11);
-  monitor = v8[1].monitor;
+    sub_220024C(v11, _0_T, v13);
+  monitor = (unsigned __int64)v8[1].monitor;
   v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)v8;
   if ( (int)monitor >= 2 )
   {
-    if ( v30 )
+    if ( v35 )
     {
-      v15 = (unsigned int)v8[1].monitor + 1LL;
-      v28 = (char *)v27 - ((actualSize + 15) & 0x1FFFFFFF0LL);
+      v34 = (char *)&v33 - ((actualSize + 15) & 0x1FFFFFFF0LL);
+      v15 = (unsigned int)monitor + 1LL;
+      v38 = v8 + 2;
       do
       {
-        v31 = v15;
         v16 = v7;
-        _1_T = (_BYTE *)((__int64 (__fastcall *)(System_Random_o *, _QWORD, const MethodInfo *))v30->klass->vtable._7_Next.methodPtr)(
-                          v30,
-                          (unsigned int)monitor,
-                          v30->klass->vtable._7_Next.method);
+        v37 = monitor;
+        _1_T = (void *)((__int64 (__fastcall *)(System_Random_o *))v35->klass->vtable._7_Next.methodPtr)(v35);
         max_length = v14->max_length;
-        if ( (unsigned int)_1_T >= max_length )
-          goto LABEL_24;
-        v19 = v29;
+        if ( (unsigned int)_1_T >= (unsigned int)max_length )
+          goto LABEL_23;
+        klass = v14->obj.klass;
         v20 = (int)_1_T;
-        native_size = (unsigned int)v14->obj.klass->_2.native_size;
-        LODWORD(monitor) = (_DWORD)monitor - 1;
-        memcpy(v29, (char *)v14->m_Items + native_size * (int)_1_T, actualSize);
-        _1_T = memcpy(v32, v19, actualSize);
-        if ( (unsigned int)monitor >= max_length )
-          goto LABEL_24;
+        v21 = v14;
+        v22 = v38;
+        native_size = (unsigned int)klass->_2.native_size;
+        v36 = v15;
+        v24 = v15 - 2;
+        v25 = (unsigned int)max_length;
+        _1_T = memcpy(v16, (char *)v38 + native_size * (int)_1_T, actualSize);
+        if ( v24 >= v25 )
+          goto LABEL_23;
+        v26 = (char *)v22 + v24 * native_size;
+        memcpy(v39, v26, actualSize);
+        memmove((char *)v22 + (unsigned int)klass->_2.native_size * v20, v26, actualSize);
+        _1_T = method->rgctx_data->_1_T;
+        if ( (*(_WORD *)((_BYTE *)_1_T + 309) & 1) == 0 )
+          _1_T = (void *)sub_2237AF8(v27);
+        v28 = v21->max_length;
+        v14 = v21;
+        v29 = v38;
         v7 = v16;
-        _1_T = memcpy(v16, (char *)v14->m_Items + native_size * (unsigned int)monitor, actualSize);
-        if ( (unsigned int)v20 >= LODWORD(v14->max_length) )
-          goto LABEL_24;
-        memcpy((char *)v14->m_Items + (unsigned int)v14->obj.klass->_2.native_size * v20, v16, actualSize);
+        if ( (unsigned int)v20 >= v28 )
+          goto LABEL_23;
+        sub_21FFBF8(_1_T, (char *)v38 + (unsigned int)v14->obj.klass->_2.native_size * v20, v39);
+        v30 = v34;
+        _1_T = memcpy(v34, v16, actualSize);
+        if ( v24 >= LODWORD(v14->max_length) )
+          goto LABEL_23;
+        memcpy((char *)v29 + v24 * (unsigned int)v14->obj.klass->_2.native_size, v16, actualSize);
         _1_T = method->rgctx_data->_1_T;
-        if ( (_1_T[309] & 1) == 0 )
-          _1_T = (_BYTE *)sub_1CE513C(v22);
-        v23 = v28;
-        if ( (unsigned int)v20 >= LODWORD(v14->max_length) )
-          goto LABEL_24;
-        sub_1D0F05C(_1_T, (char *)v14->m_Items + (unsigned int)v14->obj.klass->_2.native_size * v20, v7);
-        _1_T = memcpy(v23, v32, actualSize);
-        v24 = v14->max_length;
-        if ( (unsigned int)monitor >= v24 )
-          goto LABEL_24;
-        memcpy(
-          (char *)v14->m_Items + (unsigned int)v14->obj.klass->_2.native_size * (unsigned __int64)(unsigned int)monitor,
-          v23,
-          actualSize);
-        _1_T = method->rgctx_data->_1_T;
-        if ( (_1_T[309] & 1) == 0 )
-        {
-          _1_T = (_BYTE *)sub_1CE513C(v25);
-          v24 = v14->max_length;
-        }
-        if ( (unsigned int)monitor >= v24 )
-LABEL_24:
-          sub_1D0F314(_1_T);
-        sub_1D0F05C(
-          _1_T,
-          (char *)v14->m_Items + (unsigned int)v14->obj.klass->_2.native_size * (unsigned __int64)(unsigned int)monitor,
-          v23);
-        v15 = v31 - 1;
+        if ( (*(_WORD *)((_BYTE *)_1_T + 309) & 1) == 0 )
+          _1_T = (void *)sub_2237AF8(v31);
+        if ( v24 >= LODWORD(v14->max_length) )
+LABEL_23:
+          sub_21FFED4(_1_T);
+        sub_21FFBF8(_1_T, (char *)v29 + v24 * (unsigned int)v14->obj.klass->_2.native_size, v30);
+        v15 = v36 - 1;
+        monitor = (unsigned int)(v37 - 1);
       }
-      while ( v31 - 1 > 2 );
+      while ( (unsigned __int64)(v36 - 1) > 2 );
       return v14;
     }
-LABEL_25:
-    sub_1D0F30C(v8, v9);
+LABEL_24:
+    sub_21FFECC(v8, monitor);
   }
   return v14;
 }

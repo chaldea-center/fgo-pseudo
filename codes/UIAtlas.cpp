@@ -1,95 +1,109 @@
 void UIAtlas___ctor(UIAtlas_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  System_Collections_Generic_Dictionary_object__int__o *v17; // x20
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  bool v8; // w6
+  bool v9; // w7
+  System_Collections_Generic_List_UIAtlas_Sprite__c *v10; // x0
+  System_Collections_Generic_List_object__o *v11; // x20
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  System_Collections_Generic_Dictionary_string__int__c *v18; // x0
+  System_Collections_Generic_Dictionary_object__int__o *v19; // x20
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
 
-  if ( (byte_4E7C00F & 1) == 0 )
+  if ( (byte_593CF58 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UIAtlas_Sprite___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_UIAtlas_Sprite__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_List_UISpriteData__TypeInfo);
-    byte_4E7C00F = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas_Sprite___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_UIAtlas_Sprite__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_List_UISpriteData__TypeInfo);
+    byte_593CF58 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UISpriteData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UISpriteData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UISpriteData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UISpriteData___ctor__);
   this->fields.mSprites = (struct System_Collections_Generic_List_UISpriteData__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprites, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprites, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = System_Collections_Generic_List_UIAtlas_Sprite__TypeInfo;
   this->fields.mPixelSize = 1.0;
-  v10 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_UIAtlas_Sprite__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v10);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_UIAtlas_Sprite___ctor__);
-  this->fields.sprites = (struct System_Collections_Generic_List_UIAtlas_Sprite__o *)v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sprites, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+    v11,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UIAtlas_Sprite___ctor__);
+  this->fields.sprites = (struct System_Collections_Generic_List_UIAtlas_Sprite__o *)v11;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sprites, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+  v18 = System_Collections_Generic_Dictionary_string__int__TypeInfo;
   this->fields.mPMA = -1;
-  v17 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1D0F300(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v19 = (System_Collections_Generic_Dictionary_object__int__o *)sub_21FFEBC(v18);
   System_Collections_Generic_Dictionary_object__int____ctor(
-    v17,
-    (const MethodInfo_35F7E30 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-  this->fields.mSpriteIndices = (struct System_Collections_Generic_Dictionary_string__int__o *)v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSpriteIndices, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+    v19,
+    (const MethodInfo_3FBFF60 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+  this->fields.mSpriteIndices = (struct System_Collections_Generic_Dictionary_string__int__o *)v19;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteIndices,
+    (int32_t)v19,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 bool UIAtlas__CheckIfRelated(UIAtlas_o *a, UIAtlas_o *b, const MethodInfo *method)
 {
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x2
+  __int64 v5; // x1
+  __int64 v6; // x1
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x2
 
-  if ( (byte_4E7C00B & 1) == 0 )
+  if ( (byte_593CF54 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7C00B = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF54 = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, b);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)a, 0, 0) )
     return 0;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)b, 0, 0) )
     return 0;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)a, (UnityEngine_Object_o *)b, 0);
-  if ( v6 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+  v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)a, (UnityEngine_Object_o *)b, 0);
+  if ( v8 )
     return 1;
   if ( !a )
     goto LABEL_18;
-  v6 = UIAtlas__References(a, b, v8);
-  if ( v6 )
+  v8 = UIAtlas__References(a, b, v10);
+  if ( v8 )
     return 1;
   if ( !b )
 LABEL_18:
-    sub_1D0F30C(v6, v7);
-  return UIAtlas__References(b, a, v9);
+    sub_21FFECC(v8, v9);
+  return UIAtlas__References(b, a, v11);
 }
 
 
@@ -97,9 +111,9 @@ BetterList_string__o *UIAtlas__GetListOfSprites(UIAtlas_o *this, const MethodInf
 {
   UnityEngine_Object_o *mReplacement; // x26
   struct System_Collections_Generic_List_UISpriteData__o *IsNullOrEmpty; // x0
-  const MethodInfo *v5; // x1
   struct System_Collections_Generic_List_UISpriteData__o *mSprites; // x8
-  BetterList_T__o *v7; // x22
+  BetterList_T__o *v6; // x22
+  struct System_Collections_Generic_List_UISpriteData__o *v7; // x8
   int size; // w25
   int32_t v9; // w23
   Il2CppObject *Item; // x0
@@ -107,19 +121,19 @@ BetterList_string__o *UIAtlas__GetListOfSprites(UIAtlas_o *this, const MethodInf
 
   while ( 1 )
   {
-    if ( (byte_4E7C008 & 1) == 0 )
+    if ( (byte_593CF51 & 1) == 0 )
     {
-      sub_1D0F0B4(&Method_BetterList_string__Add__);
-      sub_1D0F0B4(&Method_BetterList_string___ctor__);
-      sub_1D0F0B4(&BetterList_string__TypeInfo);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C008 = 1;
+      sub_21FFC50(&Method_BetterList_string__Add__);
+      sub_21FFC50(&Method_BetterList_string___ctor__);
+      sub_21FFC50(&BetterList_string__TypeInfo);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF51 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     IsNullOrEmpty = (struct System_Collections_Generic_List_UISpriteData__o *)UnityEngine_Object__op_Inequality(
                                                                                 mReplacement,
                                                                                 0,
@@ -128,29 +142,32 @@ BetterList_string__o *UIAtlas__GetListOfSprites(UIAtlas_o *this, const MethodInf
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      goto LABEL_20;
+      goto LABEL_7;
   }
   mSprites = this->fields.mSprites;
   if ( !mSprites )
-    goto LABEL_20;
+    goto LABEL_7;
   if ( !mSprites->fields._size )
-    UIAtlas__Upgrade(this, v5);
-  v7 = (BetterList_T__o *)sub_1D0F300(BetterList_string__TypeInfo);
-  BetterList_object____ctor(v7, (const MethodInfo_34AC764 *)Method_BetterList_string___ctor__);
-  IsNullOrEmpty = this->fields.mSprites;
-  if ( !IsNullOrEmpty )
-LABEL_20:
-    sub_1D0F30C(IsNullOrEmpty, v5);
-  size = IsNullOrEmpty->fields._size;
+    UIAtlas__Upgrade(this, method);
+  v6 = (BetterList_T__o *)sub_21FFEBC(BetterList_string__TypeInfo);
+  BetterList_object____ctor(v6, (const MethodInfo_3E3C988 *)Method_BetterList_string___ctor__);
+  v7 = this->fields.mSprites;
+  if ( !v7 )
+LABEL_7:
+    sub_21FFECC(IsNullOrEmpty, method);
+  size = v7->fields._size;
   if ( size >= 1 )
   {
     v9 = 0;
     while ( 1 )
     {
+      IsNullOrEmpty = this->fields.mSprites;
+      if ( !IsNullOrEmpty )
+        goto LABEL_7;
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
                v9,
-               (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
       if ( Item )
       {
         v11 = Item;
@@ -159,110 +176,108 @@ LABEL_20:
                                                                                     0);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
         {
-          if ( !v7 )
-            goto LABEL_20;
+          if ( !v6 )
+            goto LABEL_7;
           BetterList_object___Add(
-            v7,
+            v6,
             (Il2CppObject *)v11[1].klass,
-            (const MethodInfo_34AC038 *)Method_BetterList_string__Add__);
+            (const MethodInfo_3E3C260 *)Method_BetterList_string__Add__);
         }
       }
       if ( size == ++v9 )
-        break;
-      IsNullOrEmpty = this->fields.mSprites;
-      if ( !IsNullOrEmpty )
-        goto LABEL_20;
+        return (BetterList_string__o *)v6;
     }
   }
-  return (BetterList_string__o *)v7;
+  return (BetterList_string__o *)v6;
 }
 
 
-BetterList_string__o *UIAtlas__GetListOfSprites_50876528(
+BetterList_string__o *UIAtlas__GetListOfSprites_56333644(
         UIAtlas_o *this,
         System_String_o *match,
         const MethodInfo *method)
 {
+  System_String_o *v3; // x23
   UnityEngine_Object_o *mReplacement; // x28
   __int64 IsNullOrEmpty; // x0
-  const MethodInfo *v7; // x1
   struct System_Collections_Generic_List_UISpriteData__o *mSprites; // x8
-  BetterList_T__o *v10; // x22
-  int v11; // w19
+  BetterList_T__o *v9; // x22
+  struct System_Collections_Generic_List_UISpriteData__o *v10; // x8
+  int size; // w19
   int32_t v12; // w25
   Il2CppObject *v13; // x0
   Il2CppObject *v14; // x26
   int v15; // w8
   __int64 v16; // x23
   unsigned int v17; // w19
-  __int64 v18; // x24
-  GrandQuestFolderBoardItem_o *v19; // x24
-  __int64 v20; // t1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
-  int v27; // w27
-  int32_t v28; // w24
+  MissionNaviTransitionBoardItem_o *v18; // x24
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  struct System_Collections_Generic_List_UISpriteData__o *v25; // x8
+  int v26; // w27
+  int32_t v27; // w24
   Il2CppObject *Item; // x0
-  Il2CppObject *v30; // x25
-  __int64 v31; // x8
-  System_String_o *v32; // x26
-  unsigned __int64 v33; // x29
-  int v34; // w19
+  Il2CppObject *v29; // x25
+  __int64 v30; // x8
+  System_String_o *v31; // x26
+  unsigned __int64 v32; // x29
+  int v33; // w19
 
+  v3 = match;
   while ( 1 )
   {
-    if ( (byte_4E7C009 & 1) == 0 )
+    if ( (byte_593CF52 & 1) == 0 )
     {
-      sub_1D0F0B4(&Method_BetterList_string__Add__);
-      sub_1D0F0B4(&Method_BetterList_string___ctor__);
-      sub_1D0F0B4(&BetterList_string__TypeInfo);
-      sub_1D0F0B4(&char___TypeInfo);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C009 = 1;
+      sub_21FFC50(&Method_BetterList_string__Add__);
+      sub_21FFC50(&Method_BetterList_string___ctor__);
+      sub_21FFC50(&BetterList_string__TypeInfo);
+      sub_21FFC50(&char___TypeInfo);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF52 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, match);
     IsNullOrEmpty = UnityEngine_Object__op_Implicit(mReplacement, 0);
     if ( (IsNullOrEmpty & 1) == 0 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      goto LABEL_54;
+      goto LABEL_8;
   }
-  IsNullOrEmpty = System_String__IsNullOrEmpty(match, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(v3, 0);
   if ( (IsNullOrEmpty & 1) != 0 )
-    return UIAtlas__GetListOfSprites(this, v7);
+    return UIAtlas__GetListOfSprites(this, (const MethodInfo *)match);
   mSprites = this->fields.mSprites;
   if ( !mSprites )
-    goto LABEL_54;
+    goto LABEL_8;
   if ( !mSprites->fields._size )
-    UIAtlas__Upgrade(this, v7);
-  v10 = (BetterList_T__o *)sub_1D0F300(BetterList_string__TypeInfo);
-  BetterList_object____ctor(v10, (const MethodInfo_34AC764 *)Method_BetterList_string___ctor__);
-  IsNullOrEmpty = (__int64)this->fields.mSprites;
-  if ( !IsNullOrEmpty )
-    goto LABEL_54;
-  v11 = *(_DWORD *)(IsNullOrEmpty + 24);
-  if ( v11 < 1 )
+    UIAtlas__Upgrade(this, (const MethodInfo *)match);
+  v9 = (BetterList_T__o *)sub_21FFEBC(BetterList_string__TypeInfo);
+  BetterList_object____ctor(v9, (const MethodInfo_3E3C988 *)Method_BetterList_string___ctor__);
+  v10 = this->fields.mSprites;
+  if ( !v10 )
+    goto LABEL_8;
+  size = v10->fields._size;
+  if ( size < 1 )
   {
 LABEL_22:
-    IsNullOrEmpty = sub_1D0F15C(char___TypeInfo, 1);
+    IsNullOrEmpty = sub_21FFD10(char___TypeInfo, 1);
     if ( IsNullOrEmpty )
     {
-      v7 = (const MethodInfo *)IsNullOrEmpty;
+      match = (System_String_o *)IsNullOrEmpty;
       if ( !*(_DWORD *)(IsNullOrEmpty + 24) )
-        goto LABEL_55;
+        goto LABEL_54;
       *(_WORD *)(IsNullOrEmpty + 32) = 32;
-      if ( match )
+      if ( v3 )
       {
-        IsNullOrEmpty = (__int64)System_String__Split_65611980(match, (System_Char_array *)IsNullOrEmpty, 1, 0);
+        IsNullOrEmpty = (__int64)System_String__Split_75492796(v3, (System_Char_array *)IsNullOrEmpty, 1, 0);
         if ( IsNullOrEmpty )
         {
           v15 = *(_DWORD *)(IsNullOrEmpty + 24);
@@ -270,130 +285,127 @@ LABEL_22:
           if ( v15 < 1 )
           {
 LABEL_32:
-            IsNullOrEmpty = (__int64)this->fields.mSprites;
-            if ( IsNullOrEmpty )
+            v25 = this->fields.mSprites;
+            if ( v25 )
             {
-              v27 = *(_DWORD *)(IsNullOrEmpty + 24);
-              if ( v27 >= 1 )
+              v26 = v25->fields._size;
+              if ( v26 >= 1 )
               {
-                v28 = 0;
+                v27 = 0;
                 while ( 1 )
                 {
+                  IsNullOrEmpty = (__int64)this->fields.mSprites;
+                  if ( !IsNullOrEmpty )
+                    goto LABEL_8;
                   Item = System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-                           v28,
-                           (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                           v27,
+                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
                   if ( Item )
                   {
-                    v30 = Item;
+                    v29 = Item;
                     if ( !System_String__IsNullOrEmpty((System_String_o *)Item[1].klass, 0) )
                     {
-                      IsNullOrEmpty = (__int64)v30[1].klass;
+                      IsNullOrEmpty = (__int64)v29[1].klass;
                       if ( !IsNullOrEmpty )
-                        goto LABEL_54;
+                        goto LABEL_8;
                       IsNullOrEmpty = (__int64)System_String__ToLower((System_String_o *)IsNullOrEmpty, 0);
-                      v31 = *(_QWORD *)(v16 + 24);
-                      if ( (int)v31 >= 1 )
+                      v30 = *(_QWORD *)(v16 + 24);
+                      if ( (int)v30 >= 1 )
                       {
-                        v32 = (System_String_o *)IsNullOrEmpty;
+                        v31 = (System_String_o *)IsNullOrEmpty;
+                        v32 = 0;
                         v33 = 0;
-                        v34 = 0;
-                        while ( v33 < (unsigned int)v31 )
+                        while ( v32 < (unsigned int)v30 )
                         {
-                          if ( !v32 )
-                            goto LABEL_54;
-                          IsNullOrEmpty = System_String__Contains(v32, *(System_String_o **)(v16 + 32 + 8 * v33), 0);
-                          LODWORD(v31) = *(_DWORD *)(v16 + 24);
-                          ++v33;
-                          v34 += IsNullOrEmpty & 1;
-                          if ( (__int64)v33 >= (int)v31 )
-                            goto LABEL_45;
+                          if ( !v31 )
+                            goto LABEL_8;
+                          IsNullOrEmpty = System_String__Contains(v31, *(System_String_o **)(v16 + 32 + 8 * v32), 0);
+                          LODWORD(v30) = *(_DWORD *)(v16 + 24);
+                          ++v32;
+                          v33 += IsNullOrEmpty & 1;
+                          if ( (__int64)v32 >= (int)v30 )
+                            goto LABEL_46;
                         }
-LABEL_55:
-                        sub_1D0F314(IsNullOrEmpty);
+LABEL_54:
+                        sub_21FFED4(IsNullOrEmpty);
                       }
-                      v34 = 0;
-LABEL_45:
-                      if ( v34 == (_DWORD)v31 )
+                      v33 = 0;
+LABEL_46:
+                      if ( v33 == (_DWORD)v30 )
                       {
-                        if ( !v10 )
-                          goto LABEL_54;
+                        if ( !v9 )
+                          goto LABEL_8;
                         BetterList_object___Add(
-                          v10,
-                          (Il2CppObject *)v30[1].klass,
-                          (const MethodInfo_34AC038 *)Method_BetterList_string__Add__);
+                          v9,
+                          (Il2CppObject *)v29[1].klass,
+                          (const MethodInfo_3E3C260 *)Method_BetterList_string__Add__);
                       }
                     }
                   }
-                  if ( ++v28 == v27 )
-                    return (BetterList_string__o *)v10;
-                  IsNullOrEmpty = (__int64)this->fields.mSprites;
-                  if ( !IsNullOrEmpty )
-                    goto LABEL_54;
+                  if ( ++v27 == v26 )
+                    return (BetterList_string__o *)v9;
                 }
               }
-              return (BetterList_string__o *)v10;
+              return (BetterList_string__o *)v9;
             }
           }
           else
           {
             v17 = 0;
+            v18 = (MissionNaviTransitionBoardItem_o *)(IsNullOrEmpty + 32);
             while ( 1 )
             {
               if ( v17 >= v15 )
-                goto LABEL_55;
-              v18 = v16 + 8LL * (int)v17;
-              v20 = *(_QWORD *)(v18 + 32);
-              v19 = (GrandQuestFolderBoardItem_o *)(v18 + 32);
-              IsNullOrEmpty = v20;
-              if ( !v20 )
+                goto LABEL_54;
+              IsNullOrEmpty = (__int64)v18->klass;
+              if ( !v18->klass )
                 break;
               IsNullOrEmpty = (__int64)System_String__ToLower((System_String_o *)IsNullOrEmpty, 0);
               if ( v17 >= *(_DWORD *)(v16 + 24) )
-                goto LABEL_55;
-              v19->klass = (GrandQuestFolderBoardItem_c *)IsNullOrEmpty;
-              sub_1D0F058(v19, IsNullOrEmpty, v21, v22, v23, v24, v25, v26);
+                goto LABEL_54;
+              v18->klass = (MissionNaviTransitionBoardItem_c *)IsNullOrEmpty;
+              sub_21FFBF4(v18, IsNullOrEmpty, v19, v20, v21, v22, v23, v24);
               v15 = *(_DWORD *)(v16 + 24);
-              if ( (int)++v17 >= v15 )
+              ++v17;
+              v18 = (MissionNaviTransitionBoardItem_o *)((char *)v18 + 8);
+              if ( (int)v17 >= v15 )
                 goto LABEL_32;
             }
           }
         }
       }
     }
-LABEL_54:
-    sub_1D0F30C(IsNullOrEmpty, v7);
+LABEL_8:
+    sub_21FFECC(IsNullOrEmpty, match);
   }
   v12 = 0;
   while ( 1 )
   {
+    IsNullOrEmpty = (__int64)this->fields.mSprites;
+    if ( !IsNullOrEmpty )
+      goto LABEL_8;
     v13 = System_Collections_Generic_List_object___get_Item(
             (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
             v12,
-            (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
     if ( v13 )
     {
       v14 = v13;
       if ( !System_String__IsNullOrEmpty((System_String_o *)v13[1].klass, 0) )
       {
-        IsNullOrEmpty = System_String__Equals_65598896(match, (System_String_o *)v14[1].klass, 5, 0);
+        IsNullOrEmpty = System_String__Equals_75474028(v3, (System_String_o *)v14[1].klass, 5, 0);
         if ( (IsNullOrEmpty & 1) != 0 )
           break;
       }
     }
-    if ( v11 == ++v12 )
+    if ( size == ++v12 )
       goto LABEL_22;
-    IsNullOrEmpty = (__int64)this->fields.mSprites;
-    if ( !IsNullOrEmpty )
-      goto LABEL_54;
   }
-  if ( !v10 )
-    goto LABEL_54;
-  BetterList_object___Add(
-    v10,
-    (Il2CppObject *)v14[1].klass,
-    (const MethodInfo_34AC038 *)Method_BetterList_string__Add__);
-  return (BetterList_string__o *)v10;
+  if ( !v9 )
+    goto LABEL_8;
+  BetterList_object___Add(v9, (Il2CppObject *)v14[1].klass, (const MethodInfo_3E3C260 *)Method_BetterList_string__Add__);
+  return (BetterList_string__o *)v9;
 }
 
 
@@ -409,110 +421,112 @@ System_String_o *UIAtlas__GetRandomSprite(UIAtlas_o *this, System_String_o *star
   Il2CppObject *current; // x23
   Il2CppClass *klass; // x0
   _BOOL8 v14; // x0
-  __int64 v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  Il2CppObject *v15; // x1
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  Il2CppObject *v22; // x1
+  bool v20; // w6
+  bool v21; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
-  int32_t v27; // w1
-  int32_t v28; // w0
-  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-50h] BYREF
+  Il2CppClass **v25; // x0
+  int32_t v26; // w1
+  int32_t v27; // w0
+  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4E7C005 & 1) == 0 )
+  if ( (byte_593CF4E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4E7C005 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UISpriteData__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    byte_593CF4E = 1;
   }
-  memset(&v31, 0, sizeof(v31));
+  memset(&v30, 0, sizeof(v30));
   if ( !UIAtlas__GetSprite(this, startsWith, method) )
   {
     spriteList = (System_Collections_Generic_List_object__o *)UIAtlas__get_spriteList(this, v5);
-    v7 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
+    v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v7,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
     if ( !spriteList )
-      goto LABEL_24;
+      goto LABEL_23;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v30,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v29,
       spriteList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_UISpriteData__GetEnumerator__);
-    v31 = v30;
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UISpriteData__GetEnumerator__);
+    v30 = v29;
+    v29.fields._list = 0;
+    *(_QWORD *)&v29.fields._index = &v30;
     while ( 1 )
     {
       v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v31,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_UISpriteData__MoveNext__);
+              &v30,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UISpriteData__MoveNext__);
       if ( !v10 )
         break;
-      current = v31.fields._current;
-      if ( !v31.fields._current )
-        sub_1D0F30C(v10, v11);
-      klass = v31.fields._current[1].klass;
+      current = v30.fields._current;
+      if ( !v30.fields._current )
+        sub_21FFECC(v10, v11);
+      klass = v30.fields._current[1].klass;
       if ( !klass )
-        sub_1D0F30C(0, v11);
+        sub_21FFECC(0, v11);
       v14 = System_String__StartsWith((System_String_o *)klass, startsWith, 0);
       if ( v14 )
       {
-        if ( !v7 )
-          sub_1D0F30C(v14, v15);
-        v22 = (Il2CppObject *)current[1].klass;
-        items = v7->fields._items;
-        v24 = Method_System_Collections_Generic_List_string__Add__;
-        ++v7->fields._version;
-        if ( !items )
-          sub_1D0F30C(v14, v22);
+        if ( !v7
+          || (items = v7->fields._items,
+              v15 = (Il2CppObject *)current[1].klass,
+              v23 = Method_System_Collections_Generic_List_string__Add__,
+              ++v7->fields._version,
+              !items) )
+        {
+          sub_21FFECC(v14, v15);
+        }
         size = v7->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v7,
-            v22,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+            v15,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
-          v26 = &items->obj.klass + size;
+          v25 = &items->obj.klass + size;
           v7->fields._size = size + 1;
-          v26[4] = (Il2CppClass *)v22;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v26 + 4), (int32_t)v22, v16, v17, v18, v19, v20, v21);
+          v25[4] = (Il2CppClass *)v15;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v15, v16, v17, v18, v19, v20, v21);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v31,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_UISpriteData__Dispose__);
+      &v30,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UISpriteData__Dispose__);
     if ( !v7 )
-LABEL_24:
-      sub_1D0F30C(v8, v9);
-    v27 = v7->fields._size;
-    if ( v27 <= 0 )
+LABEL_23:
+      sub_21FFECC(v8, v9);
+    v26 = v7->fields._size;
+    if ( v26 <= 0 )
     {
       return 0;
     }
     else
     {
-      v28 = UnityEngine_Random__Range_73319196(0, v27, 0);
+      v27 = UnityEngine_Random__Range_83187376(0, v26, 0);
       return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                   v7,
-                                  v28,
-                                  (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                  v27,
+                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
     }
   }
   return startsWith;
@@ -521,136 +535,145 @@ LABEL_24:
 
 UISpriteData_o *UIAtlas__GetSprite(UIAtlas_o *this, System_String_o *name, const MethodInfo *method)
 {
+  System_String_o *v3; // x19
+  UIAtlas_o *v4; // x20
   UnityEngine_Object_o *mReplacement; // x21
   const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x2
-  void *IsNullOrEmpty; // x0
-  UISpriteData_o *v10; // x21
+  UISpriteData_o *v7; // x21
   struct System_Collections_Generic_List_UISpriteData__o *mSprites; // x8
-  struct System_Collections_Generic_List_UISpriteData__o *v12; // x8
-  int v13; // w23
-  int32_t v14; // w22
+  struct System_Collections_Generic_List_UISpriteData__o *v9; // x8
+  struct System_Collections_Generic_List_UISpriteData__o *v10; // x8
+  int size; // w23
+  int32_t v12; // w22
   int32_t value; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E7C004 & 1) == 0 )
-  {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7C004 = 1;
-  }
-  value = 0;
-  mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(mReplacement, 0, 0) )
-  {
-    IsNullOrEmpty = this->fields.mReplacement;
-    if ( IsNullOrEmpty )
-      return UIAtlas__GetSprite((UIAtlas_o *)IsNullOrEmpty, name, v7);
-LABEL_36:
-    sub_1D0F30C(IsNullOrEmpty, v6);
-  }
-  IsNullOrEmpty = (void *)System_String__IsNullOrEmpty(name, 0);
-  v10 = 0;
-  if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
-    return v10;
-  mSprites = this->fields.mSprites;
-  if ( !mSprites )
-    goto LABEL_36;
-  if ( !mSprites->fields._size )
-  {
-    IsNullOrEmpty = (void *)UIAtlas__Upgrade(this, v6);
-    mSprites = this->fields.mSprites;
-    if ( !mSprites )
-      goto LABEL_36;
-  }
-  if ( !mSprites->fields._size )
-    return 0;
-  IsNullOrEmpty = this->fields.mSpriteIndices;
-  if ( !IsNullOrEmpty )
-    goto LABEL_36;
-  IsNullOrEmpty = (void *)System_Collections_Generic_Dictionary_object__int___get_Count(
-                            (System_Collections_Generic_Dictionary_object__int__o *)IsNullOrEmpty,
-                            (const MethodInfo_35F84B4 *)Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
-  v12 = this->fields.mSprites;
-  if ( !v12 )
-    goto LABEL_36;
-  if ( (_DWORD)IsNullOrEmpty != v12->fields._size )
-    UIAtlas__MarkSpriteListAsChanged(this, v6);
-  IsNullOrEmpty = this->fields.mSpriteIndices;
-  if ( !IsNullOrEmpty )
-    goto LABEL_36;
-  if ( System_Collections_Generic_Dictionary_object__int___TryGetValue(
-         (System_Collections_Generic_Dictionary_object__int__o *)IsNullOrEmpty,
-         (Il2CppObject *)name,
-         &value,
-         (const MethodInfo_35F9FA0 *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__) )
-  {
-    v6 = (const MethodInfo *)(unsigned int)value;
-    if ( (value & 0x80000000) == 0 )
-    {
-      IsNullOrEmpty = this->fields.mSprites;
-      if ( !IsNullOrEmpty )
-        goto LABEL_36;
-      if ( value < *((_DWORD *)IsNullOrEmpty + 6) )
-        return (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
-                                   (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-                                   (int32_t)v6,
-                                   (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    }
-    UIAtlas__MarkSpriteListAsChanged(this, (const MethodInfo *)(unsigned int)value);
-    IsNullOrEmpty = this->fields.mSpriteIndices;
-    if ( !IsNullOrEmpty )
-      goto LABEL_36;
-    if ( System_Collections_Generic_Dictionary_object__int___TryGetValue(
-           (System_Collections_Generic_Dictionary_object__int__o *)IsNullOrEmpty,
-           (Il2CppObject *)name,
-           &value,
-           (const MethodInfo_35F9FA0 *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__) )
-    {
-      IsNullOrEmpty = this->fields.mSprites;
-      if ( !IsNullOrEmpty )
-        goto LABEL_36;
-      LODWORD(v6) = value;
-      return (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
-                                 (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-                                 (int32_t)v6,
-                                 (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    }
-    return 0;
-  }
-  IsNullOrEmpty = this->fields.mSprites;
-  if ( !IsNullOrEmpty )
-    goto LABEL_36;
-  v13 = *((_DWORD *)IsNullOrEmpty + 6);
-  if ( v13 < 1 )
-    return 0;
-  v14 = 0;
   while ( 1 )
   {
-    IsNullOrEmpty = System_Collections_Generic_List_object___get_Item(
-                      (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-                      v14,
-                      (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    if ( !IsNullOrEmpty )
-      goto LABEL_36;
-    v10 = (UISpriteData_o *)IsNullOrEmpty;
-    if ( !System_String__IsNullOrEmpty(*((System_String_o **)IsNullOrEmpty + 2), 0)
-      && System_String__op_Equality(name, v10->fields.name, 0) )
+    v3 = name;
+    v4 = this;
+    if ( (byte_593CF4D & 1) == 0 )
     {
-      break;
+      sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
+      sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF4D = 1;
     }
-    if ( v13 == ++v14 )
-      return 0;
-    IsNullOrEmpty = this->fields.mSprites;
-    if ( !IsNullOrEmpty )
-      goto LABEL_36;
+    mReplacement = (UnityEngine_Object_o *)v4->fields.mReplacement;
+    value = 0;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, name);
+    if ( !UnityEngine_Object__op_Inequality(mReplacement, 0, 0) )
+      break;
+    this = v4->fields.mReplacement;
+    if ( !this )
+      goto LABEL_40;
+    name = v3;
   }
-  UIAtlas__MarkSpriteListAsChanged(this, v6);
-  return v10;
+  this = (UIAtlas_o *)System_String__IsNullOrEmpty(v3, 0);
+  v7 = 0;
+  if ( ((unsigned __int8)this & 1) == 0 )
+  {
+    mSprites = v4->fields.mSprites;
+    if ( !mSprites )
+      goto LABEL_40;
+    if ( !mSprites->fields._size )
+    {
+      this = (UIAtlas_o *)UIAtlas__Upgrade(v4, v6);
+      mSprites = v4->fields.mSprites;
+      if ( !mSprites )
+        goto LABEL_40;
+    }
+    if ( !mSprites->fields._size )
+      return 0;
+    this = (UIAtlas_o *)v4->fields.mSpriteIndices;
+    if ( !this )
+      goto LABEL_40;
+    this = (UIAtlas_o *)System_Collections_Generic_Dictionary_object__int___get_Count(
+                          (System_Collections_Generic_Dictionary_object__int__o *)this,
+                          (const MethodInfo_3FC05AC *)Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
+    v9 = v4->fields.mSprites;
+    if ( !v9 )
+      goto LABEL_40;
+    if ( (_DWORD)this != v9->fields._size )
+      UIAtlas__MarkSpriteListAsChanged(v4, v6);
+    this = (UIAtlas_o *)v4->fields.mSpriteIndices;
+    if ( !this )
+      goto LABEL_40;
+    this = (UIAtlas_o *)System_Collections_Generic_Dictionary_object__int___TryGetValue(
+                          (System_Collections_Generic_Dictionary_object__int__o *)this,
+                          (Il2CppObject *)v3,
+                          &value,
+                          (const MethodInfo_3FC241C *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__);
+    if ( ((unsigned __int8)this & 1) != 0 )
+    {
+      v6 = (const MethodInfo *)(unsigned int)value;
+      if ( (value & 0x80000000) == 0 )
+      {
+        this = (UIAtlas_o *)v4->fields.mSprites;
+        if ( !this )
+          goto LABEL_40;
+        if ( value < SLODWORD(this->fields.m_CancellationTokenSource) )
+          return (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
+                                     (System_Collections_Generic_List_object__o *)this,
+                                     (int32_t)v6,
+                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      }
+      UIAtlas__MarkSpriteListAsChanged(v4, (const MethodInfo *)(unsigned int)value);
+      this = (UIAtlas_o *)v4->fields.mSpriteIndices;
+      if ( !this )
+LABEL_40:
+        sub_21FFECC(this, v6);
+      if ( System_Collections_Generic_Dictionary_object__int___TryGetValue(
+             (System_Collections_Generic_Dictionary_object__int__o *)this,
+             (Il2CppObject *)v3,
+             &value,
+             (const MethodInfo_3FC241C *)Method_System_Collections_Generic_Dictionary_string__int__TryGetValue__) )
+      {
+        this = (UIAtlas_o *)v4->fields.mSprites;
+        if ( this )
+        {
+          LODWORD(v6) = value;
+          return (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
+                                     (System_Collections_Generic_List_object__o *)this,
+                                     (int32_t)v6,
+                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+        }
+        goto LABEL_40;
+      }
+      return 0;
+    }
+    v10 = v4->fields.mSprites;
+    if ( !v10 )
+      goto LABEL_40;
+    size = v10->fields._size;
+    if ( size < 1 )
+      return 0;
+    v12 = 0;
+    while ( 1 )
+    {
+      this = (UIAtlas_o *)v4->fields.mSprites;
+      if ( !this )
+        goto LABEL_40;
+      this = (UIAtlas_o *)System_Collections_Generic_List_object___get_Item(
+                            (System_Collections_Generic_List_object__o *)this,
+                            v12,
+                            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      if ( !this )
+        goto LABEL_40;
+      v7 = (UISpriteData_o *)this;
+      if ( !System_String__IsNullOrEmpty((System_String_o *)this->fields.m_CachedPtr, 0)
+        && System_String__op_Equality(v3, v7->fields.name, 0) )
+      {
+        break;
+      }
+      if ( size == ++v12 )
+        return 0;
+    }
+    UIAtlas__MarkSpriteListAsChanged(v4, v6);
+  }
+  return v7;
 }
 
 
@@ -660,50 +683,51 @@ UIAtlas_o *UIAtlas__GetUIAtlasBySpriteName(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_UIAtlas__o *v4; // x20
+  __int64 v5; // x1
   Il2CppObject *current; // x20
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-48h] BYREF
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
+  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-48h] BYREF
 
   v4 = atlases;
-  if ( (byte_4E7C00E & 1) == 0 )
+  if ( (byte_593CF57 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
-    atlases = (System_Collections_Generic_List_UIAtlas__o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7C00E = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    atlases = (System_Collections_Generic_List_UIAtlas__o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF57 = 1;
   }
-  memset(&v10, 0, sizeof(v10));
+  memset(&v11, 0, sizeof(v11));
   if ( !v4 )
-    sub_1D0F30C(atlases, spName);
+    sub_21FFECC(atlases, spName);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v10,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)v4,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v10,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__) )
+            &v11,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__) )
   {
-    current = v10.fields._current;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)current, 0, 0);
-    if ( !v6 )
+    current = v11.fields._current;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+    v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)current, 0, 0);
+    if ( !v7 )
     {
       if ( !current )
-        sub_1D0F30C(v6, v7);
-      if ( UIAtlas__GetSprite((UIAtlas_o *)current, spName, v8) )
+        sub_21FFECC(v7, v8);
+      if ( UIAtlas__GetSprite((UIAtlas_o *)current, spName, v9) )
         goto LABEL_13;
     }
   }
   current = 0;
 LABEL_13:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v10,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    &v11,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
   return (UIAtlas_o *)current;
 }
 
@@ -714,256 +738,246 @@ void UIAtlas__MarkAsChanged(UIAtlas_o *this, const MethodInfo *method)
   const MethodInfo *v4; // x1
   UIAtlas_o *Active_object; // x0
   const MethodInfo *v6; // x2
-  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x25
   UIAtlas_o *v8; // x20
-  int v9; // w25
-  int v10; // w26
-  UISprite_o *v11; // x21
+  __int64 v9; // x26
+  UISprite_o *v10; // x21
   UIAtlas_o *mAtlas; // x22
-  const MethodInfo *v13; // x2
-  Il2CppType *v14; // x20
-  System_RuntimeTypeHandle_o v15; // x0
+  const MethodInfo *v12; // x2
+  Il2CppType *v13; // x20
+  System_RuntimeTypeHandle_o v14; // x0
   System_Type_o *TypeFromHandle; // x0
   UnityEngine_Object_array *ObjectsOfTypeAll; // x0
-  struct System_Threading_CancellationTokenSource_o *v18; // x8
-  UIAtlas_o *v19; // x20
-  int v20; // w25
-  int v21; // w26
-  UIAtlas_c **v22; // x8
-  UIFont_o *v23; // x21
+  struct System_Threading_CancellationTokenSource_o *v17; // x25
+  UIAtlas_o *v18; // x20
+  __int64 v19; // x26
+  UIFont_o *v20; // x21
   UIAtlas_o *atlas; // x0
+  const MethodInfo *v22; // x2
+  UIAtlas_o *v23; // x22
+  const MethodInfo *v24; // x2
   const MethodInfo *v25; // x2
-  UIAtlas_o *v26; // x22
-  const MethodInfo *v27; // x2
-  const MethodInfo *v28; // x2
-  struct System_Threading_CancellationTokenSource_o *v29; // x8
-  UIAtlas_o *v30; // x20
-  int v31; // w24
-  int v32; // w25
-  UILabel_o *v33; // x21
+  struct System_Threading_CancellationTokenSource_o *v26; // x24
+  UIAtlas_o *v27; // x20
+  __int64 v28; // x25
+  UILabel_o *v29; // x21
   UnityEngine_Object_o *mFont; // x22
-  UIAtlas_o *v35; // x0
-  const MethodInfo *v36; // x2
-  const MethodInfo *v37; // x2
-  UIFont_o *v38; // x22
-  const MethodInfo *v39; // x2
+  UIAtlas_o *v31; // x0
+  const MethodInfo *v32; // x2
+  const MethodInfo *v33; // x2
+  UIFont_o *v34; // x22
+  const MethodInfo *v35; // x2
 
-  if ( (byte_4E7C00C & 1) == 0 )
+  if ( (byte_593CF55 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_NGUITools_FindActive_UILabel___);
-    sub_1D0F0B4(&Method_NGUITools_FindActive_UISprite___);
-    sub_1D0F0B4(&NGUITools_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&System_Type_TypeInfo);
-    sub_1D0F0B4(&UIFont___TypeInfo);
-    sub_1D0F0B4(&UIFont_var);
-    byte_4E7C00C = 1;
+    sub_21FFC50(&Method_NGUITools_FindActive_UILabel___);
+    sub_21FFC50(&Method_NGUITools_FindActive_UISprite___);
+    sub_21FFC50(&NGUITools_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&UIFont___TypeInfo);
+    sub_21FFC50(&UIFont_var);
+    byte_593CF55 = 1;
   }
   mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mReplacement, 0, 0) )
   {
     Active_object = this->fields.mReplacement;
     if ( !Active_object )
-      goto LABEL_46;
+      goto LABEL_43;
     UIAtlas__MarkAsChanged(Active_object, v4);
   }
-  if ( !NGUITools_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  Active_object = (UIAtlas_o *)NGUITools__FindActive_object_((const MethodInfo_32DB168 *)Method_NGUITools_FindActive_UISprite___);
+  if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v4);
+  Active_object = (UIAtlas_o *)NGUITools__FindActive_object_((const MethodInfo_38BD5C4 *)Method_NGUITools_FindActive_UISprite___);
   if ( !Active_object )
-LABEL_46:
-    sub_1D0F30C(Active_object, v4);
+    goto LABEL_43;
   m_CancellationTokenSource = Active_object->fields.m_CancellationTokenSource;
   v8 = Active_object;
-  v9 = (_DWORD)m_CancellationTokenSource - 1;
   if ( (int)m_CancellationTokenSource >= 1 )
   {
-    v10 = 0;
-    while ( 1 )
+    v9 = 0;
+    while ( (unsigned int)v9 < LODWORD(v8->fields.m_CancellationTokenSource) )
     {
-      v11 = (UISprite_o *)*((_QWORD *)&v8->fields.material + v10);
-      if ( !v11 )
-        goto LABEL_46;
-      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v11->fields.mAtlas, v6);
+      v10 = (UISprite_o *)*((_QWORD *)&v8->fields.material + v9);
+      if ( !v10 )
+        goto LABEL_43;
+      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v10->fields.mAtlas, v6);
       if ( ((unsigned __int8)Active_object & 1) != 0 )
       {
-        mAtlas = v11->fields.mAtlas;
-        UISprite__set_atlas(v11, 0, v6);
-        UISprite__set_atlas(v11, mAtlas, v13);
+        mAtlas = v10->fields.mAtlas;
+        UISprite__set_atlas(v10, 0, v6);
+        UISprite__set_atlas(v10, mAtlas, v12);
       }
-      if ( v9 == v10 )
-        break;
-      if ( (unsigned int)++v10 >= LODWORD(v8->fields.m_CancellationTokenSource) )
+      if ( (_DWORD)m_CancellationTokenSource == (_DWORD)++v9 )
+        goto LABEL_18;
+    }
 LABEL_44:
-        sub_1D0F314(Active_object);
-    }
+    sub_21FFED4(Active_object);
   }
-  v14 = UIFont_var;
-  if ( !System_Type_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v15.fields.value = (intptr_t)v14;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v15, 0);
+LABEL_18:
+  v13 = UIFont_var;
+  if ( !*(_DWORD *)(qword_594C108 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_594C108, v4);
+  v14.fields.value = (intptr_t)v13;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0);
   ObjectsOfTypeAll = UnityEngine_Resources__FindObjectsOfTypeAll(TypeFromHandle, 0);
-  Active_object = (UIAtlas_o *)sub_1D0F1F0(ObjectsOfTypeAll, UIFont___TypeInfo);
+  Active_object = (UIAtlas_o *)sub_21FFDA4(ObjectsOfTypeAll, UIFont___TypeInfo);
   if ( !Active_object )
-    goto LABEL_46;
-  v18 = Active_object->fields.m_CancellationTokenSource;
-  v19 = Active_object;
-  v20 = (_DWORD)v18 - 1;
-  if ( (int)v18 >= 1 )
+    goto LABEL_43;
+  v17 = Active_object->fields.m_CancellationTokenSource;
+  v18 = Active_object;
+  if ( (int)v17 >= 1 )
   {
-    v21 = 0;
-    while ( 1 )
+    v19 = 0;
+    while ( (unsigned int)v19 < LODWORD(v18->fields.m_CancellationTokenSource) )
     {
-      v22 = &v19->klass + v21;
-      v23 = (UIFont_o *)v22[4];
-      if ( !v23 )
-        goto LABEL_46;
-      atlas = UIFont__get_atlas((UIFont_o *)v22[4], v4);
-      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, atlas, v25);
+      v20 = (UIFont_o *)*((_QWORD *)&v18->fields.material + v19);
+      if ( !v20 )
+        goto LABEL_43;
+      atlas = UIFont__get_atlas(*((UIFont_o **)&v18->fields.material + v19), v4);
+      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, atlas, v22);
       if ( ((unsigned __int8)Active_object & 1) != 0 )
       {
-        v26 = UIFont__get_atlas(v23, v4);
-        UIFont__set_atlas(v23, 0, v27);
-        UIFont__set_atlas(v23, v26, v28);
+        v23 = UIFont__get_atlas(v20, v4);
+        UIFont__set_atlas(v20, 0, v24);
+        UIFont__set_atlas(v20, v23, v25);
       }
-      if ( v20 == v21 )
-        break;
-      if ( (unsigned int)++v21 >= LODWORD(v19->fields.m_CancellationTokenSource) )
-        goto LABEL_44;
+      if ( (_DWORD)v17 == (_DWORD)++v19 )
+        goto LABEL_28;
     }
+    goto LABEL_44;
   }
-  if ( !NGUITools_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  Active_object = (UIAtlas_o *)NGUITools__FindActive_object_((const MethodInfo_32DB168 *)Method_NGUITools_FindActive_UILabel___);
+LABEL_28:
+  if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v4);
+  Active_object = (UIAtlas_o *)NGUITools__FindActive_object_((const MethodInfo_38BD5C4 *)Method_NGUITools_FindActive_UILabel___);
   if ( !Active_object )
-    goto LABEL_46;
-  v29 = Active_object->fields.m_CancellationTokenSource;
-  v30 = Active_object;
-  v31 = (_DWORD)v29 - 1;
-  if ( (int)v29 >= 1 )
+LABEL_43:
+    sub_21FFECC(Active_object, v4);
+  v26 = Active_object->fields.m_CancellationTokenSource;
+  v27 = Active_object;
+  if ( (int)v26 >= 1 )
   {
-    v32 = 0;
-    while ( 1 )
+    v28 = 0;
+    while ( (unsigned int)v28 < LODWORD(v27->fields.m_CancellationTokenSource) )
     {
-      v33 = (UILabel_o *)*((_QWORD *)&v30->fields.material + v32);
-      if ( !v33 )
-        goto LABEL_46;
-      mFont = (UnityEngine_Object_o *)v33->fields.mFont;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      v29 = (UILabel_o *)*((_QWORD *)&v27->fields.material + v28);
+      if ( !v29 )
+        goto LABEL_43;
+      mFont = (UnityEngine_Object_o *)v29->fields.mFont;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
       Active_object = (UIAtlas_o *)UnityEngine_Object__op_Inequality(mFont, 0, 0);
       if ( ((unsigned __int8)Active_object & 1) != 0 )
       {
-        Active_object = (UIAtlas_o *)v33->fields.mFont;
+        Active_object = (UIAtlas_o *)v29->fields.mFont;
         if ( !Active_object )
-          goto LABEL_46;
-        v35 = UIFont__get_atlas((UIFont_o *)Active_object, v4);
-        Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v35, v36);
+          goto LABEL_43;
+        v31 = UIFont__get_atlas((UIFont_o *)Active_object, v4);
+        Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v31, v32);
         if ( ((unsigned __int8)Active_object & 1) != 0 )
         {
-          v38 = v33->fields.mFont;
-          UILabel__set_bitmapFont(v33, 0, v37);
-          UILabel__set_bitmapFont(v33, v38, v39);
+          v34 = v29->fields.mFont;
+          UILabel__set_bitmapFont(v29, 0, v33);
+          UILabel__set_bitmapFont(v29, v34, v35);
         }
       }
-      if ( v31 == v32 )
+      if ( (_DWORD)v26 == (_DWORD)++v28 )
         return;
-      if ( (unsigned int)++v32 >= LODWORD(v30->fields.m_CancellationTokenSource) )
-        goto LABEL_44;
     }
+    goto LABEL_44;
   }
 }
 
 
 void UIAtlas__MarkSpriteListAsChanged(UIAtlas_o *this, const MethodInfo *method)
 {
-  void *mSpriteIndices; // x0
-  int v4; // w8
-  int v5; // w22
+  System_Collections_Generic_Dictionary_object__int__o *mSpriteIndices; // x0
+  struct System_Collections_Generic_List_UISpriteData__o *mSprites; // x8
+  int size; // w22
   int32_t v6; // w20
   struct System_Collections_Generic_Dictionary_string__int__o *v7; // x21
 
-  if ( (byte_4E7C006 & 1) == 0 )
+  if ( (byte_593CF4F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    byte_4E7C006 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    byte_593CF4F = 1;
   }
-  mSpriteIndices = this->fields.mSpriteIndices;
+  mSpriteIndices = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.mSpriteIndices;
   if ( !mSpriteIndices )
-    goto LABEL_11;
+    goto LABEL_12;
   System_Collections_Generic_Dictionary_object__int___Clear(
-    (System_Collections_Generic_Dictionary_object__int__o *)mSpriteIndices,
-    (const MethodInfo_35F896C *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
-  mSpriteIndices = this->fields.mSprites;
-  if ( !mSpriteIndices )
-    goto LABEL_11;
-  v4 = *((_DWORD *)mSpriteIndices + 6);
-  v5 = v4 - 1;
-  if ( v4 >= 1 )
+    mSpriteIndices,
+    (const MethodInfo_3FC0A7C *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+  mSprites = this->fields.mSprites;
+  if ( !mSprites )
+    goto LABEL_12;
+  size = mSprites->fields._size;
+  if ( size >= 1 )
   {
     v6 = 0;
-    do
+    while ( 1 )
     {
+      mSpriteIndices = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.mSprites;
+      if ( !mSpriteIndices )
+        break;
       v7 = this->fields.mSpriteIndices;
-      mSpriteIndices = System_Collections_Generic_List_object___get_Item(
-                         (System_Collections_Generic_List_object__o *)mSpriteIndices,
-                         v6,
-                         (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+      mSpriteIndices = (System_Collections_Generic_Dictionary_object__int__o *)System_Collections_Generic_List_object___get_Item(
+                                                                                 (System_Collections_Generic_List_object__o *)mSpriteIndices,
+                                                                                 v6,
+                                                                                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
       if ( !mSpriteIndices || !v7 )
         break;
       System_Collections_Generic_Dictionary_object__int___set_Item(
         (System_Collections_Generic_Dictionary_object__int__o *)v7,
-        *((Il2CppObject **)mSpriteIndices + 2),
-        v6,
-        (const MethodInfo_35F87D0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-      if ( v5 == v6 )
+        &mSpriteIndices->fields._buckets->obj,
+        v6++,
+        (const MethodInfo_3FC08E0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+      if ( size == v6 )
         return;
-      mSpriteIndices = this->fields.mSprites;
-      ++v6;
     }
-    while ( mSpriteIndices );
-LABEL_11:
-    sub_1D0F30C(mSpriteIndices, method);
+LABEL_12:
+    sub_21FFECC(mSpriteIndices, method);
   }
 }
 
 
 bool UIAtlas__References(UIAtlas_o *this, UIAtlas_o *atlas, const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Object_o *mReplacement; // x22
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v8; // x0
 
   while ( 1 )
   {
-    if ( (byte_4E7C00A & 1) == 0 )
+    if ( (byte_593CF53 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C00A = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF53 = 1;
     }
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, atlas);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)atlas, 0, 0) )
       return 0;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)atlas, (UnityEngine_Object_o *)this, 0) )
       break;
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
-    if ( !v6 )
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+    v8 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
+    if ( !v8 )
       return 0;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v8, atlas);
   }
   return 1;
 }
@@ -973,119 +987,120 @@ void UIAtlas__SortAlphabetically(UIAtlas_o *this, const MethodInfo *method)
 {
   UIAtlas___c_c *v3; // x0
   System_Collections_Generic_List_object__o *mSprites; // x19
+  struct UIAtlas___c_StaticFields *static_fields; // x8
   System_Comparison_T__o *_9__29_0; // x20
-  Il2CppObject *v6; // x21
-  struct UIAtlas___c_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  Il2CppObject *v7; // x21
+  struct UIAtlas___c_StaticFields *v8; // x0
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E7C007 & 1) == 0 )
+  if ( (byte_593CF50 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Comparison_UISpriteData__TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__Sort__);
-    sub_1D0F0B4(&Method_UIAtlas___c__SortAlphabetically_b__29_0__);
-    sub_1D0F0B4(&UIAtlas___c_TypeInfo);
-    byte_4E7C007 = 1;
+    sub_21FFC50(&System_Comparison_UISpriteData__TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__Sort__);
+    sub_21FFC50(&Method_UIAtlas___c__SortAlphabetically_b__29_0__);
+    sub_21FFC50(&UIAtlas___c_TypeInfo);
+    byte_593CF50 = 1;
   }
   v3 = UIAtlas___c_TypeInfo;
   mSprites = (System_Collections_Generic_List_object__o *)this->fields.mSprites;
-  if ( !UIAtlas___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&UIAtlas___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UIAtlas___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UIAtlas___c_TypeInfo, method);
     v3 = UIAtlas___c_TypeInfo;
   }
-  _9__29_0 = (System_Comparison_T__o *)v3->static_fields->__9__29_0;
+  static_fields = v3->static_fields;
+  _9__29_0 = (System_Comparison_T__o *)static_fields->__9__29_0;
   if ( !_9__29_0 )
   {
-    if ( !v3->_2.cctor_finished )
+    if ( !*(&v3->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v3);
-      v3 = UIAtlas___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3, method);
+      static_fields = UIAtlas___c_TypeInfo->static_fields;
     }
-    v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__29_0 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_UISpriteData__TypeInfo);
-    System_Comparison_object____ctor(_9__29_0, v6, Method_UIAtlas___c__SortAlphabetically_b__29_0__, 0);
-    static_fields = UIAtlas___c_TypeInfo->static_fields;
-    static_fields->__9__29_0 = (struct System_Comparison_UISpriteData__o *)_9__29_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__29_0, (int32_t)_9__29_0, v8, v9, v10, v11, v12, v13);
+    v7 = (Il2CppObject *)static_fields->__9;
+    _9__29_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_UISpriteData__TypeInfo);
+    System_Comparison_object____ctor(_9__29_0, v7, Method_UIAtlas___c__SortAlphabetically_b__29_0__, 0);
+    v8 = UIAtlas___c_TypeInfo->static_fields;
+    v8->__9__29_0 = (struct System_Comparison_UISpriteData__o *)_9__29_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->__9__29_0, (int32_t)_9__29_0, v9, v10, v11, v12, v13, v14);
   }
   if ( !mSprites )
-    sub_1D0F30C(v3, method);
-  System_Collections_Generic_List_object___Sort_60153556(
+    sub_21FFECC(v3, method);
+  System_Collections_Generic_List_object___Sort_71636404(
     mSprites,
     _9__29_0,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_UISpriteData__Sort__);
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_UISpriteData__Sort__);
 }
 
 
 bool UIAtlas__Upgrade(UIAtlas_o *this, const MethodInfo *method)
 {
-  UIAtlas_o *v2; // x19
-  UnityEngine_Object_o *mReplacement; // x20
-  __int64 v4; // x1
+  UnityEngine_Object_o *mReplacement; // x27
+  void *Item; // x0
   struct System_Collections_Generic_List_UISpriteData__o *mSprites; // x8
   struct System_Collections_Generic_List_UIAtlas_Sprite__o *sprites; // x8
-  UnityEngine_Object_o *material; // x20
-  UnityEngine_Object_o *mainTexture; // x21
-  int32_t v10; // w20
-  int32_t v11; // w21
-  int32_t v12; // w22
-  double v13; // d15
-  int32_t m_CancellationTokenSource; // w2
-  float v15; // s8
-  float v16; // s12
+  UnityEngine_Object_o *material; // x23
+  __int64 v9; // x1
+  UnityEngine_Object_o *mainTexture; // x25
+  int32_t v11; // w25
+  double v12; // d15
+  int32_t v13; // w2
+  float v14; // s8
+  float v15; // s12
+  void *v16; // x28
   float v17; // s10
   float v18; // s13
   float v19; // s14
   float v20; // s11
-  UIAtlas_o *v21; // x25
-  __int64 v22; // x24
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  intptr_t m_CachedPtr; // x1
+  __int64 v21; // x27
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // x1
+  __int64 v29; // x1
   double v30; // d11
-  double v31; // d0
+  __int64 v31; // x1
   double v32; // d0
-  double v33; // d1
+  double v33; // d0
   double v34; // d1
-  int v35; // w8
-  double v36; // d11
-  double v37; // d0
-  double v38; // d0
-  double v39; // d1
-  double v40; // d1
-  int v41; // w8
-  double v42; // d11
-  double v43; // d0
-  double v44; // d0
-  double v45; // d1
-  double v46; // d1
-  int v47; // w8
-  double v48; // d11
+  double v35; // d1
+  int v36; // w8
+  int v37; // w9
+  double v38; // d11
+  __int64 v39; // x1
+  double v40; // d0
+  double v41; // d0
+  double v42; // d1
+  double v43; // d1
+  int v44; // w8
+  int v45; // w9
+  double v46; // d11
+  __int64 v47; // x1
+  double v48; // d0
   double v49; // d0
-  double v50; // d0
+  double v50; // d1
   double v51; // d1
-  double v52; // d1
-  int v53; // w8
-  float v54; // s11
-  float v55; // s15
-  double v56; // d11
+  int v52; // w8
+  int v53; // w9
+  double v54; // d11
+  __int64 v55; // x1
+  double v56; // d0
   double v57; // d0
-  double v58; // d0
+  double v58; // d1
   double v59; // d1
-  double v60; // d1
-  int v61; // w8
-  float v62; // s11
-  float v63; // s15
-  double v64; // d11
+  int v60; // w8
+  float v61; // s11
+  float v62; // s15
+  double v63; // d11
+  __int64 v64; // x1
   double v65; // d0
   double v66; // d0
   double v67; // d1
@@ -1094,389 +1109,367 @@ bool UIAtlas__Upgrade(UIAtlas_o *this, const MethodInfo *method)
   float v70; // s11
   float v71; // s15
   double v72; // d11
-  double v73; // d0
+  __int64 v73; // x1
   double v74; // d0
-  double v75; // d1
+  double v75; // d0
   double v76; // d1
-  int v77; // w8
-  float v78; // s11
-  float v79; // s15
-  double v80; // d11
-  double v81; // d0
-  double v82; // d0
-  double v83; // d1
-  double v84; // d1
-  int v85; // w8
-  double v86; // d11
-  double v87; // d0
-  double v88; // d0
-  double v89; // d1
-  double v90; // d1
-  int v91; // w8
-  float v92; // s12
-  double v93; // d11
-  double v94; // d0
-  float v95; // s12
-  double v96; // d0
-  double v97; // d1
-  double v98; // d1
-  int v99; // w8
-  float v100; // s11
-  double v101; // d10
-  double v102; // d0
-  double v103; // d0
-  double v104; // d1
-  double v105; // d1
-  int v106; // w8
-  float v107; // s10
-  double v108; // d8
-  int32_t v109; // w2
-  int32_t v110; // w3
-  System_String_o *v111; // x4
-  int32_t v112; // w5
-  int64_t v113; // x6
-  System_String_o *v114; // x7
-  double v115; // d0
-  double v116; // d0
-  double v117; // d1
-  double v118; // d1
-  int v119; // w8
-  intptr_t v120; // x8
-  _QWORD *v121; // x9
-  __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v123; // x8
-  int v124; // w8
-  float v125; // [xsp+Ch] [xbp-B4h]
-  float mPixelSize; // [xsp+10h] [xbp-B0h]
-  float v127; // [xsp+14h] [xbp-ACh]
+  double v77; // d1
+  int v78; // w8
+  float v79; // s11
+  float v80; // s15
+  double v81; // d11
+  __int64 v82; // x1
+  double v83; // d0
+  double v84; // d0
+  double v85; // d1
+  double v86; // d1
+  int v87; // w8
+  float v88; // s11
+  float v89; // s15
+  double v90; // d11
+  __int64 v91; // x1
+  double v92; // d0
+  double v93; // d0
+  double v94; // d1
+  double v95; // d1
+  int v96; // w8
+  int v97; // w9
+  double v98; // d11
+  __int64 v99; // x1
+  double v100; // d0
+  double v101; // d0
+  double v102; // d1
+  double v103; // d1
+  int v104; // w8
+  int v105; // w9
+  float v106; // s12
+  double v107; // d11
+  __int64 v108; // x1
+  double v109; // d0
+  float v110; // s12
+  double v111; // d0
+  double v112; // d1
+  double v113; // d1
+  int v114; // w8
+  int v115; // w9
+  float v116; // s11
+  double v117; // d10
+  __int64 v118; // x1
+  double v119; // d0
+  double v120; // d0
+  double v121; // d1
+  double v122; // d1
+  int v123; // w8
+  int v124; // w9
+  float v125; // s10
+  double v126; // d8
+  System_String_o *v127; // x2
+  System_String_o *v128; // x3
+  int32_t v129; // w4
+  int32_t v130; // w5
+  bool v131; // w6
+  bool v132; // w7
+  double v133; // d0
+  double v134; // d0
+  double v135; // d1
+  double v136; // d1
+  int v137; // w8
+  __int64 v138; // x8
+  __int64 v139; // x9
+  __int64 v140; // x10
+  __int64 v141; // x8
+  int v142; // w8
+  int32_t height; // [xsp+4h] [xbp-BCh]
+  int32_t width; // [xsp+8h] [xbp-B8h]
+  float v145; // [xsp+Ch] [xbp-B4h]
+  float v146; // [xsp+10h] [xbp-B0h]
+  float v147; // [xsp+14h] [xbp-ACh]
   double iptr; // [xsp+18h] [xbp-A8h] BYREF
-  UnityEngine_Rect_o v129; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v130; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v149; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   while ( 1 )
   {
-    v2 = this;
-    if ( (byte_4E7C00D & 1) == 0 )
+    if ( (byte_593CF56 & 1) == 0 )
     {
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__Add__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UIAtlas_Sprite__Clear__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Count__);
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      sub_1D0F0B4(&UISpriteData_TypeInfo);
-      byte_4E7C00D = 1;
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__Add__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas_Sprite__Clear__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Count__);
+      sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      sub_21FFC50(&UISpriteData_TypeInfo);
+      byte_593CF56 = 1;
     }
-    mReplacement = (UnityEngine_Object_o *)v2->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (UIAtlas_o *)UnityEngine_Object__op_Implicit(mReplacement, 0);
-    if ( ((unsigned __int8)this & 1) == 0 )
+    mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    Item = (void *)UnityEngine_Object__op_Implicit(mReplacement, 0);
+    if ( ((unsigned __int8)Item & 1) == 0 )
       break;
-    this = v2->fields.mReplacement;
+    this = this->fields.mReplacement;
     if ( !this )
-      goto LABEL_234;
+      goto LABEL_7;
   }
-  mSprites = v2->fields.mSprites;
+  mSprites = this->fields.mSprites;
   if ( !mSprites )
-    goto LABEL_234;
+    goto LABEL_7;
   if ( mSprites->fields._size )
     return 0;
-  sprites = v2->fields.sprites;
+  sprites = this->fields.sprites;
   if ( !sprites )
-    goto LABEL_234;
+    goto LABEL_7;
   if ( sprites->fields._size < 1 )
     return 0;
-  material = (UnityEngine_Object_o *)v2->fields.material;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  material = (UnityEngine_Object_o *)this->fields.material;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Implicit(material, 0) )
     return 0;
-  this = (UIAtlas_o *)v2->fields.material;
-  if ( !this )
-    goto LABEL_234;
-  mainTexture = (UnityEngine_Object_o *)UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)this, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (UIAtlas_o *)UnityEngine_Object__op_Inequality(mainTexture, 0, 0);
-  if ( ((unsigned __int8)this & 1) != 0 )
+  Item = this->fields.material;
+  if ( !Item )
+    goto LABEL_7;
+  mainTexture = (UnityEngine_Object_o *)UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)Item, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+  Item = (void *)UnityEngine_Object__op_Inequality(mainTexture, 0, 0);
+  if ( ((unsigned __int8)Item & 1) != 0 )
   {
     if ( !mainTexture )
-      goto LABEL_234;
-    v10 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))mainTexture->klass[1]._1.image)(
-            mainTexture,
-            mainTexture->klass[1]._1.gc_desc);
+      goto LABEL_7;
+    width = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))mainTexture->klass[1]._1.image)(
+              mainTexture,
+              mainTexture->klass[1]._1.gc_desc);
   }
   else
   {
-    v10 = 512;
+    width = 512;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (UIAtlas_o *)UnityEngine_Object__op_Inequality(mainTexture, 0, 0);
-  if ( ((unsigned __int8)this & 1) != 0 )
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+  Item = (void *)UnityEngine_Object__op_Inequality(mainTexture, 0, 0);
+  if ( ((unsigned __int8)Item & 1) != 0 )
   {
     if ( !mainTexture )
-      goto LABEL_234;
-    v11 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))mainTexture->klass[1]._1.byval_arg.data)(
-            mainTexture,
-            *(_QWORD *)&mainTexture->klass[1]._1.byval_arg.bits);
+      goto LABEL_7;
+    height = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))mainTexture->klass[1]._1.byval_arg.data)(
+               mainTexture,
+               *(_QWORD *)&mainTexture->klass[1]._1.byval_arg.bits);
   }
   else
   {
-    v11 = 512;
+    height = 512;
   }
-  this = (UIAtlas_o *)v2->fields.sprites;
-  if ( !this )
-LABEL_234:
-    sub_1D0F30C(this, v4);
-  v12 = 0;
-  v13 = -0.5;
+  Item = this->fields.sprites;
+  if ( !Item )
+LABEL_7:
+    sub_21FFECC(Item, method);
+  v11 = 0;
+  v12 = -0.5;
   while ( 1 )
   {
-    m_CancellationTokenSource = (int32_t)this->fields.m_CancellationTokenSource;
-    if ( v12 >= m_CancellationTokenSource )
+    v13 = *((_DWORD *)Item + 6);
+    if ( v11 >= v13 )
       break;
-    this = (UIAtlas_o *)System_Collections_Generic_List_object___get_Item(
-                          (System_Collections_Generic_List_object__o *)this,
-                          v12,
-                          (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
-    if ( !this )
-      goto LABEL_234;
-    v16 = *(float *)&this->fields.m_CancellationTokenSource;
-    v15 = *((float *)&this->fields.m_CancellationTokenSource + 1);
-    v18 = *(float *)&this->fields.material;
-    v17 = *((float *)&this->fields.material + 1);
-    v19 = *(float *)&this->fields.mSprites;
-    v20 = *(&this->fields.mPixelSize + 1);
-    v21 = this;
-    mPixelSize = this->fields.mPixelSize;
-    v127 = *((float *)&this->fields.mSprites + 1);
-    if ( v2->fields.mCoordinates == 1 )
+    Item = System_Collections_Generic_List_object___get_Item(
+             (System_Collections_Generic_List_object__o *)Item,
+             v11,
+             Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
+    if ( !Item )
+      goto LABEL_7;
+    v15 = *((float *)Item + 6);
+    v14 = *((float *)Item + 7);
+    v16 = Item;
+    v18 = *((float *)Item + 8);
+    v17 = *((float *)Item + 9);
+    v19 = *((float *)Item + 10);
+    v20 = *((float *)Item + 13);
+    v146 = *((float *)Item + 12);
+    v147 = *((float *)Item + 11);
+    if ( this->fields.mCoordinates == 1 )
     {
-      v129.fields.m_XMin = *(float *)&this->fields.m_CancellationTokenSource;
-      v129.fields.m_YMin = *((float *)&this->fields.m_CancellationTokenSource + 1);
-      v129.fields.m_Width = *(float *)&this->fields.material;
-      v129.fields.m_Height = *((float *)&this->fields.material + 1);
-      NGUIMath__ConvertToPixels(v129, v10, v11, 1, 0);
-      v130.fields.m_Width = mPixelSize;
-      v130.fields.m_YMin = v127;
-      v130.fields.m_XMin = v19;
-      v130.fields.m_Height = v20;
-      NGUIMath__ConvertToPixels(v130, v10, v11, 1, 0);
+      NGUIMath__ConvertToPixels(*(UnityEngine_Rect_o *)((char *)Item + 24), width, height, 1, 0);
+      v149.fields.m_XMin = v19;
+      v149.fields.m_Height = v20;
+      v149.fields.m_Width = v146;
+      v149.fields.m_YMin = v147;
+      NGUIMath__ConvertToPixels(v149, width, height, 1, 0);
     }
-    v22 = sub_1D0F300(UISpriteData_TypeInfo);
-    UISpriteData___ctor((UISpriteData_o *)v22, 0);
-    if ( !v22 )
-      goto LABEL_234;
-    m_CachedPtr = v21->fields.m_CachedPtr;
-    *(_QWORD *)(v22 + 16) = m_CachedPtr;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v22 + 16), m_CachedPtr, v23, v24, v25, v26, v27, v28);
-    if ( !byte_4E71453 )
+    v21 = sub_21FFEBC(UISpriteData_TypeInfo);
+    UISpriteData___ctor((UISpriteData_o *)v21, 0);
+    if ( !v21 )
+      goto LABEL_7;
+    v28 = *((_QWORD *)v16 + 2);
+    *(_QWORD *)(v21 + 16) = v28;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 16), v28, v22, v23, v24, v25, v26, v27);
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    v125 = v20;
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v30 = v16;
-    v31 = modf(v16, &iptr);
-    if ( v16 >= 0.0 )
-    {
-      if ( v31 != 0.5 )
-      {
-        v32 = floor(v30 + 0.5);
-        goto LABEL_50;
-      }
-      v32 = iptr;
-      v33 = 1.0;
-    }
-    else
-    {
-      if ( v31 != v13 )
-      {
-        v32 = ceil(v30 + v13);
-        goto LABEL_50;
-      }
-      v32 = iptr;
-      v33 = -1.0;
-    }
-    v34 = v32 + v33;
-    if ( ((__int64)v32 & 1) != 0 )
-      v32 = v34;
-LABEL_50:
-    v35 = (int)v32;
-    if ( v32 == INFINITY )
-      v35 = 0x80000000;
-    *(_DWORD *)(v22 + 24) = v35;
-    if ( !byte_4E71453 )
-    {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
-    }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v36 = v15;
-    v37 = modf(v15, &iptr);
+    v145 = v20;
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v29);
+    v30 = v15;
+    v32 = modf(v15, &iptr);
     if ( v15 >= 0.0 )
     {
-      if ( v37 != 0.5 )
+      if ( v32 != 0.5 )
       {
-        v38 = floor(v36 + 0.5);
-        goto LABEL_66;
+        v33 = floor(v30 + 0.5);
+        goto LABEL_50;
       }
-      v38 = iptr;
-      v39 = 1.0;
+      v33 = iptr;
+      v34 = 1.0;
     }
     else
     {
-      if ( v37 != v13 )
+      if ( v32 != v12 )
       {
-        v38 = ceil(v36 + v13);
+        v33 = ceil(v30 + v12);
+        goto LABEL_50;
+      }
+      v33 = iptr;
+      v34 = -1.0;
+    }
+    v35 = v33 + v34;
+    if ( ((__int64)v33 & 1) != 0 )
+      v33 = v35;
+LABEL_50:
+    v36 = (int)v33;
+    v37 = (unsigned __int8)byte_593220B;
+    if ( v33 == INFINITY )
+      v36 = 0x80000000;
+    *(_DWORD *)(v21 + 24) = v36;
+    if ( !v37 )
+    {
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
+    }
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31);
+    v38 = v14;
+    v40 = modf(v14, &iptr);
+    if ( v14 >= 0.0 )
+    {
+      if ( v40 != 0.5 )
+      {
+        v41 = floor(v38 + 0.5);
         goto LABEL_66;
       }
-      v38 = iptr;
-      v39 = -1.0;
+      v41 = iptr;
+      v42 = 1.0;
     }
-    v40 = v38 + v39;
-    if ( ((__int64)v38 & 1) != 0 )
-      v38 = v40;
-LABEL_66:
-    v41 = (int)v38;
-    if ( v38 == INFINITY )
-      v41 = 0x80000000;
-    *(_DWORD *)(v22 + 28) = v41;
-    if ( !byte_4E71453 )
+    else
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      if ( v40 != v12 )
+      {
+        v41 = ceil(v38 + v12);
+        goto LABEL_66;
+      }
+      v41 = iptr;
+      v42 = -1.0;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v42 = v18;
-    v43 = modf(v18, &iptr);
+    v43 = v41 + v42;
+    if ( ((__int64)v41 & 1) != 0 )
+      v41 = v43;
+LABEL_66:
+    v44 = (int)v41;
+    v45 = (unsigned __int8)byte_593220B;
+    if ( v41 == INFINITY )
+      v44 = 0x80000000;
+    *(_DWORD *)(v21 + 28) = v44;
+    if ( !v45 )
+    {
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
+    }
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v39);
+    v46 = v18;
+    v48 = modf(v18, &iptr);
     if ( v18 >= 0.0 )
     {
-      if ( v43 != 0.5 )
+      if ( v48 != 0.5 )
       {
-        v44 = floor(v42 + 0.5);
+        v49 = floor(v46 + 0.5);
         goto LABEL_82;
       }
-      v44 = iptr;
-      v45 = 1.0;
+      v49 = iptr;
+      v50 = 1.0;
     }
     else
     {
-      if ( v43 != v13 )
+      if ( v48 != v12 )
       {
-        v44 = ceil(v42 + v13);
+        v49 = ceil(v46 + v12);
         goto LABEL_82;
       }
-      v44 = iptr;
-      v45 = -1.0;
+      v49 = iptr;
+      v50 = -1.0;
     }
-    v46 = v44 + v45;
-    if ( ((__int64)v44 & 1) != 0 )
-      v44 = v46;
+    v51 = v49 + v50;
+    if ( ((__int64)v49 & 1) != 0 )
+      v49 = v51;
 LABEL_82:
-    v47 = (int)v44;
-    if ( v44 == INFINITY )
-      v47 = 0x80000000;
-    *(_DWORD *)(v22 + 32) = v47;
-    if ( !byte_4E71453 )
+    v52 = (int)v49;
+    v53 = (unsigned __int8)byte_593220B;
+    if ( v49 == INFINITY )
+      v52 = 0x80000000;
+    *(_DWORD *)(v21 + 32) = v52;
+    if ( !v53 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v48 = v17;
-    v49 = modf(v17, &iptr);
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v47);
+    v54 = v17;
+    v56 = modf(v17, &iptr);
     if ( v17 >= 0.0 )
     {
-      if ( v49 != 0.5 )
+      if ( v56 != 0.5 )
       {
-        v50 = floor(v48 + 0.5);
+        v57 = floor(v54 + 0.5);
         goto LABEL_98;
       }
-      v50 = iptr;
-      v51 = 1.0;
+      v57 = iptr;
+      v58 = 1.0;
     }
     else
     {
-      if ( v49 != v13 )
+      if ( v56 != v12 )
       {
-        v50 = ceil(v48 + v13);
+        v57 = ceil(v54 + v12);
         goto LABEL_98;
       }
-      v50 = iptr;
-      v51 = -1.0;
+      v57 = iptr;
+      v58 = -1.0;
     }
-    v52 = v50 + v51;
-    if ( ((__int64)v50 & 1) != 0 )
-      v50 = v52;
+    v59 = v57 + v58;
+    if ( ((__int64)v57 & 1) != 0 )
+      v57 = v59;
 LABEL_98:
-    v53 = (int)v50;
-    if ( v50 == INFINITY )
-      v53 = 0x80000000;
-    *(_DWORD *)(v22 + 36) = v53;
-    v54 = *((float *)&v21->fields.mReplacement + 1);
-    if ( !byte_4E71453 )
+    v60 = (int)v57;
+    if ( v57 == INFINITY )
+      v60 = 0x80000000;
+    *(_DWORD *)(v21 + 36) = v60;
+    v61 = *((float *)v16 + 15);
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v55 = v18 * v54;
-    v56 = (float)(v18 * v54);
-    v57 = modf(v56, &iptr);
-    if ( v55 >= 0.0 )
-    {
-      if ( v57 != 0.5 )
-      {
-        v58 = floor(v56 + 0.5);
-        goto LABEL_114;
-      }
-      v58 = iptr;
-      v59 = 1.0;
-    }
-    else
-    {
-      if ( v57 != -0.5 )
-      {
-        v58 = ceil(v56 + -0.5);
-        goto LABEL_114;
-      }
-      v58 = iptr;
-      v59 = -1.0;
-    }
-    v60 = v58 + v59;
-    if ( ((__int64)v58 & 1) != 0 )
-      v58 = v60;
-LABEL_114:
-    v61 = (int)v58;
-    if ( v58 == INFINITY )
-      v61 = 0x80000000;
-    *(_DWORD *)(v22 + 56) = v61;
-    v62 = *(float *)&v21->fields.mCoordinates;
-    if ( !byte_4E71453 )
-    {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
-    }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v63 = v18 * v62;
-    v64 = (float)(v18 * v62);
-    v65 = modf(v64, &iptr);
-    if ( v63 >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v55);
+    v62 = v18 * v61;
+    v63 = (float)(v18 * v61);
+    v65 = modf(v63, &iptr);
+    if ( v62 >= 0.0 )
     {
       if ( v65 != 0.5 )
       {
-        v66 = floor(v64 + 0.5);
-        goto LABEL_130;
+        v66 = floor(v63 + 0.5);
+        goto LABEL_114;
       }
       v66 = iptr;
       v67 = 1.0;
@@ -1485,8 +1478,8 @@ LABEL_114:
     {
       if ( v65 != -0.5 )
       {
-        v66 = ceil(v64 + -0.5);
-        goto LABEL_130;
+        v66 = ceil(v63 + -0.5);
+        goto LABEL_114;
       }
       v66 = iptr;
       v67 = -1.0;
@@ -1494,281 +1487,324 @@ LABEL_114:
     v68 = v66 + v67;
     if ( ((__int64)v66 & 1) != 0 )
       v66 = v68;
-LABEL_130:
+LABEL_114:
     v69 = (int)v66;
     if ( v66 == INFINITY )
       v69 = 0x80000000;
-    *(_DWORD *)(v22 + 60) = v69;
-    v70 = *(float *)&v21->fields.sprites;
-    if ( !byte_4E71453 )
+    *(_DWORD *)(v21 + 56) = v69;
+    v70 = *((float *)v16 + 16);
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v71 = v17 * v70;
-    v72 = (float)(v17 * v70);
-    v73 = modf(v72, &iptr);
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v64);
+    v71 = v18 * v70;
+    v72 = (float)(v18 * v70);
+    v74 = modf(v72, &iptr);
     if ( v71 >= 0.0 )
     {
-      if ( v73 != 0.5 )
+      if ( v74 != 0.5 )
       {
-        v74 = floor(v72 + 0.5);
-        goto LABEL_146;
+        v75 = floor(v72 + 0.5);
+        goto LABEL_130;
       }
-      v74 = iptr;
-      v75 = 1.0;
+      v75 = iptr;
+      v76 = 1.0;
     }
     else
     {
-      if ( v73 != -0.5 )
+      if ( v74 != -0.5 )
       {
-        v74 = ceil(v72 + -0.5);
+        v75 = ceil(v72 + -0.5);
+        goto LABEL_130;
+      }
+      v75 = iptr;
+      v76 = -1.0;
+    }
+    v77 = v75 + v76;
+    if ( ((__int64)v75 & 1) != 0 )
+      v75 = v77;
+LABEL_130:
+    v78 = (int)v75;
+    if ( v75 == INFINITY )
+      v78 = 0x80000000;
+    *(_DWORD *)(v21 + 60) = v78;
+    v79 = *((float *)v16 + 18);
+    if ( !byte_593220B )
+    {
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
+    }
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v73);
+    v80 = v17 * v79;
+    v81 = (float)(v17 * v79);
+    v83 = modf(v81, &iptr);
+    if ( v80 >= 0.0 )
+    {
+      if ( v83 != 0.5 )
+      {
+        v84 = floor(v81 + 0.5);
         goto LABEL_146;
       }
-      v74 = iptr;
-      v75 = -1.0;
+      v84 = iptr;
+      v85 = 1.0;
     }
-    v76 = v74 + v75;
-    if ( ((__int64)v74 & 1) != 0 )
-      v74 = v76;
+    else
+    {
+      if ( v83 != -0.5 )
+      {
+        v84 = ceil(v81 + -0.5);
+        goto LABEL_146;
+      }
+      v84 = iptr;
+      v85 = -1.0;
+    }
+    v86 = v84 + v85;
+    if ( ((__int64)v84 & 1) != 0 )
+      v84 = v86;
 LABEL_146:
-    v77 = (int)v74;
-    if ( v74 == INFINITY )
-      v77 = 0x80000000;
-    *(_DWORD *)(v22 + 68) = v77;
-    v78 = *((float *)&v21->fields.mCoordinates + 1);
-    if ( !byte_4E71453 )
+    v87 = (int)v84;
+    if ( v84 == INFINITY )
+      v87 = 0x80000000;
+    *(_DWORD *)(v21 + 68) = v87;
+    v88 = *((float *)v16 + 17);
+    if ( !byte_593220B )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v79 = v17 * v78;
-    v80 = (float)(v17 * v78);
-    v81 = modf(v80, &iptr);
-    if ( v79 >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v82);
+    v89 = v17 * v88;
+    v90 = (float)(v17 * v88);
+    v92 = modf(v90, &iptr);
+    if ( v89 >= 0.0 )
     {
-      if ( v81 != 0.5 )
+      if ( v92 != 0.5 )
       {
-        v82 = floor(v80 + 0.5);
+        v93 = floor(v90 + 0.5);
         goto LABEL_162;
       }
-      v82 = iptr;
-      v83 = 1.0;
+      v93 = iptr;
+      v94 = 1.0;
     }
     else
     {
-      if ( v81 != -0.5 )
+      if ( v92 != -0.5 )
       {
-        v82 = ceil(v80 + -0.5);
+        v93 = ceil(v90 + -0.5);
         goto LABEL_162;
       }
-      v82 = iptr;
-      v83 = -1.0;
+      v93 = iptr;
+      v94 = -1.0;
     }
-    v84 = v82 + v83;
-    if ( ((__int64)v82 & 1) != 0 )
-      v82 = v84;
+    v95 = v93 + v94;
+    if ( ((__int64)v93 & 1) != 0 )
+      v93 = v95;
 LABEL_162:
-    v85 = (int)v82;
-    if ( v82 == INFINITY )
-      v85 = 0x80000000;
-    *(_DWORD *)(v22 + 64) = v85;
-    if ( !byte_4E71453 )
+    v96 = (int)v93;
+    v97 = (unsigned __int8)byte_593220B;
+    if ( v93 == INFINITY )
+      v96 = 0x80000000;
+    *(_DWORD *)(v21 + 64) = v96;
+    if ( !v97 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v86 = (float)(v19 - v16);
-    v87 = modf(v86, &iptr);
-    if ( (float)(v19 - v16) >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v91);
+    v98 = (float)(v19 - v15);
+    v100 = modf(v98, &iptr);
+    if ( (float)(v19 - v15) >= 0.0 )
     {
-      v13 = -0.5;
-      if ( v87 != 0.5 )
+      v12 = -0.5;
+      if ( v100 != 0.5 )
       {
-        v88 = floor(v86 + 0.5);
+        v101 = floor(v98 + 0.5);
         goto LABEL_178;
       }
-      v88 = iptr;
-      v89 = 1.0;
+      v101 = iptr;
+      v102 = 1.0;
     }
     else
     {
-      v13 = -0.5;
-      if ( v87 != -0.5 )
+      v12 = -0.5;
+      if ( v100 != -0.5 )
       {
-        v88 = ceil(v86 + -0.5);
+        v101 = ceil(v98 + -0.5);
         goto LABEL_178;
       }
-      v88 = iptr;
-      v89 = -1.0;
+      v101 = iptr;
+      v102 = -1.0;
     }
-    v90 = v88 + v89;
-    if ( ((__int64)v88 & 1) != 0 )
-      v88 = v90;
+    v103 = v101 + v102;
+    if ( ((__int64)v101 & 1) != 0 )
+      v101 = v103;
 LABEL_178:
-    v91 = (int)v88;
-    if ( v88 == INFINITY )
-      v91 = 0x80000000;
-    *(_DWORD *)(v22 + 40) = v91;
-    if ( !byte_4E71453 )
+    v104 = (int)v101;
+    v105 = (unsigned __int8)byte_593220B;
+    if ( v101 == INFINITY )
+      v104 = 0x80000000;
+    *(_DWORD *)(v21 + 40) = v104;
+    if ( !v105 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v92 = (float)(v16 + v18) - (float)(v19 + mPixelSize);
-    v93 = v92;
-    v94 = modf(v92, &iptr);
-    if ( v92 >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v99);
+    v106 = (float)(v15 + v18) - (float)(v19 + v146);
+    v107 = v106;
+    v109 = modf(v106, &iptr);
+    if ( v106 >= 0.0 )
     {
-      v95 = v127;
-      if ( v94 != 0.5 )
+      v110 = v147;
+      if ( v109 != 0.5 )
       {
-        v96 = floor(v93 + 0.5);
+        v111 = floor(v107 + 0.5);
         goto LABEL_194;
       }
-      v96 = iptr;
-      v97 = 1.0;
+      v111 = iptr;
+      v112 = 1.0;
     }
     else
     {
-      v95 = v127;
-      if ( v94 != v13 )
+      v110 = v147;
+      if ( v109 != v12 )
       {
-        v96 = ceil(v93 + v13);
+        v111 = ceil(v107 + v12);
         goto LABEL_194;
       }
-      v96 = iptr;
-      v97 = -1.0;
+      v111 = iptr;
+      v112 = -1.0;
     }
-    v98 = v96 + v97;
-    if ( ((__int64)v96 & 1) != 0 )
-      v96 = v98;
+    v113 = v111 + v112;
+    if ( ((__int64)v111 & 1) != 0 )
+      v111 = v113;
 LABEL_194:
-    v99 = (int)v96;
-    if ( v96 == INFINITY )
-      v99 = 0x80000000;
-    *(_DWORD *)(v22 + 44) = v99;
-    if ( !byte_4E71453 )
+    v114 = (int)v111;
+    v115 = (unsigned __int8)byte_593220B;
+    if ( v111 == INFINITY )
+      v114 = 0x80000000;
+    *(_DWORD *)(v21 + 44) = v114;
+    if ( !v115 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v100 = (float)(v15 + v17) - (float)(v95 + v125);
-    v101 = v100;
-    v102 = modf(v100, &iptr);
-    if ( v100 >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v108);
+    v116 = (float)(v14 + v17) - (float)(v110 + v145);
+    v117 = v116;
+    v119 = modf(v116, &iptr);
+    if ( v116 >= 0.0 )
     {
-      if ( v102 != 0.5 )
+      if ( v119 != 0.5 )
       {
-        v103 = floor(v101 + 0.5);
+        v120 = floor(v117 + 0.5);
         goto LABEL_210;
       }
-      v103 = iptr;
-      v104 = 1.0;
+      v120 = iptr;
+      v121 = 1.0;
     }
     else
     {
-      if ( v102 != v13 )
+      if ( v119 != v12 )
       {
-        v103 = ceil(v101 + v13);
+        v120 = ceil(v117 + v12);
         goto LABEL_210;
       }
-      v103 = iptr;
-      v104 = -1.0;
+      v120 = iptr;
+      v121 = -1.0;
     }
-    v105 = v103 + v104;
-    if ( ((__int64)v103 & 1) != 0 )
-      v103 = v105;
+    v122 = v120 + v121;
+    if ( ((__int64)v120 & 1) != 0 )
+      v120 = v122;
 LABEL_210:
-    v106 = (int)v103;
-    if ( v103 == INFINITY )
-      v106 = 0x80000000;
-    *(_DWORD *)(v22 + 52) = v106;
-    if ( !byte_4E71453 )
+    v123 = (int)v120;
+    v124 = (unsigned __int8)byte_593220B;
+    if ( v120 == INFINITY )
+      v123 = 0x80000000;
+    *(_DWORD *)(v21 + 52) = v123;
+    if ( !v124 )
     {
-      sub_1D0F0B4(&System_Math_TypeInfo);
-      byte_4E71453 = 1;
+      sub_21FFC50(&System_Math_TypeInfo);
+      byte_593220B = 1;
     }
-    if ( !System_Math_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v107 = v95 - v15;
-    v108 = (float)(v95 - v15);
-    v115 = modf(v108, &iptr);
-    if ( v107 >= 0.0 )
+    if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v118);
+    v125 = v110 - v14;
+    v126 = (float)(v110 - v14);
+    v133 = modf(v126, &iptr);
+    if ( v125 >= 0.0 )
     {
-      if ( v115 == 0.5 )
+      if ( v133 == 0.5 )
       {
-        v116 = iptr;
-        v117 = 1.0;
+        v134 = iptr;
+        v135 = 1.0;
 LABEL_221:
-        v118 = v116 + v117;
-        if ( ((__int64)v116 & 1) != 0 )
-          v116 = v118;
+        v136 = v134 + v135;
+        if ( ((__int64)v134 & 1) != 0 )
+          v134 = v136;
         goto LABEL_226;
       }
-      v116 = floor(v108 + 0.5);
+      v134 = floor(v126 + 0.5);
     }
     else
     {
-      if ( v115 == v13 )
+      if ( v133 == v12 )
       {
-        v116 = iptr;
-        v117 = -1.0;
+        v134 = iptr;
+        v135 = -1.0;
         goto LABEL_221;
       }
-      v116 = ceil(v108 + v13);
+      v134 = ceil(v126 + v12);
     }
 LABEL_226:
-    v119 = (int)v116;
-    if ( v116 == INFINITY )
-      v119 = 0x80000000;
-    *(_DWORD *)(v22 + 48) = v119;
-    this = (UIAtlas_o *)v2->fields.mSprites;
-    if ( this )
+    v137 = (int)v134;
+    if ( v134 == INFINITY )
+      v137 = 0x80000000;
+    *(_DWORD *)(v21 + 48) = v137;
+    Item = this->fields.mSprites;
+    if ( Item )
     {
-      v120 = this->fields.m_CachedPtr;
-      v121 = Method_System_Collections_Generic_List_UISpriteData__Add__;
-      ++HIDWORD(this->fields.m_CancellationTokenSource);
-      if ( v120 )
+      v138 = *((_QWORD *)Item + 2);
+      v139 = Method_System_Collections_Generic_List_UISpriteData__Add__;
+      ++*((_DWORD *)Item + 7);
+      if ( v138 )
       {
-        m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v120 + 24) )
+        v140 = *((int *)Item + 6);
+        if ( (unsigned int)v140 >= *(_DWORD *)(v138 + 24) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            (System_Collections_Generic_List_object__o *)this,
-            (Il2CppObject *)v22,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v121[4] + 192LL) + 112LL));
+            (System_Collections_Generic_List_object__o *)Item,
+            (Il2CppObject *)v21,
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(*(_QWORD *)(v139 + 32) + 192LL) + 112LL));
         }
         else
         {
-          v123 = v120 + 8 * m_CancellationTokenSource_low;
-          LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-          *(_QWORD *)(v123 + 32) = v22;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v123 + 32), v22, v109, v110, v111, v112, v113, v114);
+          v141 = v138 + 8 * v140;
+          *((_DWORD *)Item + 6) = v140 + 1;
+          *(_QWORD *)(v141 + 32) = v21;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v141 + 32), v21, v127, v128, v129, v130, v131, v132);
         }
-        this = (UIAtlas_o *)v2->fields.sprites;
-        ++v12;
-        if ( this )
+        Item = this->fields.sprites;
+        ++v11;
+        if ( Item )
           continue;
       }
     }
-    goto LABEL_234;
+    goto LABEL_7;
   }
-  v124 = HIDWORD(this->fields.m_CancellationTokenSource) + 1;
-  LODWORD(this->fields.m_CancellationTokenSource) = 0;
-  HIDWORD(this->fields.m_CancellationTokenSource) = v124;
-  if ( m_CancellationTokenSource >= 1 )
-    System_Array__Clear((System_Array_o *)this->fields.m_CachedPtr, 0, m_CancellationTokenSource, 0);
+  v142 = *((_DWORD *)Item + 7) + 1;
+  *((_DWORD *)Item + 6) = 0;
+  *((_DWORD *)Item + 7) = v142;
+  if ( v13 >= 1 )
+    System_Array__Clear(*((System_Array_o **)Item + 2), 0, v13, 0);
   return 1;
 }
 
@@ -1777,24 +1813,23 @@ float UIAtlas__get_pixelSize(UIAtlas_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mReplacement; // x21
   _BOOL8 v4; // x0
-  __int64 v5; // x1
 
   while ( 1 )
   {
-    if ( (byte_4E7C001 & 1) == 0 )
+    if ( (byte_593CF4A & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C001 = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF4A = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     v4 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( !v4 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v4, v5);
+      sub_21FFECC(v4, method);
   }
   return this->fields.mPixelSize;
 }
@@ -1804,24 +1839,23 @@ bool UIAtlas__get_premultipliedAlpha(UIAtlas_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mReplacement; // x22
   UnityEngine_Object_o *name; // x0
-  const MethodInfo *v5; // x1
   int32_t mPMA; // w8
+  __int64 v6; // x1
   UnityEngine_Object_o *spriteMaterial; // x22
-  UIAtlas_o *v8; // x23
+  __int64 v8; // x1
   UnityEngine_Object_o *shader; // x21
-  int32_t v10; // w8
 
   while ( 1 )
   {
-    if ( (byte_4E7BFFD & 1) == 0 )
+    if ( (byte_593CF46 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      sub_1D0F0B4(&StringLiteral_10883/*"Premultiplied"*/);
-      byte_4E7BFFD = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      sub_21FFC50(&StringLiteral_11170/*"Premultiplied"*/);
+      byte_593CF46 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     name = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( ((unsigned __int8)name & 1) == 0 )
       break;
@@ -1832,53 +1866,37 @@ bool UIAtlas__get_premultipliedAlpha(UIAtlas_o *this, const MethodInfo *method)
   mPMA = this->fields.mPMA;
   if ( mPMA == -1 )
   {
-    spriteMaterial = (UnityEngine_Object_o *)UIAtlas__get_spriteMaterial(this, v5);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    spriteMaterial = (UnityEngine_Object_o *)UIAtlas__get_spriteMaterial(this, method);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
     name = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(spriteMaterial, 0, 0);
     if ( ((unsigned __int8)name & 1) != 0 )
-      v8 = this;
-    else
-      v8 = 0;
-    if ( ((unsigned __int8)name & 1) == 0 )
     {
-      v10 = 0;
-      v8 = this;
-LABEL_25:
-      v8->fields.mPMA = v10;
-      mPMA = this->fields.mPMA;
-      return mPMA == 1;
-    }
-    if ( spriteMaterial )
-    {
+      if ( !spriteMaterial )
+        goto LABEL_7;
       shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)spriteMaterial, 0);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      name = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(shader, 0, 0);
-      if ( ((unsigned __int8)name & 1) != 0 )
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+      if ( UnityEngine_Object__op_Inequality(shader, 0, 0) )
       {
         name = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)spriteMaterial, 0);
-        if ( !name )
-          goto LABEL_7;
-        name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0);
-        if ( !name )
-          goto LABEL_7;
-        name = (UnityEngine_Object_o *)System_String__Contains(
-                                         (System_String_o *)name,
-                                         (System_String_o *)StringLiteral_10883/*"Premultiplied"*/,
-                                         0);
-        v10 = (unsigned __int8)name & 1;
-      }
-      else
-      {
-        v10 = 0;
-        v8 = this;
-      }
-      if ( v8 )
-        goto LABEL_25;
-    }
+        if ( name )
+        {
+          name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0);
+          if ( name )
+          {
+            mPMA = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_11170/*"Premultiplied"*/, 0);
+LABEL_20:
+            this->fields.mPMA = mPMA;
+            return mPMA == 1;
+          }
+        }
 LABEL_7:
-    sub_1D0F30C(name, v5);
+        sub_21FFECC(name, method);
+      }
+    }
+    mPMA = 0;
+    goto LABEL_20;
   }
   return mPMA == 1;
 }
@@ -1894,19 +1912,18 @@ System_Collections_Generic_List_UISpriteData__o *UIAtlas__get_spriteList(UIAtlas
 {
   UnityEngine_Object_o *mReplacement; // x22
   System_Collections_Generic_List_UISpriteData__o *result; // x0
-  const MethodInfo *v5; // x1
 
   while ( 1 )
   {
-    if ( (byte_4E7BFFE & 1) == 0 )
+    if ( (byte_593CF47 & 1) == 0 )
     {
-      sub_1D0F0B4(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7BFFE = 1;
+      sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF47 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     result = (System_Collections_Generic_List_UISpriteData__o *)UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( ((unsigned __int8)result & 1) == 0 )
       break;
@@ -1917,10 +1934,10 @@ System_Collections_Generic_List_UISpriteData__o *UIAtlas__get_spriteList(UIAtlas
   result = this->fields.mSprites;
   if ( !result )
 LABEL_7:
-    sub_1D0F30C(result, v5);
+    sub_21FFECC(result, method);
   if ( !result->fields._size )
   {
-    UIAtlas__Upgrade(this, v5);
+    UIAtlas__Upgrade(this, method);
     return this->fields.mSprites;
   }
   return result;
@@ -1931,24 +1948,23 @@ UnityEngine_Material_o *UIAtlas__get_spriteMaterial(UIAtlas_o *this, const Metho
 {
   UnityEngine_Object_o *mReplacement; // x21
   _BOOL8 v4; // x0
-  __int64 v5; // x1
 
   while ( 1 )
   {
-    if ( (byte_4E7BFFB & 1) == 0 )
+    if ( (byte_593CF44 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7BFFB = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF44 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     v4 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( !v4 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v4, v5);
+      sub_21FFECC(v4, method);
   }
   return this->fields.material;
 }
@@ -1958,19 +1974,18 @@ UnityEngine_Texture_o *UIAtlas__get_texture(UIAtlas_o *this, const MethodInfo *m
 {
   UnityEngine_Object_o *mReplacement; // x21
   UnityEngine_Material_o *v4; // x0
-  __int64 v5; // x1
   UnityEngine_Object_o *material; // x20
 
   while ( 1 )
   {
-    if ( (byte_4E7C000 & 1) == 0 )
+    if ( (byte_593CF49 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C000 = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF49 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     v4 = (UnityEngine_Material_o *)UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( ((unsigned __int8)v4 & 1) == 0 )
       break;
@@ -1979,14 +1994,14 @@ UnityEngine_Texture_o *UIAtlas__get_texture(UIAtlas_o *this, const MethodInfo *m
       goto LABEL_7;
   }
   material = (UnityEngine_Object_o *)this->fields.material;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Inequality(material, 0, 0) )
     return 0;
   v4 = this->fields.material;
   if ( !v4 )
 LABEL_7:
-    sub_1D0F30C(v4, v5);
+    sub_21FFECC(v4, method);
   return UnityEngine_Material__get_mainTexture(v4, 0);
 }
 
@@ -1995,106 +2010,120 @@ void UIAtlas__set_pixelSize(UIAtlas_o *this, float value, const MethodInfo *meth
 {
   UnityEngine_Object_o *mReplacement; // x21
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x1
-  float v8; // s0
+  float v7; // s0
 
   while ( 1 )
   {
-    if ( (byte_4E7C002 & 1) == 0 )
+    if ( (byte_593CF4B & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7C002 = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF4B = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
     v6 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( !v6 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, method);
   }
-  v8 = fminf(value, 4.0);
+  v7 = 4.0;
+  if ( value <= 4.0 )
+    v7 = value;
   if ( value < 0.25 )
-    v8 = 0.25;
-  if ( this->fields.mPixelSize != v8 )
+    v7 = 0.25;
+  if ( this->fields.mPixelSize != v7 )
   {
-    this->fields.mPixelSize = v8;
-    UIAtlas__MarkAsChanged(this, v7);
+    this->fields.mPixelSize = v7;
+    UIAtlas__MarkAsChanged(this, method);
   }
 }
 
 
 void UIAtlas__set_replacement(UIAtlas_o *this, UIAtlas_o *value, const MethodInfo *method)
 {
-  bool v5; // w0
+  UnityEngine_Object_o *v3; // x20
+  __int64 v5; // x1
+  bool v6; // w8
   struct UIAtlas_o **p_mReplacement; // x21
   UnityEngine_Object_o *mReplacement; // x22
-  _BOOL8 v8; // x0
   __int64 v9; // x1
-  UnityEngine_Object_o *v10; // x22
-  const MethodInfo *v11; // x2
-  UnityEngine_Object_o *v12; // x22
-  const MethodInfo *v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  const MethodInfo *v20; // x1
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
+  UnityEngine_Object_o *monitor; // x22
+  const MethodInfo *v13; // x2
+  UnityEngine_Object_o *v14; // x22
+  const MethodInfo *v15; // x1
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
+  __int64 v22; // x1
+  const MethodInfo *v23; // x1
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
 
-  if ( (byte_4E7C003 & 1) == 0 )
+  v3 = (UnityEngine_Object_o *)value;
+  if ( (byte_593CF4C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7C003 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF4C = 1;
   }
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)value, (UnityEngine_Object_o *)this, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value);
+  v6 = UnityEngine_Object__op_Equality(v3, (UnityEngine_Object_o *)this, 0);
   p_mReplacement = &this->fields.mReplacement;
   mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-  if ( v5 )
-    value = 0;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(mReplacement, (UnityEngine_Object_o *)value, 0) )
+  if ( v6 )
+    v3 = 0;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  if ( UnityEngine_Object__op_Inequality(mReplacement, v3, 0) )
   {
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)value, 0, 0);
-    if ( v8 )
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+    v10 = UnityEngine_Object__op_Inequality(v3, 0, 0);
+    if ( v10 )
     {
-      if ( !value )
-        sub_1D0F30C(v8, v9);
-      v10 = (UnityEngine_Object_o *)value->fields.mReplacement;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality(v10, (UnityEngine_Object_o *)this, 0) )
-        UIAtlas__set_replacement(value, 0, v11);
+      if ( !v3 )
+        sub_21FFECC(v10, v11);
+      monitor = (UnityEngine_Object_o *)v3[2].monitor;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+      if ( UnityEngine_Object__op_Equality(monitor, (UnityEngine_Object_o *)this, 0) )
+        UIAtlas__set_replacement((UIAtlas_o *)v3, 0, v13);
     }
-    v12 = (UnityEngine_Object_o *)*p_mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
-      UIAtlas__MarkAsChanged(this, v13);
-    *p_mReplacement = value;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mReplacement, (int32_t)value, v14, v15, v16, v17, v18, v19);
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)value, 0, 0) )
+    v14 = (UnityEngine_Object_o *)*p_mReplacement;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+    if ( UnityEngine_Object__op_Inequality(v14, 0, 0) )
+      UIAtlas__MarkAsChanged(this, v15);
+    *p_mReplacement = (struct UIAtlas_o *)v3;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mReplacement,
+      (int32_t)v3,
+      v16,
+      v17,
+      v18,
+      v19,
+      v20,
+      v21);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    if ( UnityEngine_Object__op_Inequality(v3, 0, 0) )
     {
       this->fields.material = 0;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.material, 0, v21, v22, v23, v24, v25, v26);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.material, 0, v24, v25, v26, v27, v28, v29);
     }
-    UIAtlas__MarkAsChanged(this, v20);
+    UIAtlas__MarkAsChanged(this, v23);
   }
 }
 
@@ -2106,33 +2135,32 @@ void UIAtlas__set_spriteList(
 {
   UnityEngine_Object_o *mReplacement; // x22
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
 
   while ( 1 )
   {
-    if ( (byte_4E7BFFF & 1) == 0 )
+    if ( (byte_593CF48 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7BFFF = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF48 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value);
     v6 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( !v6 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, value);
   }
   this->fields.mSprites = value;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSprites, (int32_t)value, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprites, (int32_t)value, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -2140,80 +2168,87 @@ void UIAtlas__set_spriteMaterial(UIAtlas_o *this, UnityEngine_Material_o *value,
 {
   UnityEngine_Object_o *mReplacement; // x22
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  UnityEngine_Object_o *material; // x23
-  const MethodInfo *v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  const MethodInfo *v22; // x1
+  UnityEngine_Object_o *material; // x22
+  const MethodInfo *v8; // x1
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  const MethodInfo *v21; // x1
 
   while ( 1 )
   {
-    if ( (byte_4E7BFFC & 1) == 0 )
+    if ( (byte_593CF45 & 1) == 0 )
     {
-      sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-      byte_4E7BFFC = 1;
+      sub_21FFC50(&UnityEngine_Object_TypeInfo);
+      byte_593CF45 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value);
     v6 = UnityEngine_Object__op_Inequality(mReplacement, 0, 0);
     if ( !v6 )
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, value);
   }
   material = (UnityEngine_Object_o *)this->fields.material;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value);
   if ( UnityEngine_Object__op_Equality(material, 0, 0) )
   {
     this->fields.mPMA = 0;
     this->fields.material = value;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.material, (int32_t)value, v10, v11, v12, v13, v14, v15);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.material, (int32_t)value, v9, v10, v11, v12, v13, v14);
   }
   else
   {
-    UIAtlas__MarkAsChanged(this, v9);
+    UIAtlas__MarkAsChanged(this, v8);
     this->fields.mPMA = -1;
     this->fields.material = value;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.material, (int32_t)value, v16, v17, v18, v19, v20, v21);
-    UIAtlas__MarkAsChanged(this, v22);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.material,
+      (int32_t)value,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19,
+      v20);
+    UIAtlas__MarkAsChanged(this, v21);
   }
 }
 
 
 void UIAtlas_Sprite___ctor(UIAtlas_Sprite_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_4E7C010 & 1) == 0 )
+  if ( (byte_593CF59 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_15264/*"Unity Bug"*/);
-    byte_4E7C010 = 1;
+    sub_21FFC50(&StringLiteral_15630/*"Unity Bug"*/);
+    byte_593CF59 = 1;
   }
-  v9 = StringLiteral_15264/*"Unity Bug"*/;
-  this->fields.name = (struct System_String_o *)StringLiteral_15264/*"Unity Bug"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
-  this->fields.outer = (struct UnityEngine_Rect_o)xmmword_D350F0;
-  this->fields.inner = (struct UnityEngine_Rect_o)xmmword_D350F0;
+  v9 = StringLiteral_15630/*"Unity Bug"*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_15630/*"Unity Bug"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  this->fields.outer = (struct UnityEngine_Rect_o)xmmword_E92B70;
+  this->fields.inner = (struct UnityEngine_Rect_o)xmmword_E92B70;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -2230,22 +2265,30 @@ bool UIAtlas_Sprite__get_hasPadding(UIAtlas_Sprite_o *this, const MethodInfo *me
 void UIAtlas___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7C011 & 1) == 0 )
+  if ( (byte_593CF5A & 1) == 0 )
   {
-    sub_1D0F0B4(&UIAtlas___c_TypeInfo);
-    byte_4E7C011 = 1;
+    sub_21FFC50(&UIAtlas___c_TypeInfo);
+    byte_593CF5A = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(UIAtlas___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(UIAtlas___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UIAtlas___c_TypeInfo->static_fields->__9 = (struct UIAtlas___c_o *)v1;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)UIAtlas___c_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)UIAtlas___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -2262,6 +2305,6 @@ int32_t UIAtlas___c___SortAlphabetically_b__29_0(
         const MethodInfo *method)
 {
   if ( !s1 || !s2 || (this = (UIAtlas___c_o *)s1->fields.name) == 0 )
-    sub_1D0F30C(this, s1);
-  return System_String__CompareTo_65597136((System_String_o *)this, s2->fields.name, 0);
+    sub_21FFECC(this, s1);
+  return System_String__CompareTo_75472312((System_String_o *)this, s2->fields.name, 0);
 }

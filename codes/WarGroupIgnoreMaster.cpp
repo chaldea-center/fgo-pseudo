@@ -1,14 +1,14 @@
 void WarGroupIgnoreMaster___ctor(WarGroupIgnoreMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7891A & 1) == 0 )
+  if ( (byte_5939A39 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string___ctor__);
-    byte_4E7891A = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string___ctor__);
+    byte_5939A39 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    533,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string___ctor__);
+    535,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string___ctor__);
 }
 
 
@@ -22,10 +22,10 @@ WarGroupIgnoreEntity_o *WarGroupIgnoreMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E7891B & 1) == 0 )
+  if ( (byte_5939A3A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__GetEntity__);
-    byte_4E7891B = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__GetEntity__);
+    byte_5939A3A = 1;
   }
   PK = (Il2CppObject *)WarGroupIgnoreEntity__CreatePK(
                          warGroupId,
@@ -35,7 +35,7 @@ WarGroupIgnoreEntity_o *WarGroupIgnoreMaster__GetEntity(
   return (WarGroupIgnoreEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_353AADC *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__GetEntity__);
+                                     (const MethodInfo_3EE2044 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__GetEntity__);
 }
 
 
@@ -51,21 +51,21 @@ bool WarGroupIgnoreMaster__IsIgnoreQuest(
   const MethodInfo *v10; // x3
   System_String_o *v11; // x20
 
-  if ( (byte_4E78919 & 1) == 0 )
+  if ( (byte_5939A38 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__);
-    byte_4E78919 = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__);
+    byte_5939A38 = 1;
   }
   PK = WarGroupIgnoreEntity__CreatePK(warGroupId, questId, 0, *(const MethodInfo **)&questPhase);
   v11 = WarGroupIgnoreEntity__CreatePK(warGroupId, questId, questPhase, v10);
-  return DataMasterBase_object__object__object___isEntityExistsFromId_55812708(
+  return DataMasterBase_object__object__object___isEntityExistsFromId_65935568(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            PK,
-           (const MethodInfo_353A264 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__)
-      || DataMasterBase_object__object__object___isEntityExistsFromId_55812708(
+           (const MethodInfo_3EE18D0 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__)
+      || DataMasterBase_object__object__object___isEntityExistsFromId_65935568(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            v11,
-           (const MethodInfo_353A264 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__);
+           (const MethodInfo_3EE18D0 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__isEntityExistsFromId__);
 }
 
 
@@ -80,15 +80,15 @@ bool WarGroupIgnoreMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E7891C & 1) == 0 )
+  if ( (byte_5939A3B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__TryGetEntity__);
-    byte_4E7891C = 1;
+    sub_21FFC50(&Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__TryGetEntity__);
+    byte_5939A3B = 1;
   }
   PK = (Il2CppObject *)WarGroupIgnoreEntity__CreatePK(warGroupId, questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_WarGroupIgnoreMaster__WarGroupIgnoreEntity__string__TryGetEntity__);
 }

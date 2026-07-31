@@ -1,7 +1,7 @@
 void GrandServantIconComponentNameEffect___ctor(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
-  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_D36680;
-  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_D367E0;
+  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_E93190;
+  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_E93460;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -12,14 +12,19 @@ float GrandServantIconComponentNameEffect__EaseInExpo(
         const MethodInfo *method)
 {
   float v3; // s1
+  float v4; // s0
 
-  if ( x < 0.0 )
-    return 0.0;
   v3 = 1.0;
-  if ( x <= 1.0 && (v3 = x, x == 0.0) )
+  if ( x <= 1.0 )
+    v3 = x;
+  if ( x >= 0.0 )
+    v4 = v3;
+  else
+    v4 = 0.0;
+  if ( v4 == 0.0 )
     return 0.0;
   else
-    return exp2f((float)(v3 * 10.0) + -10.0);
+    return exp2f((float)(v4 * 10.0) + -10.0);
 }
 
 
@@ -28,15 +33,20 @@ float GrandServantIconComponentNameEffect__EaseOutCirc(
         float x,
         const MethodInfo *method)
 {
-  float v3; // s3
-  float v4; // s0
+  float v3; // s2
+  float v4; // s2
+  float v5; // s0
 
-  v3 = fminf(x, 1.0) + -1.0;
-  if ( x < 0.0 )
-    v4 = -1.0;
+  if ( x <= 1.0 )
+    v3 = x;
   else
-    v4 = v3;
-  return sqrtf(1.0 - (float)(v4 * v4));
+    v3 = 1.0;
+  v4 = v3 + -1.0;
+  if ( x >= 0.0 )
+    v5 = v4;
+  else
+    v5 = -1.0;
+  return sqrtf(1.0 - (float)(v5 * v5));
 }
 
 
@@ -55,75 +65,71 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
   __int64 v4; // x0
   __int64 v5; // x1
   float deltaTime; // s0
-  float v7; // s2
-  UIWidget_o *texture; // x19
-  float v9; // s4
+  float v7; // s1
+  UIWidget_o *texture; // x20
+  float v9; // s2
   float v10; // s2
-  float v11; // s0
-  float v12; // s1
-  float a; // s1
-  float v14; // s3
-  unsigned __int64 v15; // d0 OVERLAPPED
-  float v16; // s2
-  float v17; // s4
-  float v18; // s2
-  bool v19; // nf
-  float v20; // s2
-  float v21; // s3
-  int v22; // s1
+  float v11; // s2
+  float v12; // s0
+  float v13; // s1
+  float v14; // s1
+  float v15; // s3
+  float v16; // s3
+  float v17; // s1
+  struct UnityEngine_Color_o fromColor; // q2
+  float32x4_t v19; // q3
+  UnityEngine_Color_o v20; // q0 OVERLAPPED
+  float g; // s1
+  __int64 v22; // kr00_8
 
   t = this->fields.t;
   deltaTime = UnityEngine_Time__get_deltaTime(0);
-  v7 = -deltaTime;
+  v7 = 2.0;
   texture = (UIWidget_o *)this->fields.texture;
-  v9 = vabds_f32(2.0, t);
   if ( (float)(2.0 - t) >= 0.0 )
-    v7 = deltaTime;
-  v10 = t + v7;
-  if ( v9 <= deltaTime )
-    v10 = 2.0;
-  this->fields.t = v10;
+    v9 = deltaTime;
+  else
+    v9 = -deltaTime;
+  v10 = t + v9;
+  if ( vabds_f32(2.0, t) > deltaTime )
+    v7 = v10;
+  this->fields.t = v7;
   if ( !texture )
-    sub_1D0F30C(v4, v5);
-  if ( v10 >= 1.0 )
+    sub_21FFECC(v4, v5);
+  if ( v7 >= 1.0 )
   {
-    v18 = 1.0 - (float)(v10 + -1.0);
-    v19 = v18 < 0.0;
-    v20 = fminf(v18, 1.0) + -1.0;
-    a = this->fields.fromColor.fields.a;
-    if ( v19 )
-      v20 = -1.0;
-    v14 = fminf(sqrtf(1.0 - (float)(v20 * v20)), 1.0);
-    v15 = vadd_f32(
-            *(float32x2_t *)&this->fields.fromColor.fields.r,
-            vmul_n_f32(
-              vsub_f32(*(float32x2_t *)&this->fields.toColor.fields.r, *(float32x2_t *)&this->fields.fromColor.fields.r),
-              v14)).n64_u64[0];
-    v16 = this->fields.fromColor.fields.b
-        + (float)(v14 * (float)(this->fields.toColor.fields.b - this->fields.fromColor.fields.b));
-    v17 = this->fields.toColor.fields.a - a;
+    v14 = 1.0 - (float)(v7 + -1.0);
+    if ( v14 <= 1.0 )
+      v15 = v14;
+    else
+      v15 = 1.0;
+    v16 = v15 + -1.0;
+    if ( v14 >= 0.0 )
+      v17 = v16;
+    else
+      v17 = -1.0;
+    v12 = sqrtf(1.0 - (float)(v17 * v17));
   }
   else
   {
-    v11 = 0.0;
-    if ( v10 >= 0.0 )
-    {
-      v12 = 1.0;
-      if ( v10 > 1.0 || (v12 = v10, v10 != 0.0) )
-        v11 = exp2f((float)(v12 * 10.0) + -10.0);
-    }
-    a = this->fields.fromColor.fields.a;
-    v14 = fminf(v11, 1.0);
-    v15 = vadd_f32(
-            *(float32x2_t *)&this->fields.fromColor.fields.r,
-            vmul_n_f32(
-              vsub_f32(*(float32x2_t *)&this->fields.toColor.fields.r, *(float32x2_t *)&this->fields.fromColor.fields.r),
-              v14)).n64_u64[0];
-    v16 = this->fields.fromColor.fields.b
-        + (float)(v14 * (float)(this->fields.toColor.fields.b - this->fields.fromColor.fields.b));
-    v17 = this->fields.toColor.fields.a - a;
+    if ( v7 <= 1.0 )
+      v11 = v7;
+    else
+      v11 = 1.0;
+    v12 = 0.0;
+    if ( v7 >= 0.0 )
+      v13 = v11;
+    else
+      v13 = 0.0;
+    if ( v13 != 0.0 )
+      v12 = exp2f((float)(v13 * 10.0) + -10.0);
   }
-  v21 = a + (float)(v14 * v17);
-  v22 = HIDWORD(v15);
-  UIWidget__set_color(texture, *(UnityEngine_Color_o *)&v15, 0);
+  fromColor = this->fields.fromColor;
+  v19 = vsubq_f32((float32x4_t)this->fields.toColor, (float32x4_t)fromColor);
+  if ( v12 > 1.0 )
+    v12 = 1.0;
+  v20 = (UnityEngine_Color_o)vaddq_f32((float32x4_t)fromColor, vmulq_n_f32(v19, v12));
+  g = v20.fields.g;
+  v22 = *(_QWORD *)&v20.fields.b;
+  UIWidget__set_color(texture, v20, 0);
 }

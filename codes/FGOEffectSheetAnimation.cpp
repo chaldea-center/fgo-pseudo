@@ -9,24 +9,24 @@ void FGOEffectSheetAnimation___ctor(FGOEffectSheetAnimation_o *this, const Metho
 void FGOEffectSheetAnimation__OnEnable(FGOEffectSheetAnimation_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E76426 & 1) == 0 )
+  if ( (byte_59373CD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4E76426 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_59373CD = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.compRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.compRenderer,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.compRenderer,
     (int32_t)Component_object,
     v4,
     v5,
@@ -44,59 +44,61 @@ bool FGOEffectSheetAnimation__TryGetMainTexTiling(
         const MethodInfo *method)
 {
   float time; // s0
-  int32_t uvAnimationTileX; // w8
-  int32_t uvAnimationTileY; // w9
-  float v10; // s0
-  float v11; // s4
-  float v12; // s1
-  int v13; // w8
-  int v14; // w9
-  int32_t v15; // w10
-  int v16; // w8
-  float x; // s0
-  float y; // s1
+  int32x2_t v8; // d2
   bool result; // w0
+  float v10; // s0
+  float32x2_t v16; // d3
+  signed __int32 v17; // s2
+  float32x2_t v18; // d1
+  int v19; // w8
+  int v20; // w8
+  int32_t uvAnimationTileX; // w9
+  float v22; // s2
+  float y; // s0
+  int v24; // w8
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
 
   if ( this->fields.uvAnimationTileX < 1 || this->fields.uvAnimationTileY <= 0 )
   {
-    if ( !byte_4E76475 )
+    if ( !byte_59373DF )
     {
-      sub_1D0F0B4(&UnityEngine_Vector2_TypeInfo);
-      byte_4E76475 = 1;
+      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      byte_59373DF = 1;
     }
+    v24 = (unsigned __int8)byte_5931820;
     *scale = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
-    if ( !byte_4E70B79 )
+    if ( !v24 )
     {
-      sub_1D0F0B4(&UnityEngine_Vector2_TypeInfo);
-      byte_4E70B79 = 1;
+      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      byte_5931820 = 1;
     }
     result = 0;
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    x = static_fields->zeroVector.fields.x;
+    v18.n64_u32[0] = LODWORD(static_fields->zeroVector.fields.x);
     y = static_fields->zeroVector.fields.y;
   }
   else
   {
     time = UnityEngine_Time__get_time(0);
-    uvAnimationTileX = this->fields.uvAnimationTileX;
-    uvAnimationTileY = this->fields.uvAnimationTileY;
-    v10 = time * this->fields.framesPerSecond;
-    v11 = 1.0 / (float)uvAnimationTileX;
-    v12 = 1.0 / (float)uvAnimationTileY;
-    v13 = uvAnimationTileY * uvAnimationTileX;
-    v14 = (int)v10;
-    scale->fields.x = v11;
-    scale->fields.y = v12;
-    if ( v10 == INFINITY )
-      v14 = 0x80000000;
-    v15 = this->fields.uvAnimationTileX;
-    v16 = v14 % v13;
-    x = v11 * (float)(v16 % v15);
-    y = (float)(1.0 - v12) - (float)(v12 * (float)(v16 / v15));
+    v8.n64_u64[0] = *(unsigned __int64 *)&this->fields.uvAnimationTileX;
     result = 1;
+    v10 = time * this->fields.framesPerSecond;
+    __asm { FMOV            V1.2S, #1.0 }
+    v16.n64_u64[0] = vcvt_f32_s32(v8).n64_u64[0];
+    v17 = vmul_lane_s32(v8, v8, 1).n64_u32[0];
+    v18.n64_u64[0] = vdiv_f32(_D1, v16).n64_u64[0];
+    if ( v10 == INFINITY )
+      v19 = 0x80000000;
+    else
+      v19 = (int)v10;
+    *scale = (UnityEngine_Vector2_o)v18.n64_u64[0];
+    v20 = v19 % v17;
+    uvAnimationTileX = this->fields.uvAnimationTileX;
+    v22 = vmuls_lane_f32((float)(v20 / uvAnimationTileX), v18, 1);
+    v18.n64_f32[0] = (float)(v20 % uvAnimationTileX) * v18.n64_f32[0];
+    y = (float)(1.0 - v18.n64_f32[1]) - v22;
   }
-  offset->fields.x = x;
+  LODWORD(offset->fields.x) = v18.n64_u32[0];
   offset->fields.y = y;
   return result;
 }
@@ -104,63 +106,64 @@ bool FGOEffectSheetAnimation__TryGetMainTexTiling(
 
 void FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *compRenderer; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
   float time; // s0
   UnityEngine_Renderer_o *material; // x0
-  float v7; // s0
-  int v8; // w21
+  float v8; // s0
+  int v9; // w21
   int32_t uvAnimationTileX; // w20
   int32_t uvAnimationTileY; // w22
-  int v11; // w8
-  UnityEngine_Vector2_o v12; // 0:s0.4,4:s1.4
+  int v12; // w8
   UnityEngine_Vector2_o v13; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v14; // 0:s0.4,4:s1.4
 
-  if ( (byte_4E76427 & 1) == 0 )
+  if ( (byte_59373CE & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
-    byte_4E76427 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
+    byte_59373CE = 1;
   }
   compRenderer = (UnityEngine_Object_o *)this->fields.compRenderer;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(compRenderer, 0, 0) )
   {
     time = UnityEngine_Time__get_time(0);
     material = this->fields.compRenderer;
-    v7 = time * this->fields.framesPerSecond;
-    if ( v7 == INFINITY )
-      v8 = 0x80000000;
+    v8 = time * this->fields.framesPerSecond;
+    if ( v8 == INFINITY )
+      v9 = 0x80000000;
     else
-      v8 = (int)v7;
+      v9 = (int)v8;
     if ( !material )
       goto LABEL_15;
     uvAnimationTileX = this->fields.uvAnimationTileX;
     uvAnimationTileY = this->fields.uvAnimationTileY;
     material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0);
     if ( !material
-      || (v11 = v8 % (uvAnimationTileY * uvAnimationTileX),
-          v12.fields.x = (float)(1.0 / (float)uvAnimationTileX) * (float)(v11 % uvAnimationTileX),
-          v12.fields.y = (float)(1.0 - (float)(1.0 / (float)uvAnimationTileY))
-                       - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v11 / uvAnimationTileX)),
+      || (v12 = v9 % (uvAnimationTileY * uvAnimationTileX),
+          v13.fields.x = (float)(1.0 / (float)uvAnimationTileX) * (float)(v12 % uvAnimationTileX),
+          v13.fields.y = (float)(1.0 - (float)(1.0 / (float)uvAnimationTileY))
+                       - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v12 / uvAnimationTileX)),
           UnityEngine_Material__SetTextureOffset(
             (UnityEngine_Material_o *)material,
-            (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
-            v12,
+            (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+            v13,
             0),
           (material = this->fields.compRenderer) == 0)
       || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
     {
 LABEL_15:
-      sub_1D0F30C(material, v4);
+      sub_21FFECC(material, v5);
     }
-    v13.fields.x = 1.0 / (float)uvAnimationTileX;
-    v13.fields.y = 1.0 / (float)uvAnimationTileY;
+    v14.fields.x = 1.0 / (float)uvAnimationTileX;
+    v14.fields.y = 1.0 / (float)uvAnimationTileY;
     UnityEngine_Material__SetTextureScale(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
-      v13,
+      (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+      v14,
       0);
   }
 }

@@ -28,8 +28,7 @@ void ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
                                 ListViewItem->klass->vtable._9_get_Rarity.method);
       goto LABEL_13;
     }
-LABEL_15:
-    sub_1D0F30C(ListViewItem, v4);
+    goto LABEL_15;
   }
   if ( sortKind == 8 )
   {
@@ -41,7 +40,8 @@ LABEL_15:
                                  ListViewItem->klass->vtable._8_get_SortPriority.method);
       goto LABEL_13;
     }
-    goto LABEL_15;
+LABEL_15:
+    sub_21FFECC(ListViewItem, v4);
   }
   if ( sortKind != 13 )
     return;
@@ -58,13 +58,13 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
         ServantCollectionCharaGraphSortLogic_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  GrandQuestFolderBoardItem_o *p_listViewItem; // x0
+  bool v6; // w6
+  bool v7; // w7
+  MissionNaviTransitionBoardItem_o *p_listViewItem; // x0
   CharaGraphServantCollectionListViewItem_o *listViewItem; // x19
   __int64 naturalAligment; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
@@ -72,12 +72,12 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   ServantCollectionCharaGraphSortLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4E769F0 & 1) == 0 )
+  if ( (byte_593799D & 1) == 0 )
   {
-    sub_1D0F0B4(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    byte_4E769F0 = 1;
+    sub_21FFC50(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_593799D = 1;
   }
-  p_listViewItem = (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem;
+  p_listViewItem = (MissionNaviTransitionBoardItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
   if ( listViewItem )
     return listViewItem;
@@ -88,11 +88,11 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
     && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
   {
     item = this->fields.item;
-    p_listViewItem->klass = (GrandQuestFolderBoardItem_c *)listViewItem;
-    sub_1D0F058(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
+    p_listViewItem->klass = (MissionNaviTransitionBoardItem_c *)listViewItem;
+    sub_21FFBF4(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1D0F6A8(this->fields.item);
+  sub_220024C(this->fields.item, CharaGraphServantCollectionListViewItem_TypeInfo, v2, v3);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v14, v15);
   return result;
 }

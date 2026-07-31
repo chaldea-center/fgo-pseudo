@@ -12,72 +12,75 @@ void EventInfoCooltimeNoticeButton__Initialization(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v5; // x1
   UnityEngine_Object_o *bgSprite; // x20
-  UISprite_o *v6; // x20
   __int64 v7; // x1
-  struct UISprite_o *v8; // x0
+  UISprite_o *v8; // x20
+  __int64 v9; // x1
+  struct UISprite_o *v10; // x0
   UnityEngine_Object_o *buttonSprite; // x20
-  UISprite_o *v10; // x20
-  const MethodInfo *v11; // x1
+  __int64 v12; // x1
+  UISprite_o *v13; // x20
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4E78A71 & 1) == 0 )
+  if ( (byte_593991E & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1440/*"80341001"*/);
-    byte_4E78A71 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_1519/*"80341001"*/);
+    byte_593991E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPosition(gameObject, this->fields.POSITION, 0);
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   if ( UnityEngine_Object__op_Inequality(bgSprite, 0, 0) )
   {
-    v6 = this->fields.bgSprite;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v6, (System_String_o *)StringLiteral_1440/*"80341001"*/, 0);
     v8 = this->fields.bgSprite;
-    if ( !v8 )
-      sub_1D0F30C(0, v7);
-    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v8->klass->vtable._33_MakePixelPerfect.methodPtr)(
-      v8,
-      v8->klass->vtable._33_MakePixelPerfect.method);
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v7);
+    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_1519/*"80341001"*/, 0);
+    v10 = this->fields.bgSprite;
+    if ( !v10 )
+      sub_21FFECC(0, v9);
+    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v10->klass->vtable._33_MakePixelPerfect.methodPtr)(
+      v10,
+      v10->klass->vtable._33_MakePixelPerfect.method);
   }
   buttonSprite = (UnityEngine_Object_o *)this->fields.buttonSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
   if ( UnityEngine_Object__op_Inequality(buttonSprite, 0, 0) )
   {
-    v10 = this->fields.buttonSprite;
-    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetCommon(v10, 0);
+    v13 = this->fields.buttonSprite;
+    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v12);
+    AtlasManager__SetCommon(v13, 0);
   }
   this->fields.isButtonOn = EventRewardSaveData__GetCooltimeNotification(0);
-  EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v11);
+  EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v14);
 }
 
 
 void EventInfoCooltimeNoticeButton__OnClickButton(EventInfoCooltimeNoticeButton_o *this, const MethodInfo *method)
 {
   int32_t isButtonOn; // w20
-  _QWORD *v4; // x0
+  _BYTE *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4E78A73 & 1) == 0 )
+  if ( (byte_5939920 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_EventInfoCooltimeNoticeButton_OnClickButton__);
-    byte_4E78A73 = 1;
+    sub_21FFC50(&Method_EventInfoCooltimeNoticeButton_OnClickButton__);
+    byte_5939920 = 1;
   }
   isButtonOn = this->fields.isButtonOn;
-  this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventInfoCooltimeNoticeButton_OnClickButton__;
-  if ( (*((_BYTE *)Method_EventInfoCooltimeNoticeButton_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1D0F0CC(Method_EventInfoCooltimeNoticeButton_OnClickButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1D0F098(v4, v4[4]);
+  this->fields.isButtonOn = isButtonOn ^ 1;
+  if ( (v4[83] & 2) != 0 )
+    v4 = (_BYTE *)sub_21FFC68(v4);
+  v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, *((_QWORD *)v4 + 4));
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetCooltimeNotification(this->fields.isButtonOn, 0);
   EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v6);
@@ -99,7 +102,7 @@ void EventInfoCooltimeNoticeButton__SetDispActive(
         (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0)) == 0 )
   {
-    sub_1D0F30C(bgSprite, isActive);
+    sub_21FFECC(bgSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0);
 }
@@ -110,18 +113,17 @@ void EventInfoCooltimeNoticeButton__UpdateButtonDisp(EventInfoCooltimeNoticeButt
   UIButton_o *noticeButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4E78A72 & 1) == 0 )
+  if ( (byte_593991F & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_17768/*"btn_on"*/);
-    sub_1D0F0B4(&StringLiteral_17767/*"btn_off"*/);
-    byte_4E78A72 = 1;
+    sub_21FFC50(&StringLiteral_18237/*"btn_on"*/);
+    sub_21FFC50(&StringLiteral_18236/*"btn_off"*/);
+    byte_593991F = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
+  v4 = &StringLiteral_18236/*"btn_off"*/;
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17768/*"btn_on"*/;
-  else
-    v4 = &StringLiteral_17767/*"btn_off"*/;
+    v4 = &StringLiteral_18237/*"btn_on"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v4, 0);
 }

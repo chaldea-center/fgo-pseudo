@@ -7,28 +7,28 @@ void SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const MethodInfo *m
 
 void SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  System_Object_array *ComponentsInChildren_object__52717104; // x0
+  System_Object_array *ComponentsInChildren_object__58647176; // x0
   struct UnityEngine_ParticleSystem_array **p_particleArray; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7B2A6 & 1) == 0 )
+  if ( (byte_593C326 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    byte_4E7B2A6 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+    byte_593C326 = 1;
   }
-  ComponentsInChildren_object__52717104 = UnityEngine_Component__GetComponentsInChildren_object__52717104(
+  ComponentsInChildren_object__58647176 = UnityEngine_Component__GetComponentsInChildren_object__58647176(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_3246630 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__52717104;
+                                            (const MethodInfo_37EE288 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__58647176;
   p_particleArray = &this->fields.particleArray;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)p_particleArray,
-    (int32_t)ComponentsInChildren_object__52717104,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)p_particleArray,
+    (int32_t)ComponentsInChildren_object__58647176,
     v5,
     v6,
     v7,
@@ -59,7 +59,7 @@ void SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInf
       if ( (int)v4 >= max_length )
         break;
       if ( (unsigned int)v4 >= max_length )
-        sub_1D0F314(this);
+        sub_21FFED4(this);
       this = (SpawnerEventHandler_o *)particleArray->m_Items[v4];
       if ( this )
       {
@@ -69,7 +69,7 @@ void SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInf
         if ( particleArray )
           continue;
       }
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
   }
 }

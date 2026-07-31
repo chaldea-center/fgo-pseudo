@@ -1,0 +1,164 @@
+void UserShopDailyMaster___ctor(UserShopDailyMaster_o *this, const MethodInfo *method)
+{
+  if ( (byte_593979F & 1) == 0 )
+  {
+    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
+    byte_593979F = 1;
+  }
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+    104,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+UserShopDailyEntity_o *UserShopDailyMaster__GetEntity(
+        UserShopDailyMaster_o *this,
+        int64_t userId,
+        int32_t shopId,
+        const MethodInfo *method)
+{
+  Il2CppObject *PK; // x1
+
+  if ( (byte_59397A0 & 1) == 0 )
+  {
+    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
+    byte_59397A0 = 1;
+  }
+  PK = (Il2CppObject *)UserShopDailyEntity__CreatePK(userId, shopId, *(const MethodInfo **)&shopId);
+  return (UserShopDailyEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+                                    PK,
+                                    (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+UserShopDailyEntity_o *UserShopDailyMaster__GetEntityDefinitely(
+        UserShopDailyMaster_o *this,
+        int64_t userId,
+        int32_t shopId,
+        const MethodInfo *method)
+{
+  System_String_o *PK; // x19
+  System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *lookup; // x0
+  __int64 v9; // x1
+  System_Collections_Generic_IReadOnlyDictionary_string__TEntity__c *klass; // x8
+  System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *v11; // x23
+  __int64 v12; // x9
+  int32_t *p_offset; // x10
+  __int64 v14; // x0
+  System_Collections_Generic_IReadOnlyDictionary_string__TEntity__c *v15; // x8
+  System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *v16; // x20
+  __int64 v17; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__c **v18; // x10
+  __int64 v19; // x0
+  UserShopDailyEntity_o *v20; // x19
+  const MethodInfo *v21; // x1
+  UserShopDailyEntity_o *result; // x0
+
+  if ( (byte_593979E & 1) == 0 )
+  {
+    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo);
+    sub_21FFC50(&UserShopDailyEntity_TypeInfo);
+    byte_593979E = 1;
+  }
+  PK = UserShopDailyEntity__CreatePK(userId, shopId, *(const MethodInfo **)&shopId);
+  lookup = DataMasterBase_object__object__object___get_lookup(
+             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+             (const MethodInfo_3EDFD10 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+  if ( !lookup )
+    goto LABEL_21;
+  klass = lookup->klass;
+  v11 = lookup;
+  v12 = *(unsigned __int16 *)&lookup->klass->_2.rank;
+  if ( *(_WORD *)&lookup->klass->_2.rank )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__c **)p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo )
+    {
+      --v12;
+      p_offset += 4;
+      if ( !v12 )
+        goto LABEL_8;
+    }
+    v14 = (__int64)&klass->vtable[*p_offset];
+  }
+  else
+  {
+LABEL_8:
+    v14 = sub_2237E2C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 0);
+  }
+  if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v14)(
+          v11,
+          PK,
+          *(_QWORD *)(v14 + 8))
+      & 1) == 0 )
+  {
+    v20 = (UserShopDailyEntity_o *)sub_21FFEBC(UserShopDailyEntity_TypeInfo);
+    UserShopDailyEntity___ctor(v20, v21);
+    if ( v20 )
+    {
+      v20->fields.userId = userId;
+      result = v20;
+      v20->fields.shopId = shopId;
+      return result;
+    }
+LABEL_21:
+    sub_21FFECC(lookup, v9);
+  }
+  lookup = DataMasterBase_object__object__object___get_lookup(
+             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+             (const MethodInfo_3EDFD10 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+  if ( !lookup )
+    goto LABEL_21;
+  v15 = lookup->klass;
+  v16 = lookup;
+  v17 = *(unsigned __int16 *)&lookup->klass->_2.rank;
+  if ( *(_WORD *)&lookup->klass->_2.rank )
+  {
+    v18 = (System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__c **)&v15->_1.interfaceOffsets->offset;
+    while ( *(v18 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo )
+    {
+      --v17;
+      v18 += 2;
+      if ( !v17 )
+        goto LABEL_16;
+    }
+    v19 = (__int64)&v15->vtable[*(_DWORD *)v18 + 2];
+  }
+  else
+  {
+LABEL_16:
+    v19 = sub_2237E2C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 2);
+  }
+  return (UserShopDailyEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
+                                    v16,
+                                    PK,
+                                    *(_QWORD *)(v19 + 8));
+}
+
+
+bool UserShopDailyMaster__TryGetEntity(
+        UserShopDailyMaster_o *this,
+        UserShopDailyEntity_o **entity,
+        int64_t userId,
+        int32_t shopId,
+        const MethodInfo *method)
+{
+  Il2CppObject *PK; // x2
+
+  if ( (byte_59397A1 & 1) == 0 )
+  {
+    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
+    byte_59397A1 = 1;
+  }
+  PK = (Il2CppObject *)UserShopDailyEntity__CreatePK(userId, shopId, (const MethodInfo *)userId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
+           PK,
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
+}

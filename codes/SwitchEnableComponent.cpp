@@ -4,25 +4,26 @@ void SwitchEnableComponent___ctor(SwitchEnableComponent_o *this, const MethodInf
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetComponent; // x21
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_4E75932 & 1) == 0 )
+  if ( (byte_593657F & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E75932 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593657F = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value, method);
   if ( !UnityEngine_Object__op_Equality(targetComponent, 0, 0) )
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v7 )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     UnityEngine_Behaviour__set_enabled(v7, value, 0);
   }
 }
@@ -30,27 +31,28 @@ void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value,
 
 void SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *targetComponent; // x20
-  __int64 v4; // x1
-  UnityEngine_Behaviour_o *v5; // x0
-  char v6; // w8
-  const MethodInfo *v7; // x2
+  __int64 v5; // x1
+  UnityEngine_Behaviour_o *v6; // x0
+  bool v7; // w1
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4E75931 & 1) == 0 )
+  if ( (byte_593657E & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E75931 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593657E = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( !UnityEngine_Object__op_Equality(targetComponent, 0, 0) )
   {
-    v5 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
-    if ( !v5 )
-      sub_1D0F30C(0, v4);
-    v6 = ~UnityEngine_Behaviour__get_enabled(v5, 0);
-    SwitchEnableComponent__SetEnable(this, v6 & 1, v7);
+    v6 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
+    if ( !v6 )
+      sub_21FFECC(0, v5);
+    v7 = !UnityEngine_Behaviour__get_enabled(v6, 0);
+    SwitchEnableComponent__SetEnable(this, v7, v8);
   }
 }
 

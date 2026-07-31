@@ -22,10 +22,10 @@ LABEL_7:
     goto LABEL_8;
   }
   if ( !(_DWORD)max_length )
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   sync = (struct ServantVoiceSync_array *)sync->m_Items[0];
   if ( !sync )
-    sub_1D0F30C(this, syncSvtId);
+    sub_21FFECC(this, syncSvtId);
   LODWORD(sync) = sync->bounds;
   result = 1;
 LABEL_8:

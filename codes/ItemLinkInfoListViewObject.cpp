@@ -8,49 +8,57 @@ void ItemLinkInfoListViewObject__Awake(ItemLinkInfoListViewObject_o *this, const
 {
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E79E4E & 1) == 0 )
+  if ( (byte_593B826 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
-    byte_4E79E4E = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+    byte_593B826 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
   this->fields.itemDraw = (struct ItemLinkInfoListViewItemDraw_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
 void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
   ItemLinkInfoListViewItemDraw_o *v5; // x0
 
-  if ( (byte_4E79E52 & 1) == 0 )
+  if ( (byte_593B82A & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79E52 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593B82A = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1D0F30C(0, v4);
-    ItemLinkInfoListViewItemDraw__DeleteCallback(v5, v4);
+      sub_21FFECC(0, v4);
+    ItemLinkInfoListViewItemDraw__DeleteCallback(v5, 0);
   }
 }
 
@@ -58,32 +66,32 @@ void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *th
 float ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
   ItemLinkInfoListViewItemDraw_o *v5; // x0
   ItemLinkInfoListViewItemDraw_c *v7; // x0
 
-  if ( (byte_4E79E51 & 1) == 0 )
+  if ( (byte_593B829 & 1) == 0 )
   {
-    sub_1D0F0B4(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79E51 = 1;
+    sub_21FFC50(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593B829 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1D0F30C(0, v4);
-    return ItemLinkInfoListViewItemDraw__GetHeight(v5, v4);
+      sub_21FFECC(0, v4);
+    return ItemLinkInfoListViewItemDraw__GetHeight(v5, 0);
   }
   else
   {
     v7 = ItemLinkInfoListViewItemDraw_TypeInfo;
-    if ( !ItemLinkInfoListViewItemDraw_TypeInfo->_2.cctor_finished )
+    if ( !*(&ItemLinkInfoListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(ItemLinkInfoListViewItemDraw_TypeInfo);
+      j_il2cpp_runtime_class_init_0(ItemLinkInfoListViewItemDraw_TypeInfo, v4);
       v7 = ItemLinkInfoListViewItemDraw_TypeInfo;
     }
     return v7->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
@@ -96,19 +104,28 @@ void ItemLinkInfoListViewObject__SetItem(
         ItemLinkInfoListViewItem_o *item,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v9; // x1
 
   this->fields.linkItem = item;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.linkItem,
+    (int32_t)item,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   ItemLinkInfoListViewObject__SetupDisp(this, v9);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ItemLinkInfoListViewObject__SetVisible(
         ItemLinkInfoListViewObject_o *this,
         bool isVisible,
@@ -118,19 +135,19 @@ void ItemLinkInfoListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4E79E50 & 1) == 0 )
+  if ( (byte_593B828 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79E50 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593B828 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isVisible);
   if ( UnityEngine_Object__op_Inequality(dispObject, 0, 0) )
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0);
   }
 }
@@ -140,28 +157,29 @@ void ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject_o *this, c
 {
   const MethodInfo *v2; // x2
   struct ItemLinkInfoListViewItem_o *linkItem; // x20
+  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v6; // x1
-  struct ItemLinkInfoListViewItemDraw_o *v7; // x0
+  __int64 v7; // x1
+  struct ItemLinkInfoListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4E79E4F & 1) == 0 )
+  if ( (byte_593B827 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E79E4F = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593B827 = 1;
   }
   linkItem = this->fields.linkItem;
   ItemLinkInfoListViewObject__SetVisible(this, linkItem != 0, v2);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v7 = this->fields.itemDraw;
-    if ( !v7 )
-      sub_1D0F30C(0, v6);
-    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, const MethodInfo *))v7->klass->vtable._4_SetItem.methodPtr)(
-      v7,
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_21FFECC(0, v7);
+    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, const MethodInfo *))v8->klass->vtable._4_SetItem.methodPtr)(
+      v8,
       linkItem,
-      v7->klass->vtable._4_SetItem.method);
+      v8->klass->vtable._4_SetItem.method);
   }
 }

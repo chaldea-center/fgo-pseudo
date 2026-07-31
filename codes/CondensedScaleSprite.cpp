@@ -31,12 +31,12 @@ float CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_o *this, co
         maxLabelWidth = this->fields.maxLabelWidth,
         (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0) )
   {
-    sub_1D0F30C(UISprite, v4);
+    sub_21FFECC(UISprite, v4);
   }
-  if ( mWidth <= maxLabelWidth )
-    v8 = mWidth;
-  else
+  if ( mWidth >= maxLabelWidth )
     v8 = maxLabelWidth;
+  else
+    v8 = mWidth;
   return this->fields.displayAreaAdjustValue + (float)(UISprite->fields.mWidth + v8);
 }
 
@@ -59,7 +59,7 @@ float CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o *this, cons
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel || (mText = uiLabel->fields.mText) == 0 )
-      sub_1D0F30C(v3, v4);
+      sub_21FFECC(v3, v4);
     if ( mText->fields._stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -81,7 +81,7 @@ float CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSprite_o *this,
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
   if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0 )
-    sub_1D0F30C(UISprite, v5);
+    sub_21FFECC(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
@@ -110,19 +110,19 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_1D0F30C(uiLabel, method);
+    sub_21FFECC(uiLabel, method);
   }
 }
 
 
 void CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct UILabel_o *uiLabel; // x8
   struct System_String_o *mText; // x1
   CondensedScaleSprite_o *v10; // x19
@@ -136,12 +136,20 @@ void CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const
     || (mText = uiLabel->fields.mText,
         v10 = this,
         this->fields.previousText = mText,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3, v4, v5, v6, v7),
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.previousText,
+          (int32_t)mText,
+          v2,
+          v3,
+          v4,
+          v5,
+          v6,
+          v7),
         CondensedRatio = CondensedScaleSprite__GetCondensedRatio(v10, v11),
         (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v10, v13)) == 0)
     || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0 )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v14.fields.y = 1.0;
   v14.fields.z = 1.0;
@@ -159,7 +167,7 @@ void CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const MethodInfo
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
@@ -170,30 +178,30 @@ UISprite_o *CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, con
 {
   UnityEngine_Object_o *uiSprite; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E78D95 & 1) == 0 )
+  if ( (byte_5939DE4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78D95 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939DE4 = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(uiSprite, 0, 0) )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_object;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.uiSprite,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.uiSprite,
       (int32_t)Component_object,
       v5,
       v6,

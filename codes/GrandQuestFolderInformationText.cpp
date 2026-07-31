@@ -1,36 +1,38 @@
 void GrandQuestFolderInformationText___cctor(const MethodInfo *method)
 {
-  int32_t v1; // w2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
+  System_String_o *v1; // x2
+  System_String_o *v2; // x3
+  int32_t v3; // w4
   int32_t v4; // w5
-  int64_t v5; // x6
-  System_String_o *v6; // x7
-  GrandQuestFolderInformationText_c *v7; // x8
+  bool v5; // w6
+  bool v6; // w7
+  int32_t v7; // w1
+  GrandQuestFolderInformationText_c *v8; // x8
   struct GrandQuestFolderInformationText_StaticFields *static_fields; // x9
 
-  if ( (byte_4E72179 & 1) == 0 )
+  if ( (byte_5933177 & 1) == 0 )
   {
-    sub_1D0F0B4(&GrandQuestFolderInformationText_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20266/*"grand_btnmenu_notice_bg"*/);
-    byte_4E72179 = 1;
+    sub_21FFC50(&GrandQuestFolderInformationText_TypeInfo);
+    sub_21FFC50(&StringLiteral_20799/*"grand_btnmenu_notice_bg"*/);
+    byte_5933177 = 1;
   }
-  GrandQuestFolderInformationText_TypeInfo->static_fields->BoardInfoFrameName = (struct System_String_o *)StringLiteral_20266/*"grand_btnmenu_notice_bg"*/;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)GrandQuestFolderInformationText_TypeInfo->static_fields,
-    StringLiteral_20266/*"grand_btnmenu_notice_bg"*/,
+  v7 = StringLiteral_20799/*"grand_btnmenu_notice_bg"*/;
+  GrandQuestFolderInformationText_TypeInfo->static_fields->BoardInfoFrameName = (struct System_String_o *)StringLiteral_20799/*"grand_btnmenu_notice_bg"*/;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)GrandQuestFolderInformationText_TypeInfo->static_fields,
+    v7,
     v1,
     v2,
     v3,
     v4,
     v5,
     v6);
-  v7 = GrandQuestFolderInformationText_TypeInfo;
+  v8 = GrandQuestFolderInformationText_TypeInfo;
   static_fields = GrandQuestFolderInformationText_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->InfoFrameCenterOffset.fields.x = 0xC180000000000000LL;
   static_fields->InfoFrameCenterOffset.fields.z = 0.0;
-  v7->static_fields->NormalTopColor = (struct UnityEngine_Color_o)xmmword_D34F80;
-  v7->static_fields->NormalBottomColor = (struct UnityEngine_Color_o)xmmword_D352D0;
+  v8->static_fields->NormalTopColor = (struct UnityEngine_Color_o)xmmword_E92F50;
+  v8->static_fields->NormalBottomColor = (struct UnityEngine_Color_o)xmmword_E92EA0;
 }
 
 
@@ -42,27 +44,35 @@ void GrandQuestFolderInformationText___ctor(
         int64_t checkTime,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  bool v15; // w6
+  bool v16; // w7
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
+  bool v21; // w6
+  bool v22; // w7
   const MethodInfo *v23; // x2
   const MethodInfo *v24; // x2
   int32_t pivotType; // w1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.boardMessageEnt = boardMessageEntity;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)boardMessageEntity, v11, v12, v13, v14, v15, v16);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)boardMessageEntity,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   this->fields.dispText = text;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dispText, (int32_t)text, v17, v18, v19, v20, v21, v22);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dispText, (int32_t)text, v17, v18, v19, v20, v21, v22);
   this->fields.dispTime = time;
   GrandQuestFolderInformationText__SetParamFromScript(this, checkTime, v23);
   if ( boardMessageEntity )
@@ -79,52 +89,55 @@ void GrandQuestFolderInformationText__ChangeBehindText(
 {
   TerminalBoardOptionTextData_o *dispTextExtend; // x19
   __int64 v4; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
   int64_t dispTime; // x21
-  System_Object_array *v6; // x20
+  System_Object_array *v8; // x20
   System_String_o *RestTime2; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  Il2CppObject *v15; // x21
-  __int64 v16; // x0
+  __int64 v10; // x1
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  Il2CppObject *v17; // x21
+  __int64 v18; // x1
+  __int64 v19; // x0
 
-  if ( (byte_4E72175 & 1) == 0 )
+  if ( (byte_5933173 & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&object___TypeInfo);
-    byte_4E72175 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&object___TypeInfo);
+    byte_5933173 = 1;
   }
   dispTextExtend = this->fields.dispTextExtend;
-  v4 = sub_1D0F15C(object___TypeInfo, 1);
+  v4 = sub_21FFD10(object___TypeInfo, 1);
   dispTime = this->fields.dispTime;
-  v6 = (System_Object_array *)v4;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v8 = (System_Object_array *)v4;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
   RestTime2 = LocalizationManager__GetRestTime2(dispTime, -1, 0);
-  if ( !v6 )
+  if ( !v8 )
     goto LABEL_11;
-  v15 = (Il2CppObject *)RestTime2;
+  v17 = (Il2CppObject *)RestTime2;
   if ( RestTime2 )
   {
-    RestTime2 = (System_String_o *)sub_1D0F1F0(RestTime2, v6->obj.klass->_1.element_class);
+    RestTime2 = (System_String_o *)sub_21FFDA4(RestTime2, v8->obj.klass->_1.element_class);
     if ( !RestTime2 )
     {
-      v16 = sub_1D0F330();
-      sub_1D0F1DC(v16, 0);
+      v19 = sub_21FFEF0(0, v18);
+      sub_21FFD90(v19, 0);
     }
   }
-  if ( !LODWORD(v6->max_length) )
-    sub_1D0F314(RestTime2);
-  v6->m_Items[0] = v15;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v6->m_Items, (int32_t)v15, v9, v10, v11, v12, v13, v14);
+  if ( !LODWORD(v8->max_length) )
+    sub_21FFED4(RestTime2);
+  v8->m_Items[0] = v17;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
   if ( !dispTextExtend )
 LABEL_11:
-    sub_1D0F30C(RestTime2, v8);
-  TerminalBoardOptionTextData__SetParamsToBehindText(dispTextExtend, v6, 0);
+    sub_21FFECC(RestTime2, v10);
+  TerminalBoardOptionTextData__SetParamsToBehindText(dispTextExtend, v8, 0);
 }
 
 
@@ -137,6 +150,7 @@ bool GrandQuestFolderInformationText__ChangeText(
   GrandQuestBoardOptionTextComponent_o *BehindLabelText; // x0
   struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
   const MethodInfo *v8; // x2
+  bool v9; // w8
 
   GrandQuestFolderInformationText__ChangeBehindText(this, (const MethodInfo *)component);
   BehindLabelText = *component;
@@ -145,13 +159,15 @@ bool GrandQuestFolderInformationText__ChangeText(
                                                                     BehindLabelText,
                                                                     v5),
         (dispTextExtend = this->fields.dispTextExtend) == 0)
-    || (this->fields.isChangedText = System_String__op_Inequality(
-                                       (System_String_o *)BehindLabelText,
-                                       dispTextExtend->fields._BehindText_k__BackingField,
-                                       0),
-        (BehindLabelText = *component) == 0) )
+    || (v9 = System_String__op_Inequality(
+               (System_String_o *)BehindLabelText,
+               dispTextExtend->fields._BehindText_k__BackingField,
+               0),
+        BehindLabelText = *component,
+        this->fields.isChangedText = v9,
+        !BehindLabelText) )
   {
-    sub_1D0F30C(BehindLabelText, v5);
+    sub_21FFECC(BehindLabelText, v5);
   }
   GrandQuestBoardOptionTextComponent__UpdateUI(BehindLabelText, this->fields.dispTextExtend, v8);
   return this->fields.isChangedText;
@@ -166,27 +182,35 @@ void GrandQuestFolderInformationText__CreateDispTextExtendIfNotExists(
   System_String_o *dispText; // x22
   int32_t itemIconId; // w23
   TerminalBoardOptionTextData_o *v7; // x24
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E72176 & 1) == 0 )
+  if ( (byte_5933174 & 1) == 0 )
   {
-    sub_1D0F0B4(&TerminalBoardOptionTextData_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E72176 = 1;
+    sub_21FFC50(&TerminalBoardOptionTextData_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5933174 = 1;
   }
   if ( !this->fields.dispTextExtend )
   {
     dispText = this->fields.dispText;
     itemIconId = this->fields.itemIconId;
-    v7 = (TerminalBoardOptionTextData_o *)sub_1D0F300(TerminalBoardOptionTextData_TypeInfo);
+    v7 = (TerminalBoardOptionTextData_o *)sub_21FFEBC(TerminalBoardOptionTextData_TypeInfo);
     TerminalBoardOptionTextData___ctor(v7, (System_String_o *)StringLiteral_1/*""*/, dispText, itemIconId, 0, 0, alignment, 0);
     this->fields.dispTextExtend = v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.dispTextExtend,
+      (int32_t)v7,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12,
+      v13);
   }
 }
 
@@ -214,25 +238,26 @@ void GrandQuestFolderInformationText__SetFrameSprite(
         int32_t sideSizeOffset,
         const MethodInfo *method)
 {
-  float z; // s8
+  float z; // s10
   float y; // s9
-  float x; // s10
+  float x; // s8
   GrandQuestBoardOptionTextComponent_o *IsTextEmpty; // x0
+  __int64 v15; // x2
   struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
-  GrandQuestFolderInformationText_c *v16; // x0
-  UISprite_o *v17; // x22
+  GrandQuestFolderInformationText_c *v17; // x0
+  UISprite_o *v18; // x22
   System_String_o *BoardInfoFrameName; // x21
   struct GrandQuestFolderInformationText_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   z = boardOffset.fields.z;
   y = boardOffset.fields.y;
   x = boardOffset.fields.x;
-  if ( (byte_4E72177 & 1) == 0 )
+  if ( (byte_5933175 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&GrandQuestFolderInformationText_TypeInfo);
-    byte_4E72177 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&GrandQuestFolderInformationText_TypeInfo);
+    byte_5933175 = 1;
   }
   if ( boardId < 0 )
     goto LABEL_6;
@@ -275,17 +300,17 @@ LABEL_6:
       goto LABEL_23;
     UIWidget__set_pivot((UIWidget_o *)IsTextEmpty, 4, 0);
   }
-  v16 = GrandQuestFolderInformationText_TypeInfo;
-  if ( !GrandQuestFolderInformationText_TypeInfo->_2.cctor_finished )
+  v17 = GrandQuestFolderInformationText_TypeInfo;
+  if ( !*(&GrandQuestFolderInformationText_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(GrandQuestFolderInformationText_TypeInfo);
-    v16 = GrandQuestFolderInformationText_TypeInfo;
+    j_il2cpp_runtime_class_init_0(GrandQuestFolderInformationText_TypeInfo, component, v15);
+    v17 = GrandQuestFolderInformationText_TypeInfo;
   }
-  v17 = *frameSprite;
-  BoardInfoFrameName = v16->static_fields->BoardInfoFrameName;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(v17, BoardInfoFrameName, 0);
+  v18 = *frameSprite;
+  BoardInfoFrameName = v17->static_fields->BoardInfoFrameName;
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, component, v15);
+  AtlasManager__SetBanner(v18, BoardInfoFrameName, 0);
   IsTextEmpty = (GrandQuestBoardOptionTextComponent_o *)*frameSprite;
   if ( !*frameSprite )
     goto LABEL_23;
@@ -294,17 +319,17 @@ LABEL_6:
                                                           0);
   if ( !IsTextEmpty
     || (static_fields = GrandQuestFolderInformationText_TypeInfo->static_fields,
-        v20.fields.z = z + static_fields->InfoFrameCenterOffset.fields.z,
-        v20.fields.y = y + static_fields->InfoFrameCenterOffset.fields.y,
-        v20.fields.x = x + static_fields->InfoFrameCenterOffset.fields.x,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsTextEmpty, v20, 0),
+        v21.fields.z = z + static_fields->InfoFrameCenterOffset.fields.z,
+        v21.fields.y = y + static_fields->InfoFrameCenterOffset.fields.y,
+        v21.fields.x = x + static_fields->InfoFrameCenterOffset.fields.x,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsTextEmpty, v21, 0),
         (IsTextEmpty = (GrandQuestBoardOptionTextComponent_o *)*frameSprite) == 0)
     || (IsTextEmpty = (GrandQuestBoardOptionTextComponent_o *)UnityEngine_Component__get_gameObject(
                                                                 (UnityEngine_Component_o *)IsTextEmpty,
                                                                 0)) == 0 )
   {
 LABEL_23:
-    sub_1D0F30C(IsTextEmpty, component);
+    sub_21FFECC(IsTextEmpty, component);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsTextEmpty, this->fields.isDispFrameBg, 0);
 }
@@ -322,13 +347,16 @@ void GrandQuestFolderInformationText__SetParam(
         int32_t iconId,
         const MethodInfo *method)
 {
-  this->fields.color = textColor;
+  this->fields.color.fields.r = textColor.fields.r;
+  this->fields.color.fields.g = textColor.fields.g;
+  this->fields.existColorSetting = isColorSetting;
+  this->fields.color.fields.b = textColor.fields.b;
+  this->fields.color.fields.a = textColor.fields.a;
   this->fields.boardId = boardImageId;
   this->fields.sideSizeOffset = mSideSizeOffset;
   this->fields.boardOffset = mBoardOffset;
-  this->fields.existColorSetting = isColorSetting;
-  this->fields.isDispFrameBg = isFrameBg;
   this->fields.informationTextOffset = textOffset;
+  this->fields.isDispFrameBg = isFrameBg;
   this->fields.itemIconId = iconId;
 }
 
@@ -343,45 +371,45 @@ void GrandQuestFolderInformationText__SetParamFromScript(
   BoardMessageEntity_TimeData_o *v6; // x20
   bool v7; // w0
   struct UnityEngine_Color_o v8; // q0
-  __int64 v9; // d1
-  __int128 v10; // q2
+  __int128 v9; // q1
+  __int64 v10; // d2
   __int64 v11; // d3
-  bool isFrameBg; // w9
+  char isFrameBg; // w9
   int32_t itemIconId; // w8
   UnityEngine_Color_o v19; // [xsp+0h] [xbp-30h] BYREF
 
-  *(_QWORD *)&v19.fields.r = 0;
   boardMessageEnt = this->fields.boardMessageEnt;
+  *(_QWORD *)&v19.fields.r = 0;
   if ( boardMessageEnt && (v5 = BoardMessageEntity__GetScriptDataCondCheck(boardMessageEnt, checkTime, 0)) != 0 )
   {
     v6 = v5;
     v7 = UnityEngine_ColorUtility__TryParseHtmlString(v5->fields.color, &v19, 0);
     v8 = v19;
-    v9 = *(_QWORD *)&v6->fields.imgId;
-    v10 = *(_OWORD *)&v6->fields.frameOffset.fields.x;
-    v11 = *(_QWORD *)&v6->fields.textOffset.fields.y;
+    v9 = *(_OWORD *)&v6->fields.frameOffset.fields.x;
+    v10 = *(_QWORD *)&v6->fields.textOffset.fields.y;
+    v11 = *(_QWORD *)&v6->fields.imgId;
+    this->fields.existColorSetting = v7;
     isFrameBg = v6->fields.isFrameBg;
     itemIconId = v6->fields.itemIconId;
-    this->fields.existColorSetting = v7;
     this->fields.color = v8;
-    *(_QWORD *)&this->fields.boardId = v9;
-    *(_OWORD *)&this->fields.boardOffset.fields.x = v10;
-    *(_QWORD *)&this->fields.informationTextOffset.fields.y = v11;
-    this->fields.isDispFrameBg = isFrameBg;
+    *(_QWORD *)&this->fields.boardId = v11;
+    *(_OWORD *)&this->fields.boardOffset.fields.x = v9;
+    *(_QWORD *)&this->fields.informationTextOffset.fields.y = v10;
   }
   else
   {
-    itemIconId = 0;
     __asm { FMOV            V0.4S, #1.0 }
+    itemIconId = 0;
+    this->fields.boardId = -1;
+    isFrameBg = 1;
     this->fields.existColorSetting = 0;
     *(_QWORD *)&this->fields.boardOffset.fields.y = 0;
     *(_QWORD *)&this->fields.informationTextOffset.fields.x = 0;
+    this->fields.color = _Q0;
     *(_QWORD *)&this->fields.sideSizeOffset = 0;
     this->fields.informationTextOffset.fields.z = 0.0;
-    this->fields.color = _Q0;
-    this->fields.boardId = -1;
-    this->fields.isDispFrameBg = 1;
   }
+  this->fields.isDispFrameBg = isFrameBg;
   this->fields.itemIconId = itemIconId;
 }
 
@@ -391,37 +419,37 @@ void GrandQuestFolderInformationText__SetTextColor(
         GrandQuestBoardOptionTextComponent_o **component,
         const MethodInfo *method)
 {
-  GrandQuestFolderInformationText_o *v4; // x21
-  GrandQuestBoardOptionTextComponent_o *v5; // x20
-  float *p_r; // x22
-  float *p_g; // x23
-  float *p_b; // x24
-  float *p_a; // x21
-  float a; // t1
+  GrandQuestFolderInformationText_o *v4; // x19
+  GrandQuestBoardOptionTextComponent_o *v5; // x21
+  float *p_r; // x19
+  float r; // t1
+  float *p_a; // x22
+  float *p_b; // x23
+  float *p_g; // x24
   struct GrandQuestFolderInformationText_StaticFields *static_fields; // x8
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4E72178 & 1) == 0 )
+  if ( (byte_5933176 & 1) == 0 )
   {
-    this = (GrandQuestFolderInformationText_o *)sub_1D0F0B4(&GrandQuestFolderInformationText_TypeInfo);
-    byte_4E72178 = 1;
+    this = (GrandQuestFolderInformationText_o *)sub_21FFC50(&GrandQuestFolderInformationText_TypeInfo);
+    byte_5933176 = 1;
   }
   v5 = *component;
   if ( v4->fields.existColorSetting )
   {
     if ( !v5 )
       goto LABEL_13;
+    r = v4->fields.color.fields.r;
     p_r = &v4->fields.color.fields.r;
-    p_g = &v4->fields.color.fields.g;
-    p_b = &v4->fields.color.fields.b;
-    a = v4->fields.color.fields.a;
-    p_a = &v4->fields.color.fields.a;
-    v12.fields.a = a;
-    v12.fields.b = *p_b;
-    v12.fields.g = *p_g;
-    v12.fields.r = *p_r;
+    v12.fields.r = r;
+    p_a = p_r + 3;
+    v12.fields.a = p_r[3];
+    p_b = p_r + 2;
+    v12.fields.b = p_r[2];
+    p_g = p_r + 1;
+    v12.fields.g = p_r[1];
     GrandQuestBoardOptionTextComponent__set_LabelGradientTop(*component, v12, (const MethodInfo *)component);
     this = (GrandQuestFolderInformationText_o *)*component;
     if ( !*component )
@@ -430,31 +458,28 @@ void GrandQuestFolderInformationText__SetTextColor(
   else
   {
     this = (GrandQuestFolderInformationText_o *)GrandQuestFolderInformationText_TypeInfo;
-    if ( !GrandQuestFolderInformationText_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(GrandQuestFolderInformationText_TypeInfo);
-      this = (GrandQuestFolderInformationText_o *)GrandQuestFolderInformationText_TypeInfo;
-    }
+    if ( !*(&GrandQuestFolderInformationText_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(GrandQuestFolderInformationText_TypeInfo, component, method);
     if ( !v5
       || (GrandQuestBoardOptionTextComponent__set_LabelGradientTop(
             v5,
-            *(UnityEngine_Color_o *)(*(_QWORD *)&this[1].fields.boardOffset.fields.y + 20LL),
+            GrandQuestFolderInformationText_TypeInfo->static_fields->NormalTopColor,
             (const MethodInfo *)component),
           (this = (GrandQuestFolderInformationText_o *)*component) == 0) )
     {
 LABEL_13:
-      sub_1D0F30C(this, component);
+      sub_21FFECC(this, component);
     }
     static_fields = GrandQuestFolderInformationText_TypeInfo->static_fields;
     p_a = &static_fields->NormalBottomColor.fields.a;
+    p_r = &static_fields->NormalBottomColor.fields.r;
     p_b = &static_fields->NormalBottomColor.fields.b;
     p_g = &static_fields->NormalBottomColor.fields.g;
-    p_r = &static_fields->NormalBottomColor.fields.r;
   }
+  v13.fields.r = *p_r;
   v13.fields.a = *p_a;
   v13.fields.b = *p_b;
   v13.fields.g = *p_g;
-  v13.fields.r = *p_r;
   GrandQuestBoardOptionTextComponent__set_LabelGradientBottom(
     (GrandQuestBoardOptionTextComponent_o *)this,
     v13,
@@ -487,7 +512,7 @@ void GrandQuestFolderInformationText__SetTextOffset(
   dispTextExtend = v4->fields.dispTextExtend;
   if ( !dispTextExtend || (this = (GrandQuestFolderInformationText_o *)*component) == 0 )
 LABEL_11:
-    sub_1D0F30C(this, component);
+    sub_21FFECC(this, component);
   v8 = -x;
   v9 = INFINITY;
   if ( dispTextExtend->fields._Alignment_k__BackingField )
@@ -529,7 +554,7 @@ void GrandQuestFolderInformationText__SetTime(
 }
 
 
-void GrandQuestFolderInformationText__SetTime_33987548(
+void GrandQuestFolderInformationText__SetTime_39595064(
         GrandQuestFolderInformationText_o *this,
         GrandQuestBoardOptionTextComponent_o **component,
         UISprite_o **frameSprite,

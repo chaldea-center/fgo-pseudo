@@ -8,48 +8,50 @@ void WarBoardMovePerformance___ctor(
         const MethodInfo *method)
 {
   float z; // s9
-  float y; // s10
-  float x; // s12
-  float v12; // s11
-  float v13; // s13
+  float y; // s12
+  float x; // s11
+  float v13; // s10
   float v14; // s14
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
+  float v16; // s13
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
   int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  float v23; // s12
-  float v24; // s10
-  float v25; // s9
+  bool v21; // w6
+  bool v22; // w7
+  __int64 v23; // x1
+  __int64 v24; // x2
+  int v25; // w8
 
   z = to.fields.z;
   y = to.fields.y;
   x = to.fields.x;
-  v12 = from.fields.z;
-  v13 = from.fields.y;
-  v14 = from.fields.x;
+  v13 = from.fields.z;
+  v14 = from.fields.y;
+  v16 = from.fields.x;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   this->fields.target = target;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
-  this->fields.from.fields.x = v14;
-  this->fields.from.fields.y = v13;
-  this->fields.from.fields.z = v12;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
+  this->fields.from.fields.x = v16;
+  this->fields.from.fields.y = v14;
+  v25 = (unsigned __int8)byte_5931942;
+  this->fields.from.fields.z = v13;
   this->fields.to.fields.x = x;
   this->fields.to.fields.y = y;
   this->fields.to.fields.z = z;
-  if ( !byte_4E70C9B )
+  if ( !v25 )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E70C9B = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_5931942 = 1;
   }
-  v23 = x - v14;
-  v24 = y - v13;
-  v25 = z - v12;
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  this->fields.duration = sqrtf((float)(v25 * v25) + (float)((float)(v23 * v23) + (float)(v24 * v24))) / pixelPerSec;
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v23, v24);
   this->fields.easeType = easeType;
+  this->fields.duration = sqrtf(
+                            (float)((float)(z - v13) * (float)(z - v13))
+                          + (float)((float)((float)(x - v16) * (float)(x - v16))
+                                  + (float)((float)(y - v14) * (float)(y - v14))))
+                        / pixelPerSec;
 }
 
 
@@ -58,23 +60,23 @@ System_Collections_IEnumerator_o *WarBoardMovePerformance__Execute(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E752C2 & 1) == 0 )
+  if ( (byte_5936248 & 1) == 0 )
   {
-    sub_1D0F0B4(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
-    byte_4E752C2 = 1;
+    sub_21FFC50(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
+    byte_5936248 = 1;
   }
-  v3 = sub_1D0F300(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_21FFEBC(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -86,7 +88,7 @@ void WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, const Metho
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_1D0F30C(target, method);
+    sub_21FFECC(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -110,7 +112,7 @@ void WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this, const Met
       StartCallback->fields.method);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_1D0F30C(target, method);
+    sub_21FFECC(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0);
 }
 
@@ -129,12 +131,12 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
         WarBoardMovePerformance__Execute_d__7_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t _1__state; // w8
   struct WarBoardMovePerformance_o *_4__this; // x21
   WarBoardMovePerformance__Execute_d__7_o *v10; // x19
@@ -145,7 +147,7 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
   float v15; // s1
   float v16; // s8
   UnityEngine_Transform_o *transform; // x20
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
+  MissionNaviTransitionBoardItem_o *p__2__current; // x19
   bool result; // w0
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -158,16 +160,21 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
     this->fields.__1__state = -1;
     v13 = now_5__2 + UnityEngine_Time__get_deltaTime(0);
     v10->fields._now_5__2 = v13;
-    if ( !_4__this
-      || (this = (WarBoardMovePerformance__Execute_d__7_o *)_4__this->fields.target) == 0
-      || ((v14 = v13 / _4__this->fields.duration, v15 = fminf(v14, 1.0), v14 < 0.0) ? (v16 = 0.0) : (v16 = v15),
-          transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0),
-          v20 = Easing__Func(_4__this->fields.from, _4__this->fields.to, v16, _4__this->fields.easeType, 0),
-          !transform) )
-    {
-LABEL_15:
-      sub_1D0F30C(this, method);
-    }
+    if ( !_4__this )
+      goto LABEL_17;
+    this = (WarBoardMovePerformance__Execute_d__7_o *)_4__this->fields.target;
+    if ( !this )
+      goto LABEL_17;
+    v14 = v13 / _4__this->fields.duration;
+    v15 = 1.0;
+    if ( v14 <= 1.0 )
+      v15 = v14;
+    v16 = v14 >= 0.0 ? v15 : 0.0;
+    transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+    v20 = Easing__Func(_4__this->fields.from, _4__this->fields.to, v16, _4__this->fields.easeType, 0);
+    if ( !transform )
+LABEL_17:
+      sub_21FFECC(this, method);
     UnityEngine_Transform__set_localPosition(transform, v20, 0);
     v11 = v10->fields._now_5__2;
   }
@@ -179,15 +186,15 @@ LABEL_15:
     this->fields._now_5__2 = 0.0;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      goto LABEL_15;
+      goto LABEL_17;
   }
   if ( v11 < _4__this->fields.duration )
   {
     v10->fields.__2__current = 0;
-    p__2__current = (GrandQuestFolderBoardItem_o *)&v10->fields.__2__current;
-    sub_1D0F058(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    p__2__current = (MissionNaviTransitionBoardItem_o *)&v10->fields.__2__current;
+    sub_21FFBF4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
     result = 1;
-    LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
+    p__2__current[-1].fields._BoardType_k__BackingField = 1;
     return result;
   }
   return 0;
@@ -210,11 +217,11 @@ void __noreturn WarBoardMovePerformance__Execute_d__7__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

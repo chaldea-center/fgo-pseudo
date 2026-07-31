@@ -13,35 +13,35 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
 {
   UnityEngine_Object_o *outerPanel; // x21
   __int64 v6; // x1
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   struct BattleWindowOuterClickComponent_o *v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
 
-  if ( (byte_4E7B037 & 1) == 0 )
+  if ( (byte_593C17E & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7B037 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593C17E = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, callBack);
   if ( UnityEngine_Object__op_Inequality(outerPanel, 0, 0) )
   {
     v13 = this->fields.outerPanel;
     if ( !v13
       || (v13->fields.clickCallBack = callBack,
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&v13->fields.clickCallBack,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&v13->fields.clickCallBack,
             (int32_t)callBack,
             v7,
             v8,
@@ -51,9 +51,17 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
             v12),
           (v13 = this->fields.outerPanel) == 0) )
     {
-      sub_1D0F30C(v13, v6);
+      sub_21FFECC(v13, v6);
     }
     v13->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v13->fields.targetWindow, (int32_t)this, v14, v15, v16, v17, v18, v19);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&v13->fields.targetWindow,
+      (int32_t)this,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19);
   }
 }

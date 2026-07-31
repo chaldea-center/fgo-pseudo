@@ -1,14 +1,14 @@
 void DropAddMaster___ctor(DropAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E7750D & 1) == 0 )
+  if ( (byte_59384DD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string___ctor__);
-    byte_4E7750D = 1;
+    sub_21FFC50(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string___ctor__);
+    byte_59384DD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    556,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string___ctor__);
+    558,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ DropAddEntity_o *DropAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E7750E & 1) == 0 )
+  if ( (byte_59384DE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string__GetEntity__);
-    byte_4E7750E = 1;
+    sub_21FFC50(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string__GetEntity__);
+    byte_59384DE = 1;
   }
   PK = (Il2CppObject *)DropAddEntity__CreatePK(eventId, giftId, *(const MethodInfo **)&giftId);
   return (DropAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                               PK,
-                              (const MethodInfo_353AADC *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string__GetEntity__);
+                              (const MethodInfo_3EE2044 *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool DropAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E7750F & 1) == 0 )
+  if ( (byte_59384DF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string__TryGetEntity__);
-    byte_4E7750F = 1;
+    sub_21FFC50(&Method_DataMasterBase_DropAddMaster__DropAddEntity__string__TryGetEntity__);
+    byte_59384DF = 1;
   }
   PK = (Il2CppObject *)DropAddEntity__CreatePK(eventId, giftId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_DropAddMaster__DropAddEntity__string__TryGetEntity__);
 }

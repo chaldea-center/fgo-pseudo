@@ -1,13 +1,13 @@
 void UserEventFortificationEntity___ctor(UserEventFortificationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E784C3 & 1) == 0 )
+  if ( (byte_59394F1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E784C3 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59394F1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *UserEventFortificationEntity__CreatePK(
         int32_t fortificationIdx,
         const MethodInfo *method)
 {
-  if ( (byte_4E784C2 & 1) == 0 )
+  if ( (byte_59394F0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4E784C2 = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_59394F0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            fortificationIdx,
-           (const MethodInfo_324D98C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_38215B8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

@@ -5,23 +5,24 @@ void BattleLogicBattleScriptSystemTask___ctor(BattleLogicBattleScriptSystemTask_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleLogicBattleScriptSystemTask__Init(
         BattleLogicBattleScriptSystemTask_o *this,
         BattleScriptEntity_array *entities,
         int32_t systemType,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.battleScriptEntities = entities;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.battleScriptEntities,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.battleScriptEntities,
     (int32_t)entities,
-    systemType,
-    (int32_t)method,
+    *(System_String_o **)&systemType,
+    (System_String_o *)method,
     v4,
     v5,
     v6,
@@ -39,19 +40,19 @@ BattleActionData_o *BattleLogicBattleScriptSystemTask__MakeActionData(
   __int64 ActorId; // x0
   __int64 v7; // x1
 
-  if ( (byte_4E7ABC0 & 1) == 0 )
+  if ( (byte_593BC24 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleScriptSystemActionData_TypeInfo);
-    byte_4E7ABC0 = 1;
+    sub_21FFC50(&BattleScriptSystemActionData_TypeInfo);
+    byte_593BC24 = 1;
   }
   v5 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleScriptEntities, 0) )
   {
-    v5 = (BattleScriptSystemActionData_o *)sub_1D0F300(BattleScriptSystemActionData_TypeInfo);
+    v5 = (BattleScriptSystemActionData_o *)sub_21FFEBC(BattleScriptSystemActionData_TypeInfo);
     BattleScriptSystemActionData___ctor(v5, 0);
     ActorId = BattleLogicTask__getActorId((BattleLogicTask_o *)this, 0);
     if ( !v5 || (v5->fields.actorId = ActorId, !logic) )
-      sub_1D0F30C(ActorId, v7);
+      sub_21FFECC(ActorId, v7);
     BattleScriptSystemActionData__SetBattleScriptSystem(
       v5,
       logic->fields.logicBattleScript,

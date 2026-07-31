@@ -13,17 +13,17 @@ TweenAlpha_o *TweenAlpha__Begin(UnityEngine_GameObject_o *go, float duration, fl
   TweenAlpha_o *v9; // x19
   const MethodInfo *v10; // x2
 
-  if ( (byte_4E7BFC5 & 1) == 0 )
+  if ( (byte_593CF0E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UITweener_Begin_TweenAlpha___);
-    byte_4E7BFC5 = 1;
+    sub_21FFC50(&Method_UITweener_Begin_TweenAlpha___);
+    byte_593CF0E = 1;
   }
   v7 = (TweenAlpha_o *)UITweener__Begin_object_(
                          go,
                          duration,
-                         (const MethodInfo_332666C *)Method_UITweener_Begin_TweenAlpha___);
+                         (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !v7 )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   v9 = v7;
   v7->fields.from = TweenAlpha__get_value(v7, v8);
   v9->fields.to = alpha;
@@ -38,103 +38,122 @@ TweenAlpha_o *TweenAlpha__Begin(UnityEngine_GameObject_o *go, float duration, fl
 
 void TweenAlpha__Cache(TweenAlpha_o *this, const MethodInfo *method)
 {
+  const MethodInfo_37ED7E0 *v3; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
+  Il2CppObject *v11; // x0
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  __int64 v18; // x1
   UnityEngine_Object_o *mRect; // x22
+  __int64 v20; // x1
   UnityEngine_Object_o *mSr; // x21
-  Il2CppObject *v19; // x21
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
+  __int64 v22; // x1
+  Il2CppObject *v23; // x21
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
   struct UnityEngine_Material_o *material; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
   UnityEngine_Object_o *mMat; // x21
-  Il2CppObject *ComponentInChildren_object__52714476; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  Il2CppObject *ComponentInChildren_object__58644924; // x1
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
 
-  if ( (byte_4E7BFC2 & 1) == 0 )
+  if ( (byte_593CF0B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC2 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF0B = 1;
   }
+  v3 = (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIRect___;
   this->fields.mCached = 1;
-  Component_object = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+  Component_object = UnityEngine_Component__GetComponent_object_((UnityEngine_Component_o *)this, v3);
   this->fields.mRect = (struct UIRect_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
-  v10 = UnityEngine_Component__GetComponent_object_(
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mRect,
+    (int32_t)Component_object,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
+  v11 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-  this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mSr, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+  this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v11;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSr, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
   if ( UnityEngine_Object__op_Equality(mRect, 0, 0) )
   {
     mSr = (UnityEngine_Object_o *)this->fields.mSr;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
     if ( UnityEngine_Object__op_Equality(mSr, 0, 0) )
     {
-      v19 = UnityEngine_Component__GetComponent_object_(
+      v23 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v20 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0);
-      if ( v20 )
+              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+      v24 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0, 0);
+      if ( v24 )
       {
-        if ( !v19 )
-          sub_1D0F30C(v20, v21);
-        material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v19, 0);
+        if ( !v23 )
+          sub_21FFECC(v24, v25);
+        material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v23, 0);
         this->fields.mMat = material;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)material, v23, v24, v25, v26, v27, v28);
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.mMat,
+          (int32_t)material,
+          v27,
+          v28,
+          v29,
+          v30,
+          v31,
+          v32);
       }
       mMat = (UnityEngine_Object_o *)this->fields.mMat;
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
       if ( UnityEngine_Object__op_Equality(mMat, 0, 0) )
       {
-        ComponentInChildren_object__52714476 = UnityEngine_Component__GetComponentInChildren_object__52714476(
+        ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3245BEC *)Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
-        this->fields.mRect = (struct UIRect_o *)ComponentInChildren_object__52714476;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.mRect,
-          (int32_t)ComponentInChildren_object__52714476,
-          v31,
-          v32,
-          v33,
-          v34,
+                                                 (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
+        this->fields.mRect = (struct UIRect_o *)ComponentInChildren_object__58644924;
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.mRect,
+          (int32_t)ComponentInChildren_object__58644924,
           v35,
-          v36);
+          v36,
+          v37,
+          v38,
+          v39,
+          v40);
       }
     }
   }
@@ -144,18 +163,16 @@ void TweenAlpha__Cache(TweenAlpha_o *this, const MethodInfo *method)
 // local variable allocation has failed, the output may be wrong!
 void TweenAlpha__OnUpdate(TweenAlpha_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
-  float v4; // s3
-  bool v5; // nf
-  float v6; // s0
+  float v4; // s1
 
-  v4 = fminf(factor, 1.0);
-  v5 = factor < 0.0;
-  v6 = 0.0;
-  if ( !v5 )
-    v6 = v4;
+  v4 = 1.0;
+  if ( factor <= 1.0 )
+    v4 = factor;
+  if ( factor < 0.0 )
+    v4 = 0.0;
   TweenAlpha__set_value(
     this,
-    this->fields.from + (float)(v6 * (float)(this->fields.to - this->fields.from)),
+    this->fields.from + (float)(v4 * (float)(this->fields.to - this->fields.from)),
     (const MethodInfo *)isFinished);
 }
 
@@ -190,16 +207,16 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
   bool v9; // w0
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E7BFC3 & 1) == 0 )
+  if ( (byte_593CF0C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC3 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF0C = 1;
   }
   if ( !this->fields.mCached )
     TweenAlpha__Cache(this, method);
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mRect, 0, 0) )
   {
     v5 = (UnityEngine_SpriteRenderer_o *)this->fields.mRect;
@@ -211,11 +228,11 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
       return result;
     }
 LABEL_22:
-    sub_1D0F30C(v5, v4);
+    sub_21FFECC(v5, v4);
   }
   mSr = (UnityEngine_Object_o *)this->fields.mSr;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
   {
     v5 = this->fields.mSr;
@@ -225,8 +242,8 @@ LABEL_22:
     return color.fields.a;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   v9 = UnityEngine_Object__op_Inequality(mMat, 0, 0);
   result = 1.0;
   if ( v9 )
@@ -248,48 +265,45 @@ void TweenAlpha__set_alpha(TweenAlpha_o *this, float value, const MethodInfo *me
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TweenAlpha__set_value(TweenAlpha_o *this, float value, const MethodInfo *method)
 {
-  long double v3; // q8
   UnityEngine_Object_o *mRect; // x20
   __int64 v6; // x1
   UnityEngine_SpriteRenderer_o *v7; // x0
   UnityEngine_Object_o *mSr; // x20
-  int v9; // s3
+  float v9; // s3
   UnityEngine_Object_o *mMat; // x20
-  int v11; // s3
+  float v11; // s3
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v3 = *(long double *)&value;
-  if ( (byte_4E7BFC4 & 1) == 0 )
+  if ( (byte_593CF0D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7BFC4 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593CF0D = 1;
   }
   if ( !this->fields.mCached )
     TweenAlpha__Cache(this, method);
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(mRect, 0, 0) )
   {
     v7 = (UnityEngine_SpriteRenderer_o *)this->fields.mRect;
     if ( v7 )
     {
-      ((void (__fastcall *)(UnityEngine_SpriteRenderer_o *, Il2CppClass *, long double))v7->klass[1]._1.element_class)(
+      ((void (__fastcall *)(UnityEngine_SpriteRenderer_o *, Il2CppClass *, float))v7->klass[1]._1.element_class)(
         v7,
         v7->klass[1]._1.castClass,
-        v3);
+        value);
       return;
     }
 LABEL_23:
-    sub_1D0F30C(v7, v6);
+    sub_21FFECC(v7, v6);
   }
   mSr = (UnityEngine_Object_o *)this->fields.mSr;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
   if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
   {
     v7 = this->fields.mSr;
@@ -299,14 +313,14 @@ LABEL_23:
     v7 = this->fields.mSr;
     if ( !v7 )
       goto LABEL_23;
-    v9 = LODWORD(v3);
+    v9 = value;
     UnityEngine_SpriteRenderer__set_color(v7, color, 0);
   }
   else
   {
     mMat = (UnityEngine_Object_o *)this->fields.mMat;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
     if ( UnityEngine_Object__op_Inequality(mMat, 0, 0) )
     {
       v7 = (UnityEngine_SpriteRenderer_o *)this->fields.mMat;
@@ -316,7 +330,7 @@ LABEL_23:
       v7 = (UnityEngine_SpriteRenderer_o *)this->fields.mMat;
       if ( !v7 )
         goto LABEL_23;
-      v11 = LODWORD(v3);
+      v11 = value;
       UnityEngine_Material__set_color((UnityEngine_Material_o *)v7, v13, 0);
     }
   }

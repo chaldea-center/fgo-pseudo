@@ -1,25 +1,25 @@
 void AssetsInfo___ctor(AssetsInfo_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_4E76A08 & 1) == 0 )
+  if ( (byte_59379B5 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E76A08 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59379B5 = 1;
   }
-  v9 = StringLiteral_1/*""*/;
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.sceneName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sceneName, v9, v2, v3, v4, v5, v6, v7);
-  if ( !byte_4E70B79 )
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sceneName, v9, v2, v3, v4, v5, v6, v7);
+  if ( !byte_5931820 )
   {
-    sub_1D0F0B4(&UnityEngine_Vector2_TypeInfo);
-    byte_4E70B79 = 1;
+    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+    byte_5931820 = 1;
   }
   this->fields.scrollPos = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -41,320 +41,329 @@ void AssetsInfo__CacheAssetInfo(
   unsigned int Count; // w0
   System_Object_array *v7; // x26
   System_Collections_Generic_List_object__o *v8; // x21
-  AssetsInfo___c_c *v9; // x0
+  __int64 v9; // x1
+  __int64 v10; // x2
+  AssetsInfo___c_c *v11; // x0
+  struct AssetsInfo___c_StaticFields *static_fields; // x8
   System_Func_object__bool__o *_9__9_0; // x24
-  Il2CppObject *v11; // x25
-  struct AssetsInfo___c_StaticFields *static_fields; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  Il2CppObject *v14; // x25
+  struct AssetsInfo___c_StaticFields *v15; // x0
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
   AssetsInfo_c *klass; // x8
-  AssetsInfo_o *v20; // x23
-  __int64 v21; // x9
+  AssetsInfo_o *v23; // x23
+  __int64 v24; // x9
   int32_t *p_offset; // x10
-  __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x23
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
+  __int64 v26; // x0
+  __int64 v27; // x0
+  __int64 v28; // x1
+  __int64 v29; // x23
   __int64 v30; // x8
   __int64 v31; // x9
   int *v32; // x10
   __int64 v33; // x0
-  __int64 v34; // x0
-  __int64 v35; // x1
-  int32_t v36; // w2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  int32_t v39; // w5
-  int64_t v40; // x6
-  System_String_o *v41; // x7
-  __int64 v42; // x24
-  Il2CppObject *v43; // x1
+  __int64 v34; // x8
+  __int64 v35; // x9
+  int *v36; // x10
+  __int64 v37; // x0
+  __int64 v38; // x0
+  Il2CppObject *v39; // x1
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
+  __int64 v46; // x23
   struct System_Object_array *items; // x8
-  _QWORD *v45; // x9
+  _QWORD *v48; // x9
   __int64 size; // x10
-  Il2CppClass **v47; // x0
-  Il2CppObject *v48; // x25
-  struct System_String_o *sceneName; // x27
-  __int64 v50; // x26
-  int32_t v51; // w2
-  int32_t v52; // w3
-  System_String_o *v53; // x4
-  int32_t v54; // w5
-  int64_t v55; // x6
-  System_String_o *v56; // x7
+  Il2CppClass **v50; // x0
+  Il2CppObject *v51; // x24
+  struct System_String_o *sceneName; // x26
+  __int64 v53; // x25
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
   Il2CppObject *Item; // x0
-  __int64 v58; // x1
-  __int64 v59; // x8
-  __int64 v60; // x9
-  int *v61; // x10
-  __int64 v62; // x0
+  __int64 v61; // x1
+  int v62; // w8
+  __int64 v63; // x8
+  __int64 v64; // x9
+  int *v65; // x10
+  __int64 v66; // x0
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v64; // x20
-  Il2CppObject *v65; // x22
-  System_Object_array *v66; // [xsp+0h] [xbp-70h]
-  AssetsInfo_o *v67; // [xsp+8h] [xbp-68h]
+  unsigned __int64 v68; // x20
+  Il2CppObject *v69; // x22
+  System_Object_array *v70; // [xsp+8h] [xbp-88h]
+  AssetsInfo_o *v71; // [xsp+10h] [xbp-80h]
+  __int64 v72; // [xsp+28h] [xbp-68h]
 
-  v67 = this;
-  if ( (byte_4E76A06 & 1) == 0 )
+  v71 = this;
+  if ( (byte_59379B3 & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetsInfo_DataInfo_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__ContainsKey__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__Remove__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__set_Item__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_AssetData___);
-    sub_1D0F0B4(&System_Func_AssetData__bool__TypeInfo);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_AssetData__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_AssetData__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__CopyTo__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&string___TypeInfo);
-    sub_1D0F0B4(&Method_AssetsInfo___c__CacheAssetInfo_b__9_0__);
-    this = (AssetsInfo_o *)sub_1D0F0B4(&AssetsInfo___c_TypeInfo);
-    byte_4E76A06 = 1;
+    sub_21FFC50(&AssetsInfo_DataInfo_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__ContainsKey__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__Remove__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__set_Item__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_AssetData___);
+    sub_21FFC50(&System_Func_AssetData__bool__TypeInfo);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_AssetData__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_AssetData__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__CopyTo__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&string___TypeInfo);
+    sub_21FFC50(&Method_AssetsInfo___c__CacheAssetInfo_b__9_0__);
+    this = (AssetsInfo_o *)sub_21FFC50(&AssetsInfo___c_TypeInfo);
+    byte_59379B3 = 1;
   }
   if ( assetList )
   {
     if ( !info )
-      goto LABEL_63;
+      goto LABEL_68;
     this = (AssetsInfo_o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
                              (System_Collections_Generic_Dictionary_object__object__o *)info,
-                             (const MethodInfo_36012C4 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
+                             (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
     if ( !this )
-      goto LABEL_63;
+      goto LABEL_68;
     Count = System_Collections_Generic_Dictionary_KeyCollection_object__object___get_Count(
               (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)this,
-              (const MethodInfo_38A32EC *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__get_Count__);
-    v7 = (System_Object_array *)sub_1D0F15C(string___TypeInfo, Count);
+              (const MethodInfo_43556E8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__get_Count__);
+    v7 = (System_Object_array *)sub_21FFD10(string___TypeInfo, Count);
     this = (AssetsInfo_o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
                              (System_Collections_Generic_Dictionary_object__object__o *)info,
-                             (const MethodInfo_36012C4 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
+                             (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
     if ( !this )
-      goto LABEL_63;
+      goto LABEL_68;
     System_Collections_Generic_Dictionary_KeyCollection_object__object___CopyTo(
       (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)this,
       v7,
       0,
-      (const MethodInfo_38A31E0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__CopyTo__);
-    v8 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
+      (const MethodInfo_43555D8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_DataInfo__CopyTo__);
+    v8 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v8,
-      (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
-    v9 = AssetsInfo___c_TypeInfo;
-    if ( !AssetsInfo___c_TypeInfo->_2.cctor_finished )
+      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    v11 = AssetsInfo___c_TypeInfo;
+    if ( !*(&AssetsInfo___c_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AssetsInfo___c_TypeInfo);
-      v9 = AssetsInfo___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AssetsInfo___c_TypeInfo, v9, v10);
+      v11 = AssetsInfo___c_TypeInfo;
     }
-    _9__9_0 = (System_Func_object__bool__o *)v9->static_fields->__9__9_0;
+    static_fields = v11->static_fields;
+    _9__9_0 = (System_Func_object__bool__o *)static_fields->__9__9_0;
     if ( !_9__9_0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !*(&v11->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v9);
-        v9 = AssetsInfo___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v11, v9, v10);
+        static_fields = AssetsInfo___c_TypeInfo->static_fields;
       }
-      v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__9_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_AssetData__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__9_0, v11, Method_AssetsInfo___c__CacheAssetInfo_b__9_0__, 0);
-      static_fields = AssetsInfo___c_TypeInfo->static_fields;
-      static_fields->__9__9_0 = (struct System_Func_AssetData__bool__o *)_9__9_0;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0,
-        (int32_t)_9__9_0,
-        v13,
-        v14,
-        v15,
-        v16,
-        v17,
-        v18);
+      v14 = (Il2CppObject *)static_fields->__9;
+      _9__9_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_AssetData__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__9_0, v14, Method_AssetsInfo___c__CacheAssetInfo_b__9_0__, 0);
+      v15 = AssetsInfo___c_TypeInfo->static_fields;
+      v15->__9__9_0 = (struct System_Func_AssetData__bool__o *)_9__9_0;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15->__9__9_0, (int32_t)_9__9_0, v16, v17, v18, v19, v20, v21);
     }
     this = (AssetsInfo_o *)System_Linq_Enumerable__Where_object_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)assetList,
                              (System_Func_TSource__bool__o *)_9__9_0,
-                             (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_AssetData___);
+                             (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_AssetData___);
     if ( !this )
-      goto LABEL_63;
+      goto LABEL_68;
     klass = this->klass;
-    v20 = this;
-    v21 = *(unsigned __int16 *)&this->klass->_2.rank;
+    v23 = this;
+    v70 = v7;
+    v24 = *(unsigned __int16 *)&this->klass->_2.rank;
     if ( *(_WORD *)&this->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_Generic_IEnumerable_AssetData__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_AssetData__TypeInfo )
       {
-        --v21;
+        --v24;
         p_offset += 4;
-        if ( !v21 )
+        if ( !v24 )
           goto LABEL_18;
       }
-      v23 = (__int64)&klass->vtable + 16 * *p_offset;
+      v26 = (__int64)&klass->vtable + 16 * *p_offset;
     }
     else
     {
 LABEL_18:
-      v23 = sub_1CE5430(this, System_Collections_Generic_IEnumerable_AssetData__TypeInfo, 0);
+      v26 = sub_2237E2C(this, System_Collections_Generic_IEnumerable_AssetData__TypeInfo, 0);
     }
-    v66 = v7;
-    v25 = (*(__int64 (__fastcall **)(AssetsInfo_o *, _QWORD))v23)(v20, *(_QWORD *)(v23 + 8));
-    if ( !v25 )
-      sub_1D0F30C(0, v24);
+    v27 = (*(__int64 (__fastcall **)(AssetsInfo_o *, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
+    v72 = v27;
+    if ( !v27 )
+      sub_21FFECC(v27, v28);
+    v29 = v27;
     while ( 1 )
     {
-      v26 = *(_QWORD *)v25;
-      v27 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
-      {
-        v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v28 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          --v27;
-          v28 += 4;
-          if ( !v27 )
-            goto LABEL_25;
-        }
-        v29 = v26 + 16LL * *v28 + 312;
-      }
-      else
-      {
-LABEL_25:
-        v29 = sub_1CE5430(v25, System_Collections_IEnumerator_TypeInfo, 0);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
-        break;
-      v30 = *(_QWORD *)v25;
-      v31 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+      v30 = *(_QWORD *)v29;
+      v31 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
       {
         v32 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-        while ( *((System_Collections_Generic_IEnumerator_AssetData__c **)v32 - 1) != System_Collections_Generic_IEnumerator_AssetData__TypeInfo )
+        while ( *((System_Collections_IEnumerator_c **)v32 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
           --v31;
           v32 += 4;
           if ( !v31 )
-            goto LABEL_32;
+            goto LABEL_26;
         }
         v33 = v30 + 16LL * *v32 + 312;
       }
       else
       {
-LABEL_32:
-        v33 = sub_1CE5430(v25, System_Collections_Generic_IEnumerator_AssetData__TypeInfo, 0);
+LABEL_26:
+        v33 = sub_2237E2C(v29, System_Collections_IEnumerator_TypeInfo, 0);
       }
-      v34 = (*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
-      v42 = v34;
-      if ( !v34 )
-        sub_1D0F30C(0, v35);
-      if ( !v8 )
-        sub_1D0F30C(v34, v35);
-      v43 = *(Il2CppObject **)(v34 + 24);
-      items = v8->fields._items;
-      v45 = Method_System_Collections_Generic_List_string__Add__;
-      ++v8->fields._version;
-      if ( !items )
-        sub_1D0F30C(v34, v43);
+      this = (AssetsInfo_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v29, *(_QWORD *)(v33 + 8));
+      if ( ((unsigned __int8)this & 1) == 0 )
+        break;
+      if ( !v72 )
+        sub_21FFECC(this, assetList);
+      v34 = *(_QWORD *)v72;
+      v35 = *(unsigned __int16 *)(*(_QWORD *)v72 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v72 + 302LL) )
+      {
+        v36 = (int *)(*(_QWORD *)(v34 + 176) + 8LL);
+        while ( *((System_Collections_Generic_IEnumerator_AssetData__c **)v36 - 1) != System_Collections_Generic_IEnumerator_AssetData__TypeInfo )
+        {
+          --v35;
+          v36 += 4;
+          if ( !v35 )
+            goto LABEL_34;
+        }
+        v37 = v34 + 16LL * *v36 + 312;
+      }
+      else
+      {
+LABEL_34:
+        v37 = sub_2237E2C(v72, System_Collections_Generic_IEnumerator_AssetData__TypeInfo, 0);
+      }
+      v38 = (*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v72, *(_QWORD *)(v37 + 8));
+      v46 = v38;
+      if ( !v38 )
+        sub_21FFECC(0, v39);
+      if ( !v8
+        || (items = v8->fields._items,
+            v39 = *(Il2CppObject **)(v38 + 24),
+            v48 = Method_System_Collections_Generic_List_string__Add__,
+            ++v8->fields._version,
+            !items) )
+      {
+        sub_21FFECC(v38, v39);
+      }
       size = v8->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v8,
-          v43,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+          v39,
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
-        v47 = &items->obj.klass + size;
+        v50 = &items->obj.klass + size;
         v8->fields._size = size + 1;
-        v47[4] = (Il2CppClass *)v43;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v47 + 4), (int32_t)v43, v36, v37, v38, v39, v40, v41);
+        v50[4] = (Il2CppClass *)v39;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v50 + 4), (int32_t)v39, v40, v41, v42, v43, v44, v45);
       }
       if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
               (System_Collections_Generic_Dictionary_object__object__o *)info,
-              *(Il2CppObject **)(v42 + 24),
-              (const MethodInfo_36017D8 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__ContainsKey__) )
+              *(Il2CppObject **)(v46 + 24),
+              (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__ContainsKey__) )
       {
-        v48 = *(Il2CppObject **)(v42 + 24);
-        sceneName = v67->fields.sceneName;
-        v50 = sub_1D0F300(AssetsInfo_DataInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v50, 0);
-        *(_QWORD *)(v50 + 16) = sceneName;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v50 + 16), (int32_t)sceneName, v51, v52, v53, v54, v55, v56);
+        v51 = *(Il2CppObject **)(v46 + 24);
+        sceneName = v71->fields.sceneName;
+        v53 = sub_21FFEBC(AssetsInfo_DataInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v53, 0);
+        *(_QWORD *)(v53 + 16) = sceneName;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v53 + 16), (int32_t)sceneName, v54, v55, v56, v57, v58, v59);
         System_Collections_Generic_Dictionary_object__object___set_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)info,
-          v48,
-          (Il2CppObject *)v50,
-          (const MethodInfo_36015D0 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__set_Item__);
+          v51,
+          (Il2CppObject *)v53,
+          (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__set_Item__);
       }
       Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                (System_Collections_Generic_Dictionary_object__object__o *)info,
-               *(Il2CppObject **)(v42 + 24),
-               (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
+               *(Il2CppObject **)(v46 + 24),
+               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
       if ( !Item )
-        sub_1D0F30C(0, v58);
-      LODWORD(Item[1].monitor) = *(_DWORD *)(v42 + 84);
+        sub_21FFECC(0, v61);
+      v62 = *(_DWORD *)(v46 + 84);
+      v29 = v72;
+      LODWORD(Item[1].monitor) = v62;
     }
-    v59 = *(_QWORD *)v25;
-    v60 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+    if ( v72 )
     {
-      v61 = (int *)(*(_QWORD *)(v59 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v61 - 1) != System_IDisposable_TypeInfo )
+      v63 = *(_QWORD *)v72;
+      v64 = *(unsigned __int16 *)(*(_QWORD *)v72 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v72 + 302LL) )
       {
-        --v60;
-        v61 += 4;
-        if ( !v60 )
-          goto LABEL_48;
+        v65 = (int *)(*(_QWORD *)(v63 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v65 - 1) != System_IDisposable_TypeInfo )
+        {
+          --v64;
+          v65 += 4;
+          if ( !v64 )
+            goto LABEL_52;
+        }
+        v66 = v63 + 16LL * *v65 + 312;
       }
-      v62 = v59 + 16LL * *v61 + 312;
+      else
+      {
+LABEL_52:
+        v66 = sub_2237E2C(v72, System_IDisposable_TypeInfo, 0);
+      }
+      this = (AssetsInfo_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v66)(v72, *(_QWORD *)(v66 + 8));
     }
-    else
-    {
-LABEL_48:
-      v62 = sub_1CE5430(v25, System_IDisposable_TypeInfo, 0);
-    }
-    this = (AssetsInfo_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v62)(v25, *(_QWORD *)(v62 + 8));
-    if ( !v66 )
-LABEL_63:
-      sub_1D0F30C(this, assetList);
-    max_length = v66->max_length;
+    if ( !v70 )
+LABEL_68:
+      sub_21FFECC(this, assetList);
+    max_length = v70->max_length;
     if ( (int)max_length >= 1 )
     {
-      v64 = 0;
+      v68 = 0;
       while ( 1 )
       {
-        if ( v64 >= (unsigned int)max_length )
-          sub_1D0F314(this);
+        if ( v68 >= (unsigned int)max_length )
+          sub_21FFED4(this);
         if ( !v8 )
           break;
-        v65 = v66->m_Items[v64];
+        v69 = v70->m_Items[v68];
         this = (AssetsInfo_o *)System_Collections_Generic_List_object___Contains(
                                  v8,
-                                 v65,
-                                 (const MethodInfo_395C7A0 *)Method_System_Collections_Generic_List_string__Contains__);
+                                 v69,
+                                 (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_string__Contains__);
         if ( ((unsigned __int8)this & 1) == 0 )
           this = (AssetsInfo_o *)System_Collections_Generic_Dictionary_object__object___Remove(
                                    (System_Collections_Generic_Dictionary_object__object__o *)info,
-                                   v65,
-                                   (const MethodInfo_3602AE0 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__Remove__);
-        LODWORD(max_length) = v66->max_length;
-        if ( (__int64)++v64 >= (int)max_length )
+                                   v69,
+                                   (const MethodInfo_3FCB984 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__Remove__);
+        LODWORD(max_length) = v70->max_length;
+        if ( (__int64)++v68 >= (int)max_length )
           return;
       }
-      goto LABEL_63;
+      goto LABEL_68;
     }
   }
 }
@@ -362,246 +371,275 @@ LABEL_63:
 
 void AssetsInfo__OnGUI(AssetsInfo_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  const MethodInfo *v4; // x2
+  __int64 v2; // x2
+  AssetsInfo_AssetsInfoData_o *v4; // x1
+  const MethodInfo *v5; // x2
   AssetsInfo_AssetsInfoData_o *currentAssets; // x0
-  const MethodInfo *v6; // x2
-  System_String_o *v7; // x20
+  const MethodInfo *v7; // x2
+  System_String_o *v8; // x20
   System_String_o *Paths; // x0
-  System_String_o *v9; // x20
-  long double inited; // q0
-  _QWORD *v11; // x21
-  __int64 v12; // x8
-  __int64 v13; // x0
-  __int64 v14; // x0
-  int32_t sortType; // w8
-  __int64 v16; // x21
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  int32_t v20; // w5
-  int64_t v21; // x6
-  System_String_o *v22; // x7
-  long double v23; // q0
-  __int64 v24; // x21
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
+  __int64 v10; // x1
+  __int64 v11; // x2
+  System_String_o *v12; // x20
+  __int64 v13; // x1
+  __int64 v14; // x2
+  long double v15; // q0
+  _QWORD *v16; // x21
+  __int64 v17; // x8
+  __int64 v18; // x0
+  __int64 v19; // x0
+  int32_t sortType; // w23
+  __int64 v21; // x21
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // x1
+  __int64 v29; // x2
+  long double v30; // q0
   int32_t v31; // w8
-  __int64 v32; // x21
-  int32_t v33; // w2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  int32_t v36; // w5
-  int64_t v37; // x6
-  System_String_o *v38; // x7
+  _QWORD *v32; // x21
+  __int64 v33; // x8
+  __int64 v34; // x0
+  __int64 v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x2
+  long double v38; // q0
   _QWORD *v39; // x21
-  __int64 v40; // x8
-  __int64 v41; // x0
-  __int64 v42; // x0
-  long double v43; // q0
-  _QWORD *v44; // x21
-  float y; // s8
-  float x; // s9
-  __int64 v47; // x8
-  __int64 v48; // x0
-  __int64 v49; // x0
-  long double v50; // q0
-  UnityEngine_Vector2_o v51; // kr00_8
-  _QWORD *v52; // x19
-  __int64 v53; // x8
-  __int64 v54; // x0
-  __int64 v55; // x0
-  UnityEngine_Vector2_o v56; // 0:s0.4,4:s1.4
-  UnityEngine_Rect_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float x; // s8
+  float y; // s9
+  __int64 v42; // x8
+  __int64 v43; // x0
+  __int64 v44; // x0
+  UnityEngine_Vector2_o v45; // x1
+  UnityEngine_Vector2_o v46; // x2
+  long double v47; // q0
+  UnityEngine_Vector2_o v48; // kr00_8
+  _QWORD *v49; // x21
+  __int64 v50; // x8
+  __int64 v51; // x0
+  __int64 v52; // x0
+  UnityEngine_Vector2_o v53; // 0:s0.4,4:s1.4
+  UnityEngine_Rect_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E76A07 & 1) == 0 )
+  if ( (byte_59379B4 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
-    sub_1D0F0B4(&Method_System_Array_Empty_GUILayoutOption___);
-    sub_1D0F0B4(&UnityEngine_GUILayoutOption___TypeInfo);
-    sub_1D0F0B4(&UnityEngine_GUI_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_25944/*"ソート：シーン名"*/);
-    sub_1D0F0B4(&StringLiteral_1534/*"<Asset>\n"*/);
-    sub_1D0F0B4(&StringLiteral_25943/*"ソート：アセットパス"*/);
-    sub_1D0F0B4(&StringLiteral_25945/*"ソート：デフォルト"*/);
-    sub_1D0F0B4(&StringLiteral_48/*"\n\n<Resource>\n"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E76A07 = 1;
+    sub_21FFC50(&UnityEngine_Application_TypeInfo);
+    sub_21FFC50(&Method_System_Array_Empty_GUILayoutOption___);
+    sub_21FFC50(&UnityEngine_GUILayoutOption___TypeInfo);
+    sub_21FFC50(&UnityEngine_GUI_TypeInfo);
+    sub_21FFC50(&StringLiteral_26770/*"ソート：シーン名"*/);
+    sub_21FFC50(&StringLiteral_1617/*"<Asset>\n"*/);
+    sub_21FFC50(&StringLiteral_26769/*"ソート：アセットパス"*/);
+    sub_21FFC50(&StringLiteral_26771/*"ソート：デフォルト"*/);
+    sub_21FFC50(&StringLiteral_48/*"\n\n<Resource>\n"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59379B4 = 1;
   }
-  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
   if ( UnityEngine_Application__get_isPlaying(0) )
   {
     currentAssets = this->fields.currentAssets;
-    if ( !currentAssets )
-      goto LABEL_59;
-    currentAssets = (AssetsInfo_AssetsInfoData_o *)AssetsInfo_AssetsInfoData__GetPaths(
-                                                     currentAssets,
-                                                     this->fields.sortType,
-                                                     v4);
-    if ( !this->fields.currentResources )
-      goto LABEL_59;
-    v7 = (System_String_o *)currentAssets;
-    Paths = AssetsInfo_AssetsInfoData__GetPaths(this->fields.currentResources, this->fields.sortType, v6);
-    v9 = System_String__Concat_65603040(
-           (System_String_o *)StringLiteral_1534/*"<Asset>\n"*/,
-           v7,
-           (System_String_o *)StringLiteral_48/*"\n\n<Resource>\n"*/,
-           Paths,
-           0);
-    if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
-    v57.fields.m_XMin = 5.0;
-    v57.fields.m_YMin = 5.0;
-    v57.fields.m_Height = 825.0;
-    v57.fields.m_Width = 400.0;
-    UnityEngine_GUI__Box(v57, (System_String_o *)StringLiteral_1/*""*/, 0);
-    v11 = Method_System_Array_Empty_GUILayoutOption___;
-    v12 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
-    if ( !v12 )
+    if ( currentAssets )
     {
-      sub_1CE5198(Method_System_Array_Empty_GUILayoutOption___);
-      v12 = v11[7];
-    }
-    v13 = *(_QWORD *)(v12 + 16);
-    if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1CE513C(inited);
-    if ( !*(_DWORD *)(v13 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v13);
-    v14 = *(_QWORD *)(v11[7] + 16LL);
-    if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-      v14 = sub_1CE513C(inited);
-    UnityEngine_GUILayout__BeginVertical(**(UnityEngine_GUILayoutOption_array ***)(v14 + 184), 0);
-    UnityEngine_GUILayout__Space(10.0, 0);
-    sortType = this->fields.sortType;
-    if ( sortType == 1 )
-    {
-      v24 = sub_1D0F15C(UnityEngine_GUILayoutOption___TypeInfo, 1);
-      currentAssets = (AssetsInfo_AssetsInfoData_o *)UnityEngine_GUILayout__Height(40.0, 0);
-      if ( !v24 )
-        goto LABEL_59;
-      if ( !*(_DWORD *)(v24 + 24) )
-        goto LABEL_60;
-      *(_QWORD *)(v24 + 32) = currentAssets;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v24 + 32), (int32_t)currentAssets, v25, v26, v27, v28, v29, v30);
-      if ( UnityEngine_GUILayout__Button(
-             (System_String_o *)StringLiteral_25943/*"ソート：アセットパス"*/,
-             (UnityEngine_GUILayoutOption_array *)v24,
-             0) )
+      currentAssets = (AssetsInfo_AssetsInfoData_o *)AssetsInfo_AssetsInfoData__GetPaths(
+                                                       currentAssets,
+                                                       this->fields.sortType,
+                                                       v5);
+      if ( this->fields.currentResources )
       {
-        v31 = 2;
-LABEL_33:
-        this->fields.sortType = v31;
-      }
-    }
-    else
-    {
-      if ( sortType == 2 )
-      {
-        v16 = sub_1D0F15C(UnityEngine_GUILayoutOption___TypeInfo, 1);
-        currentAssets = (AssetsInfo_AssetsInfoData_o *)UnityEngine_GUILayout__Height(40.0, 0);
-        if ( v16 )
+        v8 = (System_String_o *)currentAssets;
+        Paths = AssetsInfo_AssetsInfoData__GetPaths(this->fields.currentResources, this->fields.sortType, v7);
+        v12 = System_String__Concat_75483552(
+                (System_String_o *)StringLiteral_1617/*"<Asset>\n"*/,
+                v8,
+                (System_String_o *)StringLiteral_48/*"\n\n<Resource>\n"*/,
+                Paths,
+                0);
+        if ( !*(&UnityEngine_GUI_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo, v10, v11);
+        v54.fields.m_XMin = 5.0;
+        v54.fields.m_YMin = 5.0;
+        v54.fields.m_Height = 825.0;
+        v54.fields.m_Width = 400.0;
+        UnityEngine_GUI__Box(v54, (System_String_o *)StringLiteral_1/*""*/, 0);
+        v16 = Method_System_Array_Empty_GUILayoutOption___;
+        v17 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
+        if ( !v17 )
         {
-          if ( *(_DWORD *)(v16 + 24) )
+          sub_2237B54(Method_System_Array_Empty_GUILayoutOption___);
+          v17 = v16[7];
+        }
+        v18 = *(_QWORD *)(v17 + 16);
+        if ( (*(_WORD *)(v18 + 309) & 1) == 0 )
+          v18 = sub_2237AF8(v15);
+        if ( !*(_DWORD *)(v18 + 228) )
+          *(__n128 *)&v15 = j_il2cpp_runtime_class_init_0(v18, v13, v14);
+        v19 = *(_QWORD *)(v16[7] + 16LL);
+        if ( (*(_WORD *)(v19 + 309) & 1) == 0 )
+          v19 = sub_2237AF8(v15);
+        UnityEngine_GUILayout__BeginVertical(**(UnityEngine_GUILayoutOption_array ***)(v19 + 184), 0);
+        UnityEngine_GUILayout__Space(10.0, 0);
+        sortType = this->fields.sortType;
+        v21 = sub_21FFD10(UnityEngine_GUILayoutOption___TypeInfo, 1);
+        currentAssets = (AssetsInfo_AssetsInfoData_o *)UnityEngine_GUILayout__Height(40.0, 0);
+        v4 = currentAssets;
+        if ( sortType == 1 )
+        {
+          if ( v21 )
           {
-            *(_QWORD *)(v16 + 32) = currentAssets;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v16 + 32), (int32_t)currentAssets, v17, v18, v19, v20, v21, v22);
+            if ( *(_DWORD *)(v21 + 24) )
+            {
+              *(_QWORD *)(v21 + 32) = currentAssets;
+              sub_21FFBF4(
+                (MissionNaviTransitionBoardItem_o *)(v21 + 32),
+                (int32_t)currentAssets,
+                v22,
+                v23,
+                v24,
+                v25,
+                v26,
+                v27);
+              if ( UnityEngine_GUILayout__Button(
+                     (System_String_o *)StringLiteral_26769/*"ソート：アセットパス"*/,
+                     (UnityEngine_GUILayoutOption_array *)v21,
+                     0) )
+              {
+                v31 = 2;
+                goto LABEL_33;
+              }
+LABEL_34:
+              v32 = Method_System_Array_Empty_GUILayoutOption___;
+              v33 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
+              if ( !v33 )
+              {
+                sub_2237B54(Method_System_Array_Empty_GUILayoutOption___);
+                v33 = v32[7];
+              }
+              v34 = *(_QWORD *)(v33 + 16);
+              if ( (*(_WORD *)(v34 + 309) & 1) == 0 )
+                v34 = sub_2237AF8(v30);
+              if ( !*(_DWORD *)(v34 + 228) )
+                *(__n128 *)&v30 = j_il2cpp_runtime_class_init_0(v34, v28, v29);
+              v35 = *(_QWORD *)(v32[7] + 16LL);
+              if ( (*(_WORD *)(v35 + 309) & 1) == 0 )
+                v35 = sub_2237AF8(v30);
+              UnityEngine_GUILayout__BeginHorizontal(**(UnityEngine_GUILayoutOption_array ***)(v35 + 184), 0);
+              UnityEngine_GUILayout__Space(10.0, 0);
+              v39 = Method_System_Array_Empty_GUILayoutOption___;
+              x = this->fields.scrollPos.fields.x;
+              y = this->fields.scrollPos.fields.y;
+              v42 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
+              if ( !v42 )
+              {
+                sub_2237B54(Method_System_Array_Empty_GUILayoutOption___);
+                v42 = v39[7];
+              }
+              v43 = *(_QWORD *)(v42 + 16);
+              if ( (*(_WORD *)(v43 + 309) & 1) == 0 )
+                v43 = sub_2237AF8(v38);
+              if ( !*(_DWORD *)(v43 + 228) )
+                *(__n128 *)&v38 = j_il2cpp_runtime_class_init_0(v43, v36, v37);
+              v44 = *(_QWORD *)(v39[7] + 16LL);
+              if ( (*(_WORD *)(v44 + 309) & 1) == 0 )
+                v44 = sub_2237AF8(v38);
+              v53.fields.x = x;
+              v53.fields.y = y;
+              v48 = UnityEngine_GUILayout__BeginScrollView(v53, **(UnityEngine_GUILayoutOption_array ***)(v44 + 184), 0);
+              *(float *)&v47 = v48.fields.x;
+              v49 = Method_System_Array_Empty_GUILayoutOption___;
+              this->fields.scrollPos = v48;
+              v50 = v49[7];
+              if ( !v50 )
+              {
+                sub_2237B54(v49);
+                v50 = v49[7];
+              }
+              v51 = *(_QWORD *)(v50 + 16);
+              if ( (*(_WORD *)(v51 + 309) & 1) == 0 )
+                v51 = sub_2237AF8(v47);
+              if ( !*(_DWORD *)(v51 + 228) )
+                *(__n128 *)&v47 = ((__n128 (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(
+                                    v51,
+                                    v45,
+                                    v46);
+              v52 = *(_QWORD *)(v49[7] + 16LL);
+              if ( (*(_WORD *)(v52 + 309) & 1) == 0 )
+                v52 = sub_2237AF8(v47);
+              UnityEngine_GUILayout__Label(v12, **(UnityEngine_GUILayoutOption_array ***)(v52 + 184), 0);
+              UnityEngine_GUILayout__EndScrollView(0);
+              UnityEngine_GUILayout__EndHorizontal(0);
+              UnityEngine_GUILayout__Space(10.0, 0);
+              UnityEngine_GUILayout__EndVertical(0);
+              return;
+            }
+LABEL_60:
+            sub_21FFED4(currentAssets);
+          }
+        }
+        else if ( sortType == 2 )
+        {
+          if ( v21 )
+          {
+            if ( *(_DWORD *)(v21 + 24) )
+            {
+              *(_QWORD *)(v21 + 32) = currentAssets;
+              sub_21FFBF4(
+                (MissionNaviTransitionBoardItem_o *)(v21 + 32),
+                (int32_t)currentAssets,
+                v22,
+                v23,
+                v24,
+                v25,
+                v26,
+                v27);
+              if ( UnityEngine_GUILayout__Button(
+                     (System_String_o *)StringLiteral_26770/*"ソート：シーン名"*/,
+                     (UnityEngine_GUILayoutOption_array *)v21,
+                     0) )
+              {
+                v31 = 0;
+LABEL_33:
+                this->fields.sortType = v31;
+                goto LABEL_34;
+              }
+              goto LABEL_34;
+            }
+            goto LABEL_60;
+          }
+        }
+        else if ( v21 )
+        {
+          if ( *(_DWORD *)(v21 + 24) )
+          {
+            *(_QWORD *)(v21 + 32) = currentAssets;
+            sub_21FFBF4(
+              (MissionNaviTransitionBoardItem_o *)(v21 + 32),
+              (int32_t)currentAssets,
+              v22,
+              v23,
+              v24,
+              v25,
+              v26,
+              v27);
             if ( UnityEngine_GUILayout__Button(
-                   (System_String_o *)StringLiteral_25944/*"ソート：シーン名"*/,
-                   (UnityEngine_GUILayoutOption_array *)v16,
+                   (System_String_o *)StringLiteral_26771/*"ソート：デフォルト"*/,
+                   (UnityEngine_GUILayoutOption_array *)v21,
                    0) )
             {
-              this->fields.sortType = 0;
+              v31 = 1;
+              goto LABEL_33;
             }
             goto LABEL_34;
           }
-LABEL_60:
-          sub_1D0F314(currentAssets);
+          goto LABEL_60;
         }
-LABEL_59:
-        sub_1D0F30C(currentAssets, v3);
-      }
-      v32 = sub_1D0F15C(UnityEngine_GUILayoutOption___TypeInfo, 1);
-      currentAssets = (AssetsInfo_AssetsInfoData_o *)UnityEngine_GUILayout__Height(40.0, 0);
-      if ( !v32 )
-        goto LABEL_59;
-      if ( !*(_DWORD *)(v32 + 24) )
-        goto LABEL_60;
-      *(_QWORD *)(v32 + 32) = currentAssets;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)(v32 + 32), (int32_t)currentAssets, v33, v34, v35, v36, v37, v38);
-      if ( UnityEngine_GUILayout__Button(
-             (System_String_o *)StringLiteral_25945/*"ソート：デフォルト"*/,
-             (UnityEngine_GUILayoutOption_array *)v32,
-             0) )
-      {
-        v31 = 1;
-        goto LABEL_33;
       }
     }
-LABEL_34:
-    v39 = Method_System_Array_Empty_GUILayoutOption___;
-    v40 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
-    if ( !v40 )
-    {
-      sub_1CE5198(Method_System_Array_Empty_GUILayoutOption___);
-      v40 = v39[7];
-    }
-    v41 = *(_QWORD *)(v40 + 16);
-    if ( (*(_BYTE *)(v41 + 309) & 1) == 0 )
-      v41 = sub_1CE513C(v23);
-    if ( !*(_DWORD *)(v41 + 224) )
-      v23 = j_il2cpp_runtime_class_init_0(v41);
-    v42 = *(_QWORD *)(v39[7] + 16LL);
-    if ( (*(_BYTE *)(v42 + 309) & 1) == 0 )
-      v42 = sub_1CE513C(v23);
-    UnityEngine_GUILayout__BeginHorizontal(**(UnityEngine_GUILayoutOption_array ***)(v42 + 184), 0);
-    UnityEngine_GUILayout__Space(10.0, 0);
-    v44 = Method_System_Array_Empty_GUILayoutOption___;
-    x = this->fields.scrollPos.fields.x;
-    y = this->fields.scrollPos.fields.y;
-    v47 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
-    if ( !v47 )
-    {
-      sub_1CE5198(Method_System_Array_Empty_GUILayoutOption___);
-      v47 = v44[7];
-    }
-    v48 = *(_QWORD *)(v47 + 16);
-    if ( (*(_BYTE *)(v48 + 309) & 1) == 0 )
-      v48 = sub_1CE513C(v43);
-    if ( !*(_DWORD *)(v48 + 224) )
-      v43 = j_il2cpp_runtime_class_init_0(v48);
-    v49 = *(_QWORD *)(v44[7] + 16LL);
-    if ( (*(_BYTE *)(v49 + 309) & 1) == 0 )
-      v49 = sub_1CE513C(v43);
-    v56.fields.x = x;
-    v56.fields.y = y;
-    v51 = UnityEngine_GUILayout__BeginScrollView(v56, **(UnityEngine_GUILayoutOption_array ***)(v49 + 184), 0);
-    *(float *)&v50 = v51.fields.x;
-    this->fields.scrollPos = v51;
-    v52 = Method_System_Array_Empty_GUILayoutOption___;
-    v53 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
-    if ( !v53 )
-    {
-      sub_1CE5198(Method_System_Array_Empty_GUILayoutOption___);
-      v53 = v52[7];
-    }
-    v54 = *(_QWORD *)(v53 + 16);
-    if ( (*(_BYTE *)(v54 + 309) & 1) == 0 )
-      v54 = sub_1CE513C(v50);
-    if ( !*(_DWORD *)(v54 + 224) )
-      v50 = j_il2cpp_runtime_class_init_0(v54);
-    v55 = *(_QWORD *)(v52[7] + 16LL);
-    if ( (*(_BYTE *)(v55 + 309) & 1) == 0 )
-      v55 = sub_1CE513C(v50);
-    UnityEngine_GUILayout__Label(v9, **(UnityEngine_GUILayoutOption_array ***)(v55 + 184), 0);
-    UnityEngine_GUILayout__EndScrollView(0);
-    UnityEngine_GUILayout__EndHorizontal(0);
-    UnityEngine_GUILayout__Space(10.0, 0);
-    UnityEngine_GUILayout__EndVertical(0);
+    sub_21FFECC(currentAssets, v4);
   }
 }
 
@@ -611,139 +649,139 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
   System_Collections_Generic_List_object__o *v1; // x19
   __int64 v2; // x0
   Il2CppObject *v3; // x1
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   struct System_Object_array *items; // x8
   _QWORD *v11; // x9
   __int64 size; // x10
   Il2CppClass **v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
   struct System_Object_array *v20; // x8
   _QWORD *v21; // x9
   __int64 v22; // x10
   Il2CppClass **v23; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
   int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  bool v28; // w6
+  bool v29; // w7
   struct System_Object_array *v30; // x8
   _QWORD *v31; // x9
   __int64 v32; // x10
   Il2CppClass **v33; // x0
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
   int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
+  bool v38; // w6
+  bool v39; // w7
   struct System_Object_array *v40; // x8
   _QWORD *v41; // x9
   __int64 v42; // x10
   Il2CppClass **v43; // x0
-  int32_t v44; // w2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
   int32_t v47; // w5
-  int64_t v48; // x6
-  System_String_o *v49; // x7
+  bool v48; // w6
+  bool v49; // w7
   struct System_Object_array *v50; // x8
   _QWORD *v51; // x9
   __int64 v52; // x10
   Il2CppClass **v53; // x0
-  int32_t v54; // w2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
   int32_t v57; // w5
-  int64_t v58; // x6
-  System_String_o *v59; // x7
+  bool v58; // w6
+  bool v59; // w7
   struct System_Object_array *v60; // x8
   _QWORD *v61; // x9
   __int64 v62; // x10
   Il2CppClass **v63; // x0
-  int32_t v64; // w2
-  int32_t v65; // w3
-  System_String_o *v66; // x4
+  System_String_o *v64; // x2
+  System_String_o *v65; // x3
+  int32_t v66; // w4
   int32_t v67; // w5
-  int64_t v68; // x6
-  System_String_o *v69; // x7
+  bool v68; // w6
+  bool v69; // w7
   struct System_Object_array *v70; // x8
   _QWORD *v71; // x9
   __int64 v72; // x10
   Il2CppClass **v73; // x0
-  int32_t v74; // w2
-  int32_t v75; // w3
-  System_String_o *v76; // x4
+  System_String_o *v74; // x2
+  System_String_o *v75; // x3
+  int32_t v76; // w4
   int32_t v77; // w5
-  int64_t v78; // x6
-  System_String_o *v79; // x7
+  bool v78; // w6
+  bool v79; // w7
   struct System_Object_array *v80; // x8
   _QWORD *v81; // x9
   __int64 v82; // x10
   Il2CppClass **v83; // x0
-  int32_t v84; // w2
-  int32_t v85; // w3
-  System_String_o *v86; // x4
+  System_String_o *v84; // x2
+  System_String_o *v85; // x3
+  int32_t v86; // w4
   int32_t v87; // w5
-  int64_t v88; // x6
-  System_String_o *v89; // x7
+  bool v88; // w6
+  bool v89; // w7
   struct System_Object_array *v90; // x8
   _QWORD *v91; // x9
   __int64 v92; // x10
   Il2CppClass **v93; // x0
-  int32_t v94; // w2
-  int32_t v95; // w3
-  System_String_o *v96; // x4
+  System_String_o *v94; // x2
+  System_String_o *v95; // x3
+  int32_t v96; // w4
   int32_t v97; // w5
-  int64_t v98; // x6
-  System_String_o *v99; // x7
+  bool v98; // w6
+  bool v99; // w7
   struct System_Object_array *v100; // x8
   _QWORD *v101; // x9
   __int64 v102; // x10
   Il2CppClass **v103; // x0
-  int32_t v104; // w2
-  int32_t v105; // w3
-  System_String_o *v106; // x4
+  System_String_o *v104; // x2
+  System_String_o *v105; // x3
+  int32_t v106; // w4
   int32_t v107; // w5
-  int64_t v108; // x6
-  System_String_o *v109; // x7
+  bool v108; // w6
+  bool v109; // w7
 
-  if ( (byte_4E76A0C & 1) == 0 )
+  if ( (byte_59379B9 & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetsInfo_AssetsInfoData_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1D0F0B4(&StringLiteral_13035/*"ShopBanners/DownloadShopBanner"*/);
-    sub_1D0F0B4(&StringLiteral_4429/*"CharaGraphOption/CharaGraphOption"*/);
-    sub_1D0F0B4(&StringLiteral_8245/*"Items/DownloadItem"*/);
-    sub_1D0F0B4(&StringLiteral_4422/*"CharaFigure/8001000"*/);
-    sub_1D0F0B4(&StringLiteral_9036/*"Marks/DownloadMark"*/);
-    sub_1D0F0B4(&StringLiteral_6661/*"Faces/DownloadFace"*/);
-    sub_1D0F0B4(&StringLiteral_3075/*"Banner/DownloadBanner"*/);
-    sub_1D0F0B4(&StringLiteral_13078/*"SkillIcons/DownloadSkillIcon"*/);
-    sub_1D0F0B4(&StringLiteral_6173/*"EquipFaces/DownloadEquipFace"*/);
-    sub_1D0F0B4(&StringLiteral_4528/*"ClassIcons/DownloadClassIcons"*/);
-    byte_4E76A0C = 1;
+    sub_21FFC50(&AssetsInfo_AssetsInfoData_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
+    sub_21FFC50(&StringLiteral_13365/*"ShopBanners/DownloadShopBanner"*/);
+    sub_21FFC50(&StringLiteral_4552/*"CharaGraphOption/CharaGraphOption"*/);
+    sub_21FFC50(&StringLiteral_8479/*"Items/DownloadItem"*/);
+    sub_21FFC50(&StringLiteral_4545/*"CharaFigure/8001000"*/);
+    sub_21FFC50(&StringLiteral_9286/*"Marks/DownloadMark"*/);
+    sub_21FFC50(&StringLiteral_6862/*"Faces/DownloadFace"*/);
+    sub_21FFC50(&StringLiteral_3169/*"Banner/DownloadBanner"*/);
+    sub_21FFC50(&StringLiteral_13410/*"SkillIcons/DownloadSkillIcon"*/);
+    sub_21FFC50(&StringLiteral_6355/*"EquipFaces/DownloadEquipFace"*/);
+    sub_21FFC50(&StringLiteral_4652/*"ClassIcons/DownloadClassIcons"*/);
+    byte_59379B9 = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_string__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !v1 )
     goto LABEL_45;
-  v3 = (Il2CppObject *)StringLiteral_6661/*"Faces/DownloadFace"*/;
   items = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_6862/*"Faces/DownloadFace"*/;
   v11 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !items )
@@ -754,17 +792,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
     v13 = &items->obj.klass + size;
     v1->fields._size = size + 1;
     v13[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v13 + 4), (int32_t)v3, v4, v5, v6, v7, v8, v9);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 4), (int32_t)v3, v4, v5, v6, v7, v8, v9);
   }
-  v3 = (Il2CppObject *)StringLiteral_6173/*"EquipFaces/DownloadEquipFace"*/;
   v20 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_6355/*"EquipFaces/DownloadEquipFace"*/;
   v21 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v20 )
@@ -775,17 +813,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
     v23 = &v20->obj.klass + v22;
     v1->fields._size = v22 + 1;
     v23[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v23 + 4), (int32_t)v3, v14, v15, v16, v17, v18, v19);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v3, v14, v15, v16, v17, v18, v19);
   }
-  v3 = (Il2CppObject *)StringLiteral_8245/*"Items/DownloadItem"*/;
   v30 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_8479/*"Items/DownloadItem"*/;
   v31 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v30 )
@@ -796,17 +834,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
   }
   else
   {
     v33 = &v30->obj.klass + v32;
     v1->fields._size = v32 + 1;
     v33[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v33 + 4), (int32_t)v3, v24, v25, v26, v27, v28, v29);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v3, v24, v25, v26, v27, v28, v29);
   }
-  v3 = (Il2CppObject *)StringLiteral_4528/*"ClassIcons/DownloadClassIcons"*/;
   v40 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_4652/*"ClassIcons/DownloadClassIcons"*/;
   v41 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v40 )
@@ -817,17 +855,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
   }
   else
   {
     v43 = &v40->obj.klass + v42;
     v1->fields._size = v42 + 1;
     v43[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v43 + 4), (int32_t)v3, v34, v35, v36, v37, v38, v39);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v43 + 4), (int32_t)v3, v34, v35, v36, v37, v38, v39);
   }
-  v3 = (Il2CppObject *)StringLiteral_13078/*"SkillIcons/DownloadSkillIcon"*/;
   v50 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_13410/*"SkillIcons/DownloadSkillIcon"*/;
   v51 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v50 )
@@ -838,17 +876,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
   }
   else
   {
     v53 = &v50->obj.klass + v52;
     v1->fields._size = v52 + 1;
     v53[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v53 + 4), (int32_t)v3, v44, v45, v46, v47, v48, v49);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v53 + 4), (int32_t)v3, v44, v45, v46, v47, v48, v49);
   }
-  v3 = (Il2CppObject *)StringLiteral_3075/*"Banner/DownloadBanner"*/;
   v60 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_3169/*"Banner/DownloadBanner"*/;
   v61 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v60 )
@@ -859,17 +897,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
   }
   else
   {
     v63 = &v60->obj.klass + v62;
     v1->fields._size = v62 + 1;
     v63[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v63 + 4), (int32_t)v3, v54, v55, v56, v57, v58, v59);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v63 + 4), (int32_t)v3, v54, v55, v56, v57, v58, v59);
   }
-  v3 = (Il2CppObject *)StringLiteral_9036/*"Marks/DownloadMark"*/;
   v70 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_9286/*"Marks/DownloadMark"*/;
   v71 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v70 )
@@ -880,17 +918,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
   }
   else
   {
     v73 = &v70->obj.klass + v72;
     v1->fields._size = v72 + 1;
     v73[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v73 + 4), (int32_t)v3, v64, v65, v66, v67, v68, v69);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v73 + 4), (int32_t)v3, v64, v65, v66, v67, v68, v69);
   }
-  v3 = (Il2CppObject *)StringLiteral_13035/*"ShopBanners/DownloadShopBanner"*/;
   v80 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_13365/*"ShopBanners/DownloadShopBanner"*/;
   v81 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v80 )
@@ -901,17 +939,17 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
   }
   else
   {
     v83 = &v80->obj.klass + v82;
     v1->fields._size = v82 + 1;
     v83[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v83 + 4), (int32_t)v3, v74, v75, v76, v77, v78, v79);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v83 + 4), (int32_t)v3, v74, v75, v76, v77, v78, v79);
   }
-  v3 = (Il2CppObject *)StringLiteral_4429/*"CharaGraphOption/CharaGraphOption"*/;
   v90 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_4552/*"CharaGraphOption/CharaGraphOption"*/;
   v91 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v90 )
@@ -922,40 +960,40 @@ void AssetsInfo_AssetsInfoData___cctor(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
   }
   else
   {
     v93 = &v90->obj.klass + v92;
     v1->fields._size = v92 + 1;
     v93[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v93 + 4), (int32_t)v3, v84, v85, v86, v87, v88, v89);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v93 + 4), (int32_t)v3, v84, v85, v86, v87, v88, v89);
   }
-  v3 = (Il2CppObject *)StringLiteral_4422/*"CharaFigure/8001000"*/;
   v100 = v1->fields._items;
+  v3 = (Il2CppObject *)StringLiteral_4545/*"CharaFigure/8001000"*/;
   v101 = Method_System_Collections_Generic_List_string__Add__;
   ++v1->fields._version;
   if ( !v100 )
 LABEL_45:
-    sub_1D0F30C(v2, v3);
+    sub_21FFECC(v2, v3);
   v102 = v1->fields._size;
   if ( (unsigned int)v102 >= LODWORD(v100->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v1,
       v3,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
   }
   else
   {
     v103 = &v100->obj.klass + v102;
     v1->fields._size = v102 + 1;
     v103[4] = (Il2CppClass *)v3;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v103 + 4), (int32_t)v3, v94, v95, v96, v97, v98, v99);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v103 + 4), (int32_t)v3, v94, v95, v96, v97, v98, v99);
   }
   AssetsInfo_AssetsInfoData_TypeInfo->static_fields->IGNORE_LIST = (struct System_Collections_Generic_List_string__o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)AssetsInfo_AssetsInfoData_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)AssetsInfo_AssetsInfoData_TypeInfo->static_fields,
     (int32_t)v1,
     v104,
     v105,
@@ -969,25 +1007,25 @@ LABEL_45:
 void AssetsInfo_AssetsInfoData___ctor(AssetsInfo_AssetsInfoData_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_object__object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E76A0B & 1) == 0 )
+  if ( (byte_59379B8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__TypeInfo);
-    byte_4E76A0B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__TypeInfo);
+    byte_59379B8 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1D0F300(System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3600C34 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo___ctor__);
+    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo___ctor__);
   this->fields.assets = (struct System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -1001,303 +1039,318 @@ System_String_o *AssetsInfo_AssetsInfoData__GetPaths(
   __int64 v6; // x1
   System_Collections_Generic_Dictionary_object__object__o *assets; // x0
   System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *Keys; // x0
-  AssetsInfo_AssetsInfoData___c_c *v9; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x22
+  __int64 v9; // x1
+  __int64 v10; // x2
+  AssetsInfo_AssetsInfoData___c_c *v11; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x22
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *static_fields; // x9
   System_Func_object__bool__o *_9__2_0; // x23
-  Il2CppObject *v12; // x24
-  struct AssetsInfo_AssetsInfoData___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x22
-  AssetsInfo_AssetsInfoData___c_c *v21; // x0
+  Il2CppObject *v15; // x24
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *v16; // x0
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  __int64 v23; // x2
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x22
+  AssetsInfo_AssetsInfoData___c_c *v25; // x0
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *v26; // x8
   System_Func_object__object__o *_9__2_1; // x21
-  Il2CppObject *v23; // x23
-  struct AssetsInfo_AssetsInfoData___c_StaticFields *v24; // x0
-  int32_t v25; // w2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  int32_t v28; // w5
-  int64_t v29; // x6
-  System_String_o *v30; // x7
-  System_Func_object__object__o *v31; // x21
-  System_Linq_IOrderedEnumerable_TSource__o *v32; // x0
-  AssetsInfo_AssetsInfoData___c_c *v33; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v34; // x21
+  Il2CppObject *v28; // x23
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *v29; // x0
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  System_Func_object__object__o *v36; // x21
+  System_Linq_IOrderedEnumerable_TSource__o *v37; // x0
+  __int64 v38; // x1
+  __int64 v39; // x2
+  AssetsInfo_AssetsInfoData___c_c *v40; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v41; // x21
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *v42; // x9
   System_Func_object__object__o *_9__2_3; // x22
-  Il2CppObject *v36; // x23
-  struct AssetsInfo_AssetsInfoData___c_StaticFields *v37; // x0
-  int32_t v38; // w2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  int32_t v41; // w5
-  int64_t v42; // x6
-  System_String_o *v43; // x7
+  Il2CppObject *v44; // x23
+  struct AssetsInfo_AssetsInfoData___c_StaticFields *v45; // x0
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
   System_Collections_Generic_IEnumerable_TSource__c *klass; // x8
-  __int64 v45; // x9
+  __int64 v53; // x9
   int32_t *p_offset; // x10
-  __int64 v47; // x0
-  __int64 v48; // x1
-  __int64 v49; // x21
-  __int64 v50; // x8
-  __int64 v51; // x9
-  int *v52; // x10
-  __int64 v53; // x0
-  __int64 v54; // x8
-  __int64 v55; // x9
-  int *v56; // x10
-  __int64 v57; // x0
-  __int64 v58; // x1
-  Il2CppObject *v59; // x22
-  struct System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__o *v60; // x0
+  __int64 v55; // x0
+  System_Text_StringBuilder_o *appended; // x0
+  __int64 v57; // x1
+  System_Text_StringBuilder_c *v58; // x8
+  __int64 v59; // x9
+  int *v60; // x10
+  __int64 v61; // x0
+  System_Text_StringBuilder_c *v62; // x8
+  __int64 v63; // x9
+  int *v64; // x10
+  __int64 v65; // x0
+  __int64 v66; // x1
+  Il2CppObject *v67; // x21
+  struct System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__o *v68; // x0
   Il2CppObject *Item; // x0
-  const MethodInfo *v62; // x1
+  const MethodInfo *v70; // x1
   System_String_o *Info; // x0
-  System_String_o *v64; // x0
-  __int64 v65; // x8
-  __int64 v66; // x9
-  int *v67; // x10
-  __int64 v68; // x0
+  System_String_o *v72; // x0
+  System_Text_StringBuilder_c *v73; // x8
+  __int64 v74; // x9
+  int *v75; // x10
+  __int64 v76; // x0
+  System_Text_StringBuilder_o *v78; // [xsp+18h] [xbp-58h]
 
-  if ( (byte_4E76A0A & 1) == 0 )
+  if ( (byte_59379B7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetsInfo_AssetsInfoData__GetPaths_b__2_2__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_OrderBy_string__string___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ThenBy_string__string___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_string___);
-    sub_1D0F0B4(&System_Func_string__string__TypeInfo);
-    sub_1D0F0B4(&System_Func_string__bool__TypeInfo);
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_string__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_string__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    sub_1D0F0B4(&System_Text_StringBuilder_TypeInfo);
-    sub_1D0F0B4(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_0__);
-    sub_1D0F0B4(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_1__);
-    sub_1D0F0B4(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_3__);
-    sub_1D0F0B4(&AssetsInfo_AssetsInfoData___c_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1453/*":"*/);
-    byte_4E76A0A = 1;
+    sub_21FFC50(&Method_AssetsInfo_AssetsInfoData__GetPaths_b__2_2__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
+    sub_21FFC50(&Method_System_Linq_Enumerable_OrderBy_string__string___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_ThenBy_string__string___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_string___);
+    sub_21FFC50(&System_Func_string__string__TypeInfo);
+    sub_21FFC50(&System_Func_string__bool__TypeInfo);
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_string__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_string__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
+    sub_21FFC50(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_0__);
+    sub_21FFC50(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_1__);
+    sub_21FFC50(&Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_3__);
+    sub_21FFC50(&AssetsInfo_AssetsInfoData___c_TypeInfo);
+    sub_21FFC50(&StringLiteral_1532/*":"*/);
+    byte_59379B7 = 1;
   }
-  v5 = (System_Text_StringBuilder_o *)sub_1D0F300(System_Text_StringBuilder_TypeInfo);
+  v5 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v5, 0);
   assets = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assets;
   if ( !assets )
-    goto LABEL_63;
+    goto LABEL_65;
   Keys = System_Collections_Generic_Dictionary_object__object___get_Keys(
            assets,
-           (const MethodInfo_36012C4 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
-  v9 = AssetsInfo_AssetsInfoData___c_TypeInfo;
-  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)Keys;
-  if ( !AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished )
+           (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Keys__);
+  v11 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+  v12 = (System_Collections_Generic_IEnumerable_TSource__o *)Keys;
+  if ( !*(&AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo);
-    v9 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo, v9, v10);
+    v11 = AssetsInfo_AssetsInfoData___c_TypeInfo;
   }
-  _9__2_0 = (System_Func_object__bool__o *)v9->static_fields->__9__2_0;
+  static_fields = v11->static_fields;
+  _9__2_0 = (System_Func_object__bool__o *)static_fields->__9__2_0;
   if ( !_9__2_0 )
   {
-    if ( !v9->_2.cctor_finished )
+    if ( !*(&v11->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v9);
-      v9 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v11, v9, v10);
+      static_fields = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
     }
-    v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__2_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_string__bool__TypeInfo);
-    System_Func_object__bool____ctor(_9__2_0, v12, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_0__, 0);
-    static_fields = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
-    static_fields->__9__2_0 = (struct System_Func_string__bool__o *)_9__2_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v14, v15, v16, v17, v18, v19);
+    v15 = (Il2CppObject *)static_fields->__9;
+    _9__2_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_string__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__2_0, v15, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_0__, 0);
+    v16 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
+    v16->__9__2_0 = (struct System_Func_string__bool__o *)_9__2_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->__9__2_0, (int32_t)_9__2_0, v17, v18, v19, v20, v21, v22);
   }
   assets = (System_Collections_Generic_Dictionary_object__object__o *)System_Linq_Enumerable__Where_object_(
-                                                                        v10,
+                                                                        v12,
                                                                         (System_Func_TSource__bool__o *)_9__2_0,
-                                                                        (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_string___);
-  v20 = (System_Collections_Generic_IEnumerable_TSource__o *)assets;
+                                                                        (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_string___);
+  v24 = (System_Collections_Generic_IEnumerable_TSource__o *)assets;
   if ( sortType == 2 )
   {
-    v31 = (System_Func_object__object__o *)sub_1D0F300(System_Func_string__string__TypeInfo);
+    v36 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_string__string__TypeInfo);
     System_Func_object__object____ctor(
-      v31,
+      v36,
       (Il2CppObject *)this,
       Method_AssetsInfo_AssetsInfoData__GetPaths_b__2_2__,
       0);
-    v32 = System_Linq_Enumerable__OrderBy_object__object_(
-            v20,
-            (System_Func_TSource__TKey__o *)v31,
-            (const MethodInfo_327F1AC *)Method_System_Linq_Enumerable_OrderBy_string__string___);
-    v33 = AssetsInfo_AssetsInfoData___c_TypeInfo;
-    v34 = v32;
-    if ( !AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished )
+    v37 = System_Linq_Enumerable__OrderBy_object__object_(
+            v24,
+            (System_Func_TSource__TKey__o *)v36,
+            (const MethodInfo_38557B8 *)Method_System_Linq_Enumerable_OrderBy_string__string___);
+    v40 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+    v41 = v37;
+    if ( !*(&AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo);
-      v33 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo, v38, v39);
+      v40 = AssetsInfo_AssetsInfoData___c_TypeInfo;
     }
-    _9__2_3 = (System_Func_object__object__o *)v33->static_fields->__9__2_3;
+    v42 = v40->static_fields;
+    _9__2_3 = (System_Func_object__object__o *)v42->__9__2_3;
     if ( !_9__2_3 )
     {
-      if ( !v33->_2.cctor_finished )
+      if ( !*(&v40->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v33);
-        v33 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v40, v38, v39);
+        v42 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
       }
-      v36 = (Il2CppObject *)v33->static_fields->__9;
-      _9__2_3 = (System_Func_object__object__o *)sub_1D0F300(System_Func_string__string__TypeInfo);
-      System_Func_object__object____ctor(_9__2_3, v36, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_3__, 0);
-      v37 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
-      v37->__9__2_3 = (struct System_Func_string__string__o *)_9__2_3;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v37->__9__2_3, (int32_t)_9__2_3, v38, v39, v40, v41, v42, v43);
+      v44 = (Il2CppObject *)v42->__9;
+      _9__2_3 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_string__string__TypeInfo);
+      System_Func_object__object____ctor(_9__2_3, v44, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_3__, 0);
+      v45 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
+      v45->__9__2_3 = (struct System_Func_string__string__o *)_9__2_3;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v45->__9__2_3, (int32_t)_9__2_3, v46, v47, v48, v49, v50, v51);
     }
     assets = (System_Collections_Generic_Dictionary_object__object__o *)System_Linq_Enumerable__ThenBy_object__object_(
-                                                                          v34,
+                                                                          v41,
                                                                           (System_Func_TSource__TKey__o *)_9__2_3,
-                                                                          (const MethodInfo_328EC0C *)Method_System_Linq_Enumerable_ThenBy_string__string___);
+                                                                          (const MethodInfo_38677C8 *)Method_System_Linq_Enumerable_ThenBy_string__string___);
     goto LABEL_26;
   }
   if ( sortType == 1 )
   {
-    v21 = AssetsInfo_AssetsInfoData___c_TypeInfo;
-    if ( !AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished )
+    v25 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+    if ( !*(&AssetsInfo_AssetsInfoData___c_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo);
-      v21 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData___c_TypeInfo, v6, v23);
+      v25 = AssetsInfo_AssetsInfoData___c_TypeInfo;
     }
-    _9__2_1 = (System_Func_object__object__o *)v21->static_fields->__9__2_1;
+    v26 = v25->static_fields;
+    _9__2_1 = (System_Func_object__object__o *)v26->__9__2_1;
     if ( !_9__2_1 )
     {
-      if ( !v21->_2.cctor_finished )
+      if ( !*(&v25->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v21);
-        v21 = AssetsInfo_AssetsInfoData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v25, v6, v23);
+        v26 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
       }
-      v23 = (Il2CppObject *)v21->static_fields->__9;
-      _9__2_1 = (System_Func_object__object__o *)sub_1D0F300(System_Func_string__string__TypeInfo);
-      System_Func_object__object____ctor(_9__2_1, v23, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_1__, 0);
-      v24 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
-      v24->__9__2_1 = (struct System_Func_string__string__o *)_9__2_1;
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)&v24->__9__2_1, (int32_t)_9__2_1, v25, v26, v27, v28, v29, v30);
+      v28 = (Il2CppObject *)v26->__9;
+      _9__2_1 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_string__string__TypeInfo);
+      System_Func_object__object____ctor(_9__2_1, v28, Method_AssetsInfo_AssetsInfoData___c__GetPaths_b__2_1__, 0);
+      v29 = AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields;
+      v29->__9__2_1 = (struct System_Func_string__string__o *)_9__2_1;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v29->__9__2_1, (int32_t)_9__2_1, v30, v31, v32, v33, v34, v35);
     }
     assets = (System_Collections_Generic_Dictionary_object__object__o *)System_Linq_Enumerable__OrderBy_object__object_(
-                                                                          v20,
+                                                                          v24,
                                                                           (System_Func_TSource__TKey__o *)_9__2_1,
-                                                                          (const MethodInfo_327F1AC *)Method_System_Linq_Enumerable_OrderBy_string__string___);
+                                                                          (const MethodInfo_38557B8 *)Method_System_Linq_Enumerable_OrderBy_string__string___);
 LABEL_26:
-    v20 = (System_Collections_Generic_IEnumerable_TSource__o *)assets;
+    v24 = (System_Collections_Generic_IEnumerable_TSource__o *)assets;
   }
-  if ( !v20 )
-    goto LABEL_63;
-  klass = v20->klass;
-  v45 = *(unsigned __int16 *)&v20->klass->_2.rank;
-  if ( *(_WORD *)&v20->klass->_2.rank )
+  if ( !v24 )
+    goto LABEL_65;
+  klass = v24->klass;
+  v53 = *(unsigned __int16 *)&v24->klass->_2.rank;
+  if ( *(_WORD *)&v24->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_string__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_string__TypeInfo )
     {
-      --v45;
+      --v53;
       p_offset += 4;
-      if ( !v45 )
+      if ( !v53 )
         goto LABEL_32;
     }
-    v47 = (__int64)&klass->vtable[*p_offset];
+    v55 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_32:
-    v47 = sub_1CE5430(v20, System_Collections_Generic_IEnumerable_string__TypeInfo, 0);
+    v55 = sub_2237E2C(v24, System_Collections_Generic_IEnumerable_string__TypeInfo, 0);
   }
-  v49 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v47)(
-          v20,
-          *(_QWORD *)(v47 + 8));
-  if ( !v49 )
-    sub_1D0F30C(0, v48);
+  appended = (System_Text_StringBuilder_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v55)(
+                                              v24,
+                                              *(_QWORD *)(v55 + 8));
+  v78 = appended;
   while ( 1 )
   {
-    v50 = *(_QWORD *)v49;
-    v51 = *(unsigned __int16 *)(*(_QWORD *)v49 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v49 + 302LL) )
+    if ( !v78 )
+      sub_21FFECC(appended, v57);
+    v58 = v78->klass;
+    v59 = *(unsigned __int16 *)&v78->klass->_2.rank;
+    if ( *(_WORD *)&v78->klass->_2.rank )
     {
-      v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v52 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v60 = &v58->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerator_c **)v60 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v51;
-        v52 += 4;
-        if ( !v51 )
-          goto LABEL_39;
+        --v59;
+        v60 += 4;
+        if ( !v59 )
+          goto LABEL_40;
       }
-      v53 = v50 + 16LL * *v52 + 312;
+      v61 = (__int64)&v58->vtable + 16 * *v60;
     }
     else
     {
-LABEL_39:
-      v53 = sub_1CE5430(v49, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_40:
+      v61 = sub_2237E2C(v78, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v49, *(_QWORD *)(v53 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(System_Text_StringBuilder_o *, _QWORD))v61)(v78, *(_QWORD *)(v61 + 8)) & 1) == 0 )
       break;
-    v54 = *(_QWORD *)v49;
-    v55 = *(unsigned __int16 *)(*(_QWORD *)v49 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v49 + 302LL) )
+    v62 = v78->klass;
+    v63 = *(unsigned __int16 *)&v78->klass->_2.rank;
+    if ( *(_WORD *)&v78->klass->_2.rank )
     {
-      v56 = (int *)(*(_QWORD *)(v54 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_string__c **)v56 - 1) != System_Collections_Generic_IEnumerator_string__TypeInfo )
+      v64 = &v62->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_string__c **)v64 - 1) != System_Collections_Generic_IEnumerator_string__TypeInfo )
       {
-        --v55;
-        v56 += 4;
-        if ( !v55 )
-          goto LABEL_46;
+        --v63;
+        v64 += 4;
+        if ( !v63 )
+          goto LABEL_47;
       }
-      v57 = v54 + 16LL * *v56 + 312;
+      v65 = (__int64)&v62->vtable + 16 * *v64;
     }
     else
     {
-LABEL_46:
-      v57 = sub_1CE5430(v49, System_Collections_Generic_IEnumerator_string__TypeInfo, 0);
+LABEL_47:
+      v65 = sub_2237E2C(v78, System_Collections_Generic_IEnumerator_string__TypeInfo, 0);
     }
-    v59 = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, _QWORD))v57)(v49, *(_QWORD *)(v57 + 8));
-    v60 = this->fields.assets;
-    if ( !v60 )
-      sub_1D0F30C(0, v58);
+    v67 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Text_StringBuilder_o *, _QWORD))v65)(
+                            v78,
+                            *(_QWORD *)(v65 + 8));
+    v68 = this->fields.assets;
+    if ( !v68 )
+      sub_21FFECC(0, v66);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-             (System_Collections_Generic_Dictionary_object__object__o *)v60,
-             v59,
-             (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
+             (System_Collections_Generic_Dictionary_object__object__o *)v68,
+             v67,
+             (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
     if ( !Item )
-      sub_1D0F30C(0, v62);
-    Info = AssetsInfo_DataInfo__GetInfo((AssetsInfo_DataInfo_o *)Item, v62);
-    v64 = System_String__Concat_65601036((System_String_o *)v59, (System_String_o *)StringLiteral_1453/*":"*/, Info, 0);
+      sub_21FFECC(0, v70);
+    Info = AssetsInfo_DataInfo__GetInfo((AssetsInfo_DataInfo_o *)Item, v70);
+    v72 = System_String__Concat_75481624((System_String_o *)v67, (System_String_o *)StringLiteral_1532/*":"*/, Info, 0);
     if ( !v5 )
-      sub_1D0F30C(v64, v64);
-    System_Text_StringBuilder__AppendLine_65647956(v5, v64, 0);
+      sub_21FFECC(v72, v72);
+    appended = System_Text_StringBuilder__AppendLine_75522996(v5, v72, 0);
   }
-  v65 = *(_QWORD *)v49;
-  v66 = *(unsigned __int16 *)(*(_QWORD *)v49 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v49 + 302LL) )
+  v73 = v78->klass;
+  v74 = *(unsigned __int16 *)&v78->klass->_2.rank;
+  if ( *(_WORD *)&v78->klass->_2.rank )
   {
-    v67 = (int *)(*(_QWORD *)(v65 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v67 - 1) != System_IDisposable_TypeInfo )
+    v75 = &v73->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v75 - 1) != System_IDisposable_TypeInfo )
     {
-      --v66;
-      v67 += 4;
-      if ( !v66 )
-        goto LABEL_56;
+      --v74;
+      v75 += 4;
+      if ( !v74 )
+        goto LABEL_57;
     }
-    v68 = v65 + 16LL * *v67 + 312;
+    v76 = (__int64)&v73->vtable + 16 * *v75;
   }
   else
   {
-LABEL_56:
-    v68 = sub_1CE5430(v49, System_IDisposable_TypeInfo, 0);
+LABEL_57:
+    v76 = sub_2237E2C(v78, System_IDisposable_TypeInfo, 0);
   }
-  assets = (System_Collections_Generic_Dictionary_object__object__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v68)(
-                                                                        v49,
-                                                                        *(_QWORD *)(v68 + 8));
+  assets = (System_Collections_Generic_Dictionary_object__object__o *)(*(__int64 (__fastcall **)(System_Text_StringBuilder_o *, _QWORD))v76)(
+                                                                        v78,
+                                                                        *(_QWORD *)(v76 + 8));
   if ( !v5 )
-LABEL_63:
-    sub_1D0F30C(assets, v6);
+LABEL_65:
+    sub_21FFECC(assets, v6);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
                               v5,
                               v5->klass->vtable._3_ToString.method);
@@ -1311,19 +1364,19 @@ System_String_o *AssetsInfo_AssetsInfoData___GetPaths_b__2_2(
 {
   void *assets; // x0
 
-  if ( (byte_4E76A0D & 1) == 0 )
+  if ( (byte_59379BA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
-    byte_4E76A0D = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__);
+    byte_59379BA = 1;
   }
   assets = this->fields.assets;
   if ( !assets
     || (assets = System_Collections_Generic_Dictionary_object__object___get_Item(
                    (System_Collections_Generic_Dictionary_object__object__o *)assets,
                    (Il2CppObject *)k,
-                   (const MethodInfo_3601564 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__)) == 0 )
+                   (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__AssetsInfo_DataInfo__get_Item__)) == 0 )
   {
-    sub_1D0F30C(assets, k);
+    sub_21FFECC(assets, k);
   }
   return (System_String_o *)*((_QWORD *)assets + 2);
 }
@@ -1332,23 +1385,23 @@ System_String_o *AssetsInfo_AssetsInfoData___GetPaths_b__2_2(
 void AssetsInfo_AssetsInfoData___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E76A0E & 1) == 0 )
+  if ( (byte_59379BB & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetsInfo_AssetsInfoData___c_TypeInfo);
-    byte_4E76A0E = 1;
+    sub_21FFC50(&AssetsInfo_AssetsInfoData___c_TypeInfo);
+    byte_59379BB = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(AssetsInfo_AssetsInfoData___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(AssetsInfo_AssetsInfoData___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields->__9 = (struct AssetsInfo_AssetsInfoData___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)AssetsInfo_AssetsInfoData___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -1373,25 +1426,25 @@ bool AssetsInfo_AssetsInfoData___c___GetPaths_b__2_0(
   AssetsInfo_AssetsInfoData_c *v4; // x0
   System_Collections_Generic_List_object__o *IGNORE_LIST; // x0
 
-  if ( (byte_4E76A0F & 1) == 0 )
+  if ( (byte_59379BC & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetsInfo_AssetsInfoData_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_string__Contains__);
-    byte_4E76A0F = 1;
+    sub_21FFC50(&AssetsInfo_AssetsInfoData_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_string__Contains__);
+    byte_59379BC = 1;
   }
   v4 = AssetsInfo_AssetsInfoData_TypeInfo;
-  if ( !AssetsInfo_AssetsInfoData_TypeInfo->_2.cctor_finished )
+  if ( !*(&AssetsInfo_AssetsInfoData_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData_TypeInfo);
+    j_il2cpp_runtime_class_init_0(AssetsInfo_AssetsInfoData_TypeInfo, k, method);
     v4 = AssetsInfo_AssetsInfoData_TypeInfo;
   }
   IGNORE_LIST = (System_Collections_Generic_List_object__o *)v4->static_fields->IGNORE_LIST;
   if ( !IGNORE_LIST )
-    sub_1D0F30C(0, k);
+    sub_21FFECC(0, k);
   return !System_Collections_Generic_List_object___Contains(
             IGNORE_LIST,
             (Il2CppObject *)k,
-            (const MethodInfo_395C7A0 *)Method_System_Collections_Generic_List_string__Contains__);
+            (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_string__Contains__);
 }
 
 
@@ -1415,16 +1468,16 @@ System_String_o *AssetsInfo_AssetsInfoData___c___GetPaths_b__2_3(
 
 void AssetsInfo_DataInfo___ctor(AssetsInfo_DataInfo_o *this, System_String_o *scene, const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.initScene = scene;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)scene, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)scene, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -1433,16 +1486,15 @@ System_String_o *AssetsInfo_DataInfo__GetInfo(AssetsInfo_DataInfo_o *this, const
   Il2CppObject *v3; // x0
   int32_t count; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E76A09 & 1) == 0 )
+  if ( (byte_59379B6 & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_750/*"({0}) - {1}"*/);
-    byte_4E76A09 = 1;
+    sub_21FFC50(&StringLiteral_781/*"({0}) - {1}"*/);
+    byte_59379B6 = 1;
   }
   count = this->fields.count;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &count);
-  return System_String__Format_65604080(
-           (System_String_o *)StringLiteral_750/*"({0}) - {1}"*/,
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &count);
+  return System_String__Format_75484576(
+           (System_String_o *)StringLiteral_781/*"({0}) - {1}"*/,
            v3,
            (Il2CppObject *)this->fields.initScene,
            0);
@@ -1452,23 +1504,23 @@ System_String_o *AssetsInfo_DataInfo__GetInfo(AssetsInfo_DataInfo_o *this, const
 void AssetsInfo___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E76A10 & 1) == 0 )
+  if ( (byte_59379BD & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetsInfo___c_TypeInfo);
-    byte_4E76A10 = 1;
+    sub_21FFC50(&AssetsInfo___c_TypeInfo);
+    byte_59379BD = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(AssetsInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(AssetsInfo___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AssetsInfo___c_TypeInfo->static_fields->__9 = (struct AssetsInfo___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)AssetsInfo___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)AssetsInfo___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -1488,6 +1540,6 @@ void AssetsInfo___c___ctor(AssetsInfo___c_o *this, const MethodInfo *method)
 bool AssetsInfo___c___CacheAssetInfo_b__9_0(AssetsInfo___c_o *this, AssetData_o *a, const MethodInfo *method)
 {
   if ( !a )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return !AssetData__get_IsEmpty(a, 0);
 }

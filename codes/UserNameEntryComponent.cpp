@@ -9,29 +9,29 @@ void UserNameEntryComponent__OnCenterOnChildFinished(UserNameEntryComponent_o *t
   UserNameEntryComponent_o *v2; // x19
   struct UICenterOnChild_o *centerChild; // x8
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   struct GenderSelectControl_o *genderSel; // x8
 
   v2 = this;
-  if ( (byte_4E76345 & 1) == 0 )
+  if ( (byte_59372F1 & 1) == 0 )
   {
-    this = (UserNameEntryComponent_o *)sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
-    byte_4E76345 = 1;
+    this = (UserNameEntryComponent_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
+    byte_59372F1 = 1;
   }
   centerChild = v2->fields.centerChild;
   if ( !centerChild
     || (this = (UserNameEntryComponent_o *)centerChild->fields.mCenteredObject) == 0
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)this,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___),
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___),
         v2->fields.genderSel = (struct GenderSelectControl_o *)Component_object,
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&v2->fields.genderSel,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v2->fields.genderSel,
           (int32_t)Component_object,
           v5,
           v6,
@@ -41,7 +41,7 @@ void UserNameEntryComponent__OnCenterOnChildFinished(UserNameEntryComponent_o *t
           v10),
         (genderSel = v2->fields.genderSel) == 0) )
   {
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   v2->fields.genderType = genderSel->fields.genderType;
 }
@@ -50,62 +50,64 @@ void UserNameEntryComponent__OnCenterOnChildFinished(UserNameEntryComponent_o *t
 void UserNameEntryComponent__Update(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *scrollView; // x0
-  float v4; // s8
+  __int64 v4; // x1
+  __int64 v5; // x2
+  float v6; // s8
   float cellWidth; // s9
-  float v6; // s9
-  double v7; // d8
-  const MethodInfo *v8; // x2
-  double v9; // d0
-  double v10; // d0
-  double v11; // d1
-  double v12; // d1
-  int32_t v14; // w1
+  float v8; // s9
+  double v9; // d8
+  const MethodInfo *v10; // x2
+  double v11; // d0
+  double v12; // d0
+  double v13; // d1
+  double v14; // d1
+  int32_t v16; // w1
   double iptr; // [xsp+18h] [xbp-18h] BYREF
 
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollView, 0)) == 0 )
-    sub_1D0F30C(scrollView, method);
-  v4 = fabsf(COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0)));
+    sub_21FFECC(scrollView, method);
+  v6 = fabsf(COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0)));
   cellWidth = (float)this->fields.cellWidth;
-  if ( !byte_4E71453 )
+  if ( !byte_593220B )
   {
-    sub_1D0F0B4(&System_Math_TypeInfo);
-    byte_4E71453 = 1;
+    sub_21FFC50(&System_Math_TypeInfo);
+    byte_593220B = 1;
   }
-  v6 = v4 / cellWidth;
-  if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v7 = v6;
-  v9 = modf(v6, &iptr);
-  if ( v6 >= 0.0 )
+  v8 = v6 / cellWidth;
+  if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4, v5);
+  v9 = v8;
+  v11 = modf(v8, &iptr);
+  if ( v8 >= 0.0 )
   {
-    if ( v9 != 0.5 )
+    if ( v11 != 0.5 )
     {
-      v10 = floor(v7 + 0.5);
+      v12 = floor(v9 + 0.5);
       goto LABEL_17;
     }
-    v10 = iptr;
-    v11 = 1.0;
+    v13 = 1.0;
+    v12 = iptr;
   }
   else
   {
-    if ( v9 != -0.5 )
+    if ( v11 != -0.5 )
     {
-      v10 = ceil(v7 + -0.5);
+      v12 = ceil(v9 + -0.5);
       goto LABEL_17;
     }
-    v10 = iptr;
-    v11 = -1.0;
+    v12 = iptr;
+    v13 = -1.0;
   }
-  v12 = v10 + v11;
-  if ( ((__int64)v10 & 1) != 0 )
-    v10 = v12;
+  v14 = v12 + v13;
+  if ( ((__int64)v12 & 1) != 0 )
+    v12 = v14;
 LABEL_17:
-  if ( ((int)v10 & 1) == 0 || v10 == INFINITY )
-    v14 = 2;
+  if ( ((int)v12 & 1) == 0 || v12 == INFINITY )
+    v16 = 2;
   else
-    v14 = 1;
-  UserNameEntryComponent__setCmdSpellImg(this, v14, v8);
+    v16 = 1;
+  UserNameEntryComponent__setCmdSpellImg(this, v16, v10);
 }
 
 
@@ -126,54 +128,56 @@ void UserNameEntryComponent__callbackUserNameChange(
   UserGameEntity_o *SelfUserGame; // x0
   UserGameEntity_o *v7; // x20
   NetworkManager_o *Instance; // x0
-  Il2CppObject *v9; // x20
-  AvalonSceneManager_c *v10; // x8
+  __int64 v9; // x1
+  __int64 v10; // x2
+  Il2CppObject *v11; // x20
+  AvalonSceneManager_c *v12; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v12; // x21
+  System_Action_o *v14; // x21
 
-  if ( (byte_4E76344 & 1) == 0 )
+  if ( (byte_59372F0 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1D0F0B4(&Method_UserNameEntryComponent__callbackUserNameChange_b__33_0__);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E76344 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AvalonSceneManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_21FFC50(&Method_UserNameEntryComponent__callbackUserNameChange_b__33_0__);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59372F0 = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22821/*"ok"*/, 0) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_23468/*"ok"*/, 0) )
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0);
     if ( SelfUserGame )
     {
       v7 = SelfUserGame;
-      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
       if ( !Instance )
         goto LABEL_15;
       NetworkManager__SetSignup(Instance, v7->fields.name, v7->fields.genderType, 0);
-      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
       if ( !Instance )
         goto LABEL_15;
       NetworkManager__WriteSignup(Instance, 0);
     }
-    v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = AvalonSceneManager_TypeInfo;
-    if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = AvalonSceneManager_TypeInfo;
+    if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      v10 = AvalonSceneManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v9, v10);
+      v12 = AvalonSceneManager_TypeInfo;
     }
-    DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-    v12 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(v12, (Il2CppObject *)this, Method_UserNameEntryComponent__callbackUserNameChange_b__33_0__, 0);
-    if ( v9 )
+    DEFAULT_FADE_TIME = v12->static_fields->DEFAULT_FADE_TIME;
+    v14 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(v14, (Il2CppObject *)this, Method_UserNameEntryComponent__callbackUserNameChange_b__33_0__, 0);
+    if ( v11 )
     {
-      CommonUI__maskFadeout((CommonUI_o *)v9, 1, DEFAULT_FADE_TIME, v12, 0);
+      CommonUI__maskFadeout((CommonUI_o *)v11, 1, DEFAULT_FADE_TIME, v14, 0);
       return;
     }
 LABEL_15:
-    sub_1D0F30C(Instance, v5);
+    sub_21FFECC(Instance, v5);
   }
   Instance = (NetworkManager_o *)this->fields.mInput;
   if ( !Instance )
@@ -188,55 +192,57 @@ LABEL_15:
 
 void UserNameEntryComponent__close(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   UserNameEntryComponent_o *v8; // x19
-  GrandQuestFolderBoardItem_c *klass; // x8
-  GrandQuestFolderBoardItem_o *p_masterFigureList; // x19
+  MissionNaviTransitionBoardItem_c *klass; // x8
+  MissionNaviTransitionBoardItem_o *p_masterFigureList; // x19
   struct UIMasterFullFigureTexture_array *masterFigureList; // t1
-  __int64 v12; // x21
-  int namespaze; // w9
+  unsigned int v12; // w22
+  unsigned int namespaze; // w9
+  __int64 v14; // x1
+  __int64 v15; // x2
   UnityEngine_Object_o *gameObject; // x20
 
   v8 = this;
-  if ( (byte_4E7633D & 1) == 0 )
+  if ( (byte_59372E9 & 1) == 0 )
   {
-    this = (UserNameEntryComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7633D = 1;
+    this = (UserNameEntryComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_59372E9 = 1;
   }
   masterFigureList = v8->fields.masterFigureList;
-  p_masterFigureList = (GrandQuestFolderBoardItem_o *)&v8->fields.masterFigureList;
-  klass = (GrandQuestFolderBoardItem_c *)masterFigureList;
+  p_masterFigureList = (MissionNaviTransitionBoardItem_o *)&v8->fields.masterFigureList;
+  klass = (MissionNaviTransitionBoardItem_c *)masterFigureList;
   if ( masterFigureList )
   {
     v12 = 0;
     while ( 1 )
     {
-      namespaze = (int)klass->_1.namespaze;
-      if ( (int)v12 >= namespaze )
+      namespaze = (unsigned int)klass->_1.namespaze;
+      if ( (int)v12 >= (int)namespaze )
         break;
-      if ( (unsigned int)v12 >= namespaze )
-        sub_1D0F314(this);
-      this = (UserNameEntryComponent_o *)*((_QWORD *)&klass->_1.byval_arg.data + v12);
+      if ( v12 >= namespaze )
+        sub_21FFED4(this);
+      this = (UserNameEntryComponent_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v12);
       if ( this )
       {
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_73359484(gameObject, 0);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
+        UnityEngine_Object__Destroy_83246496(gameObject, 0);
         klass = p_masterFigureList->klass;
         ++v12;
         if ( p_masterFigureList->klass )
           continue;
       }
-      sub_1D0F30C(this, method);
+      sub_21FFECC(this, method);
     }
     p_masterFigureList->klass = 0;
-    sub_1D0F058(p_masterFigureList, 0, v2, v3, v4, v5, v6, v7);
+    sub_21FFBF4(p_masterFigureList, 0, v2, v3, v4, v5, v6, v7);
   }
 }
 
@@ -247,16 +253,16 @@ void UserNameEntryComponent__endConfirm(UserNameEntryComponent_o *this, bool res
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4E76342 & 1) == 0 )
+  if ( (byte_59372EE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E76342 = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_59372EE = 1;
   }
   if ( res )
     UserNameEntryComponent__requestUserNameChange(this, (const MethodInfo *)res);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1D0F30C(0, v6);
+    sub_21FFECC(0, v6);
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -275,19 +281,20 @@ void UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *this, const
   System_String_o *v5; // x0
   int32_t v6; // w21
   uint16_t Chars; // w0
+  __int64 v8; // x2
   bool IsNullOrEmpty; // w20
-  float v9; // s0 OVERLAPPED
-  float v10; // s3
-  float v11; // s1
-  float v12; // s2
-  System_String_o *v13; // x0
+  float v10; // s0 OVERLAPPED
+  float v11; // s3
+  float v12; // s1
+  float v13; // s2
+  System_String_o *v14; // x0
 
-  if ( (byte_4E7633F & 1) == 0 )
+  if ( (byte_59372EB & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_43/*"\n"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7633F = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&StringLiteral_43/*"\n"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59372EB = 1;
   }
   entryNameInput = this->fields.entryNameInput;
   if ( !entryNameInput )
@@ -312,19 +319,19 @@ void UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *this, const
     }
     while ( ++v6 < Text->fields._stringLength );
   }
-  if ( System_String__IndexOf_65621164(Text, (System_String_o *)StringLiteral_43/*"\n"*/, 0) < 0 )
+  if ( System_String__IndexOf_75501892(Text, (System_String_o *)StringLiteral_43/*"\n"*/, 0) < 0 )
   {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v8);
     entryNameInput = (UILineInput_o *)LocalizationManager__ReplaceNameTag(Text, 0, 0);
     if ( entryNameInput )
     {
-      v13 = System_String__Trim((System_String_o *)entryNameInput, 0);
-      IsNullOrEmpty = System_String__IsNullOrEmpty(v13, 0);
+      v14 = System_String__Trim((System_String_o *)entryNameInput, 0);
+      IsNullOrEmpty = System_String__IsNullOrEmpty(v14, 0);
       goto LABEL_13;
     }
 LABEL_22:
-    sub_1D0F30C(entryNameInput, method);
+    sub_21FFECC(entryNameInput, method);
   }
 LABEL_12:
   IsNullOrEmpty = 1;
@@ -337,15 +344,15 @@ LABEL_13:
     !IsNullOrEmpty,
     entryNameInput->klass[1]._1.namespaze);
   entryNameInput = (UILineInput_o *)this->fields.confirmTxt;
-  v9 = 1.0;
-  if ( IsNullOrEmpty )
-    v9 = 0.5;
   if ( !entryNameInput )
     goto LABEL_22;
   v10 = 1.0;
-  v11 = v9;
-  v12 = v9;
-  UIWidget__set_color((UIWidget_o *)entryNameInput, *(UnityEngine_Color_o *)&v9, 0);
+  v11 = 1.0;
+  if ( IsNullOrEmpty )
+    v10 = 0.5;
+  v12 = v10;
+  v13 = v10;
+  UIWidget__set_color((UIWidget_o *)entryNameInput, *(UnityEngine_Color_o *)&v10, 0);
 }
 
 
@@ -355,15 +362,15 @@ void UserNameEntryComponent__onClickInput(UserNameEntryComponent_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4E76340 & 1) == 0 )
+  if ( (byte_59372EC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UserNameEntryComponent_onClickInput__);
-    byte_4E76340 = 1;
+    sub_21FFC50(&Method_UserNameEntryComponent_onClickInput__);
+    byte_59372EC = 1;
   }
   v3 = Method_UserNameEntryComponent_onClickInput__;
   if ( (*((_BYTE *)Method_UserNameEntryComponent_onClickInput__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_UserNameEntryComponent_onClickInput__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    v3 = (_QWORD *)sub_21FFC68(Method_UserNameEntryComponent_onClickInput__);
+  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   UserNameEntryComponent__openConfirm(this, v5);
 }
@@ -374,119 +381,131 @@ void UserNameEntryComponent__open(
         System_Action_o *closed_act,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct UIInput_o *mInput; // x20
   UIInput_OnValidate_o *v11; // x21
   __int64 entryNameInput; // x0
   const MethodInfo *v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
   int32_t v17; // w5
-  int64_t v18; // x6
-  System_String_o *v19; // x7
+  bool v18; // w6
+  bool v19; // w7
+  __int64 v20; // x1
+  __int64 v21; // x2
   UILabel_o *mInfoLabelMain; // x20
   UILabel_o *mInfoLabelSub; // x20
   UILabel_o *mInfoLabelInput; // x20
   UILabel_o *mInfoLabelFlick; // x20
+  __int64 v26; // x1
+  __int64 v27; // x2
   UnityEngine_Object_o *mScrollArrowRight; // x21
+  __int64 v29; // x1
+  __int64 v30; // x2
   Il2CppObject *mArrowRightPrefab; // x21
-  Il2CppObject *v26; // x21
+  Il2CppObject *v32; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
   UnityEngine_Object_o *mScrollArrowLeft; // x21
-  const MethodInfo *v35; // x1
+  const MethodInfo *v41; // x1
+  __int64 v42; // x2
   Il2CppObject *mArrowLeftPrefab; // x21
-  Il2CppObject *v37; // x21
-  Il2CppObject *v38; // x0
-  int32_t v39; // w2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  int32_t v42; // w5
-  int64_t v43; // x6
-  System_String_o *v44; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v45; // x20
+  Il2CppObject *v44; // x21
+  Il2CppObject *v45; // x0
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
+  __int64 v52; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v53; // x20
+  __int64 v54; // x22
+  __int64 v55; // x23
   CommandSpellIconComponent_o *cmdSpellIconFemale; // x21
-  __int64 v47; // x22
-  __int64 v48; // x23
   CommandSpellIconComponent_o *cmdSpellIconMale; // x21
   Il2CppObject *Instance; // x0
-  AvalonSceneManager_c *v51; // x8
-  CommonUI_o *v52; // x19
+  __int64 v59; // x2
+  AvalonSceneManager_c *v60; // x8
+  CommonUI_o *v61; // x19
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v54; // x20
-  Il2CppObject *v55; // x21
-  struct UserNameEntryComponent___c_StaticFields *static_fields; // x0
-  int32_t v57; // w2
-  int32_t v58; // w3
-  System_String_o *v59; // x4
-  int32_t v60; // w5
-  int64_t v61; // x6
-  System_String_o *v62; // x7
+  struct UserNameEntryComponent___c_StaticFields *static_fields; // x8
+  System_Action_o *_9__25_0; // x20
+  Il2CppObject *v65; // x21
+  struct UserNameEntryComponent___c_StaticFields *v66; // x0
+  System_String_o *v67; // x2
+  System_String_o *v68; // x3
+  int32_t v69; // w4
+  int32_t v70; // w5
+  bool v71; // w6
+  bool v72; // w7
   struct UnityEngine_GameObject_array *masterFigureBaseList; // x8
-  struct UIMasterFullFigureTexture_array *v64; // x0
-  int32_t v65; // w2
-  int32_t v66; // w3
-  System_String_o *v67; // x4
-  int32_t v68; // w5
-  int64_t v69; // x6
-  System_String_o *v70; // x7
-  struct UnityEngine_GameObject_array *v71; // x8
-  unsigned __int64 v72; // x22
-  __int64 v73; // x23
+  struct UIMasterFullFigureTexture_array *v74; // x0
+  System_String_o *v75; // x2
+  System_String_o *v76; // x3
+  int32_t v77; // w4
+  int32_t v78; // w5
+  bool v79; // w6
+  bool v80; // w7
+  struct UnityEngine_GameObject_array *v81; // x8
+  __int64 v82; // x22
+  __int64 v83; // x23
   unsigned __int64 max_length_low; // x9
-  unsigned int *masterFigureList; // x25
-  int32_t v76; // w2
-  int32_t v77; // w2
-  int32_t v78; // w3
-  System_String_o *v79; // x4
-  int32_t v80; // w5
-  int64_t v81; // x6
-  System_String_o *v82; // x7
-  __int64 v83; // x21
-  __int64 v84; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
-  UnityEngine_Vector2_o v86; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v87; // 0:s0.4,4:s1.4
+  unsigned __int64 v85; // x25
+  unsigned int *masterFigureList; // x26
+  int32_t v87; // w2
+  System_String_o *v88; // x2
+  System_String_o *v89; // x3
+  int32_t v90; // w4
+  int32_t v91; // w5
+  bool v92; // w6
+  bool v93; // w7
+  __int64 v94; // x21
+  __int64 v95; // x1
+  __int64 v96; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v97; // 0:x0.16
+  UnityEngine_Vector2_o v98; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v99; // 0:s0.4,4:s1.4
 
-  if ( (byte_4E7633C & 1) == 0 )
+  if ( (byte_59372E8 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
-    sub_1D0F0B4(&Method_EmojiUtility_ValidateNameText__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1D0F0B4(&UIInput_OnValidate_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&Method_UserNameEntryComponent___c__open_b__25_0__);
-    sub_1D0F0B4(&UserNameEntryComponent___c_TypeInfo);
-    sub_1D0F0B4(&UIMasterFullFigureTexture___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_7562/*"INPUT_NAME_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_7561/*"INPUT_NAME_ANNOUNCE"*/);
-    sub_1D0F0B4(&StringLiteral_11699/*"SELECT_FIGURE_INFO"*/);
-    sub_1D0F0B4(&StringLiteral_7563/*"INPUT_NAME_LIMIT_NUM"*/);
-    byte_4E7633C = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AvalonSceneManager_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_21FFC50(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+    sub_21FFC50(&Method_EmojiUtility_ValidateNameText__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_21FFC50(&UIInput_OnValidate_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&Method_UserNameEntryComponent___c__open_b__25_0__);
+    sub_21FFC50(&UserNameEntryComponent___c_TypeInfo);
+    sub_21FFC50(&UIMasterFullFigureTexture___TypeInfo);
+    sub_21FFC50(&StringLiteral_7779/*"INPUT_NAME_INFO"*/);
+    sub_21FFC50(&StringLiteral_7778/*"INPUT_NAME_ANNOUNCE"*/);
+    sub_21FFC50(&StringLiteral_12014/*"SELECT_FIGURE_INFO"*/);
+    sub_21FFC50(&StringLiteral_7780/*"INPUT_NAME_LIMIT_NUM"*/);
+    byte_59372E8 = 1;
   }
   this->fields.mClosedAct = closed_act;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.mClosedAct,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.mClosedAct,
     (int32_t)closed_act,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -494,91 +513,99 @@ void UserNameEntryComponent__open(
     v7);
   UnityEngine_Input__set_imeCompositionMode(1, 0);
   mInput = this->fields.mInput;
-  v11 = (UIInput_OnValidate_o *)sub_1D0F300(UIInput_OnValidate_TypeInfo);
+  v11 = (UIInput_OnValidate_o *)sub_21FFEBC(UIInput_OnValidate_TypeInfo);
   UIInput_OnValidate___ctor(v11, 0, Method_EmojiUtility_ValidateNameText__, 0);
   if ( !mInput )
     goto LABEL_58;
   mInput->fields.onValidate = v11;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&mInput->fields.onValidate, (int32_t)v11, v14, v15, v16, v17, v18, v19);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&mInput->fields.onValidate,
+    (int32_t)v11,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   mInfoLabelMain = this->fields.mInfoLabelMain;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7561/*"INPUT_NAME_ANNOUNCE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v20, v21);
+  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7778/*"INPUT_NAME_ANNOUNCE"*/, 0);
   if ( !mInfoLabelMain )
     goto LABEL_58;
   UILabel__set_text(mInfoLabelMain, (System_String_o *)entryNameInput, 0);
   mInfoLabelSub = this->fields.mInfoLabelSub;
-  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7562/*"INPUT_NAME_INFO"*/, 0);
+  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7779/*"INPUT_NAME_INFO"*/, 0);
   if ( !mInfoLabelSub )
     goto LABEL_58;
   UILabel__set_text(mInfoLabelSub, (System_String_o *)entryNameInput, 0);
   mInfoLabelInput = this->fields.mInfoLabelInput;
-  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7563/*"INPUT_NAME_LIMIT_NUM"*/, 0);
+  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_7780/*"INPUT_NAME_LIMIT_NUM"*/, 0);
   if ( !mInfoLabelInput )
     goto LABEL_58;
   UILabel__set_text(mInfoLabelInput, (System_String_o *)entryNameInput, 0);
   mInfoLabelFlick = this->fields.mInfoLabelFlick;
-  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11699/*"SELECT_FIGURE_INFO"*/, 0);
+  entryNameInput = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12014/*"SELECT_FIGURE_INFO"*/, 0);
   if ( !mInfoLabelFlick )
     goto LABEL_58;
   UILabel__set_text(mInfoLabelFlick, (System_String_o *)entryNameInput, 0);
   mScrollArrowRight = (UnityEngine_Object_o *)this->fields.mScrollArrowRight;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
   if ( UnityEngine_Object__op_Equality(mScrollArrowRight, 0, 0) )
   {
     mArrowRightPrefab = (Il2CppObject *)this->fields.mArrowRightPrefab;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v26 = UnityEngine_Object__Instantiate_object_(
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29, v30);
+    v32 = UnityEngine_Object__Instantiate_object_(
             mArrowRightPrefab,
-            (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    GameObjectExtensions__SafeSetParent_37349004((UnityEngine_GameObject_o *)v26, this->fields.mArrowRightRoot, 0);
-    if ( !v26 )
+            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    GameObjectExtensions__SafeSetParent_42881912((UnityEngine_GameObject_o *)v32, this->fields.mArrowRightRoot, 0);
+    if ( !v32 )
       goto LABEL_58;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)v26,
-                         (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
+                         (UnityEngine_GameObject_o *)v32,
+                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
     this->fields.mScrollArrowRight = (struct ScrollArrowComponent_o *)Component_object;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.mScrollArrowRight,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mScrollArrowRight,
       (int32_t)Component_object,
-      v28,
-      v29,
-      v30,
-      v31,
-      v32,
-      v33);
+      v34,
+      v35,
+      v36,
+      v37,
+      v38,
+      v39);
   }
   mScrollArrowLeft = (UnityEngine_Object_o *)this->fields.mScrollArrowLeft;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29, v30);
   if ( UnityEngine_Object__op_Equality(mScrollArrowLeft, 0, 0) )
   {
     mArrowLeftPrefab = (Il2CppObject *)this->fields.mArrowLeftPrefab;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v37 = UnityEngine_Object__Instantiate_object_(
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v41, v42);
+    v44 = UnityEngine_Object__Instantiate_object_(
             mArrowLeftPrefab,
-            (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    GameObjectExtensions__SafeSetParent_37349004((UnityEngine_GameObject_o *)v37, this->fields.mArrowLeftRoot, 0);
-    if ( !v37 )
+            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    GameObjectExtensions__SafeSetParent_42881912((UnityEngine_GameObject_o *)v44, this->fields.mArrowLeftRoot, 0);
+    if ( !v44 )
       goto LABEL_58;
-    v38 = UnityEngine_GameObject__GetComponent_object_(
-            (UnityEngine_GameObject_o *)v37,
-            (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
-    this->fields.mScrollArrowLeft = (struct ScrollArrowComponent_o *)v38;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.mScrollArrowLeft,
-      (int32_t)v38,
-      v39,
-      v40,
-      v41,
-      v42,
-      v43,
-      v44);
+    v45 = UnityEngine_GameObject__GetComponent_object_(
+            (UnityEngine_GameObject_o *)v44,
+            (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScrollArrowComponent___);
+    this->fields.mScrollArrowLeft = (struct ScrollArrowComponent_o *)v45;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mScrollArrowLeft,
+      (int32_t)v45,
+      v46,
+      v47,
+      v48,
+      v49,
+      v50,
+      v51);
   }
-  UserNameEntryComponent__setEntry(this, v35);
+  UserNameEntryComponent__setEntry(this, v41);
   entryNameInput = (__int64)this->fields.entryNameInput;
   if ( !entryNameInput )
     goto LABEL_58;
@@ -588,289 +615,310 @@ void UserNameEntryComponent__open(
     masterFigureBaseList = this->fields.masterFigureBaseList;
     if ( !masterFigureBaseList )
       goto LABEL_58;
-    v64 = (struct UIMasterFullFigureTexture_array *)sub_1D0F15C(
+    v74 = (struct UIMasterFullFigureTexture_array *)sub_21FFD10(
                                                       UIMasterFullFigureTexture___TypeInfo,
                                                       LODWORD(masterFigureBaseList->max_length));
-    this->fields.masterFigureList = v64;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.masterFigureList,
-      (int32_t)v64,
-      v65,
-      v66,
-      v67,
-      v68,
-      v69,
-      v70);
-    v71 = this->fields.masterFigureBaseList;
-    if ( !v71 )
+    this->fields.masterFigureList = v74;
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.masterFigureList,
+      (int32_t)v74,
+      v75,
+      v76,
+      v77,
+      v78,
+      v79,
+      v80);
+    v81 = this->fields.masterFigureBaseList;
+    if ( !v81 )
       goto LABEL_58;
-    v72 = 0;
-    v73 = 8;
+    v82 = 4;
+    v83 = 8;
     while ( 1 )
     {
-      max_length_low = LODWORD(v71->max_length);
-      if ( (__int64)v72 >= (int)max_length_low )
+      max_length_low = LODWORD(v81->max_length);
+      v85 = v82 - 4;
+      if ( v82 - 4 >= (int)max_length_low )
         break;
-      if ( v72 >= max_length_low )
+      if ( v85 >= max_length_low )
         goto LABEL_59;
       masterFigureList = (unsigned int *)this->fields.masterFigureList;
-      if ( (v72 & 1) != 0 )
-        v76 = 1;
+      if ( (v85 & 1) != 0 )
+        v87 = 1;
       else
-        v76 = 2;
-      entryNameInput = (__int64)MasterFullFigureManager__CreatePrefab_42034496(v71->m_Items[v72], 0, v76, 0, 1, 0, 0);
+        v87 = 2;
+      entryNameInput = (__int64)MasterFullFigureManager__CreatePrefab_47605496(
+                                  *((UnityEngine_GameObject_o **)&v81->obj.klass + v82),
+                                  0,
+                                  v87,
+                                  0,
+                                  1,
+                                  0,
+                                  0);
       if ( masterFigureList )
       {
-        v83 = entryNameInput;
+        v94 = entryNameInput;
         if ( entryNameInput )
         {
-          entryNameInput = sub_1D0F1F0(entryNameInput, *(_QWORD *)(*(_QWORD *)masterFigureList + 64LL));
+          entryNameInput = sub_21FFDA4(entryNameInput, *(_QWORD *)(*(_QWORD *)masterFigureList + 64LL));
           if ( !entryNameInput )
           {
-            v84 = sub_1D0F330(0);
-            sub_1D0F1DC(v84, 0);
+            v96 = sub_21FFEF0(0, v95);
+            sub_21FFD90(v96, 0);
           }
         }
-        if ( v72 >= masterFigureList[6] )
+        if ( v85 >= masterFigureList[6] )
 LABEL_59:
-          sub_1D0F314(entryNameInput);
-        *(_QWORD *)&masterFigureList[v73] = v83;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&masterFigureList[v73], v83, v77, v78, v79, v80, v81, v82);
-        v71 = this->fields.masterFigureBaseList;
-        ++v72;
-        v73 += 2;
-        if ( v71 )
+          sub_21FFED4(entryNameInput);
+        *(_QWORD *)&masterFigureList[2 * v82] = v94;
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&masterFigureList[v83], v94, v88, v89, v90, v91, v92, v93);
+        v81 = this->fields.masterFigureBaseList;
+        ++v82;
+        v83 += 2;
+        if ( v81 )
           continue;
       }
       goto LABEL_58;
     }
   }
   UserNameEntryComponent__onChangeInput(this, v13);
-  entryNameInput = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  entryNameInput = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !entryNameInput )
     goto LABEL_58;
   entryNameInput = (__int64)DataManager__GetMasterData_object_(
                               (DataManager_o *)entryNameInput,
-                              (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_EquipMaster___);
+                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EquipMaster___);
   if ( !entryNameInput )
     goto LABEL_58;
   entryNameInput = (__int64)DataMasterBase_object__object__int___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)entryNameInput,
                               1,
-                              (const MethodInfo_3535B7C *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+                              (const MethodInfo_3EDD388 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
   if ( !entryNameInput )
     goto LABEL_58;
-  v45 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)entryNameInput;
+  v53 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)entryNameInput;
+  v54 = *(_QWORD *)(entryNameInput + 128);
+  v55 = *(_QWORD *)(entryNameInput + 136);
   cmdSpellIconFemale = this->fields.cmdSpellIconFemale;
-  v48 = *(_QWORD *)(entryNameInput + 128);
-  v47 = *(_QWORD *)(entryNameInput + 136);
-  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v85.fields.currentCryptoKey = v48;
-  *(_QWORD *)&v85.fields.fakeValue = v47;
-  entryNameInput = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v85, 0);
+  if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13, v52);
+  *(_QWORD *)&v97.fields.currentCryptoKey = v54;
+  *(_QWORD *)&v97.fields.fakeValue = v55;
+  entryNameInput = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v97, 0);
   if ( !cmdSpellIconFemale )
     goto LABEL_58;
   CommandSpellIconComponent__SetChangeCmdSpellData(cmdSpellIconFemale, entryNameInput, 0);
   entryNameInput = (__int64)this->fields.cmdSpellIconFemale;
   if ( !entryNameInput )
     goto LABEL_58;
-  v86.fields.x = 120.0;
-  v86.fields.y = 120.0;
-  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)entryNameInput, v86, 0);
+  v98.fields.x = 120.0;
+  v98.fields.y = 120.0;
+  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)entryNameInput, v98, 0);
   cmdSpellIconMale = this->fields.cmdSpellIconMale;
-  entryNameInput = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_50331200(v45[7], 0);
+  entryNameInput = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v53[7], 0);
   if ( !cmdSpellIconMale )
     goto LABEL_58;
   CommandSpellIconComponent__SetChangeCmdSpellData(cmdSpellIconMale, entryNameInput, 0);
   entryNameInput = (__int64)this->fields.cmdSpellIconMale;
   if ( !entryNameInput )
     goto LABEL_58;
-  v87.fields.x = 120.0;
-  v87.fields.y = 120.0;
-  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)entryNameInput, v87, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v51 = AvalonSceneManager_TypeInfo;
-  v52 = (CommonUI_o *)Instance;
-  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+  v99.fields.x = 120.0;
+  v99.fields.y = 120.0;
+  CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)entryNameInput, v99, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v60 = AvalonSceneManager_TypeInfo;
+  v61 = (CommonUI_o *)Instance;
+  if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v51 = AvalonSceneManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v13, v59);
+    v60 = AvalonSceneManager_TypeInfo;
   }
   entryNameInput = (__int64)UserNameEntryComponent___c_TypeInfo;
-  DEFAULT_FADE_TIME = v51->static_fields->DEFAULT_FADE_TIME;
-  if ( !UserNameEntryComponent___c_TypeInfo->_2.cctor_finished )
+  DEFAULT_FADE_TIME = v60->static_fields->DEFAULT_FADE_TIME;
+  if ( !*(&UserNameEntryComponent___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UserNameEntryComponent___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UserNameEntryComponent___c_TypeInfo, v13, v59);
     entryNameInput = (__int64)UserNameEntryComponent___c_TypeInfo;
   }
-  v54 = *(System_Action_o **)(*(_QWORD *)(entryNameInput + 184) + 8LL);
-  if ( !v54 )
+  static_fields = *(struct UserNameEntryComponent___c_StaticFields **)(entryNameInput + 184);
+  _9__25_0 = static_fields->__9__25_0;
+  if ( !_9__25_0 )
   {
-    if ( !*(_DWORD *)(entryNameInput + 224) )
+    if ( !*(_DWORD *)(entryNameInput + 228) )
     {
-      j_il2cpp_runtime_class_init_0(entryNameInput);
-      entryNameInput = (__int64)UserNameEntryComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(entryNameInput, v13, v59);
+      static_fields = UserNameEntryComponent___c_TypeInfo->static_fields;
     }
-    v55 = **(Il2CppObject ***)(entryNameInput + 184);
-    v54 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-    System_Action___ctor(v54, v55, Method_UserNameEntryComponent___c__open_b__25_0__, 0);
-    static_fields = UserNameEntryComponent___c_TypeInfo->static_fields;
-    static_fields->__9__25_0 = v54;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__25_0, (int32_t)v54, v57, v58, v59, v60, v61, v62);
+    v65 = (Il2CppObject *)static_fields->__9;
+    _9__25_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    System_Action___ctor(_9__25_0, v65, Method_UserNameEntryComponent___c__open_b__25_0__, 0);
+    v66 = UserNameEntryComponent___c_TypeInfo->static_fields;
+    v66->__9__25_0 = _9__25_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v66->__9__25_0, (int32_t)_9__25_0, v67, v68, v69, v70, v71, v72);
   }
-  if ( !v52 )
+  if ( !v61 )
 LABEL_58:
-    sub_1D0F30C(entryNameInput, v13);
-  CommonUI__maskFadein(v52, DEFAULT_FADE_TIME, v54, 0);
+    sub_21FFECC(entryNameInput, v13);
+  CommonUI__maskFadein(v61, DEFAULT_FADE_TIME, _9__25_0, 0);
 }
 
 
 void UserNameEntryComponent__openConfirm(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
   UILineInput_o *entryNameInput; // x0
+  __int64 v4; // x1
+  __int64 v5; // x2
   System_String_o *Text; // x20
-  System_String_o *v5; // x0
-  int32_t genderType; // w25
-  Il2CppObject *v7; // x20
-  System_String_o **v8; // x8
-  Il2CppObject *v9; // x21
-  System_String_o *v10; // x0
-  System_String_o *v11; // x20
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
+  int32_t genderType; // w22
+  Il2CppObject *v11; // x20
+  System_String_o **v12; // x8
+  __int64 v13; // x1
+  __int64 v14; // x2
+  Il2CppObject *v15; // x21
+  System_String_o *v16; // x0
+  System_String_o *v17; // x20
   Il2CppObject *Instance; // x21
-  System_String_o *v13; // x22
-  CommonConfirmDialog_ClickDelegate_o *v14; // x23
+  System_String_o *v19; // x22
+  CommonConfirmDialog_ClickDelegate_o *v20; // x23
 
-  if ( (byte_4E76341 & 1) == 0 )
+  if ( (byte_59372ED & 1) == 0 )
   {
-    sub_1D0F0B4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_UserNameEntryComponent_endConfirm__);
-    sub_1D0F0B4(&StringLiteral_5528/*"ENTRY_GENDER_MAN"*/);
-    sub_1D0F0B4(&StringLiteral_3810/*"CONFIRM_TITLE_MESSAGE"*/);
-    sub_1D0F0B4(&StringLiteral_3797/*"CONFIRM_INFO_MESSAGE"*/);
-    sub_1D0F0B4(&StringLiteral_5529/*"ENTRY_GENDER_WOMAN"*/);
-    byte_4E76341 = 1;
+    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_UserNameEntryComponent_endConfirm__);
+    sub_21FFC50(&StringLiteral_5660/*"ENTRY_GENDER_MAN"*/);
+    sub_21FFC50(&StringLiteral_3910/*"CONFIRM_TITLE_MESSAGE"*/);
+    sub_21FFC50(&StringLiteral_3897/*"CONFIRM_INFO_MESSAGE"*/);
+    sub_21FFC50(&StringLiteral_5661/*"ENTRY_GENDER_WOMAN"*/);
+    byte_59372ED = 1;
   }
   entryNameInput = this->fields.entryNameInput;
   if ( !entryNameInput )
     goto LABEL_15;
   Text = UILineInput__GetText(entryNameInput, 0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__ReplaceNameTag(Text, 1, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
+  v7 = LocalizationManager__ReplaceNameTag(Text, 1, 0);
   genderType = this->fields.genderType;
-  v7 = (Il2CppObject *)v5;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = (System_String_o **)(genderType == 1 ? &StringLiteral_5528/*"ENTRY_GENDER_MAN"*/ : &StringLiteral_5529/*"ENTRY_GENDER_WOMAN"*/);
-  v9 = (Il2CppObject *)LocalizationManager__Get(*v8, 0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3797/*"CONFIRM_INFO_MESSAGE"*/, 0);
-  v11 = System_String__Format_65604080(v10, v9, v7, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3810/*"CONFIRM_TITLE_MESSAGE"*/, 0);
-  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1D0F300(CommonConfirmDialog_ClickDelegate_TypeInfo);
-  CommonConfirmDialog_ClickDelegate___ctor(v14, (Il2CppObject *)this, Method_UserNameEntryComponent_endConfirm__, 0);
+  v11 = (Il2CppObject *)v7;
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v9);
+  v12 = (System_String_o **)(genderType == 1 ? &StringLiteral_5660/*"ENTRY_GENDER_MAN"*/ : &StringLiteral_5661/*"ENTRY_GENDER_WOMAN"*/);
+  v15 = (Il2CppObject *)LocalizationManager__Get(*v12, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3897/*"CONFIRM_INFO_MESSAGE"*/, 0);
+  v17 = System_String__Format_75484576(v16, v15, v11, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3910/*"CONFIRM_TITLE_MESSAGE"*/, 0);
+  v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  CommonConfirmDialog_ClickDelegate___ctor(v20, (Il2CppObject *)this, Method_UserNameEntryComponent_endConfirm__, 0);
   if ( !Instance )
 LABEL_15:
-    sub_1D0F30C(entryNameInput, method);
-  CommonUI__OpenConfirmDialog((CommonUI_o *)Instance, v13, v11, v14, 0, 0, 0, 0);
+    sub_21FFECC(entryNameInput, method);
+  CommonUI__OpenConfirmDialog((CommonUI_o *)Instance, v19, v17, v20, 0, 0, 0, 0);
 }
 
 
 void UserNameEntryComponent__requestUserNameChange(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
   UILineInput_o *entryNameInput; // x0
+  __int64 v4; // x1
+  __int64 v5; // x2
   System_String_o *Text; // x20
-  System_String_o *v5; // x0
-  ManagerConfig_c *v6; // x8
-  System_String_o *v7; // x20
-  const MethodInfo *v8; // x2
-  NetworkManager_c *v9; // x0
-  NetworkManager_ResultCallbackFunc_o *v10; // x21
-  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
+  ManagerConfig_c *v10; // x8
+  System_String_o *v11; // x20
+  const MethodInfo *v12; // x2
+  NetworkManager_c *v13; // x0
+  NetworkManager_ResultCallbackFunc_o *v14; // x21
+  __int64 v15; // x1
+  __int64 v16; // x2
+  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E76343 & 1) == 0 )
+  if ( (byte_59372EF & 1) == 0 )
   {
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&ManagerConfig_TypeInfo);
-    sub_1D0F0B4(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1D0F0B4(&Method_UserNameEntryComponent_callbackUserNameChange__);
-    sub_1D0F0B4(&StringLiteral_22821/*"ok"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E76343 = 1;
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&ManagerConfig_TypeInfo);
+    sub_21FFC50(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_21FFC50(&Method_UserNameEntryComponent_callbackUserNameChange__);
+    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_59372EF = 1;
   }
   entryNameInput = this->fields.entryNameInput;
   if ( !entryNameInput )
     goto LABEL_27;
   Text = UILineInput__GetText(entryNameInput, 0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__ReplaceNameTag(Text, 1, 0);
-  v6 = ManagerConfig_TypeInfo;
-  v7 = v5;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
+  v7 = LocalizationManager__ReplaceNameTag(Text, 1, 0);
+  v10 = ManagerConfig_TypeInfo;
+  v11 = v7;
+  if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v6 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v8, v9);
+    v10 = ManagerConfig_TypeInfo;
   }
-  if ( !v6->static_fields->UseMock )
+  if ( !v10->static_fields->UseMock )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4E74BC1 )
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v8, v9);
+    if ( !byte_5935B46 )
     {
-      sub_1D0F0B4(&NetworkManager_TypeInfo);
-      byte_4E74BC1 = 1;
+      sub_21FFC50(&NetworkManager_TypeInfo);
+      byte_5935B46 = 1;
     }
-    v9 = NetworkManager_TypeInfo;
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    v13 = NetworkManager_TypeInfo;
+    if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v9 = NetworkManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v8, v9);
+      v13 = NetworkManager_TypeInfo;
     }
-    if ( v9->static_fields->isLogin )
+    if ( v13->static_fields->isLogin )
     {
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v14 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v10,
+        v14,
         (Il2CppObject *)this,
         Method_UserNameEntryComponent_callbackUserNameChange__,
         0);
-      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v15, v16);
       entryNameInput = (UILineInput_o *)NetworkManager__getRequest_object_(
-                                          v10,
-                                          (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
+                                          v14,
+                                          (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
       if ( entryNameInput )
       {
         UserNameChangeRequest__beginRequest(
           (UserNameChangeRequest_o *)entryNameInput,
-          v7,
+          v11,
           this->fields.genderType,
           (System_String_o *)StringLiteral_1/*""*/,
           0);
         goto LABEL_23;
       }
 LABEL_27:
-      sub_1D0F30C(entryNameInput, method);
+      sub_21FFECC(entryNameInput, method);
     }
   }
-  entryNameInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  entryNameInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !entryNameInput )
     goto LABEL_27;
-  NetworkManager__SetSignup((NetworkManager_o *)entryNameInput, v7, this->fields.genderType, 0);
-  entryNameInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  NetworkManager__SetSignup((NetworkManager_o *)entryNameInput, v11, this->fields.genderType, 0);
+  entryNameInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !entryNameInput )
     goto LABEL_27;
   NetworkManager__WriteSignup((NetworkManager_o *)entryNameInput, 0);
-  UserNameEntryComponent__callbackUserNameChange(this, (System_String_o *)StringLiteral_22821/*"ok"*/, v8);
+  UserNameEntryComponent__callbackUserNameChange(this, (System_String_o *)StringLiteral_23468/*"ok"*/, v12);
 LABEL_23:
   entryNameInput = (UILineInput_o *)this->fields.confirmBtn;
   if ( !entryNameInput )
@@ -882,11 +930,11 @@ LABEL_23:
   entryNameInput = (UILineInput_o *)this->fields.confirmTxt;
   if ( !entryNameInput )
     goto LABEL_27;
-  v11.fields.r = 0.5;
-  v11.fields.g = 0.5;
-  v11.fields.b = 0.5;
-  v11.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)entryNameInput, v11, 0);
+  v17.fields.r = 0.5;
+  v17.fields.g = 0.5;
+  v17.fields.b = 0.5;
+  v17.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)entryNameInput, v17, 0);
   entryNameInput = this->fields.entryNameInput;
   if ( !entryNameInput )
     goto LABEL_27;
@@ -898,18 +946,18 @@ LABEL_23:
 void UserNameEntryComponent__setCmdSpellImg(UserNameEntryComponent_o *this, int32_t gtype, const MethodInfo *method)
 {
   UnityEngine_Component_o *cmdSpellIconFemale; // x0
-  bool v6; // w1
+  bool v5; // w1
 
   if ( this->fields.genderType != gtype )
   {
     cmdSpellIconFemale = (UnityEngine_Component_o *)this->fields.cmdSpellIconFemale;
     this->fields.genderType = gtype;
-    if ( cmdSpellIconFemale )
+    if ( gtype == 2 )
     {
-      cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
       if ( cmdSpellIconFemale )
       {
-        if ( gtype == 2 )
+        cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
+        if ( cmdSpellIconFemale )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cmdSpellIconFemale, 1, 0);
           cmdSpellIconFemale = (UnityEngine_Component_o *)this->fields.cmdSpellIconMale;
@@ -918,126 +966,133 @@ void UserNameEntryComponent__setCmdSpellImg(UserNameEntryComponent_o *this, int3
             cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
             if ( cmdSpellIconFemale )
             {
-              v6 = 0;
-LABEL_11:
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cmdSpellIconFemale, v6, 0);
+              v5 = 0;
+LABEL_13:
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cmdSpellIconFemale, v5, 0);
               return;
-            }
-          }
-        }
-        else
-        {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cmdSpellIconFemale, 0, 0);
-          cmdSpellIconFemale = (UnityEngine_Component_o *)this->fields.cmdSpellIconMale;
-          if ( cmdSpellIconFemale )
-          {
-            cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
-            if ( cmdSpellIconFemale )
-            {
-              v6 = 1;
-              goto LABEL_11;
             }
           }
         }
       }
     }
-    sub_1D0F30C(cmdSpellIconFemale, *(_QWORD *)&gtype);
+    else if ( cmdSpellIconFemale )
+    {
+      cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
+      if ( cmdSpellIconFemale )
+      {
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cmdSpellIconFemale, 0, 0);
+        cmdSpellIconFemale = (UnityEngine_Component_o *)this->fields.cmdSpellIconMale;
+        if ( cmdSpellIconFemale )
+        {
+          cmdSpellIconFemale = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(cmdSpellIconFemale, 0);
+          if ( cmdSpellIconFemale )
+          {
+            v5 = 1;
+            goto LABEL_13;
+          }
+        }
+      }
+    }
+    sub_21FFECC(cmdSpellIconFemale, *(_QWORD *)&gtype);
   }
 }
 
 
 void UserNameEntryComponent__setEntry(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
-  UserNameEntryComponent_o *v2; // x19
+  __int64 v2; // x2
+  UserNameEntryComponent_o *v3; // x19
   struct UIWrapContent_o *loopCtr; // x8
   __int64 *p_centerChild; // x20
   UnityEngine_Object_o *centerChild; // x21
-  Il2CppObject *v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
-  __int64 v13; // x20
-  GrandQuestFolderBoardItem_o *v14; // x20
-  System_Delegate_o *v15; // t1
-  SpringPanel_OnFinished_o *v16; // x22
-  System_Delegate_o *v17; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  System_Delegate_o *v24; // x8
-  SpringPanel_OnFinished_c *v25; // x1
+  UnityEngine_Object_c *v7; // x0
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  __int64 v15; // x20
+  MissionNaviTransitionBoardItem_o *v16; // x20
+  System_Delegate_o *v17; // t1
+  SpringPanel_OnFinished_o *v18; // x22
+  System_Delegate_o *v19; // x0
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  int32_t v26; // w8
+  SpringPanel_OnFinished_c *v27; // x1
   int32_t childCount; // w0
-  int32_t v27; // w20
-  int32_t v28; // w21
-  struct GenderSelectControl_o **p_genderSel; // x22
+  int32_t v29; // w20
+  int32_t v30; // w21
   Il2CppObject *Component_object; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  struct GenderSelectControl_o *genderSel; // x8
 
-  v2 = this;
-  if ( (byte_4E7633E & 1) == 0 )
+  v3 = this;
+  if ( (byte_59372EA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&SpringPanel_OnFinished_TypeInfo);
-    this = (UserNameEntryComponent_o *)sub_1D0F0B4(&Method_UserNameEntryComponent_OnCenterOnChildFinished__);
-    byte_4E7633E = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&SpringPanel_OnFinished_TypeInfo);
+    this = (UserNameEntryComponent_o *)sub_21FFC50(&Method_UserNameEntryComponent_OnCenterOnChildFinished__);
+    byte_59372EA = 1;
   }
-  loopCtr = v2->fields.loopCtr;
+  loopCtr = v3->fields.loopCtr;
   if ( !loopCtr )
     goto LABEL_27;
-  p_centerChild = (__int64 *)&v2->fields.centerChild;
-  centerChild = (UnityEngine_Object_o *)v2->fields.centerChild;
-  v2->fields.cellWidth = loopCtr->fields.itemSize;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  p_centerChild = (__int64 *)&v3->fields.centerChild;
+  centerChild = (UnityEngine_Object_o *)v3->fields.centerChild;
+  v7 = UnityEngine_Object_TypeInfo;
+  v3->fields.cellWidth = loopCtr->fields.itemSize;
+  if ( !*(&v7->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v7, method, v2);
   this = (UserNameEntryComponent_o *)UnityEngine_Object__op_Equality(centerChild, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    this = (UserNameEntryComponent_o *)v2->fields.loopCtr;
+    this = (UserNameEntryComponent_o *)v3->fields.loopCtr;
     if ( !this )
       goto LABEL_27;
     this = (UserNameEntryComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !this )
       goto LABEL_27;
-    v6 = UnityEngine_GameObject__AddComponent_object_(
+    v8 = UnityEngine_GameObject__AddComponent_object_(
            (UnityEngine_GameObject_o *)this,
-           (const MethodInfo_32A835C *)Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
-    *p_centerChild = (__int64)v6;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.centerChild, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+           (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_UICenterOnChild___);
+    *p_centerChild = (__int64)v8;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.centerChild, (int32_t)v8, v9, v10, v11, v12, v13, v14);
   }
-  v13 = *p_centerChild;
-  if ( !v13 )
+  v15 = *p_centerChild;
+  if ( !v15 )
     goto LABEL_27;
-  v15 = *(System_Delegate_o **)(v13 + 40);
-  v14 = (GrandQuestFolderBoardItem_o *)(v13 + 40);
-  v16 = (SpringPanel_OnFinished_o *)sub_1D0F300(SpringPanel_OnFinished_TypeInfo);
-  SpringPanel_OnFinished___ctor(v16, (Il2CppObject *)v2, Method_UserNameEntryComponent_OnCenterOnChildFinished__, 0);
-  v17 = System_Delegate__Combine(v15, (System_Delegate_o *)v16, 0);
-  v24 = v17;
-  if ( !v17 )
+  v17 = *(System_Delegate_o **)(v15 + 40);
+  v16 = (MissionNaviTransitionBoardItem_o *)(v15 + 40);
+  v18 = (SpringPanel_OnFinished_o *)sub_21FFEBC(SpringPanel_OnFinished_TypeInfo);
+  SpringPanel_OnFinished___ctor(v18, (Il2CppObject *)v3, Method_UserNameEntryComponent_OnCenterOnChildFinished__, 0);
+  v19 = System_Delegate__Combine(v17, (System_Delegate_o *)v18, 0);
+  v26 = (int)v19;
+  if ( !v19 )
     goto LABEL_15;
-  v25 = SpringPanel_OnFinished_TypeInfo;
-  if ( (SpringPanel_OnFinished_c *)v17->klass != SpringPanel_OnFinished_TypeInfo
-    || (v14->klass = (GrandQuestFolderBoardItem_c *)v17, (SpringPanel_OnFinished_c *)v17->klass != v25) )
+  v27 = SpringPanel_OnFinished_TypeInfo;
+  if ( (SpringPanel_OnFinished_c *)v19->klass != SpringPanel_OnFinished_TypeInfo
+    || (v16->klass = (MissionNaviTransitionBoardItem_c *)v19, (SpringPanel_OnFinished_c *)v19->klass != v27) )
   {
-    sub_1D0F6A8(v17);
+    sub_220024C(v19, v27, v20, v21);
 LABEL_15:
-    v14->klass = (GrandQuestFolderBoardItem_c *)v24;
+    v16->klass = 0;
   }
-  sub_1D0F058(v14, (int32_t)v24, v18, v19, v20, v21, v22, v23);
-  this = (UserNameEntryComponent_o *)v2->fields.loopCtr;
+  sub_21FFBF4(v16, v26, v20, v21, v22, v23, v24, v25);
+  this = (UserNameEntryComponent_o *)v3->fields.loopCtr;
   if ( !this )
     goto LABEL_27;
   this = (UserNameEntryComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -1046,18 +1101,17 @@ LABEL_15:
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)this, 0);
   if ( childCount >= 1 )
   {
-    v27 = childCount;
-    v28 = 0;
-    p_genderSel = &v2->fields.genderSel;
+    v29 = childCount;
+    v30 = 0;
     while ( 1 )
     {
-      this = (UserNameEntryComponent_o *)v2->fields.loopCtr;
+      this = (UserNameEntryComponent_o *)v3->fields.loopCtr;
       if ( !this )
         break;
       this = (UserNameEntryComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !this )
         break;
-      this = (UserNameEntryComponent_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)this, v28, 0);
+      this = (UserNameEntryComponent_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)this, v30, 0);
       if ( !this )
         break;
       this = (UserNameEntryComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -1065,25 +1119,26 @@ LABEL_15:
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)this,
-                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
-      *p_genderSel = (struct GenderSelectControl_o *)Component_object;
-      sub_1D0F058(
-        (GrandQuestFolderBoardItem_o *)&v2->fields.genderSel,
+                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_GenderSelectControl___);
+      v3->fields.genderSel = (struct GenderSelectControl_o *)Component_object;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&v3->fields.genderSel,
         (int32_t)Component_object,
-        v31,
         v32,
         v33,
         v34,
         v35,
-        v36);
-      if ( !*p_genderSel )
+        v36,
+        v37);
+      genderSel = v3->fields.genderSel;
+      if ( !genderSel )
         break;
-      (*p_genderSel)->fields.idx = v28++;
-      if ( v27 == v28 )
+      genderSel->fields.idx = v30++;
+      if ( v29 == v30 )
         return;
     }
 LABEL_27:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
 }
 
@@ -1091,23 +1146,23 @@ LABEL_27:
 void UserNameEntryComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E76346 & 1) == 0 )
+  if ( (byte_59372F2 & 1) == 0 )
   {
-    sub_1D0F0B4(&UserNameEntryComponent___c_TypeInfo);
-    byte_4E76346 = 1;
+    sub_21FFC50(&UserNameEntryComponent___c_TypeInfo);
+    byte_59372F2 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(UserNameEntryComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(UserNameEntryComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UserNameEntryComponent___c_TypeInfo->static_fields->__9 = (struct UserNameEntryComponent___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)UserNameEntryComponent___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)UserNameEntryComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,

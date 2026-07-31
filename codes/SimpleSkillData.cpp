@@ -7,24 +7,23 @@ void SimpleSkillData___ctor(SimpleSkillData_o this, int32_t skillId, int32_t ski
 
 bool SimpleSkillData__Equals(SimpleSkillData_o this, Il2CppObject *obj, const MethodInfo *method)
 {
-  __int64 v3; // x3
-  _QWORD *v6; // x0
+  _QWORD *v5; // x0
   bool result; // w0
 
-  if ( (byte_4E7A0E7 & 1) == 0 )
+  if ( (byte_593B14A & 1) == 0 )
   {
-    sub_1D0F0B4(&SimpleSkillData_TypeInfo);
-    byte_4E7A0E7 = 1;
+    sub_21FFC50(&SimpleSkillData_TypeInfo);
+    byte_593B14A = 1;
   }
   result = obj
         && (SimpleSkillData_c *)obj->klass == SimpleSkillData_TypeInfo
-        && (v6 = (_QWORD *)j_il2cpp_object_unbox_0(obj, obj, method, v3), *(_DWORD *)this.fields.id == (unsigned int)*v6)
-        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v6);
+        && (v5 = (_QWORD *)j_il2cpp_object_unbox_0(obj, obj, method), *(_DWORD *)this.fields.id == (unsigned int)*v5)
+        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v5);
   return result;
 }
 
 
-bool SimpleSkillData__Equals_47411500(SimpleSkillData_o this, SimpleSkillData_o toCompare, const MethodInfo *method)
+bool SimpleSkillData__Equals_53000848(SimpleSkillData_o this, SimpleSkillData_o toCompare, const MethodInfo *method)
 {
   return *(_DWORD *)this.fields.id == toCompare.fields.id && *(_DWORD *)(*(_QWORD *)&this + 4LL) == toCompare.fields.lv;
 }
@@ -35,17 +34,17 @@ int32_t SimpleSkillData__GetHashCode(SimpleSkillData_o this, const MethodInfo *m
   System_Tuple_T1__T2__o *int__int; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E7A0E8 & 1) == 0 )
+  if ( (byte_593B14B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Tuple_Create_int__int___);
-    byte_4E7A0E8 = 1;
+    sub_21FFC50(&Method_System_Tuple_Create_int__int___);
+    byte_593B14B = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_33225FC *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_3980DD0 *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, const MethodInfo *))int__int->klass->vtable._2_GetHashCode.methodPtr)(
            int__int,
            int__int->klass->vtable._2_GetHashCode.method);

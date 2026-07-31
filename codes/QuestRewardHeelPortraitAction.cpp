@@ -1,22 +1,22 @@
 void QuestRewardHeelPortraitAction___ctor(QuestRewardHeelPortraitAction_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_4E7430A & 1) == 0 )
+  if ( (byte_5935292 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_6333/*"EventUI/Prefabs/"*/);
-    byte_4E7430A = 1;
+    sub_21FFC50(&StringLiteral_6520/*"EventUI/Prefabs/"*/);
+    byte_5935292 = 1;
   }
+  v9 = StringLiteral_6520/*"EventUI/Prefabs/"*/;
+  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6520/*"EventUI/Prefabs/"*/;
   *(_QWORD *)&this->fields.screenTouchInfoPosY = 0x40000000FFFFFF23LL;
-  v9 = StringLiteral_6333/*"EventUI/Prefabs/"*/;
-  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6333/*"EventUI/Prefabs/"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, v9, v2, v3, v4, v5, v6, v7);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -33,7 +33,7 @@ void QuestRewardHeelPortraitAction__Init(
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -46,42 +46,44 @@ void QuestRewardHeelPortraitAction__LoadEventUI(
   __int64 v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   System_Action_o **v14; // x22
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   AssetData_o *eventUIAssetData; // x0
   System_String_o *loadAssetName; // x21
   System_String_o *v23; // x0
   System_String_o *v24; // x19
   AssetLoader_LoadEndDataHandler_o *v25; // x21
+  __int64 v26; // x1
+  __int64 v27; // x2
 
-  if ( (byte_4E74306 & 1) == 0 )
+  if ( (byte_593528E & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__0__);
-    sub_1D0F0B4(&QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
-    byte_4E74306 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_21FFC50(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__0__);
+    sub_21FFC50(&QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
+    byte_593528E = 1;
   }
-  v5 = sub_1D0F300(QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
+  v5 = sub_21FFEBC(QuestRewardHeelPortraitAction___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
   v14 = (System_Action_o **)(v5 + 24);
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callback, v15, v16, v17, v18, v19, v20);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v15, v16, v17, v18, v19, v20);
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0) )
   {
@@ -92,15 +94,15 @@ void QuestRewardHeelPortraitAction__LoadEventUI(
   {
     loadAssetName = this->fields.loadAssetName;
     v23 = System_Int32__ToString((int)this + 88, 0);
-    v24 = System_String__Concat_65562772(loadAssetName, v23, 0);
-    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1D0F300(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v24 = System_String__Concat_75438412(loadAssetName, v23, 0);
+    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v25,
       (Il2CppObject *)v5,
       Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__0__,
       0);
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v26, v27);
     AssetManager__loadAssetStorage(v24, v25, 1, 0, 0);
   }
 }
@@ -112,56 +114,57 @@ System_Collections_IEnumerator_o *QuestRewardHeelPortraitAction__Play(
         const MethodInfo *method)
 {
   __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v10; // w6
+  bool v11; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
 
-  if ( (byte_4E74309 & 1) == 0 )
+  if ( (byte_5935291 & 1) == 0 )
   {
-    sub_1D0F0B4(&QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
-    byte_4E74309 = 1;
+    sub_21FFC50(&QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
+    byte_5935291 = 1;
   }
-  v5 = sub_1D0F300(QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
+  v5 = sub_21FFEBC(QuestRewardHeelPortraitAction__Play_d__17_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = endAction;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)endAction, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)endAction, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
 
 void QuestRewardHeelPortraitAction__ReleaseEventUI(QuestRewardHeelPortraitAction_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t eventId; // w20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E74307 & 1) == 0 )
+  if ( (byte_593528F & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    byte_4E74307 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    byte_593528F = 1;
   }
   eventId = this->fields.eventId;
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_41967020(eventId, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v2);
+  AtlasManager__ReleaseEventUI_47538200(eventId, 0);
   this->fields.eventUIAssetData = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.eventUIAssetData, 0, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventUIAssetData, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -178,188 +181,204 @@ void QuestRewardHeelPortraitAction__Setup(
         QuestRewardInfo_array *infos,
         const MethodInfo *method)
 {
+  System_Object_array *v3; // x20
   QuestRewardHeelPortraitAction___c_c *v5; // x0
+  struct QuestRewardHeelPortraitAction___c_StaticFields *static_fields; // x8
   System_Comparison_T__o *_9__16_0; // x21
-  Il2CppObject *v7; // x22
-  struct QuestRewardHeelPortraitAction___c_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  __int64 Master_object; // x0
+  Il2CppObject *v8; // x22
+  struct QuestRewardHeelPortraitAction___c_StaticFields *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
   __int64 v16; // x1
+  __int64 v17; // x2
+  __int64 Master_object; // x0
+  __int64 v19; // x1
+  __int64 v20; // x2
   il2cpp_array_size_t max_length; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v18; // x21
-  unsigned __int64 v19; // x28
-  QuestRewardInfo_o **m_Items; // x24
-  QuestRewardInfo_o *v21; // x25
+  const MethodInfo_38C0004 **v22; // x27
+  const MethodInfo_3883A78 **v23; // x22
+  const MethodInfo_3EDD3D8 **v24; // x29
+  DataMasterBase_TMaster__TEntity__PKType__o *v25; // x21
+  unsigned __int64 v26; // x28
+  Il2CppObject **m_Items; // x24
+  Il2CppObject *v28; // x25
   Il2CppObject *portraitObj; // x23
-  UnityEngine_GameObject_o *v23; // x23
-  UnityEngine_Transform_o *v24; // x24
-  UnityEngine_Transform_o *v25; // x24
-  UISprite_o *v26; // x24
-  int32_t eventId; // w25
-  int32_t klass; // w19
-  System_String_o *v29; // x19
+  UnityEngine_GameObject_o *v30; // x23
+  UnityEngine_Transform_o *v31; // x24
+  UnityEngine_Transform_o *v32; // x24
+  UISprite_o *v33; // x24
+  __int64 v34; // x2
+  const MethodInfo_3EDD3D8 **v35; // x25
+  System_Object_array *v36; // x29
+  DataMasterBase_TMaster__TEntity__PKType__o *v37; // x20
+  const MethodInfo_3883A78 **v38; // x21
+  const MethodInfo_38C0004 **v39; // x22
+  int32_t klass; // w27
+  __int64 v41; // x1
+  __int64 v42; // x2
+  System_String_o *v43; // x27
+  __int64 v44; // x1
+  __int64 v45; // x2
   struct ScreenTouchInformationComponent_o **p_screenTouchInfo; // x20
   UnityEngine_Object_o *screenTouchInfo; // x21
   Il2CppObject *Instance; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v34; // w2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
   UnityEngine_GameObject_o *gameObject; // x0
-  QuestRewardHeelPortraitAction_o *v41; // [xsp+8h] [xbp-78h]
+  int32_t eventId; // [xsp+Ch] [xbp-74h]
+  Il2CppObject **v58; // [xsp+10h] [xbp-70h]
   Il2CppObject *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4E74308 & 1) == 0 )
+  v3 = (System_Object_array *)infos;
+  if ( (byte_5935290 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Array_Sort_QuestRewardInfo___);
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&System_Comparison_QuestRewardInfo__TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_1D0F0B4(&System_Convert_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_HeelPortraitMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1D0F0B4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__);
-    sub_1D0F0B4(&QuestRewardHeelPortraitAction___c_TypeInfo);
-    byte_4E74308 = 1;
+    sub_21FFC50(&Method_System_Array_Sort_QuestRewardInfo___);
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&System_Comparison_QuestRewardInfo__TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_21FFC50(&System_Convert_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMaster_HeelPortraitMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__);
+    sub_21FFC50(&QuestRewardHeelPortraitAction___c_TypeInfo);
+    byte_5935290 = 1;
   }
   v5 = QuestRewardHeelPortraitAction___c_TypeInfo;
   entity = 0;
-  if ( !QuestRewardHeelPortraitAction___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&QuestRewardHeelPortraitAction___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(QuestRewardHeelPortraitAction___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(QuestRewardHeelPortraitAction___c_TypeInfo, infos, method);
     v5 = QuestRewardHeelPortraitAction___c_TypeInfo;
   }
-  _9__16_0 = (System_Comparison_T__o *)v5->static_fields->__9__16_0;
+  static_fields = v5->static_fields;
+  _9__16_0 = (System_Comparison_T__o *)static_fields->__9__16_0;
   if ( !_9__16_0 )
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v5->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = QuestRewardHeelPortraitAction___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, infos, method);
+      static_fields = QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
     }
-    v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__16_0 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_QuestRewardInfo__TypeInfo);
-    System_Comparison_object____ctor(_9__16_0, v7, Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__, 0);
-    static_fields = QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
-    static_fields->__9__16_0 = (struct System_Comparison_QuestRewardInfo__o *)_9__16_0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__16_0,
-      (int32_t)_9__16_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v8 = (Il2CppObject *)static_fields->__9;
+    _9__16_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_QuestRewardInfo__TypeInfo);
+    System_Comparison_object____ctor(_9__16_0, v8, Method_QuestRewardHeelPortraitAction___c__Setup_b__16_0__, 0);
+    v9 = QuestRewardHeelPortraitAction___c_TypeInfo->static_fields;
+    v9->__9__16_0 = (struct System_Comparison_QuestRewardInfo__o *)_9__16_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__16_0, (int32_t)_9__16_0, v10, v11, v12, v13, v14, v15);
   }
-  System_Array__Sort_object__52538372(
-    (System_Object_array *)infos,
+  System_Array__Sort_object__58222280(
+    v3,
     _9__16_0,
-    (const MethodInfo_321AC04 *)Method_System_Array_Sort_QuestRewardInfo___);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
-  if ( !infos )
+    (const MethodInfo_37866C8 *)Method_System_Array_Sort_QuestRewardInfo___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v16, v17);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
+  if ( !v3 )
     goto LABEL_49;
-  max_length = infos->max_length;
+  max_length = v3->max_length;
   if ( (int)max_length >= 1 )
   {
-    v18 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
-    v19 = 0;
-    m_Items = infos->m_Items;
-    v41 = this;
+    v22 = (const MethodInfo_38C0004 **)&Method_UnityEngine_Object_Instantiate_GameObject___;
+    v23 = (const MethodInfo_3883A78 **)&Method_UnityEngine_GameObject_GetComponent_UISprite___;
+    v24 = (const MethodInfo_3EDD3D8 **)&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__;
+    v25 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+    v26 = 0;
+    m_Items = v3->m_Items;
+    v58 = v3->m_Items;
     do
     {
-      if ( v19 >= (unsigned int)max_length )
-        sub_1D0F314(Master_object);
-      v21 = m_Items[v19];
-      if ( v21 && v21->fields.type == 15 )
+      if ( v26 >= (unsigned int)max_length )
+        sub_21FFED4(Master_object);
+      v28 = m_Items[v26];
+      if ( v28 && LODWORD(v28[1].klass) == 15 )
       {
         portraitObj = (Il2CppObject *)this->fields.portraitObj;
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        Master_object = (__int64)UnityEngine_Object__Instantiate_object_(
-                                   portraitObj,
-                                   (const MethodInfo_32DD2D0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
+        Master_object = (__int64)UnityEngine_Object__Instantiate_object_(portraitObj, *v22);
         if ( !Master_object )
           goto LABEL_49;
-        v23 = (UnityEngine_GameObject_o *)Master_object;
+        v30 = (UnityEngine_GameObject_o *)Master_object;
         Master_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_object, 0);
         if ( !Master_object )
           goto LABEL_49;
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)Master_object, this->fields.listRoot, 0);
-        Master_object = (__int64)UnityEngine_GameObject__get_transform(v23, 0);
-        v24 = (UnityEngine_Transform_o *)Master_object;
-        if ( !byte_4E70C99 )
+        Master_object = (__int64)UnityEngine_GameObject__get_transform(v30, 0);
+        v31 = (UnityEngine_Transform_o *)Master_object;
+        if ( !byte_5931940 )
         {
-          Master_object = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-          byte_4E70C99 = 1;
+          Master_object = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+          byte_5931940 = 1;
         }
-        if ( !v24 )
+        if ( !v31 )
           goto LABEL_49;
-        UnityEngine_Transform__set_localPosition(v24, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        Master_object = (__int64)UnityEngine_GameObject__get_transform(v23, 0);
-        v25 = (UnityEngine_Transform_o *)Master_object;
-        if ( !byte_4E70C9E )
+        UnityEngine_Transform__set_localPosition(v31, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+        Master_object = (__int64)UnityEngine_GameObject__get_transform(v30, 0);
+        v32 = (UnityEngine_Transform_o *)Master_object;
+        if ( !byte_5931945 )
         {
-          Master_object = sub_1D0F0B4(&UnityEngine_Vector3_TypeInfo);
-          byte_4E70C9E = 1;
+          Master_object = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+          byte_5931945 = 1;
         }
+        if ( !v32 )
+          goto LABEL_49;
+        UnityEngine_Transform__set_localScale(v32, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+        Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(v30, *v23);
         if ( !v25 )
           goto LABEL_49;
-        UnityEngine_Transform__set_localScale(v25, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-        Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                   v23,
-                                   (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-        if ( !v18 )
-          goto LABEL_49;
-        v26 = (UISprite_o *)Master_object;
-        Master_object = DataMasterBase_object__object__int___TryGetEntity(
-                          v18,
-                          &entity,
-                          v21->fields.objectId,
-                          (const MethodInfo_3535BC8 *)Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__);
+        v33 = (UISprite_o *)Master_object;
+        Master_object = DataMasterBase_object__object__int___TryGetEntity(v25, &entity, HIDWORD(v28[1].klass), *v24);
         if ( (Master_object & 1) != 0 )
         {
           if ( !entity )
             goto LABEL_49;
-          eventId = this->fields.eventId;
+          v35 = v24;
+          v36 = v3;
+          v37 = v25;
+          v38 = v23;
+          v39 = v22;
           klass = (int32_t)entity[2].klass;
-          if ( !System_Convert_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-          v29 = System_Convert__ToString_66656736(klass, 0);
-          if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          AtlasManager__SetEventUI_41967144(eventId, v26, v29, 0);
-          this = v41;
+          eventId = this->fields.eventId;
+          if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v19, v34);
+          v43 = System_Convert__ToString_76481856(klass, 0);
+          if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v41, v42);
+          AtlasManager__SetEventUI_47538316(eventId, v33, v43, 0);
+          v22 = v39;
+          v23 = v38;
+          v25 = v37;
+          v3 = v36;
+          v24 = v35;
         }
-        UnityEngine_GameObject__SetActive(v23, 1, 0);
-        m_Items = infos->m_Items;
+        UnityEngine_GameObject__SetActive(v30, 1, 0);
+        m_Items = v58;
       }
-      LODWORD(max_length) = infos->max_length;
+      LODWORD(max_length) = v3->max_length;
     }
-    while ( (__int64)++v19 < (int)max_length );
+    while ( (__int64)++v26 < (int)max_length );
   }
   Master_object = (__int64)this->fields.listRoot;
   if ( !Master_object )
     goto LABEL_49;
   Master_object = (__int64)UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)Master_object,
-                             (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                             (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !Master_object )
     goto LABEL_49;
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Master_object + 440LL))(
@@ -367,11 +386,11 @@ void QuestRewardHeelPortraitAction__Setup(
     *(_QWORD *)(*(_QWORD *)Master_object + 448LL));
   p_screenTouchInfo = &this->fields.screenTouchInfo;
   screenTouchInfo = (UnityEngine_Object_o *)this->fields.screenTouchInfo;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44, v45);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Master_object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( Instance )
     {
@@ -384,22 +403,22 @@ void QuestRewardHeelPortraitAction__Setup(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)Master_object,
-                             (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
         *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.screenTouchInfo,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.screenTouchInfo,
           (int32_t)Component_object,
-          v34,
-          v35,
-          v36,
-          v37,
-          v38,
-          v39);
+          v50,
+          v51,
+          v52,
+          v53,
+          v54,
+          v55);
         goto LABEL_45;
       }
     }
 LABEL_49:
-    sub_1D0F30C(Master_object, v16);
+    sub_21FFECC(Master_object, v19);
   }
 LABEL_45:
   Master_object = (__int64)*p_screenTouchInfo;
@@ -419,29 +438,32 @@ LABEL_45:
 
 void QuestRewardHeelPortraitAction__Update(QuestRewardHeelPortraitAction_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   UnityEngine_Component_o *screenTouchInfo; // x0
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
   Il2CppObject *Instance; // x20
-  AvalonSceneManager_c *v8; // x8
+  AvalonSceneManager_c *v11; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v10; // x21
+  System_Action_o *v13; // x21
 
-  if ( (byte_4E74305 & 1) == 0 )
+  if ( (byte_593528D & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
-    sub_1D0F0B4(&CTouch_TypeInfo);
-    sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction__Update_b__11_0__);
-    sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction_Update__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E74305 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AvalonSceneManager_TypeInfo);
+    sub_21FFC50(&CTouch_TypeInfo);
+    sub_21FFC50(&Method_QuestRewardHeelPortraitAction__Update_b__11_0__);
+    sub_21FFC50(&Method_QuestRewardHeelPortraitAction_Update__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_593528D = 1;
   }
   if ( this->fields.state == 2 )
   {
-    if ( !CTouch_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
+    if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method, v2);
     CTouch__process(0);
     if ( CTouch__isTouchPush(0) )
     {
@@ -453,25 +475,25 @@ void QuestRewardHeelPortraitAction__Update(QuestRewardHeelPortraitAction_o *this
       if ( !screenTouchInfo )
         goto LABEL_16;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0);
-      v5 = Method_QuestRewardHeelPortraitAction_Update__;
+      v6 = Method_QuestRewardHeelPortraitAction_Update__;
       if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction_Update__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1D0F0CC(Method_QuestRewardHeelPortraitAction_Update__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1D0F098(v5, v5[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v8 = AvalonSceneManager_TypeInfo;
-      if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+        v6 = (_QWORD *)sub_21FFC68(Method_QuestRewardHeelPortraitAction_Update__);
+      v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v11 = AvalonSceneManager_TypeInfo;
+      if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-        v8 = AvalonSceneManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v8, v9);
+        v11 = AvalonSceneManager_TypeInfo;
       }
-      DEFAULT_FADE_TIME = v8->static_fields->DEFAULT_FADE_TIME;
-      v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-      System_Action___ctor(v10, (Il2CppObject *)this, Method_QuestRewardHeelPortraitAction__Update_b__11_0__, 0);
+      DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
+      v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      System_Action___ctor(v13, (Il2CppObject *)this, Method_QuestRewardHeelPortraitAction__Update_b__11_0__, 0);
       if ( !Instance )
 LABEL_16:
-        sub_1D0F30C(screenTouchInfo, v3);
-      CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v10, 0);
+        sub_21FFECC(screenTouchInfo, v4);
+      CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v13, 0);
     }
   }
 }
@@ -497,106 +519,113 @@ bool QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
         QuestRewardHeelPortraitAction__Play_d__17_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   QuestRewardHeelPortraitAction__Play_d__17_o *v8; // x19
-  int32_t _1__state; // w8
+  int32_t _1__state; // w22
   struct QuestRewardHeelPortraitAction_o *_4__this; // x20
   struct System_Action_o *endAction; // x1
   _QWORD *v12; // x0
   System_Reflection_MethodBase_o *v13; // x0
-  CommonUI_o *v14; // x21
+  __int64 v14; // x2
+  CommonUI_o *v15; // x21
   float dispTouchWaitTime; // s8
-  UnityEngine_WaitForSeconds_o *v16; // x20
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
-  bool result; // w0
+  UnityEngine_WaitForSeconds_o *v17; // x20
+  MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
 
   v8 = this;
-  if ( (byte_4E7430D & 1) == 0 )
+  if ( (byte_5935295 & 1) == 0 )
   {
-    sub_1D0F0B4(&AvalonSceneManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
-    sub_1D0F0B4(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)sub_1D0F0B4(&StringLiteral_17103/*"ar236"*/);
-    byte_4E7430D = 1;
+    sub_21FFC50(&AvalonSceneManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_21FFC50(&Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
+    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)sub_21FFC50(&StringLiteral_17533/*"ar236"*/);
+    byte_5935295 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
+  if ( !_1__state )
+  {
+    v8->fields.__1__state = -1;
+    if ( _4__this )
+    {
+      endAction = v8->fields.endAction;
+      _4__this->fields.state = 1;
+      _4__this->fields.endAct = endAction;
+      sub_21FFBF4(
+        (MissionNaviTransitionBoardItem_o *)&_4__this->fields.endAct,
+        (int32_t)endAction,
+        v2,
+        v3,
+        v4,
+        v5,
+        v6,
+        v7);
+      this = (QuestRewardHeelPortraitAction__Play_d__17_o *)UnityEngine_Component__get_gameObject(
+                                                              (UnityEngine_Component_o *)_4__this,
+                                                              0);
+      if ( this )
+      {
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+        v12 = Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__;
+        if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__ + 83) & 2) != 0 )
+          v12 = (_QWORD *)sub_21FFC68(Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
+        v13 = (System_Reflection_MethodBase_o *)sub_21FFC34(v12, v12[4]);
+        OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_17533/*"ar236"*/, 0, 0);
+        this = (QuestRewardHeelPortraitAction__Play_d__17_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v15 = (CommonUI_o *)this;
+        if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, method, v14);
+        if ( v15 )
+        {
+          CommonUI__maskFadein(v15, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+          dispTouchWaitTime = _4__this->fields.dispTouchWaitTime;
+          v17 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+          UnityEngine_WaitForSeconds___ctor(v17, dispTouchWaitTime, 0);
+          v8->fields.__2__current = (Il2CppObject *)v17;
+          p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
+          sub_21FFBF4(p__2__current, (int32_t)v17, v19, v20, v21, v22, v23, v24);
+          p__2__current[-1].fields._BoardType_k__BackingField = 1;
+          return _1__state == 0;
+        }
+      }
+    }
+    goto LABEL_18;
+  }
   if ( _1__state == 1 )
   {
     v8->fields.__1__state = -1;
-    if ( !_4__this )
-      goto LABEL_18;
-    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)_4__this->fields.screenTouchInfo;
-    if ( !this )
-      goto LABEL_18;
-    this = (QuestRewardHeelPortraitAction__Play_d__17_o *)UnityEngine_Component__get_gameObject(
-                                                            (UnityEngine_Component_o *)this,
-                                                            0);
-    if ( !this )
-      goto LABEL_18;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-    result = 0;
-    _4__this->fields.state = 2;
-  }
-  else
-  {
-    if ( !_1__state )
+    if ( _4__this )
     {
-      v8->fields.__1__state = -1;
-      if ( _4__this )
+      this = (QuestRewardHeelPortraitAction__Play_d__17_o *)_4__this->fields.screenTouchInfo;
+      if ( this )
       {
-        _4__this->fields.state = 1;
-        endAction = v8->fields.endAction;
-        _4__this->fields.endAct = endAction;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&_4__this->fields.endAct, (int32_t)endAction, v2, v3, v4, v5, v6, v7);
         this = (QuestRewardHeelPortraitAction__Play_d__17_o *)UnityEngine_Component__get_gameObject(
-                                                                (UnityEngine_Component_o *)_4__this,
+                                                                (UnityEngine_Component_o *)this,
                                                                 0);
         if ( this )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-          v12 = Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__;
-          if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__ + 83) & 2) != 0 )
-            v12 = (_QWORD *)sub_1D0F0CC(Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
-          v13 = (System_Reflection_MethodBase_o *)sub_1D0F098(v12, v12[4]);
-          OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_17103/*"ar236"*/, 0, 0);
-          this = (QuestRewardHeelPortraitAction__Play_d__17_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v14 = (CommonUI_o *)this;
-          if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-          if ( v14 )
-          {
-            CommonUI__maskFadein(v14, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
-            dispTouchWaitTime = _4__this->fields.dispTouchWaitTime;
-            v16 = (UnityEngine_WaitForSeconds_o *)sub_1D0F300(UnityEngine_WaitForSeconds_TypeInfo);
-            UnityEngine_WaitForSeconds___ctor(v16, dispTouchWaitTime, 0);
-            v8->fields.__2__current = (Il2CppObject *)v16;
-            p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-            sub_1D0F058(p__2__current, (int32_t)v16, v18, v19, v20, v21, v22, v23);
-            result = 1;
-            LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
-            return result;
-          }
+          _4__this->fields.state = 2;
+          return _1__state == 0;
         }
       }
-LABEL_18:
-      sub_1D0F30C(this, method);
     }
-    return 0;
+LABEL_18:
+    sub_21FFECC(this, method);
   }
-  return result;
+  return _1__state == 0;
 }
 
 
@@ -616,11 +645,11 @@ void __noreturn QuestRewardHeelPortraitAction__Play_d__17__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_QuestRewardHeelPortraitAction__Play_d__17_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_QuestRewardHeelPortraitAction__Play_d__17_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 
@@ -643,23 +672,23 @@ void QuestRewardHeelPortraitAction__Play_d__17__System_IDisposable_Dispose(
 void QuestRewardHeelPortraitAction___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7430B & 1) == 0 )
+  if ( (byte_5935293 & 1) == 0 )
   {
-    sub_1D0F0B4(&QuestRewardHeelPortraitAction___c_TypeInfo);
-    byte_4E7430B = 1;
+    sub_21FFC50(&QuestRewardHeelPortraitAction___c_TypeInfo);
+    byte_5935293 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(QuestRewardHeelPortraitAction___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(QuestRewardHeelPortraitAction___c_TypeInfo);
   System_Object___ctor(v1, 0);
   QuestRewardHeelPortraitAction___c_TypeInfo->static_fields->__9 = (struct QuestRewardHeelPortraitAction___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)QuestRewardHeelPortraitAction___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)QuestRewardHeelPortraitAction___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -683,7 +712,7 @@ int32_t QuestRewardHeelPortraitAction___c___Setup_b__16_0(
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_1D0F30C(this, x);
+    sub_21FFECC(this, x);
   return x->fields.objectId - y->fields.objectId;
 }
 
@@ -703,42 +732,42 @@ void QuestRewardHeelPortraitAction___c__DisplayClass14_0___LoadEventUI_b__0(
 {
   QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *v3; // x19
   struct QuestRewardHeelPortraitAction_o *_4__this; // x8
-  int32_t eventId; // w20
   System_Action_o *_9__1; // x21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  int32_t eventId; // w20
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
   v3 = this;
-  if ( (byte_4E7430C & 1) == 0 )
+  if ( (byte_5935294 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    this = (QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *)sub_1D0F0B4(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__);
-    byte_4E7430C = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    this = (QuestRewardHeelPortraitAction___c__DisplayClass14_0_o *)sub_21FFC50(&Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__);
+    byte_5935294 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
-    sub_1D0F30C(this, assetData);
-  eventId = _4__this->fields.eventId;
+    sub_21FFECC(this, assetData);
   _9__1 = v3->fields.__9__1;
+  eventId = _4__this->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_QuestRewardHeelPortraitAction___c__DisplayClass14_0__LoadEventUI_b__1__,
       0);
     v3->fields.__9__1 = _9__1;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_41966848(eventId, _9__1, 1, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, assetData, method);
+  AtlasManager__LoadEventUI_47538036(eventId, _9__1, 1, 0);
 }
 
 

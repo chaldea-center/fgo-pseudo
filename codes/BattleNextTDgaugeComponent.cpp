@@ -19,13 +19,13 @@ void BattleNextTDgaugeComponent__changeGauge(
   __int64 *v10; // x8
 
   v6 = this;
-  if ( (byte_4E7AD15 & 1) == 0 )
+  if ( (byte_593BD83 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1D0F0B4(&StringLiteral_20557/*"icon_count_01"*/);
-    sub_1D0F0B4(&StringLiteral_20559/*"icon_count_bg"*/);
-    this = (BattleNextTDgaugeComponent_o *)sub_1D0F0B4(&StringLiteral_20558/*"icon_count_02"*/);
-    byte_4E7AD15 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_21FFC50(&StringLiteral_21108/*"icon_count_01"*/);
+    sub_21FFC50(&StringLiteral_21110/*"icon_count_bg"*/);
+    this = (BattleNextTDgaugeComponent_o *)sub_21FFC50(&StringLiteral_21109/*"icon_count_02"*/);
+    byte_593BD83 = 1;
   }
   gaugeList = v6->fields.gaugeList;
   if ( gaugeList )
@@ -42,15 +42,15 @@ void BattleNextTDgaugeComponent__changeGauge(
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)Component_object,
-                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
             if ( Component_object )
             {
-              v10 = &StringLiteral_20557/*"icon_count_01"*/;
+              v10 = &StringLiteral_21108/*"icon_count_01"*/;
               goto LABEL_20;
             }
           }
 LABEL_21:
-          sub_1D0F30C(Component_object, *(_QWORD *)&index);
+          sub_21FFECC(Component_object, *(_QWORD *)&index);
         }
       }
       else if ( type == 2 )
@@ -62,10 +62,10 @@ LABEL_21:
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)Component_object,
-                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
             if ( Component_object )
             {
-              v10 = &StringLiteral_20558/*"icon_count_02"*/;
+              v10 = &StringLiteral_21109/*"icon_count_02"*/;
 LABEL_20:
               UISprite__set_spriteName((UISprite_o *)Component_object, (System_String_o *)*v10, 0);
               return;
@@ -81,16 +81,16 @@ LABEL_20:
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)Component_object,
-                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
           if ( Component_object )
           {
-            v10 = &StringLiteral_20559/*"icon_count_bg"*/;
+            v10 = &StringLiteral_21110/*"icon_count_bg"*/;
             goto LABEL_20;
           }
         }
         goto LABEL_21;
       }
-      sub_1D0F314(this);
+      sub_21FFED4(this);
     }
   }
 }
@@ -107,12 +107,13 @@ void BattleNextTDgaugeComponent__setHide(BattleNextTDgaugeComponent_o *this, con
         (gaugeFrontRoot = (UnityEngine_Component_o *)this->fields.gaugeBackRoot) == 0)
     || (gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0)) == 0 )
   {
-    sub_1D0F30C(gaugeFrontRoot, method);
+    sub_21FFECC(gaugeFrontRoot, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, 0, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleNextTDgaugeComponent__setInitGauge(
         BattleNextTDgaugeComponent_o *this,
         int32_t now,
@@ -121,8 +122,9 @@ void BattleNextTDgaugeComponent__setInitGauge(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
+  int32_t v10; // w20
   BattleNextTDgaugeComponent_o *v11; // x19
   struct UnityEngine_GameObject_array *gaugeList; // x25
   il2cpp_array_size_t max_length; // x8
@@ -132,69 +134,69 @@ void BattleNextTDgaugeComponent__setInitGauge(
   il2cpp_array_size_t v17; // x8
   unsigned __int64 v18; // x27
   UnityEngine_Object_o *v19; // x25
-  int32_t v20; // w2
-  char v21; // w3
-  System_String_o *v22; // x4
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
   int32_t v23; // w5
-  int64_t v24; // x6
-  System_String_o *v25; // x7
+  bool v24; // w6
+  bool v25; // w7
   __int64 v26; // x1
   UnityEngine_Component_o *gaugeFrontRoot; // x0
   int32_t v28; // w27
   bool v29; // w1
   System_Collections_Generic_List_object__o *v30; // x25
   System_Collections_Generic_List_object__o *v31; // x24
-  int v32; // w28
+  int v32; // w29
   UnityEngine_GameObject_o *v33; // x26
-  int32_t v34; // w2
-  char v35; // w3
-  System_String_o *v36; // x4
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
   int32_t v37; // w5
-  int64_t v38; // x6
-  System_String_o *v39; // x7
+  bool v38; // w6
+  bool v39; // w7
   struct System_Object_array *items; // x8
   _QWORD *v41; // x9
   __int64 size; // x10
   Il2CppClass **v43; // x0
   UnityEngine_GameObject_o *v44; // x26
-  int32_t v45; // w2
-  char v46; // w3
-  System_String_o *v47; // x4
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
   int32_t v48; // w5
-  int64_t v49; // x6
-  System_String_o *v50; // x7
+  bool v49; // w6
+  bool v50; // w7
   struct System_Object_array *v51; // x8
   _QWORD *v52; // x9
   __int64 v53; // x10
   Il2CppClass **v54; // x0
   System_Object_array *v55; // x0
-  int32_t v56; // w2
-  char v57; // w3
-  System_String_o *v58; // x4
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
   int32_t v59; // w5
-  int64_t v60; // x6
-  System_String_o *v61; // x7
-  int32_t v62; // w20
-  System_Object_array *v63; // x0
-  int32_t v64; // w2
-  char v65; // w3
-  System_String_o *v66; // x4
-  int32_t v67; // w5
-  int64_t v68; // x6
-  System_String_o *v69; // x7
-  const MethodInfo *v70; // x2
+  bool v60; // w6
+  bool v61; // w7
+  System_Object_array *v62; // x0
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
+  const MethodInfo *v69; // x2
+  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
 
+  v10 = now;
   v11 = this;
-  if ( (byte_4E7AD13 & 1) == 0 )
+  if ( (byte_593BD81 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    this = (BattleNextTDgaugeComponent_o *)sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7AD13 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
+    this = (BattleNextTDgaugeComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BD81 = 1;
   }
   gaugeList = v11->fields.gaugeList;
   if ( gaugeList )
@@ -206,15 +208,15 @@ void BattleNextTDgaugeComponent__setInitGauge(
       while ( v14 < (unsigned int)max_length )
       {
         v15 = (UnityEngine_Object_o *)gaugeList->m_Items[v14];
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_73359484(v15, 0);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&now);
+        UnityEngine_Object__Destroy_83246496(v15, 0);
         LODWORD(max_length) = gaugeList->max_length;
         if ( (__int64)++v14 >= (int)max_length )
           goto LABEL_10;
       }
-LABEL_54:
-      sub_1D0F314(this);
+LABEL_55:
+      sub_21FFED4(this);
     }
   }
 LABEL_10:
@@ -228,70 +230,75 @@ LABEL_10:
       while ( v18 < (unsigned int)v17 )
       {
         v19 = (UnityEngine_Object_o *)gaugebackList->m_Items[v18];
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_73359484(v19, 0);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&now);
+        UnityEngine_Object__Destroy_83246496(v19, 0);
         LODWORD(v17) = gaugebackList->max_length;
         if ( (__int64)++v18 >= (int)v17 )
           goto LABEL_17;
       }
-      goto LABEL_54;
+      goto LABEL_55;
     }
   }
 LABEL_17:
   v11->fields.gaugeList = 0;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v11->fields.gaugeList,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v11->fields.gaugeList,
     0,
-    max,
-    isTDSeraled,
-    (System_String_o *)method,
+    *(System_String_o **)&max,
+    (System_String_o *)isTDSeraled,
+    (int32_t)method,
     v5,
     v6,
     v7);
   v11->fields.gaugebackList = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v11->fields.gaugebackList, 0, v20, v21, v22, v23, v24, v25);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->fields.gaugebackList, 0, v20, v21, v22, v23, v24, v25);
   gaugeFrontRoot = (UnityEngine_Component_o *)v11->fields.gaugeFrontRoot;
   if ( isTDSeraled )
     v28 = 0;
   else
     v28 = max;
-  if ( !gaugeFrontRoot )
-    goto LABEL_53;
-  gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0);
-  if ( !gaugeFrontRoot )
-    goto LABEL_53;
   if ( v28 < 1 )
   {
+    if ( !gaugeFrontRoot )
+      goto LABEL_54;
+    gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0);
+    if ( !gaugeFrontRoot )
+      goto LABEL_54;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, 0, 0);
     gaugeFrontRoot = (UnityEngine_Component_o *)v11->fields.gaugeBackRoot;
     if ( !gaugeFrontRoot )
-      goto LABEL_53;
+      goto LABEL_54;
     gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0);
     if ( !gaugeFrontRoot )
-      goto LABEL_53;
+      goto LABEL_54;
     v29 = 0;
   }
   else
   {
+    if ( !gaugeFrontRoot )
+      goto LABEL_54;
+    gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0);
+    if ( !gaugeFrontRoot )
+      goto LABEL_54;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, 1, 0);
     gaugeFrontRoot = (UnityEngine_Component_o *)v11->fields.gaugeBackRoot;
     if ( !gaugeFrontRoot )
-      goto LABEL_53;
+      goto LABEL_54;
     gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gaugeFrontRoot, 0);
     if ( !gaugeFrontRoot )
-      goto LABEL_53;
+      goto LABEL_54;
     v29 = 1;
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, v29, 0);
-  v30 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+  v30 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v30,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  v31 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_GameObject__TypeInfo);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  v31 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v31,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   if ( v28 >= 1 )
   {
     v32 = 0;
@@ -304,37 +311,37 @@ LABEL_17:
                                                     0,
                                                     0);
       if ( !gaugeFrontRoot )
-        goto LABEL_53;
+        goto LABEL_54;
       v33 = (UnityEngine_GameObject_o *)gaugeFrontRoot;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, 1, 0);
       gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v33, 0);
       if ( !gaugeFrontRoot )
-        goto LABEL_53;
-      v71.fields.y = 0.0;
-      v71.fields.z = 0.0;
-      v71.fields.x = v11->fields.width * (float)v32;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gaugeFrontRoot, v71, 0);
+        goto LABEL_54;
+      v70.fields.y = 0.0;
+      v70.fields.z = 0.0;
+      v70.fields.x = v11->fields.width * (float)v32;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gaugeFrontRoot, v70, 0);
       if ( !v30 )
-        goto LABEL_53;
+        goto LABEL_54;
       items = v30->fields._items;
       v41 = Method_System_Collections_Generic_List_GameObject__Add__;
       ++v30->fields._version;
       if ( !items )
-        goto LABEL_53;
+        goto LABEL_54;
       size = v30->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v30,
           (Il2CppObject *)v33,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &items->obj.klass + size;
         v30->fields._size = size + 1;
         v43[4] = (Il2CppClass *)v33;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v43 + 4), (int32_t)v33, v34, v35, v36, v37, v38, v39);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v43 + 4), (int32_t)v33, v34, v35, v36, v37, v38, v39);
       }
       gaugeFrontRoot = (UnityEngine_Component_o *)BaseMonoBehaviour__createObject(
                                                     (BaseMonoBehaviour_o *)v11,
@@ -343,63 +350,69 @@ LABEL_17:
                                                     0,
                                                     0);
       if ( !gaugeFrontRoot )
-        goto LABEL_53;
+        goto LABEL_54;
       v44 = (UnityEngine_GameObject_o *)gaugeFrontRoot;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gaugeFrontRoot, 1, 0);
       gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v44, 0);
       if ( !gaugeFrontRoot )
-        goto LABEL_53;
-      v72.fields.y = 0.0;
-      v72.fields.z = 0.0;
-      v72.fields.x = v11->fields.width * (float)v32;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gaugeFrontRoot, v72, 0);
+        goto LABEL_54;
+      v71.fields.y = 0.0;
+      v71.fields.z = 0.0;
+      v71.fields.x = v11->fields.width * (float)v32;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gaugeFrontRoot, v71, 0);
       if ( !v31 )
-        goto LABEL_53;
+        goto LABEL_54;
       v51 = v31->fields._items;
       v52 = Method_System_Collections_Generic_List_GameObject__Add__;
       ++v31->fields._version;
       if ( !v51 )
-        goto LABEL_53;
+        goto LABEL_54;
       v53 = v31->fields._size;
       if ( (unsigned int)v53 >= LODWORD(v51->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v31,
           (Il2CppObject *)v44,
-          *(const MethodInfo_395C410 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
       }
       else
       {
         v54 = &v51->obj.klass + v53;
         v31->fields._size = v53 + 1;
         v54[4] = (Il2CppClass *)v44;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v54 + 4), (int32_t)v44, v45, v46, v47, v48, v49, v50);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v54 + 4), (int32_t)v44, v45, v46, v47, v48, v49, v50);
       }
       if ( v28 == ++v32 )
-        goto LABEL_48;
+        goto LABEL_50;
     }
   }
   if ( !v30 )
-    goto LABEL_53;
-LABEL_48:
+    goto LABEL_54;
+LABEL_50:
   v55 = System_Collections_Generic_List_object___ToArray(
           v30,
-          (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+          (const MethodInfo_445164C *)Method_System_Collections_Generic_List_GameObject__ToArray__);
   v11->fields.gaugeList = (struct UnityEngine_GameObject_array *)v55;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v11->fields.gaugeList, (int32_t)v55, v56, v57, v58, v59, v60, v61);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->fields.gaugeList, (int32_t)v55, v56, v57, v58, v59, v60, v61);
   if ( !v31 )
-LABEL_53:
-    sub_1D0F30C(gaugeFrontRoot, v26);
+LABEL_54:
+    sub_21FFECC(gaugeFrontRoot, v26);
   if ( isTDSeraled )
-    v62 = 0;
-  else
-    v62 = now;
-  v63 = System_Collections_Generic_List_object___ToArray(
+    v10 = 0;
+  v62 = System_Collections_Generic_List_object___ToArray(
           v31,
-          (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
-  v11->fields.gaugebackList = (struct UnityEngine_GameObject_array *)v63;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v11->fields.gaugebackList, (int32_t)v63, v64, v65, v66, v67, v68, v69);
-  BattleNextTDgaugeComponent__setValue(v11, v62, v70);
+          (const MethodInfo_445164C *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+  v11->fields.gaugebackList = (struct UnityEngine_GameObject_array *)v62;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&v11->fields.gaugebackList,
+    (int32_t)v62,
+    v63,
+    v64,
+    v65,
+    v66,
+    v67,
+    v68);
+  BattleNextTDgaugeComponent__setValue(v11, v10, v69);
 }
 
 
@@ -411,67 +424,67 @@ void BattleNextTDgaugeComponent__setValue(
 {
   const MethodInfo *v3; // x3
   struct UnityEngine_GameObject_array *gaugeList; // x8
-  struct UnityEngine_GameObject_array *max_length; // x8
+  il2cpp_array_size_t max_length; // x9
   int32_t v8; // w21
   int32_t v9; // w22
-  int32_t v10; // w2
+  int32_t v10; // w8
+  int32_t v11; // w2
   UnityEngine_Component_o *gaugeFrontRoot; // x0
-  UnityEngine_Object_o *v12; // x21
+  UnityEngine_Object_o *v13; // x21
+  __int64 v14; // x1
   Il2CppObject *Component_object; // x20
-  int v14; // w8
-  bool v15; // w1
-  UnityEngine_Behaviour_o *v16; // x0
+  __int64 v16; // x1
+  int v17; // s0
+  bool v18; // w1
 
-  if ( (byte_4E7AD14 & 1) == 0 )
+  if ( (byte_593BD82 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E7AD14 = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593BD82 = 1;
   }
   gaugeList = this->fields.gaugeList;
   if ( gaugeList )
   {
-    max_length = (struct UnityEngine_GameObject_array *)gaugeList->max_length;
+    max_length = gaugeList->max_length;
     if ( max_length )
     {
-      if ( (int)max_length >= 1 )
+      v8 = 0;
+      v9 = max_length - nextVal;
+      while ( 1 )
       {
-        v8 = 0;
-        v9 = (_DWORD)max_length - nextVal;
-        while ( 1 )
-        {
-          v10 = v9 == (_DWORD)max_length ? 2 : v9 > v8;
-          BattleNextTDgaugeComponent__changeGauge(this, v8, v10, v3);
-          max_length = this->fields.gaugeList;
-          if ( !max_length )
-            break;
-          LODWORD(max_length) = max_length->max_length;
-          if ( ++v8 >= (int)max_length )
-            goto LABEL_12;
-        }
-LABEL_32:
-        sub_1D0F30C(gaugeFrontRoot, *(_QWORD *)&nextVal);
+        v10 = gaugeList->max_length;
+        if ( v8 >= v10 )
+          break;
+        if ( v9 == v10 )
+          v11 = 2;
+        else
+          v11 = v9 > v8;
+        BattleNextTDgaugeComponent__changeGauge(this, v8, v11, v3);
+        gaugeList = this->fields.gaugeList;
+        ++v8;
+        if ( !gaugeList )
+          goto LABEL_11;
       }
-LABEL_12:
       gaugeFrontRoot = (UnityEngine_Component_o *)this->fields.gaugeFrontRoot;
       if ( !gaugeFrontRoot )
-        goto LABEL_32;
+        goto LABEL_11;
       gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     gaugeFrontRoot,
-                                                    (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                                    (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       if ( !this->fields.gaugeFrontRoot )
-        goto LABEL_32;
-      v12 = (UnityEngine_Object_o *)gaugeFrontRoot;
+        goto LABEL_11;
+      v13 = (UnityEngine_Object_o *)gaugeFrontRoot;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this->fields.gaugeFrontRoot,
-                           (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
-      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
+                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
+      if ( UnityEngine_Object__op_Inequality(v13, 0, 0) )
       {
-        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
         gaugeFrontRoot = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
                                                       (UnityEngine_Object_o *)Component_object,
                                                       0,
@@ -480,35 +493,39 @@ LABEL_12:
         {
           if ( nextVal == 1 )
           {
-            if ( !Component_object )
-              goto LABEL_32;
-            v14 = 1060320051;
-          }
-          else
-          {
-            if ( nextVal )
+            if ( Component_object )
             {
-              if ( !v12 )
-                goto LABEL_32;
-              gaugeFrontRoot = (UnityEngine_Component_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppClass *, float))v12->klass[1]._1.element_class)(
-                                                            v12,
-                                                            v12->klass[1]._1.castClass,
-                                                            1.0);
-              if ( !Component_object )
-                goto LABEL_32;
-              v16 = (UnityEngine_Behaviour_o *)Component_object;
-              v15 = 0;
-              goto LABEL_31;
+              v17 = 1060320051;
+              goto LABEL_27;
             }
-            if ( !Component_object )
-              goto LABEL_32;
-            v14 = 1050253722;
           }
-          v15 = 1;
-          LODWORD(Component_object[3].monitor) = v14;
-          v16 = (UnityEngine_Behaviour_o *)Component_object;
+          else if ( nextVal )
+          {
+            if ( v13 )
+            {
+              gaugeFrontRoot = (UnityEngine_Component_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppClass *, float))v13->klass[1]._1.element_class)(
+                                                            v13,
+                                                            v13->klass[1]._1.castClass,
+                                                            1.0);
+              if ( Component_object )
+              {
+                v18 = 0;
+                goto LABEL_31;
+              }
+            }
+          }
+          else if ( Component_object )
+          {
+            v17 = 1050253722;
+LABEL_27:
+            LODWORD(Component_object[3].monitor) = v17;
+            v18 = 1;
 LABEL_31:
-          UnityEngine_Behaviour__set_enabled(v16, v15, 0);
+            UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, v18, 0);
+            return;
+          }
+LABEL_11:
+          sub_21FFECC(gaugeFrontRoot, *(_QWORD *)&nextVal);
         }
       }
     }

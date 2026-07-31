@@ -1,20 +1,20 @@
 void BoxGachaUtility___cctor(const MethodInfo *method)
 {
   struct BoxGachaUtility_StaticFields *static_fields; // x8
-  BoxGachaUtility_c *v2; // x8
-  struct BoxGachaUtility_StaticFields *v3; // x9
+  BoxGachaUtility_c *v2; // x11
+  struct BoxGachaUtility_StaticFields *v3; // x8
   int32x2_t *v4; // x8
 
-  if ( (byte_4E71848 & 1) == 0 )
+  if ( (byte_59325FB & 1) == 0 )
   {
-    sub_1D0F0B4(&BoxGachaUtility_TypeInfo);
-    byte_4E71848 = 1;
+    sub_21FFC50(&BoxGachaUtility_TypeInfo);
+    byte_59325FB = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
-  static_fields->NORMAL_ITEM_SIZE.fields.z = 0.68;
   v2 = BoxGachaUtility_TypeInfo;
-  v3 = BoxGachaUtility_TypeInfo->static_fields;
+  static_fields->NORMAL_ITEM_SIZE.fields.z = 0.68;
+  v3 = v2->static_fields;
   *(int32x2_t *)&v3->CHANGE_MAX_ITEM_SIZE.fields.x = vdup_n_s32(0x3EC28F5Cu);
   v3->CHANGE_MAX_ITEM_SIZE.fields.z = 0.38;
   v4 = (int32x2_t *)v2->static_fields;
@@ -28,19 +28,18 @@ void BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, cons
   Il2CppObject *v5; // x0
   System_String_o *v6; // x0
   __int64 v7; // x1
-  int32_t v8; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E71847 & 1) == 0 )
+  if ( (byte_59325FA & 1) == 0 )
   {
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_20800/*"img_gachatxt_{0:D2}"*/);
-    byte_4E71847 = 1;
+    sub_21FFC50(&StringLiteral_21355/*"img_gachatxt_{0:D2}"*/);
+    byte_59325FA = 1;
   }
   v8 = num;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v6 = System_String__Format((System_String_o *)StringLiteral_20800/*"img_gachatxt_{0:D2}"*/, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v8);
+  v6 = System_String__Format((System_String_o *)StringLiteral_21355/*"img_gachatxt_{0:D2}"*/, v5, 0);
   if ( !sprite )
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   UISprite__set_spriteName(sprite, v6, 0);
   ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     sprite,
@@ -56,34 +55,37 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
         UISprite_o *threeDigit,
         const MethodInfo *method)
 {
-  int v8; // w20
+  unsigned int v8; // w20
   int v9; // w8
   unsigned int v10; // w10
   bool v11; // cc
-  const MethodInfo *v12; // x2
-  float v13; // s8
+  __int64 v12; // x1
+  const MethodInfo *v13; // x2
+  float v14; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x2
+  __int64 v16; // x1
   const MethodInfo *v17; // x2
   const MethodInfo *v18; // x2
-  const MethodInfo *v19; // x2
+  __int64 v19; // x1
+  const MethodInfo *v20; // x2
+  const MethodInfo *v21; // x2
+  const MethodInfo *v22; // x2
 
   v8 = gachaTime;
-  if ( (byte_4E71846 & 1) == 0 )
+  if ( (byte_59325F9 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1D0F0B4(&BoxGachaUtility_TypeInfo);
-    byte_4E71846 = 1;
+    *(_QWORD *)&gachaTime = sub_21FFC50(&BoxGachaUtility_TypeInfo);
+    byte_59325F9 = 1;
   }
-  if ( v8 < 10 )
+  if ( (int)v8 < 10 )
     goto LABEL_9;
   v9 = 0;
   v10 = v8;
   do
   {
     v11 = v10 > 0x63;
-    v10 /= 0xAu;
     ++v9;
+    v10 /= 0xAu;
   }
   while ( v11 );
   if ( v9 == 2 )
@@ -100,12 +102,12 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
           if ( *(_QWORD *)&gachaTime )
           {
             UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0);
-            if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-            BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v15);
-            BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 % 100, v16);
-            BoxGachaUtility__SetBoxGachaNumSprite(threeDigit, v8 / 100, v17);
-            v13 = 15.0;
+            if ( !*(&BoxGachaUtility_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo, v19, v20);
+            BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 0xA, v20);
+            BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 % 0x64, v21);
+            BoxGachaUtility__SetBoxGachaNumSprite(threeDigit, v8 / 0x64, v22);
+            v14 = 15.0;
             if ( oneDigit )
               goto LABEL_16;
           }
@@ -128,11 +130,11 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
           if ( *(_QWORD *)&gachaTime )
           {
             UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0);
-            if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-            BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v18);
-            BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 / 10, v19);
-            v13 = 4.0;
+            if ( !*(&BoxGachaUtility_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo, v16, v17);
+            BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 0xA, v17);
+            BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 / 0xA, v18);
+            v14 = 4.0;
             if ( oneDigit )
               goto LABEL_16;
           }
@@ -140,7 +142,7 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1D0F30C(*(_QWORD *)&gachaTime, oneDigit);
+    sub_21FFECC(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;
@@ -157,13 +159,13 @@ LABEL_9:
   if ( !*(_QWORD *)&gachaTime )
     goto LABEL_32;
   UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0);
-  if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-  BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8, v12);
-  v13 = -8.0;
+  if ( !*(&BoxGachaUtility_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo, v12, v13);
+  BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8, v13);
+  v14 = -8.0;
   if ( !oneDigit )
     goto LABEL_32;
 LABEL_16:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0);
-  GameObjectExtensions__SetLocalPositionX(gameObject, v13, 0);
+  GameObjectExtensions__SetLocalPositionX(gameObject, v14, 0);
 }

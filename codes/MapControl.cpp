@@ -6,31 +6,31 @@ void MapControl___ctor(MapControl_o *this, const MethodInfo *method)
 
 void MapControl_AreaBoardInfo___ctor(MapControl_AreaBoardInfo_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
+  System_String_o *v3; // x2
+  System_String_o *v4; // x3
+  int32_t v5; // w4
   int32_t v6; // w5
-  int64_t v7; // x6
-  System_String_o *v8; // x7
+  bool v7; // w6
+  bool v8; // w7
   int32_t v9; // w1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
 
-  if ( (byte_4E74042 & 1) == 0 )
+  if ( (byte_5934F7A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E74042 = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934F7A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.eventEnt = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.eventEnt, 0, v3, v4, v5, v6, v7, v8);
-  v9 = StringLiteral_1/*""*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventEnt, 0, v3, v4, v5, v6, v7, v8);
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.specialNoticeText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.specialNoticeText, v9, v10, v11, v12, v13, v14, v15);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.specialNoticeText, v9, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -57,37 +57,37 @@ MapGimmickMaster_o *MapControl_MapGimmickInfo__GetMapGimmickMaster(
         const MethodInfo *method)
 {
   MapGimmickMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_mapGimmickMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_mapGimmickMaster; // x19
   MapGimmickMaster_o *mapGimmickMaster; // t1
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E74063 & 1) == 0 )
+  if ( (byte_5934F9B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_MapGimmickMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E74063 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_MapGimmickMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934F9B = 1;
   }
   mapGimmickMaster = this->fields.mapGimmickMaster;
-  p_mapGimmickMaster = (GrandQuestFolderBoardItem_o *)&this->fields.mapGimmickMaster;
+  p_mapGimmickMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.mapGimmickMaster;
   result = mapGimmickMaster;
   if ( !mapGimmickMaster )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v7);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_MapGimmickMaster___);
-    p_mapGimmickMaster->klass = (GrandQuestFolderBoardItem_c *)MasterData_object;
-    sub_1D0F058(p_mapGimmickMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MapGimmickMaster___);
+    p_mapGimmickMaster->klass = (MissionNaviTransitionBoardItem_c *)MasterData_object;
+    sub_21FFBF4(p_mapGimmickMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
     return (MapGimmickMaster_o *)p_mapGimmickMaster->klass;
   }
   return result;
@@ -99,20 +99,20 @@ MapGimmickEntity_o *MapControl_MapGimmickInfo__GetMine(MapControl_MapGimmickInfo
   DataMasterBase_TMaster__TEntity__PKType__o *MapGimmickMaster; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E74062 & 1) == 0 )
+  if ( (byte_5934F9A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_MapGimmickMaster__MapGimmickEntity__int__GetEntity__);
-    byte_4E74062 = 1;
+    sub_21FFC50(&Method_DataMasterBase_MapGimmickMaster__MapGimmickEntity__int__GetEntity__);
+    byte_5934F9A = 1;
   }
   MapGimmickMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)MapControl_MapGimmickInfo__GetMapGimmickMaster(
                                                                      this,
                                                                      method);
   if ( !MapGimmickMaster )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return (MapGimmickEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                  MapGimmickMaster,
                                  this->fields.mapGimmickId,
-                                 (const MethodInfo_3535B7C *)Method_DataMasterBase_MapGimmickMaster__MapGimmickEntity__int__GetEntity__);
+                                 (const MethodInfo_3EDD388 *)Method_DataMasterBase_MapGimmickMaster__MapGimmickEntity__int__GetEntity__);
 }
 
 
@@ -143,59 +143,59 @@ void MapControl_MapGimmickInfo__SetMine(
 void MapControl_MapInfo___ctor(MapControl_MapInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   __int64 v10; // x0
   __int64 v11; // x1
   struct System_Collections_Generic_List_MapControl_SpotInfo__o *spotInfoList; // x8
   int32_t size; // w2
   int v14; // w9
   System_Collections_Generic_List_object__o *v15; // x20
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  bool v20; // w6
+  bool v21; // w7
   struct System_Collections_Generic_List_MapControl_SpotRoadInfo__o *spotRoadInfoList; // x8
   int32_t v23; // w2
   int v24; // w9
   System_Collections_Generic_List_object__o *v25; // x20
   struct System_Collections_Generic_List_MapControl_MapGimmickInfo__o **p_mapGimmickInfoList; // x19
-  int32_t v27; // w2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
   int32_t v30; // w5
-  int64_t v31; // x6
-  System_String_o *v32; // x7
+  bool v31; // w6
+  bool v32; // w7
   struct System_Collections_Generic_List_MapControl_MapGimmickInfo__o *v33; // x8
   int32_t v34; // w2
   int v35; // w9
 
-  if ( (byte_4E74064 & 1) == 0 )
+  if ( (byte_5934F9C & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_MapGimmickInfo__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_SpotInfo__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_SpotRoadInfo__TypeInfo);
-    byte_4E74064 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_MapGimmickInfo__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_SpotInfo__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_SpotRoadInfo__TypeInfo);
+    byte_5934F9C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_SpotInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_SpotInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_SpotInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_SpotInfo___ctor__);
   this->fields.spotInfoList = (struct System_Collections_Generic_List_MapControl_SpotInfo__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.spotInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.spotInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   spotInfoList = this->fields.spotInfoList;
   if ( !spotInfoList )
     goto LABEL_13;
@@ -205,12 +205,20 @@ void MapControl_MapInfo___ctor(MapControl_MapInfo_o *this, const MethodInfo *met
   spotInfoList->fields._version = v14;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)spotInfoList->fields._items, 0, size, 0);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_SpotRoadInfo__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_SpotRoadInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo___ctor__);
   this->fields.spotRoadInfoList = (struct System_Collections_Generic_List_MapControl_SpotRoadInfo__o *)v15;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.spotRoadInfoList, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.spotRoadInfoList,
+    (int32_t)v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   spotRoadInfoList = this->fields.spotRoadInfoList;
   if ( !spotRoadInfoList )
     goto LABEL_13;
@@ -220,17 +228,17 @@ void MapControl_MapInfo___ctor(MapControl_MapInfo_o *this, const MethodInfo *met
   spotRoadInfoList->fields._version = v24;
   if ( v23 >= 1 )
     System_Array__Clear((System_Array_o *)spotRoadInfoList->fields._items, 0, v23, 0);
-  v25 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_MapGimmickInfo__TypeInfo);
+  v25 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_MapGimmickInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v25,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo___ctor__);
   this->fields.mapGimmickInfoList = (struct System_Collections_Generic_List_MapControl_MapGimmickInfo__o *)v25;
   p_mapGimmickInfoList = &this->fields.mapGimmickInfoList;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_mapGimmickInfoList, (int32_t)v25, v27, v28, v29, v30, v31, v32);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_mapGimmickInfoList, (int32_t)v25, v27, v28, v29, v30, v31, v32);
   v33 = *p_mapGimmickInfoList;
   if ( !*p_mapGimmickInfoList )
 LABEL_13:
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   v34 = v33->fields._size;
   v35 = v33->fields._version + 1;
   v33->fields._size = 0;
@@ -249,34 +257,35 @@ MapControl_SpotInfo_o *MapControl_MapInfo__AddChild(
   const MethodInfo *v6; // x1
   System_Collections_Generic_List_object__o *spotInfoList; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   struct System_Object_array *items; // x8
   _QWORD *v16; // x9
   __int64 size; // x10
   Il2CppClass **v18; // x8
 
-  if ( (byte_4E74066 & 1) == 0 )
+  if ( (byte_5934F9E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Add__);
-    sub_1D0F0B4(&MapControl_SpotInfo_TypeInfo);
-    byte_4E74066 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Add__);
+    sub_21FFC50(&MapControl_SpotInfo_TypeInfo);
+    byte_5934F9E = 1;
   }
-  v5 = (MapControl_SpotInfo_o *)sub_1D0F300(MapControl_SpotInfo_TypeInfo);
+  v5 = (MapControl_SpotInfo_o *)sub_21FFEBC(MapControl_SpotInfo_TypeInfo);
   MapControl_SpotInfo___ctor(v5, v6);
   if ( !v5
-    || (v5->fields.spotId = spotId,
-        (spotInfoList = (System_Collections_Generic_List_object__o *)this->fields.spotInfoList) == 0)
+    || (spotInfoList = (System_Collections_Generic_List_object__o *)this->fields.spotInfoList,
+        v5->fields.spotId = spotId,
+        !spotInfoList)
     || (items = spotInfoList->fields._items,
         v16 = Method_System_Collections_Generic_List_MapControl_SpotInfo__Add__,
         ++spotInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(spotInfoList, v8);
+    sub_21FFECC(spotInfoList, v8);
   }
   size = spotInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -284,14 +293,14 @@ MapControl_SpotInfo_o *MapControl_MapInfo__AddChild(
     System_Collections_Generic_List_object___AddWithResize(
       spotInfoList,
       (Il2CppObject *)v5,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
   }
   else
   {
     v18 = &items->obj.klass + size;
     spotInfoList->fields._size = size + 1;
     v18[4] = (Il2CppClass *)v5;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v5, v9, v10, v11, v12, v13, v14);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), (int32_t)v5, v9, v10, v11, v12, v13, v14);
   }
   return v5;
 }
@@ -305,34 +314,35 @@ MapControl_MapGimmickInfo_o *MapControl_MapInfo__AddMapGimmick(
   __int64 v5; // x19
   System_Collections_Generic_List_object__o *mapGimmickInfoList; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   struct System_Object_array *items; // x8
   _QWORD *v15; // x9
   __int64 size; // x10
   Il2CppClass **v17; // x8
 
-  if ( (byte_4E74068 & 1) == 0 )
+  if ( (byte_5934FA0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Add__);
-    sub_1D0F0B4(&MapControl_MapGimmickInfo_TypeInfo);
-    byte_4E74068 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Add__);
+    sub_21FFC50(&MapControl_MapGimmickInfo_TypeInfo);
+    byte_5934FA0 = 1;
   }
-  v5 = sub_1D0F300(MapControl_MapGimmickInfo_TypeInfo);
+  v5 = sub_21FFEBC(MapControl_MapGimmickInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
-    || (*(_DWORD *)(v5 + 20) = mapGimmickId,
-        (mapGimmickInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapGimmickInfoList) == 0)
+    || (mapGimmickInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapGimmickInfoList,
+        *(_DWORD *)(v5 + 20) = mapGimmickId,
+        !mapGimmickInfoList)
     || (items = mapGimmickInfoList->fields._items,
         v15 = Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Add__,
         ++mapGimmickInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(mapGimmickInfoList, v7);
+    sub_21FFECC(mapGimmickInfoList, v7);
   }
   size = mapGimmickInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -340,14 +350,14 @@ MapControl_MapGimmickInfo_o *MapControl_MapInfo__AddMapGimmick(
     System_Collections_Generic_List_object___AddWithResize(
       mapGimmickInfoList,
       (Il2CppObject *)v5,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     mapGimmickInfoList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v5;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v17 + 4), v5, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), v5, v8, v9, v10, v11, v12, v13);
   }
   return (MapControl_MapGimmickInfo_o *)v5;
 }
@@ -361,34 +371,35 @@ MapControl_SpotRoadInfo_o *MapControl_MapInfo__AddSpotRoad(
   __int64 v5; // x19
   System_Collections_Generic_List_object__o *spotRoadInfoList; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   struct System_Object_array *items; // x8
   _QWORD *v15; // x9
   __int64 size; // x10
   Il2CppClass **v17; // x8
 
-  if ( (byte_4E74067 & 1) == 0 )
+  if ( (byte_5934F9F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Add__);
-    sub_1D0F0B4(&MapControl_SpotRoadInfo_TypeInfo);
-    byte_4E74067 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Add__);
+    sub_21FFC50(&MapControl_SpotRoadInfo_TypeInfo);
+    byte_5934F9F = 1;
   }
-  v5 = sub_1D0F300(MapControl_SpotRoadInfo_TypeInfo);
+  v5 = sub_21FFEBC(MapControl_SpotRoadInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
-    || (*(_DWORD *)(v5 + 20) = spotRoadId,
-        (spotRoadInfoList = (System_Collections_Generic_List_object__o *)this->fields.spotRoadInfoList) == 0)
+    || (spotRoadInfoList = (System_Collections_Generic_List_object__o *)this->fields.spotRoadInfoList,
+        *(_DWORD *)(v5 + 20) = spotRoadId,
+        !spotRoadInfoList)
     || (items = spotRoadInfoList->fields._items,
         v15 = Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Add__,
         ++spotRoadInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(spotRoadInfoList, v7);
+    sub_21FFECC(spotRoadInfoList, v7);
   }
   size = spotRoadInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -396,14 +407,14 @@ MapControl_SpotRoadInfo_o *MapControl_MapInfo__AddSpotRoad(
     System_Collections_Generic_List_object___AddWithResize(
       spotRoadInfoList,
       (Il2CppObject *)v5,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     spotRoadInfoList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v5;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v17 + 4), v5, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), v5, v8, v9, v10, v11, v12, v13);
   }
   return (MapControl_SpotRoadInfo_o *)v5;
 }
@@ -426,37 +437,37 @@ int32_t MapControl_MapInfo__GetMapID(MapControl_MapInfo_o *this, const MethodInf
 MapMaster_o *MapControl_MapInfo__GetMapMaster(MapControl_MapInfo_o *this, const MethodInfo *method)
 {
   MapMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_mapMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_mapMaster; // x19
   MapMaster_o *mapMaster; // t1
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E74069 & 1) == 0 )
+  if ( (byte_5934FA1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_MapMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E74069 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_MapMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934FA1 = 1;
   }
   mapMaster = this->fields.mapMaster;
-  p_mapMaster = (GrandQuestFolderBoardItem_o *)&this->fields.mapMaster;
+  p_mapMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.mapMaster;
   result = mapMaster;
   if ( !mapMaster )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v7);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_MapMaster___);
-    p_mapMaster->klass = (GrandQuestFolderBoardItem_c *)MasterData_object;
-    sub_1D0F058(p_mapMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MapMaster___);
+    p_mapMaster->klass = (MissionNaviTransitionBoardItem_c *)MasterData_object;
+    sub_21FFBF4(p_mapMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
     return (MapMaster_o *)p_mapMaster->klass;
   }
   return result;
@@ -470,7 +481,7 @@ MapEntity_o *MapControl_MapInfo__GetMine(MapControl_MapInfo_o *this, const Metho
 
   MapMaster = MapControl_MapInfo__GetMapMaster(this, method);
   if ( !MapMaster )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return MapMaster__GetEntity(MapMaster, this->fields.mapId, this->fields.warId, 0);
 }
 
@@ -512,52 +523,54 @@ void MapControl_MapInfo__Reset(MapControl_MapInfo_o *this, const MethodInfo *met
   struct System_Collections_Generic_List_MapControl_MapGimmickInfo__o *v19; // x8
   int32_t v20; // w2
   int v21; // w9
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+0h] [xbp-90h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+18h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o j; // [xsp+30h] [xbp-60h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o i; // [xsp+50h] [xbp-40h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+0h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+18h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+30h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+50h] [xbp-50h] BYREF
 
-  if ( (byte_4E74065 & 1) == 0 )
+  if ( (byte_5934F9D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
-    byte_4E74065 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    byte_5934F9D = 1;
   }
-  memset(&i, 0, sizeof(i));
-  memset(&j, 0, sizeof(j));
-  memset(&v23, 0, sizeof(v23));
   spotInfoList = (System_Collections_Generic_List_object__o *)this->fields.spotInfoList;
+  memset(&v25, 0, sizeof(v25));
+  memset(&v24, 0, sizeof(v24));
+  memset(&v23, 0, sizeof(v23));
   if ( spotInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v22,
       spotInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
-    for ( i = v22;
-          System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &i,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
-          MapControl_SpotInfo__Reset((MapControl_SpotInfo_o *)i.fields._current, v4) )
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    v25 = v22;
+    v22.fields._list = 0;
+    *(_QWORD *)&v22.fields._index = &v25;
+    while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v25,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__) )
     {
-      if ( !i.fields._current )
-        sub_1D0F30C(0, v4);
+      if ( !v25.fields._current )
+        sub_21FFECC(0, v4);
+      MapControl_SpotInfo__Reset((MapControl_SpotInfo_o *)v25.fields._current, v4);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &i,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+      &v25,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
     v7 = this->fields.spotInfoList;
     if ( !v7 )
       goto LABEL_31;
@@ -574,20 +587,24 @@ void MapControl_MapInfo__Reset(MapControl_MapInfo_o *this, const MethodInfo *met
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v22,
       spotRoadInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
-    for ( j = v22; ; LODWORD(j.fields._current[1].klass) = 0 )
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
+    v24 = v22;
+    v22.fields._list = 0;
+    *(_QWORD *)&v22.fields._index = &v24;
+    while ( 1 )
     {
       v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &j,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
+              &v24,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
       if ( !v11 )
         break;
-      if ( !j.fields._current )
-        sub_1D0F30C(v11, v12);
+      if ( !v24.fields._current )
+        sub_21FFECC(v11, v12);
+      LODWORD(v24.fields._current[1].klass) = 0;
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &j,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
+      &v24,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
     v13 = this->fields.spotRoadInfoList;
     if ( !v13 )
       goto LABEL_31;
@@ -604,25 +621,27 @@ void MapControl_MapInfo__Reset(MapControl_MapInfo_o *this, const MethodInfo *met
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     mapGimmickInfoList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
+  v22.fields._list = 0;
+  *(_QWORD *)&v22.fields._index = &v23;
   while ( 1 )
   {
     v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
     if ( !v17 )
       break;
     if ( !v23.fields._current )
-      sub_1D0F30C(v17, v18);
+      sub_21FFECC(v17, v18);
     *(_DWORD *)((char *)&v23.fields._current->klass + (unsigned __int64)&word_10) = 0;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
   v19 = this->fields.mapGimmickInfoList;
   if ( !v19 )
 LABEL_31:
-    sub_1D0F30C(v5, v6);
+    sub_21FFECC(v5, v6);
   v20 = v19->fields._size;
   v21 = v19->fields._version + 1;
   v19->fields._size = 0;
@@ -664,12 +683,12 @@ QuestPhaseEntity_o *MapControl_PhaseInfo__GetMine(MapControl_PhaseInfo_o *this, 
   QuestPhaseMaster_o *QuestPhaseMaster; // x0
   __int64 v6; // x1
   struct QuestPhaseEntity_o *Entity; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
 
   p_mine = &this->fields.mine;
   result = this->fields.mine;
@@ -677,10 +696,10 @@ QuestPhaseEntity_o *MapControl_PhaseInfo__GetMine(MapControl_PhaseInfo_o *this, 
   {
     QuestPhaseMaster = MapControl_PhaseInfo__GetQuestPhaseMaster(this, method);
     if ( !QuestPhaseMaster )
-      sub_1D0F30C(0, v6);
+      sub_21FFECC(0, v6);
     Entity = QuestPhaseMaster__GetEntity(QuestPhaseMaster, this->fields.questId, this->fields.phase, 0);
     this->fields.mine = Entity;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)p_mine, (int32_t)Entity, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_mine, (int32_t)Entity, v8, v9, v10, v11, v12, v13);
     return this->fields.mine;
   }
   return result;
@@ -696,37 +715,37 @@ int32_t MapControl_PhaseInfo__GetPhase(MapControl_PhaseInfo_o *this, const Metho
 QuestPhaseMaster_o *MapControl_PhaseInfo__GetQuestPhaseMaster(MapControl_PhaseInfo_o *this, const MethodInfo *method)
 {
   QuestPhaseMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_questPhaseMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_questPhaseMaster; // x19
   QuestPhaseMaster_o *questPhaseMaster; // t1
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E74041 & 1) == 0 )
+  if ( (byte_5934F79 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E74041 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934F79 = 1;
   }
   questPhaseMaster = this->fields.questPhaseMaster;
-  p_questPhaseMaster = (GrandQuestFolderBoardItem_o *)&this->fields.questPhaseMaster;
+  p_questPhaseMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.questPhaseMaster;
   result = questPhaseMaster;
   if ( !questPhaseMaster )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v7);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    p_questPhaseMaster->klass = (GrandQuestFolderBoardItem_c *)MasterData_object;
-    sub_1D0F058(p_questPhaseMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    p_questPhaseMaster->klass = (MissionNaviTransitionBoardItem_c *)MasterData_object;
+    sub_21FFBF4(p_questPhaseMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
     return (QuestPhaseMaster_o *)p_questPhaseMaster->klass;
   }
   return result;
@@ -764,51 +783,51 @@ void MapControl_PhaseInfo__SetMine(
 void MapControl_QuestInfo___ctor(MapControl_QuestInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   __int64 v10; // x0
   __int64 v11; // x1
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   struct System_Collections_Generic_List_MapControl_PhaseInfo__o *phaseInfoList; // x8
-  int32_t size; // w2
+  System_String_o *size; // x2
   int v19; // w9
   struct QuestEntity_o **p_questEnt; // x19
 
-  if ( (byte_4E74046 & 1) == 0 )
+  if ( (byte_5934F7E & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_PhaseInfo__TypeInfo);
-    byte_4E74046 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_PhaseInfo__TypeInfo);
+    byte_5934F7E = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_PhaseInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_PhaseInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_PhaseInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_PhaseInfo___ctor__);
   this->fields.phaseInfoList = (struct System_Collections_Generic_List_MapControl_PhaseInfo__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.phaseInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.phaseInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   phaseInfoList = this->fields.phaseInfoList;
   if ( !phaseInfoList )
-    sub_1D0F30C(v10, v11);
-  size = phaseInfoList->fields._size;
+    sub_21FFECC(v10, v11);
+  size = (System_String_o *)(unsigned int)phaseInfoList->fields._size;
   v19 = phaseInfoList->fields._version + 1;
   phaseInfoList->fields._size = 0;
   phaseInfoList->fields._version = v19;
-  if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)phaseInfoList->fields._items, 0, size, 0);
+  if ( (int)size >= 1 )
+    System_Array__Clear((System_Array_o *)phaseInfoList->fields._items, 0, (int32_t)size, 0);
   this->fields.questEnt = 0;
   p_questEnt = &this->fields.questEnt;
   *((_DWORD *)p_questEnt - 1) = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)p_questEnt, 0, size, v12, v13, v14, v15, v16);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_questEnt, 0, size, v12, v13, v14, v15, v16);
   *((_DWORD *)p_questEnt + 25) = -1;
 }
 
@@ -822,36 +841,37 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__AddChild(
   __int64 v7; // x20
   System_Collections_Generic_List_object__o *phaseInfoList; // x0
   __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
+  bool v14; // w6
+  bool v15; // w7
   struct System_Object_array *items; // x8
   _QWORD *v17; // x9
   __int64 size; // x10
   Il2CppClass **v19; // x8
   MapControl_PhaseInfo_o *result; // x0
 
-  if ( (byte_4E74048 & 1) == 0 )
+  if ( (byte_5934F80 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Add__);
-    sub_1D0F0B4(&MapControl_PhaseInfo_TypeInfo);
-    byte_4E74048 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Add__);
+    sub_21FFC50(&MapControl_PhaseInfo_TypeInfo);
+    byte_5934F80 = 1;
   }
-  v7 = sub_1D0F300(MapControl_PhaseInfo_TypeInfo);
+  v7 = sub_21FFEBC(MapControl_PhaseInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7
-    || (*(_DWORD *)(v7 + 16) = questId,
+    || (phaseInfoList = (System_Collections_Generic_List_object__o *)this->fields.phaseInfoList,
+        *(_DWORD *)(v7 + 16) = questId,
         *(_DWORD *)(v7 + 20) = phase,
-        (phaseInfoList = (System_Collections_Generic_List_object__o *)this->fields.phaseInfoList) == 0)
+        !phaseInfoList)
     || (items = phaseInfoList->fields._items,
         v17 = Method_System_Collections_Generic_List_MapControl_PhaseInfo__Add__,
         ++phaseInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(phaseInfoList, v9);
+    sub_21FFECC(phaseInfoList, v9);
   }
   size = phaseInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -859,14 +879,14 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__AddChild(
     System_Collections_Generic_List_object___AddWithResize(
       phaseInfoList,
       (Il2CppObject *)v7,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     phaseInfoList->fields._size = size + 1;
     v19[4] = (Il2CppClass *)v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 4), v7, v10, v11, v12, v13, v14, v15);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), v7, v10, v11, v12, v13, v14, v15);
   }
   result = (MapControl_PhaseInfo_o *)v7;
   ++this->fields.phaseCount;
@@ -880,15 +900,15 @@ void MapControl_QuestInfo__AddSameGroupQuestIds(
         const MethodInfo *method)
 {
   MapControl_QuestInfo_o *v4; // x20
-  il2cpp_array_size_t max_length; // x24
+  il2cpp_array_size_t max_length; // x26
   MapControl_QuestInfo_o **p_sameGroupQuestIds; // x21
   System_Collections_Generic_List_int__o *v7; // x22
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   unsigned __int64 v14; // x23
   int32_t v15; // w22
   __int64 v16; // x8
@@ -896,13 +916,13 @@ void MapControl_QuestInfo__AddSameGroupQuestIds(
   __int64 questEnt_low; // x10
 
   v4 = this;
-  if ( (byte_4E74043 & 1) == 0 )
+  if ( (byte_5934F7B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    this = (MapControl_QuestInfo_o *)sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E74043 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    this = (MapControl_QuestInfo_o *)sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5934F7B = 1;
   }
   if ( questIds )
   {
@@ -912,13 +932,13 @@ void MapControl_QuestInfo__AddSameGroupQuestIds(
       p_sameGroupQuestIds = (MapControl_QuestInfo_o **)&v4->fields.sameGroupQuestIds;
       if ( !v4->fields.sameGroupQuestIds )
       {
-        v7 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+        v7 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
         System_Collections_Generic_List_int____ctor(
           v7,
-          (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
+          (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
         *p_sameGroupQuestIds = (MapControl_QuestInfo_o *)v7;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&v4->fields.sameGroupQuestIds,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&v4->fields.sameGroupQuestIds,
           (int32_t)v7,
           v8,
           v9,
@@ -931,17 +951,17 @@ void MapControl_QuestInfo__AddSameGroupQuestIds(
       do
       {
         if ( v14 >= LODWORD(questIds->max_length) )
-          sub_1D0F314(this);
+          sub_21FFED4(this);
         v15 = questIds->m_Items[v14];
         if ( v15 != v4->fields.questId )
         {
           this = *p_sameGroupQuestIds;
           if ( !*p_sameGroupQuestIds )
-            goto LABEL_20;
+            goto LABEL_19;
           this = (MapControl_QuestInfo_o *)System_Collections_Generic_List_int___Contains(
                                              (System_Collections_Generic_List_int__o *)this,
                                              v15,
-                                             (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__);
+                                             (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( ((unsigned __int8)this & 1) == 0 )
           {
             this = *p_sameGroupQuestIds;
@@ -951,8 +971,8 @@ void MapControl_QuestInfo__AddSameGroupQuestIds(
                   ++HIDWORD(this->fields.questEnt),
                   !v16) )
             {
-LABEL_20:
-              sub_1D0F30C(this, questIds);
+LABEL_19:
+              sub_21FFECC(this, questIds);
             }
             questEnt_low = SLODWORD(this->fields.questEnt);
             if ( (unsigned int)questEnt_low >= *(_DWORD *)(v16 + 24) )
@@ -960,7 +980,7 @@ LABEL_20:
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)this,
                 v15,
-                *(const MethodInfo_393F3EC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                *(const MethodInfo_4433138 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
             }
             else
             {
@@ -985,23 +1005,23 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__FindChild(
   MapControl_QuestInfo___c__DisplayClass63_0_o *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  System_Collections_Generic_List_object__o *phaseInfoList; // x19
-  System_Predicate_object__o *v9; // x20
+  System_Collections_Generic_List_object__o *phaseInfoList; // x20
+  System_Predicate_object__o *v9; // x19
 
-  if ( (byte_4E74049 & 1) == 0 )
+  if ( (byte_5934F81 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Find__);
-    sub_1D0F0B4(&System_Predicate_MapControl_PhaseInfo__TypeInfo);
-    sub_1D0F0B4(&Method_MapControl_QuestInfo___c__DisplayClass63_0__FindChild_b__0__);
-    sub_1D0F0B4(&MapControl_QuestInfo___c__DisplayClass63_0_TypeInfo);
-    byte_4E74049 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Find__);
+    sub_21FFC50(&System_Predicate_MapControl_PhaseInfo__TypeInfo);
+    sub_21FFC50(&Method_MapControl_QuestInfo___c__DisplayClass63_0__FindChild_b__0__);
+    sub_21FFC50(&MapControl_QuestInfo___c__DisplayClass63_0_TypeInfo);
+    byte_5934F81 = 1;
   }
-  v5 = (MapControl_QuestInfo___c__DisplayClass63_0_o *)sub_1D0F300(MapControl_QuestInfo___c__DisplayClass63_0_TypeInfo);
+  v5 = (MapControl_QuestInfo___c__DisplayClass63_0_o *)sub_21FFEBC(MapControl_QuestInfo___c__DisplayClass63_0_TypeInfo);
   MapControl_QuestInfo___c__DisplayClass63_0___ctor(v5, 0);
   if ( !v5
-    || (v5->fields.phase = phase,
-        phaseInfoList = (System_Collections_Generic_List_object__o *)this->fields.phaseInfoList,
-        v9 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_MapControl_PhaseInfo__TypeInfo),
+    || (phaseInfoList = (System_Collections_Generic_List_object__o *)this->fields.phaseInfoList,
+        v5->fields.phase = phase,
+        v9 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MapControl_PhaseInfo__TypeInfo),
         System_Predicate_object____ctor(
           v9,
           (Il2CppObject *)v5,
@@ -1009,12 +1029,12 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__FindChild(
           0),
         !phaseInfoList) )
   {
-    sub_1D0F30C(v6, v7);
+    sub_21FFECC(v6, v7);
   }
   return (MapControl_PhaseInfo_o *)System_Collections_Generic_List_object___Find(
                                      phaseInfoList,
                                      (System_Predicate_T__o *)v9,
-                                     (const MethodInfo_395CA78 *)Method_System_Collections_Generic_List_MapControl_PhaseInfo__Find__);
+                                     (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_MapControl_PhaseInfo__Find__);
 }
 
 
@@ -1039,35 +1059,36 @@ int32_t MapControl_QuestInfo__GetClearPhaseMax(MapControl_QuestInfo_o *this, con
   int32_t PhaseMax; // w20
   DataManager_o *Instance; // x0
   __int64 v5; // x1
+  __int64 v6; // x2
   Il2CppObject *MasterData_object; // x21
   UserQuestEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E7404E & 1) == 0 )
+  if ( (byte_5934F86 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7404E = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934F86 = 1;
   }
   entity = 0;
   PhaseMax = MapControl_QuestInfo__GetPhaseMax(this, method);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_UserQuestMaster___);
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
   }
   if ( !MasterData_object )
@@ -1083,7 +1104,7 @@ int32_t MapControl_QuestInfo__GetClearPhaseMax(MapControl_QuestInfo_o *this, con
     if ( entity )
       return UserQuestEntity__getQuestPhase(entity, 0);
 LABEL_15:
-    sub_1D0F30C(Instance, v5);
+    sub_21FFECC(Instance, v5);
   }
   return PhaseMax;
 }
@@ -1129,31 +1150,31 @@ QuestEntity_o *MapControl_QuestInfo__GetMine(MapControl_QuestInfo_o *this, const
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E7404F & 1) == 0 )
+  if ( (byte_5934F87 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E7404F = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_21FFC50(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934F87 = 1;
   }
   if ( !this->fields.questId )
     return 0;
   result = this->fields.questEnt;
   if ( !result )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
+                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
     {
-      sub_1D0F30C(Instance, v5);
+      sub_21FFECC(Instance, v5);
     }
     DataMasterBase_object__object__int___TryGetEntity(
       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
       (Il2CppObject **)&this->fields.questEnt,
       this->fields.questId,
-      (const MethodInfo_3535BC8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+      (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
     return this->fields.questEnt;
   }
   return result;
@@ -1166,14 +1187,14 @@ int32_t MapControl_QuestInfo__GetPhaseMax(MapControl_QuestInfo_o *this, const Me
   struct System_Collections_Generic_List_MapControl_PhaseInfo__o *phaseInfoList; // x8
 
   v2 = this;
-  if ( (byte_4E7404D & 1) == 0 )
+  if ( (byte_5934F85 & 1) == 0 )
   {
-    this = (MapControl_QuestInfo_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__get_Count__);
-    byte_4E7404D = 1;
+    this = (MapControl_QuestInfo_o *)sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__get_Count__);
+    byte_5934F85 = 1;
   }
   phaseInfoList = v2->fields.phaseInfoList;
   if ( !phaseInfoList )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return phaseInfoList->fields._size;
 }
 
@@ -1222,7 +1243,7 @@ int32_t MapControl_QuestInfo__GetQuestType(MapControl_QuestInfo_o *this, const M
 
   Mine = MapControl_QuestInfo__GetMine(this, method);
   if ( !Mine )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return Mine->fields.type;
 }
 
@@ -1242,7 +1263,7 @@ int32_t MapControl_QuestInfo__GetSpotID(MapControl_QuestInfo_o *this, const Meth
 
   Mine = MapControl_QuestInfo__GetMine(this, method);
   if ( !Mine )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return QuestEntity__getSpotId(Mine, 0);
 }
 
@@ -1261,106 +1282,117 @@ int32_t MapControl_QuestInfo__GetWarID(MapControl_QuestInfo_o *this, const Metho
 
 bool MapControl_QuestInfo__IsAnyPhaseClear(MapControl_QuestInfo_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x2
+  NetworkManager_c *v4; // x0
   int32_t questId; // w19
   int64_t userIdNumber; // x20
 
-  if ( (byte_4E74045 & 1) == 0 )
+  if ( (byte_5934F7D & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E74045 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5934F7D = 1;
   }
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4E710BF )
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
+  if ( !byte_5931D52 )
   {
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    byte_4E710BF = 1;
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    byte_5931D52 = 1;
   }
-  v3 = NetworkManager_TypeInfo;
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  v4 = NetworkManager_TypeInfo;
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
+    v4 = NetworkManager_TypeInfo;
   }
   questId = this->fields.questId;
-  userIdNumber = v3->static_fields->userIdNumber;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+  userIdNumber = v4->static_fields->userIdNumber;
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method, v2);
   return CondType__IsQuestPhaseClear(userIdNumber, questId, 1, -1, 0, 0);
 }
 
 
 bool MapControl_QuestInfo__IsClear(MapControl_QuestInfo_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t questId; // w19
 
-  if ( (byte_4E74044 & 1) == 0 )
+  if ( (byte_5934F7C & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E74044 = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_5934F7C = 1;
   }
   questId = this->fields.questId;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_41684364(questId, -1, 0, 0);
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method, v2);
+  return CondType__IsQuestClear_47254560(questId, -1, 0, 0);
 }
 
 
 bool MapControl_QuestInfo__IsDisaplayable(MapControl_QuestInfo_o *this, const MethodInfo *method)
 {
-  return this->fields.dispType != 0 && this->fields.dispType != 3;
+  int32_t dispType; // w8
+  bool v3; // zf
+
+  dispType = this->fields.dispType;
+  if ( dispType )
+    v3 = dispType == 3;
+  else
+    v3 = 1;
+  return !v3;
 }
 
 
 bool MapControl_QuestInfo__IsDisplayQuestNextIcon(MapControl_QuestInfo_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x2
   int32_t PhaseMax; // w20
   QuestPhaseEntity_array *Master_object; // x0
-  __int64 v5; // x1
-  Il2CppObject *v6; // x0
+  Il2CppObject *v7; // x0
   int32_t phaseCount; // w8
-  int32_t v8; // w2
+  int32_t v9; // w2
 
-  if ( (byte_4E7404B & 1) == 0 )
+  if ( (byte_5934F83 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E7404B = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
+    sub_21FFC50(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_5934F83 = 1;
   }
   PhaseMax = MapControl_QuestInfo__GetPhaseMax(this, method);
   if ( !PhaseMax )
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (QuestPhaseEntity_array *)DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
+    Master_object = (QuestPhaseEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
     if ( !Master_object
       || (Master_object = QuestPhaseMaster__getList((QuestPhaseMaster_o *)Master_object, this->fields.questId, 0)) == 0 )
     {
-      sub_1D0F30C(Master_object, v5);
+      sub_21FFECC(Master_object, v3);
     }
     PhaseMax = Master_object->max_length;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v6 = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
-  if ( v6 )
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
+  v7 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
+  if ( v7 )
   {
     phaseCount = this->fields.phaseCount;
     if ( phaseCount + 1 < PhaseMax )
-      v8 = phaseCount + 1;
+      v9 = phaseCount + 1;
     else
-      v8 = PhaseMax;
-    LOBYTE(v6) = QuestBehaviorMaster__IsOpenQuestBehaviorCond(
-                   (QuestBehaviorMaster_o *)v6,
+      v9 = PhaseMax;
+    LOBYTE(v7) = QuestBehaviorMaster__IsOpenQuestBehaviorCond(
+                   (QuestBehaviorMaster_o *)v7,
                    this->fields.questId,
-                   v8,
+                   v9,
                    6,
                    0);
   }
-  return (char)v6;
+  return (char)v7;
 }
 
 
@@ -1393,7 +1425,7 @@ bool MapControl_QuestInfo__IsReleaseFocusQuestBoard(MapControl_QuestInfo_o *this
   }
   v9 = MapControl_QuestInfo__GetMine(this, v5);
   if ( !v9 )
-    sub_1D0F30C(0, v10);
+    sub_21FFECC(0, v10);
   return v9->fields.type == 1;
 }
 
@@ -1410,20 +1442,22 @@ void MapControl_QuestInfo__Reset(MapControl_QuestInfo_o *this, const MethodInfo 
   struct System_Collections_Generic_List_MapControl_PhaseInfo__o *v10; // x8
   int32_t size; // w2
   int v12; // w9
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v13; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v14; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74047 & 1) == 0 )
+  if ( (byte_5934F7F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__GetEnumerator__);
-    byte_4E74047 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_PhaseInfo__GetEnumerator__);
+    byte_5934F7F = 1;
   }
-  memset(&v13, 0, sizeof(v13));
   sameGroupQuestIds = this->fields.sameGroupQuestIds;
+  memset(&v15, 0, sizeof(v15));
   if ( sameGroupQuestIds )
   {
     v4 = sameGroupQuestIds->fields._version + 1;
@@ -1434,25 +1468,27 @@ void MapControl_QuestInfo__Reset(MapControl_QuestInfo_o *this, const MethodInfo 
   if ( phaseInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       phaseInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_PhaseInfo__GetEnumerator__);
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_PhaseInfo__GetEnumerator__);
+    v13 = 0;
+    v14 = &v15;
     while ( 1 )
     {
       v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-             &v13,
-             (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__MoveNext__);
+             &v15,
+             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__MoveNext__);
       if ( !v6 )
         break;
-      if ( !v13.fields._current )
-        sub_1D0F30C(v6, v7);
+      if ( !v15.fields._current )
+        sub_21FFECC(v6, v7);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v13,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__Dispose__);
+      &v15,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_PhaseInfo__Dispose__);
     v10 = this->fields.phaseInfoList;
     if ( !v10 )
-      sub_1D0F30C(v8, v9);
+      sub_21FFECC(v8, v9);
     size = v10->fields._size;
     v12 = v10->fields._version + 1;
     v10->fields._size = 0;
@@ -1476,81 +1512,66 @@ void MapControl_QuestInfo__SetDispType(MapControl_QuestInfo_o *this, int32_t dis
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void MapControl_QuestInfo__SetDispType_37389692(
+void MapControl_QuestInfo__SetDispType_42922204(
         MapControl_QuestInfo_o *this,
         int32_t dispType,
         QuestReleaseEntity_o *questReleaseEntity,
         const MethodInfo *method)
 {
-  MapControl_QuestInfo_o *v6; // x19
-  MapControl_QuestInfo_o *v7; // x8
-  MapControl_QuestInfo_o *v8; // x21
+  System_Nullable_int__o v7; // x0
   int32_t type; // w1
-  System_Nullable_int__o v10; // x0
-  unsigned __int64 v11; // x1
-  System_Nullable_Int32Enum__o v12; // x0
-  int32_t v13; // w8
-  int32_t imagePriority; // w9
-  unsigned __int64 v15; // [xsp+8h] [xbp-28h] BYREF
+  unsigned __int64 v9; // x1
+  System_Nullable_Int32Enum__o v10; // x0
+  int32_t v11; // w8
+  int32_t imagePriority; // w8
+  unsigned __int64 v13; // [xsp+8h] [xbp-28h] BYREF
 
-  v6 = this;
-  if ( (byte_4E7404C & 1) == 0 )
+  if ( (byte_5934F84 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_CondType_Kind__GetValueOrDefault__);
-    sub_1D0F0B4(&Method_System_Nullable_int___ctor__);
-    sub_1D0F0B4(&Method_System_Nullable_CondType_Kind___ctor__);
-    this = (MapControl_QuestInfo_o *)sub_1D0F0B4(&Method_System_Nullable_int__get_HasValue__);
-    byte_4E7404C = 1;
+    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_CondType_Kind__GetValueOrDefault__);
+    sub_21FFC50(&Method_System_Nullable_int___ctor__);
+    sub_21FFC50(&Method_System_Nullable_CondType_Kind___ctor__);
+    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
+    byte_5934F84 = 1;
   }
-  v6->fields.dispType = dispType;
-  if ( questReleaseEntity )
-    v7 = 0;
-  else
-    v7 = v6;
-  if ( questReleaseEntity )
-    v8 = v6;
-  else
-    v8 = 0;
+  this->fields.dispType = dispType;
   if ( questReleaseEntity )
   {
+    v7 = (System_Nullable_int__o)&v13;
     type = questReleaseEntity->fields.type;
-    v10 = (System_Nullable_int__o)&v15;
-    v15 = 0;
-    System_Nullable_int____ctor(v10, type, (const MethodInfo_3A842E8 *)Method_System_Nullable_int___ctor__);
-    if ( (_BYTE)v15 )
+    v13 = 0;
+    System_Nullable_int____ctor(v7, type, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
+    if ( (_BYTE)v13 )
     {
-      v11 = HIDWORD(v15);
-      v12 = (System_Nullable_Int32Enum__o)&v15;
-      v15 = 0;
+      v9 = HIDWORD(v13);
+      v10 = (System_Nullable_Int32Enum__o)&v13;
+      v13 = 0;
       System_Nullable_Int32Enum____ctor(
-        v12,
-        v11,
-        (const MethodInfo_3A846A4 *)Method_System_Nullable_CondType_Kind___ctor__);
-      v13 = HIDWORD(v15);
+        v10,
+        v9,
+        (const MethodInfo_45B0560 *)Method_System_Nullable_CondType_Kind___ctor__);
+      v11 = HIDWORD(v13);
     }
     else
     {
-      v13 = 0;
+      v11 = 0;
     }
-    v6->fields._QuestReleaseType_k__BackingField = v13;
-    v8->fields._QuestReleaseTargetID_k__BackingField = questReleaseEntity->fields.targetId;
-    v8->fields._QuestReleaseValue_k__BackingField = questReleaseEntity->fields.value;
-    v8->fields._QuestReleaseClosedID_k__BackingField = questReleaseEntity->fields.closedMessageId;
+    this->fields._QuestReleaseType_k__BackingField = v11;
+    this->fields._QuestReleaseTargetID_k__BackingField = questReleaseEntity->fields.targetId;
+    this->fields._QuestReleaseValue_k__BackingField = questReleaseEntity->fields.value;
+    this->fields._QuestReleaseClosedID_k__BackingField = questReleaseEntity->fields.closedMessageId;
     imagePriority = questReleaseEntity->fields.imagePriority;
   }
   else
   {
-    v6->fields._QuestReleaseType_k__BackingField = 0;
-    if ( !v7 )
-      sub_1D0F30C(this, *(_QWORD *)&dispType);
     imagePriority = 0;
-    v7->fields._QuestReleaseTargetID_k__BackingField = 0;
-    v7->fields._QuestReleaseValue_k__BackingField = 0;
-    v7->fields._QuestReleaseClosedID_k__BackingField = 0;
+    this->fields._QuestReleaseType_k__BackingField = 0;
+    this->fields._QuestReleaseTargetID_k__BackingField = 0;
+    this->fields._QuestReleaseValue_k__BackingField = 0;
+    this->fields._QuestReleaseClosedID_k__BackingField = 0;
   }
-  v6->fields._QuestReleaseImagePriority_k__BackingField = imagePriority;
+  this->fields._QuestReleaseImagePriority_k__BackingField = imagePriority;
 }
 
 
@@ -1602,35 +1623,35 @@ void MapControl_QuestInfo__SetQuestPhase(MapControl_QuestInfo_o *this, int32_t q
 void MapControl_QuestInfo__SetSpotID(MapControl_QuestInfo_o *this, int32_t value, const MethodInfo *method)
 {
   _DWORD *klass; // x8
-  GrandQuestFolderBoardItem_o *p_SpotInfo_k__BackingField; // x20
+  MissionNaviTransitionBoardItem_o *p_SpotInfo_k__BackingField; // x20
   struct MapControl_SpotInfo_o *SpotInfo_k__BackingField; // t1
   MapControl_SpotInfo_o *v8; // x21
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   __int64 v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4E7404A & 1) == 0 )
+  if ( (byte_5934F82 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapControl_SpotInfo_TypeInfo);
-    byte_4E7404A = 1;
+    sub_21FFC50(&MapControl_SpotInfo_TypeInfo);
+    byte_5934F82 = 1;
   }
   SpotInfo_k__BackingField = this->fields._SpotInfo_k__BackingField;
-  p_SpotInfo_k__BackingField = (GrandQuestFolderBoardItem_o *)&this->fields._SpotInfo_k__BackingField;
+  p_SpotInfo_k__BackingField = (MissionNaviTransitionBoardItem_o *)&this->fields._SpotInfo_k__BackingField;
   klass = SpotInfo_k__BackingField;
   if ( !SpotInfo_k__BackingField )
   {
-    v8 = (MapControl_SpotInfo_o *)sub_1D0F300(MapControl_SpotInfo_TypeInfo);
+    v8 = (MapControl_SpotInfo_o *)sub_21FFEBC(MapControl_SpotInfo_TypeInfo);
     MapControl_SpotInfo___ctor(v8, 0);
-    p_SpotInfo_k__BackingField->klass = (GrandQuestFolderBoardItem_c *)v8;
-    sub_1D0F058(p_SpotInfo_k__BackingField, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+    p_SpotInfo_k__BackingField->klass = (MissionNaviTransitionBoardItem_c *)v8;
+    sub_21FFBF4(p_SpotInfo_k__BackingField, (int32_t)v8, v9, v10, v11, v12, v13, v14);
     klass = p_SpotInfo_k__BackingField->klass;
     if ( !p_SpotInfo_k__BackingField->klass )
-      sub_1D0F30C(v15, v16);
+      sub_21FFECC(v15, v16);
   }
   klass[4] = value;
 }
@@ -1640,75 +1661,83 @@ void MapControl_QuestInfo__SetTerminalParamsValue(MapControl_QuestInfo_o *this, 
 {
   const MethodInfo *v2; // x2
   TerminalPramsManager_c *v4; // x0
-  TerminalPramsManager_c *v5; // x0
+  int v5; // w9
+  __int64 v6; // x1
+  __int64 v7; // x2
+  TerminalPramsManager_c *v8; // x0
+  int v9; // w9
+  int v10; // w9
 
-  if ( (byte_4E74050 & 1) == 0 )
+  if ( (byte_5934F88 & 1) == 0 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E74050 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5934F88 = 1;
   }
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4E71891 )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
+  if ( !byte_5932644 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E71891 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_5932644 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
     v4 = TerminalPramsManager_TypeInfo;
   }
+  v5 = (unsigned __int8)byte_5934F8D;
   this->fields.warId = v4->static_fields->_WarId_k__BackingField;
-  if ( !byte_4E74055 )
+  if ( !v5 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
     v4 = TerminalPramsManager_TypeInfo;
-    byte_4E74055 = 1;
+    byte_5934F8D = 1;
   }
-  if ( !v4->_2.cctor_finished )
+  if ( !*(&v4->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v4);
+    j_il2cpp_runtime_class_init_0(v4, method, v2);
     v4 = TerminalPramsManager_TypeInfo;
   }
   MapControl_QuestInfo__SetSpotID(this, v4->static_fields->_SpotId_k__BackingField, v2);
-  if ( !byte_4E7132C )
+  if ( !byte_593205C )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    byte_4E7132C = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    byte_593205C = 1;
   }
-  v5 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  v8 = TerminalPramsManager_TypeInfo;
+  if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v5 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v6, v7);
+    v8 = TerminalPramsManager_TypeInfo;
   }
-  this->fields.questId = v5->static_fields->_QuestId_k__BackingField;
-  if ( !byte_4E7132B )
+  v9 = (unsigned __int8)byte_5932720;
+  this->fields.questId = v8->static_fields->_QuestId_k__BackingField;
+  if ( !v9 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    v5 = TerminalPramsManager_TypeInfo;
-    byte_4E7132B = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    v8 = TerminalPramsManager_TypeInfo;
+    byte_5932720 = 1;
   }
-  if ( !v5->_2.cctor_finished )
+  if ( !*(&v8->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v5);
-    v5 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v8, v6, v7);
+    v8 = TerminalPramsManager_TypeInfo;
   }
-  this->fields.questPhase = v5->static_fields->_PhaseCnt_k__BackingField;
-  if ( !byte_4E74056 )
+  v10 = (unsigned __int8)byte_5934F8E;
+  this->fields.questPhase = v8->static_fields->_PhaseCnt_k__BackingField;
+  if ( !v10 )
   {
-    sub_1D0F0B4(&TerminalPramsManager_TypeInfo);
-    v5 = TerminalPramsManager_TypeInfo;
-    byte_4E74056 = 1;
+    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    v8 = TerminalPramsManager_TypeInfo;
+    byte_5934F8E = 1;
   }
-  if ( !v5->_2.cctor_finished )
+  if ( !*(&v8->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v5);
-    v5 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v8, v6, v7);
+    v8 = TerminalPramsManager_TypeInfo;
   }
-  this->fields.endTime = v5->static_fields->_EndTime_k__BackingField;
+  this->fields.endTime = v8->static_fields->_EndTime_k__BackingField;
 }
 
 
@@ -1791,17 +1820,17 @@ void MapControl_QuestInfo__set_AreaBoardInfo(
         MapControl_AreaBoardInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._AreaBoardInfo_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._AreaBoardInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._AreaBoardInfo_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -1860,17 +1889,17 @@ void MapControl_QuestInfo__set_SpotInfo(
         MapControl_SpotInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._SpotInfo_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._SpotInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._SpotInfo_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -1884,17 +1913,17 @@ void MapControl_QuestInfo__set_WarInfo(
         MapControl_WarInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._WarInfo_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._WarInfo_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._WarInfo_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
@@ -1923,7 +1952,7 @@ bool MapControl_QuestInfo___c__DisplayClass63_0___FindChild_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return n->fields.phase == this->fields.phase;
 }
 
@@ -1931,37 +1960,37 @@ bool MapControl_QuestInfo___c__DisplayClass63_0___FindChild_b__0(
 void MapControl_RootInfo___ctor(MapControl_RootInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  GrandQuestFolderBoardItem_o *p_fields; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  MissionNaviTransitionBoardItem_o *p_fields; // x19
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   __int64 v11; // x0
   __int64 v12; // x1
-  GrandQuestFolderBoardItem_c *klass; // x8
+  MissionNaviTransitionBoardItem_c *klass; // x8
   int32_t namespaze; // w2
   int v15; // w9
 
-  if ( (byte_4E74073 & 1) == 0 )
+  if ( (byte_5934FAB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
-    byte_4E74073 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
+    byte_5934FAB = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
   this->fields.warInfoList = (struct System_Collections_Generic_List_MapControl_WarInfo__o *)v3;
-  p_fields = (GrandQuestFolderBoardItem_o *)&this->fields;
-  sub_1D0F058(p_fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
+  sub_21FFBF4(p_fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
   klass = p_fields->klass;
   if ( !p_fields->klass )
-    sub_1D0F30C(v11, v12);
+    sub_21FFECC(v11, v12);
   namespaze = (int32_t)klass->_1.namespaze;
   v15 = HIDWORD(klass->_1.namespaze) + 1;
   LODWORD(klass->_1.namespaze) = 0;
@@ -1981,34 +2010,35 @@ MapControl_WarInfo_o *MapControl_RootInfo__AddChild(
   const MethodInfo *v8; // x2
   System_Collections_Generic_List_object__o *warInfoList; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   struct System_Object_array *items; // x8
   _QWORD *v18; // x9
   __int64 size; // x10
   Il2CppClass **v20; // x8
 
-  if ( (byte_4E74076 & 1) == 0 )
+  if ( (byte_5934FAE & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__Add__);
-    sub_1D0F0B4(&MapControl_WarInfo_TypeInfo);
-    byte_4E74076 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__Add__);
+    sub_21FFC50(&MapControl_WarInfo_TypeInfo);
+    byte_5934FAE = 1;
   }
-  v7 = (MapControl_WarInfo_o *)sub_1D0F300(MapControl_WarInfo_TypeInfo);
+  v7 = (MapControl_WarInfo_o *)sub_21FFEBC(MapControl_WarInfo_TypeInfo);
   MapControl_WarInfo___ctor(v7, dateTime, v8);
   if ( !v7
-    || (v7->fields.warId = warId,
-        (warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList) == 0)
+    || (warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList,
+        v7->fields.warId = warId,
+        !warInfoList)
     || (items = warInfoList->fields._items,
         v18 = Method_System_Collections_Generic_List_MapControl_WarInfo__Add__,
         ++warInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(warInfoList, v10);
+    sub_21FFECC(warInfoList, v10);
   }
   size = warInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -2016,14 +2046,14 @@ MapControl_WarInfo_o *MapControl_RootInfo__AddChild(
     System_Collections_Generic_List_object___AddWithResize(
       warInfoList,
       (Il2CppObject *)v7,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
     v20 = &items->obj.klass + size;
     warInfoList->fields._size = size + 1;
     v20[4] = (Il2CppClass *)v7;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v7, v11, v12, v13, v14, v15, v16);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v7, v11, v12, v13, v14, v15, v16);
   }
   return v7;
 }
@@ -2040,50 +2070,50 @@ MapControl_WarInfo_o *MapControl_RootInfo__GetChildByEventID(
   Il2CppObject *current; // x20
   WarEntity_o *Mine; // x0
   __int64 v10; // x1
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v12; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v13; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74078 & 1) == 0 )
+  if ( (byte_5934FB0 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    byte_4E74078 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    byte_5934FB0 = 1;
   }
-  memset(&v12, 0, sizeof(v12));
   warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList;
-  if ( warInfoList )
+  memset(&v14, 0, sizeof(v14));
+  if ( !warInfoList )
+    return 0;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    warInfoList,
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+  v12 = 0;
+  v13 = &v14;
+  while ( 1 )
   {
-    System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
-      warInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    while ( 1 )
-    {
-      v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-             &v12,
-             (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-      if ( !v6 )
-        break;
-      current = v12.fields._current;
-      if ( !v12.fields._current )
-        sub_1D0F30C(v6, v7);
-      Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v12.fields._current, v7);
-      if ( !Mine )
-        sub_1D0F30C(0, v10);
-      if ( Mine->fields.eventId == eventId )
-      {
-        System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v12,
-          (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-        return (MapControl_WarInfo_o *)current;
-      }
-    }
-    System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v12,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v14,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    if ( !v6 )
+      break;
+    current = v14.fields._current;
+    if ( !v14.fields._current )
+      sub_21FFECC(v6, v7);
+    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v14.fields._current, v7);
+    if ( !Mine )
+      sub_21FFECC(0, v10);
+    if ( Mine->fields.eventId == eventId )
+      goto LABEL_11;
   }
-  return 0;
+  current = 0;
+LABEL_11:
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v14,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+  return (MapControl_WarInfo_o *)current;
 }
 
 
@@ -2098,53 +2128,54 @@ MapControl_WarInfo_o *MapControl_RootInfo__GetChildByWarID(
   Il2CppObject *current; // x20
   WarEntity_o *Mine; // x0
   __int64 v10; // x1
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v12; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v13; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74077 & 1) == 0 )
+  if ( (byte_5934FAF & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    byte_4E74077 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    byte_5934FAF = 1;
   }
-  memset(&v12, 0, sizeof(v12));
   warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList;
-  if ( warInfoList )
+  memset(&v14, 0, sizeof(v14));
+  if ( !warInfoList )
+    return 0;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    warInfoList,
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+  v12 = 0;
+  v13 = &v14;
+  while ( 1 )
   {
-    System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
-      warInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    while ( 1 )
-    {
-      v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-             &v12,
-             (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-      if ( !v6 )
-        break;
-      current = v12.fields._current;
-      if ( !v12.fields._current )
-        sub_1D0F30C(v6, v7);
-      Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v12.fields._current, v7);
-      if ( !Mine )
-        sub_1D0F30C(0, v10);
-      if ( Mine->fields.id == warId )
-      {
-        System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v12,
-          (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-        return (MapControl_WarInfo_o *)current;
-      }
-    }
-    System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v12,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v14,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    if ( !v6 )
+      break;
+    current = v14.fields._current;
+    if ( !v14.fields._current )
+      sub_21FFECC(v6, v7);
+    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v14.fields._current, v7);
+    if ( !Mine )
+      sub_21FFECC(0, v10);
+    if ( Mine->fields.id == warId )
+      goto LABEL_11;
   }
-  return 0;
+  current = 0;
+LABEL_11:
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v14,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+  return (MapControl_WarInfo_o *)current;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_List_MapControl_WarInfo__o *MapControl_RootInfo__GetOpenedWarInfoList(
         MapControl_RootInfo_o *this,
         bool isMainScnario,
@@ -2153,107 +2184,123 @@ System_Collections_Generic_List_MapControl_WarInfo__o *MapControl_RootInfo__GetO
 {
   MapControl_RootInfo___c_c *v7; // x0
   struct System_Collections_Generic_List_MapControl_WarInfo__o *warInfoList; // x19
+  int v9; // w8
   struct MapControl_RootInfo___c_StaticFields *static_fields; // x8
   System_Func_object__bool__o *_9__8_0; // x20
-  Il2CppObject *v11; // x21
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  struct MapControl_RootInfo___c_StaticFields *v18; // x0
-  GrandQuestFolderBoardItem_o *p__9__8_0; // x0
-  Il2CppObject *v20; // x21
-  struct MapControl_RootInfo___c_StaticFields *v21; // x0
+  Il2CppObject *v12; // x21
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  struct MapControl_RootInfo___c_StaticFields *v19; // x0
+  MissionNaviTransitionBoardItem_o *p__9__8_0; // x0
+  struct MapControl_RootInfo___c_StaticFields *v21; // x8
   Il2CppObject *v22; // x21
   struct MapControl_RootInfo___c_StaticFields *v23; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  struct MapControl_RootInfo___c_StaticFields *v24; // x8
+  Il2CppObject *v25; // x21
+  struct MapControl_RootInfo___c_StaticFields *v26; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v27; // x0
 
-  if ( (byte_4E7407A & 1) == 0 )
+  if ( (byte_5934FB2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToList_MapControl_WarInfo___);
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Where_MapControl_WarInfo___);
-    sub_1D0F0B4(&System_Func_MapControl_WarInfo__bool__TypeInfo);
-    sub_1D0F0B4(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_0__);
-    sub_1D0F0B4(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_1__);
-    sub_1D0F0B4(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_2__);
-    sub_1D0F0B4(&MapControl_RootInfo___c_TypeInfo);
-    byte_4E7407A = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_MapControl_WarInfo___);
+    sub_21FFC50(&Method_System_Linq_Enumerable_Where_MapControl_WarInfo___);
+    sub_21FFC50(&System_Func_MapControl_WarInfo__bool__TypeInfo);
+    sub_21FFC50(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_0__);
+    sub_21FFC50(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_1__);
+    sub_21FFC50(&Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_2__);
+    sub_21FFC50(&MapControl_RootInfo___c_TypeInfo);
+    byte_5934FB2 = 1;
   }
   v7 = MapControl_RootInfo___c_TypeInfo;
   warInfoList = this->fields.warInfoList;
-  if ( !MapControl_RootInfo___c_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(MapControl_RootInfo___c_TypeInfo);
-    v7 = MapControl_RootInfo___c_TypeInfo;
-  }
-  static_fields = v7->static_fields;
+  v9 = *(&MapControl_RootInfo___c_TypeInfo->_2.cctor_finished + 1);
   if ( isMainScnario )
   {
+    if ( !v9 )
+    {
+      j_il2cpp_runtime_class_init_0(MapControl_RootInfo___c_TypeInfo, isMainScnario, isGrand);
+      v7 = MapControl_RootInfo___c_TypeInfo;
+    }
+    static_fields = v7->static_fields;
     _9__8_0 = (System_Func_object__bool__o *)static_fields->__9__8_0;
     if ( !_9__8_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !*(&v7->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = MapControl_RootInfo___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v7, isMainScnario, isGrand);
+        static_fields = MapControl_RootInfo___c_TypeInfo->static_fields;
       }
-      v11 = (Il2CppObject *)v7->static_fields->__9;
-      _9__8_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MapControl_WarInfo__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__8_0, v11, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_0__, 0);
-      v18 = MapControl_RootInfo___c_TypeInfo->static_fields;
-      v18->__9__8_0 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
-      p__9__8_0 = (GrandQuestFolderBoardItem_o *)&v18->__9__8_0;
-LABEL_19:
-      sub_1D0F058(p__9__8_0, (int32_t)_9__8_0, v12, v13, v14, v15, v16, v17);
+      v12 = (Il2CppObject *)static_fields->__9;
+      _9__8_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_MapControl_WarInfo__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__8_0, v12, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_0__, 0);
+      v19 = MapControl_RootInfo___c_TypeInfo->static_fields;
+      v19->__9__8_0 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
+      p__9__8_0 = (MissionNaviTransitionBoardItem_o *)&v19->__9__8_0;
+LABEL_23:
+      sub_21FFBF4(p__9__8_0, (int32_t)_9__8_0, v13, v14, v15, v16, v17, v18);
     }
   }
   else if ( isGrand )
   {
-    _9__8_0 = (System_Func_object__bool__o *)static_fields->__9__8_1;
+    if ( !v9 )
+    {
+      j_il2cpp_runtime_class_init_0(MapControl_RootInfo___c_TypeInfo, isMainScnario, isGrand);
+      v7 = MapControl_RootInfo___c_TypeInfo;
+    }
+    v21 = v7->static_fields;
+    _9__8_0 = (System_Func_object__bool__o *)v21->__9__8_1;
     if ( !_9__8_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !*(&v7->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = MapControl_RootInfo___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v7, isMainScnario, isGrand);
+        v21 = MapControl_RootInfo___c_TypeInfo->static_fields;
       }
-      v20 = (Il2CppObject *)v7->static_fields->__9;
-      _9__8_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MapControl_WarInfo__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__8_0, v20, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_1__, 0);
-      v21 = MapControl_RootInfo___c_TypeInfo->static_fields;
-      v21->__9__8_1 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
-      p__9__8_0 = (GrandQuestFolderBoardItem_o *)&v21->__9__8_1;
-      goto LABEL_19;
+      v22 = (Il2CppObject *)v21->__9;
+      _9__8_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_MapControl_WarInfo__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__8_0, v22, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_1__, 0);
+      v23 = MapControl_RootInfo___c_TypeInfo->static_fields;
+      v23->__9__8_1 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
+      p__9__8_0 = (MissionNaviTransitionBoardItem_o *)&v23->__9__8_1;
+      goto LABEL_23;
     }
   }
   else
   {
-    _9__8_0 = (System_Func_object__bool__o *)static_fields->__9__8_2;
+    if ( !v9 )
+    {
+      j_il2cpp_runtime_class_init_0(MapControl_RootInfo___c_TypeInfo, isMainScnario, isGrand);
+      v7 = MapControl_RootInfo___c_TypeInfo;
+    }
+    v24 = v7->static_fields;
+    _9__8_0 = (System_Func_object__bool__o *)v24->__9__8_2;
     if ( !_9__8_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !*(&v7->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = MapControl_RootInfo___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v7, isMainScnario, isGrand);
+        v24 = MapControl_RootInfo___c_TypeInfo->static_fields;
       }
-      v22 = (Il2CppObject *)v7->static_fields->__9;
-      _9__8_0 = (System_Func_object__bool__o *)sub_1D0F300(System_Func_MapControl_WarInfo__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__8_0, v22, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_2__, 0);
-      v23 = MapControl_RootInfo___c_TypeInfo->static_fields;
-      v23->__9__8_2 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
-      p__9__8_0 = (GrandQuestFolderBoardItem_o *)&v23->__9__8_2;
-      goto LABEL_19;
+      v25 = (Il2CppObject *)v24->__9;
+      _9__8_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_MapControl_WarInfo__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__8_0, v25, Method_MapControl_RootInfo___c__GetOpenedWarInfoList_b__8_2__, 0);
+      v26 = MapControl_RootInfo___c_TypeInfo->static_fields;
+      v26->__9__8_2 = (struct System_Func_MapControl_WarInfo__bool__o *)_9__8_0;
+      p__9__8_0 = (MissionNaviTransitionBoardItem_o *)&v26->__9__8_2;
+      goto LABEL_23;
     }
   }
-  v24 = System_Linq_Enumerable__Where_object_(
+  v27 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)warInfoList,
           (System_Func_TSource__bool__o *)_9__8_0,
-          (const MethodInfo_329781C *)Method_System_Linq_Enumerable_Where_MapControl_WarInfo___);
+          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_MapControl_WarInfo___);
   return (System_Collections_Generic_List_MapControl_WarInfo__o *)System_Linq_Enumerable__ToList_object_(
-                                                                    v24,
-                                                                    (const MethodInfo_329539C *)Method_System_Linq_Enumerable_ToList_MapControl_WarInfo___);
+                                                                    v27,
+                                                                    (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_MapControl_WarInfo___);
 }
 
 
@@ -2261,60 +2308,51 @@ LABEL_19:
 bool MapControl_RootInfo__IsOpenedMainScenarioWar(MapControl_RootInfo_o *this, int32_t warId, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *warInfoList; // x0
-  _BOOL8 v6; // x0
-  const MethodInfo *v7; // x1
-  bool v8; // w20
+  const MethodInfo *v6; // x1
+  bool v7; // w20
   WarEntity_o *Mine; // x0
-  __int64 v10; // x1
-  int v11; // w19
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+20h] [xbp-50h] BYREF
+  __int64 v9; // x1
+  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74079 & 1) == 0 )
+  if ( (byte_5934FB1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    byte_4E74079 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    byte_5934FB1 = 1;
   }
-  memset(&v14, 0, sizeof(v14));
   warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList;
+  memset(&v11, 0, sizeof(v11));
   if ( !warInfoList )
-    sub_1D0F30C(0, *(_QWORD *)&warId);
+    sub_21FFECC(0, *(_QWORD *)&warId);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     warInfoList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-  v14 = v13;
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
   while ( 1 )
   {
-    v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v14,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    v8 = v6;
-    if ( !v6 )
+    v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v11,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    if ( !v7 )
       break;
-    if ( !v14.fields._current )
-      sub_1D0F30C(v6, v7);
-    if ( HIDWORD(v14.fields._current[1].klass) == warId && ((__int64)v14.fields._current[1].monitor & 1) == 0 )
+    if ( !v11.fields._current )
+      sub_21FFECC(0, v6);
+    if ( *(_DWORD *)((char *)&v11.fields._current->klass + (unsigned __int64)&dword_14) == warId
+      && (*((_BYTE *)&v11.fields._current->klass + (unsigned __int64)off_18) & 1) == 0 )
     {
-      Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v14.fields._current, v7);
+      Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v11.fields._current, v6);
       if ( !Mine )
-        sub_1D0F30C(0, v10);
+        sub_21FFECC(0, v9);
       if ( WarEntity__HasFlag(Mine, 128, 0) )
-      {
-        v11 = 4;
-        goto LABEL_13;
-      }
+        break;
     }
   }
-  v11 = 5;
-LABEL_13:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v14,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-  return v8 && v11 == 4;
+    &v11,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+  return v7;
 }
 
 
@@ -2323,28 +2361,28 @@ void MapControl_RootInfo__Remove(MapControl_RootInfo_o *this, int32_t warId, con
   __int64 v5; // x21
   System_Collections_Generic_List_object__o *v6; // x0
   __int64 v7; // x1
-  System_Collections_Generic_List_object__o *warInfoList; // x20
-  System_Predicate_object__o *v9; // x22
+  System_Collections_Generic_List_object__o *warInfoList; // x22
+  System_Predicate_object__o *v9; // x20
   unsigned int Index; // w0
 
-  if ( (byte_4E74075 & 1) == 0 )
+  if ( (byte_5934FAD & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__FindIndex__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__RemoveAt__);
-    sub_1D0F0B4(&System_Predicate_MapControl_WarInfo__TypeInfo);
-    sub_1D0F0B4(&Method_MapControl_RootInfo___c__DisplayClass3_0__Remove_b__0__);
-    sub_1D0F0B4(&MapControl_RootInfo___c__DisplayClass3_0_TypeInfo);
-    byte_4E74075 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__FindIndex__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__RemoveAt__);
+    sub_21FFC50(&System_Predicate_MapControl_WarInfo__TypeInfo);
+    sub_21FFC50(&Method_MapControl_RootInfo___c__DisplayClass3_0__Remove_b__0__);
+    sub_21FFC50(&MapControl_RootInfo___c__DisplayClass3_0_TypeInfo);
+    byte_5934FAD = 1;
   }
-  v5 = sub_1D0F300(MapControl_RootInfo___c__DisplayClass3_0_TypeInfo);
+  v5 = sub_21FFEBC(MapControl_RootInfo___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_9;
-  *(_DWORD *)(v5 + 16) = warId;
   warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList;
+  *(_DWORD *)(v5 + 16) = warId;
   if ( warInfoList )
   {
-    v9 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_MapControl_WarInfo__TypeInfo);
+    v9 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MapControl_WarInfo__TypeInfo);
     System_Predicate_object____ctor(
       v9,
       (Il2CppObject *)v5,
@@ -2353,7 +2391,7 @@ void MapControl_RootInfo__Remove(MapControl_RootInfo_o *this, int32_t warId, con
     Index = System_Collections_Generic_List_object___FindIndex(
               warInfoList,
               (System_Predicate_T__o *)v9,
-              (const MethodInfo_395CC68 *)Method_System_Collections_Generic_List_MapControl_WarInfo__FindIndex__);
+              (const MethodInfo_4450380 *)Method_System_Collections_Generic_List_MapControl_WarInfo__FindIndex__);
     if ( Index != -1 )
     {
       v7 = Index;
@@ -2363,11 +2401,11 @@ void MapControl_RootInfo__Remove(MapControl_RootInfo_o *this, int32_t warId, con
         System_Collections_Generic_List_object___RemoveAt(
           v6,
           v7,
-          (const MethodInfo_395DBE4 *)Method_System_Collections_Generic_List_MapControl_WarInfo__RemoveAt__);
+          (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_MapControl_WarInfo__RemoveAt__);
         return;
       }
 LABEL_9:
-      sub_1D0F30C(v6, v7);
+      sub_21FFECC(v6, v7);
     }
   }
 }
@@ -2382,39 +2420,39 @@ void MapControl_RootInfo__Reset(MapControl_RootInfo_o *this, const MethodInfo *m
   struct System_Collections_Generic_List_MapControl_WarInfo__o *v7; // x8
   int32_t size; // w2
   int v9; // w9
-  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74074 & 1) == 0 )
+  if ( (byte_5934FAC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    byte_4E74074 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    byte_5934FAC = 1;
   }
-  memset(&v10, 0, sizeof(v10));
   warInfoList = (System_Collections_Generic_List_object__o *)this->fields.warInfoList;
+  memset(&v10, 0, sizeof(v10));
   if ( warInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       warInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v10,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__) )
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__) )
     {
       if ( !v10.fields._current )
-        sub_1D0F30C(0, v4);
+        sub_21FFECC(0, v4);
       MapControl_WarInfo__Reset((MapControl_WarInfo_o *)v10.fields._current, v4);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v10,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
     v7 = this->fields.warInfoList;
     if ( !v7 )
-      sub_1D0F30C(v5, v6);
+      sub_21FFECC(v5, v6);
     size = v7->fields._size;
     v9 = v7->fields._version + 1;
     v7->fields._size = 0;
@@ -2428,23 +2466,23 @@ void MapControl_RootInfo__Reset(MapControl_RootInfo_o *this, const MethodInfo *m
 void MapControl_RootInfo___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E7407B & 1) == 0 )
+  if ( (byte_5934FB3 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapControl_RootInfo___c_TypeInfo);
-    byte_4E7407B = 1;
+    sub_21FFC50(&MapControl_RootInfo___c_TypeInfo);
+    byte_5934FB3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(MapControl_RootInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(MapControl_RootInfo___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MapControl_RootInfo___c_TypeInfo->static_fields->__9 = (struct MapControl_RootInfo___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)MapControl_RootInfo___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)MapControl_RootInfo___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -2467,7 +2505,7 @@ bool MapControl_RootInfo___c___GetOpenedWarInfoList_b__8_0(
         const MethodInfo *method)
 {
   if ( !info || (this = (MapControl_RootInfo___c_o *)MapControl_WarInfo__GetMine(info, (const MethodInfo *)info)) == 0 )
-    sub_1D0F30C(this, info);
+    sub_21FFECC(this, info);
   return WarEntity__HasFlag((WarEntity_o *)this, 128, 0) && (info->fields.status & 1) == 0;
 }
 
@@ -2477,24 +2515,25 @@ bool MapControl_RootInfo___c___GetOpenedWarInfoList_b__8_1(
         MapControl_WarInfo_o *info,
         const MethodInfo *method)
 {
+  __int64 v4; // x2
   int monitor; // w20
-  BalanceConfig_c *v5; // x0
+  BalanceConfig_c *v6; // x0
 
-  if ( (byte_4E7407C & 1) == 0 )
+  if ( (byte_5934FB4 & 1) == 0 )
   {
-    this = (MapControl_RootInfo___c_o *)sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    byte_4E7407C = 1;
+    this = (MapControl_RootInfo___c_o *)sub_21FFC50(&BalanceConfig_TypeInfo);
+    byte_5934FB4 = 1;
   }
   if ( !info || (this = (MapControl_RootInfo___c_o *)MapControl_WarInfo__GetMine(info, (const MethodInfo *)info)) == 0 )
-    sub_1D0F30C(this, info);
+    sub_21FFECC(this, info);
   monitor = (int)this[3].monitor;
-  v5 = BalanceConfig_TypeInfo;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v6 = BalanceConfig_TypeInfo;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v5 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, info, v4);
+    v6 = BalanceConfig_TypeInfo;
   }
-  return monitor == v5->static_fields->GrandBoardWarId && (info->fields.status & 1) == 0;
+  return monitor == v6->static_fields->GrandBoardWarId && (info->fields.status & 1) == 0;
 }
 
 
@@ -2504,7 +2543,7 @@ bool MapControl_RootInfo___c___GetOpenedWarInfoList_b__8_2(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return (info->fields.status & 1) == 0;
 }
 
@@ -2523,7 +2562,7 @@ bool MapControl_RootInfo___c__DisplayClass3_0___Remove_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.warId == this->fields.warId;
 }
 
@@ -2531,65 +2570,67 @@ bool MapControl_RootInfo___c__DisplayClass3_0___Remove_b__0(
 void MapControl_SpotInfo___ctor(MapControl_SpotInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   __int64 v10; // x0
   __int64 v11; // x1
   struct System_Collections_Generic_List_MapControl_QuestInfo__o *questInfoList; // x8
   int32_t size; // w2
   int v14; // w9
-  System_Collections_Generic_List_int__o *v15; // x20
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  System_Collections_Generic_List_int__c *v15; // x0
+  System_Collections_Generic_List_int__o *v16; // x20
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
 
-  if ( (byte_4E74057 & 1) == 0 )
+  if ( (byte_5934F8F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
-    byte_4E74057 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
+    byte_5934F8F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
   this->fields.questInfoList = (struct System_Collections_Generic_List_MapControl_QuestInfo__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.questInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.questInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   questInfoList = this->fields.questInfoList;
   if ( !questInfoList )
-    sub_1D0F30C(v10, v11);
+    sub_21FFECC(v10, v11);
   size = questInfoList->fields._size;
   v14 = questInfoList->fields._version + 1;
   questInfoList->fields._size = 0;
   questInfoList->fields._version = v14;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)questInfoList->fields._items, 0, size, 0);
+  v15 = System_Collections_Generic_List_int__TypeInfo;
   this->fields.questCount = 0;
-  v15 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+  v16 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(v15);
   System_Collections_Generic_List_int____ctor(
-    v15,
-    (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.availableQuestIdList = v15;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.availableQuestIdList,
-    (int32_t)v15,
     v16,
+    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.availableQuestIdList = v16;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.availableQuestIdList,
+    (int32_t)v16,
     v17,
     v18,
     v19,
     v20,
-    v21);
+    v21,
+    v22);
 }
 
 
@@ -2601,10 +2642,10 @@ void MapControl_SpotInfo__AddAvailableQuestId(MapControl_SpotInfo_o *this, int32
   _QWORD *v7; // x9
   __int64 size; // x10
 
-  if ( (byte_4E7405B & 1) == 0 )
+  if ( (byte_5934F93 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    byte_4E7405B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    byte_5934F93 = 1;
   }
   availableQuestIdList = this->fields.availableQuestIdList;
   if ( !availableQuestIdList
@@ -2613,7 +2654,7 @@ void MapControl_SpotInfo__AddAvailableQuestId(MapControl_SpotInfo_o *this, int32
         ++availableQuestIdList->fields._version,
         !items) )
   {
-    sub_1D0F30C(availableQuestIdList, *(_QWORD *)&questId);
+    sub_21FFECC(availableQuestIdList, *(_QWORD *)&questId);
   }
   size = availableQuestIdList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -2621,7 +2662,7 @@ void MapControl_SpotInfo__AddAvailableQuestId(MapControl_SpotInfo_o *this, int32
     System_Collections_Generic_List_int___AddWithResize(
       availableQuestIdList,
       questId,
-      *(const MethodInfo_393F3EC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_4433138 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2639,34 +2680,35 @@ MapControl_QuestInfo_o *MapControl_SpotInfo__AddChild(
   MapControl_QuestInfo_o *v5; // x19
   System_Collections_Generic_List_object__o *questInfoList; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   struct System_Object_array *items; // x8
   _QWORD *v15; // x9
   __int64 size; // x10
   Il2CppClass **v17; // x8
 
-  if ( (byte_4E74059 & 1) == 0 )
+  if ( (byte_5934F91 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__);
-    sub_1D0F0B4(&MapControl_QuestInfo_TypeInfo);
-    byte_4E74059 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__);
+    sub_21FFC50(&MapControl_QuestInfo_TypeInfo);
+    byte_5934F91 = 1;
   }
-  v5 = (MapControl_QuestInfo_o *)sub_1D0F300(MapControl_QuestInfo_TypeInfo);
+  v5 = (MapControl_QuestInfo_o *)sub_21FFEBC(MapControl_QuestInfo_TypeInfo);
   MapControl_QuestInfo___ctor(v5, 0);
   if ( !v5
-    || (v5->fields.questId = questId,
-        (questInfoList = (System_Collections_Generic_List_object__o *)this->fields.questInfoList) == 0)
+    || (questInfoList = (System_Collections_Generic_List_object__o *)this->fields.questInfoList,
+        v5->fields.questId = questId,
+        !questInfoList)
     || (items = questInfoList->fields._items,
         v15 = Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__,
         ++questInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(questInfoList, v7);
+    sub_21FFECC(questInfoList, v7);
   }
   size = questInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -2674,14 +2716,14 @@ MapControl_QuestInfo_o *MapControl_SpotInfo__AddChild(
     System_Collections_Generic_List_object___AddWithResize(
       questInfoList,
       (Il2CppObject *)v5,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     questInfoList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v5;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v17 + 4), (int32_t)v5, v8, v9, v10, v11, v12, v13);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v5, v8, v9, v10, v11, v12, v13);
   }
   return v5;
 }
@@ -2704,24 +2746,26 @@ System_Collections_Generic_List_int__o *MapControl_SpotInfo__GetAvailableQuestId
         bool isInstance,
         const MethodInfo *method)
 {
-  System_Collections_Generic_IEnumerable_T__o *availableQuestIdList; // x19
-  System_Collections_Generic_List_int__o *v7; // x20
+  System_Collections_Generic_IEnumerable_T__o *availableQuestIdList; // x20
+  System_Collections_Generic_List_int__o *v6; // x19
 
-  if ( (byte_4E7405A & 1) == 0 )
+  if ( (byte_5934F92 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor___80319440);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4E7405A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor___91427360);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5934F92 = 1;
   }
-  if ( isInstance )
-    return this->fields.availableQuestIdList;
   availableQuestIdList = (System_Collections_Generic_IEnumerable_T__o *)this->fields.availableQuestIdList;
-  v7 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_60026048(
-    v7,
-    availableQuestIdList,
-    (const MethodInfo_393ECC0 *)Method_System_Collections_Generic_List_int___ctor___80319440);
-  return v7;
+  if ( !isInstance )
+  {
+    v6 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_71510500(
+      v6,
+      availableQuestIdList,
+      (const MethodInfo_44329E4 *)Method_System_Collections_Generic_List_int___ctor___91427360);
+    return v6;
+  }
+  return (System_Collections_Generic_List_int__o *)availableQuestIdList;
 }
 
 
@@ -2744,7 +2788,7 @@ int32_t MapControl_SpotInfo__GetLayer(MapControl_SpotInfo_o *this, const MethodI
 
   SpotLayerMaster = MapControl_SpotInfo__GetSpotLayerMaster(this, method);
   if ( !SpotLayerMaster )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return SpotLayerMaster__GetParentLayerBySpotId(SpotLayerMaster, this->fields.spotId, 0);
 }
 
@@ -2756,7 +2800,7 @@ int32_t MapControl_SpotInfo__GetMapID(MapControl_SpotInfo_o *this, const MethodI
 
   Mine = MapControl_SpotInfo__GetMine(this, method);
   if ( !Mine )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return Mine->fields.mapId;
 }
 
@@ -2767,30 +2811,30 @@ SpotEntity_o *MapControl_SpotInfo__GetMine(MapControl_SpotInfo_o *this, const Me
   DataMasterBase_TMaster__TEntity__PKType__o *SpotMaster; // x0
   __int64 v5; // x1
   Il2CppObject *Entity; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
-  if ( (byte_4E7405C & 1) == 0 )
+  if ( (byte_5934F94 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
-    byte_4E7405C = 1;
+    sub_21FFC50(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+    byte_5934F94 = 1;
   }
   result = this->fields.mine;
   if ( !result )
   {
     SpotMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)MapControl_SpotInfo__GetSpotMaster(this, method);
     if ( !SpotMaster )
-      sub_1D0F30C(0, v5);
+      sub_21FFECC(0, v5);
     Entity = DataMasterBase_object__object__int___GetEntity(
                SpotMaster,
                this->fields.spotId,
-               (const MethodInfo_3535B7C *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+               (const MethodInfo_3EDD388 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
     this->fields.mine = (struct SpotEntity_o *)Entity;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mine, (int32_t)Entity, v7, v8, v9, v10, v11, v12);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mine, (int32_t)Entity, v7, v8, v9, v10, v11, v12);
     return this->fields.mine;
   }
   return result;
@@ -2823,10 +2867,10 @@ SpotLayerEntity_o *MapControl_SpotInfo__GetSpotLayerEntity(MapControl_SpotInfo_o
   DataMasterBase_TMaster__TEntity__PKType__o *SpotLayerMaster; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E7405E & 1) == 0 )
+  if ( (byte_5934F96 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
-    byte_4E7405E = 1;
+    sub_21FFC50(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
+    byte_5934F96 = 1;
   }
   result = this->fields.spotLayerEnt;
   if ( !result )
@@ -2835,12 +2879,12 @@ SpotLayerEntity_o *MapControl_SpotInfo__GetSpotLayerEntity(MapControl_SpotInfo_o
                                                                       this,
                                                                       method);
     if ( !SpotLayerMaster )
-      sub_1D0F30C(0, v5);
+      sub_21FFECC(0, v5);
     DataMasterBase_object__object__int___TryGetEntity(
       SpotLayerMaster,
       (Il2CppObject **)&this->fields.spotLayerEnt,
       this->fields.spotId,
-      (const MethodInfo_3535BC8 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
+      (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
     return this->fields.spotLayerEnt;
   }
   return result;
@@ -2849,33 +2893,34 @@ SpotLayerEntity_o *MapControl_SpotInfo__GetSpotLayerEntity(MapControl_SpotInfo_o
 
 SpotLayerMaster_o *MapControl_SpotInfo__GetSpotLayerMaster(MapControl_SpotInfo_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   SpotLayerMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_spotLayerMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_spotLayerMaster; // x19
   SpotLayerMaster_o *spotLayerMaster; // t1
   Il2CppObject *Master_object; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E7405F & 1) == 0 )
+  if ( (byte_5934F97 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_SpotLayerMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E7405F = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_SpotLayerMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_5934F97 = 1;
   }
   spotLayerMaster = this->fields.spotLayerMaster;
-  p_spotLayerMaster = (GrandQuestFolderBoardItem_o *)&this->fields.spotLayerMaster;
+  p_spotLayerMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.spotLayerMaster;
   result = spotLayerMaster;
   if ( !spotLayerMaster )
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SpotLayerMaster___);
-    p_spotLayerMaster->klass = (GrandQuestFolderBoardItem_c *)Master_object;
-    sub_1D0F058(p_spotLayerMaster, (int32_t)Master_object, v7, v8, v9, v10, v11, v12);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SpotLayerMaster___);
+    p_spotLayerMaster->klass = (MissionNaviTransitionBoardItem_c *)Master_object;
+    sub_21FFBF4(p_spotLayerMaster, (int32_t)Master_object, v8, v9, v10, v11, v12, v13);
     return (SpotLayerMaster_o *)p_spotLayerMaster->klass;
   }
   return result;
@@ -2884,33 +2929,34 @@ SpotLayerMaster_o *MapControl_SpotInfo__GetSpotLayerMaster(MapControl_SpotInfo_o
 
 SpotMaster_o *MapControl_SpotInfo__GetSpotMaster(MapControl_SpotInfo_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   SpotMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_spotMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_spotMaster; // x19
   SpotMaster_o *spotMaster; // t1
   Il2CppObject *Master_object; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
 
-  if ( (byte_4E7405D & 1) == 0 )
+  if ( (byte_5934F95 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E7405D = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_5934F95 = 1;
   }
   spotMaster = this->fields.spotMaster;
-  p_spotMaster = (GrandQuestFolderBoardItem_o *)&this->fields.spotMaster;
+  p_spotMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.spotMaster;
   result = spotMaster;
   if ( !spotMaster )
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_SpotMaster___);
-    p_spotMaster->klass = (GrandQuestFolderBoardItem_c *)Master_object;
-    sub_1D0F058(p_spotMaster, (int32_t)Master_object, v7, v8, v9, v10, v11, v12);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SpotMaster___);
+    p_spotMaster->klass = (MissionNaviTransitionBoardItem_c *)Master_object;
+    sub_21FFBF4(p_spotMaster, (int32_t)Master_object, v8, v9, v10, v11, v12, v13);
     return (SpotMaster_o *)p_spotMaster->klass;
   }
   return result;
@@ -2938,39 +2984,39 @@ void MapControl_SpotInfo__Reset(MapControl_SpotInfo_o *this, const MethodInfo *m
   struct System_Collections_Generic_List_MapControl_QuestInfo__o *v7; // x8
   int32_t size; // w2
   int v9; // w9
-  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E74058 & 1) == 0 )
+  if ( (byte_5934F90 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
-    byte_4E74058 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+    byte_5934F90 = 1;
   }
-  memset(&v10, 0, sizeof(v10));
   questInfoList = (System_Collections_Generic_List_object__o *)this->fields.questInfoList;
+  memset(&v10, 0, sizeof(v10));
   if ( questInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       questInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v10,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__) )
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__) )
     {
       if ( !v10.fields._current )
-        sub_1D0F30C(0, v4);
+        sub_21FFECC(0, v4);
       MapControl_QuestInfo__Reset((MapControl_QuestInfo_o *)v10.fields._current, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v10,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
     v7 = this->fields.questInfoList;
     if ( !v7 )
-      sub_1D0F30C(v5, v6);
+      sub_21FFECC(v5, v6);
     size = v7->fields._size;
     v9 = v7->fields._version + 1;
     v7->fields._size = 0;
@@ -3002,20 +3048,20 @@ void MapControl_SpotInfo__SetMine(
         SpotEntity_o *spotEnt,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields.spotId = spotId;
   if ( spotEnt )
   {
     this->fields.mine = spotEnt;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.mine,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.mine,
       (int32_t)spotEnt,
-      (int32_t)spotEnt,
-      (int32_t)method,
+      (System_String_o *)spotEnt,
+      (System_String_o *)method,
       v4,
       v5,
       v6,
@@ -3071,20 +3117,20 @@ SpotRoadEntity_o *MapControl_SpotRoadInfo__GetMine(MapControl_SpotRoadInfo_o *th
   DataMasterBase_TMaster__TEntity__PKType__o *SpotRoadMaster; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E74060 & 1) == 0 )
+  if ( (byte_5934F98 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int__GetEntity__);
-    byte_4E74060 = 1;
+    sub_21FFC50(&Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int__GetEntity__);
+    byte_5934F98 = 1;
   }
   SpotRoadMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)MapControl_SpotRoadInfo__GetSpotRoadMaster(
                                                                    this,
                                                                    method);
   if ( !SpotRoadMaster )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return (SpotRoadEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                SpotRoadMaster,
                                this->fields.spotRoadId,
-                               (const MethodInfo_3535B7C *)Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int__GetEntity__);
+                               (const MethodInfo_3EDD388 *)Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int__GetEntity__);
 }
 
 
@@ -3097,37 +3143,37 @@ int32_t MapControl_SpotRoadInfo__GetSpotRoadId(MapControl_SpotRoadInfo_o *this, 
 SpotRoadMaster_o *MapControl_SpotRoadInfo__GetSpotRoadMaster(MapControl_SpotRoadInfo_o *this, const MethodInfo *method)
 {
   SpotRoadMaster_o *result; // x0
-  GrandQuestFolderBoardItem_o *p_spotRoadMaster; // x19
+  MissionNaviTransitionBoardItem_o *p_spotRoadMaster; // x19
   SpotRoadMaster_o *spotRoadMaster; // t1
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E74061 & 1) == 0 )
+  if ( (byte_5934F99 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_SpotRoadMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E74061 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_SpotRoadMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934F99 = 1;
   }
   spotRoadMaster = this->fields.spotRoadMaster;
-  p_spotRoadMaster = (GrandQuestFolderBoardItem_o *)&this->fields.spotRoadMaster;
+  p_spotRoadMaster = (MissionNaviTransitionBoardItem_o *)&this->fields.spotRoadMaster;
   result = spotRoadMaster;
   if ( !spotRoadMaster )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1D0F30C(0, v7);
+      sub_21FFECC(0, v7);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SpotRoadMaster___);
-    p_spotRoadMaster->klass = (GrandQuestFolderBoardItem_c *)MasterData_object;
-    sub_1D0F058(p_spotRoadMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
+                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SpotRoadMaster___);
+    p_spotRoadMaster->klass = (MissionNaviTransitionBoardItem_c *)MasterData_object;
+    sub_21FFBF4(p_spotRoadMaster, (int32_t)MasterData_object, v9, v10, v11, v12, v13, v14);
     return (SpotRoadMaster_o *)p_spotRoadMaster->klass;
   }
   return result;
@@ -3154,50 +3200,52 @@ void MapControl_SpotRoadInfo__SetMine(MapControl_SpotRoadInfo_o *this, int32_t s
 
 void MapControl_WarInfo___ctor(MapControl_WarInfo_o *this, int64_t dateTime, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  __int64 v18; // x0
-  __int64 v19; // x1
+  System_Collections_Generic_List_MapControl_MapInfo__c *v5; // x0
+  System_Collections_Generic_List_object__o *v6; // x21
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  __int64 v19; // x0
+  __int64 v20; // x1
   struct System_Collections_Generic_List_MapControl_MapInfo__o *mapInfoList; // x8
   int32_t size; // w2
-  int v22; // w9
+  int v23; // w9
 
-  if ( (byte_4E7406A & 1) == 0 )
+  if ( (byte_5934FA2 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_MapControl_MapInfo__TypeInfo);
-    byte_4E7406A = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_MapControl_MapInfo__TypeInfo);
+    byte_5934FA2 = 1;
   }
   this->fields.DEFAULT_WAR_CHECK_STATUS = 7;
   System_Object___ctor((Il2CppObject *)this, 0);
+  v5 = System_Collections_Generic_List_MapControl_MapInfo__TypeInfo;
   this->fields.status = this->fields.DEFAULT_WAR_CHECK_STATUS;
-  v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_MapControl_MapInfo__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v5);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_MapControl_MapInfo___ctor__);
-  this->fields.mapInfoList = (struct System_Collections_Generic_List_MapControl_MapInfo__o *)v5;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mapInfoList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+    v6,
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapControl_MapInfo___ctor__);
+  this->fields.mapInfoList = (struct System_Collections_Generic_List_MapControl_MapInfo__o *)v6;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mapInfoList, (int32_t)v6, v7, v8, v9, v10, v11, v12);
   this->fields.mine = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.mine, 0, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mine, 0, v13, v14, v15, v16, v17, v18);
   mapInfoList = this->fields.mapInfoList;
   if ( !mapInfoList )
-    sub_1D0F30C(v18, v19);
+    sub_21FFECC(v19, v20);
   size = mapInfoList->fields._size;
-  v22 = mapInfoList->fields._version + 1;
+  v23 = mapInfoList->fields._version + 1;
   mapInfoList->fields._size = 0;
-  mapInfoList->fields._version = v22;
+  mapInfoList->fields._version = v23;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)mapInfoList->fields._items, 0, size, 0);
   this->fields.mapUpdateState = 0;
@@ -3211,35 +3259,36 @@ MapControl_MapInfo_o *MapControl_WarInfo__AddChild(MapControl_WarInfo_o *this, i
   const MethodInfo *v6; // x1
   System_Collections_Generic_List_object__o *mapInfoList; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   struct System_Object_array *items; // x8
   _QWORD *v16; // x9
   __int64 size; // x10
   Il2CppClass **v18; // x8
 
-  if ( (byte_4E7406C & 1) == 0 )
+  if ( (byte_5934FA4 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__Add__);
-    sub_1D0F0B4(&MapControl_MapInfo_TypeInfo);
-    byte_4E7406C = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__Add__);
+    sub_21FFC50(&MapControl_MapInfo_TypeInfo);
+    byte_5934FA4 = 1;
   }
-  v5 = (MapControl_MapInfo_o *)sub_1D0F300(MapControl_MapInfo_TypeInfo);
+  v5 = (MapControl_MapInfo_o *)sub_21FFEBC(MapControl_MapInfo_TypeInfo);
   MapControl_MapInfo___ctor(v5, v6);
   if ( !v5
-    || (v5->fields.warId = this->fields.warId,
+    || (mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList,
+        v5->fields.warId = this->fields.warId,
         v5->fields.mapId = mapId,
-        (mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList) == 0)
+        !mapInfoList)
     || (items = mapInfoList->fields._items,
         v16 = Method_System_Collections_Generic_List_MapControl_MapInfo__Add__,
         ++mapInfoList->fields._version,
         !items) )
   {
-    sub_1D0F30C(mapInfoList, v8);
+    sub_21FFECC(mapInfoList, v8);
   }
   size = mapInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -3247,14 +3296,14 @@ MapControl_MapInfo_o *MapControl_WarInfo__AddChild(MapControl_WarInfo_o *this, i
     System_Collections_Generic_List_object___AddWithResize(
       mapInfoList,
       (Il2CppObject *)v5,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
   }
   else
   {
     v18 = &items->obj.klass + size;
     mapInfoList->fields._size = size + 1;
     v18[4] = (Il2CppClass *)v5;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v5, v9, v10, v11, v12, v13, v14);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), (int32_t)v5, v9, v10, v11, v12, v13, v14);
   }
   return v5;
 }
@@ -3266,193 +3315,190 @@ MapControl_MapInfo_o *MapControl_WarInfo__GetActionMap(
         int32_t target,
         const MethodInfo *method)
 {
-  Il2CppObject *current; // x24
-  __int64 v8; // x20
+  __int64 v7; // x20
   System_Collections_Generic_List_object__o *mapInfoList; // x0
-  __int64 v10; // x1
-  System_Predicate_object__o **v11; // x21
-  System_Predicate_object__o **v12; // x22
-  System_Predicate_object__o **v13; // x23
-  _BOOL8 v14; // x0
-  __int64 v15; // x1
-  Il2CppObject *v16; // kr00_8
-  System_Predicate_object__o *v17; // x26
-  Il2CppClass *klass; // x25
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  bool v25; // w0
-  System_Predicate_object__o *v26; // x26
-  Il2CppClass *v27; // x25
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  int32_t v31; // w5
-  int64_t v32; // x6
-  System_String_o *v33; // x7
-  System_Predicate_object__o *v34; // x26
-  System_Collections_Generic_List_object__o *monitor; // x25
-  int32_t v36; // w2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  int32_t v39; // w5
-  int64_t v40; // x6
-  System_String_o *v41; // x7
-  System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-80h] BYREF
+  __int64 v9; // x1
+  __int128 v11; // q0
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
+  Il2CppObject *current; // x21
+  System_Predicate_object__o *v15; // x23
+  System_Collections_Generic_List_object__o *monitor; // x22
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  bool v23; // w0
+  System_Predicate_object__o *v24; // x23
+  Il2CppClass *v25; // x22
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  System_Predicate_object__o *v32; // x23
+  Il2CppClass *klass; // x22
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  System_Collections_Generic_List_Enumerator_T__o v40; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4E74070 & 1) == 0 )
+  if ( (byte_5934FA8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Exists__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Exists__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Exists__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
-    sub_1D0F0B4(&System_Predicate_MapControl_SpotRoadInfo__TypeInfo);
-    sub_1D0F0B4(&System_Predicate_MapControl_MapGimmickInfo__TypeInfo);
-    sub_1D0F0B4(&System_Predicate_MapControl_SpotInfo__TypeInfo);
-    sub_1D0F0B4(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__0__);
-    sub_1D0F0B4(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__1__);
-    sub_1D0F0B4(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__2__);
-    sub_1D0F0B4(&MapControl_WarInfo___c__DisplayClass17_0_TypeInfo);
-    byte_4E74070 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Exists__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Exists__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Exists__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+    sub_21FFC50(&System_Predicate_MapControl_SpotRoadInfo__TypeInfo);
+    sub_21FFC50(&System_Predicate_MapControl_MapGimmickInfo__TypeInfo);
+    sub_21FFC50(&System_Predicate_MapControl_SpotInfo__TypeInfo);
+    sub_21FFC50(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__0__);
+    sub_21FFC50(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__1__);
+    sub_21FFC50(&Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__2__);
+    sub_21FFC50(&MapControl_WarInfo___c__DisplayClass17_0_TypeInfo);
+    byte_5934FA8 = 1;
   }
-  memset(&v44, 0, sizeof(v44));
-  v8 = sub_1D0F300(MapControl_WarInfo___c__DisplayClass17_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0);
-  if ( !v8
-    || (*(_DWORD *)(v8 + 16) = target,
+  memset(&v41, 0, sizeof(v41));
+  v7 = sub_21FFEBC(MapControl_WarInfo___c__DisplayClass17_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  if ( !v7
+    || (*(_DWORD *)(v7 + 16) = target,
         (mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList) == 0) )
   {
-    sub_1D0F30C(mapInfoList, v10);
+    sub_21FFECC(mapInfoList, v9);
   }
   if ( mapInfoList->fields._size == 1 )
     return (MapControl_MapInfo_o *)System_Collections_Generic_List_object___get_Item(
                                      mapInfoList,
                                      0,
-                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v43,
+    &v40,
     mapInfoList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
-  v11 = (System_Predicate_object__o **)(v8 + 24);
-  v12 = (System_Predicate_object__o **)(v8 + 32);
-  v13 = (System_Predicate_object__o **)(v8 + 40);
-  v44 = v43;
-  while ( 2 )
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+  v11 = *(_OWORD *)&v40.fields._list;
+  v41.fields._current = v40.fields._current;
+  v40.fields._list = 0;
+  *(_QWORD *)&v40.fields._index = &v41;
+  *(_OWORD *)&v41.fields._list = v11;
+  while ( 1 )
   {
-    v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v44,
-            (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
-    if ( v14 )
+    v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v41,
+            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+    if ( !v12 )
+      break;
+    current = v41.fields._current;
+    if ( commandType > 1 )
     {
-      v16 = current;
-      current = v44.fields._current;
-      switch ( commandType )
+      if ( commandType == 2 )
       {
-        case 0:
-          if ( !v44.fields._current )
-            sub_1D0F30C(v14, v15);
-          v17 = *v11;
-          klass = v44.fields._current[2].klass;
-          if ( !*v11 )
-          {
-            v17 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_MapControl_SpotInfo__TypeInfo);
-            System_Predicate_object____ctor(
-              v17,
-              (Il2CppObject *)v8,
-              Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__0__,
-              0);
-            *v11 = v17;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 24), (int32_t)v17, v19, v20, v21, v22, v23, v24);
-          }
-          if ( !klass )
-            sub_1D0F30C(v14, v15);
-          v25 = System_Collections_Generic_List_object___Exists(
-                  (System_Collections_Generic_List_object__o *)klass,
-                  (System_Predicate_T__o *)v17,
-                  (const MethodInfo_395CA3C *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Exists__);
-          goto LABEL_28;
-        case 1:
-          if ( !v44.fields._current )
-            sub_1D0F30C(v14, v15);
-          v34 = *v12;
-          monitor = (System_Collections_Generic_List_object__o *)v44.fields._current[2].monitor;
-          if ( !*v12 )
-          {
-            v34 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_MapControl_SpotRoadInfo__TypeInfo);
-            System_Predicate_object____ctor(
-              v34,
-              (Il2CppObject *)v8,
-              Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__1__,
-              0);
-            *v12 = v34;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)v34, v36, v37, v38, v39, v40, v41);
-          }
-          if ( !monitor )
-            sub_1D0F30C(v14, v15);
-          v25 = System_Collections_Generic_List_object___Exists(
-                  monitor,
-                  (System_Predicate_T__o *)v34,
-                  (const MethodInfo_395CA3C *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Exists__);
-          goto LABEL_28;
-        case 2:
-          if ( !v44.fields._current )
-            sub_1D0F30C(v14, v15);
-          v26 = *v13;
-          v27 = v44.fields._current[3].klass;
-          if ( !*v13 )
-          {
-            v26 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_MapControl_MapGimmickInfo__TypeInfo);
-            System_Predicate_object____ctor(
-              v26,
-              (Il2CppObject *)v8,
-              Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__2__,
-              0);
-            *v13 = v26;
-            sub_1D0F058((GrandQuestFolderBoardItem_o *)(v8 + 40), (int32_t)v26, v28, v29, v30, v31, v32, v33);
-          }
-          if ( !v27 )
-            sub_1D0F30C(v14, v15);
-          v25 = System_Collections_Generic_List_object___Exists(
-                  (System_Collections_Generic_List_object__o *)v27,
-                  (System_Predicate_T__o *)v26,
-                  (const MethodInfo_395CA3C *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Exists__);
-LABEL_28:
-          if ( v25 )
-            goto LABEL_29;
-          continue;
-        case 3:
-          if ( !v44.fields._current )
-            sub_1D0F30C(v14, v15);
-          if ( HIDWORD(v44.fields._current[1].klass) != *(_DWORD *)(v8 + 16) )
-            continue;
-LABEL_29:
-          System_Collections_Generic_List_Enumerator_object___Dispose(
-            &v44,
-            (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-          break;
-        default:
-          current = v16;
-          continue;
+        if ( !v41.fields._current )
+          sub_21FFECC(v12, v13);
+        v32 = *(System_Predicate_object__o **)(v7 + 40);
+        klass = v41.fields._current[3].klass;
+        if ( !v32 )
+        {
+          v32 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MapControl_MapGimmickInfo__TypeInfo);
+          System_Predicate_object____ctor(
+            v32,
+            (Il2CppObject *)v7,
+            Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__2__,
+            0);
+          *(_QWORD *)(v7 + 40) = v32;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 40), (int32_t)v32, v34, v35, v36, v37, v38, v39);
+        }
+        if ( !klass )
+LABEL_36:
+          sub_21FFECC(v12, v13);
+        v23 = System_Collections_Generic_List_object___Exists(
+                (System_Collections_Generic_List_object__o *)klass,
+                (System_Predicate_T__o *)v32,
+                (const MethodInfo_4450164 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__Exists__);
+LABEL_32:
+        if ( v23 )
+          goto LABEL_35;
+      }
+      else if ( commandType == 3 )
+      {
+        if ( !v41.fields._current )
+          sub_21FFECC(v12, v13);
+        if ( HIDWORD(v41.fields._current[1].klass) == *(_DWORD *)(v7 + 16) )
+          goto LABEL_35;
       }
     }
     else
     {
-      System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v44,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-      return 0;
+      if ( !commandType )
+      {
+        if ( !v41.fields._current )
+          sub_21FFECC(v12, v13);
+        v24 = *(System_Predicate_object__o **)(v7 + 24);
+        v25 = v41.fields._current[2].klass;
+        if ( !v24 )
+        {
+          v24 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MapControl_SpotInfo__TypeInfo);
+          System_Predicate_object____ctor(
+            v24,
+            (Il2CppObject *)v7,
+            Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__0__,
+            0);
+          *(_QWORD *)(v7 + 24) = v24;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v24, v26, v27, v28, v29, v30, v31);
+        }
+        if ( !v25 )
+          goto LABEL_36;
+        v23 = System_Collections_Generic_List_object___Exists(
+                (System_Collections_Generic_List_object__o *)v25,
+                (System_Predicate_T__o *)v24,
+                (const MethodInfo_4450164 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Exists__);
+        goto LABEL_32;
+      }
+      if ( commandType == 1 )
+      {
+        if ( !v41.fields._current )
+          sub_21FFECC(v12, v13);
+        v15 = *(System_Predicate_object__o **)(v7 + 32);
+        monitor = (System_Collections_Generic_List_object__o *)v41.fields._current[2].monitor;
+        if ( !v15 )
+        {
+          v15 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MapControl_SpotRoadInfo__TypeInfo);
+          System_Predicate_object____ctor(
+            v15,
+            (Il2CppObject *)v7,
+            Method_MapControl_WarInfo___c__DisplayClass17_0__GetActionMap_b__1__,
+            0);
+          *(_QWORD *)(v7 + 32) = v15;
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)v15, v17, v18, v19, v20, v21, v22);
+        }
+        if ( !monitor )
+          goto LABEL_36;
+        v23 = System_Collections_Generic_List_object___Exists(
+                monitor,
+                (System_Predicate_T__o *)v15,
+                (const MethodInfo_4450164 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__Exists__);
+        goto LABEL_32;
+      }
     }
-    return (MapControl_MapInfo_o *)current;
   }
+  current = 0;
+LABEL_35:
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v41,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+  return (MapControl_MapInfo_o *)current;
 }
 
 
@@ -3469,7 +3515,7 @@ int32_t MapControl_WarInfo__GetEventId(MapControl_WarInfo_o *this, const MethodI
 
   Mine = MapControl_WarInfo__GetMine(this, method);
   if ( !Mine )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return Mine->fields.eventId;
 }
 
@@ -3482,18 +3528,20 @@ MapControl_MapInfo_o *MapControl_WarInfo__GetMap(MapControl_WarInfo_o *this, int
   _BOOL8 v7; // x0
   __int64 v8; // x1
   Il2CppObject *current; // x21
-  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v11; // [xsp+8h] [xbp-58h]
+  System_Collections_Generic_List_Enumerator_object__o *v12; // [xsp+10h] [xbp-50h]
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E7406D & 1) == 0 )
+  if ( (byte_5934FA5 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
-    byte_4E7406D = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+    byte_5934FA5 = 1;
   }
-  memset(&v11, 0, sizeof(v11));
+  memset(&v13, 0, sizeof(v13));
   if ( !MapControl_WarInfo__IsMultiMap(this, *(const MethodInfo **)&mapId) )
   {
 LABEL_11:
@@ -3502,37 +3550,39 @@ LABEL_11:
       return (MapControl_MapInfo_o *)System_Collections_Generic_List_object___get_Item(
                                        mapInfoList,
                                        0,
-                                       (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
 LABEL_15:
-    sub_1D0F30C(mapInfoList, v5);
+    sub_21FFECC(mapInfoList, v5);
   }
   mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList;
   if ( !mapInfoList )
     goto LABEL_15;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     mapInfoList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+  v11 = 0;
+  v12 = &v13;
   do
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v11,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+           &v13,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
     if ( !v7 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v11,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+        &v13,
+        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
       goto LABEL_11;
     }
-    current = v11.fields._current;
-    if ( !v11.fields._current )
-      sub_1D0F30C(v7, v8);
+    current = v13.fields._current;
+    if ( !v13.fields._current )
+      sub_21FFECC(v7, v8);
   }
-  while ( *(_DWORD *)((char *)&v11.fields._current->klass + (unsigned __int64)&dword_14) != mapId );
+  while ( *(_DWORD *)((char *)&v13.fields._current->klass + (unsigned __int64)&dword_14) != mapId );
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v11,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    &v13,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
   return (MapControl_MapInfo_o *)current;
 }
 
@@ -3547,24 +3597,25 @@ System_Collections_Generic_List_MapControl_MapInfo__o *MapControl_WarInfo__GetMa
 
 int32_t MapControl_WarInfo__GetMapUpdateState(MapControl_WarInfo_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t result; // w0
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v6; // x1
 
-  if ( (byte_4E74072 & 1) == 0 )
+  if ( (byte_5934FAA & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E74072 = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_5934FAA = 1;
   }
   result = this->fields.mapUpdateState;
   if ( !result )
   {
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
+    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
     if ( !Master_object )
-      sub_1D0F30C(0, v5);
+      sub_21FFECC(0, v6);
     if ( MapUpdateScheduleMaster__Any((MapUpdateScheduleMaster_o *)Master_object, this->fields.warId, 0) )
       result = 1;
     else
@@ -3581,29 +3632,29 @@ WarEntity_o *MapControl_WarInfo__GetMine(MapControl_WarInfo_o *this, const Metho
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4E74071 & 1) == 0 )
+  if ( (byte_5934FA9 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4E74071 = 1;
+    sub_21FFC50(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_21FFC50(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5934FA9 = 1;
   }
   result = this->fields.mine;
   if ( !result )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_WarMaster___)) == 0 )
+                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_WarMaster___)) == 0 )
     {
-      sub_1D0F30C(Instance, v5);
+      sub_21FFECC(Instance, v5);
     }
     DataMasterBase_object__object__int___TryGetEntity(
       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
       (Il2CppObject **)&this->fields.mine,
       this->fields.warId,
-      (const MethodInfo_3535BC8 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+      (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
     return this->fields.mine;
   }
   return result;
@@ -3613,73 +3664,78 @@ WarEntity_o *MapControl_WarInfo__GetMine(MapControl_WarInfo_o *this, const Metho
 MapControl_MapInfo_o *MapControl_WarInfo__GetNextMap(MapControl_WarInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *mapInfoList; // x0
-  Il2CppObject *current; // x19
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-38h] BYREF
+  Il2CppObject *current; // x19
+  __int64 v8; // [xsp+8h] [xbp-48h]
+  System_Collections_Generic_List_Enumerator_object__o *v9; // [xsp+10h] [xbp-40h]
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E7406E & 1) == 0 )
+  if ( (byte_5934FA6 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
-    byte_4E7406E = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+    byte_5934FA6 = 1;
   }
-  memset(&v8, 0, sizeof(v8));
   mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList;
+  memset(&v10, 0, sizeof(v10));
   if ( !mapInfoList )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   if ( mapInfoList->fields._size == 1 )
     return (MapControl_MapInfo_o *)System_Collections_Generic_List_object___get_Item(
                                      mapInfoList,
                                      0,
-                                     (const MethodInfo_395C140 *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v8,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     mapInfoList,
-    (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+  v8 = 0;
+  v9 = &v10;
   while ( 1 )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v8,
-           (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+           &v10,
+           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
     if ( !v5 )
       break;
-    current = v8.fields._current;
-    if ( !v8.fields._current )
-      sub_1D0F30C(v5, v6);
-    if ( *((_BYTE *)&v8.fields._current->klass + (unsigned __int64)&off_18) )
-    {
-      System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v8,
-        (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-      return (MapControl_MapInfo_o *)current;
-    }
+    current = v10.fields._current;
+    if ( !v10.fields._current )
+      sub_21FFECC(v5, v6);
+    if ( *((_BYTE *)&v10.fields._current->klass + (unsigned __int64)off_18) )
+      goto LABEL_12;
   }
+  current = 0;
+LABEL_12:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v8,
-    (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-  return 0;
+    &v10,
+    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+  return (MapControl_MapInfo_o *)current;
 }
 
 
 int32_t MapControl_WarInfo__GetStatus(MapControl_WarInfo_o *this, const MethodInfo *method)
 {
   int32_t status; // w8
+  int32_t v3; // w9
 
   status = this->fields.status;
   if ( (status & 1) != 0 )
     return 0;
   if ( (status & 2) != 0 )
     return 4;
+  if ( (status & 8) != 0 )
+    v3 = 3;
+  else
+    v3 = 1;
   if ( (status & 4) != 0 )
     return 2;
-  if ( (status & 8) != 0 )
-    return 3;
-  return 1;
+  else
+    return v3;
 }
 
 
@@ -3697,42 +3753,26 @@ bool MapControl_WarInfo__IsClearedWarStatus(int32_t status, const MethodInfo *me
 
 bool MapControl_WarInfo__IsClosedWar(MapControl_WarInfo_o *this, const MethodInfo *method)
 {
-  int32_t status; // w8
-  unsigned int v3; // w19
+  unsigned int status; // w8
+  int v3; // w19
   WarEntity_o *Mine; // x0
-  bool HasFlag; // w0
-  bool result; // w0
 
   status = this->fields.status;
   if ( (status & 1) != 0 )
-  {
-    v3 = -3;
-  }
-  else if ( (status & 2) != 0 )
+    goto LABEL_5;
+  if ( (status & 2) != 0 )
   {
     v3 = 1;
+    goto LABEL_7;
   }
-  else if ( (status & 4) != 0 )
-  {
-    v3 = -1;
-  }
-  else if ( (status & 8) != 0 )
-  {
+  if ( (status & 4) != 0 )
+LABEL_5:
     v3 = 0;
-  }
   else
-  {
-    v3 = -2;
-  }
+    v3 = (status >> 3) & 1;
+LABEL_7:
   Mine = MapControl_WarInfo__GetMine(this, method);
-  result = 0;
-  if ( Mine )
-  {
-    HasFlag = WarEntity__HasFlag(Mine, 64, 0);
-    if ( v3 <= 1 && HasFlag )
-      return 1;
-  }
-  return result;
+  return Mine && (v3 & WarEntity__HasFlag(Mine, 64, 0) & 1) != 0;
 }
 
 
@@ -3743,7 +3783,7 @@ bool MapControl_WarInfo__IsEvent(MapControl_WarInfo_o *this, const MethodInfo *m
 
   Mine = MapControl_WarInfo__GetMine(this, method);
   if ( !Mine )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   return WarEntity__HasFlag(Mine, 32, 0);
 }
 
@@ -3760,14 +3800,14 @@ bool MapControl_WarInfo__IsMultiMap(MapControl_WarInfo_o *this, const MethodInfo
   struct System_Collections_Generic_List_MapControl_MapInfo__o *mapInfoList; // x8
 
   v2 = this;
-  if ( (byte_4E7406F & 1) == 0 )
+  if ( (byte_5934FA7 & 1) == 0 )
   {
-    this = (MapControl_WarInfo_o *)sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
-    byte_4E7406F = 1;
+    this = (MapControl_WarInfo_o *)sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Count__);
+    byte_5934FA7 = 1;
   }
   mapInfoList = v2->fields.mapInfoList;
   if ( !mapInfoList )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return mapInfoList->fields._size > 1;
 }
 
@@ -3780,53 +3820,55 @@ bool MapControl_WarInfo__IsStatusCheckFlagAvailable(MapControl_WarInfo_o *this, 
 
 void MapControl_WarInfo__Reset(MapControl_WarInfo_o *this, const MethodInfo *method)
 {
+  int32_t DEFAULT_WAR_CHECK_STATUS; // w8
   System_Collections_Generic_List_object__o *mapInfoList; // x0
-  const MethodInfo *v4; // x1
-  __int64 v5; // x0
-  __int64 v6; // x1
-  struct System_Collections_Generic_List_MapControl_MapInfo__o *v7; // x8
+  const MethodInfo *v5; // x1
+  __int64 v6; // x0
+  __int64 v7; // x1
+  struct System_Collections_Generic_List_MapControl_MapInfo__o *v8; // x8
   int32_t size; // w2
-  int v9; // w9
-  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
+  int v10; // w9
+  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4E7406B & 1) == 0 )
+  if ( (byte_5934FA3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__Clear__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
-    byte_4E7406B = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__get_Current__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__Clear__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+    byte_5934FA3 = 1;
   }
-  memset(&v10, 0, sizeof(v10));
+  DEFAULT_WAR_CHECK_STATUS = this->fields.DEFAULT_WAR_CHECK_STATUS;
   mapInfoList = (System_Collections_Generic_List_object__o *)this->fields.mapInfoList;
-  this->fields.status = this->fields.DEFAULT_WAR_CHECK_STATUS;
+  memset(&v11, 0, sizeof(v11));
+  this->fields.status = DEFAULT_WAR_CHECK_STATUS;
   if ( mapInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v10,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v11,
       mapInfoList,
-      (const MethodInfo_395CF08 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
+      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_MapInfo__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v10,
-              (const MethodInfo_36CDF88 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__) )
+              &v11,
+              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__MoveNext__) )
     {
-      if ( !v10.fields._current )
-        sub_1D0F30C(0, v4);
-      MapControl_MapInfo__Reset((MapControl_MapInfo_o *)v10.fields._current, v4);
+      if ( !v11.fields._current )
+        sub_21FFECC(0, v5);
+      MapControl_MapInfo__Reset((MapControl_MapInfo_o *)v11.fields._current, v5);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v10,
-      (const MethodInfo_36CDF84 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
-    v7 = this->fields.mapInfoList;
-    if ( !v7 )
-      sub_1D0F30C(v5, v6);
-    size = v7->fields._size;
-    v9 = v7->fields._version + 1;
-    v7->fields._size = 0;
-    v7->fields._version = v9;
+      &v11,
+      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapInfo__Dispose__);
+    v8 = this->fields.mapInfoList;
+    if ( !v8 )
+      sub_21FFECC(v6, v7);
+    size = v8->fields._size;
+    v10 = v8->fields._version + 1;
+    v8->fields._size = 0;
+    v8->fields._version = v10;
     if ( size >= 1 )
-      System_Array__Clear((System_Array_o *)v7->fields._items, 0, size, 0);
+      System_Array__Clear((System_Array_o *)v8->fields._items, 0, size, 0);
   }
 }
 
@@ -3872,7 +3914,7 @@ bool MapControl_WarInfo___c__DisplayClass17_0___GetActionMap_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.spotId == this->fields.target;
 }
 
@@ -3883,7 +3925,7 @@ bool MapControl_WarInfo___c__DisplayClass17_0___GetActionMap_b__1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.spotRoadId == this->fields.target;
 }
 
@@ -3894,6 +3936,6 @@ bool MapControl_WarInfo___c__DisplayClass17_0___GetActionMap_b__2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.mapGimmickId == this->fields.target;
 }

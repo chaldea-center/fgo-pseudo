@@ -12,12 +12,12 @@ System_Collections_Generic_List_int____o *AllRouteSearch__CoreLogic(
   _QWORD *v12; // x9
   __int64 size; // x10
   System_Collections_Generic_List_object__o *v14; // x23
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   struct System_Object_array *v21; // x8
   _QWORD *v22; // x9
   __int64 v23; // x10
@@ -25,37 +25,38 @@ System_Collections_Generic_List_int____o *AllRouteSearch__CoreLogic(
   Il2CppClass **v25; // x0
   __int64 v26; // x8
   __int64 v27; // x24
-  System_Collections_Generic_Dictionary_int__int____o *v28; // x20
   unsigned __int64 i; // x27
-  int32_t v30; // w25
-  const MethodInfo *v31; // x5
-  System_Collections_Generic_List_int__o *v32; // x26
-  const MethodInfo *v33; // x5
+  int32_t v29; // w25
+  __int64 v30; // x1
+  __int64 v31; // x2
+  const MethodInfo *v32; // x5
+  System_Collections_Generic_List_int__o *v33; // x26
+  const MethodInfo *v34; // x5
 
   v10 = now;
-  if ( (byte_4E74FC4 & 1) == 0 )
+  if ( (byte_5935FC9 & 1) == 0 )
   {
-    sub_1D0F0B4(&AStarSearch_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_int__int____get_Item__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int____AddRange__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int____Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int_____ctor__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int___ctor___80319440);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1D0F0B4(&System_Collections_Generic_List_int__TypeInfo);
-    *(_QWORD *)&now = sub_1D0F0B4(&System_Collections_Generic_List_int____TypeInfo);
-    byte_4E74FC4 = 1;
+    sub_21FFC50(&AStarSearch_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__int____get_Item__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int____AddRange__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int____Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int_____ctor__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor___91427360);
+    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
+    *(_QWORD *)&now = sub_21FFC50(&System_Collections_Generic_List_int____TypeInfo);
+    byte_5935FC9 = 1;
   }
   if ( !route )
   {
-    route = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
+    route = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       route,
-      (const MethodInfo_393EB98 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
     if ( !route )
       goto LABEL_35;
   }
@@ -70,7 +71,7 @@ System_Collections_Generic_List_int____o *AllRouteSearch__CoreLogic(
     System_Collections_Generic_List_int___AddWithResize(
       route,
       v10,
-      *(const MethodInfo_393F3EC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4433138 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
@@ -79,15 +80,15 @@ System_Collections_Generic_List_int____o *AllRouteSearch__CoreLogic(
   }
   if ( searchLimitRange != -1 && route->fields._size > searchLimitRange )
     return 0;
-  v14 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_int____TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_int_____ctor__);
   if ( v10 == end )
   {
     *(_QWORD *)&now = System_Collections_Generic_List_int___ToArray(
                         route,
-                        (const MethodInfo_3940EA4 *)Method_System_Collections_Generic_List_int__ToArray__);
+                        (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
     if ( v14 )
     {
       v21 = v14->fields._items;
@@ -102,58 +103,57 @@ System_Collections_Generic_List_int____o *AllRouteSearch__CoreLogic(
           System_Collections_Generic_List_object___AddWithResize(
             v14,
             *(Il2CppObject **)&now,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
           v25 = &v21->obj.klass + v23;
           v14->fields._size = v23 + 1;
           v25[4] = v24;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v25 + 4), (int32_t)v24, v15, v16, v17, v18, v19, v20);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v24, v15, v16, v17, v18, v19, v20);
         }
         return (System_Collections_Generic_List_int____o *)v14;
       }
     }
 LABEL_35:
-    sub_1D0F30C(*(_QWORD *)&now, *(_QWORD *)&end);
+    sub_21FFECC(*(_QWORD *)&now, *(_QWORD *)&end);
   }
   if ( !squareDict )
     goto LABEL_35;
   *(_QWORD *)&now = System_Collections_Generic_Dictionary_int__object___get_Item(
                       (System_Collections_Generic_Dictionary_int__object__o *)squareDict,
                       v10,
-                      (const MethodInfo_35A8168 *)Method_System_Collections_Generic_Dictionary_int__int____get_Item__);
+                      (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__int____get_Item__);
   if ( !*(_QWORD *)&now )
     goto LABEL_35;
   v26 = *(_QWORD *)(*(_QWORD *)&now + 24LL);
   v27 = *(_QWORD *)&now;
   if ( (int)v26 >= 1 )
   {
-    v28 = squareDict;
     for ( i = 0; (__int64)i < (int)v26; ++i )
     {
       if ( i >= (unsigned int)v26 )
-        sub_1D0F314(*(_QWORD *)&now);
-      v30 = *(_DWORD *)(v27 + 32 + 4 * i);
+        sub_21FFED4(*(_QWORD *)&now);
+      v29 = *(_DWORD *)(v27 + 32 + 4 * i);
       *(_QWORD *)&now = System_Collections_Generic_List_int___Contains(
                           route,
-                          v30,
-                          (const MethodInfo_393F764 *)Method_System_Collections_Generic_List_int__Contains__);
+                          v29,
+                          (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( (now & 1) == 0 )
       {
-        if ( !AStarSearch_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-        *(_QWORD *)&now = AStarSearch__RouteSearch(0, v30, end, 0, 0, v31);
+        if ( !*(&AStarSearch_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo, v30, v31);
+        *(_QWORD *)&now = AStarSearch__RouteSearch(0, v29, end, 0, 0, v32);
         if ( !*(_QWORD *)&now )
           goto LABEL_35;
         if ( searchLimitRange == -1 || searchLimitRange - route->fields._size >= *(_DWORD *)(*(_QWORD *)&now + 24LL) )
         {
-          v32 = (System_Collections_Generic_List_int__o *)sub_1D0F300(System_Collections_Generic_List_int__TypeInfo);
-          System_Collections_Generic_List_int____ctor_60026048(
-            v32,
+          v33 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+          System_Collections_Generic_List_int____ctor_71510500(
+            v33,
             (System_Collections_Generic_IEnumerable_T__o *)route,
-            (const MethodInfo_393ECC0 *)Method_System_Collections_Generic_List_int___ctor___80319440);
-          *(_QWORD *)&now = AllRouteSearch__CoreLogic(v30, end, v28, v32, searchLimitRange, v33);
+            (const MethodInfo_44329E4 *)Method_System_Collections_Generic_List_int___ctor___91427360);
+          *(_QWORD *)&now = AllRouteSearch__CoreLogic(v29, end, squareDict, v33, searchLimitRange, v34);
           if ( *(_QWORD *)&now )
           {
             if ( !v14 )
@@ -161,7 +161,7 @@ LABEL_35:
             System_Collections_Generic_List_object___AddRange(
               v14,
               *(System_Collections_Generic_IEnumerable_T__o **)&now,
-              (const MethodInfo_395C61C *)Method_System_Collections_Generic_List_int____AddRange__);
+              (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_int____AddRange__);
           }
         }
       }
@@ -176,90 +176,95 @@ System_Collections_Generic_Dictionary_int__int____o *AllRouteSearch__GetSquareDi
 {
   Il2CppObject *Instance; // x0
   __int64 v2; // x1
+  __int64 v3; // x2
   void *monitor; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v4; // x19
-  AllRouteSearch___c_c *v5; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x19
+  AllRouteSearch___c_c *v6; // x0
+  struct AllRouteSearch___c_StaticFields *static_fields; // x8
   System_Func_object__int__o *_9__1_0; // x20
-  Il2CppObject *v7; // x21
-  struct AllRouteSearch___c_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  Il2CppObject *v9; // x21
+  struct AllRouteSearch___c_StaticFields *v10; // x0
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  struct AllRouteSearch___c_StaticFields *v17; // x8
   System_Func_object__object__o *_9__1_1; // x21
-  Il2CppObject *v16; // x22
-  struct AllRouteSearch___c_StaticFields *v17; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  int32_t v21; // w5
-  int64_t v22; // x6
-  System_String_o *v23; // x7
+  Il2CppObject *v19; // x22
+  struct AllRouteSearch___c_StaticFields *v20; // x0
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
 
-  if ( (byte_4E74FC3 & 1) == 0 )
+  if ( (byte_5935FC8 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_ToDictionary_WarBoardSquareData__int__int_____);
-    sub_1D0F0B4(&System_Func_WarBoardSquareData__int__TypeInfo);
-    sub_1D0F0B4(&System_Func_WarBoardSquareData__int____TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1D0F0B4(&Method_AllRouteSearch___c__GetSquareDict_b__1_0__);
-    sub_1D0F0B4(&Method_AllRouteSearch___c__GetSquareDict_b__1_1__);
-    sub_1D0F0B4(&AllRouteSearch___c_TypeInfo);
-    byte_4E74FC3 = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_ToDictionary_WarBoardSquareData__int__int_____);
+    sub_21FFC50(&System_Func_WarBoardSquareData__int__TypeInfo);
+    sub_21FFC50(&System_Func_WarBoardSquareData__int____TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_21FFC50(&Method_AllRouteSearch___c__GetSquareDict_b__1_0__);
+    sub_21FFC50(&Method_AllRouteSearch___c__GetSquareDict_b__1_1__);
+    sub_21FFC50(&AllRouteSearch___c_TypeInfo);
+    byte_5935FC8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = Instance[27].monitor) == 0 )
-    sub_1D0F30C(Instance, v2);
-  v4 = (System_Collections_Generic_IEnumerable_TSource__o *)*((_QWORD *)monitor + 7);
-  v5 = AllRouteSearch___c_TypeInfo;
-  if ( !AllRouteSearch___c_TypeInfo->_2.cctor_finished )
+    sub_21FFECC(Instance, v2);
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)*((_QWORD *)monitor + 7);
+  v6 = AllRouteSearch___c_TypeInfo;
+  if ( !*(&AllRouteSearch___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AllRouteSearch___c_TypeInfo);
-    v5 = AllRouteSearch___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AllRouteSearch___c_TypeInfo, v2, v3);
+    v6 = AllRouteSearch___c_TypeInfo;
   }
-  _9__1_0 = (System_Func_object__int__o *)v5->static_fields->__9__1_0;
+  static_fields = v6->static_fields;
+  _9__1_0 = (System_Func_object__int__o *)static_fields->__9__1_0;
   if ( !_9__1_0 )
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v6->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = AllRouteSearch___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6, v2, v3);
+      static_fields = AllRouteSearch___c_TypeInfo->static_fields;
     }
-    v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__1_0 = (System_Func_object__int__o *)sub_1D0F300(System_Func_WarBoardSquareData__int__TypeInfo);
-    System_Func_object__int____ctor(_9__1_0, v7, Method_AllRouteSearch___c__GetSquareDict_b__1_0__, 0);
-    static_fields = AllRouteSearch___c_TypeInfo->static_fields;
-    static_fields->__9__1_0 = (struct System_Func_WarBoardSquareData__int__o *)_9__1_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v9, v10, v11, v12, v13, v14);
-    v5 = AllRouteSearch___c_TypeInfo;
+    v9 = (Il2CppObject *)static_fields->__9;
+    _9__1_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_WarBoardSquareData__int__TypeInfo);
+    System_Func_object__int____ctor(_9__1_0, v9, Method_AllRouteSearch___c__GetSquareDict_b__1_0__, 0);
+    v10 = AllRouteSearch___c_TypeInfo->static_fields;
+    v10->__9__1_0 = (struct System_Func_WarBoardSquareData__int__o *)_9__1_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->__9__1_0, (int32_t)_9__1_0, v11, v12, v13, v14, v15, v16);
+    v6 = AllRouteSearch___c_TypeInfo;
   }
-  if ( !v5->_2.cctor_finished )
+  if ( !*(&v6->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v5);
-    v5 = AllRouteSearch___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v6, v2, v3);
+    v6 = AllRouteSearch___c_TypeInfo;
   }
-  _9__1_1 = (System_Func_object__object__o *)v5->static_fields->__9__1_1;
+  v17 = v6->static_fields;
+  _9__1_1 = (System_Func_object__object__o *)v17->__9__1_1;
   if ( !_9__1_1 )
   {
-    if ( !v5->_2.cctor_finished )
+    if ( !*(&v6->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = AllRouteSearch___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6, v2, v3);
+      v17 = AllRouteSearch___c_TypeInfo->static_fields;
     }
-    v16 = (Il2CppObject *)v5->static_fields->__9;
-    _9__1_1 = (System_Func_object__object__o *)sub_1D0F300(System_Func_WarBoardSquareData__int____TypeInfo);
-    System_Func_object__object____ctor(_9__1_1, v16, Method_AllRouteSearch___c__GetSquareDict_b__1_1__, 0);
-    v17 = AllRouteSearch___c_TypeInfo->static_fields;
-    v17->__9__1_1 = (struct System_Func_WarBoardSquareData__int____o *)_9__1_1;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&v17->__9__1_1, (int32_t)_9__1_1, v18, v19, v20, v21, v22, v23);
+    v19 = (Il2CppObject *)v17->__9;
+    _9__1_1 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_WarBoardSquareData__int____TypeInfo);
+    System_Func_object__object____ctor(_9__1_1, v19, Method_AllRouteSearch___c__GetSquareDict_b__1_1__, 0);
+    v20 = AllRouteSearch___c_TypeInfo->static_fields;
+    v20->__9__1_1 = (struct System_Func_WarBoardSquareData__int____o *)_9__1_1;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->__9__1_1, (int32_t)_9__1_1, v21, v22, v23, v24, v25, v26);
   }
   return (System_Collections_Generic_Dictionary_int__int____o *)System_Linq_Enumerable__ToDictionary_object__int__object_(
-                                                                  v4,
+                                                                  v5,
                                                                   (System_Func_TSource__TKey__o *)_9__1_0,
                                                                   (System_Func_TSource__TElement__o *)_9__1_1,
-                                                                  (const MethodInfo_32907DC *)Method_System_Linq_Enumerable_ToDictionary_WarBoardSquareData__int__int_____);
+                                                                  (const MethodInfo_3869058 *)Method_System_Linq_Enumerable_ToDictionary_WarBoardSquareData__int__int_____);
 }
 
 
@@ -274,40 +279,40 @@ System_Int32_array_array *AllRouteSearch__RouteSearch(
   System_Collections_Generic_List_int____o *v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4E74FC2 & 1) == 0 )
+  if ( (byte_5935FC7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_int____ToArray__);
-    byte_4E74FC2 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_int____ToArray__);
+    byte_5935FC7 = 1;
   }
   v10 = AllRouteSearch__CoreLogic(start, end, squareDict, 0, searchLimitRange, v5);
   if ( !v10 )
-    sub_1D0F30C(0, v11);
+    sub_21FFECC(0, v11);
   return (System_Int32_array_array *)System_Collections_Generic_List_object___ToArray(
                                        (System_Collections_Generic_List_object__o *)v10,
-                                       (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_int____ToArray__);
+                                       (const MethodInfo_445164C *)Method_System_Collections_Generic_List_int____ToArray__);
 }
 
 
 void AllRouteSearch___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E74FC5 & 1) == 0 )
+  if ( (byte_5935FCA & 1) == 0 )
   {
-    sub_1D0F0B4(&AllRouteSearch___c_TypeInfo);
-    byte_4E74FC5 = 1;
+    sub_21FFC50(&AllRouteSearch___c_TypeInfo);
+    byte_5935FCA = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(AllRouteSearch___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(AllRouteSearch___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AllRouteSearch___c_TypeInfo->static_fields->__9 = (struct AllRouteSearch___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)AllRouteSearch___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)AllRouteSearch___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -330,7 +335,7 @@ int32_t AllRouteSearch___c___GetSquareDict_b__1_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields._squareIndex_k__BackingField;
 }
 
@@ -341,6 +346,6 @@ System_Int32_array *AllRouteSearch___c___GetSquareDict_b__1_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return x->fields.linkedSquares;
 }

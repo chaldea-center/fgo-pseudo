@@ -12,13 +12,13 @@ bool FuncList__IsNotContainsDefaultTarget(int32_t funcType, const MethodInfo *me
 
 bool FuncList__IsRelatedHpDecrease(int32_t funcType, const MethodInfo *method)
 {
-  if ( funcType > 25 )
+  if ( funcType <= 25 )
   {
-    if ( ((unsigned int)funcType > 0x33 || ((1LL << funcType) & 0xC400000000000LL) == 0) && funcType != 137 )
+    if ( (unsigned int)funcType > 0x19 || ((1 << funcType) & 0x2003000) == 0 )
       return FuncList__isDamage(funcType, method);
     return 1;
   }
-  if ( (unsigned int)funcType <= 0x19 && ((1 << funcType) & 0x2003000) != 0 )
+  if ( (funcType & 0x7FFFFFFE) == 0x32 || funcType == 46 || funcType == 137 )
     return 1;
   return FuncList__isDamage(funcType, method);
 }
@@ -32,7 +32,15 @@ bool FuncList__IsRelatedNpDecrease(int32_t funcType, const MethodInfo *method)
 
 bool FuncList__isAddState(int32_t func, const MethodInfo *method)
 {
-  return func == 1 || func == 16 || (func & 0xFFFFFFFE) == 160;
+  char v2; // w9
+
+  v2 = (func & 0xFFFFFFFE) == 160;
+  if ( func == 16 )
+    v2 = 1;
+  if ( func == 1 )
+    return 1;
+  else
+    return v2;
 }
 
 
@@ -43,17 +51,17 @@ bool FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   System_Enum_o v6; // [xsp+8h] [xbp-38h] BYREF
   int32_t v7; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4E76574 & 1) == 0 )
+  if ( (byte_5937520 & 1) == 0 )
   {
-    sub_1D0F0B4(&FuncList_TYPE_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_5007/*"DAMAGE"*/);
-    byte_4E76574 = 1;
+    sub_21FFC50(&FuncList_TYPE_TypeInfo);
+    sub_21FFC50(&StringLiteral_5136/*"DAMAGE"*/);
+    byte_5937520 = 1;
   }
+  v7 = funcType;
   v6.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
   v6.monitor = (void *)-1LL;
-  v7 = funcType;
   v3 = System_Enum__ToString(&v6, 0);
   if ( !v3 )
-    sub_1D0F30C(0, v4);
-  return System_String__Contains(v3, (System_String_o *)StringLiteral_5007/*"DAMAGE"*/, 0);
+    sub_21FFECC(0, v4);
+  return System_String__Contains(v3, (System_String_o *)StringLiteral_5136/*"DAMAGE"*/, 0);
 }

@@ -1,14 +1,14 @@
 void BannerMaster___ctor(BannerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E772BD & 1) == 0 )
+  if ( (byte_593828B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_BannerMaster__BannerEntity__int___ctor__);
-    byte_4E772BD = 1;
+    sub_21FFC50(&Method_DataMasterBase_BannerMaster__BannerEntity__int___ctor__);
+    byte_593828B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    123,
-    (const MethodInfo_3533604 *)Method_DataMasterBase_BannerMaster__BannerEntity__int___ctor__);
+    124,
+    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_BannerMaster__BannerEntity__int___ctor__);
 }
 
 
@@ -23,12 +23,12 @@ BannerEntity_array *BannerMaster__GetEnableEntitiyList(BannerMaster_o *this, con
   int32_t v9; // w23
   Il2CppObject *Item; // x0
   BannerEntity_o *v11; // x24
-  const MethodInfo *v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  MethodInfo *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   System_String_o **v18; // x25
   System_String_o *v19; // x26
   __int64 v20; // x26
@@ -37,55 +37,56 @@ BannerEntity_array *BannerMaster__GetEnableEntitiyList(BannerMaster_o *this, con
   _QWORD *v23; // x9
   __int64 size; // x10
   Il2CppClass **v25; // x0
-  System_Comparison_T__o *v26; // x19
-  Il2CppObject *v27; // x21
-  struct BannerMaster___c_StaticFields *static_fields; // x0
-  int32_t v29; // w2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  int32_t v32; // w5
-  int64_t v33; // x6
-  System_String_o *v34; // x7
+  struct BannerMaster___c_StaticFields *static_fields; // x8
+  System_Comparison_T__o *_9__0_0; // x19
+  Il2CppObject *v28; // x21
+  struct BannerMaster___c_StaticFields *v29; // x0
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
 
-  if ( (byte_4E772BC & 1) == 0 )
+  if ( (byte_593828A & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Count__);
-    sub_1D0F0B4(&Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Item__);
-    sub_1D0F0B4(&System_Comparison_BannerEntity__TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMaster_GachaMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BannerEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_GachaEntity__Find__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BannerEntity__Sort__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BannerEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BannerEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_BannerEntity__TypeInfo);
-    sub_1D0F0B4(&System_Predicate_GachaEntity__TypeInfo);
-    sub_1D0F0B4(&SceneList_TypeInfo);
-    sub_1D0F0B4(&Method_BannerMaster___c__GetEnableEntitiyList_b__0_0__);
-    sub_1D0F0B4(&Method_BannerMaster___c__DisplayClass0_0__GetEnableEntitiyList_b__1__);
-    sub_1D0F0B4(&BannerMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1D0F0B4(&BannerMaster___c_TypeInfo);
-    byte_4E772BC = 1;
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Count__);
+    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Item__);
+    sub_21FFC50(&System_Comparison_BannerEntity__TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMaster_GachaMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    sub_21FFC50(&Method_System_Collections_Generic_List_BannerEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_GachaEntity__Find__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_BannerEntity__Sort__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_BannerEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_BannerEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_BannerEntity__TypeInfo);
+    sub_21FFC50(&System_Predicate_GachaEntity__TypeInfo);
+    sub_21FFC50(&SceneList_TypeInfo);
+    sub_21FFC50(&Method_BannerMaster___c__GetEnableEntitiyList_b__0_0__);
+    sub_21FFC50(&Method_BannerMaster___c__DisplayClass0_0__GetEnableEntitiyList_b__1__);
+    sub_21FFC50(&BannerMaster___c__DisplayClass0_0_TypeInfo);
+    sub_21FFC50(&BannerMaster___c_TypeInfo);
+    byte_593828A = 1;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_GachaMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaMaster___);
   if ( !Master_object )
     goto LABEL_36;
   ValidGachaEntityList = (System_Collections_Generic_List_object__o *)GachaMaster__GetValidGachaEntityList(
                                                                         (GachaMaster_o *)Master_object,
                                                                         0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BannerEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BannerEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BannerEntity___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BannerEntity___ctor__);
   Master_object = this->fields.list;
   if ( !Master_object )
     goto LABEL_36;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)Master_object,
-            (const MethodInfo_34CCE40 *)Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Count__);
+            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Count__);
   if ( Count >= 1 )
   {
     v8 = Count;
@@ -98,7 +99,7 @@ BannerEntity_array *BannerMaster__GetEnableEntitiyList(BannerMaster_o *this, con
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)Master_object,
                v9,
-               (const MethodInfo_34CCED0 *)Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Item__);
+               (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_BannerEntity__get_Item__);
       if ( Item )
       {
         v11 = (BannerEntity_o *)Item;
@@ -114,19 +115,19 @@ BannerEntity_array *BannerMaster__GetEnableEntitiyList(BannerMaster_o *this, con
           if ( *((int *)Master_object + 6) >= 1 )
           {
             v19 = (System_String_o *)*((_QWORD *)Master_object + 4);
-            if ( !SceneList_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
+            if ( !*(&SceneList_TypeInfo->_2.cctor_finished + 1) )
+              j_il2cpp_runtime_class_init_0(SceneList_TypeInfo, v4);
             Master_object = (void *)SceneList__getSceneType(v19, 0);
             if ( (_DWORD)Master_object != 20 )
               goto LABEL_39;
-            v20 = sub_1D0F300(BannerMaster___c__DisplayClass0_0_TypeInfo);
+            v20 = sub_21FFEBC(BannerMaster___c__DisplayClass0_0_TypeInfo);
             System_Object___ctor((Il2CppObject *)v20, 0);
             if ( *((int *)v18 + 6) >= 2 )
             {
               if ( !v20 )
                 break;
               System_Int32__TryParse(v18[5], (int32_t *)(v20 + 16), 0);
-              v21 = (System_Predicate_object__o *)sub_1D0F300(System_Predicate_GachaEntity__TypeInfo);
+              v21 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_GachaEntity__TypeInfo);
               System_Predicate_object____ctor(
                 v21,
                 (Il2CppObject *)v20,
@@ -137,7 +138,7 @@ BannerEntity_array *BannerMaster__GetEnableEntitiyList(BannerMaster_o *this, con
               Master_object = System_Collections_Generic_List_object___Find(
                                 ValidGachaEntityList,
                                 (System_Predicate_T__o *)v21,
-                                (const MethodInfo_395CA78 *)Method_System_Collections_Generic_List_GachaEntity__Find__);
+                                (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_GachaEntity__Find__);
               if ( Master_object )
               {
 LABEL_39:
@@ -154,17 +155,17 @@ LABEL_39:
                   System_Collections_Generic_List_object___AddWithResize(
                     v6,
                     (Il2CppObject *)v11,
-                    *(const MethodInfo_395C410 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                    *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v25 = &items->obj.klass + size;
                   v6->fields._size = size + 1;
                   v25[4] = (Il2CppClass *)v11;
-                  sub_1D0F058(
-                    (GrandQuestFolderBoardItem_o *)(v25 + 4),
+                  sub_21FFBF4(
+                    (MissionNaviTransitionBoardItem_o *)(v25 + 4),
                     (int32_t)v11,
-                    (int32_t)v12,
+                    (System_String_o *)v12,
                     v13,
                     v14,
                     v15,
@@ -180,62 +181,63 @@ LABEL_39:
         goto LABEL_28;
     }
 LABEL_36:
-    sub_1D0F30C(Master_object, v4);
+    sub_21FFECC(Master_object, v4);
   }
 LABEL_28:
   Master_object = BannerMaster___c_TypeInfo;
-  if ( !BannerMaster___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&BannerMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BannerMaster___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BannerMaster___c_TypeInfo, v4);
     Master_object = BannerMaster___c_TypeInfo;
   }
-  v26 = *(System_Comparison_T__o **)(*((_QWORD *)Master_object + 23) + 8LL);
-  if ( !v26 )
+  static_fields = (struct BannerMaster___c_StaticFields *)*((_QWORD *)Master_object + 23);
+  _9__0_0 = (System_Comparison_T__o *)static_fields->__9__0_0;
+  if ( !_9__0_0 )
   {
-    if ( !*((_DWORD *)Master_object + 56) )
+    if ( !*((_DWORD *)Master_object + 57) )
     {
-      j_il2cpp_runtime_class_init_0(Master_object);
-      Master_object = BannerMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(Master_object, v4);
+      static_fields = BannerMaster___c_TypeInfo->static_fields;
     }
-    v27 = (Il2CppObject *)**((_QWORD **)Master_object + 23);
-    v26 = (System_Comparison_T__o *)sub_1D0F300(System_Comparison_BannerEntity__TypeInfo);
-    System_Comparison_object____ctor(v26, v27, Method_BannerMaster___c__GetEnableEntitiyList_b__0_0__, 0);
-    static_fields = BannerMaster___c_TypeInfo->static_fields;
-    static_fields->__9__0_0 = (struct System_Comparison_BannerEntity__o *)v26;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_0, (int32_t)v26, v29, v30, v31, v32, v33, v34);
+    v28 = (Il2CppObject *)static_fields->__9;
+    _9__0_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_BannerEntity__TypeInfo);
+    System_Comparison_object____ctor(_9__0_0, v28, Method_BannerMaster___c__GetEnableEntitiyList_b__0_0__, 0);
+    v29 = BannerMaster___c_TypeInfo->static_fields;
+    v29->__9__0_0 = (struct System_Comparison_BannerEntity__o *)_9__0_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v29->__9__0_0, (int32_t)_9__0_0, v30, v31, v32, v33, v34, v35);
   }
   if ( !v6 )
     goto LABEL_36;
-  System_Collections_Generic_List_object___Sort_60153556(
+  System_Collections_Generic_List_object___Sort_71636404(
     v6,
-    v26,
-    (const MethodInfo_395DED4 *)Method_System_Collections_Generic_List_BannerEntity__Sort__);
+    _9__0_0,
+    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_BannerEntity__Sort__);
   return (BannerEntity_array *)System_Collections_Generic_List_object___ToArray(
                                  v6,
-                                 (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_BannerEntity__ToArray__);
+                                 (const MethodInfo_445164C *)Method_System_Collections_Generic_List_BannerEntity__ToArray__);
 }
 
 
 void BannerMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E772BE & 1) == 0 )
+  if ( (byte_593828C & 1) == 0 )
   {
-    sub_1D0F0B4(&BannerMaster___c_TypeInfo);
-    byte_4E772BE = 1;
+    sub_21FFC50(&BannerMaster___c_TypeInfo);
+    byte_593828C = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(BannerMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(BannerMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BannerMaster___c_TypeInfo->static_fields->__9 = (struct BannerMaster___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)BannerMaster___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)BannerMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,
@@ -259,7 +261,7 @@ int32_t BannerMaster___c___GetEnableEntitiyList_b__0_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1D0F30C(this, a);
+    sub_21FFECC(this, a);
   return b->fields.terminalBannerPriority - a->fields.terminalBannerPriority;
 }
 
@@ -276,6 +278,6 @@ bool BannerMaster___c__DisplayClass0_0___GetEnableEntitiyList_b__1(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1D0F30C(this, 0);
+    sub_21FFECC(this, 0);
   return n->fields.id == this->fields.gachaId;
 }

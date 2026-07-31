@@ -1,9 +1,9 @@
 void MapCameraViewAdjusterUtil___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E7693A & 1) == 0 )
+  if ( (byte_59378E5 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4E7693A = 1;
+    sub_21FFC50(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_59378E5 = 1;
   }
   *MapCameraViewAdjusterUtil_TypeInfo->static_fields = (struct MapCameraViewAdjusterUtil_StaticFields)0x3D4CCCCD41A00000LL;
 }
@@ -18,303 +18,320 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CalculateEachRectIntersectAvoidedC
         const MethodInfo *method)
 {
   UnityEngine_Rect_array *v7; // x1
-  UnityEngine_Rect_array *v8; // x22
-  MapCamera_o *v9; // x20
-  float m_YMin; // s8
-  float m_XMin; // s13
-  float m_Width; // s9
-  float m_Height; // s10
-  MapCameraViewAdjusterUtil_c *v14; // x0
-  float x; // s11
-  float y; // s10
-  const MethodInfo *v17; // x1
-  const MethodInfo *v18; // x2
+  UnityEngine_Rect_array *v8; // x21
+  MapCamera_o *v9; // x22
+  float m_Height; // s9
+  float m_Width; // s10
+  __int64 v12; // x1
+  UnityEngine_Vector2_o v13; // x1
+  UnityEngine_Vector2_o v14; // kr00_8
+  float v15; // s8
+  const MethodInfo *v16; // x2
+  float v17; // s12
+  float v18; // s13
   float v19; // s14
   float v20; // s15
-  float v21; // s8
+  float v21; // s3
   float v22; // s9
+  float v23; // s10
+  float v24; // s1
+  bool v25; // nf
+  float v26; // s11
+  float v27; // s10
+  float x; // s9
+  float y; // s8
+  UnityEngine_Vector2_o Size; // kr08_8
   struct MapZoom_o *mZoom; // x8
-  float mZoomMax; // s10
+  float mZoomMax; // s8
+  __int64 v33; // x1
   MapCamera_c *klass; // x8
-  MapCamera_o *v26; // x20
-  __int64 v27; // x9
+  MapCamera_o *v35; // x22
+  __int64 v36; // x9
   int32_t *p_offset; // x10
-  __int64 v29; // x0
-  UnityEngine_Vector2_o Size; // kr00_8
-  float v31; // s13
-  float v32; // s12
-  int32_t v33; // w8
-  __int64 v34; // x1
-  __int64 v35; // x20
-  __int64 v36; // x8
-  __int64 v37; // x9
-  int *v38; // x10
+  __int64 v38; // x0
   __int64 v39; // x0
-  __int64 v40; // x8
-  __int64 v41; // x9
-  int *v42; // x10
-  __int64 v43; // x0
-  long double v44; // q0 OVERLAPPED
-  float v45; // s1
-  float v46; // s2
-  float v47; // s3
-  const MethodInfo *v48; // x2
-  int v49; // w22
-  __int64 v50; // x8
-  __int64 v51; // x9
-  int *v52; // x10
-  __int64 v53; // x0
-  float v54; // s0
-  float v55; // s1
-  float v56; // s2
-  float v57; // s3
-  __int64 v58; // x1
-  float v59; // [xsp+10h] [xbp-A0h]
-  float v60; // [xsp+14h] [xbp-9Ch]
-  float v61; // [xsp+18h] [xbp-98h]
-  float v62; // [xsp+1Ch] [xbp-94h]
-  float v63; // [xsp+20h] [xbp-90h]
-  float brakeRect; // [xsp+24h] [xbp-8Ch]
-  float v65; // [xsp+28h] [xbp-88h]
-  float v66; // [xsp+2Ch] [xbp-84h]
-  UnityEngine_Rect_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v68; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v40; // x1
+  __int64 i; // x22
+  __int64 v42; // x8
+  __int64 v43; // x9
+  int *v44; // x10
+  __int64 v45; // x0
+  __int64 v46; // x0
+  __int64 v47; // x1
+  __int64 v48; // x8
+  __int64 v49; // x9
+  int *v50; // x10
+  __int64 v51; // x0
+  __int64 v52; // x1
+  const MethodInfo *v53; // x2
+  int v54; // w22
+  __int64 v55; // x8
+  __int64 v56; // x9
+  int *v57; // x10
+  __int64 v58; // x0
+  float v59; // s0
+  float v60; // s1
+  float v61; // s2
+  float v62; // s3
+  __int64 v63; // x1
+  float v64; // [xsp+18h] [xbp-B8h]
+  float v65; // [xsp+1Ch] [xbp-B4h]
+  float v66; // [xsp+20h] [xbp-B0h]
+  float v67; // [xsp+24h] [xbp-ACh]
+  float v68; // [xsp+28h] [xbp-A8h]
+  float v69; // [xsp+2Ch] [xbp-A4h]
+  float m_YMin; // [xsp+30h] [xbp-A0h]
+  float m_XMin; // [xsp+34h] [xbp-9Ch]
+  __int64 v72; // [xsp+48h] [xbp-88h]
   UnityEngine_Rect_o CoveringRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v73; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
-  UnityEngine_Rect_o v74; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
-  UnityEngine_Rect_o v75; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Rect_o v78; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Rect_o v79; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Rect_o v80; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   v8 = v7;
   v9 = camera;
-  if ( (byte_4E76936 & 1) == 0 )
+  if ( (byte_59378E1 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    camera = (MapCamera_o *)sub_1D0F0B4(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4E76936 = 1;
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    camera = (MapCamera_o *)sub_21FFC50(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_59378E1 = 1;
   }
   *failedReason = 0;
   if ( !v8 )
-    goto LABEL_53;
+    goto LABEL_64;
   if ( !v8->max_length )
   {
     Size = FSWindowUtil__GetSize(0);
     x = Size.fields.x;
     y = Size.fields.y;
-    v31 = Size.fields.x * -0.5;
-    v32 = Size.fields.y * -0.5;
-    goto LABEL_52;
+    v27 = Size.fields.y * -0.5;
+    v26 = Size.fields.x * -0.5;
+    goto LABEL_61;
   }
   if ( !v9 )
-    goto LABEL_53;
-  m_XMin = v9->fields.mMvBrakeRect.fields.m_XMin;
-  m_YMin = v9->fields.mMvBrakeRect.fields.m_YMin;
+    goto LABEL_64;
   m_Width = v9->fields.mMvBrakeRect.fields.m_Width;
   m_Height = v9->fields.mMvBrakeRect.fields.m_Height;
-  v14 = MapCameraViewAdjusterUtil_TypeInfo;
-  if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-  v67.fields.m_XMin = m_XMin;
-  v67.fields.m_YMin = m_YMin;
-  v67.fields.m_Width = m_Width;
-  v67.fields.m_Height = m_Height;
-  v65 = m_Width;
-  v66 = m_YMin;
-  brakeRect = m_Height;
-  v68 = MapCameraViewAdjusterUtil__ResizedToViewAspectRect(v67, (const MethodInfo *)v14);
-  x = v68.fields.m_Width;
-  y = v68.fields.m_Height;
-  CoveringRect = MapCameraViewAdjusterUtil__CreateCoveringRect(v8, v17);
-  v19 = CoveringRect.fields.m_XMin;
-  v20 = CoveringRect.fields.m_YMin;
-  v21 = CoveringRect.fields.m_Width;
-  v22 = CoveringRect.fields.m_Height;
-  v62 = x;
-  v60 = (float)(CoveringRect.fields.m_YMin + (float)(CoveringRect.fields.m_Height * 0.5)) - (float)(y * 0.5);
-  v61 = (float)(CoveringRect.fields.m_XMin + (float)(CoveringRect.fields.m_Width * 0.5)) - (float)(x * 0.5);
-  if ( x < CoveringRect.fields.m_Width || y < CoveringRect.fields.m_Height )
+  m_YMin = v9->fields.mMvBrakeRect.fields.m_YMin;
+  m_XMin = v9->fields.mMvBrakeRect.fields.m_XMin;
+  if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v12, rects2DUI);
+  v14 = FSWindowUtil__GetSize(0);
+  v68 = m_Height;
+  v15 = (float)(m_Height * v14.fields.x) / v14.fields.y;
+  if ( m_Width <= v15 )
   {
-    v33 = 2;
-LABEL_51:
-    *failedReason = v33;
-    v32 = v60;
-    v31 = v61;
-    goto LABEL_52;
+    v15 = m_Width;
+    m_Height = (float)(m_Width * v14.fields.y) / v14.fields.x;
+  }
+  v69 = m_Width;
+  CoveringRect = MapCameraViewAdjusterUtil__CreateCoveringRect(v8, (const MethodInfo *)*(_QWORD *)&v13);
+  v17 = CoveringRect.fields.m_XMin;
+  v18 = CoveringRect.fields.m_YMin;
+  v19 = CoveringRect.fields.m_Width;
+  v20 = CoveringRect.fields.m_Height;
+  CoveringRect.fields.m_YMin = CoveringRect.fields.m_Width * 0.5;
+  CoveringRect.fields.m_Width = CoveringRect.fields.m_Height * 0.5;
+  v21 = m_Height;
+  v22 = CoveringRect.fields.m_XMin + CoveringRect.fields.m_YMin;
+  v23 = v18 + CoveringRect.fields.m_Width;
+  v24 = v15 * 0.5;
+  v25 = v15 < v19 || v21 < v20;
+  v26 = v22 - v24;
+  if ( v25 )
+  {
+    v27 = v23 - (float)(v21 * 0.5);
+    x = v15;
+    *failedReason = 2;
+    y = v21;
+    goto LABEL_61;
   }
   mZoom = v9->fields.mZoom;
-  v59 = y;
+  v64 = v23 - (float)(v21 * 0.5);
+  v65 = v22 - v24;
+  v66 = v21;
+  v67 = v15;
   if ( !mZoom )
-    goto LABEL_53;
+    goto LABEL_64;
   camera = (MapCamera_o *)MapCameraViewAdjusterUtil_TypeInfo;
   mZoomMax = mZoom->fields.mZoomMax;
-  if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
+  if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
+    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v33, v16);
     camera = (MapCamera_o *)MapCameraViewAdjusterUtil_TypeInfo;
   }
-  v73.fields.m_Width = v65;
-  v73.fields.m_YMin = v66;
-  v73.fields.m_Height = brakeRect;
-  v73.fields.m_XMin = m_XMin;
+  v78.fields.m_YMin = m_YMin;
+  v78.fields.m_XMin = m_XMin;
+  v78.fields.m_Height = v68;
+  v78.fields.m_Width = v69;
   camera = (MapCamera_o *)MapCameraViewAdjusterUtil__GenerateCameraRects(
                             1.0,
                             mZoomMax,
                             *((float *)&camera[1].fields.mMapBg->klass + 1),
                             *(float *)&camera[1].fields.mMapBg->klass,
-                            v73,
+                            v78,
                             *(UnityEngine_Vector3_o *)&camera,
-                            v18);
+                            v16);
   if ( !camera )
-LABEL_53:
-    sub_1D0F30C(camera, v58);
+LABEL_64:
+    sub_21FFECC(camera, v63);
   klass = camera->klass;
-  v26 = camera;
-  v27 = *(unsigned __int16 *)&camera->klass->_2.rank;
+  v35 = camera;
+  v36 = *(unsigned __int16 *)&camera->klass->_2.rank;
   if ( *(_WORD *)&camera->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_Rect__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_Rect__TypeInfo )
     {
-      --v27;
+      --v36;
       p_offset += 4;
-      if ( !v27 )
-        goto LABEL_18;
+      if ( !v36 )
+        goto LABEL_25;
     }
-    v29 = (__int64)&klass->vtable + 16 * *p_offset;
+    v38 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
-LABEL_18:
-    v29 = sub_1CE5430(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
+LABEL_25:
+    v38 = sub_2237E2C(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
   }
-  v63 = m_XMin;
-  v35 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
-  if ( !v35 )
-    sub_1D0F30C(0, v34);
-  while ( 1 )
+  v39 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v38)(v35, *(_QWORD *)(v38 + 8));
+  v72 = v39;
+  if ( !v39 )
+    sub_21FFECC(0, v40);
+  for ( i = v39; ; i = v72 )
   {
-    v36 = *(_QWORD *)v35;
-    v37 = *(unsigned __int16 *)(*(_QWORD *)v35 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v35 + 302LL) )
+    v42 = *(_QWORD *)i;
+    v43 = *(unsigned __int16 *)(*(_QWORD *)i + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)i + 302LL) )
     {
-      v38 = (int *)(*(_QWORD *)(v36 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v38 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v44 = (int *)(*(_QWORD *)(v42 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v44 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v37;
-        v38 += 4;
-        if ( !v37 )
-          goto LABEL_27;
+        --v43;
+        v44 += 4;
+        if ( !v43 )
+          goto LABEL_33;
       }
-      v39 = v36 + 16LL * *v38 + 312;
+      v45 = v42 + 16LL * *v44 + 312;
     }
     else
     {
-LABEL_27:
-      v39 = sub_1CE5430(v35, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_33:
+      v45 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v39)(v35, *(_QWORD *)(v39 + 8)) & 1) == 0 )
-      break;
-    v40 = *(_QWORD *)v35;
-    v41 = *(unsigned __int16 *)(*(_QWORD *)v35 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v35 + 302LL) )
+    v46 = (*(__int64 (__fastcall **)(__int64, _QWORD))v45)(i, *(_QWORD *)(v45 + 8));
+    if ( (v46 & 1) == 0 )
     {
-      v42 = (int *)(*(_QWORD *)(v40 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_Rect__c **)v42 - 1) != System_Collections_Generic_IEnumerator_Rect__TypeInfo )
+      y = 0.0;
+      x = 0.0;
+      v27 = 0.0;
+      v26 = 0.0;
+      v54 = 8;
+      goto LABEL_51;
+    }
+    if ( !v72 )
+      sub_21FFECC(v46, v47);
+    v48 = *(_QWORD *)v72;
+    v49 = *(unsigned __int16 *)(*(_QWORD *)v72 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v72 + 302LL) )
+    {
+      v50 = (int *)(*(_QWORD *)(v48 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_Rect__c **)v50 - 1) != System_Collections_Generic_IEnumerator_Rect__TypeInfo )
       {
-        --v41;
-        v42 += 4;
-        if ( !v41 )
-          goto LABEL_34;
+        --v49;
+        v50 += 4;
+        if ( !v49 )
+          goto LABEL_41;
       }
-      v43 = v40 + 16LL * *v42 + 312;
+      v51 = v48 + 16LL * *v50 + 312;
     }
     else
     {
-LABEL_34:
-      v43 = sub_1CE5430(v35, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
+LABEL_41:
+      v51 = sub_2237E2C(v72, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
     }
-    v44 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v43)(v35, *(_QWORD *)(v43 + 8));
-    v31 = *(float *)&v44;
-    v32 = v45;
-    x = v46;
-    y = v47;
-    v74.fields.m_XMin = v19;
-    v74.fields.m_YMin = v20;
-    v74.fields.m_Width = v21;
-    v74.fields.m_Height = v22;
-    if ( RectExtension__IsContain(*(UnityEngine_Rect_o *)&v44, v74, 0) )
+    v74.fields.m_XMin = (*(float (__fastcall **)(__int64, _QWORD))v51)(v72, *(_QWORD *)(v51 + 8));
+    v79.fields.m_XMin = v17;
+    v79.fields.m_YMin = v18;
+    v79.fields.m_Width = v19;
+    v79.fields.m_Height = v20;
+    v26 = v74.fields.m_XMin;
+    v27 = v74.fields.m_YMin;
+    x = v74.fields.m_Width;
+    y = v74.fields.m_Height;
+    if ( RectExtension__IsContain(v74, v79, 0) )
     {
-      v70.fields.m_XMin = v63;
-      v70.fields.m_Height = brakeRect;
-      v70.fields.m_Width = v65;
-      v70.fields.m_YMin = v66;
-      v75.fields.m_XMin = v31;
-      v75.fields.m_YMin = v32;
-      v75.fields.m_Width = x;
-      v75.fields.m_Height = y;
-      if ( RectExtension__IsContain(v70, v75, 0) )
+      v80.fields.m_XMin = v26;
+      v80.fields.m_YMin = v27;
+      v80.fields.m_Width = x;
+      v80.fields.m_Height = y;
+      v75.fields.m_YMin = m_YMin;
+      v75.fields.m_XMin = m_XMin;
+      v75.fields.m_Height = v68;
+      v75.fields.m_Width = v69;
+      if ( RectExtension__IsContain(v75, v80, 0) )
       {
-        if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-        v71.fields.m_XMin = v31;
-        v71.fields.m_YMin = v32;
-        v71.fields.m_Width = x;
-        v71.fields.m_Height = y;
-        if ( !MapCameraViewAdjusterUtil__HasAnyIntersects(v8, rects2DUI, v71, v48) )
-        {
-          v49 = 7;
-          goto LABEL_43;
-        }
+        if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v52, v53);
+        v76.fields.m_XMin = v26;
+        v76.fields.m_YMin = v27;
+        v76.fields.m_Width = x;
+        v76.fields.m_Height = y;
+        if ( !MapCameraViewAdjusterUtil__HasAnyIntersects(v8, rects2DUI, v76, v53) )
+          break;
       }
     }
   }
-  y = 0.0;
-  v49 = 8;
-  x = 0.0;
-  v32 = 0.0;
-  v31 = 0.0;
-LABEL_43:
-  v50 = *(_QWORD *)v35;
-  v51 = *(unsigned __int16 *)(*(_QWORD *)v35 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v35 + 302LL) )
+  v54 = 7;
+LABEL_51:
+  if ( v72 )
   {
-    v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v52 - 1) != System_IDisposable_TypeInfo )
+    v55 = *(_QWORD *)v72;
+    v56 = *(unsigned __int16 *)(*(_QWORD *)v72 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v72 + 302LL) )
     {
-      --v51;
-      v52 += 4;
-      if ( !v51 )
-        goto LABEL_47;
+      v57 = (int *)(*(_QWORD *)(v55 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v57 - 1) != System_IDisposable_TypeInfo )
+      {
+        --v56;
+        v57 += 4;
+        if ( !v56 )
+          goto LABEL_56;
+      }
+      v58 = v55 + 16LL * *v57 + 312;
     }
-    v53 = v50 + 16LL * *v52 + 312;
+    else
+    {
+LABEL_56:
+      v58 = sub_2237E2C(v72, System_IDisposable_TypeInfo, 0);
+    }
+    (*(void (__fastcall **)(__int64, _QWORD))v58)(v72, *(_QWORD *)(v58 + 8));
   }
-  else
+  if ( (v54 | 8) == 8 )
   {
-LABEL_47:
-    v53 = sub_1CE5430(v35, System_IDisposable_TypeInfo, 0);
+    v27 = v64;
+    v26 = v65;
+    y = v66;
+    x = v67;
+    *failedReason = 1;
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v53)(v35, *(_QWORD *)(v53 + 8));
-  if ( (v49 | 8) == 8 )
-  {
-    x = v62;
-    y = v59;
-    v33 = 1;
-    goto LABEL_51;
-  }
-LABEL_52:
-  v54 = v31;
-  v55 = v32;
-  v56 = x;
-  v57 = y;
-  result.fields.m_Height = v57;
-  result.fields.m_Width = v56;
-  result.fields.m_YMin = v55;
-  result.fields.m_XMin = v54;
+LABEL_61:
+  v59 = v26;
+  v60 = v27;
+  v61 = x;
+  v62 = y;
+  result.fields.m_Height = v62;
+  result.fields.m_Width = v61;
+  result.fields.m_YMin = v60;
+  result.fields.m_XMin = v59;
   return result;
 }
 
@@ -329,311 +346,303 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CalculateLostSomeRectsAllowedCamer
         const MethodInfo *method)
 {
   MapCamera_o *v10; // x23
-  float m_XMin; // s8
-  float m_YMin; // s9
-  float m_Width; // s10
-  float m_Height; // s11
-  MapCameraViewAdjusterUtil_c *v15; // x0
-  const MethodInfo *v16; // x1
-  const MethodInfo *v17; // x1
-  float v18; // s4
-  float v19; // s5
-  const MethodInfo *v20; // x2
-  float x; // s0
-  UnityEngine_Vector3_o v22; // x0
-  float v23; // s12
+  float m_XMin; // s12
+  float m_YMin; // s13
+  float m_Width; // s14
+  float m_Height; // s15
+  UnityEngine_Vector2_o v15; // x1
+  UnityEngine_Vector2_o Size; // kr00_8
+  float v17; // s8
+  float v18; // s11
+  const MethodInfo *v19; // x1
+  __int64 v20; // x2
+  int32_t v22; // w8
+  float v23; // s10
+  float v24; // s9
+  float v25; // s8
+  const MethodInfo *v27; // x2
+  float v28; // s8
+  UnityEngine_Vector3_o v29; // x0 OVERLAPPED
   MapCamera_c *klass; // x8
-  MapCamera_o *v25; // x22
-  __int64 v26; // x9
+  MapCamera_o *v31; // x22
+  __int64 v32; // x9
   int32_t *p_offset; // x10
-  __int64 v28; // x0
-  int32_t v29; // w8
-  float v30; // v2.s[1]
-  unsigned __int64 v31; // d0
-  __int64 v32; // x1
-  __int64 v33; // x22
-  __int64 v34; // x8
-  __int64 v35; // x9
-  int *v36; // x10
-  __int64 v37; // x0
+  __int64 v34; // x0
+  __int64 v35; // x0
+  __int64 v36; // x1
+  __int64 i; // x22
   __int64 v38; // x8
   __int64 v39; // x9
   int *v40; // x10
   __int64 v41; // x0
-  long double v42; // q0 OVERLAPPED
-  float v43; // s1
-  float v44; // s13
-  float v45; // s2
-  float v46; // s14
-  float v47; // s3
-  float v48; // s12
-  float v49; // s1
-  float v50; // s2
-  float v51; // s3
+  __int64 v42; // x0
+  __int64 v43; // x1
+  __int64 v44; // x8
+  __int64 v45; // x9
+  int *v46; // x10
+  __int64 v47; // x0
+  float v48; // s1
+  float v49; // s2
+  float v50; // s3
+  __int64 v51; // x1
   const MethodInfo *v52; // x2
-  float v53; // s0
-  int v54; // w21
-  __int64 v55; // x8
-  __int64 v56; // x9
-  int *v57; // x10
-  __int64 v58; // x0
+  int v53; // w22
+  __int64 v54; // x8
+  __int64 v55; // x9
+  int *v56; // x10
+  __int64 v57; // x0
+  float v58; // s0
   float v59; // s1
   float v60; // s2
   float v61; // s3
-  float32x2_t v62; // [xsp+10h] [xbp-110h]
-  float v63; // [xsp+20h] [xbp-100h]
-  float v64; // [xsp+30h] [xbp-F0h]
-  float b; // [xsp+40h] [xbp-E0h]
-  float v66; // [xsp+50h] [xbp-D0h]
-  float v67; // [xsp+60h] [xbp-C0h]
-  float v68; // [xsp+70h] [xbp-B0h]
-  float cameraRect; // [xsp+80h] [xbp-A0h]
-  float cameraRecta; // [xsp+80h] [xbp-A0h]
-  UnityEngine_Rect_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v62; // [xsp+28h] [xbp-B8h]
+  float v63; // [xsp+2Ch] [xbp-B4h]
+  float v64; // [xsp+30h] [xbp-B0h]
+  float v65; // [xsp+34h] [xbp-ACh]
+  float v66; // [xsp+38h] [xbp-A8h]
+  float v67; // [xsp+3Ch] [xbp-A4h]
+  float v68; // [xsp+40h] [xbp-A0h]
+  float v69; // [xsp+44h] [xbp-9Ch]
+  __int64 v70; // [xsp+58h] [xbp-88h]
+  UnityEngine_Rect_o CoveringRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o CoveringRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Rect_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v76; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
   UnityEngine_Rect_o v77; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
   UnityEngine_Rect_o v78; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
-  UnityEngine_Rect_o v79; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   v10 = camera;
-  if ( (byte_4E76937 & 1) == 0 )
+  if ( (byte_59378E2 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_IDisposable_TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
-    sub_1D0F0B4(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
-    sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    camera = (MapCamera_o *)sub_1D0F0B4(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4E76937 = 1;
+    sub_21FFC50(&System_IDisposable_TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
+    sub_21FFC50(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
+    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    camera = (MapCamera_o *)sub_21FFC50(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_59378E2 = 1;
   }
   *failedReason = 0;
   if ( !v10 )
-    goto LABEL_53;
+    goto LABEL_65;
   m_XMin = v10->fields.mMvBrakeRect.fields.m_XMin;
   m_YMin = v10->fields.mMvBrakeRect.fields.m_YMin;
   m_Width = v10->fields.mMvBrakeRect.fields.m_Width;
   m_Height = v10->fields.mMvBrakeRect.fields.m_Height;
-  v15 = MapCameraViewAdjusterUtil_TypeInfo;
-  if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-  v71.fields.m_XMin = m_XMin;
-  v71.fields.m_YMin = m_YMin;
-  v71.fields.m_Width = m_Width;
-  v71.fields.m_Height = m_Height;
-  v72 = MapCameraViewAdjusterUtil__ResizedToViewAspectRect(v71, (const MethodInfo *)v15);
-  v64 = v72.fields.m_Width;
-  v63 = v72.fields.m_Height;
-  CoveringRect = MapCameraViewAdjusterUtil__CreateCoveringRect(essentialRectsOnMap, v16);
-  v18 = v63;
-  v19 = v64;
-  v68 = CoveringRect.fields.m_XMin;
-  v66 = CoveringRect.fields.m_YMin;
+  if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, rectsOnMap, rects2DUI);
+  Size = FSWindowUtil__GetSize(0);
+  v17 = m_Height;
+  v18 = (float)(m_Height * Size.fields.x) / Size.fields.y;
+  if ( m_Width <= v18 )
+  {
+    v18 = m_Width;
+    v17 = (float)(m_Width * Size.fields.y) / Size.fields.x;
+  }
+  CoveringRect = MapCameraViewAdjusterUtil__CreateCoveringRect(essentialRectsOnMap, (const MethodInfo *)*(_QWORD *)&v15);
+  if ( v18 < CoveringRect.fields.m_Width || v17 < CoveringRect.fields.m_Height )
+  {
+    v22 = 2;
+    v23 = (float)(CoveringRect.fields.m_XMin + (float)(CoveringRect.fields.m_Width * 0.5)) - (float)(v18 * 0.5);
+    v24 = (float)(CoveringRect.fields.m_YMin + (float)(CoveringRect.fields.m_Height * 0.5)) - (float)(v17 * 0.5);
+LABEL_61:
+    *failedReason = v22;
+    goto LABEL_62;
+  }
+  v66 = CoveringRect.fields.m_Height;
   v67 = CoveringRect.fields.m_Width;
-  if ( v64 < CoveringRect.fields.m_Width || v63 < CoveringRect.fields.m_Height )
+  v68 = CoveringRect.fields.m_YMin;
+  v69 = CoveringRect.fields.m_XMin;
+  v63 = v17;
+  v65 = v18;
+  if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v19, v20);
+  MapCameraViewAdjusterUtil__CreateCoveringRect(rectsOnMap, v19);
+  v25 = v17 * 0.5;
+  v64 = v18 * 0.5;
+  if ( !byte_5931944 )
   {
-    v29 = 2;
-    v30 = CoveringRect.fields.m_Height;
-    v31 = vsub_f32(
-            vadd_f32(
-              *(float32x2_t *)&CoveringRect.fields.m_XMin,
-              vmul_f32(*(float32x2_t *)&CoveringRect.fields.m_Width, (float32x2_t)0x3F0000003F000000LL)),
-            vmul_f32((float32x2_t)__PAIR64__(LODWORD(v63), LODWORD(v64)), (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-LABEL_51:
-    v44 = *((float *)&v31 + 1);
-    v46 = v19;
-    v48 = v18;
-    *failedReason = v29;
-    goto LABEL_52;
+    sub_21FFC50(&UnityEngine_Mathf_TypeInfo);
+    byte_5931944 = 1;
   }
-  b = CoveringRect.fields.m_Height;
-  if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-  MapCameraViewAdjusterUtil__CreateCoveringRect(rectsOnMap, v17);
-  v62.n64_u64[0] = vmul_f32((float32x2_t)__PAIR64__(LODWORD(v63), LODWORD(v64)), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-  if ( !byte_4E70C9D )
+  v62 = v25;
+  v28 = v18 / FSWindowUtil__GetSize(0).fields.x;
+  *(_QWORD *)&v29.fields.x = MapCameraViewAdjusterUtil_TypeInfo;
+  if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
   {
-    sub_1D0F0B4(&UnityEngine_Mathf_TypeInfo);
-    byte_4E70C9D = 1;
+    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, *(_QWORD *)&v29.fields.z, v27);
+    *(_QWORD *)&v29.fields.x = MapCameraViewAdjusterUtil_TypeInfo;
   }
-  x = FSWindowUtil__GetSize(0).fields.x;
-  *(_QWORD *)&v22.fields.x = MapCameraViewAdjusterUtil_TypeInfo;
-  v23 = v64 / x;
-  if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-    *(_QWORD *)&v22.fields.x = MapCameraViewAdjusterUtil_TypeInfo;
-  }
-  v77.fields.m_XMin = m_XMin;
-  v77.fields.m_YMin = m_YMin;
-  v77.fields.m_Width = m_Width;
-  v77.fields.m_Height = m_Height;
+  v76.fields.m_XMin = m_XMin;
+  v76.fields.m_YMin = m_YMin;
+  v76.fields.m_Width = m_Width;
+  v76.fields.m_Height = m_Height;
   camera = (MapCamera_o *)MapCameraViewAdjusterUtil__GenerateCameraRects(
-                            v23,
-                            v23,
+                            v28,
+                            v28,
                             1.0,
-                            **(float **)(*(_QWORD *)&v22.fields.x + 184LL),
-                            v77,
-                            v22,
-                            v20);
+                            **(float **)(*(_QWORD *)&v29.fields.x + 184LL),
+                            v76,
+                            v29,
+                            v27);
   if ( !camera )
-LABEL_53:
-    sub_1D0F30C(camera, rectsOnMap);
+LABEL_65:
+    sub_21FFECC(camera, rectsOnMap);
   klass = camera->klass;
-  v25 = camera;
-  v26 = *(unsigned __int16 *)&camera->klass->_2.rank;
+  v31 = camera;
+  v32 = *(unsigned __int16 *)&camera->klass->_2.rank;
   if ( *(_WORD *)&camera->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_Rect__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_Rect__TypeInfo )
     {
-      --v26;
+      --v32;
       p_offset += 4;
-      if ( !v26 )
-        goto LABEL_19;
+      if ( !v32 )
+        goto LABEL_25;
     }
-    v28 = (__int64)&klass->vtable + 16 * *p_offset;
+    v34 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
-LABEL_19:
-    v28 = sub_1CE5430(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
+LABEL_25:
+    v34 = sub_2237E2C(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
   }
-  v33 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v28)(v25, *(_QWORD *)(v28 + 8));
-  if ( !v33 )
-    sub_1D0F30C(0, v32);
-  while ( 1 )
+  v35 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v34)(v31, *(_QWORD *)(v34 + 8));
+  v70 = v35;
+  if ( !v35 )
+    sub_21FFECC(0, v36);
+  for ( i = v35; ; i = v70 )
   {
-    v34 = *(_QWORD *)v33;
-    v35 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
-    {
-      v36 = (int *)(*(_QWORD *)(v34 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v36 - 1) != System_Collections_IEnumerator_TypeInfo )
-      {
-        --v35;
-        v36 += 4;
-        if ( !v35 )
-          goto LABEL_27;
-      }
-      v37 = v34 + 16LL * *v36 + 312;
-    }
-    else
-    {
-LABEL_27:
-      v37 = sub_1CE5430(v33, System_Collections_IEnumerator_TypeInfo, 0);
-    }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v33, *(_QWORD *)(v37 + 8)) & 1) == 0 )
-      break;
-    v38 = *(_QWORD *)v33;
-    v39 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
+    v38 = *(_QWORD *)i;
+    v39 = *(unsigned __int16 *)(*(_QWORD *)i + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)i + 302LL) )
     {
       v40 = (int *)(*(_QWORD *)(v38 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_Rect__c **)v40 - 1) != System_Collections_Generic_IEnumerator_Rect__TypeInfo )
+      while ( *((System_Collections_IEnumerator_c **)v40 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
         --v39;
         v40 += 4;
         if ( !v39 )
-          goto LABEL_34;
+          goto LABEL_33;
       }
       v41 = v38 + 16LL * *v40 + 312;
     }
     else
     {
-LABEL_34:
-      v41 = sub_1CE5430(v33, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
+LABEL_33:
+      v41 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    v42 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v41)(v33, *(_QWORD *)(v41 + 8));
-    v44 = v43;
-    v46 = v45;
-    v48 = v47;
-    v78.fields.m_XMin = *(float *)&v42;
-    *(float *)&v42 = m_XMin;
-    v49 = m_YMin;
-    v50 = m_Width;
-    v51 = m_Height;
-    v78.fields.m_YMin = v44;
-    v78.fields.m_Width = v46;
-    v78.fields.m_Height = v48;
-    cameraRect = v78.fields.m_XMin;
-    if ( RectExtension__IsContain(*(UnityEngine_Rect_o *)&v42, v78, 0) )
+    v42 = (*(__int64 (__fastcall **)(__int64, _QWORD))v41)(i, *(_QWORD *)(v41 + 8));
+    if ( (v42 & 1) == 0 )
     {
-      v79.fields.m_XMin = v68;
-      v74.fields.m_XMin = cameraRect;
-      v74.fields.m_YMin = v44;
-      v74.fields.m_Width = v46;
-      v74.fields.m_Height = v48;
-      v79.fields.m_YMin = v66;
-      v79.fields.m_Width = v67;
-      v79.fields.m_Height = b;
-      if ( RectExtension__IsContain(v74, v79, 0) )
+      v17 = 0.0;
+      v18 = 0.0;
+      v24 = 0.0;
+      v23 = 0.0;
+      v53 = 9;
+      goto LABEL_51;
+    }
+    if ( !v70 )
+      sub_21FFECC(v42, v43);
+    v44 = *(_QWORD *)v70;
+    v45 = *(unsigned __int16 *)(*(_QWORD *)v70 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v70 + 302LL) )
+    {
+      v46 = (int *)(*(_QWORD *)(v44 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_Rect__c **)v46 - 1) != System_Collections_Generic_IEnumerator_Rect__TypeInfo )
       {
-        if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
-        v75.fields.m_XMin = cameraRect;
-        v75.fields.m_YMin = v44;
-        v75.fields.m_Width = v46;
-        v75.fields.m_Height = v48;
-        if ( !MapCameraViewAdjusterUtil__HasAnyIntersects(essentialRectsOnMap, rects2DUI, v75, v52) )
-        {
-          v53 = cameraRect;
-          v54 = 8;
-          goto LABEL_43;
-        }
+        --v45;
+        v46 += 4;
+        if ( !v45 )
+          goto LABEL_41;
+      }
+      v47 = v44 + 16LL * *v46 + 312;
+    }
+    else
+    {
+LABEL_41:
+      v47 = sub_2237E2C(v70, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
+    }
+    v23 = (*(float (__fastcall **)(__int64, _QWORD))v47)(v70, *(_QWORD *)(v47 + 8));
+    v24 = v48;
+    v18 = v49;
+    v17 = v50;
+    v72.fields.m_XMin = m_XMin;
+    v72.fields.m_YMin = m_YMin;
+    v72.fields.m_Width = m_Width;
+    v72.fields.m_Height = m_Height;
+    v77.fields.m_XMin = v23;
+    v77.fields.m_YMin = v24;
+    v77.fields.m_Width = v18;
+    v77.fields.m_Height = v17;
+    if ( RectExtension__IsContain(v72, v77, 0) )
+    {
+      v73.fields.m_XMin = v23;
+      v73.fields.m_YMin = v24;
+      v73.fields.m_Width = v18;
+      v73.fields.m_Height = v17;
+      v78.fields.m_YMin = v68;
+      v78.fields.m_XMin = v69;
+      v78.fields.m_Height = v66;
+      v78.fields.m_Width = v67;
+      if ( RectExtension__IsContain(v73, v78, 0) )
+      {
+        if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v51, v52);
+        v74.fields.m_XMin = v23;
+        v74.fields.m_YMin = v24;
+        v74.fields.m_Width = v18;
+        v74.fields.m_Height = v17;
+        if ( !MapCameraViewAdjusterUtil__HasAnyIntersects(essentialRectsOnMap, rects2DUI, v74, v52) )
+          break;
       }
     }
   }
-  v48 = 0.0;
-  v54 = 9;
-  v46 = 0.0;
-  v44 = 0.0;
-  v53 = 0.0;
-LABEL_43:
-  v55 = *(_QWORD *)v33;
-  cameraRecta = v53;
-  v56 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
+  v53 = 8;
+LABEL_51:
+  if ( v70 )
   {
-    v57 = (int *)(*(_QWORD *)(v55 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v57 - 1) != System_IDisposable_TypeInfo )
+    v54 = *(_QWORD *)v70;
+    v55 = *(unsigned __int16 *)(*(_QWORD *)v70 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v70 + 302LL) )
     {
-      --v56;
-      v57 += 4;
-      if ( !v56 )
-        goto LABEL_47;
+      v56 = (int *)(*(_QWORD *)(v54 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v56 - 1) != System_IDisposable_TypeInfo )
+      {
+        --v55;
+        v56 += 4;
+        if ( !v55 )
+          goto LABEL_56;
+      }
+      v57 = v54 + 16LL * *v56 + 312;
     }
-    v58 = v55 + 16LL * *v57 + 312;
+    else
+    {
+LABEL_56:
+      v57 = sub_2237E2C(v70, System_IDisposable_TypeInfo, 0);
+    }
+    (*(void (__fastcall **)(__int64, _QWORD))v57)(v70, *(_QWORD *)(v57 + 8));
   }
-  else
+  if ( v53 == 9 )
   {
-LABEL_47:
-    v58 = sub_1CE5430(v33, System_IDisposable_TypeInfo, 0);
+    v22 = 1;
+    v18 = v65;
+    v23 = (float)(v69 + (float)(v67 * 0.5)) - v64;
+    v17 = v63;
+    v24 = (float)(v68 + (float)(v66 * 0.5)) - v62;
+    goto LABEL_61;
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v58)(v33, *(_QWORD *)(v58 + 8));
-  *(float *)&v31 = cameraRecta;
-  if ( v54 == 9 )
-  {
-    v19 = v64;
-    v29 = 1;
-    v18 = v63;
-    v31 = vsub_f32(
-            vadd_f32(
-              (float32x2_t)__PAIR64__(LODWORD(v66), LODWORD(v68)),
-              vmul_f32((float32x2_t)__PAIR64__(LODWORD(b), LODWORD(v67)), (float32x2_t)0x3F0000003F000000LL)),
-            v62).n64_u64[0];
-    goto LABEL_51;
-  }
-LABEL_52:
-  v59 = v44;
-  v60 = v46;
-  v61 = v48;
-  result.fields.m_XMin = *(float *)&v31;
+LABEL_62:
+  v58 = v23;
+  v59 = v24;
+  v60 = v18;
+  v61 = v17;
   result.fields.m_Height = v61;
   result.fields.m_Width = v60;
   result.fields.m_YMin = v59;
+  result.fields.m_XMin = v58;
   return result;
 }
 
@@ -643,21 +652,22 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CreateCoveringRect(
         const MethodInfo *method)
 {
   il2cpp_array_size_t max_length; // x9
-  int8x8_t v3; // d1
+  int8x8_t v3; // d0
   float32x2_t v4; // d2
-  unsigned int v5; // w10
-  unsigned __int64 v6; // x8
-  float32x2_t *p_m_Width; // x10
-  int8x8_t v8; // d0
-  int8x8_t v9; // d3
-  float32x2_t v10; // d0
+  unsigned __int64 v5; // x8
+  float *p_m_Width; // x10
+  int8x8_t v7; // d1
+  float32x2_t v8; // d2
+  bool v9; // cc
+  float32x2_t v10; // t1
   int8x8_t v11; // d1
-  float v12; // s1
-  float v13; // s3
+  int8x8_t v12; // d2
+  float v13; // s1
+  float v14; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !rects )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   max_length = rects->max_length;
   if ( max_length )
   {
@@ -665,41 +675,40 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CreateCoveringRect(
       goto LABEL_12;
     v3.n64_u64[0] = *(unsigned __int64 *)&rects->m_Items[0].fields.m_XMin;
     v4.n64_u64[0] = *(unsigned __int64 *)&rects->m_Items[0].fields.m_Width;
-    v5 = max_length - 1;
-    if ( (int)max_length - 1 >= 1 )
+    v5 = (unsigned int)(max_length - 1);
+    if ( (int)v5 >= 1 )
     {
-      v6 = v5;
-      p_m_Width = (float32x2_t *)&rects->m_Items[v5].fields.m_Width;
-      while ( v6 < (unsigned int)rects->max_length )
+      p_m_Width = &rects->m_Items[(unsigned int)v5].fields.m_Width;
+      while ( v5 < (unsigned int)rects->max_length )
       {
-        v8.n64_u64[0] = p_m_Width[-1].n64_u64[0];
-        --v6;
-        v9.n64_u64[0] = vadd_f32(v8, (float32x2_t)p_m_Width->n64_u64[0]).n64_u64[0];
-        v10.n64_u64[0] = vbsl_s8(vcgt_f32(v3, v8), v8, v3).n64_u64[0];
-        v11.n64_u64[0] = vadd_f32(v10, vsub_f32(vadd_f32(v3, v4), v10)).n64_u64[0];
-        v4.n64_u64[0] = vsub_f32(vbsl_s8(vcgt_f32(v9, v11), v9, v11), v10).n64_u64[0];
-        p_m_Width -= 2;
-        v3.n64_u64[0] = v10.n64_u64[0];
-        if ( (int)v6 <= 0 )
+        v7.n64_u64[0] = *(_QWORD *)(p_m_Width - 2);
+        v8.n64_u64[0] = vadd_f32(v3, v4).n64_u64[0];
+        v9 = (__int64)v5-- <= 1;
+        v3.n64_u64[0] = vbsl_s8(vcgt_f32(v3, v7), v7, v3).n64_u64[0];
+        v10.n64_u64[0] = *(unsigned __int64 *)p_m_Width;
+        p_m_Width -= 4;
+        v11.n64_u64[0] = vadd_f32(v7, v10).n64_u64[0];
+        v12.n64_u64[0] = vadd_f32(v3, vsub_f32(v8, v3)).n64_u64[0];
+        v4.n64_u64[0] = vsub_f32(vbsl_s8(vcgt_f32(v11, v12), v11, v12), v3).n64_u64[0];
+        if ( v9 )
           goto LABEL_11;
       }
 LABEL_12:
-      sub_1D0F314(rects);
+      sub_21FFED4(rects);
     }
-    v10.n64_u64[0] = *(unsigned __int64 *)&rects->m_Items[0].fields.m_XMin;
   }
   else
   {
     v4.n64_u64[0] = 0;
-    v10.n64_u64[0] = 0;
+    v3.n64_u64[0] = 0;
   }
 LABEL_11:
-  v12 = v10.n64_f32[1];
-  v13 = v4.n64_f32[1];
+  v13 = v3.n64_f32[1];
+  v14 = v4.n64_f32[1];
   result.fields.m_Width = v4.n64_f32[0];
-  result.fields.m_XMin = v10.n64_f32[0];
-  result.fields.m_Height = v13;
-  result.fields.m_YMin = v12;
+  result.fields.m_XMin = v3.n64_f32[0];
+  result.fields.m_Height = v14;
+  result.fields.m_YMin = v13;
   return result;
 }
 
@@ -715,26 +724,30 @@ System_Collections_Generic_IEnumerable_Rect__o *MapCameraViewAdjusterUtil__Gener
 {
   float m_XMin; // s11
   __int64 v12; // x19
+  int32_t CurrentManagedThreadId; // w0
+  System_Collections_Generic_IEnumerable_Rect__o *result; // x0
   float m_YMin; // [xsp+Ch] [xbp-64h]
   float m_Width; // [xsp+58h] [xbp-18h]
   float m_Height; // [xsp+5Ch] [xbp-14h]
-  __int64 v17; // [xsp+70h] [xbp+0h]
-  int v18; // [xsp+78h] [xbp+8h]
+  __int64 v18; // [xsp+70h] [xbp+0h]
+  int v19; // [xsp+78h] [xbp+8h]
 
+  m_XMin = brakeRect.fields.m_XMin;
   m_Width = brakeRect.fields.m_Width;
   m_Height = brakeRect.fields.m_Height;
   m_YMin = brakeRect.fields.m_YMin;
-  m_XMin = brakeRect.fields.m_XMin;
-  if ( (byte_4E76938 & 1) == 0 )
+  if ( (byte_59378E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
-    byte_4E76938 = 1;
+    sub_21FFC50(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    byte_59378E3 = 1;
   }
-  v12 = sub_1D0F300(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+  v12 = sub_21FFEBC(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   *(_DWORD *)(v12 + 16) = -2;
-  *(_DWORD *)(v12 + 36) = System_Environment__get_CurrentManagedThreadId(0);
+  CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
   *(float *)(v12 + 44) = ZoomMin;
+  *(_DWORD *)(v12 + 36) = CurrentManagedThreadId;
+  result = (System_Collections_Generic_IEnumerable_Rect__o *)v12;
   *(float *)(v12 + 88) = m_XMin;
   *(float *)(v12 + 92) = m_YMin;
   *(float *)(v12 + 124) = ZoomMax;
@@ -742,9 +755,9 @@ System_Collections_Generic_IEnumerable_Rect__o *MapCameraViewAdjusterUtil__Gener
   *(float *)(v12 + 108) = offsetInterval;
   *(float *)(v12 + 96) = m_Width;
   *(float *)(v12 + 100) = m_Height;
-  *(_QWORD *)(v12 + 60) = v17;
-  *(_DWORD *)(v12 + 68) = v18;
-  return (System_Collections_Generic_IEnumerable_Rect__o *)v12;
+  *(_QWORD *)(v12 + 60) = v18;
+  *(_DWORD *)(v12 + 68) = v19;
+  return result;
 }
 
 
@@ -755,127 +768,122 @@ MapCameraViewAdjusterUtil_CameraDestinationInfo_o *MapCameraViewAdjusterUtil__Ge
         System_Nullable_float__o expectedDestZoom,
         const MethodInfo *method)
 {
-  bool hasValue; // w20
-  MapCamera_o *v5; // x19
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Nullable_float__o v8; // x0
+  bool hasValue; // w21
+  __int64 v5; // x1
+  char v6; // w20
+  MapCamera_o *v7; // x19
+  __int64 v8; // x2
+  System_Nullable_float__o v9; // x0
   float Value; // s0
+  float v11; // s8
   struct MapZoom_o *mZoom; // x8
-  float mZoomMax; // s1
-  float v12; // s8
-  int v13; // w20
-  const MethodInfo_3A88EC8 *v14; // x2
-  float m_Width; // s2
-  float m_Height; // s3
-  float x; // s4
-  float v18; // s2
-  float v19; // s3
-  float y; // s10
-  float v21; // s9
-  __int64 v22; // x19
-  __int64 v24; // x1
-  _QWORD v25[2]; // [xsp+0h] [xbp-50h] BYREF
-  System_Nullable_float__o v26; // [xsp+18h] [xbp-38h] BYREF
-  System_Nullable_Vector3__o v27; // 0:x0.16
-  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
+  float mZoomMax; // s0
+  float v14; // s9
+  float v15; // s1
+  const MethodInfo_45B5034 *v16; // x2
+  __int64 v17; // x9
+  __int64 v18; // x8
+  float y; // v0.s[1]
+  float32x2_t v20; // d3
+  int8x8_t v21; // d2
+  int8x8_t v22; // d3
+  int8x8_t v23; // d2
+  int8x8_t v24; // d1
+  unsigned __int64 v25; // d8
+  __int64 v26; // x19
+  MapCameraViewAdjusterUtil_CameraDestinationInfo_o *result; // x0
+  __int64 v28; // x1
+  float v29; // [xsp+0h] [xbp-60h]
+  _QWORD v30[2]; // [xsp+10h] [xbp-50h] BYREF
+  System_Nullable_float__o v31; // [xsp+38h] [xbp-28h] BYREF
+  System_Nullable_Vector3__o v32; // 0:x0.16
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
+  v31 = expectedDestZoom;
   hasValue = expectedDestZoom.fields.hasValue;
-  v5 = camera;
-  v25[0] = v6;
-  v25[1] = v7;
-  v26 = expectedDestZoom;
-  if ( (byte_4E76939 & 1) == 0 )
+  v6 = v5;
+  v7 = camera;
+  v30[0] = v5;
+  v30[1] = v8;
+  if ( (byte_59378E4 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1D0F0B4(&Method_System_Nullable_float__get_HasValue__);
-    sub_1D0F0B4(&Method_System_Nullable_Vector3__get_Value__);
-    camera = (MapCamera_o *)sub_1D0F0B4(&Method_System_Nullable_float__get_Value__);
-    byte_4E76939 = 1;
+    sub_21FFC50(&MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
+    sub_21FFC50(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
+    sub_21FFC50(&Method_System_Nullable_Vector3__get_Value__);
+    camera = (MapCamera_o *)sub_21FFC50(&Method_System_Nullable_float__get_Value__);
+    byte_59378E4 = 1;
   }
   if ( hasValue )
   {
-    v8 = (System_Nullable_float__o)&v26;
-    Value = System_Nullable_float___get_Value(v8, (const MethodInfo_3A86A00 *)Method_System_Nullable_float__get_Value__);
-    if ( !v5 )
-      goto LABEL_32;
+    v9 = (System_Nullable_float__o)&v31;
+    Value = System_Nullable_float___get_Value(v9, (const MethodInfo_45B27F8 *)Method_System_Nullable_float__get_Value__);
+    if ( !v7 )
+      goto LABEL_20;
   }
   else
   {
-    if ( !v5 || (camera = (MapCamera_o *)v5->fields.mZoom) == 0 )
-LABEL_32:
-      sub_1D0F30C(camera, v24);
+    if ( !v7 || (camera = (MapCamera_o *)v7->fields.mZoom) == 0 )
+LABEL_20:
+      sub_21FFECC(camera, v28);
     Value = MapZoom__GetZoomSize((MapZoom_o *)camera, 0);
   }
-  mZoom = v5->fields.mZoom;
+  v11 = Value;
+  mZoom = v7->fields.mZoom;
   if ( !mZoom )
-    goto LABEL_32;
+    goto LABEL_20;
   mZoomMax = mZoom->fields.mZoomMax;
-  v12 = mZoomMax + mZoom->fields.mZoomMargin;
-  if ( v12 <= Value )
+  v14 = mZoomMax + mZoom->fields.mZoomMargin;
+  v15 = v14;
+  if ( v14 > v11 )
   {
-    v13 = 0;
+    v15 = v11;
+    if ( mZoomMax <= v11 )
+      v15 = mZoom->fields.mZoomMax;
+  }
+  v29 = v15;
+  if ( v6 )
+  {
+    *(_QWORD *)&v32.fields.hasValue = v30;
+    *(_QWORD *)&v32.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+    ScrlPosVec3 = System_Nullable_Vector3___get_Value(v32, v16);
   }
   else
   {
-    v13 = 1;
-    if ( mZoomMax <= Value )
-      v12 = mZoom->fields.mZoomMax;
-    else
-      v12 = Value;
-  }
-  if ( LOBYTE(v25[0]) )
-  {
-    *(_QWORD *)&v27.fields.hasValue = v25;
-    *(_QWORD *)&v27.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-    ScrlPosVec3 = System_Nullable_Vector3___get_Value(v27, v14);
-  }
-  else
-  {
-    camera = (MapCamera_o *)v5->fields.mScrl;
+    camera = (MapCamera_o *)v7->fields.mScrl;
     if ( !camera )
-      goto LABEL_32;
+      goto LABEL_20;
     ScrlPosVec3 = MapScroll__GetScrlPosVec3((MapScroll_o *)camera, 0);
   }
-  if ( v13 )
+  v17 = 124;
+  v18 = 128;
+  if ( v14 > v11 )
   {
-    m_Width = v5->fields.mMvBrakeRect.fields.m_Width;
-    m_Height = v5->fields.mMvBrakeRect.fields.m_Height;
+    v17 = 108;
+    v18 = 112;
   }
-  else
-  {
-    m_Width = v5->fields.mMvLimitRect.fields.m_Width;
-    m_Height = v5->fields.mMvLimitRect.fields.m_Height;
-  }
-  x = fmaxf(
-        (float)(m_Width * 0.5) - (float)((float)(v12 * v5->fields._windowSize_k__BackingField.fields.x) * 0.5),
-        0.01);
-  v18 = fmaxf(
-          (float)(m_Height * 0.5) - (float)((float)(v12 * v5->fields._windowSize_k__BackingField.fields.y) * 0.5),
-          0.01);
-  v19 = -x;
-  y = -v18;
-  if ( ScrlPosVec3.fields.x <= x )
-    x = ScrlPosVec3.fields.x;
-  if ( ScrlPosVec3.fields.x < v19 )
-    v21 = v19;
-  else
-    v21 = x;
-  if ( ScrlPosVec3.fields.y >= y )
-  {
-    if ( ScrlPosVec3.fields.y <= v18 )
-      y = ScrlPosVec3.fields.y;
-    else
-      y = v18;
-  }
-  v22 = sub_1D0F300(MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v22, 0);
-  *(float *)(v22 + 16) = v21;
-  *(float *)(v22 + 20) = y;
-  *(_DWORD *)(v22 + 24) = 0;
-  *(float *)(v22 + 28) = v12;
-  return (MapCameraViewAdjusterUtil_CameraDestinationInfo_o *)v22;
+  y = ScrlPosVec3.fields.y;
+  v20.n64_u32[0] = *(_DWORD *)((char *)&v7->klass + v17);
+  v20.n64_u32[1] = *(_DWORD *)((char *)&v7->klass + v18);
+  v21.n64_u64[0] = vsub_f32(
+                     vmul_f32(v20, (float32x2_t)0x3F0000003F000000LL),
+                     vmul_f32(
+                       vmul_n_f32((float32x2_t)v7->fields._windowSize_k__BackingField, v29),
+                       (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
+  v22.n64_u64[0] = vdup_n_s32(0x3C23D70Au).n64_u64[0];
+  v23.n64_u64[0] = vbsl_s8(vcgt_f32(v22, v21), v22, v21).n64_u64[0];
+  v24.n64_u64[0] = vneg_f32(v23).n64_u64[0];
+  v25 = vbsl_s8(
+          vcgt_f32(v24, *(float32x2_t *)&ScrlPosVec3.fields.x),
+          v24,
+          vbsl_s8(vcgt_f32(*(float32x2_t *)&ScrlPosVec3.fields.x, v23), v23, *(int8x8_t *)&ScrlPosVec3.fields.x)).n64_u64[0];
+  v26 = sub_21FFEBC(MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v26, 0);
+  *(_QWORD *)(v26 + 16) = v25;
+  result = (MapCameraViewAdjusterUtil_CameraDestinationInfo_o *)v26;
+  *(_DWORD *)(v26 + 24) = 0;
+  *(float *)(v26 + 28) = v29;
+  return result;
 }
 
 
@@ -888,56 +896,52 @@ bool MapCameraViewAdjusterUtil__HasAnyIntersects(
 {
   _BOOL8 HasAnyIntersects; // x0
   UnityEngine_Vector2_o v7; // x1
-  int32x2_t v8; // d0
-  float32x2_t v9; // d9
-  unsigned int v10; // w8
-  float32x2_t v11; // d8
-  signed int v12; // w21
-  float32x2_t *v13; // x8
+  float v8; // s0
+  unsigned int max_length; // w21
+  float32x2_t v10; // d8
+  float32x2_t *v11; // x8
+  float32x2_t v12; // d0
+  float32x2_t v13; // d1 OVERLAPPED
   float32x2_t v14; // d0
-  float32x2_t v15; // d1 OVERLAPPED
-  float32x2_t v16; // d0
-  unsigned __int64 v17; // d2
-  int v18; // s3
-  float m_Height; // [xsp+0h] [xbp-70h]
-  float m_Width; // [xsp+10h] [xbp-60h]
-  float m_YMin; // [xsp+20h] [xbp-50h]
-  float m_XMin; // [xsp+30h] [xbp-40h]
+  unsigned __int64 v15; // d2
+  int v16; // s3
+  float m_Height; // [xsp+0h] [xbp-80h]
+  float m_Width; // [xsp+10h] [xbp-70h]
+  float m_YMin; // [xsp+20h] [xbp-60h]
+  float m_XMin; // [xsp+30h] [xbp-50h]
+  float v22; // [xsp+40h] [xbp-40h]
 
   m_Height = cameraRect.fields.m_Height;
   m_Width = cameraRect.fields.m_Width;
   m_YMin = cameraRect.fields.m_YMin;
   m_XMin = cameraRect.fields.m_XMin;
-  v8.n64_u32[0] = *(_QWORD *)&FSWindowUtil__GetSize(0);
+  LODWORD(v8) = *(_QWORD *)&FSWindowUtil__GetSize(0);
   if ( !containRects2DUI )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(HasAnyIntersects, v7);
-  v8.n64_f32[0] = m_Width / v8.n64_f32[0];
-  v9.n64_u64[0] = vdup_lane_s32(v8, 0).n64_u64[0];
-  v10 = LODWORD(containRects2DUI->max_length) - 1;
-  v11.n64_u64[0] = vadd_f32(
+    sub_21FFECC(HasAnyIntersects, v7);
+  max_length = containRects2DUI->max_length;
+  v22 = m_Width / v8;
+  v10.n64_u64[0] = vadd_f32(
                      (float32x2_t)__PAIR64__(LODWORD(m_YMin), LODWORD(m_XMin)),
                      vmul_f32(
                        (float32x2_t)__PAIR64__(LODWORD(m_Height), LODWORD(m_Width)),
                        (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
   do
   {
-    v12 = v10;
-    if ( (v10 & 0x80000000) != 0 )
+    if ( (--max_length & 0x80000000) != 0 )
       break;
-    if ( v10 >= LODWORD(containRects2DUI->max_length) )
-      sub_1D0F314(HasAnyIntersects);
-    v13 = (float32x2_t *)(&containRects2DUI->obj + v10);
-    v14.n64_u64[0] = v13[4].n64_u64[0];
-    v15.n64_u64[0] = vadd_f32(v14, v13[5]).n64_u64[0];
-    v16.n64_u64[0] = vadd_f32(v11, vmul_f32(v9, v14)).n64_u64[0];
-    v17 = vsub_f32(vadd_f32(v11, vmul_f32(v9, v15)), v16).n64_u64[0];
-    v15.n64_u32[0] = v16.n64_u32[1];
-    v18 = HIDWORD(v17);
-    HasAnyIntersects = RectExtension__HasAnyIntersects(*(UnityEngine_Rect_o *)((char *)&v15 - 4), containRects, 0, 0);
-    v10 = v12 - 1;
+    if ( max_length >= LODWORD(containRects2DUI->max_length) )
+      sub_21FFED4(HasAnyIntersects);
+    v11 = (float32x2_t *)(&containRects2DUI->obj + max_length);
+    v12.n64_u64[0] = v11[4].n64_u64[0];
+    v13.n64_u64[0] = vadd_f32(v12, v11[5]).n64_u64[0];
+    v14.n64_u64[0] = vadd_f32(v10, vmul_n_f32(v12, v22)).n64_u64[0];
+    v15 = vsub_f32(vadd_f32(v10, vmul_n_f32(v13, v22)), v14).n64_u64[0];
+    v13.n64_u32[0] = v14.n64_u32[1];
+    v16 = HIDWORD(v15);
+    HasAnyIntersects = RectExtension__HasAnyIntersects(*(UnityEngine_Rect_o *)((char *)&v13 - 4), containRects, 0, 0);
   }
   while ( !HasAnyIntersects );
-  return v12 >= 0;
+  return (max_length & 0x80000000) == 0;
 }
 
 
@@ -964,8 +968,8 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__ResizedToViewAspectRect(
   v7 = (float)(m_Height * Size.fields.x) / Size.fields.y;
   if ( m_Width <= v7 )
   {
-    m_Height = (float)(m_Width * Size.fields.y) / Size.fields.x;
     v7 = m_Width;
+    m_Height = (float)(m_Width * Size.fields.y) / Size.fields.x;
   }
   v8 = m_YMin;
   v9 = m_Height;
@@ -1059,69 +1063,63 @@ bool MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__MoveNext(
         MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *this,
         const MethodInfo *method)
 {
+  int32x4_t v2; // q0
+  int32x4_t v3; // q1
+  int32x4_t v4; // q3
   int32_t _1__state; // w8
   UnityEngine_Vector2_o Size; // kr00_8
   float ZoomMin; // s2
   int32_t y_5__13; // w9
   int32_t loopY_5__10; // w8
-  int v8; // w10
-  float m_XMin; // s4
-  float m_YMin; // s5
-  float32x2_t v11; // d0
-  float offsetInterval; // s2
-  float32x2_t v13; // d1
-  float v14; // s6
-  float v15; // s7
-  float v16; // s4
-  int32_t v17; // w8
-  bool v18; // zf
-  unsigned __int64 v19; // d4
-  float v20; // s6
-  int32_t v21; // w10
-  float v22; // s3
-  float v23; // s2
-  int32_t v24; // w8
-  int32_t v25; // w10
-  __int64 v26; // x0
-  __int64 v27; // x1
-  __int64 v28; // x9
-  int v29; // w10
-  int v30; // w8
-  __int64 v31; // x9
+  int32_t v11; // w9
+  float32x4_t v12; // q4
+  float m_Height; // s5
+  float *p_offsetInterval; // x8
+  Il2CppClass *v15; // x0
+  float32x2_t v16; // d2
+  float32x4_t v17; // q2
+  float32x4_t v18; // q3
+  float32x4_t v19; // q2
+  float32x4_t v20; // q2
+  __int64 v21; // x0
+  __int64 v22; // x1
+  __int64 v23; // x9
+  int v24; // w8
+  int *v25; // x10
+  __int64 v26; // x9
+  int v27; // w11
+  int v28; // t1
+  Il2CppClass *v29; // x0
+  __int64 v30; // x9
+  int v31; // w8
   int *v32; // x10
-  int v33; // w11
-  int v34; // t1
-  __int64 v35; // x8
+  __int64 v33; // x9
+  int v34; // w11
+  int v35; // t1
   int v36; // w10
-  int v37; // w9
-  __int64 v38; // x8
-  int *v39; // x10
-  int v40; // w11
-  int v41; // t1
-  int v42; // w10
-  int32_t v43; // w9
-  int v44; // w14
-  int v45; // w12
-  int v46; // w14
-  int v47; // w12
-  float v48; // s0
-  int32_t v49; // w9
-  int v50; // w13
-  int v51; // w11
-  int v52; // w13
-  int v53; // w11
-  float32x2_t v54; // d4
-  struct UnityEngine_Rect_o cameraRect_5__4; // q0
-  bool result; // w0
+  int v37; // w12
+  int v38; // w13
+  int v39; // w12
+  int v40; // w12
   float size_5__3; // s0
   float ZoomInterval; // s1
   float ZoomMax; // s0
+  bool result; // w0
+  float offsetInterval; // s1
+  int v46; // w11
+  int v47; // w12
+  int v48; // w11
+  int v49; // w11
   int32_t x_5__11; // w10
+  float v51; // s1
+  float32x2_t v52; // d3
+  float v53; // s0
+  float32x2_t v54; // d1
 
-  if ( (byte_4E7693B & 1) == 0 )
+  if ( (byte_59378E6 & 1) == 0 )
   {
-    sub_1D0F0B4(&int___TypeInfo);
-    byte_4E7693B = 1;
+    sub_21FFC50(&int___TypeInfo);
+    byte_59378E6 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -1129,190 +1127,162 @@ bool MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__MoveNext(
     y_5__13 = this->fields._y_5__13;
     loopY_5__10 = this->fields._loopY_5__10;
     this->fields.__1__state = -1;
-    v8 = y_5__13 + 1;
-    goto LABEL_50;
+    v11 = y_5__13 + 1;
+    goto LABEL_38;
   }
-  if ( !_1__state )
+  if ( _1__state )
+    return 0;
+  this->fields.__1__state = -1;
+  Size = FSWindowUtil__GetSize(0);
+  ZoomMin = this->fields.ZoomMin;
+  this->fields._windowSize_5__2 = Size;
+LABEL_35:
+  ZoomMax = this->fields.ZoomMax;
+  this->fields._size_5__3 = ZoomMin;
+  if ( ZoomMin > ZoomMax )
+    return 0;
+  v12.n128_u32[0] = LODWORD(this->fields.brakeRect.fields.m_XMin);
+  m_Height = this->fields.brakeRect.fields.m_Height;
+  p_offsetInterval = &this->fields.offsetInterval;
+  v15 = int___TypeInfo;
+  v2.n128_u64[0] = vmul_n_f32((float32x2_t)this->fields._windowSize_5__2, ZoomMin).n64_u64[0];
+  v16.n64_u64[0] = *(unsigned __int64 *)&this->fields.center.fields.x;
+  *(_QWORD *)&this->fields._cameraRect_5__4.fields.m_Width = v2.n128_u64[0];
+  v3.n128_u64[0] = vadd_f32(v16, vmul_f32((float32x2_t)v2.n128_u64[0], (float32x2_t)0xBF000000BF000000LL)).n64_u64[0];
+  v16.n64_u32[0] = LODWORD(this->fields.brakeRect.fields.m_YMin);
+  v4.n128_f32[0] = v12.n128_f32[0] + this->fields.brakeRect.fields.m_Width;
+  *(_QWORD *)&this->fields._cameraRect_5__4.fields.m_XMin = v3.n128_u64[0];
+  v12.n128_u32[1] = v4.n128_u32[0];
+  v4.n128_u64[0] = vadd_f32((float32x2_t)v2.n128_u64[0], (float32x2_t)v3.n128_u64[0]).n64_u64[0];
+  v12.n128_u64[1] = __PAIR64__(v16.n64_f32[0] + m_Height, v16.n64_u32[0]);
+  v17 = vtrn1q_s32(vzip1q_s32(v3, v2), vzip1q_s32(v4, v2));
+  v18 = vld1q_dup_f32(p_offsetInterval);
+  v19 = vsubq_f32(v12, v17);
+  v12.n128_u64[0] = 0x8000000080000000LL;
+  v12.n128_u64[1] = 0x8000000080000000LL;
+  v20 = vdivq_f32(v19, v18);
+  *(int8x16_t *)&this->fields._offsetXMinIndex_5__5 = vbslq_s8(
+                                                        vceqq_f32(v20, vdupq_n_s32(0x7F800000u)),
+                                                        v12,
+                                                        vcvtq_s32_f32(v20));
+  v21 = sub_21FFD10(v15, 3);
+  if ( !v21 )
+    goto LABEL_25;
+  v23 = *(_QWORD *)(v21 + 24);
+  if ( (unsigned int)v23 <= 1 )
+    goto LABEL_24;
+  *(_DWORD *)(v21 + 36) = -this->fields._offsetXMinIndex_5__5;
+  if ( (_DWORD)v23 == 2 )
+    goto LABEL_24;
+  v24 = *(_DWORD *)(v21 + 32);
+  *(_DWORD *)(v21 + 40) = this->fields._offsetXMaxIndex_5__6;
+  if ( (int)v23 >= 2 )
   {
-    this->fields.__1__state = -1;
-    Size = FSWindowUtil__GetSize(0);
-    ZoomMin = this->fields.ZoomMin;
-    this->fields._windowSize_5__2 = Size;
-    while ( 1 )
+    v25 = (int *)(v21 + 36);
+    v26 = (unsigned int)v23 - 1LL;
+    do
     {
-      ZoomMax = this->fields.ZoomMax;
-      this->fields._size_5__3 = ZoomMin;
-      if ( ZoomMin > ZoomMax )
-        break;
-      m_XMin = this->fields.brakeRect.fields.m_XMin;
-      m_YMin = this->fields.brakeRect.fields.m_YMin;
-      v11.n64_u64[0] = vmul_n_f32((float32x2_t)this->fields._windowSize_5__2, ZoomMin).n64_u64[0];
-      offsetInterval = this->fields.offsetInterval;
-      v13.n64_u64[0] = vadd_f32(
-                         *(float32x2_t *)&this->fields.center.fields.x,
-                         vmul_f32(v11, (float32x2_t)0xBF000000BF000000LL)).n64_u64[0];
-      v14 = m_XMin + this->fields.brakeRect.fields.m_Width;
-      v15 = m_YMin + this->fields.brakeRect.fields.m_Height;
-      v16 = (float)(m_XMin - v13.n64_f32[0]) / offsetInterval;
-      v17 = (int)v16;
-      v18 = v16 == INFINITY;
-      v19 = vadd_f32(v11, v13).n64_u64[0];
-      v20 = (float)(v14 - *(float *)&v19) / offsetInterval;
-      if ( v18 )
-        v17 = 0x80000000;
-      v21 = (int)v20;
-      if ( v20 == INFINITY )
-        v21 = 0x80000000;
-      v22 = (float)(m_YMin - v13.n64_f32[1]) / offsetInterval;
-      this->fields._offsetXMinIndex_5__5 = v17;
-      this->fields._offsetXMaxIndex_5__6 = v21;
-      v23 = (float)(v15 - *((float *)&v19 + 1)) / offsetInterval;
-      v24 = (int)v23;
-      if ( v22 == INFINITY )
-        v25 = 0x80000000;
-      else
-        v25 = (int)v22;
-      if ( v23 == INFINITY )
-        v24 = 0x80000000;
-      *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_Width = v11;
-      *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_XMin = v13;
-      this->fields._offsetYMinIndex_5__7 = v25;
-      this->fields._offsetYMaxIndex_5__8 = v24;
-      v26 = sub_1D0F15C(int___TypeInfo, 3);
-      if ( !v26 )
-        goto LABEL_40;
-      v28 = *(_QWORD *)(v26 + 24);
-      if ( (unsigned int)v28 <= 1
-        || (v29 = -this->fields._offsetXMinIndex_5__5, *(_DWORD *)(v26 + 36) = v29, (_DWORD)v28 == 2) )
-      {
-LABEL_39:
-        sub_1D0F314(v26);
-      }
-      v30 = *(_DWORD *)(v26 + 32);
-      *(_DWORD *)(v26 + 40) = this->fields._offsetXMaxIndex_5__6;
-      if ( (int)v28 >= 2 )
-      {
-        if ( v30 < v29 )
-          v30 = v29;
-        v31 = (unsigned int)v28 - 2LL;
-        if ( v31 )
-        {
-          v32 = (int *)(v26 + 40);
-          do
-          {
-            v34 = *v32++;
-            v33 = v34;
-            if ( v34 > v30 )
-              v30 = v33;
-            --v31;
-          }
-          while ( v31 );
-        }
-      }
-      this->fields._loopX_5__9 = (2 * v30) | 1;
-      v26 = sub_1D0F15C(int___TypeInfo, 3);
-      if ( !v26 )
-LABEL_40:
-        sub_1D0F30C(v26, v27);
-      v35 = *(_QWORD *)(v26 + 24);
-      if ( (unsigned int)v35 <= 1 )
-        goto LABEL_39;
-      v36 = -this->fields._offsetYMinIndex_5__7;
-      *(_DWORD *)(v26 + 36) = v36;
-      if ( (_DWORD)v35 == 2 )
-        goto LABEL_39;
-      v37 = *(_DWORD *)(v26 + 32);
-      *(_DWORD *)(v26 + 40) = this->fields._offsetYMaxIndex_5__8;
-      if ( (int)v35 >= 2 )
-      {
-        if ( v37 < v36 )
-          v37 = v36;
-        v38 = (unsigned int)v35 - 2LL;
-        if ( v38 )
-        {
-          v39 = (int *)(v26 + 40);
-          do
-          {
-            v41 = *v39++;
-            v40 = v41;
-            if ( v41 > v37 )
-              v37 = v40;
-            --v38;
-          }
-          while ( v38 );
-        }
-      }
-      loopY_5__10 = (2 * v37) | 1;
-      v42 = 0;
-      this->fields._loopY_5__10 = loopY_5__10;
-      while ( 1 )
-      {
-        v43 = v42;
-        if ( v42 >= this->fields._loopX_5__9 )
-          break;
-        if ( v42 >= 0 )
-          v44 = v42;
-        else
-          v44 = v42 + 1;
-        ++v42;
-        v45 = v43 + 2;
-        v46 = v43 - (v44 & 0x7FFFFFFE);
-        if ( v43 + 1 >= 0 )
-          v45 = v43 + 1;
-        v47 = (2 * v46 - 1) * (v45 >> 1);
-        if ( v47 >= this->fields._offsetXMinIndex_5__5 && this->fields._offsetXMaxIndex_5__6 >= v47 )
-        {
-          v8 = 0;
-          v48 = this->fields.center.fields.x + (float)(this->fields.offsetInterval * (float)v47);
-          this->fields._x_5__11 = v43;
-          this->fields._offsetX_5__12 = v48;
-LABEL_50:
-          while ( 1 )
-          {
-            v49 = v8;
-            if ( v8 >= loopY_5__10 )
-              break;
-            if ( v8 >= 0 )
-              v50 = v8;
-            else
-              v50 = v8 + 1;
-            ++v8;
-            v51 = v49 + 2;
-            v52 = v49 - (v50 & 0x7FFFFFFE);
-            if ( v49 + 1 >= 0 )
-              v51 = v49 + 1;
-            v53 = (2 * v52 - 1) * (v51 >> 1);
-            if ( v53 >= this->fields._offsetYMinIndex_5__7 && this->fields._offsetYMaxIndex_5__8 >= v53 )
-            {
-              v54.n64_u32[0] = LODWORD(this->fields._offsetX_5__12);
-              v54.n64_f32[1] = this->fields.center.fields.y + (float)(this->fields.offsetInterval * (float)v53);
-              *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_XMin = vadd_f32(
-                                                                               v54,
-                                                                               vmul_f32(
-                                                                                 *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_Width,
-                                                                                 (float32x2_t)0xBF000000BF000000LL));
-              cameraRect_5__4 = this->fields._cameraRect_5__4;
-              result = 1;
-              this->fields._y_5__13 = v49;
-              this->fields.__1__state = 1;
-              this->fields.__2__current = cameraRect_5__4;
-              return result;
-            }
-          }
-          x_5__11 = this->fields._x_5__11;
-          this->fields._y_5__13 = v49;
-          v42 = x_5__11 + 1;
-        }
-      }
+      v28 = *v25++;
+      v27 = v28;
+      if ( v28 > v24 )
+        v24 = v27;
+      --v26;
+    }
+    while ( v26 );
+  }
+  v29 = int___TypeInfo;
+  this->fields._loopX_5__9 = (2 * v24) | 1;
+  v21 = sub_21FFD10(v29, 3);
+  if ( !v21 )
+LABEL_25:
+    sub_21FFECC(v21, v22);
+  v30 = *(_QWORD *)(v21 + 24);
+  if ( (unsigned int)v30 <= 1 || (*(_DWORD *)(v21 + 36) = -this->fields._offsetYMinIndex_5__7, (_DWORD)v30 == 2) )
+LABEL_24:
+    sub_21FFED4(v21);
+  v31 = *(_DWORD *)(v21 + 32);
+  *(_DWORD *)(v21 + 40) = this->fields._offsetYMaxIndex_5__8;
+  if ( (int)v30 >= 2 )
+  {
+    v32 = (int *)(v21 + 36);
+    v33 = (unsigned int)v30 - 1LL;
+    do
+    {
+      v35 = *v32++;
+      v34 = v35;
+      if ( v35 > v31 )
+        v31 = v34;
+      --v33;
+    }
+    while ( v33 );
+  }
+  v36 = 0;
+  loopY_5__10 = (2 * v31) | 1;
+  this->fields._loopY_5__10 = loopY_5__10;
+  while ( 1 )
+  {
+LABEL_26:
+    if ( v36 >= this->fields._loopX_5__9 )
+    {
       size_5__3 = this->fields._size_5__3;
       ZoomInterval = this->fields.ZoomInterval;
-      this->fields._x_5__11 = v42;
+      this->fields._x_5__11 = v36;
       *(_QWORD *)&this->fields._cameraRect_5__4.fields.m_Width = 0;
-      *(_QWORD *)&this->fields._cameraRect_5__4.fields.m_XMin = 0;
       ZoomMin = size_5__3 + ZoomInterval;
+      *(_QWORD *)&this->fields._cameraRect_5__4.fields.m_XMin = 0;
+      goto LABEL_35;
     }
+    v37 = v36 & 1;
+    if ( v36 < 0 )
+      v37 = -v37;
+    v38 = v36 + 2;
+    v39 = 2 * v37;
+    if ( v36 + 1 >= 0 )
+      v38 = v36 + 1;
+    v40 = (v39 - 1) * (v38 >> 1);
+    if ( v40 >= this->fields._offsetXMinIndex_5__5 && this->fields._offsetXMaxIndex_5__6 >= v40 )
+      break;
+    ++v36;
   }
-  return 0;
+  offsetInterval = this->fields.offsetInterval;
+  v11 = 0;
+  this->fields._x_5__11 = v36;
+  this->fields._offsetX_5__12 = this->fields.center.fields.x + (float)(offsetInterval * (float)v40);
+  while ( 1 )
+  {
+LABEL_38:
+    if ( v11 >= loopY_5__10 )
+    {
+      x_5__11 = this->fields._x_5__11;
+      this->fields._y_5__13 = v11;
+      v36 = x_5__11 + 1;
+      goto LABEL_26;
+    }
+    v46 = v11 & 1;
+    if ( v11 < 0 )
+      v46 = -v46;
+    v47 = v11 + 2;
+    v48 = 2 * v46;
+    if ( v11 + 1 >= 0 )
+      v47 = v11 + 1;
+    v49 = (v48 - 1) * (v47 >> 1);
+    if ( v49 >= this->fields._offsetYMinIndex_5__7 && this->fields._offsetYMaxIndex_5__8 >= v49 )
+      break;
+    ++v11;
+  }
+  v51 = this->fields.offsetInterval;
+  v52.n64_u64[0] = *(unsigned __int64 *)&this->fields._cameraRect_5__4.fields.m_Width;
+  result = 1;
+  this->fields._y_5__13 = v11;
+  this->fields.__1__state = 1;
+  v53 = this->fields.center.fields.y + (float)(v51 * (float)v49);
+  v54.n64_u32[0] = LODWORD(this->fields._offsetX_5__12);
+  v54.n64_f32[1] = v53;
+  *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_XMin = vadd_f32(
+                                                                   v54,
+                                                                   vmul_f32(v52, (float32x2_t)0xBF000000BF000000LL));
+  this->fields.__2__current = this->fields._cameraRect_5__4;
+  return result;
 }
 
 
@@ -1322,13 +1292,16 @@ System_Collections_Generic_IEnumerator_Rect__o *MapCameraViewAdjusterUtil__Gener
 {
   int32_t l__initialThreadId; // w20
   MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *v4; // x20
+  float _3__ZoomMax; // s1
   System_Collections_Generic_IEnumerator_Rect__o *result; // x0
-  __int64 v6; // x9
+  float _3__ZoomInterval; // s2
+  float _3__offsetInterval; // s0
+  __int64 v9; // x9
 
-  if ( (byte_4E7693D & 1) == 0 )
+  if ( (byte_59378E8 & 1) == 0 )
   {
-    sub_1D0F0B4(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
-    byte_4E7693D = 1;
+    sub_21FFC50(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    byte_59378E8 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -1339,20 +1312,23 @@ System_Collections_Generic_IEnumerator_Rect__o *MapCameraViewAdjusterUtil__Gener
   }
   else
   {
-    v4 = (MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *)sub_1D0F300(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    v4 = (MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *)sub_21FFEBC(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
+  _3__ZoomMax = this->fields.__3__ZoomMax;
   result = (System_Collections_Generic_IEnumerator_Rect__o *)v4;
+  _3__ZoomInterval = this->fields.__3__ZoomInterval;
   v4->fields.ZoomMin = this->fields.__3__ZoomMin;
-  v4->fields.ZoomMax = this->fields.__3__ZoomMax;
-  v4->fields.ZoomInterval = this->fields.__3__ZoomInterval;
-  v4->fields.offsetInterval = this->fields.__3__offsetInterval;
+  _3__offsetInterval = this->fields.__3__offsetInterval;
+  v4->fields.ZoomMax = _3__ZoomMax;
+  v4->fields.ZoomInterval = _3__ZoomInterval;
+  v4->fields.offsetInterval = _3__offsetInterval;
   v4->fields.brakeRect = this->fields.__3__brakeRect;
-  v6 = *(_QWORD *)&this->fields.__3__center.fields.x;
+  v9 = *(_QWORD *)&this->fields.__3__center.fields.x;
   v4->fields.center.fields.z = this->fields.__3__center.fields.z;
-  *(_QWORD *)&v4->fields.center.fields.x = v6;
+  *(_QWORD *)&v4->fields.center.fields.x = v9;
   return result;
 }
 
@@ -1387,11 +1363,11 @@ void __noreturn MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 
@@ -1401,10 +1377,10 @@ Il2CppObject *MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__System_Collec
 {
   struct UnityEngine_Rect_o _2__current; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4E7693C & 1) == 0 )
+  if ( (byte_59378E7 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Rect_TypeInfo);
-    byte_4E7693C = 1;
+    sub_21FFC50(&UnityEngine_Rect_TypeInfo);
+    byte_59378E7 = 1;
   }
   _2__current = this->fields.__2__current;
   return (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Rect_TypeInfo, &_2__current);

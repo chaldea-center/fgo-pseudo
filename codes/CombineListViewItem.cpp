@@ -4,20 +4,20 @@ void CombineListViewItem___ctor(
         CombineListItemInfo_o *info,
         const MethodInfo *method)
 {
-  CombineListViewItem_o *v6; // x21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  MissionNaviTransitionBoardItem_o *v6; // x21
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
 
-  v6 = this;
+  v6 = (MissionNaviTransitionBoardItem_o *)this;
   ListViewItem___ctor((ListViewItem_o *)this, 0);
-  v6->fields.info = info;
-  v6 = (CombineListViewItem_o *)((char *)v6 + 120);
-  v6[-1].fields.loopIndex = index;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
+  v6->fields._IconName_k__BackingField = (struct System_String_o *)info;
+  v6 = (MissionNaviTransitionBoardItem_o *)((char *)v6 + 120);
+  HIDWORD(v6[-1].fields.sortValue1B) = index;
+  sub_21FFBF4(v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -33,7 +33,7 @@ System_String_o *CombineListViewItem__get_EventData(CombineListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields.eventData;
 }
 
@@ -44,6 +44,6 @@ System_String_o *CombineListViewItem__get_SpriteName(CombineListViewItem_o *this
 
   info = this->fields.info;
   if ( !info )
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   return info->fields.spriteName;
 }

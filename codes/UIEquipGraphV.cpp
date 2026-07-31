@@ -1,13 +1,16 @@
 void UIEquipGraphV___ctor(UIEquipGraphV_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E78EF6 & 1) == 0 )
+  UIEquipGraphViewerRender_c *v3; // x0
+
+  if ( (byte_5939F46 & 1) == 0 )
   {
-    sub_1D0F0B4(&UIEquipGraphViewerRender_TypeInfo);
-    byte_4E78EF6 = 1;
+    sub_21FFC50(&UIEquipGraphViewerRender_TypeInfo);
+    byte_5939F46 = 1;
   }
+  v3 = UIEquipGraphViewerRender_TypeInfo;
   this->fields.rarity = 1;
-  if ( !UIEquipGraphViewerRender_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UIEquipGraphViewerRender_TypeInfo);
+  if ( !*(&v3->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v3, method);
   UIEquipGraphViewerRender___ctor((UIEquipGraphViewerRender_o *)this, method);
 }
 
@@ -28,58 +31,59 @@ void UIEquipGraphV__Destroy(UIEquipGraphV_o *this, const MethodInfo *method)
 void UIEquipGraphV__EndLoadAsset(UIEquipGraphV_o *this, const MethodInfo *method)
 {
   System_String_array *loadNameList; // x20
-  AssetData_array *AssetStorage_41902368; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  AssetData_array *AssetStorage_47473732; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   int max_length; // w8
   struct AssetData_array *v12; // x20
-  __int64 v13; // x9
+  AssetData_o **m_Items; // x9
   AssetData_array *assetDataList; // x21
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   const MethodInfo *v21; // x1
   const MethodInfo *v22; // x1
   const MethodInfo *v23; // x1
-  int32_t v24; // w2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  int32_t v27; // w5
-  int64_t v28; // x6
-  System_String_o *v29; // x7
+  __int64 v24; // x1
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4E78EE7 & 1) == 0 )
+  if ( (byte_5939F37 & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    byte_4E78EE7 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    byte_5939F37 = 1;
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
   {
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage_41902368 = AssetManager__getAssetStorage_41902368(loadNameList, 0);
-    if ( AssetStorage_41902368 )
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
+    AssetStorage_47473732 = AssetManager__getAssetStorage_47473732(loadNameList, 0);
+    if ( AssetStorage_47473732 )
     {
-      max_length = AssetStorage_41902368->max_length;
-      v12 = AssetStorage_41902368;
+      max_length = AssetStorage_47473732->max_length;
+      v12 = AssetStorage_47473732;
       if ( max_length < 1 )
       {
-LABEL_12:
+LABEL_11:
         assetDataList = this->fields.assetDataList;
         this->fields.loadNameList = 0;
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.loadNameList, 0, v5, v6, v7, v8, v9, v10);
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList, 0, v5, v6, v7, v8, v9, v10);
         this->fields.assetDataList = v12;
-        sub_1D0F058(
-          (GrandQuestFolderBoardItem_o *)&this->fields.assetDataList,
+        sub_21FFBF4(
+          (MissionNaviTransitionBoardItem_o *)&this->fields.assetDataList,
           (int32_t)v12,
           v15,
           v16,
@@ -92,15 +96,15 @@ LABEL_12:
         UIEquipGraphV__SetButton(this, v23);
         if ( assetDataList )
         {
-          if ( !AssetManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_41894364(assetDataList, 0);
+          if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v24);
+          AssetManager__releaseAsset_47465764(assetDataList, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         if ( callbackFunc )
         {
           this->fields.callbackFunc = 0;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v24, v25, v26, v27, v28, v29);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v25, v26, v27, v28, v29, v30);
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
             callbackFunc->fields.method);
@@ -108,15 +112,13 @@ LABEL_12:
       }
       else
       {
-        v13 = 0;
-        while ( 1 )
+        m_Items = AssetStorage_47473732->m_Items;
+        while ( *m_Items )
         {
-          if ( (unsigned int)v13 >= max_length )
-            sub_1D0F314(AssetStorage_41902368);
-          if ( !AssetStorage_41902368->m_Items[v13] )
-            break;
-          if ( (int)++v13 >= max_length )
-            goto LABEL_12;
+          --max_length;
+          ++m_Items;
+          if ( !max_length )
+            goto LABEL_11;
         }
       }
     }
@@ -126,46 +128,47 @@ LABEL_12:
 
 void UIEquipGraphV__ReleaseCharacter(UIEquipGraphV_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   AssetData_array *assetDataList; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
   System_String_array *loadNameList; // x20
-  GrandQuestFolderBoardItem_o *p_loadNameList; // x19
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  MissionNaviTransitionBoardItem_o *p_loadNameList; // x19
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
 
-  if ( (byte_4E78EE5 & 1) == 0 )
+  if ( (byte_5939F35 & 1) == 0 )
   {
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    byte_4E78EE5 = 1;
+    sub_21FFC50(&AssetManager_TypeInfo);
+    byte_5939F35 = 1;
   }
   UIEquipGraphViewerRender__ReleaseCharacter((UIEquipGraphViewerRender_o *)this, method);
   assetDataList = this->fields.assetDataList;
   if ( assetDataList )
   {
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_41894364(assetDataList, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
+    AssetManager__releaseAsset_47465764(assetDataList, 0);
     this->fields.assetDataList = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.assetDataList, 0, v4, v5, v6, v7, v8, v9);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetDataList, 0, v5, v6, v7, v8, v9, v10);
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
   {
-    p_loadNameList = (GrandQuestFolderBoardItem_o *)&this->fields.loadNameList;
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_41903356(loadNameList, 0);
+    p_loadNameList = (MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList;
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
+    AssetManager__releaseAssetStorage_47474708(loadNameList, 0);
     p_loadNameList->klass = 0;
-    sub_1D0F058(p_loadNameList, 0, v12, v13, v14, v15, v16, v17);
+    sub_21FFBF4(p_loadNameList, 0, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -177,26 +180,26 @@ void UIEquipGraphV__SetAllButton(UIEquipGraphV_o *this, int32_t isForce, const M
   UnityEngine_Behaviour_o *frameTopSprite; // x0
   const MethodInfo *v7; // x2
   struct EquipGraphViewModeState_o *v8; // x8
+  char v9; // w9
   UnityEngine_Object_o *state; // x20
-  UnityEngine_Object_o *v10; // x20
   UnityEngine_Object_o *v11; // x20
-  struct EquipGraphViewModeState_o *v12; // x8
+  UnityEngine_Object_o *v12; // x20
   const MethodInfo *v13; // x2
   const MethodInfo *v14; // x2
   const MethodInfo *v15; // x2
   const MethodInfo *v16; // x2
   const MethodInfo *v17; // x2
 
-  if ( (byte_4E78EF4 & 1) == 0 )
+  if ( (byte_5939F44 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF4 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F44 = 1;
   }
   if ( isForce == 2 )
   {
     state = (UnityEngine_Object_o *)this->fields.state;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&isForce);
     frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
     if ( ((unsigned __int8)frameTopSprite & 1) != 0 )
       goto LABEL_32;
@@ -204,8 +207,8 @@ void UIEquipGraphV__SetAllButton(UIEquipGraphV_o *this, int32_t isForce, const M
   else if ( isForce == 1 )
   {
     v5 = (UnityEngine_Object_o *)this->fields.state;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&isForce);
     frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(v5, 0, 0);
     if ( ((unsigned __int8)frameTopSprite & 1) != 0 )
     {
@@ -213,13 +216,14 @@ LABEL_8:
       v8 = this->fields.state;
       if ( v8 )
       {
-        v8->fields._topbtn_k__BackingField = 0;
-        v8->fields._btmbtn_k__BackingField = 0;
-        v8->fields._rarebtn_k__BackingField = 0;
-        v8->fields._namebtn_k__BackingField = 0;
-        v8->fields._atkbtn_k__BackingField = 0;
-        v8->fields._hpbtn_k__BackingField = 0;
+        v9 = 0;
 LABEL_34:
+        v8->fields._topbtn_k__BackingField = v9;
+        v8->fields._btmbtn_k__BackingField = v9;
+        v8->fields._rarebtn_k__BackingField = v9;
+        v8->fields._namebtn_k__BackingField = v9;
+        v8->fields._atkbtn_k__BackingField = v9;
+        v8->fields._hpbtn_k__BackingField = v9;
         UIEquipGraphV__SetTopButton(this, 1, v7);
         UIEquipGraphV__SetBottomButton(this, 1, v13);
         UIEquipGraphV__SetRarityButton(this, 1, v14);
@@ -262,36 +266,32 @@ LABEL_34:
   if ( !UnityEngine_Behaviour__get_enabled(frameTopSprite, 0) )
   {
 LABEL_29:
-    v11 = (UnityEngine_Object_o *)this->fields.state;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(v11, 0, 0);
+    v12 = (UnityEngine_Object_o *)this->fields.state;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&isForce);
+    frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(v12, 0, 0);
     if ( ((unsigned __int8)frameTopSprite & 1) == 0 )
       return;
 LABEL_32:
-    v12 = this->fields.state;
-    if ( v12 )
+    v8 = this->fields.state;
+    if ( v8 )
     {
-      v12->fields._topbtn_k__BackingField = 1;
-      v12->fields._btmbtn_k__BackingField = 1;
-      v12->fields._rarebtn_k__BackingField = 1;
-      v12->fields._namebtn_k__BackingField = 1;
-      v12->fields._atkbtn_k__BackingField = 1;
-      v12->fields._hpbtn_k__BackingField = 1;
+      v9 = 1;
       goto LABEL_34;
     }
 LABEL_36:
-    sub_1D0F30C(frameTopSprite, *(_QWORD *)&isForce);
+    sub_21FFECC(frameTopSprite, *(_QWORD *)&isForce);
   }
-  v10 = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(v10, 0, 0);
+  v11 = (UnityEngine_Object_o *)this->fields.state;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&isForce);
+  frameTopSprite = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(v11, 0, 0);
   if ( ((unsigned __int8)frameTopSprite & 1) != 0 )
     goto LABEL_8;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetAtkButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -299,14 +299,14 @@ void UIEquipGraphV__SetAtkButton(UIEquipGraphV_o *this, bool isSetting, const Me
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EED & 1) == 0 )
+  if ( (byte_5939F3D & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EED = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F3D = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   equipAtkSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)equipAtkSprite & 1) != 0 )
   {
@@ -315,7 +315,7 @@ void UIEquipGraphV__SetAtkButton(UIEquipGraphV_o *this, bool isSetting, const Me
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(equipAtkSprite, v7);
+        sub_21FFECC(equipAtkSprite, v7);
     }
     else
     {
@@ -339,15 +339,15 @@ void UIEquipGraphV__SetAtkLabel(UIEquipGraphV_o *this, const MethodInfo *method)
   struct EquipGraphViewModeState_o *v6; // x8
   UILabel_o *atkLabel; // x19
 
-  if ( (byte_4E78EEF & 1) == 0 )
+  if ( (byte_5939F3F & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EEF = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F3F = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   atkInput = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)atkInput & 1) != 0 )
   {
@@ -358,10 +358,10 @@ void UIEquipGraphV__SetAtkLabel(UIEquipGraphV_o *this, const MethodInfo *method)
           (atkInput = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(atkInput, 0)) == 0)
       || (atkInput = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                   (UnityEngine_GameObject_o *)atkInput,
-                                                  (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___)) == 0
+                                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___)) == 0
       || (atkInput = (UnityEngine_Component_o *)UILineInput__GetText((UILineInput_o *)atkInput, v5), !atkLabel) )
     {
-      sub_1D0F30C(atkInput, v5);
+      sub_21FFECC(atkInput, v5);
     }
     UILabel__set_text(atkLabel, (System_String_o *)atkInput, 0);
   }
@@ -379,16 +379,16 @@ void UIEquipGraphV__SetAutoLabel(UIEquipGraphV_o *this, const MethodInfo *method
   float v9; // s0
   float result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4E78EF1 & 1) == 0 )
+  if ( (byte_5939F41 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF1 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F41 = 1;
   }
-  result = 0.0;
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  result = 0.0;
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   autoInput = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)autoInput & 1) == 0 )
     goto LABEL_13;
@@ -403,7 +403,7 @@ void UIEquipGraphV__SetAutoLabel(UIEquipGraphV_o *this, const MethodInfo *method
     goto LABEL_16;
   autoInput = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                            (UnityEngine_GameObject_o *)autoInput,
-                                           (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___);
+                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___);
   if ( !autoInput )
     goto LABEL_16;
   Text = UILineInput__GetText((UILineInput_o *)autoInput, v5);
@@ -418,7 +418,7 @@ LABEL_13:
       goto LABEL_15;
     }
 LABEL_16:
-    sub_1D0F30C(autoInput, v5);
+    sub_21FFECC(autoInput, v5);
   }
   v8 = this->fields.state;
   if ( !v8 )
@@ -429,6 +429,7 @@ LABEL_15:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetBottomButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -436,14 +437,14 @@ void UIEquipGraphV__SetBottomButton(UIEquipGraphV_o *this, bool isSetting, const
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EEC & 1) == 0 )
+  if ( (byte_5939F3C & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EEC = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F3C = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   frameBottomSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)frameBottomSprite & 1) != 0 )
   {
@@ -452,7 +453,7 @@ void UIEquipGraphV__SetBottomButton(UIEquipGraphV_o *this, bool isSetting, const
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(frameBottomSprite, v7);
+        sub_21FFECC(frameBottomSprite, v7);
     }
     else
     {
@@ -477,17 +478,17 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   __int64 v4; // x1
   Il2CppObject *Component_object; // x0
   struct EquipGraphViewModeState_o **p_state; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v11; // w6
+  bool v12; // w7
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
   __int64 v18; // x8
   __int64 v19; // x8
   int32_t v20; // w2
@@ -530,18 +531,18 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   int v57; // w9
   __int64 v58; // x8
   __int64 v59; // x8
-  int32_t v60; // w2
+  System_String_o *v60; // x2
   int v61; // w9
   struct EquipGraphViewModeState_o *v62; // x8
   struct UICommonButton_o *topButton; // x8
   System_Collections_Generic_List_object__o *onClick; // x21
   EventDelegate_o *v65; // x22
-  int32_t v66; // w2
-  int32_t v67; // w3
-  System_String_o *v68; // x4
+  System_String_o *v66; // x2
+  System_String_o *v67; // x3
+  int32_t v68; // w4
   int32_t v69; // w5
-  int64_t v70; // x6
-  System_String_o *v71; // x7
+  bool v70; // w6
+  bool v71; // w7
   struct System_Object_array *items; // x8
   _QWORD *v73; // x9
   __int64 size; // x10
@@ -549,12 +550,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *bottomButton; // x8
   System_Collections_Generic_List_object__o *v77; // x21
   EventDelegate_o *v78; // x22
-  int32_t v79; // w2
-  int32_t v80; // w3
-  System_String_o *v81; // x4
+  System_String_o *v79; // x2
+  System_String_o *v80; // x3
+  int32_t v81; // w4
   int32_t v82; // w5
-  int64_t v83; // x6
-  System_String_o *v84; // x7
+  bool v83; // w6
+  bool v84; // w7
   struct System_Object_array *v85; // x8
   _QWORD *v86; // x9
   __int64 v87; // x10
@@ -562,12 +563,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *rareButton; // x8
   System_Collections_Generic_List_object__o *v90; // x21
   EventDelegate_o *v91; // x22
-  int32_t v92; // w2
-  int32_t v93; // w3
-  System_String_o *v94; // x4
+  System_String_o *v92; // x2
+  System_String_o *v93; // x3
+  int32_t v94; // w4
   int32_t v95; // w5
-  int64_t v96; // x6
-  System_String_o *v97; // x7
+  bool v96; // w6
+  bool v97; // w7
   struct System_Object_array *v98; // x8
   _QWORD *v99; // x9
   __int64 v100; // x10
@@ -575,12 +576,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *atkButton; // x8
   System_Collections_Generic_List_object__o *v103; // x21
   EventDelegate_o *v104; // x22
-  int32_t v105; // w2
-  int32_t v106; // w3
-  System_String_o *v107; // x4
+  System_String_o *v105; // x2
+  System_String_o *v106; // x3
+  int32_t v107; // w4
   int32_t v108; // w5
-  int64_t v109; // x6
-  System_String_o *v110; // x7
+  bool v109; // w6
+  bool v110; // w7
   struct System_Object_array *v111; // x8
   _QWORD *v112; // x9
   __int64 v113; // x10
@@ -588,12 +589,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *hpButton; // x8
   System_Collections_Generic_List_object__o *v116; // x21
   EventDelegate_o *v117; // x22
-  int32_t v118; // w2
-  int32_t v119; // w3
-  System_String_o *v120; // x4
+  System_String_o *v118; // x2
+  System_String_o *v119; // x3
+  int32_t v120; // w4
   int32_t v121; // w5
-  int64_t v122; // x6
-  System_String_o *v123; // x7
+  bool v122; // w6
+  bool v123; // w7
   struct System_Object_array *v124; // x8
   _QWORD *v125; // x9
   __int64 v126; // x10
@@ -601,12 +602,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *nameButton; // x8
   System_Collections_Generic_List_object__o *v129; // x21
   EventDelegate_o *v130; // x22
-  int32_t v131; // w2
-  int32_t v132; // w3
-  System_String_o *v133; // x4
+  System_String_o *v131; // x2
+  System_String_o *v132; // x3
+  int32_t v133; // w4
   int32_t v134; // w5
-  int64_t v135; // x6
-  System_String_o *v136; // x7
+  bool v135; // w6
+  bool v136; // w7
   struct System_Object_array *v137; // x8
   _QWORD *v138; // x9
   __int64 v139; // x10
@@ -614,12 +615,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *allButton; // x8
   System_Collections_Generic_List_object__o *v142; // x21
   EventDelegate_o *v143; // x22
-  int32_t v144; // w2
-  int32_t v145; // w3
-  System_String_o *v146; // x4
+  System_String_o *v144; // x2
+  System_String_o *v145; // x3
+  int32_t v146; // w4
   int32_t v147; // w5
-  int64_t v148; // x6
-  System_String_o *v149; // x7
+  bool v148; // w6
+  bool v149; // w7
   struct System_Object_array *v150; // x8
   _QWORD *v151; // x9
   __int64 v152; // x10
@@ -627,12 +628,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UICommonButton_o *rotButton; // x8
   System_Collections_Generic_List_object__o *v155; // x21
   EventDelegate_o *v156; // x22
-  int32_t v157; // w2
-  int32_t v158; // w3
-  System_String_o *v159; // x4
+  System_String_o *v157; // x2
+  System_String_o *v158; // x3
+  int32_t v159; // w4
   int32_t v160; // w5
-  int64_t v161; // x6
-  System_String_o *v162; // x7
+  bool v161; // w6
+  bool v162; // w7
   struct System_Object_array *v163; // x8
   _QWORD *v164; // x9
   __int64 v165; // x10
@@ -640,12 +641,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UIInput_o *atkInput; // x8
   System_Collections_Generic_List_object__o *onChange; // x21
   EventDelegate_o *v169; // x22
-  int32_t v170; // w2
-  int32_t v171; // w3
-  System_String_o *v172; // x4
+  System_String_o *v170; // x2
+  System_String_o *v171; // x3
+  int32_t v172; // w4
   int32_t v173; // w5
-  int64_t v174; // x6
-  System_String_o *v175; // x7
+  bool v174; // w6
+  bool v175; // w7
   struct System_Object_array *v176; // x8
   _QWORD *v177; // x9
   __int64 v178; // x10
@@ -653,12 +654,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UIInput_o *hpInput; // x8
   System_Collections_Generic_List_object__o *v181; // x21
   EventDelegate_o *v182; // x22
-  int32_t v183; // w2
-  int32_t v184; // w3
-  System_String_o *v185; // x4
+  System_String_o *v183; // x2
+  System_String_o *v184; // x3
+  int32_t v185; // w4
   int32_t v186; // w5
-  int64_t v187; // x6
-  System_String_o *v188; // x7
+  bool v187; // w6
+  bool v188; // w7
   struct System_Object_array *v189; // x8
   _QWORD *v190; // x9
   __int64 v191; // x10
@@ -666,12 +667,12 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   struct UIInput_o *autoInput; // x8
   System_Collections_Generic_List_object__o *v194; // x21
   EventDelegate_o *v195; // x22
-  int32_t v196; // w2
-  int32_t v197; // w3
-  System_String_o *v198; // x4
+  System_String_o *v196; // x2
+  System_String_o *v197; // x3
+  int32_t v198; // w4
   int32_t v199; // w5
-  int64_t v200; // x6
-  System_String_o *v201; // x7
+  bool v200; // w6
+  bool v201; // w7
   struct System_Object_array *v202; // x8
   _QWORD *v203; // x9
   __int64 v204; // x10
@@ -687,35 +688,43 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   const MethodInfo *v214; // x1
   const MethodInfo *v215; // x1
 
-  if ( (byte_4E78EEA & 1) == 0 )
+  if ( (byte_5939F3A & 1) == 0 )
   {
-    sub_1D0F0B4(&EventDelegate_TypeInfo);
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_EquipGraphViewModeState___);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1D0F0B4(&StringLiteral_13007/*"SetTopButton"*/);
-    sub_1D0F0B4(&StringLiteral_12996/*"SetNameButton"*/);
-    sub_1D0F0B4(&StringLiteral_12970/*"SetAutoLabel"*/);
-    sub_1D0F0B4(&StringLiteral_13000/*"SetRarityButton"*/);
-    sub_1D0F0B4(&StringLiteral_12968/*"SetAtkButton"*/);
-    sub_1D0F0B4(&StringLiteral_12964/*"SetAllButton"*/);
-    sub_1D0F0B4(&StringLiteral_12985/*"SetHpButton"*/);
-    sub_1D0F0B4(&StringLiteral_6177/*"EquipGraphViewMode"*/);
-    sub_1D0F0B4(&StringLiteral_12969/*"SetAtkLabel"*/);
-    sub_1D0F0B4(&StringLiteral_12974/*"SetBottomButton"*/);
-    sub_1D0F0B4(&StringLiteral_13002/*"SetRotateButton"*/);
-    sub_1D0F0B4(&StringLiteral_12986/*"SetHpLabel"*/);
-    byte_4E78EEA = 1;
+    sub_21FFC50(&EventDelegate_TypeInfo);
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EquipGraphViewModeState___);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_21FFC50(&StringLiteral_13333/*"SetTopButton"*/);
+    sub_21FFC50(&StringLiteral_13322/*"SetNameButton"*/);
+    sub_21FFC50(&StringLiteral_13295/*"SetAutoLabel"*/);
+    sub_21FFC50(&StringLiteral_13326/*"SetRarityButton"*/);
+    sub_21FFC50(&StringLiteral_13293/*"SetAtkButton"*/);
+    sub_21FFC50(&StringLiteral_13291/*"SetAllButton"*/);
+    sub_21FFC50(&StringLiteral_13311/*"SetHpButton"*/);
+    sub_21FFC50(&StringLiteral_6359/*"EquipGraphViewMode"*/);
+    sub_21FFC50(&StringLiteral_13294/*"SetAtkLabel"*/);
+    sub_21FFC50(&StringLiteral_13299/*"SetBottomButton"*/);
+    sub_21FFC50(&StringLiteral_13328/*"SetRotateButton"*/);
+    sub_21FFC50(&StringLiteral_13312/*"SetHpLabel"*/);
+    byte_5939F3A = 1;
   }
-  state = (char *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6177/*"EquipGraphViewMode"*/, 0);
+  state = (char *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6359/*"EquipGraphViewMode"*/, 0);
   if ( !state )
     goto LABEL_129;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)state,
-                       (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphViewModeState___);
+                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphViewModeState___);
   p_state = &this->fields.state;
   this->fields.state = (struct EquipGraphViewModeState_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.state, (int32_t)Component_object, v7, v8, v9, v10, v11, v12);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.state,
+    (int32_t)Component_object,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   state = (char *)this->fields.state;
   if ( !state )
     goto LABEL_129;
@@ -895,19 +904,19 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   v59 = *(_QWORD *)(v58 + 136);
   if ( !v59 )
     goto LABEL_129;
-  v60 = *(_DWORD *)(v59 + 24);
+  v60 = (System_String_o *)*(unsigned int *)(v59 + 24);
   v61 = *(_DWORD *)(v59 + 28) + 1;
   *(_DWORD *)(v59 + 24) = 0;
   *(_DWORD *)(v59 + 28) = v61;
-  if ( v60 >= 1 )
+  if ( (int)v60 >= 1 )
   {
-    System_Array__Clear(*(System_Array_o **)(v59 + 16), 0, v60, 0);
+    System_Array__Clear(*(System_Array_o **)(v59 + 16), 0, (int32_t)v60, 0);
     state = (char *)*p_state;
     if ( !*p_state )
       goto LABEL_129;
   }
   *((_QWORD *)state + 31) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(state + 248), (int32_t)this, v60, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(state + 248), (int32_t)this, v60, v13, v14, v15, v16, v17);
   v62 = this->fields.state;
   if ( !v62 )
     goto LABEL_129;
@@ -915,8 +924,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !topButton )
     goto LABEL_129;
   onClick = (System_Collections_Generic_List_object__o *)topButton->fields.onClick;
-  v65 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v65, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13007/*"SetTopButton"*/, 0);
+  v65 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v65, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13333/*"SetTopButton"*/, 0);
   if ( !onClick )
     goto LABEL_129;
   items = onClick->fields._items;
@@ -930,14 +939,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       onClick,
       (Il2CppObject *)v65,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
   }
   else
   {
     v75 = &items->obj.klass + size;
     onClick->fields._size = size + 1;
     v75[4] = (Il2CppClass *)v65;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v75 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v75 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -945,8 +954,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !bottomButton )
     goto LABEL_129;
   v77 = (System_Collections_Generic_List_object__o *)bottomButton->fields.onClick;
-  v78 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v78, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12974/*"SetBottomButton"*/, 0);
+  v78 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v78, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13299/*"SetBottomButton"*/, 0);
   if ( !v77 )
     goto LABEL_129;
   v85 = v77->fields._items;
@@ -960,14 +969,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v77,
       (Il2CppObject *)v78,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
   }
   else
   {
     v88 = &v85->obj.klass + v87;
     v77->fields._size = v87 + 1;
     v88[4] = (Il2CppClass *)v78;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v88 + 4), (int32_t)v78, v79, v80, v81, v82, v83, v84);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v88 + 4), (int32_t)v78, v79, v80, v81, v82, v83, v84);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -975,8 +984,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !rareButton )
     goto LABEL_129;
   v90 = (System_Collections_Generic_List_object__o *)rareButton->fields.onClick;
-  v91 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v91, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13000/*"SetRarityButton"*/, 0);
+  v91 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v91, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13326/*"SetRarityButton"*/, 0);
   if ( !v90 )
     goto LABEL_129;
   v98 = v90->fields._items;
@@ -990,14 +999,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v90,
       (Il2CppObject *)v91,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
   }
   else
   {
     v101 = &v98->obj.klass + v100;
     v90->fields._size = v100 + 1;
     v101[4] = (Il2CppClass *)v91;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v101 + 4), (int32_t)v91, v92, v93, v94, v95, v96, v97);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v101 + 4), (int32_t)v91, v92, v93, v94, v95, v96, v97);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1005,8 +1014,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !atkButton )
     goto LABEL_129;
   v103 = (System_Collections_Generic_List_object__o *)atkButton->fields.onClick;
-  v104 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v104, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12968/*"SetAtkButton"*/, 0);
+  v104 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v104, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13293/*"SetAtkButton"*/, 0);
   if ( !v103 )
     goto LABEL_129;
   v111 = v103->fields._items;
@@ -1020,14 +1029,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v103,
       (Il2CppObject *)v104,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
   }
   else
   {
     v114 = &v111->obj.klass + v113;
     v103->fields._size = v113 + 1;
     v114[4] = (Il2CppClass *)v104;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v114 + 4), (int32_t)v104, v105, v106, v107, v108, v109, v110);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v114 + 4), (int32_t)v104, v105, v106, v107, v108, v109, v110);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1035,8 +1044,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !hpButton )
     goto LABEL_129;
   v116 = (System_Collections_Generic_List_object__o *)hpButton->fields.onClick;
-  v117 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v117, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12985/*"SetHpButton"*/, 0);
+  v117 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v117, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13311/*"SetHpButton"*/, 0);
   if ( !v116 )
     goto LABEL_129;
   v124 = v116->fields._items;
@@ -1050,14 +1059,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v116,
       (Il2CppObject *)v117,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
   }
   else
   {
     v127 = &v124->obj.klass + v126;
     v116->fields._size = v126 + 1;
     v127[4] = (Il2CppClass *)v117;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v127 + 4), (int32_t)v117, v118, v119, v120, v121, v122, v123);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v127 + 4), (int32_t)v117, v118, v119, v120, v121, v122, v123);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1065,8 +1074,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !nameButton )
     goto LABEL_129;
   v129 = (System_Collections_Generic_List_object__o *)nameButton->fields.onClick;
-  v130 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v130, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12996/*"SetNameButton"*/, 0);
+  v130 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v130, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13322/*"SetNameButton"*/, 0);
   if ( !v129 )
     goto LABEL_129;
   v137 = v129->fields._items;
@@ -1080,14 +1089,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v129,
       (Il2CppObject *)v130,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
   }
   else
   {
     v140 = &v137->obj.klass + v139;
     v129->fields._size = v139 + 1;
     v140[4] = (Il2CppClass *)v130;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v140 + 4), (int32_t)v130, v131, v132, v133, v134, v135, v136);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v140 + 4), (int32_t)v130, v131, v132, v133, v134, v135, v136);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1095,8 +1104,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !allButton )
     goto LABEL_129;
   v142 = (System_Collections_Generic_List_object__o *)allButton->fields.onClick;
-  v143 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v143, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12964/*"SetAllButton"*/, 0);
+  v143 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v143, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13291/*"SetAllButton"*/, 0);
   if ( !v142 )
     goto LABEL_129;
   v150 = v142->fields._items;
@@ -1110,14 +1119,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v142,
       (Il2CppObject *)v143,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v151[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v151[4] + 192LL) + 112LL));
   }
   else
   {
     v153 = &v150->obj.klass + v152;
     v142->fields._size = v152 + 1;
     v153[4] = (Il2CppClass *)v143;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v153 + 4), (int32_t)v143, v144, v145, v146, v147, v148, v149);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v153 + 4), (int32_t)v143, v144, v145, v146, v147, v148, v149);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1125,8 +1134,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !rotButton )
     goto LABEL_129;
   v155 = (System_Collections_Generic_List_object__o *)rotButton->fields.onClick;
-  v156 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v156, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13002/*"SetRotateButton"*/, 0);
+  v156 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v156, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13328/*"SetRotateButton"*/, 0);
   if ( !v155 )
     goto LABEL_129;
   v163 = v155->fields._items;
@@ -1140,14 +1149,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v155,
       (Il2CppObject *)v156,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v164[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v164[4] + 192LL) + 112LL));
   }
   else
   {
     v166 = &v163->obj.klass + v165;
     v155->fields._size = v165 + 1;
     v166[4] = (Il2CppClass *)v156;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v166 + 4), (int32_t)v156, v157, v158, v159, v160, v161, v162);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v166 + 4), (int32_t)v156, v157, v158, v159, v160, v161, v162);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1155,8 +1164,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !atkInput )
     goto LABEL_129;
   onChange = (System_Collections_Generic_List_object__o *)atkInput->fields.onChange;
-  v169 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v169, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12969/*"SetAtkLabel"*/, 0);
+  v169 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v169, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13294/*"SetAtkLabel"*/, 0);
   if ( !onChange )
     goto LABEL_129;
   v176 = onChange->fields._items;
@@ -1170,14 +1179,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       onChange,
       (Il2CppObject *)v169,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
   }
   else
   {
     v179 = &v176->obj.klass + v178;
     onChange->fields._size = v178 + 1;
     v179[4] = (Il2CppClass *)v169;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v179 + 4), (int32_t)v169, v170, v171, v172, v173, v174, v175);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v179 + 4), (int32_t)v169, v170, v171, v172, v173, v174, v175);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1185,8 +1194,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !hpInput )
     goto LABEL_129;
   v181 = (System_Collections_Generic_List_object__o *)hpInput->fields.onChange;
-  v182 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v182, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12986/*"SetHpLabel"*/, 0);
+  v182 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v182, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13312/*"SetHpLabel"*/, 0);
   if ( !v181 )
     goto LABEL_129;
   v189 = v181->fields._items;
@@ -1200,14 +1209,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v181,
       (Il2CppObject *)v182,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v190[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v190[4] + 192LL) + 112LL));
   }
   else
   {
     v192 = &v189->obj.klass + v191;
     v181->fields._size = v191 + 1;
     v192[4] = (Il2CppClass *)v182;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v192 + 4), (int32_t)v182, v183, v184, v185, v186, v187, v188);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v192 + 4), (int32_t)v182, v183, v184, v185, v186, v187, v188);
   }
   if ( !*p_state )
     goto LABEL_129;
@@ -1215,8 +1224,8 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
   if ( !autoInput )
     goto LABEL_129;
   v194 = (System_Collections_Generic_List_object__o *)autoInput->fields.onChange;
-  v195 = (EventDelegate_o *)sub_1D0F300(EventDelegate_TypeInfo);
-  EventDelegate___ctor_50674840(v195, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_12970/*"SetAutoLabel"*/, 0);
+  v195 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_56133096(v195, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_13295/*"SetAutoLabel"*/, 0);
   if ( !v194 )
     goto LABEL_129;
   v202 = v194->fields._items;
@@ -1230,14 +1239,14 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v194,
       (Il2CppObject *)v195,
-      *(const MethodInfo_395C410 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
   }
   else
   {
     v205 = &v202->obj.klass + v204;
     v194->fields._size = v204 + 1;
     v205[4] = (Il2CppClass *)v195;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)(v205 + 4), (int32_t)v195, v196, v197, v198, v199, v200, v201);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v205 + 4), (int32_t)v195, v196, v197, v198, v199, v200, v201);
   }
   UIEquipGraphV__SetRotateButton(this, 1, v206);
   UIEquipGraphV__SetTopButton(this, 1, v207);
@@ -1252,7 +1261,7 @@ void UIEquipGraphV__SetButton(UIEquipGraphV_o *this, const MethodInfo *method)
         (state = (char *)*p_state) == 0) )
   {
 LABEL_129:
-    sub_1D0F30C(state, v4);
+    sub_21FFECC(state, v4);
   }
   EquipGraphViewModeState__OnClickQuickAutoPlayButton((EquipGraphViewModeState_o *)state, 1, 0);
   UIEquipGraphV__SetAtkLabel(this, v213);
@@ -1273,146 +1282,146 @@ void UIEquipGraphV__SetCharacter(
   int32_t v10; // w0
   System_String_o *v11; // x0
   int32_t v12; // w22
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
+  MissionNaviTransitionBoardItem_o *p_loadNameList; // x22
   System_String_array *loadNameList; // x23
-  GrandQuestFolderBoardItem_o *p_loadNameList; // x22
-  System_Delegate_o *v21; // x0
-  UIEquipGraphV_c *v22; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
-  Il2CppClass *v29; // x8
-  System_Action_c *v30; // x1
+  __int64 v21; // x1
+  System_Delegate_o *v22; // x0
+  UIEquipGraphV_c *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  void *v30; // x8
+  System_Action_c *v31; // x1
   AssetData_array *assetDataList; // x23
-  const MethodInfo *v32; // x1
+  const MethodInfo *v33; // x1
   System_String_array *klass; // x23
-  System_Delegate_o *v34; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
+  System_Delegate_o *v35; // x0
+  System_String_o *v36; // x3
+  int32_t v37; // w4
   int32_t v38; // w5
-  int64_t v39; // x6
-  System_String_o *v40; // x7
-  System_Action_c *v41; // x1
-  System_String_array *v42; // x20
-  System_Action_o *v43; // x21
+  bool v39; // w6
+  bool v40; // w7
+  System_String_array *v41; // x20
+  System_Action_o *v42; // x21
+  __int64 v43; // x1
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4E78EE6 & 1) == 0 )
+  if ( (byte_5939F36 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&AssetManager_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&Method_UIEquipGraphV_EndLoadAsset__);
-    sub_1D0F0B4(&UIEquipGraphViewerRender_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1043/*"/"*/);
-    byte_4E78EE6 = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&AssetManager_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&Method_UIEquipGraphV_EndLoadAsset__);
+    sub_21FFC50(&UIEquipGraphViewerRender_TypeInfo);
+    sub_21FFC50(&StringLiteral_1123/*"/"*/);
+    byte_5939F36 = 1;
   }
   result = 0;
-  if ( !UIEquipGraphViewerRender_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UIEquipGraphViewerRender_TypeInfo);
+  if ( !*(&UIEquipGraphViewerRender_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UIEquipGraphViewerRender_TypeInfo, imageName);
   AssetNameList = UIEquipGraphViewerRender__GetAssetNameList(imageName, (const MethodInfo *)imageName);
   if ( !imageName
     || ((v9 = (System_String_array *)AssetNameList,
-         v10 = System_String__IndexOf_65621164(imageName, (System_String_o *)StringLiteral_1043/*"/"*/, 0),
+         v10 = System_String__IndexOf_75501892(imageName, (System_String_o *)StringLiteral_1123/*"/"*/, 0),
          v11 = System_String__Substring(imageName, v10 + 1, 0),
          !System_Int32__TryParse(v11, &result, 0))
       ? (v12 = 9400010)
       : (v12 = result),
-        (AssetNameList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0
+        (AssetNameList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0
      || (AssetNameList = DataManager__GetMasterData_object_(
                            (DataManager_o *)AssetNameList,
-                           (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0
+                           (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0
      || (AssetNameList = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)AssetNameList, v12, 0, 0)) == 0) )
   {
-    sub_1D0F30C(AssetNameList, v8);
+    sub_21FFECC(AssetNameList, v8);
   }
+  p_loadNameList = (MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList;
   loadNameList = this->fields.loadNameList;
-  p_loadNameList = (GrandQuestFolderBoardItem_o *)&this->fields.loadNameList;
   this->fields.rarity = *((_DWORD *)AssetNameList + 6);
   if ( loadNameList )
   {
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v8);
     if ( AssetManager__compAssetStorageList(loadNameList, v9, 0) )
     {
       if ( !callbackFunc )
         return;
-      v21 = (System_Delegate_o *)this->fields.callbackFunc;
+      v22 = (System_Delegate_o *)this->fields.callbackFunc;
       this = (UIEquipGraphV_o *)((char *)this + 656);
-      v22 = (UIEquipGraphV_c *)System_Delegate__Combine(v21, (System_Delegate_o *)callbackFunc, 0);
-      v29 = (Il2CppClass *)v22;
-      if ( v22 )
+      v23 = (UIEquipGraphV_c *)System_Delegate__Combine(v22, (System_Delegate_o *)callbackFunc, 0);
+      v30 = v23;
+      if ( v23 )
       {
-        v30 = System_Action_TypeInfo;
-        if ( v22->_1.image != System_Action_TypeInfo )
+        v31 = System_Action_TypeInfo;
+        if ( v23->_1.image != System_Action_TypeInfo )
           goto LABEL_34;
-        this->klass = v22;
-        if ( v22->_1.image != v30 )
+        this->klass = v23;
+        if ( v23->_1.image != v31 )
           goto LABEL_34;
       }
       else
       {
         this->klass = 0;
       }
-      sub_1D0F058((GrandQuestFolderBoardItem_o *)this, (int32_t)v22, v23, v24, v25, v26, v27, v28);
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)this, (int32_t)v23, v24, v25, v26, v27, v28, v29);
       return;
     }
     klass = (System_String_array *)p_loadNameList->klass;
-    if ( !AssetManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_41903356(klass, 0);
+    if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v21);
+    AssetManager__releaseAssetStorage_47474708(klass, 0);
 LABEL_30:
     if ( !callbackFunc )
     {
 LABEL_37:
       this->fields.loadNameList = v9;
-      sub_1D0F058(p_loadNameList, (int32_t)v9, v13, v14, v15, v16, v17, v18);
-      v42 = this->fields.loadNameList;
-      v43 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-      System_Action___ctor(v43, (Il2CppObject *)this, Method_UIEquipGraphV_EndLoadAsset__, 0);
-      if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__loadAssetStorage_41901004(v42, v43, 1, 0);
+      sub_21FFBF4(p_loadNameList, (int32_t)v9, v13, v14, v15, v16, v17, v18);
+      v41 = this->fields.loadNameList;
+      v42 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      System_Action___ctor(v42, (Il2CppObject *)this, Method_UIEquipGraphV_EndLoadAsset__, 0);
+      if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v43);
+      AssetManager__loadAssetStorage_47472372(v41, v42, 1, 0);
       return;
     }
     loadNameList = (System_String_array *)&this->fields.callbackFunc;
-    v34 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callbackFunc, 0);
-    v29 = (Il2CppClass *)v34;
-    if ( !v34 )
+    v35 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callbackFunc, 0);
+    v30 = v35;
+    if ( !v35 )
       goto LABEL_35;
-    v41 = System_Action_TypeInfo;
-    if ( (System_Action_c *)v34->klass == System_Action_TypeInfo )
+    v31 = System_Action_TypeInfo;
+    if ( (System_Action_c *)v35->klass == System_Action_TypeInfo )
     {
-      loadNameList->obj.klass = (Il2CppClass *)v34;
-      if ( (System_Action_c *)v34->klass == v41 )
+      loadNameList->obj.klass = (Il2CppClass *)v35;
+      if ( (System_Action_c *)v35->klass == v31 )
         goto LABEL_36;
     }
 LABEL_34:
-    sub_1D0F6A8(v29);
+    sub_220024C(v30, v31, v24);
 LABEL_35:
-    loadNameList->obj.klass = v29;
+    loadNameList->obj.klass = 0;
 LABEL_36:
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)loadNameList, (int32_t)v29, v35, v36, v37, v38, v39, v40);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)loadNameList, (int32_t)v30, v24, v36, v37, v38, v39, v40);
     goto LABEL_37;
   }
   assetDataList = this->fields.assetDataList;
   if ( !assetDataList )
     goto LABEL_30;
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__compAssetStorageList_41892096(assetDataList, v9, 0) )
+  if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v8);
+  if ( !AssetManager__compAssetStorageList_47463424(assetDataList, v9, 0) )
     goto LABEL_30;
-  UIEquipGraphV__SetTextureStatus(this, v32);
+  UIEquipGraphV__SetTextureStatus(this, v33);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
@@ -1429,14 +1438,14 @@ void UIEquipGraphV__SetDispOffset(UIEquipGraphV_o *this, const MethodInfo *metho
   bodyFilter = (UnityEngine_Component_o *)this->fields.bodyFilter;
   if ( !bodyFilter
     || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0
-    || (v4.fields.y = this->fields.dispOffset.fields.y,
+    || (v4.fields.z = 0.0,
+        v4.fields.y = this->fields.dispOffset.fields.y,
         v4.fields.x = this->fields.dispOffset.fields.x,
-        v4.fields.z = 0.0,
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)bodyFilter, v4, 0),
         (bodyFilter = (UnityEngine_Component_o *)this->fields.nameFilter) == 0)
     || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0 )
   {
-    sub_1D0F30C(bodyFilter, method);
+    sub_21FFECC(bodyFilter, method);
   }
   v5.fields.y = this->fields.dispNameOffset.fields.y;
   v5.fields.x = this->fields.dispNameOffset.fields.x;
@@ -1449,26 +1458,26 @@ void UIEquipGraphV__SetFrame(UIEquipGraphV_o *this, const MethodInfo *method)
 {
   __int64 IsNullOrEmpty; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   __int64 v11; // x20
   int32_t v12; // w1
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
+  bool v17; // w6
+  bool v18; // w7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
   int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
+  bool v23; // w6
+  bool v24; // w7
   int32_t v25; // w1
   System_String_o *v26; // x0
   int32_t rarity; // w8
@@ -1477,55 +1486,56 @@ void UIEquipGraphV__SetFrame(UIEquipGraphV_o *this, const MethodInfo *method)
   System_String_o **v30; // x8
   System_String_o *v31; // x21
   UISprite_o *frameTopSprite; // x22
-  System_String_o *v33; // x23
+  __int64 v33; // x1
+  System_String_o *v34; // x23
   UISprite_o *frameBottomSprite; // x22
-  System_String_o *v35; // x0
+  System_String_o *v36; // x0
 
-  if ( (byte_4E78EE9 & 1) == 0 )
+  if ( (byte_5939F39 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&string___TypeInfo);
-    sub_1D0F0B4(&StringLiteral_19000/*"e"*/);
-    sub_1D0F0B4(&StringLiteral_23430/*"rarity"*/);
-    sub_1D0F0B4(&StringLiteral_16315/*"_0"*/);
-    sub_1D0F0B4(&StringLiteral_13505/*"T"*/);
-    sub_1D0F0B4(&StringLiteral_2527/*"B"*/);
-    sub_1D0F0B4(&StringLiteral_20012/*"frame3"*/);
-    sub_1D0F0B4(&StringLiteral_20006/*"frame1"*/);
-    sub_1D0F0B4(&StringLiteral_19258/*"eframeB_hp"*/);
-    sub_1D0F0B4(&StringLiteral_19257/*"eframeB_atk"*/);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    sub_1D0F0B4(&StringLiteral_20011/*"frame2"*/);
-    byte_4E78EE9 = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&string___TypeInfo);
+    sub_21FFC50(&StringLiteral_19507/*"e"*/);
+    sub_21FFC50(&StringLiteral_24110/*"rarity"*/);
+    sub_21FFC50(&StringLiteral_16715/*"_0"*/);
+    sub_21FFC50(&StringLiteral_13843/*"T"*/);
+    sub_21FFC50(&StringLiteral_2621/*"B"*/);
+    sub_21FFC50(&StringLiteral_20536/*"frame3"*/);
+    sub_21FFC50(&StringLiteral_20530/*"frame1"*/);
+    sub_21FFC50(&StringLiteral_19768/*"eframeB_hp"*/);
+    sub_21FFC50(&StringLiteral_19767/*"eframeB_atk"*/);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    sub_21FFC50(&StringLiteral_20535/*"frame2"*/);
+    byte_5939F39 = 1;
   }
-  IsNullOrEmpty = sub_1D0F15C(string___TypeInfo, 3);
+  IsNullOrEmpty = sub_21FFD10(string___TypeInfo, 3);
   if ( !IsNullOrEmpty )
     goto LABEL_24;
   v11 = IsNullOrEmpty;
   if ( !*(_DWORD *)(IsNullOrEmpty + 24)
-    || (v12 = StringLiteral_23430/*"rarity"*/,
-        *(_QWORD *)(IsNullOrEmpty + 32) = StringLiteral_23430/*"rarity"*/,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(IsNullOrEmpty + 32), v12, v5, v6, v7, v8, v9, v10),
+    || (v12 = StringLiteral_24110/*"rarity"*/,
+        *(_QWORD *)(IsNullOrEmpty + 32) = StringLiteral_24110/*"rarity"*/,
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(IsNullOrEmpty + 32), v12, v5, v6, v7, v8, v9, v10),
         IsNullOrEmpty = (__int64)System_Int32__ToString((int)this + 648, 0),
-        *(_DWORD *)(v11 + 24) <= 1u)
+        (*(_DWORD *)(v11 + 24) & 0xFFFFFFFE) == 0)
     || (*(_QWORD *)(v11 + 40) = IsNullOrEmpty,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 40), IsNullOrEmpty, v13, v14, v15, v16, v17, v18),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v11 + 40), IsNullOrEmpty, v13, v14, v15, v16, v17, v18),
         *(_DWORD *)(v11 + 24) <= 2u) )
   {
-    sub_1D0F314(IsNullOrEmpty);
+    sub_21FFED4(IsNullOrEmpty);
   }
-  v25 = StringLiteral_16315/*"_0"*/;
-  *(_QWORD *)(v11 + 48) = StringLiteral_16315/*"_0"*/;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v11 + 48), v25, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_16715/*"_0"*/;
+  *(_QWORD *)(v11 + 48) = StringLiteral_16715/*"_0"*/;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v11 + 48), v25, v19, v20, v21, v22, v23, v24);
   v26 = System_String__Join((System_String_o *)StringLiteral_1/*""*/, (System_String_array *)v11, 0);
   rarity = this->fields.rarity;
   v28 = v26;
   if ( (rarity & 0xFFFFFFFE) == 4 )
-    v29 = &StringLiteral_20012/*"frame3"*/;
+    v29 = &StringLiteral_20536/*"frame3"*/;
   else
-    v29 = &StringLiteral_20006/*"frame1"*/;
+    v29 = &StringLiteral_20530/*"frame1"*/;
   if ( rarity == 3 )
-    v30 = (System_String_o **)&StringLiteral_20011/*"frame2"*/;
+    v30 = (System_String_o **)&StringLiteral_20535/*"frame2"*/;
   else
     v30 = (System_String_o **)v29;
   v31 = *v30;
@@ -1549,23 +1559,23 @@ void UIEquipGraphV__SetFrame(UIEquipGraphV_o *this, const MethodInfo *method)
       }
     }
 LABEL_24:
-    sub_1D0F30C(IsNullOrEmpty, v4);
+    sub_21FFECC(IsNullOrEmpty, v4);
   }
-  v33 = System_String__Concat_65601036(
-          (System_String_o *)StringLiteral_19000/*"e"*/,
+  v34 = System_String__Concat_75481624(
+          (System_String_o *)StringLiteral_19507/*"e"*/,
           v31,
-          (System_String_o *)StringLiteral_13505/*"T"*/,
+          (System_String_o *)StringLiteral_13843/*"T"*/,
           0);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetCharaGraphaOption(frameTopSprite, v33, 0);
+  if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v33);
+  AtlasManager__SetCharaGraphaOption(frameTopSprite, v34, 0);
   frameBottomSprite = this->fields.frameBottomSprite;
-  v35 = System_String__Concat_65601036(
-          (System_String_o *)StringLiteral_19000/*"e"*/,
+  v36 = System_String__Concat_75481624(
+          (System_String_o *)StringLiteral_19507/*"e"*/,
           v31,
-          (System_String_o *)StringLiteral_2527/*"B"*/,
+          (System_String_o *)StringLiteral_2621/*"B"*/,
           0);
-  AtlasManager__SetCharaGraphaOption(frameBottomSprite, v35, 0);
+  AtlasManager__SetCharaGraphaOption(frameBottomSprite, v36, 0);
   AtlasManager__SetCharaGraphaOption(this->fields.raritySprite, v28, 0);
   IsNullOrEmpty = (__int64)this->fields.raritySprite;
   if ( !IsNullOrEmpty )
@@ -1573,14 +1583,14 @@ LABEL_24:
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)IsNullOrEmpty + 840LL))(
     IsNullOrEmpty,
     *(_QWORD *)(*(_QWORD *)IsNullOrEmpty + 848LL));
-  AtlasManager__SetCharaGraphaOption(this->fields.equipAtkSprite, (System_String_o *)StringLiteral_19257/*"eframeB_atk"*/, 0);
+  AtlasManager__SetCharaGraphaOption(this->fields.equipAtkSprite, (System_String_o *)StringLiteral_19767/*"eframeB_atk"*/, 0);
   IsNullOrEmpty = (__int64)this->fields.equipAtkSprite;
   if ( !IsNullOrEmpty )
     goto LABEL_24;
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)IsNullOrEmpty + 840LL))(
     IsNullOrEmpty,
     *(_QWORD *)(*(_QWORD *)IsNullOrEmpty + 848LL));
-  AtlasManager__SetCharaGraphaOption(this->fields.equipHpSprite, (System_String_o *)StringLiteral_19258/*"eframeB_hp"*/, 0);
+  AtlasManager__SetCharaGraphaOption(this->fields.equipHpSprite, (System_String_o *)StringLiteral_19768/*"eframeB_hp"*/, 0);
   IsNullOrEmpty = (__int64)this->fields.equipHpSprite;
   if ( !IsNullOrEmpty )
     goto LABEL_24;
@@ -1590,6 +1600,7 @@ LABEL_24:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetHpButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -1597,14 +1608,14 @@ void UIEquipGraphV__SetHpButton(UIEquipGraphV_o *this, bool isSetting, const Met
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EEE & 1) == 0 )
+  if ( (byte_5939F3E & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EEE = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F3E = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   equipHpSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)equipHpSprite & 1) != 0 )
   {
@@ -1613,7 +1624,7 @@ void UIEquipGraphV__SetHpButton(UIEquipGraphV_o *this, bool isSetting, const Met
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(equipHpSprite, v7);
+        sub_21FFECC(equipHpSprite, v7);
     }
     else
     {
@@ -1637,15 +1648,15 @@ void UIEquipGraphV__SetHpLabel(UIEquipGraphV_o *this, const MethodInfo *method)
   struct EquipGraphViewModeState_o *v6; // x8
   UILabel_o *hpLabel; // x19
 
-  if ( (byte_4E78EF0 & 1) == 0 )
+  if ( (byte_5939F40 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF0 = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UILineInput___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F40 = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   hpInput = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)hpInput & 1) != 0 )
   {
@@ -1656,16 +1667,17 @@ void UIEquipGraphV__SetHpLabel(UIEquipGraphV_o *this, const MethodInfo *method)
           (hpInput = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(hpInput, 0)) == 0)
       || (hpInput = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  (UnityEngine_GameObject_o *)hpInput,
-                                                 (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___)) == 0
+                                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UILineInput___)) == 0
       || (hpInput = (UnityEngine_Component_o *)UILineInput__GetText((UILineInput_o *)hpInput, v5), !hpLabel) )
     {
-      sub_1D0F30C(hpInput, v5);
+      sub_21FFECC(hpInput, v5);
     }
     UILabel__set_text(hpLabel, (System_String_o *)hpInput, 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetNameButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -1673,14 +1685,14 @@ void UIEquipGraphV__SetNameButton(UIEquipGraphV_o *this, bool isSetting, const M
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EF3 & 1) == 0 )
+  if ( (byte_5939F43 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF3 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F43 = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   nameRenderer = (struct UnityEngine_MeshRenderer_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)nameRenderer & 1) != 0 )
   {
@@ -1689,7 +1701,7 @@ void UIEquipGraphV__SetNameButton(UIEquipGraphV_o *this, bool isSetting, const M
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(nameRenderer, v7);
+        sub_21FFECC(nameRenderer, v7);
     }
     else
     {
@@ -1705,6 +1717,7 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetRarityButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -1712,14 +1725,14 @@ void UIEquipGraphV__SetRarityButton(UIEquipGraphV_o *this, bool isSetting, const
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EF2 & 1) == 0 )
+  if ( (byte_5939F42 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF2 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F42 = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   raritySprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)raritySprite & 1) != 0 )
   {
@@ -1728,7 +1741,7 @@ void UIEquipGraphV__SetRarityButton(UIEquipGraphV_o *this, bool isSetting, const
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(raritySprite, v7);
+        sub_21FFECC(raritySprite, v7);
     }
     else
     {
@@ -1753,11 +1766,11 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
   struct EquipGraphViewModeState_o *v8; // x8
   UnityEngine_Object_o *rotateBase; // x20
   struct EquipGraphViewModeState_o *v10; // x8
-  _BOOL4 rotbtn_k__BackingField; // w20
-  UnityEngine_Transform_o *v12; // x0
-  UnityEngine_Transform_o *v13; // x20
-  float v14; // s0 OVERLAPPED
-  float v15; // s1
+  UnityEngine_Transform_o *v11; // x0
+  UnityEngine_Transform_o *v12; // x20
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  UnityEngine_Transform_o *v15; // x0
   UnityEngine_Transform_o *v16; // x20
   float v17; // s2
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
@@ -1767,14 +1780,14 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
   UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4E78EF5 & 1) == 0 )
+  if ( (byte_5939F45 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EF5 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F45 = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
@@ -1782,12 +1795,12 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
     {
       v8 = this->fields.state;
       if ( !v8 )
-        goto LABEL_29;
+        goto LABEL_30;
       v8->fields._rotbtn_k__BackingField ^= 1u;
     }
     rotateBase = (UnityEngine_Object_o *)this->fields.rotateBase;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(rotateBase, 0, 0);
     if ( ((unsigned __int8)transform & 1) != 0 )
     {
@@ -1795,12 +1808,11 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
       if ( v10 )
       {
         transform = this->fields.rotateBase;
-        if ( transform )
+        if ( v10->fields._rotbtn_k__BackingField )
         {
-          rotbtn_k__BackingField = v10->fields._rotbtn_k__BackingField;
-          transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
-          if ( rotbtn_k__BackingField )
+          if ( transform )
           {
+            transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
             if ( transform )
             {
               v18.fields.z = 0.0;
@@ -1810,28 +1822,28 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
               transform = this->fields.rotateBase;
               if ( transform )
               {
-                v12 = UnityEngine_GameObject__get_transform(transform, 0);
-                v19.fields.z = 1.5708;
-                v13 = v12;
+                v11 = UnityEngine_GameObject__get_transform(transform, 0);
                 v19.fields.x = 0.0;
                 v19.fields.y = 0.0;
+                v19.fields.z = 1.5708;
+                v12 = v11;
                 v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0);
-                if ( v13 )
+                if ( v12 )
                 {
-                  UnityEngine_Transform__set_localRotation(v13, v22, 0);
+                  UnityEngine_Transform__set_localRotation(v12, v22, 0);
                   transform = this->fields.rotateBase;
                   if ( transform )
                   {
                     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
                     if ( transform )
                     {
+                      v13 = 1.5;
                       v14 = 1.5;
-                      v15 = 1.5;
-LABEL_28:
+LABEL_29:
                       v17 = 1.0;
                       UnityEngine_Transform__set_localScale(
                         (UnityEngine_Transform_o *)transform,
-                        *(UnityEngine_Vector3_o *)&v14,
+                        *(UnityEngine_Vector3_o *)&v13,
                         0);
                       return;
                     }
@@ -1840,7 +1852,11 @@ LABEL_28:
               }
             }
           }
-          else if ( transform )
+        }
+        else if ( transform )
+        {
+          transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
+          if ( transform )
           {
             v20.fields.x = 0.0;
             v20.fields.y = 0.0;
@@ -1849,9 +1865,10 @@ LABEL_28:
             transform = this->fields.rotateBase;
             if ( transform )
             {
-              v16 = UnityEngine_GameObject__get_transform(transform, 0);
+              v15 = UnityEngine_GameObject__get_transform(transform, 0);
               v21.fields.x = 0.0;
               v21.fields.y = 0.0;
+              v16 = v15;
               v21.fields.z = 0.0;
               v23 = UnityEngine_Quaternion__Internal_FromEulerRad(v21, 0);
               if ( v16 )
@@ -1863,9 +1880,9 @@ LABEL_28:
                   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
                   if ( transform )
                   {
+                    v13 = 1.0;
                     v14 = 1.0;
-                    v15 = 1.0;
-                    goto LABEL_28;
+                    goto LABEL_29;
                   }
                 }
               }
@@ -1873,8 +1890,8 @@ LABEL_28:
           }
         }
       }
-LABEL_29:
-      sub_1D0F30C(transform, v7);
+LABEL_30:
+      sub_21FFECC(transform, v7);
     }
   }
 }
@@ -1887,29 +1904,29 @@ void UIEquipGraphV__SetTexture(UIEquipGraphV_o *this, const MethodInfo *method)
   AssetData_o *v4; // x20
   System_String_o *LastName; // x22
   __int64 v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
   int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  bool v11; // w6
+  bool v12; // w7
   struct UnityEngine_Texture2D_array *textureList; // x21
   System_String_o *v14; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   const MethodInfo *v21; // x1
 
   v2 = this;
-  if ( (byte_4E78EE8 & 1) == 0 )
+  if ( (byte_5939F38 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_AssetData_GetObject_Texture2D____80369832);
-    sub_1D0F0B4(&UnityEngine_Texture2D___TypeInfo);
-    this = (UIEquipGraphV_o *)sub_1D0F0B4(&StringLiteral_16857/*"a"*/);
-    byte_4E78EE8 = 1;
+    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
+    sub_21FFC50(&UnityEngine_Texture2D___TypeInfo);
+    this = (UIEquipGraphV_o *)sub_21FFC50(&StringLiteral_17270/*"a"*/);
+    byte_5939F38 = 1;
   }
   assetDataList = v2->fields.assetDataList;
   if ( !assetDataList )
@@ -1919,25 +1936,25 @@ void UIEquipGraphV__SetTexture(UIEquipGraphV_o *this, const MethodInfo *method)
   v4 = assetDataList->m_Items[0];
   if ( !v4
     || (LastName = AssetData__get_LastName(assetDataList->m_Items[0], 0),
-        v6 = sub_1D0F15C(UnityEngine_Texture2D___TypeInfo, 1),
+        v6 = sub_21FFD10(UnityEngine_Texture2D___TypeInfo, 1),
         v2->fields.textureList = (struct UnityEngine_Texture2D_array *)v6,
-        sub_1D0F058((GrandQuestFolderBoardItem_o *)&v2->fields.textureList, v6, v7, v8, v9, v10, v11, v12),
+        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.textureList, v6, v7, v8, v9, v10, v11, v12),
         textureList = v2->fields.textureList,
-        v14 = System_String__Concat_65562772(LastName, (System_String_o *)StringLiteral_16857/*"a"*/, 0),
-        this = (UIEquipGraphV_o *)AssetData__GetObject_object__52624444(
+        v14 = System_String__Concat_75438412(LastName, (System_String_o *)StringLiteral_17270/*"a"*/, 0),
+        this = (UIEquipGraphV_o *)AssetData__GetObject_object__58323140(
                                     v4,
                                     v14,
-                                    (const MethodInfo_322FC3C *)Method_AssetData_GetObject_Texture2D____80369832),
+                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152),
         !textureList) )
   {
 LABEL_9:
-    sub_1D0F30C(this, method);
+    sub_21FFECC(this, method);
   }
   if ( !LODWORD(textureList->max_length) )
 LABEL_10:
-    sub_1D0F314(this);
+    sub_21FFED4(this);
   textureList->m_Items[0] = (UnityEngine_Texture2D_o *)this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)textureList->m_Items, (int32_t)this, v15, v16, v17, v18, v19, v20);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)textureList->m_Items, (int32_t)this, v15, v16, v17, v18, v19, v20);
   UIEquipGraphV__SetTextureStatus(v2, v21);
 }
 
@@ -1955,14 +1972,14 @@ void UIEquipGraphV__SetTextureStatus(UIEquipGraphV_o *this, const MethodInfo *me
   bodyFilter = (UnityEngine_Component_o *)this->fields.bodyFilter;
   if ( !bodyFilter
     || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0
-    || (v6.fields.y = this->fields.dispTop.fields.y,
+    || (v6.fields.z = 0.0,
+        v6.fields.y = this->fields.dispTop.fields.y,
         v6.fields.x = this->fields.dispTop.fields.x,
-        v6.fields.z = 0.0,
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)bodyFilter, v6, 0),
         (bodyFilter = (UnityEngine_Component_o *)this->fields.nameFilter) == 0)
     || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0 )
   {
-    sub_1D0F30C(bodyFilter, v4);
+    sub_21FFECC(bodyFilter, v4);
   }
   v7.fields.y = this->fields.dispNameTop.fields.y;
   v7.fields.x = this->fields.dispNameTop.fields.x;
@@ -1971,6 +1988,7 @@ void UIEquipGraphV__SetTextureStatus(UIEquipGraphV_o *this, const MethodInfo *me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIEquipGraphV__SetTopButton(UIEquipGraphV_o *this, bool isSetting, const MethodInfo *method)
 {
   UnityEngine_Object_o *state; // x21
@@ -1978,14 +1996,14 @@ void UIEquipGraphV__SetTopButton(UIEquipGraphV_o *this, bool isSetting, const Me
   __int64 v7; // x1
   struct EquipGraphViewModeState_o *v8; // x8
 
-  if ( (byte_4E78EEB & 1) == 0 )
+  if ( (byte_5939F3B & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78EEB = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939F3B = 1;
   }
   state = (UnityEngine_Object_o *)this->fields.state;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isSetting);
   frameTopSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(state, 0, 0);
   if ( ((unsigned __int8)frameTopSprite & 1) != 0 )
   {
@@ -1994,7 +2012,7 @@ void UIEquipGraphV__SetTopButton(UIEquipGraphV_o *this, bool isSetting, const Me
     {
       if ( !v8 )
 LABEL_14:
-        sub_1D0F30C(frameTopSprite, v7);
+        sub_21FFECC(frameTopSprite, v7);
     }
     else
     {

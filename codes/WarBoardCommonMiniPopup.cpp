@@ -2,31 +2,33 @@ void WarBoardCommonMiniPopup___ctor(WarBoardCommonMiniPopup_o *this, const Metho
 {
   __int64 v3; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   int v11; // w8
+  __int64 v12; // x1
+  __int64 v13; // x2
 
-  if ( (byte_4E7530F & 1) == 0 )
+  if ( (byte_5936295 & 1) == 0 )
   {
-    sub_1D0F0B4(&WarBoardCommonMiniPopup_LineLayout___TypeInfo);
-    sub_1D0F0B4(&WarBoardInfoPopupBase_TypeInfo);
-    byte_4E7530F = 1;
+    sub_21FFC50(&WarBoardCommonMiniPopup_LineLayout___TypeInfo);
+    sub_21FFC50(&WarBoardInfoPopupBase_TypeInfo);
+    byte_5936295 = 1;
   }
-  v3 = sub_1D0F15C(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2);
+  v3 = sub_21FFD10(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2);
   if ( !v3 )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   v11 = *(_DWORD *)(v3 + 24);
   if ( !v11 || (*(_QWORD *)(v3 + 32) = 0xC1B0000042080000LL, v11 == 1) )
-    sub_1D0F314(v3);
+    sub_21FFED4(v3);
   *(_QWORD *)(v3 + 40) = 0xC208000041E80000LL;
   this->fields.lineLayouts = (struct WarBoardCommonMiniPopup_LineLayout_array *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.lineLayouts, v3, v5, v6, v7, v8, v9, v10);
-  if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.lineLayouts, v3, v5, v6, v7, v8, v9, v10);
+  if ( !*(&WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo, v12, v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -36,55 +38,55 @@ void WarBoardCommonMiniPopup__ClosePopup(
         System_Action_o *hideCallback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct System_Action_o **p_hideCompleteCallback; // x20
   System_Delegate_o *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
-  System_Delegate_o *v18; // x8
+  bool v16; // w6
+  bool v17; // w7
+  int32_t v18; // w8
   System_Action_c *v19; // x1
   const MethodInfo *v20; // x1
 
-  if ( (byte_4E7530E & 1) == 0 )
+  if ( (byte_5936294 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    byte_4E7530E = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    byte_5936294 = 1;
   }
   this->fields.hideCompleteCallback = 0;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.hideCompleteCallback,
+    0,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   v11 = System_Delegate__Combine(
           (System_Delegate_o *)this->fields.hideCompleteCallback,
           (System_Delegate_o *)hideCallback,
           0);
-  v18 = v11;
+  v18 = (int)v11;
   if ( !v11 )
     goto LABEL_7;
   v19 = System_Action_TypeInfo;
   if ( (System_Action_c *)v11->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v11, (System_Action_c *)v11->klass != v19) )
   {
-    sub_1D0F6A8(v11);
+    sub_220024C(v11, v19, v12, v13);
 LABEL_7:
-    *p_hideCompleteCallback = (struct System_Action_o *)v18;
+    *p_hideCompleteCallback = 0;
   }
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.hideCompleteCallback,
-    (int32_t)v18,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.hideCompleteCallback, v18, v12, v13, v14, v15, v16, v17);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v20);
 }
 
@@ -95,49 +97,51 @@ int32_t WarBoardCommonMiniPopup__GetLineCount(
         const MethodInfo *method)
 {
   WarBoardCommonMiniPopup___c_c *v4; // x0
+  struct WarBoardCommonMiniPopup___c_StaticFields *static_fields; // x8
   System_Func_char__bool__o *_9__11_0; // x20
-  Il2CppObject *v6; // x21
-  struct WarBoardCommonMiniPopup___c_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  Il2CppObject *v7; // x21
+  struct WarBoardCommonMiniPopup___c_StaticFields *v8; // x0
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
 
-  if ( (byte_4E7530A & 1) == 0 )
+  if ( (byte_5936290 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Linq_Enumerable_Count_char___);
-    sub_1D0F0B4(&System_Func_char__bool__TypeInfo);
-    sub_1D0F0B4(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__);
-    sub_1D0F0B4(&WarBoardCommonMiniPopup___c_TypeInfo);
-    byte_4E7530A = 1;
+    sub_21FFC50(&Method_System_Linq_Enumerable_Count_char___);
+    sub_21FFC50(&System_Func_char__bool__TypeInfo);
+    sub_21FFC50(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__);
+    sub_21FFC50(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_5936290 = 1;
   }
   v4 = WarBoardCommonMiniPopup___c_TypeInfo;
-  if ( !WarBoardCommonMiniPopup___c_TypeInfo->_2.cctor_finished )
+  if ( !*(&WarBoardCommonMiniPopup___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(WarBoardCommonMiniPopup___c_TypeInfo);
+    j_il2cpp_runtime_class_init_0(WarBoardCommonMiniPopup___c_TypeInfo, message, method);
     v4 = WarBoardCommonMiniPopup___c_TypeInfo;
   }
-  _9__11_0 = v4->static_fields->__9__11_0;
+  static_fields = v4->static_fields;
+  _9__11_0 = static_fields->__9__11_0;
   if ( !_9__11_0 )
   {
-    if ( !v4->_2.cctor_finished )
+    if ( !*(&v4->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      v4 = WarBoardCommonMiniPopup___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v4, message, method);
+      static_fields = WarBoardCommonMiniPopup___c_TypeInfo->static_fields;
     }
-    v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__11_0 = (System_Func_char__bool__o *)sub_1D0F300(System_Func_char__bool__TypeInfo);
-    System_Func_char__bool____ctor(_9__11_0, v6, Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, 0);
-    static_fields = WarBoardCommonMiniPopup___c_TypeInfo->static_fields;
-    static_fields->__9__11_0 = _9__11_0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v8, v9, v10, v11, v12, v13);
+    v7 = (Il2CppObject *)static_fields->__9;
+    _9__11_0 = (System_Func_char__bool__o *)sub_21FFEBC(System_Func_char__bool__TypeInfo);
+    System_Func_char__bool____ctor(_9__11_0, v7, Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, 0);
+    v8 = WarBoardCommonMiniPopup___c_TypeInfo->static_fields;
+    v8->__9__11_0 = _9__11_0;
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->__9__11_0, (int32_t)_9__11_0, v9, v10, v11, v12, v13, v14);
   }
   return System_Linq_Enumerable__Count_char_(
            (System_Collections_Generic_IEnumerable_TSource__o *)message,
            (System_Func_TSource__bool__o *)_9__11_0,
-           (const MethodInfo_3270568 *)Method_System_Linq_Enumerable_Count_char___)
+           (const MethodInfo_3846E04 *)Method_System_Linq_Enumerable_Count_char___)
        + 1;
 }
 
@@ -161,7 +165,7 @@ WarBoardCommonMiniPopup_LineLayout_o WarBoardCommonMiniPopup__GetLineLayout(
   LineCount = WarBoardCommonMiniPopup__GetLineCount(this, message, method);
   lineLayouts = this->fields.lineLayouts;
   if ( !lineLayouts )
-    sub_1D0F30C(LineCount, v5);
+    sub_21FFECC(LineCount, v5);
   max_length = lineLayouts->max_length;
   v8 = LineCount - 1;
   if ( (int)LineCount - 1 >= (int)max_length )
@@ -172,7 +176,7 @@ WarBoardCommonMiniPopup_LineLayout_o WarBoardCommonMiniPopup__GetLineLayout(
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1D0F314(LineCount);
+    sub_21FFED4(LineCount);
   }
   if ( v8 >= (unsigned int)max_length )
     goto LABEL_9;
@@ -195,7 +199,7 @@ void WarBoardCommonMiniPopup__Initialize(WarBoardCommonMiniPopup_o *this, const 
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1D0F30C(0, v3);
+    sub_21FFECC(0, v3);
   UISkinSprite__setupSprite(windowBase, 0, 0);
 }
 
@@ -206,10 +210,10 @@ void WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4E7530D & 1) == 0 )
+  if ( (byte_5936293 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_WarBoardCommonMiniPopup_OnClickClose__);
-    byte_4E7530D = 1;
+    sub_21FFC50(&Method_WarBoardCommonMiniPopup_OnClickClose__);
+    byte_5936293 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -217,8 +221,8 @@ void WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, cons
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_WarBoardCommonMiniPopup_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_WarBoardCommonMiniPopup_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -236,10 +240,10 @@ void WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4E7530C & 1) == 0 )
+  if ( (byte_5936292 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_WarBoardCommonMiniPopup_OnClickNo__);
-    byte_4E7530C = 1;
+    sub_21FFC50(&Method_WarBoardCommonMiniPopup_OnClickNo__);
+    byte_5936292 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -247,8 +251,8 @@ void WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const M
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickNo__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickNo__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_WarBoardCommonMiniPopup_OnClickNo__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_WarBoardCommonMiniPopup_OnClickNo__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -266,10 +270,10 @@ void WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4E7530B & 1) == 0 )
+  if ( (byte_5936291 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_WarBoardCommonMiniPopup_OnClickYes__);
-    byte_4E7530B = 1;
+    sub_21FFC50(&Method_WarBoardCommonMiniPopup_OnClickYes__);
+    byte_5936291 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -277,8 +281,8 @@ void WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const 
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickYes__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickYes__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_WarBoardCommonMiniPopup_OnClickYes__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_WarBoardCommonMiniPopup_OnClickYes__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -298,8 +302,8 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
         System_String_o *noButton,
         const MethodInfo *method)
 {
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v12; // x2
   WarBoardCommonMiniPopup_LineLayout_o v13; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
@@ -315,12 +319,12 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.clickCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
-    (int32_t)message,
-    (int32_t)yesButton,
-    noButton,
+    message,
+    yesButton,
+    (int32_t)noButton,
     (int32_t)method,
     v6,
     v7);
@@ -383,7 +387,7 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.noButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(noticeButtonRoot, v13);
+    sub_21FFECC(noticeButtonRoot, v13);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, noButton, 0);
   WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v20);
@@ -398,8 +402,8 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
         const MethodInfo *method)
 {
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   const MethodInfo *v11; // x2
   WarBoardCommonMiniPopup_LineLayout_o v12; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
@@ -415,12 +419,12 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.clickCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
-    (int32_t)message,
-    (int32_t)closeButton,
-    (System_String_o *)method,
+    message,
+    closeButton,
+    (int32_t)method,
     v5,
     v6,
     v7);
@@ -485,7 +489,7 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.closeButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1D0F30C)(noticeButtonRoot, v12);
+    sub_21FFECC(noticeButtonRoot, v12);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, closeButton, 0);
   WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v19);
@@ -495,23 +499,23 @@ LABEL_15:
 void WarBoardCommonMiniPopup___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
-  if ( (byte_4E75310 & 1) == 0 )
+  if ( (byte_5936296 & 1) == 0 )
   {
-    sub_1D0F0B4(&WarBoardCommonMiniPopup___c_TypeInfo);
-    byte_4E75310 = 1;
+    sub_21FFC50(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_5936296 = 1;
   }
-  v1 = (Il2CppObject *)sub_1D0F300(WarBoardCommonMiniPopup___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_21FFEBC(WarBoardCommonMiniPopup___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardCommonMiniPopup___c_TypeInfo->static_fields->__9 = (struct WarBoardCommonMiniPopup___c_o *)v1;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
     v3,

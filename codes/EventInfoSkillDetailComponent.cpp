@@ -8,14 +8,14 @@ void EventInfoSkillDetailComponent__Awake(EventInfoSkillDetailComponent_o *this,
 {
   UnityEngine_Object_o *imagePartsIconSprite; // x20
 
-  if ( (byte_4E793BA & 1) == 0 )
+  if ( (byte_593A465 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793BA = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A465 = 1;
   }
   imagePartsIconSprite = (UnityEngine_Object_o *)this->fields.imagePartsIconSprite;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   UnityEngine_Object__op_Inequality(imagePartsIconSprite, 0, 0);
   System_String__IsNullOrEmpty(this->fields.imagePartsIconSpriteNameFormat, 0);
 }
@@ -29,24 +29,24 @@ float EventInfoSkillDetailComponent__GetHeight(EventInfoSkillDetailComponent_o *
   struct UILabel_o *v6; // x0
   const MethodInfo *v7; // x1
   float v8; // s1
-  float offsetHeight; // s8
-  float skillDetailMinHeight; // s9
+  float offsetHeight; // s9
+  float skillDetailMinHeight; // s8
   bool IsShowingPartition; // w0
-  float partitionHeightOffset; // s1
+  float partitionHeightOffset; // s0
 
-  if ( (byte_4E793BC & 1) == 0 )
+  if ( (byte_593A467 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793BC = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A467 = 1;
   }
   skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(skillDetailLabel, 0, 0) )
     return this->fields.minHeight;
   v6 = this->fields.skillDetailLabel;
   if ( !v6 )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))v6->klass->vtable._22_get_localSize.methodPtr)(
     v6,
     v6->klass->vtable._22_get_localSize.method);
@@ -74,92 +74,94 @@ void EventInfoSkillDetailComponent__Setup(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *imagePartsIconSprite; // x23
+  __int64 v10; // x1
   System_String_o *imagePartsIconSpriteNameFormat; // x23
-  Il2CppObject *v11; // x24
-  Il2CppObject *v12; // x0
-  System_String_o *v13; // x0
+  Il2CppObject *v12; // x24
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x0
   UnityEngine_Object_o *skillIconSprite; // x22
-  UISprite_o *v15; // x22
+  UISprite_o *v16; // x22
+  __int64 v17; // x1
   int32_t SkillId; // w23
   UILabel_o *skillNameLabel; // x22
   System_String_o *SkillName; // x0
+  __int64 v21; // x1
   UnityEngine_Object_o *skillDetailLabel; // x22
-  UILabel_o *v20; // x22
+  UILabel_o *v23; // x22
   System_String_o *SkillDetail; // x0
-  __int64 v22; // x1
-  float v23; // s1
+  __int64 v25; // x1
+  float v26; // s1
   float skillDetailMinHeight; // s8
   UnityEngine_GameObject_o *partition; // x21
   int32_t imageValue; // [xsp+8h] [xbp-58h] BYREF
   int32_t typeValue; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4E793BB & 1) == 0 )
+  if ( (byte_593A466 & 1) == 0 )
   {
-    sub_1D0F0B4(&AtlasManager_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E793BB = 1;
+    sub_21FFC50(&AtlasManager_TypeInfo);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_593A466 = 1;
   }
   if ( imagePartsGroupEntity )
   {
     imagePartsIconSprite = (UnityEngine_Object_o *)this->fields.imagePartsIconSprite;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, imagePartsGroupEntity);
     if ( UnityEngine_Object__op_Inequality(imagePartsIconSprite, 0, 0) )
     {
       imagePartsIconSpriteNameFormat = this->fields.imagePartsIconSpriteNameFormat;
       typeValue = imagePartsGroupEntity->fields.typeValue;
-      v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &typeValue);
+      v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &typeValue);
       imageValue = imagePartsGroupEntity->fields.imageValue;
-      v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageValue);
-      v13 = System_String__Format_65604080(imagePartsIconSpriteNameFormat, v11, v12, 0);
-      UISpriteHelper__SetSprite_45516732(
+      v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageValue);
+      v14 = System_String__Format_75484576(imagePartsIconSpriteNameFormat, v12, v13, 0);
+      UISpriteHelper__SetSprite_51105480(
         this->fields.imagePartsIconSprite,
-        v13,
+        v14,
         (System_Collections_Generic_IEnumerable_UIAtlas__o *)atlasList,
         0,
         (System_String_o *)StringLiteral_1/*""*/,
         0);
     }
     skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
     if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
     {
-      v15 = this->fields.skillIconSprite;
+      v16 = this->fields.skillIconSprite;
       SkillId = ImagePartsGroupEntity__GetSkillId(imagePartsGroupEntity, 0);
-      if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetSkillIcon(v15, SkillId, 0);
+      if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v17);
+      AtlasManager__SetSkillIcon(v16, SkillId, 0);
     }
     skillNameLabel = this->fields.skillNameLabel;
     SkillName = ImagePartsGroupEntity__GetSkillName(imagePartsGroupEntity, 0);
     UILabelHelper__SetTextSafely(skillNameLabel, SkillName, 0);
     skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
-    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
     if ( UnityEngine_Object__op_Inequality(skillDetailLabel, 0, 0) )
     {
-      v20 = this->fields.skillDetailLabel;
+      v23 = this->fields.skillDetailLabel;
       SkillDetail = ImagePartsGroupEntity__GetSkillDetail(imagePartsGroupEntity, 0, 0);
-      if ( !v20
-        || (UILabel__set_text(v20, SkillDetail, 0), (SkillDetail = (System_String_o *)this->fields.skillDetailLabel) == 0)
+      if ( !v23
+        || (UILabel__set_text(v23, SkillDetail, 0), (SkillDetail = (System_String_o *)this->fields.skillDetailLabel) == 0)
         || ((((void (__fastcall *)(System_String_o *, const MethodInfo *))SkillDetail->klass->vtable._22_System_IConvertible_ToDecimal.methodPtr)(
                SkillDetail,
                SkillDetail->klass->vtable._22_System_IConvertible_ToDecimal.method),
              SkillDetail = (System_String_o *)this->fields.skillDetailLabel,
-             v23 <= this->fields.skillDetailMinHeight)
+             v26 <= this->fields.skillDetailMinHeight)
           ? (skillDetailMinHeight = this->fields.skillDetailMinHeight)
-          : (skillDetailMinHeight = v23),
+          : (skillDetailMinHeight = v26),
             !SkillDetail
          || (partition = this->fields.partition,
              (SkillDetail = (System_String_o *)UnityEngine_Component__get_transform(
                                                  (UnityEngine_Component_o *)SkillDetail,
                                                  0)) == 0)) )
       {
-        sub_1D0F30C(SkillDetail, v22);
+        sub_21FFECC(SkillDetail, v25);
       }
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)SkillDetail, 0);
       GameObjectExtensions__SetLocalPositionY(
@@ -180,18 +182,18 @@ bool EventInfoSkillDetailComponent__get_IsShowingPartition(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4E793B9 & 1) == 0 )
+  if ( (byte_593A464 & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E793B9 = 1;
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_593A464 = 1;
   }
   partition = (UnityEngine_Object_o *)this->fields.partition;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Inequality(partition, 0, 0) )
     return 0;
   v5 = this->fields.partition;
   if ( !v5 )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return UnityEngine_GameObject__get_activeSelf(v5, 0);
 }

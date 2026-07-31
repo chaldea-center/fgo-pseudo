@@ -1,13 +1,13 @@
 void LoginQuestEntity___ctor(LoginQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77B5F & 1) == 0 )
+  if ( (byte_5938B74 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E77B5F = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_5938B74 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,5 +19,15 @@ int32_t LoginQuestEntity__CreatePrimaryKey(LoginQuestEntity_o *this, const Metho
 
 bool LoginQuestEntity__IsEnablePeriod(LoginQuestEntity_o *this, int64_t time, const MethodInfo *method)
 {
-  return this->fields.startedAt <= time && (this->fields.endedAt == 0 || this->fields.endedAt >= time);
+  int64_t endedAt; // x8
+  bool v5; // cc
+
+  if ( this->fields.startedAt > time )
+    return 0;
+  endedAt = this->fields.endedAt;
+  if ( endedAt )
+    v5 = endedAt < time;
+  else
+    v5 = 0;
+  return !v5;
 }

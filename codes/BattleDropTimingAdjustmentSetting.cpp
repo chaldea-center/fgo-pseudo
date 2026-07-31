@@ -1,25 +1,25 @@
 void BattleDropTimingAdjustmentSetting___ctor(BattleDropTimingAdjustmentSetting_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
 
-  if ( (byte_4E7A1CC & 1) == 0 )
+  if ( (byte_593B230 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
-    byte_4E7A1CC = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+    byte_593B230 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
   this->fields.dropTimingDatas = (struct System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__o *)v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 

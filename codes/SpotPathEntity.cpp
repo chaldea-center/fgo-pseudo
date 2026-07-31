@@ -1,13 +1,13 @@
 void SpotPathEntity___ctor(SpotPathEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E782ED & 1) == 0 )
+  if ( (byte_593931B & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_int___ctor__);
-    byte_4E782ED = 1;
+    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
+    byte_593931B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3533444 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ int32_t SpotPathEntity__GetMapGimmickEffectId(SpotPathEntity_o *this, const Meth
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E782EC & 1) == 0 )
+  if ( (byte_593931A & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21846/*"mapGimmickEffectId"*/);
-    byte_4E782EC = 1;
+    sub_21FFC50(&StringLiteral_22462/*"mapGimmickEffectId"*/);
+    byte_593931A = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21846/*"mapGimmickEffectId"*/, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22462/*"mapGimmickEffectId"*/, 0, v2);
 }
 
 
@@ -34,12 +34,12 @@ int32_t SpotPathEntity__GetMapGimmickId(SpotPathEntity_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E782EB & 1) == 0 )
+  if ( (byte_5939319 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_21847/*"mapGimmickId"*/);
-    byte_4E782EB = 1;
+    sub_21FFC50(&StringLiteral_22463/*"mapGimmickId"*/);
+    byte_5939319 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21847/*"mapGimmickId"*/, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22463/*"mapGimmickId"*/, 0, v2);
 }
 
 
@@ -53,12 +53,12 @@ bool SpotPathEntity__IsStopRaidDeadTime(SpotPathEntity_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4E782EA & 1) == 0 )
+  if ( (byte_5939318 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_24192/*"stopRaidDeadTime"*/);
-    byte_4E782EA = 1;
+    sub_21FFC50(&StringLiteral_24926/*"stopRaidDeadTime"*/);
+    byte_5939318 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24192/*"stopRaidDeadTime"*/, 0, v2) != 0;
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24926/*"stopRaidDeadTime"*/, 0, v2) != 0;
 }
 
 
@@ -71,24 +71,18 @@ int32_t SpotPathEntity__getScriptIntParam(
 {
   int32_t v4; // w19
   Il2CppObject *ScriptObj; // x0
-  __int64 v8; // x2
-  __int64 v9; // x3
-  SpotPathEntity_o *v11; // x0
-  const MethodInfo *v12; // x1
+  __int64 v6; // x2
+  SpotPathEntity_o *v8; // x0
+  const MethodInfo *v9; // x1
 
   v4 = defVal;
-  if ( (byte_4E782E9 & 1) == 0 )
-  {
-    sub_1D0F0B4(&long_TypeInfo);
-    byte_4E782E9 = 1;
-  }
   ScriptObj = SpotPathEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
-  if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1D0F6A8(ScriptObj);
-  return SpotPathEntity__IsStopRaidDeadTime(v11, v12);
+  if ( ScriptObj->klass->_1.element_class == *(Il2CppClass **)(qword_594C090 + 64) )
+    return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, qword_594C090, v6);
+  sub_220024C(ScriptObj, qword_594C090, v6);
+  return SpotPathEntity__IsStopRaidDeadTime(v8, v9);
 }
 
 
@@ -97,12 +91,13 @@ Il2CppObject *SpotPathEntity__getScriptObj(SpotPathEntity_o *this, System_String
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4E782E8 & 1) == 0 )
+  if ( (byte_5939317 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4E782E8 = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_5939317 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
+  value = 0;
   if ( result )
   {
     value = 0;
@@ -110,7 +105,7 @@ Il2CppObject *SpotPathEntity__getScriptObj(SpotPathEntity_o *this, System_String
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3602DF0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

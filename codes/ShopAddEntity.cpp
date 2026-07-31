@@ -1,13 +1,13 @@
 void ShopAddEntity___ctor(ShopAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E781D0 & 1) == 0 )
+  if ( (byte_59391EC & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E781D0 = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59391EC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ShopAddEntity__CreatePK(
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4E781CF & 1) == 0 )
+  if ( (byte_59391EB & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4E781CF = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59391EB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            shopId,
            priority,
            overwriteType,
-           (const MethodInfo_324D7D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

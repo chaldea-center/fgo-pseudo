@@ -1,12 +1,14 @@
 void SummonLimitWarningDlgComponent___ctor(SummonLimitWarningDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E73AA4 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_5934A76 & 1) == 0 )
   {
-    sub_1D0F0B4(&BaseDialog_TypeInfo);
-    byte_4E73AA4 = 1;
+    sub_21FFC50(&BaseDialog_TypeInfo);
+    byte_5934A76 = 1;
   }
-  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -15,42 +17,44 @@ void SummonLimitWarningDlgComponent__Close(SummonLimitWarningDlgComponent_o *thi
 {
   const MethodInfo *v2; // x2
 
-  SummonLimitWarningDlgComponent__Close_36759668(this, 0, v2);
+  SummonLimitWarningDlgComponent__Close_42377128(this, 0, v2);
 }
 
 
-void SummonLimitWarningDlgComponent__Close_36759668(
+void SummonLimitWarningDlgComponent__Close_42377128(
         SummonLimitWarningDlgComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
-  System_Action_o *v10; // x20
+  bool v6; // w6
+  bool v7; // w7
+  System_Action_c *v10; // x0
+  System_Action_o *v11; // x20
 
-  if ( (byte_4E73A9F & 1) == 0 )
+  if ( (byte_5934A71 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_EndClose__);
-    byte_4E73A9F = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_EndClose__);
+    byte_5934A71 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,
     v6,
     v7);
+  v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
+  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
 
 
@@ -58,24 +62,24 @@ void SummonLimitWarningDlgComponent__EndClose(SummonLimitWarningDlgComponent_o *
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   struct System_Action_o *closeCallbackFunc; // x20
 
   SummonLimitWarningDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))closeCallbackFunc->fields.invoke_impl)(
       closeCallbackFunc->fields.method_code,
       closeCallbackFunc->fields.method);
@@ -94,10 +98,10 @@ void SummonLimitWarningDlgComponent__Init(SummonLimitWarningDlgComponent_o *this
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E73A9B & 1) == 0 )
+  if ( (byte_5934A6D & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E73A9B = 1;
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5934A6D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -145,7 +149,7 @@ void SummonLimitWarningDlgComponent__Init(SummonLimitWarningDlgComponent_o *this
         (gameObject = (UnityEngine_GameObject_o *)this->fields.settingLabel) == 0) )
   {
 LABEL_17:
-    sub_1D0F30C(gameObject, v4);
+    sub_21FFECC(gameObject, v4);
   }
   UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -160,18 +164,18 @@ void SummonLimitWarningDlgComponent__OnClickCancel(SummonLimitWarningDlgComponen
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4E73AA2 & 1) == 0 )
+  if ( (byte_5934A74 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_OnClickCancel__);
-    byte_4E73AA2 = 1;
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_OnClickCancel__);
+    byte_5934A74 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SummonLimitWarningDlgComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_SummonLimitWarningDlgComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SummonLimitWarningDlgComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SummonLimitWarningDlgComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     SummonLimitWarningDlgComponent__SetButtonEnable(this, 0, v5);
     SummonLimitWarningDlgComponent__callback(this, 0, v6);
@@ -186,18 +190,18 @@ void SummonLimitWarningDlgComponent__OnClickDecide(SummonLimitWarningDlgComponen
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4E73AA0 & 1) == 0 )
+  if ( (byte_5934A72 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_OnClickDecide__);
-    byte_4E73AA0 = 1;
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_OnClickDecide__);
+    byte_5934A72 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SummonLimitWarningDlgComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_SummonLimitWarningDlgComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SummonLimitWarningDlgComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SummonLimitWarningDlgComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     SummonLimitWarningDlgComponent__SetButtonEnable(this, 0, v5);
     SummonLimitWarningDlgComponent__callback(this, 2, v6);
@@ -214,18 +218,18 @@ void SummonLimitWarningDlgComponent__OnClickOtherScene(
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4E73AA1 & 1) == 0 )
+  if ( (byte_5934A73 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_OnClickOtherScene__);
-    byte_4E73AA1 = 1;
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_OnClickOtherScene__);
+    byte_5934A73 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SummonLimitWarningDlgComponent_OnClickOtherScene__;
     if ( (*((_BYTE *)Method_SummonLimitWarningDlgComponent_OnClickOtherScene__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1D0F0CC(Method_SummonLimitWarningDlgComponent_OnClickOtherScene__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+      v3 = (_QWORD *)sub_21FFC68(Method_SummonLimitWarningDlgComponent_OnClickOtherScene__);
+    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     SummonLimitWarningDlgComponent__SetButtonEnable(this, 0, v5);
     SummonLimitWarningDlgComponent__callback(this, 1, v6);
@@ -242,23 +246,23 @@ void SummonLimitWarningDlgComponent__OnClickSetting(SummonLimitWarningDlgCompone
   AutomaticSaleDlgComponent_o *autoSaleDlgInfo; // x20
   AutomaticSaleDlgComponent_CallbackFunc_o *v8; // x21
 
-  if ( (byte_4E73AA3 & 1) == 0 )
+  if ( (byte_5934A75 & 1) == 0 )
   {
-    sub_1D0F0B4(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_OnClickSetting__);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_settingResult__);
-    byte_4E73AA3 = 1;
+    sub_21FFC50(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_OnClickSetting__);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_settingResult__);
+    byte_5934A75 = 1;
   }
   v3 = Method_SummonLimitWarningDlgComponent_OnClickSetting__;
   if ( (*((_BYTE *)Method_SummonLimitWarningDlgComponent_OnClickSetting__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1D0F0CC(Method_SummonLimitWarningDlgComponent_OnClickSetting__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1D0F098(v3, v3[4]);
+    v3 = (_QWORD *)sub_21FFC68(Method_SummonLimitWarningDlgComponent_OnClickSetting__);
+  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0),
         autoSaleDlgInfo = this->fields.autoSaleDlgInfo,
-        v8 = (AutomaticSaleDlgComponent_CallbackFunc_o *)sub_1D0F300(AutomaticSaleDlgComponent_CallbackFunc_TypeInfo),
+        v8 = (AutomaticSaleDlgComponent_CallbackFunc_o *)sub_21FFEBC(AutomaticSaleDlgComponent_CallbackFunc_TypeInfo),
         AutomaticSaleDlgComponent_CallbackFunc___ctor(
           v8,
           (Il2CppObject *)this,
@@ -266,7 +270,7 @@ void SummonLimitWarningDlgComponent__OnClickSetting(SummonLimitWarningDlgCompone
           0),
         !autoSaleDlgInfo) )
   {
-    sub_1D0F30C(gameObject, v6);
+    sub_21FFECC(gameObject, v6);
   }
   AutomaticSaleDlgComponent__Open(autoSaleDlgInfo, v8, 0);
 }
@@ -280,57 +284,69 @@ void SummonLimitWarningDlgComponent__OpenManaWarning(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   UnityEngine_GameObject_o *v21; // x20
+  __int64 v22; // x1
+  __int64 v23; // x2
   UILabel_o *titleLabel; // x21
   UILabel_o *msgLabel; // x21
-  System_String_o *v24; // x22
-  __int64 v25; // x0
-  BalanceConfig_c *v26; // x8
-  Il2CppObject *v27; // x20
-  Il2CppObject *v28; // x0
+  System_String_o *v26; // x22
+  __int64 v27; // x0
+  __int64 v28; // x1
+  __int64 v29; // x2
+  BalanceConfig_c *v30; // x8
+  Il2CppObject *v31; // x20
+  Il2CppObject *v32; // x0
   UILabel_o *otherLabel; // x20
   UILabel_o *cancelLabel; // x20
   UILabel_o *settingLabel; // x20
-  const MethodInfo *v32; // x2
-  System_Action_o *v33; // x20
+  const MethodInfo *v36; // x2
+  System_Action_c *v37; // x0
+  System_Action_o *v38; // x20
   int32_t UserItemMax; // [xsp+8h] [xbp-38h] BYREF
   int klass; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E73A9D & 1) == 0 )
+  if ( (byte_5934A6F & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&int_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_EndOpen__);
-    sub_1D0F0B4(&StringLiteral_12635/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/);
-    sub_1D0F0B4(&StringLiteral_12636/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/);
-    sub_1D0F0B4(&StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_12637/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/);
-    byte_4E73A9D = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_EndOpen__);
+    sub_21FFC50(&StringLiteral_12956/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/);
+    sub_21FFC50(&StringLiteral_12957/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/);
+    sub_21FFC50(&StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_12958/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/);
+    byte_5934A6F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   this->fields.autoSaleDialogCloseCallbackFunc = autoSaleDialogCloseCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
     (int32_t)autoSaleDialogCloseCallback,
     v15,
     v16,
@@ -417,53 +433,54 @@ void SummonLimitWarningDlgComponent__OpenManaWarning(
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   titleLabel = this->fields.titleLabel;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12637/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v22, v23);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12958/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_37;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   msgLabel = this->fields.msgLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12636/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12957/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/, 0);
   if ( !v21 )
     goto LABEL_37;
-  v24 = (System_String_o *)gameObject;
+  v26 = (System_String_o *)gameObject;
   klass = (int)v21[8].klass;
-  v25 = j_il2cpp_value_box_0(int_TypeInfo, &klass);
-  v26 = BalanceConfig_TypeInfo;
-  v27 = (Il2CppObject *)v25;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v27 = j_il2cpp_value_box_0(qword_594C070, &klass);
+  v30 = BalanceConfig_TypeInfo;
+  v31 = (Il2CppObject *)v27;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v26 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v28, v29);
+    v30 = BalanceConfig_TypeInfo;
   }
-  UserItemMax = v26->static_fields->UserItemMax;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &UserItemMax);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_65604080(v24, v27, v28, 0);
+  UserItemMax = v30->static_fields->UserItemMax;
+  v32 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &UserItemMax);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v26, v31, v32, 0);
   if ( !msgLabel )
     goto LABEL_37;
   UILabel__set_text(msgLabel, (System_String_o *)gameObject, 0);
   otherLabel = this->fields.otherLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12635/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12956/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/, 0);
   if ( !otherLabel
     || (UILabel__set_text(otherLabel, (System_String_o *)gameObject, 0),
         cancelLabel = this->fields.cancelLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0),
         settingLabel = this->fields.settingLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
         !settingLabel) )
   {
 LABEL_37:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
   UILabel__set_text(settingLabel, (System_String_o *)gameObject, 0);
-  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v32);
+  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v36);
+  v37 = System_Action_TypeInfo;
   this->fields.state = 1;
-  v33 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v33, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v33, 0, 0, 0);
+  v38 = (System_Action_o *)sub_21FFEBC(v37);
+  System_Action___ctor(v38, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v38, 0, 0, 0);
 }
 
 
@@ -475,66 +492,78 @@ void SummonLimitWarningDlgComponent__OpenQpWarning(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   UnityEngine_GameObject_o *v21; // x20
   UnityEngine_GameObject_o *v22; // x0
   UnityEngine_GameObject_o *v23; // x0
   UnityEngine_GameObject_o *v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x2
   UILabel_o *titleLabel2; // x21
   UILabel_o *warningLabel; // x21
   UILabel_o *confirmLabel; // x21
   UILabel_o *qpLabel; // x21
-  System_String_o *v29; // x22
-  __int64 v30; // x0
-  BalanceConfig_c *v31; // x8
-  Il2CppObject *v32; // x20
-  Il2CppObject *v33; // x0
+  System_String_o *v31; // x22
+  __int64 v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x2
+  BalanceConfig_c *v35; // x8
+  Il2CppObject *v36; // x20
+  Il2CppObject *v37; // x0
   UILabel_o *decideLabel; // x20
   UILabel_o *otherLabel2; // x20
   UILabel_o *cancelLabel2; // x20
   UILabel_o *settingLabel; // x20
-  const MethodInfo *v38; // x2
-  System_Action_o *v39; // x20
+  const MethodInfo *v42; // x2
+  System_Action_c *v43; // x0
+  System_Action_o *v44; // x20
   int64_t QpMax; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_GameObject_c *klass; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E73A9C & 1) == 0 )
+  if ( (byte_5934A6E & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&long_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_EndOpen__);
-    sub_1D0F0B4(&StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/);
-    sub_1D0F0B4(&StringLiteral_12644/*"SUMMON_QP_LIMIT_WARNING_MSG"*/);
-    sub_1D0F0B4(&StringLiteral_12642/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/);
-    sub_1D0F0B4(&StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_12647/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/);
-    sub_1D0F0B4(&StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_12645/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/);
-    sub_1D0F0B4(&StringLiteral_12643/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/);
-    byte_4E73A9C = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_EndOpen__);
+    sub_21FFC50(&StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/);
+    sub_21FFC50(&StringLiteral_12965/*"SUMMON_QP_LIMIT_WARNING_MSG"*/);
+    sub_21FFC50(&StringLiteral_12963/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/);
+    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_12968/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/);
+    sub_21FFC50(&StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_12966/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/);
+    sub_21FFC50(&StringLiteral_12964/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/);
+    byte_5934A6E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_43;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   this->fields.autoSaleDialogCloseCallbackFunc = autoSaleDialogCloseCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
     (int32_t)autoSaleDialogCloseCallback,
     v15,
     v16,
@@ -624,80 +653,81 @@ void SummonLimitWarningDlgComponent__OpenQpWarning(
   if ( !gameObject )
     goto LABEL_43;
   v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v22, 8.0, 152.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v22, 8.0, 152.0, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.warningLabel;
   if ( !gameObject )
     goto LABEL_43;
   v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v23, 8.0, 87.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v23, 8.0, 87.0, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.confirmLabel;
   if ( !gameObject )
     goto LABEL_43;
   v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v24, 2.0, 49.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v24, 2.0, 49.0, 0);
   titleLabel2 = this->fields.titleLabel2;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12645/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12966/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/, 0);
   if ( !titleLabel2 )
     goto LABEL_43;
   UILabel__set_text(titleLabel2, (System_String_o *)gameObject, 0);
   warningLabel = this->fields.warningLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12647/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12968/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/, 0);
   if ( !warningLabel )
     goto LABEL_43;
   UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
   confirmLabel = this->fields.confirmLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12642/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12963/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0);
   if ( !confirmLabel )
     goto LABEL_43;
   UILabel__set_text(confirmLabel, (System_String_o *)gameObject, 0);
   qpLabel = this->fields.qpLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12644/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12965/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0);
   if ( !v21 )
     goto LABEL_43;
-  v29 = (System_String_o *)gameObject;
+  v31 = (System_String_o *)gameObject;
   klass = v21[4].klass;
-  v30 = j_il2cpp_value_box_0(long_TypeInfo, &klass);
-  v31 = BalanceConfig_TypeInfo;
-  v32 = (Il2CppObject *)v30;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v32 = j_il2cpp_value_box_0(qword_594C090, &klass);
+  v35 = BalanceConfig_TypeInfo;
+  v36 = (Il2CppObject *)v32;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v31 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v33, v34);
+    v35 = BalanceConfig_TypeInfo;
   }
-  QpMax = v31->static_fields->QpMax;
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &QpMax);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_65604080(v29, v32, v33, 0);
+  QpMax = v35->static_fields->QpMax;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &QpMax);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v31, v36, v37, 0);
   if ( !qpLabel )
     goto LABEL_43;
   UILabel__set_text(qpLabel, (System_String_o *)gameObject, 0);
   decideLabel = this->fields.decideLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideLabel )
     goto LABEL_43;
   UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0);
   otherLabel2 = this->fields.otherLabel2;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12643/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12964/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0);
   if ( !otherLabel2
     || (UILabel__set_text(otherLabel2, (System_String_o *)gameObject, 0),
         cancelLabel2 = this->fields.cancelLabel2,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
         !cancelLabel2)
     || (UILabel__set_text(cancelLabel2, (System_String_o *)gameObject, 0),
         settingLabel = this->fields.settingLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
         !settingLabel) )
   {
 LABEL_43:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
   UILabel__set_text(settingLabel, (System_String_o *)gameObject, 0);
-  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v38);
+  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v42);
+  v43 = System_Action_TypeInfo;
   this->fields.state = 1;
-  v39 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v39, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0, 0);
+  v44 = (System_Action_o *)sub_21FFEBC(v43);
+  System_Action___ctor(v44, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v44, 0, 0, 0);
 }
 
 
@@ -709,66 +739,78 @@ void SummonLimitWarningDlgComponent__OpenQpWarning2(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
+  bool v19; // w6
+  bool v20; // w7
   UnityEngine_GameObject_o *v21; // x20
   UnityEngine_GameObject_o *v22; // x0
   UnityEngine_GameObject_o *v23; // x0
   UnityEngine_GameObject_o *v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x2
   UILabel_o *titleLabel2; // x21
   UILabel_o *warningLabel; // x21
   UILabel_o *confirmLabel; // x21
   UILabel_o *qpLabel; // x21
-  System_String_o *v29; // x22
-  __int64 v30; // x0
-  BalanceConfig_c *v31; // x8
-  Il2CppObject *v32; // x20
-  Il2CppObject *v33; // x0
+  System_String_o *v31; // x22
+  __int64 v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x2
+  BalanceConfig_c *v35; // x8
+  Il2CppObject *v36; // x20
+  Il2CppObject *v37; // x0
   UILabel_o *decideLabel; // x20
   UILabel_o *otherLabel2; // x20
   UILabel_o *cancelLabel2; // x20
   UILabel_o *settingLabel; // x20
-  const MethodInfo *v38; // x2
-  System_Action_o *v39; // x20
+  const MethodInfo *v42; // x2
+  System_Action_c *v43; // x0
+  System_Action_o *v44; // x20
   int64_t QpMax; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_GameObject_c *klass; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4E73A9E & 1) == 0 )
+  if ( (byte_5934A70 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_TypeInfo);
-    sub_1D0F0B4(&BalanceConfig_TypeInfo);
-    sub_1D0F0B4(&long_TypeInfo);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SummonLimitWarningDlgComponent_EndOpen__);
-    sub_1D0F0B4(&StringLiteral_12648/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/);
-    sub_1D0F0B4(&StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/);
-    sub_1D0F0B4(&StringLiteral_12644/*"SUMMON_QP_LIMIT_WARNING_MSG"*/);
-    sub_1D0F0B4(&StringLiteral_12646/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/);
-    sub_1D0F0B4(&StringLiteral_12642/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/);
-    sub_1D0F0B4(&StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1D0F0B4(&StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
-    sub_1D0F0B4(&StringLiteral_12643/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/);
-    byte_4E73A9E = 1;
+    sub_21FFC50(&System_Action_TypeInfo);
+    sub_21FFC50(&BalanceConfig_TypeInfo);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SummonLimitWarningDlgComponent_EndOpen__);
+    sub_21FFC50(&StringLiteral_12969/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/);
+    sub_21FFC50(&StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/);
+    sub_21FFC50(&StringLiteral_12965/*"SUMMON_QP_LIMIT_WARNING_MSG"*/);
+    sub_21FFC50(&StringLiteral_12967/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/);
+    sub_21FFC50(&StringLiteral_12963/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/);
+    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_21FFC50(&StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/);
+    sub_21FFC50(&StringLiteral_12964/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/);
+    byte_5934A70 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_43;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)callback, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   this->fields.autoSaleDialogCloseCallbackFunc = autoSaleDialogCloseCallback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
     (int32_t)autoSaleDialogCloseCallback,
     v15,
     v16,
@@ -858,80 +900,81 @@ void SummonLimitWarningDlgComponent__OpenQpWarning2(
   if ( !gameObject )
     goto LABEL_43;
   v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v22, 8.0, 140.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v22, 8.0, 140.0, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.warningLabel;
   if ( !gameObject )
     goto LABEL_43;
   v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v23, 8.0, 74.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v23, 8.0, 74.0, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.confirmLabel;
   if ( !gameObject )
     goto LABEL_43;
   v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-  GameObjectExtensions__SetLocalPosition_37343212(v24, 3.0, 49.0, 0);
+  GameObjectExtensions__SetLocalPosition_42876120(v24, 3.0, 49.0, 0);
   titleLabel2 = this->fields.titleLabel2;
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12646/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/, 0);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12967/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/, 0);
   if ( !titleLabel2 )
     goto LABEL_43;
   UILabel__set_text(titleLabel2, (System_String_o *)gameObject, 0);
   warningLabel = this->fields.warningLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12648/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12969/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/, 0);
   if ( !warningLabel )
     goto LABEL_43;
   UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0);
   confirmLabel = this->fields.confirmLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12642/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12963/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0);
   if ( !confirmLabel )
     goto LABEL_43;
   UILabel__set_text(confirmLabel, (System_String_o *)gameObject, 0);
   qpLabel = this->fields.qpLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12644/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12965/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0);
   if ( !v21 )
     goto LABEL_43;
-  v29 = (System_String_o *)gameObject;
+  v31 = (System_String_o *)gameObject;
   klass = v21[4].klass;
-  v30 = j_il2cpp_value_box_0(long_TypeInfo, &klass);
-  v31 = BalanceConfig_TypeInfo;
-  v32 = (Il2CppObject *)v30;
-  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v32 = j_il2cpp_value_box_0(qword_594C090, &klass);
+  v35 = BalanceConfig_TypeInfo;
+  v36 = (Il2CppObject *)v32;
+  if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v31 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v33, v34);
+    v35 = BalanceConfig_TypeInfo;
   }
-  QpMax = v31->static_fields->QpMax;
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &QpMax);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_65604080(v29, v32, v33, 0);
+  QpMax = v35->static_fields->QpMax;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &QpMax);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v31, v36, v37, 0);
   if ( !qpLabel )
     goto LABEL_43;
   UILabel__set_text(qpLabel, (System_String_o *)gameObject, 0);
   decideLabel = this->fields.decideLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3725/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideLabel )
     goto LABEL_43;
   UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0);
   otherLabel2 = this->fields.otherLabel2;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12643/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12964/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0);
   if ( !otherLabel2
     || (UILabel__set_text(otherLabel2, (System_String_o *)gameObject, 0),
         cancelLabel2 = this->fields.cancelLabel2,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12952/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0),
         !cancelLabel2)
     || (UILabel__set_text(cancelLabel2, (System_String_o *)gameObject, 0),
         settingLabel = this->fields.settingLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12594/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/, 0),
         !settingLabel) )
   {
 LABEL_43:
-    sub_1D0F30C(gameObject, v8);
+    sub_21FFECC(gameObject, v8);
   }
   UILabel__set_text(settingLabel, (System_String_o *)gameObject, 0);
-  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v38);
+  SummonLimitWarningDlgComponent__SetButtonEnable(this, 1, v42);
+  v43 = System_Action_TypeInfo;
   this->fields.state = 1;
-  v39 = (System_Action_o *)sub_1D0F300(System_Action_TypeInfo);
-  System_Action___ctor(v39, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0, 0);
+  v44 = (System_Action_o *)sub_21FFEBC(v43);
+  System_Action___ctor(v44, (Il2CppObject *)this, Method_SummonLimitWarningDlgComponent_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v44, 0, 0, 0);
 }
 
 
@@ -942,17 +985,15 @@ void SummonLimitWarningDlgComponent__SetButtonEnable(
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *decideButton; // x0
-  bool v5; // w20
 
   decideButton = (UnityEngine_Behaviour_o *)this->fields.decideButton;
   if ( !decideButton
-    || (v5 = isEnable,
-        UnityEngine_Behaviour__set_enabled(decideButton, isEnable, 0),
+    || (UnityEngine_Behaviour__set_enabled(decideButton, isEnable, 0),
         (decideButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
   {
-    sub_1D0F30C(decideButton, isEnable);
+    sub_21FFECC(decideButton, isEnable);
   }
-  UnityEngine_Behaviour__set_enabled(decideButton, v5, 0);
+  UnityEngine_Behaviour__set_enabled(decideButton, isEnable, 0);
 }
 
 
@@ -962,37 +1003,37 @@ void SummonLimitWarningDlgComponent__add_callbackFunc(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc; // x21
-  struct SummonLimitWarningDlgComponent_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  SummonLimitWarningDlgComponent_o *v10; // x0
-  SummonLimitWarningDlgComponent_CallbackFunc_o *v11; // x1
-  const MethodInfo *v12; // x2
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  SummonLimitWarningDlgComponent_o *v11; // x0
+  SummonLimitWarningDlgComponent_CallbackFunc_o *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4E73A99 & 1) == 0 )
+  if ( (byte_5934A6B & 1) == 0 )
   {
-    sub_1D0F0B4(&SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo);
-    byte_4E73A99 = 1;
+    sub_21FFC50(&SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo);
+    byte_5934A6B = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Combine(callbackFunc, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (SummonLimitWarningDlgComponent_CallbackFunc_c *)v7->klass != SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo )
+      if ( (SummonLimitWarningDlgComponent_CallbackFunc_c *)v6->klass != SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v10 = v9 == (_QWORD)callbackFunc;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  sub_1D0F6A8(v7);
-  SummonLimitWarningDlgComponent__remove_callbackFunc(v10, v11, v12);
+  sub_220024C(v6, SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo, v7, v8);
+  SummonLimitWarningDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
 
@@ -1001,27 +1042,35 @@ void SummonLimitWarningDlgComponent__callback(
         int32_t result,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   struct SummonLimitWarningDlgComponent_CallbackFunc_o *callbackFunc; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
+      0,
+      (System_String_o *)method,
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
     this->fields.autoSaleDialogCloseCallbackFunc = 0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
       0,
       v11,
       v12,
@@ -1043,36 +1092,36 @@ void SummonLimitWarningDlgComponent__remove_callbackFunc(
         const MethodInfo *method)
 {
   System_Delegate_o *callbackFunc; // x21
-  struct SummonLimitWarningDlgComponent_CallbackFunc_o **p_callbackFunc; // x20
-  System_Delegate_o *v7; // x0
-  __int64 v8; // x0
-  bool v9; // zf
-  SummonLimitWarningDlgComponent_o *v10; // x0
-  const MethodInfo *v11; // x1
+  System_Delegate_o *v6; // x0
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x0
+  bool v10; // zf
+  SummonLimitWarningDlgComponent_o *v11; // x0
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4E73A9A & 1) == 0 )
+  if ( (byte_5934A6C & 1) == 0 )
   {
-    sub_1D0F0B4(&SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo);
-    byte_4E73A9A = 1;
+    sub_21FFC50(&SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo);
+    byte_5934A6C = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
   while ( 1 )
   {
-    v7 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0);
-    if ( v7 )
+    v6 = System_Delegate__Remove(callbackFunc, (System_Delegate_o *)value, 0);
+    if ( v6 )
     {
-      if ( (SummonLimitWarningDlgComponent_CallbackFunc_c *)v7->klass != SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo )
+      if ( (SummonLimitWarningDlgComponent_CallbackFunc_c *)v6->klass != SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1D6AE88(p_callbackFunc, v7, callbackFunc);
-    v9 = callbackFunc == (System_Delegate_o *)v8;
-    callbackFunc = (System_Delegate_o *)v8;
-    if ( v9 )
+    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v10 = v9 == (_QWORD)callbackFunc;
+    callbackFunc = (System_Delegate_o *)v9;
+    if ( v10 )
       return;
   }
-  sub_1D0F6A8(v7);
-  SummonLimitWarningDlgComponent__Init(v10, v11);
+  sub_220024C(v6, SummonLimitWarningDlgComponent_CallbackFunc_TypeInfo, v7, v8);
+  SummonLimitWarningDlgComponent__Init(v11, v12);
 }
 
 
@@ -1083,19 +1132,19 @@ void SummonLimitWarningDlgComponent__settingResult(
         const MethodInfo *method)
 {
   AutomaticSaleDlgComponent_o *autoSaleDlgInfo; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  struct System_Action_o *autoSaleDialogCloseCallbackFunc; // x21
-  int32_t v13; // w2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
+  bool v10; // w6
+  bool v11; // w7
+  struct System_Action_o *autoSaleDialogCloseCallbackFunc; // x20
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
   int32_t v16; // w5
-  int64_t v17; // x6
-  System_String_o *v18; // x7
+  bool v17; // w6
+  bool v18; // w7
   const MethodInfo *v19; // x2
 
   autoSaleDlgInfo = this->fields.autoSaleDlgInfo;
@@ -1113,16 +1162,16 @@ void SummonLimitWarningDlgComponent__settingResult(
       return;
     }
 LABEL_8:
-    sub_1D0F30C(autoSaleDlgInfo, res);
+    sub_21FFECC(autoSaleDlgInfo, res);
   }
   autoSaleDialogCloseCallbackFunc = this->fields.autoSaleDialogCloseCallbackFunc;
   if ( autoSaleDialogCloseCallbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v6, v7, v8, v9, v10, v11);
+    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v6, v7, v8, v9, v10, v11);
     this->fields.autoSaleDialogCloseCallbackFunc = 0;
-    sub_1D0F058(
-      (GrandQuestFolderBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
+    sub_21FFBF4(
+      (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
       0,
       v13,
       v14,
@@ -1130,7 +1179,7 @@ LABEL_8:
       v16,
       v17,
       v18);
-    SummonLimitWarningDlgComponent__Close_36759668(this, 0, v19);
+    SummonLimitWarningDlgComponent__Close_42377128(this, 0, v19);
     ((void (__fastcall *)(intptr_t, intptr_t))autoSaleDialogCloseCallbackFunc->fields.invoke_impl)(
       autoSaleDialogCloseCallbackFunc->fields.method_code,
       autoSaleDialogCloseCallbackFunc->fields.method);
@@ -1144,10 +1193,10 @@ void SummonLimitWarningDlgComponent_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -1157,23 +1206,23 @@ void SummonLimitWarningDlgComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1185,9 +1234,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B396E4;
+  this->fields.invoke_impl = (intptr_t)sub_1FF3D44;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3969C;
+  this->fields.extra_arg = (intptr_t)sub_1FF3CFC;
 }
 
 
@@ -1202,14 +1251,14 @@ System_IAsyncResult_o *SummonLimitWarningDlgComponent_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4E73AA5 & 1) == 0 )
+  if ( (byte_5934A77 & 1) == 0 )
   {
-    sub_1D0F0B4(&SummonLimitWarningDlgComponent_Result_TypeInfo);
-    byte_4E73AA5 = 1;
+    sub_21FFC50(&SummonLimitWarningDlgComponent_Result_TypeInfo);
+    byte_5934A77 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(SummonLimitWarningDlgComponent_Result_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1D0F068(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
 }
 
 
@@ -1218,7 +1267,7 @@ void SummonLimitWarningDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

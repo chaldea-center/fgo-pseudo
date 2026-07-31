@@ -1,11 +1,12 @@
 void NGUIFader___ctor(NGUIFader_o *this, const MethodInfo *method)
 {
   this->fields.color.fields.a = 1.0;
-  *(_OWORD *)&this->fields.duration = xmmword_D35F90;
+  *(_OWORD *)&this->fields.duration = xmmword_E934C0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NGUIFader__FadeStart(
         NGUIFader_o *this,
         UnityEngine_Color_o col,
@@ -16,8 +17,8 @@ void NGUIFader__FadeStart(
         const MethodInfo *method)
 {
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   struct NGUIFader_OnFinished_o **p_finishedCallback; // x20
   float a; // s9
   float b; // s10
@@ -25,7 +26,6 @@ void NGUIFader__FadeStart(
   float r; // s12
   __int64 v19; // x1
   struct UIWidget_o *fadeWidget; // x0
-  float v21; // s0
 
   this->fields.finishedCallback = callback;
   p_finishedCallback = &this->fields.finishedCallback;
@@ -33,12 +33,12 @@ void NGUIFader__FadeStart(
   b = col.fields.b;
   g = col.fields.g;
   r = col.fields.r;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.finishedCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.finishedCallback,
     (int32_t)callback,
-    (int32_t)callback,
-    noSetColor,
-    (System_String_o *)method,
+    (System_String_o *)callback,
+    (System_String_o *)noSetColor,
+    (int32_t)method,
     v7,
     v8,
     v9);
@@ -54,30 +54,35 @@ void NGUIFader__FadeStart(
     fadeWidget = this->fields.fadeWidget;
     this->fields.duration = dur;
     this->fields.isFadeIn = isIn;
-    if ( !fadeWidget )
-      sub_1D0F30C(0, v19);
-    v21 = fadeWidget->fields.mColor.fields.a;
     if ( isIn )
     {
-      if ( v21 != 0.0 )
+      if ( fadeWidget )
       {
-        UIWidget__set_color(fadeWidget, this->fields.color, 0);
-        this->fields.color.fields.a = 1.0;
-LABEL_12:
-        this->fields.offsetTime = 0.0;
-        this->fields.durTime = dur;
-        this->fields.isFading = 1;
+        if ( fadeWidget->fields.mColor.fields.a != 0.0 )
+        {
+          UIWidget__set_color(fadeWidget, this->fields.color, 0);
+          this->fields.color.fields.a = 1.0;
+LABEL_13:
+          this->fields.offsetTime = 0.0;
+          this->fields.durTime = dur;
+          this->fields.isFading = 1;
+          return;
+        }
+LABEL_11:
+        if ( *p_finishedCallback )
+          ((void (__fastcall *)(intptr_t, intptr_t))(*p_finishedCallback)->fields.invoke_impl)(
+            (*p_finishedCallback)->fields.method_code,
+            (*p_finishedCallback)->fields.method);
         return;
       }
     }
-    else if ( v21 != 1.0 )
+    else if ( fadeWidget )
     {
-      goto LABEL_12;
+      if ( fadeWidget->fields.mColor.fields.a != 1.0 )
+        goto LABEL_13;
+      goto LABEL_11;
     }
-    if ( *p_finishedCallback )
-      ((void (__fastcall *)(intptr_t, intptr_t))(*p_finishedCallback)->fields.invoke_impl)(
-        (*p_finishedCallback)->fields.method_code,
-        (*p_finishedCallback)->fields.method);
+    sub_21FFECC(fadeWidget, v19);
   }
 }
 
@@ -132,7 +137,7 @@ void NGUIFader__setColor(NGUIFader_o *this, UnityEngine_Color_o col, const Metho
   NGUIFader__setup(this, method);
   fadeWidget = this->fields.fadeWidget;
   if ( !fadeWidget )
-    sub_1D0F30C(0, v8);
+    sub_21FFECC(0, v8);
   v10.fields.b = b;
   v10.fields.a = a;
   v10.fields.r = r;
@@ -148,36 +153,36 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v6; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
   int32_t v11; // w5
-  int64_t v12; // x6
-  System_String_o *v13; // x7
+  bool v12; // w6
+  bool v13; // w7
   struct UIWidget_o *v14; // x8
   __int64 v15; // d0
   float b; // s1
 
-  if ( (byte_4E78E4D & 1) == 0 )
+  if ( (byte_5939E9D & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1D0F0B4(&UnityEngine_Object_TypeInfo);
-    byte_4E78E4D = 1;
+    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    byte_5939E9D = 1;
   }
   p_fadeWidget = &this->fields.fadeWidget;
   fadeWidget = (UnityEngine_Object_o *)this->fields.fadeWidget;
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(fadeWidget, 0, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                gameObject,
-                               (const MethodInfo_32A8444 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___),
+                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___),
           *p_fadeWidget = (struct UIWidget_o *)Component_object,
-          sub_1D0F058(
-            (GrandQuestFolderBoardItem_o *)&this->fields.fadeWidget,
+          sub_21FFBF4(
+            (MissionNaviTransitionBoardItem_o *)&this->fields.fadeWidget,
             (int32_t)Component_object,
             v8,
             v9,
@@ -187,7 +192,7 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
             v13),
           (v14 = *p_fadeWidget) == 0) )
     {
-      sub_1D0F30C(gameObject, v6);
+      sub_21FFECC(gameObject, v6);
     }
     v15 = *(_QWORD *)&v14->fields.mColor.fields.r;
     b = v14->fields.mColor.fields.b;
@@ -203,10 +208,11 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
 void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo *method)
 {
   _BOOL4 isFading; // w8
-  float v4; // s0
-  float durTime; // s1
-  float v7; // s3 OVERLAPPED
+  float v4; // s1
+  float durTime; // s2
+  float v7; // s0
   UIWidget_o *fadeWidget; // x0
+  float v9; // s3 OVERLAPPED
   float g; // s1
   float b; // s2
   float r; // s0
@@ -226,18 +232,20 @@ void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo
     }
     else
     {
-      this->fields.isFading = 0;
       v7 = 1.0;
+      this->fields.isFading = 0;
     }
     fadeWidget = this->fields.fadeWidget;
     if ( !fadeWidget )
-      sub_1D0F30C(0, method);
+      sub_21FFECC(0, method);
     if ( this->fields.isFadeIn )
-      v7 = 1.0 - v7;
-    r = this->fields.color.fields.r;
+      v9 = 1.0 - v7;
+    else
+      v9 = v7;
     g = this->fields.color.fields.g;
     b = this->fields.color.fields.b;
-    UIWidget__set_color(fadeWidget, *(UnityEngine_Color_o *)(&v7 - 3), 0);
+    r = this->fields.color.fields.r;
+    UIWidget__set_color(fadeWidget, *(UnityEngine_Color_o *)(&v9 - 3), 0);
     if ( !this->fields.isFading )
     {
       finishedCallback = this->fields.finishedCallback;
@@ -256,10 +264,10 @@ void NGUIFader_OnFinished___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
   intptr_t v8; // x8
   int v12; // w22
   Il2CppObject *m_target; // x9
@@ -269,23 +277,23 @@ void NGUIFader_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
-    method,
-    (int32_t)a4,
+    (System_String_o *)method,
+    (System_String_o *)a4,
     v4,
     v5,
     v6,
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1D0F174(method) & 1) == 0 )
+  if ( (sub_21FFD28(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1D0F328(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1D0F1DC(v14, 0);
+      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_21FFD90(v14, 0);
     }
     goto LABEL_5;
   }
@@ -297,9 +305,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1B3EA2C;
+  this->fields.invoke_impl = (intptr_t)sub_1FFC190;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1B3E9EC;
+  this->fields.extra_arg = (intptr_t)sub_1FFC150;
 }
 
 
@@ -311,8 +319,7 @@ System_IAsyncResult_o *NGUIFader_OnFinished__BeginInvoke(
 {
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  v5 = 0;
-  return (System_IAsyncResult_o *)sub_1D0F068(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
 }
 
 
@@ -321,7 +328,7 @@ void NGUIFader_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1D0F06C(result, 0, method);
+  sub_21FFC08(result, 0, method);
 }
 
 

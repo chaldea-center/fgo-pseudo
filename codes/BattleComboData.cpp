@@ -1,24 +1,26 @@
 void BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
 {
-  struct System_Boolean_array *v3; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  Il2CppClass *v3; // x0
+  struct System_Boolean_array *v4; // x0
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
+  int32_t v8; // w5
+  bool v9; // w6
+  bool v10; // w7
 
-  if ( (byte_4E7A595 & 1) == 0 )
+  if ( (byte_593B5F6 & 1) == 0 )
   {
-    sub_1D0F0B4(&bool___TypeInfo);
-    byte_4E7A595 = 1;
+    sub_21FFC50(&bool___TypeInfo);
+    byte_593B5F6 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
+  v3 = bool___TypeInfo;
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v3 = (struct System_Boolean_array *)sub_1D0F15C(bool___TypeInfo, 3);
-  this->fields.sameflg = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v4 = (struct System_Boolean_array *)sub_21FFD10(v3, 3);
+  this->fields.sameflg = v4;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sameflg, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -27,18 +29,18 @@ bool BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo 
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4E7A596 & 1) == 0 )
+  if ( (byte_593B5F7 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleDataDefine_TypeInfo);
-    byte_4E7A596 = 1;
+    sub_21FFC50(&BattleDataDefine_TypeInfo);
+    byte_593B5F7 = 1;
   }
   if ( this->fields.flash )
     return 1;
   samecount = this->fields.samecount;
   v4 = BattleDataDefine_TypeInfo;
-  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, method);
     v4 = BattleDataDefine_TypeInfo;
   }
   return samecount == v4->static_fields->COMMAND_CARD_NUM_TO_SELECT || this->fields.isMighty;

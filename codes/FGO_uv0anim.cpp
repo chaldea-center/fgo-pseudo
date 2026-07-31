@@ -8,32 +8,40 @@ void FGO_uv0anim___ctor(FGO_uv0anim_o *this, const MethodInfo *method)
 void FGO_uv0anim__Start(FGO_uv0anim_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  bool v8; // w6
+  bool v9; // w7
   __int64 v10; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4E7644D & 1) == 0 )
+  if ( (byte_59373F7 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
-    byte_4E7644D = 1;
+    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
+    byte_59373F7 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3245988 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._renderer,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1D0F30C(renderer, v10);
+    sub_21FFECC(renderer, v10);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
     this->fields.m_Offset,
     0);
 }
@@ -43,17 +51,17 @@ void FGO_uv0anim__Update(FGO_uv0anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4E7644E & 1) == 0 )
+  if ( (byte_59373F8 & 1) == 0 )
   {
-    sub_1D0F0B4(&StringLiteral_16481/*"_MainTex"*/);
-    byte_4E7644E = 1;
+    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
+    byte_59373F8 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1D0F30C(renderer, method);
+    sub_21FFECC(renderer, method);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16481/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
     this->fields.m_Offset,
     0);
 }

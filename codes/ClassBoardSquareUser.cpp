@@ -3,16 +3,24 @@ void ClassBoardSquareUser___ctor(
         ClassBoardSquareEntity_o *masterEntity,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareEntity = masterEntity;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6, v7, v8, v9, v10);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.squareEntity,
+    (int32_t)masterEntity,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -22,25 +30,25 @@ void ClassBoardSquareUser__OnReleaseResponse(
         const MethodInfo *method)
 {
   ClassBoardSquareUser_o *v4; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
+  System_String_o *v5; // x2
+  System_String_o *v6; // x3
+  int32_t v7; // w4
   int32_t v8; // w5
-  int64_t v9; // x6
-  System_String_o *v10; // x7
+  bool v9; // w6
+  bool v10; // w7
   struct System_Action_IClassBoardSquareUser__o *userUpdateEvent; // x8
   struct System_Action_IClassBoardSquareUser__o *releaseResponseCallback; // x8
 
   v4 = this;
-  if ( (byte_4E7B4DF & 1) == 0 )
+  if ( (byte_593C566 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (ClassBoardSquareUser_o *)sub_1D0F0B4(&StringLiteral_22648/*"ng"*/);
-    byte_4E7B4DF = 1;
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (ClassBoardSquareUser_o *)sub_21FFC50(&StringLiteral_23290/*"ng"*/);
+    byte_593C566 = 1;
   }
   if ( !result )
     goto LABEL_11;
-  if ( System_String__Equals_65598092(result, (System_String_o *)StringLiteral_22648/*"ng"*/, 0) )
+  if ( System_String__Equals_75473208(result, (System_String_o *)StringLiteral_23290/*"ng"*/, 0) )
     return;
   userUpdateEvent = v4->fields.userUpdateEvent;
   if ( userUpdateEvent )
@@ -55,11 +63,11 @@ void ClassBoardSquareUser__OnReleaseResponse(
       v4,
       releaseResponseCallback->fields.method);
   v4->fields.releaseResponseCallback = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v4->fields.releaseResponseCallback, 0, v5, v6, v7, v8, v9, v10);
-  this = (ClassBoardSquareUser_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields.releaseResponseCallback, 0, v5, v6, v7, v8, v9, v10);
+  this = (ClassBoardSquareUser_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
 LABEL_11:
-    sub_1D0F30C(this, result);
+    sub_21FFECC(this, result);
   CommonUI__SetConnect((CommonUI_o *)this, 0, 0);
 }
 
@@ -83,49 +91,50 @@ void ClassBoardSquareUser__RequestRelease(
         const MethodInfo *method)
 {
   NetworkManager_ResultCallbackFunc_o *v5; // x21
+  __int64 v6; // x1
   Il2CppObject *Request_object; // x21
-  int32_t v7; // w2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  int32_t v10; // w5
-  int64_t v11; // x6
-  System_String_o *v12; // x7
+  System_String_o *v8; // x2
+  System_String_o *v9; // x3
+  int32_t v10; // w4
+  int32_t v11; // w5
+  bool v12; // w6
+  bool v13; // w7
   Il2CppObject *Instance; // x0
-  __int64 v14; // x1
+  __int64 v15; // x1
   struct ClassBoardSquareEntity_o *squareEntity; // x8
   int32_t classBoardBaseId; // w1
   int32_t id; // w2
   ClassBoardReleaseRequestData_o p_data; // x0
-  ClassBoardReleaseRequestData_o v19; // x1
-  ClassBoardReleaseRequestData_o data; // [xsp+8h] [xbp-38h] BYREF
+  ClassBoardReleaseRequestData_o v20; // x1
+  ClassBoardReleaseRequestData_o data; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4E7B4DE & 1) == 0 )
+  if ( (byte_593C565 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_ClassBoardSquareUser_OnReleaseResponse__);
-    sub_1D0F0B4(&Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
-    sub_1D0F0B4(&NetworkManager_TypeInfo);
-    sub_1D0F0B4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4E7B4DE = 1;
+    sub_21FFC50(&Method_ClassBoardSquareUser_OnReleaseResponse__);
+    sub_21FFC50(&Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
+    sub_21FFC50(&NetworkManager_TypeInfo);
+    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_593C565 = 1;
   }
-  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1D0F300(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v5, (Il2CppObject *)this, Method_ClassBoardSquareUser_OnReleaseResponse__, 0);
-  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6);
   Request_object = NetworkManager__getRequest_object_(
                      v5,
-                     (const MethodInfo_32DC000 *)Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
+                     (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
   this->fields.releaseResponseCallback = callback;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.releaseResponseCallback,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.releaseResponseCallback,
     (int32_t)callback,
-    v7,
     v8,
     v9,
     v10,
     v11,
-    v12);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12,
+    v13);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0), (squareEntity = this->fields.squareEntity) == 0)
     || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
@@ -135,10 +144,10 @@ void ClassBoardSquareUser__RequestRelease(
         ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0),
         !Request_object) )
   {
-    sub_1D0F30C(Instance, v14);
+    sub_21FFECC(Instance, v15);
   }
-  v19 = data;
-  ClassBoardReleaseSquareRequest__beginRequest((ClassBoardReleaseSquareRequest_o *)Request_object, v19, 0);
+  v20 = data;
+  ClassBoardReleaseSquareRequest__beginRequest((ClassBoardReleaseSquareRequest_o *)Request_object, v20, 0);
 }
 
 
@@ -151,18 +160,20 @@ void ClassBoardSquareUser__add_userUpdateEvent(
   System_Delegate_o *v6; // x21
   struct System_Action_IClassBoardSquareUser__o *userUpdateEvent; // t1
   System_Delegate_o *v8; // x0
-  System_Delegate_o *v9; // x22
-  __int64 v10; // x1
-  __int64 v11; // x0
-  bool v12; // zf
-  ClassBoardSquareUser_o *v13; // x0
-  System_Action_IClassBoardSquareUser__o *v14; // x1
-  const MethodInfo *v15; // x2
+  System_Action_IClassBoardSquareUser__c *v9; // x23
+  System_Delegate_o *v10; // x22
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x0
+  bool v14; // zf
+  ClassBoardSquareUser_o *v15; // x0
+  System_Action_IClassBoardSquareUser__o *v16; // x1
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4E7B4DB & 1) == 0 )
+  if ( (byte_593C562 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_IClassBoardSquareUser__TypeInfo);
-    byte_4E7B4DB = 1;
+    sub_21FFC50(&System_Action_IClassBoardSquareUser__TypeInfo);
+    byte_593C562 = 1;
   }
   userUpdateEvent = this->fields.userUpdateEvent;
   p_fields = &this->fields;
@@ -172,22 +183,23 @@ void ClassBoardSquareUser__add_userUpdateEvent(
     v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( !v8 )
     {
-      v10 = 0;
+      v11 = 0;
       goto LABEL_8;
     }
-    v9 = v8;
-    v10 = sub_1D0F1F0(v8, System_Action_IClassBoardSquareUser__TypeInfo);
-    if ( !v10 )
+    v9 = System_Action_IClassBoardSquareUser__TypeInfo;
+    v10 = v8;
+    v11 = sub_21FFDA4(v8, System_Action_IClassBoardSquareUser__TypeInfo);
+    if ( !v11 )
       break;
 LABEL_8:
-    v11 = sub_1D6AE88(p_fields, v10, v6);
-    v12 = v6 == (System_Delegate_o *)v11;
-    v6 = (System_Delegate_o *)v11;
-    if ( v12 )
+    v13 = sub_223767C(p_fields, v11, v6);
+    v14 = v13 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v13;
+    if ( v14 )
       return;
   }
-  sub_1D0F6A8(v9);
-  ClassBoardSquareUser__remove_userUpdateEvent(v13, v14, v15);
+  sub_220024C(v10, v9, v12);
+  ClassBoardSquareUser__remove_userUpdateEvent(v15, v16, v17);
 }
 
 
@@ -196,17 +208,17 @@ bool ClassBoardSquareUser__get_IsRelease(ClassBoardSquareUser_o *this, const Met
   Il2CppObject *Master_object; // x0
   __int64 v4; // x1
 
-  if ( (byte_4E7B4DD & 1) == 0 )
+  if ( (byte_593C564 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
-    sub_1D0F0B4(&DataManager_TypeInfo);
-    byte_4E7B4DD = 1;
+    sub_21FFC50(&Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
+    sub_21FFC50(&DataManager_TypeInfo);
+    byte_593C564 = 1;
   }
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_324F164 *)Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
   if ( !Master_object )
-    sub_1D0F30C(0, v4);
+    sub_21FFECC(0, v4);
   return UserClassBoardSquareMaster__HasSquare(
            (UserClassBoardSquareMaster_o *)Master_object,
            this->fields.squareEntity,
@@ -223,17 +235,19 @@ void ClassBoardSquareUser__remove_userUpdateEvent(
   System_Delegate_o *v6; // x21
   struct System_Action_IClassBoardSquareUser__o *userUpdateEvent; // t1
   System_Delegate_o *v8; // x0
-  System_Delegate_o *v9; // x22
-  __int64 v10; // x1
-  __int64 v11; // x0
-  bool v12; // zf
-  ClassBoardSquareUser_o *v13; // x0
-  const MethodInfo *v14; // x1
+  System_Action_IClassBoardSquareUser__c *v9; // x23
+  System_Delegate_o *v10; // x22
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x0
+  bool v14; // zf
+  ClassBoardSquareUser_o *v15; // x0
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4E7B4DC & 1) == 0 )
+  if ( (byte_593C563 & 1) == 0 )
   {
-    sub_1D0F0B4(&System_Action_IClassBoardSquareUser__TypeInfo);
-    byte_4E7B4DC = 1;
+    sub_21FFC50(&System_Action_IClassBoardSquareUser__TypeInfo);
+    byte_593C563 = 1;
   }
   userUpdateEvent = this->fields.userUpdateEvent;
   p_fields = &this->fields;
@@ -243,20 +257,21 @@ void ClassBoardSquareUser__remove_userUpdateEvent(
     v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( !v8 )
     {
-      v10 = 0;
+      v11 = 0;
       goto LABEL_8;
     }
-    v9 = v8;
-    v10 = sub_1D0F1F0(v8, System_Action_IClassBoardSquareUser__TypeInfo);
-    if ( !v10 )
+    v9 = System_Action_IClassBoardSquareUser__TypeInfo;
+    v10 = v8;
+    v11 = sub_21FFDA4(v8, System_Action_IClassBoardSquareUser__TypeInfo);
+    if ( !v11 )
       break;
 LABEL_8:
-    v11 = sub_1D6AE88(p_fields, v10, v6);
-    v12 = v6 == (System_Delegate_o *)v11;
-    v6 = (System_Delegate_o *)v11;
-    if ( v12 )
+    v13 = sub_223767C(p_fields, v11, v6);
+    v14 = v13 == (_QWORD)v6;
+    v6 = (System_Delegate_o *)v13;
+    if ( v14 )
       return;
   }
-  sub_1D0F6A8(v9);
-  ClassBoardSquareUser__get_IsRelease(v13, v14);
+  sub_220024C(v10, v9, v12);
+  ClassBoardSquareUser__get_IsRelease(v15, v16);
 }

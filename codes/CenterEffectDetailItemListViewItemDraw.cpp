@@ -1,9 +1,9 @@
 void CenterEffectDetailItemListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4E71089 & 1) == 0 )
+  if ( (byte_5931D1C & 1) == 0 )
   {
-    sub_1D0F0B4(&CenterEffectDetailItemListViewItemDraw_TypeInfo);
-    byte_4E71089 = 1;
+    sub_21FFC50(&CenterEffectDetailItemListViewItemDraw_TypeInfo);
+    byte_5931D1C = 1;
   }
   *CenterEffectDetailItemListViewItemDraw_TypeInfo->static_fields = (struct CenterEffectDetailItemListViewItemDraw_StaticFields)0x1000000012LL;
 }
@@ -26,31 +26,34 @@ void CenterEffectDetailItemListViewItemDraw__SetItem(
   __int64 v6; // x1
   SkillEntity_o *v7; // x21
   UICrossNarrowLabel_o *nameTextLabel; // x22
+  __int64 v9; // x1
+  __int64 v10; // x2
   System_String_o *Name; // x23
+  __int64 v12; // x2
   UILabel_o *levelLabel; // x22
-  UILabel_o *v11; // x22
-  System_String_o *v12; // x0
+  UILabel_o *v14; // x22
+  System_String_o *v15; // x0
   UILabel_o *detailLabel; // x20
   System_String_o *EffectExplanation; // x0
   int32_t skillLevel; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4E71088 & 1) == 0 )
+  if ( (byte_5931D1B & 1) == 0 )
   {
-    sub_1D0F0B4(&CenterEffectDetailItemListViewItemDraw_TypeInfo);
-    sub_1D0F0B4(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1D0F0B4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1D0F0B4(&LocalizationManager_TypeInfo);
-    sub_1D0F0B4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1D0F0B4(&StringLiteral_8615/*"Lv."*/);
-    byte_4E71088 = 1;
+    sub_21FFC50(&CenterEffectDetailItemListViewItemDraw_TypeInfo);
+    sub_21FFC50(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_21FFC50(&LocalizationManager_TypeInfo);
+    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_21FFC50(&StringLiteral_8862/*"Lv."*/);
+    byte_5931D1B = 1;
   }
   skillLevel = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3BAC684 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_324F1B8 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SkillMaster___);
   if ( !item )
     goto LABEL_17;
   if ( !Instance )
@@ -58,7 +61,7 @@ void CenterEffectDetailItemListViewItemDraw__SetItem(
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 item->fields.skillId,
-                                (const MethodInfo_3535B7C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( !this->fields.skillIcon )
     goto LABEL_17;
   v7 = (SkillEntity_o *)Instance;
@@ -67,31 +70,31 @@ void CenterEffectDetailItemListViewItemDraw__SetItem(
     goto LABEL_17;
   nameTextLabel = this->fields.nameTextLabel;
   Name = SkillEntity__getName(v7, 0);
-  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
   Instance = (DataManager_o *)LocalizationManager__ReplaceCommonTag(Name, 0, 0);
   if ( !nameTextLabel )
     goto LABEL_17;
   UICrossNarrowLabel__SetCrossNarrowText(nameTextLabel, (System_String_o *)Instance, 0);
   Instance = (DataManager_o *)CenterEffectDetailItemListViewItemDraw_TypeInfo;
   levelLabel = this->fields.levelLabel;
-  if ( !CenterEffectDetailItemListViewItemDraw_TypeInfo->_2.cctor_finished )
-    Instance = (DataManager_o *)j_il2cpp_runtime_class_init_0(CenterEffectDetailItemListViewItemDraw_TypeInfo);
+  if ( !*(&CenterEffectDetailItemListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CenterEffectDetailItemListViewItemDraw_TypeInfo, v6, v12);
   if ( !levelLabel
     || (UILabel__set_fontSize(
           levelLabel,
           CenterEffectDetailItemListViewItemDraw_TypeInfo->static_fields->TITLE_FONT_SIZE,
           0),
-        v11 = this->fields.levelLabel,
+        v14 = this->fields.levelLabel,
         skillLevel = item->fields.skillLevel,
-        v12 = System_Int32__ToString((int32_t)&skillLevel, 0),
-        Instance = (DataManager_o *)System_String__Concat_65562772((System_String_o *)StringLiteral_8615/*"Lv."*/, v12, 0),
-        !v11)
-    || (UILabel__set_text(v11, (System_String_o *)Instance, 0),
+        v15 = System_Int32__ToString((int32_t)&skillLevel, 0),
+        Instance = (DataManager_o *)System_String__Concat_75438412((System_String_o *)StringLiteral_8862/*"Lv."*/, v15, 0),
+        !v14)
+    || (UILabel__set_text(v14, (System_String_o *)Instance, 0),
         (Instance = (DataManager_o *)this->fields.detailLabel) == 0) )
   {
 LABEL_17:
-    sub_1D0F30C(Instance, v6);
+    sub_21FFECC(Instance, v6);
   }
   UILabel__set_fontSize(
     (UILabel_o *)Instance,

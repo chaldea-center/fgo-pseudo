@@ -1,13 +1,13 @@
 void EventScriptReleaseEntity___ctor(EventScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E777ED & 1) == 0 )
+  if ( (byte_59388E3 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_string___ctor__);
-    byte_4E777ED = 1;
+    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
+    byte_59388E3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_35334BC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventScriptReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4E777EB & 1) == 0 )
+  if ( (byte_59388E1 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4E777EB = 1;
+    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_59388E1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            flagId,
            type,
            targetId,
-           (const MethodInfo_324DC90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -53,19 +53,19 @@ int32_t EventScriptReleaseEntity__GetCondType(EventScriptReleaseEntity_o *this, 
 
 bool EventScriptReleaseEntity__isAvailable(EventScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  int32_t targetId; // w20
-  int32_t type; // w21
+  int32_t type; // w20
+  int32_t targetId; // w21
   int64_t value; // x19
 
-  if ( (byte_4E777EC & 1) == 0 )
+  if ( (byte_59388E2 & 1) == 0 )
   {
-    sub_1D0F0B4(&CondType_TypeInfo);
-    byte_4E777EC = 1;
+    sub_21FFC50(&CondType_TypeInfo);
+    byte_59388E2 = 1;
   }
   type = this->fields.type;
   targetId = this->fields.targetId;
   value = this->fields.value;
-  if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+  if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsOpen(type, targetId, value, 0, 0, 0);
 }

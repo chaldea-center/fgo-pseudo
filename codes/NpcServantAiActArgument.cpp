@@ -7,25 +7,23 @@ void NpcServantAiActArgument___ctor(
         int32_t fromProcState,
         const MethodInfo *method)
 {
-  NpcServantAiActArgument_o *v9; // x21
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
   int32_t v13; // w5
-  int64_t v14; // x6
-  System_String_o *v15; // x7
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  bool v14; // w6
+  bool v15; // w7
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
+  bool v20; // w6
+  bool v21; // w7
 
-  v9 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
-  v9->fields._SvtData_k__BackingField = svtData;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&v9->fields._SvtData_k__BackingField,
+  this->fields._SvtData_k__BackingField = svtData;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._SvtData_k__BackingField,
     (int32_t)svtData,
     v10,
     v11,
@@ -33,10 +31,17 @@ void NpcServantAiActArgument___ctor(
     v13,
     v14,
     v15);
-  v9->fields._NpcAi_k__BackingField = npcAi;
-  v9 = (NpcServantAiActArgument_o *)((char *)v9 + 56);
-  LOBYTE(v9[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v9, (int32_t)npcAi, v16, v17, v18, v19, v20, v21);
+  this->fields._NpcAi_k__BackingField = npcAi;
+  this->fields._IsNoMessage_k__BackingField = 0;
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._NpcAi_k__BackingField,
+    (int32_t)npcAi,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
 }
 
 
@@ -51,37 +56,38 @@ void NpcServantAiActArgument__InitCommonTask(
   __int64 v8; // x0
   BattleLogicNpcAi_o *v9; // x23
   BattleActionData_array *v10; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
   BattleActionData_o *v17; // x23
-  BattleLogicNpcAi_o *v18; // x23
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  int32_t v22; // w5
-  int64_t v23; // x6
-  System_String_o *v24; // x7
-  BattleActionData_o *v25; // x20
-  __int64 v26; // x0
+  __int64 v18; // x1
+  BattleLogicNpcAi_o *v19; // x23
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  BattleActionData_o *v26; // x20
+  __int64 v27; // x0
 
-  if ( (byte_4E7A814 & 1) == 0 )
+  if ( (byte_593B93D & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleActionData___TypeInfo);
-    byte_4E7A814 = 1;
+    sub_21FFC50(&BattleActionData___TypeInfo);
+    byte_593B93D = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
   NpcAi_k__BackingField = (__int64)this->fields._NpcAi_k__BackingField;
   if ( !NpcAi_k__BackingField )
     goto LABEL_21;
   NpcAi_k__BackingField = (*(__int64 (__fastcall **)(__int64, struct AiBaseEntity_o *, _QWORD))(*(_QWORD *)NpcAi_k__BackingField
-                                                                                              + 744LL))(
+                                                                                              + 776LL))(
                             NpcAi_k__BackingField,
                             this->fields._AiEnt_k__BackingField,
-                            *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 752LL));
+                            *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 784LL));
   if ( !task )
     goto LABEL_21;
   task->fields.isForcedSpeedOne |= NpcAi_k__BackingField & 1;
@@ -100,12 +106,12 @@ LABEL_8:
     NpcAi_k__BackingField = (__int64)this->fields._NpcAi_k__BackingField;
     if ( !NpcAi_k__BackingField )
       goto LABEL_21;
-    v7 = (*(__int64 (__fastcall **)(__int64, struct AiBaseEntity_o *, _QWORD))(*(_QWORD *)NpcAi_k__BackingField + 760LL))(
+    v7 = (*(__int64 (__fastcall **)(__int64, struct AiBaseEntity_o *, _QWORD))(*(_QWORD *)NpcAi_k__BackingField + 792LL))(
            NpcAi_k__BackingField,
            this->fields._AiEnt_k__BackingField,
-           *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 768LL));
+           *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 800LL));
   }
-  v8 = sub_1D0F15C(BattleActionData___TypeInfo, 2);
+  v8 = sub_21FFD10(BattleActionData___TypeInfo, 2);
   v9 = this->fields._NpcAi_k__BackingField;
   v10 = (BattleActionData_array *)v8;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
@@ -119,38 +125,38 @@ LABEL_8:
   v17 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_1D0F1F0(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_21FFDA4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
     {
 LABEL_23:
-      v26 = sub_1D0F330(NpcAi_k__BackingField);
-      sub_1D0F1DC(v26, 0);
+      v27 = sub_21FFEF0(NpcAi_k__BackingField, v18);
+      sub_21FFD90(v27, 0);
     }
   }
   if ( !LODWORD(v10->max_length) )
     goto LABEL_22;
   v10->m_Items[0] = v17;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
-  v18 = this->fields._NpcAi_k__BackingField;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
+  v19 = this->fields._NpcAi_k__BackingField;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
                             this,
                             this->klass->vtable._4_get_UniqueId.method);
-  if ( !v18 )
+  if ( !v19 )
 LABEL_21:
-    sub_1D0F30C(NpcAi_k__BackingField, v5);
-  NpcAi_k__BackingField = (__int64)BattleLogicNpcAi__MakeStepInAction(v18, NpcAi_k__BackingField, v7 & 1, 0);
-  v25 = (BattleActionData_o *)NpcAi_k__BackingField;
+    sub_21FFECC(NpcAi_k__BackingField, v5);
+  NpcAi_k__BackingField = (__int64)BattleLogicNpcAi__MakeStepInAction(v19, NpcAi_k__BackingField, v7 & 1, 0);
+  v26 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_1D0F1F0(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_21FFDA4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
       goto LABEL_23;
   }
-  if ( LODWORD(v10->max_length) <= 1 )
+  if ( (v10->max_length & 0xFFFFFFFE) == 0 )
 LABEL_22:
-    sub_1D0F314(NpcAi_k__BackingField);
-  v10->m_Items[1] = v25;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&v10->m_Items[1], (int32_t)v25, v19, v20, v21, v22, v23, v24);
+    sub_21FFED4(NpcAi_k__BackingField);
+  v10->m_Items[1] = v26;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
   BattleLogicTask__SetInterruptAction((BattleLogicTask_o *)task, v10, 0);
 }
 
@@ -166,17 +172,17 @@ void NpcServantAiActArgument__set_NpcAi(
         BattleLogicNpcAi_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._NpcAi_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

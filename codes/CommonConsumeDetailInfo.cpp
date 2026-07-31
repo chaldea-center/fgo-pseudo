@@ -5,42 +5,50 @@ void CommonConsumeDetailInfo___ctor(
         Il2CppObject *userOwnStatusEntity,
         const MethodInfo *method)
 {
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
+  bool v13; // w6
+  bool v14; // w7
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
   int32_t v18; // w5
-  int64_t v19; // x6
-  System_String_o *v20; // x7
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
+  bool v19; // w6
+  bool v20; // w7
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
   int32_t v24; // w5
-  int64_t v25; // x6
-  System_String_o *v26; // x7
+  bool v25; // w6
+  bool v26; // w7
   __int64 v27; // x0
   const MethodInfo *v28; // x1
   struct CommonConsumeEntity_o *v29; // x8
   struct System_String_o *TargetName; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
   int32_t v34; // w5
-  int64_t v35; // x6
-  System_String_o *v36; // x7
+  bool v35; // w6
+  bool v36; // w7
   const MethodInfo *v37; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields,
+    (int32_t)commonConsumeEntity,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   this->fields.targetEntity = targetEntity;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.targetEntity,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.targetEntity,
     (int32_t)targetEntity,
     v15,
     v16,
@@ -49,8 +57,8 @@ void CommonConsumeDetailInfo___ctor(
     v19,
     v20);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.userOwnStatusEntity,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.userOwnStatusEntity,
     (int32_t)userOwnStatusEntity,
     v21,
     v22,
@@ -60,12 +68,12 @@ void CommonConsumeDetailInfo___ctor(
     v26);
   v29 = this->fields.CommonConsumeEntity;
   if ( !v29 )
-    sub_1D0F30C(v27, v28);
+    sub_21FFECC(v27, v28);
   this->fields._Num_k__BackingField = v29->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)TargetName,
     v31,
     v32,
@@ -79,27 +87,29 @@ void CommonConsumeDetailInfo___ctor(
 
 bool CommonConsumeDetailInfo__CheckIsOwnedEnoughly(CommonConsumeDetailInfo_o *this, const MethodInfo *method)
 {
-  Il2CppObject *targetEntity; // x8
+  Il2CppObject *targetEntity; // x9
+  Il2CppClass *klass; // x9
   __int64 naturalAligment; // x10
   bool result; // w0
   Il2CppObject *userOwnStatusEntity; // x8
-  __int64 v7; // x11
+  __int64 v8; // x11
 
-  if ( (byte_4E7713F & 1) == 0 )
+  if ( (byte_5938104 & 1) == 0 )
   {
-    sub_1D0F0B4(&ItemEntity_TypeInfo);
-    sub_1D0F0B4(&UserItemEntity_TypeInfo);
-    byte_4E7713F = 1;
+    sub_21FFC50(&ItemEntity_TypeInfo);
+    sub_21FFC50(&UserItemEntity_TypeInfo);
+    byte_5938104 = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
-        && (naturalAligment = ItemEntity_TypeInfo->_2.naturalAligment,
-            targetEntity->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
-        && (ItemEntity_c *)targetEntity->klass->_2.typeHierarchy[naturalAligment - 1] == ItemEntity_TypeInfo
+        && (klass = targetEntity->klass,
+            naturalAligment = ItemEntity_TypeInfo->_2.naturalAligment,
+            klass->_2.naturalAligment >= (unsigned int)naturalAligment)
+        && (ItemEntity_c *)klass->_2.typeHierarchy[naturalAligment - 1] == ItemEntity_TypeInfo
         && (userOwnStatusEntity = this->fields.userOwnStatusEntity) != 0
-        && (v7 = UserItemEntity_TypeInfo->_2.naturalAligment,
-            userOwnStatusEntity->klass->_2.naturalAligment >= (unsigned int)v7)
-        && (UserItemEntity_c *)userOwnStatusEntity->klass->_2.typeHierarchy[v7 - 1] == UserItemEntity_TypeInfo
+        && (v8 = UserItemEntity_TypeInfo->_2.naturalAligment,
+            userOwnStatusEntity->klass->_2.naturalAligment >= (unsigned int)v8)
+        && (UserItemEntity_c *)userOwnStatusEntity->klass->_2.typeHierarchy[v8 - 1] == UserItemEntity_TypeInfo
         && HIDWORD(userOwnStatusEntity[1].monitor) - this->fields._Num_k__BackingField >= 0;
   return result;
 }
@@ -107,29 +117,36 @@ bool CommonConsumeDetailInfo__CheckIsOwnedEnoughly(CommonConsumeDetailInfo_o *th
 
 System_String_o *CommonConsumeDetailInfo__GetTargetName(CommonConsumeDetailInfo_o *this, const MethodInfo *method)
 {
-  Il2CppObject *targetEntity; // x8
-  __int64 naturalAligment; // x11
-  System_String_o **p_monitor; // x8
+  Il2CppObject *targetEntity; // x9
+  Il2CppClass *klass; // x11
+  __int64 naturalAligment; // x12
+  System_String_o **v6; // x8
+  System_String_o **p_monitor; // x9
 
-  if ( (byte_4E7713E & 1) == 0 )
+  if ( (byte_5938103 & 1) == 0 )
   {
-    sub_1D0F0B4(&ItemEntity_TypeInfo);
-    sub_1D0F0B4(&StringLiteral_1/*""*/);
-    byte_4E7713E = 1;
+    sub_21FFC50(&ItemEntity_TypeInfo);
+    sub_21FFC50(&StringLiteral_1/*""*/);
+    byte_5938103 = 1;
   }
   targetEntity = this->fields.targetEntity;
-  if ( targetEntity
-    && (naturalAligment = ItemEntity_TypeInfo->_2.naturalAligment,
-        targetEntity->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
-    && (ItemEntity_c *)targetEntity->klass->_2.typeHierarchy[naturalAligment - 1] == ItemEntity_TypeInfo )
+  if ( targetEntity )
   {
-    p_monitor = (System_String_o **)&targetEntity[1].monitor;
+    klass = targetEntity->klass;
+    naturalAligment = ItemEntity_TypeInfo->_2.naturalAligment;
+    v6 = (System_String_o **)&StringLiteral_1/*""*/;
+    if ( targetEntity->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
+    {
+      p_monitor = (System_String_o **)&targetEntity[1].monitor;
+      if ( (ItemEntity_c *)klass->_2.typeHierarchy[naturalAligment - 1] == ItemEntity_TypeInfo )
+        v6 = p_monitor;
+    }
   }
   else
   {
-    p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
+    v6 = (System_String_o **)&StringLiteral_1/*""*/;
   }
-  return *p_monitor;
+  return *v6;
 }
 
 
@@ -165,17 +182,17 @@ void CommonConsumeDetailInfo__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
+  System_String_o *v3; // x3
+  int32_t v4; // w4
   int32_t v5; // w5
-  int64_t v6; // x6
-  System_String_o *v7; // x7
+  bool v6; // w6
+  bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
-    (int32_t)method,
+    (System_String_o *)method,
     v3,
     v4,
     v5,

@@ -12,19 +12,19 @@ void BattleOverwriteFieldMotionTask__Init(
         const MethodInfo *method)
 {
   struct System_Int32_array *MotionIds; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
+  bool v10; // w6
+  bool v11; // w7
 
   if ( !aiEnt )
-    sub_1D0F30C(this, aiActEnt);
+    sub_21FFECC(this, aiActEnt);
   MotionIds = AiBaseEntity__GetMotionIds(aiEnt, 0);
   this->fields.overwriteMotionIds = MotionIds;
-  sub_1D0F058(
-    (GrandQuestFolderBoardItem_o *)&this->fields.overwriteMotionIds,
+  sub_21FFBF4(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteMotionIds,
     (int32_t)MotionIds,
     v6,
     v7,
@@ -43,13 +43,13 @@ BattleActionData_o *BattleOverwriteFieldMotionTask__MakeActionData(
   System_Int32_array *overwriteMotionIds; // x19
   BattleOverwriteFieldMotionActionData_o *v5; // x20
 
-  if ( (byte_4E7AAE5 & 1) == 0 )
+  if ( (byte_593BB44 & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleOverwriteFieldMotionActionData_TypeInfo);
-    byte_4E7AAE5 = 1;
+    sub_21FFC50(&BattleOverwriteFieldMotionActionData_TypeInfo);
+    byte_593BB44 = 1;
   }
   overwriteMotionIds = this->fields.overwriteMotionIds;
-  v5 = (BattleOverwriteFieldMotionActionData_o *)sub_1D0F300(BattleOverwriteFieldMotionActionData_TypeInfo);
+  v5 = (BattleOverwriteFieldMotionActionData_o *)sub_21FFEBC(BattleOverwriteFieldMotionActionData_TypeInfo);
   BattleOverwriteFieldMotionActionData___ctor(v5, overwriteMotionIds, 0);
   return (BattleActionData_o *)v5;
 }

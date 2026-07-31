@@ -1,14 +1,14 @@
 void ItemSelectMaster___ctor(ItemSelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4E77B5D & 1) == 0 )
+  if ( (byte_5938B72 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
-    byte_4E77B5D = 1;
+    sub_21FFC50(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
+    byte_5938B72 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    216,
-    (const MethodInfo_3538564 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
+    218,
+    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ItemSelectEntity_o *ItemSelectMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4E77B5B & 1) == 0 )
+  if ( (byte_5938B70 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
-    byte_4E77B5B = 1;
+    sub_21FFC50(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
+    byte_5938B70 = 1;
   }
   PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&idx);
   return (ItemSelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_353AADC *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
+                                 (const MethodInfo_3EE2044 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
 }
 
 
@@ -43,12 +43,12 @@ ItemSelectEntity_array *ItemSelectMaster__GetSelectables(
   const MethodInfo *v6; // x4
   _BOOL8 v7; // x0
   Il2CppObject *v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
   int32_t v12; // w5
-  int64_t v13; // x6
-  System_String_o *v14; // x7
+  bool v13; // w6
+  bool v14; // w7
   int32_t v15; // w22
   struct System_Object_array *items; // x8
   _QWORD *v17; // x9
@@ -57,19 +57,19 @@ ItemSelectEntity_array *ItemSelectMaster__GetSelectables(
   const MethodInfo *v20; // x4
   ItemSelectEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4E77B5E & 1) == 0 )
+  if ( (byte_5938B73 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
-    sub_1D0F0B4(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
-    sub_1D0F0B4(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
-    byte_4E77B5E = 1;
+    sub_21FFC50(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+    sub_21FFC50(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
+    sub_21FFC50(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
+    byte_5938B73 = 1;
   }
   entity = 0;
-  v5 = (System_Collections_Generic_List_object__o *)sub_1D0F300(System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_395BBDC *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
+    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
   v7 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, 1, v6);
   if ( v7 )
   {
@@ -78,8 +78,8 @@ ItemSelectEntity_array *ItemSelectMaster__GetSelectables(
       v15 = 2;
       while ( 1 )
       {
-        v8 = (Il2CppObject *)entity;
         items = v5->fields._items;
+        v8 = (Il2CppObject *)entity;
         v17 = Method_System_Collections_Generic_List_ItemSelectEntity__Add__;
         ++v5->fields._version;
         if ( !items )
@@ -90,30 +90,30 @@ ItemSelectEntity_array *ItemSelectMaster__GetSelectables(
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             v8,
-            *(const MethodInfo_395C410 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v19 = &items->obj.klass + size;
           v5->fields._size = size + 1;
           v19[4] = (Il2CppClass *)v8;
-          sub_1D0F058((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
+          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
         }
         v7 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, v15++, v20);
         if ( !v7 )
           return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
                                              v5,
-                                             (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+                                             (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
       }
     }
 LABEL_14:
-    sub_1D0F30C(v7, v8);
+    sub_21FFECC(v7, v8);
   }
   if ( !v5 )
     goto LABEL_14;
   return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
                                      v5,
-                                     (const MethodInfo_395DF68 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+                                     (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
 }
 
 
@@ -127,15 +127,15 @@ bool ItemSelectMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4E77B5C & 1) == 0 )
+  if ( (byte_5938B71 & 1) == 0 )
   {
-    sub_1D0F0B4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
-    byte_4E77B5C = 1;
+    sub_21FFC50(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
+    byte_5938B71 = 1;
   }
   PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&itemId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_353AB28 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
+           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
 }

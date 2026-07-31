@@ -15,28 +15,32 @@ System_Int32_array *OpponentAllFieldTargetAggregator__GetCandidate(
 
   args = this->fields.args;
   if ( !args )
-    goto LABEL_9;
+    goto LABEL_10;
   v3 = (TargetAggregator_o *)this;
   this = (OpponentAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField;
   if ( !this )
-    goto LABEL_9;
+    goto LABEL_10;
   this = (OpponentAllFieldTargetAggregator_o *)BattleData__isEnemyID(
                                                  (BattleData_o *)this,
                                                  args->fields._actorId_k__BackingField,
                                                  0);
   v4 = v3->fields.args;
-  if ( !v4 )
-    goto LABEL_9;
-  battleData_k__BackingField = v4->fields._battleData_k__BackingField;
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( battleData_k__BackingField )
-      return BattleData__getFieldPlayerServantIDList(v4->fields._battleData_k__BackingField, 0, 0);
-LABEL_9:
-    sub_1D0F30C(this, method);
+    if ( v4 )
+    {
+      this = (OpponentAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField;
+      if ( this )
+        return BattleData__getFieldPlayerServantIDList((BattleData_o *)this, 0, 0);
+    }
+LABEL_10:
+    sub_21FFECC(this, method);
   }
+  if ( !v4 )
+    goto LABEL_10;
+  battleData_k__BackingField = v4->fields._battleData_k__BackingField;
   this = (OpponentAllFieldTargetAggregator_o *)TargetAggregator__get_IsOpponentTargetOnly(v3, method);
   if ( !battleData_k__BackingField )
-    goto LABEL_9;
+    goto LABEL_10;
   return BattleData__getFieldEnemyServantIDList(battleData_k__BackingField, (unsigned __int8)this & 1, 0);
 }

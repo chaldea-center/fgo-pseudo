@@ -1,30 +1,31 @@
 void BackTaskAmountAdjuster___ctor(BackTaskAmountAdjuster_o *this, const MethodInfo *method)
 {
   System_Diagnostics_Stopwatch_o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
   int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
-  float v10; // s0
+  bool v8; // w6
+  bool v9; // w7
+  __int64 v10; // x1
+  float v11; // s0
 
-  if ( (byte_4E79337 & 1) == 0 )
+  if ( (byte_593A38B & 1) == 0 )
   {
-    sub_1D0F0B4(&UnityEngine_Application_TypeInfo);
-    sub_1D0F0B4(&System_Diagnostics_Stopwatch_TypeInfo);
-    byte_4E79337 = 1;
+    sub_21FFC50(&UnityEngine_Application_TypeInfo);
+    sub_21FFC50(&System_Diagnostics_Stopwatch_TypeInfo);
+    byte_593A38B = 1;
   }
-  v3 = (System_Diagnostics_Stopwatch_o *)sub_1D0F300(System_Diagnostics_Stopwatch_TypeInfo);
+  v3 = (System_Diagnostics_Stopwatch_o *)sub_21FFEBC(System_Diagnostics_Stopwatch_TypeInfo);
   System_Diagnostics_Stopwatch___ctor(v3, 0);
   this->fields.stopwatch = v3;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)&this->fields.stopwatch, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.stopwatch, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
-  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  v10 = 1.0 / (float)UnityEngine_Application__get_targetFrameRate(0);
-  this->fields.plannedWorkDeltaTime = v10 * 0.5;
-  this->fields.expectedDeltaTime = v10;
+  if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v10);
+  v11 = 1.0 / (float)UnityEngine_Application__get_targetFrameRate(0);
+  this->fields.plannedWorkDeltaTime = v11 * 0.5;
+  this->fields.expectedDeltaTime = v11;
 }
 
 
@@ -33,7 +34,12 @@ float BackTaskAmountAdjuster__CalcExtendedDeltaTime(
         float deltaTime,
         const MethodInfo *method)
 {
-  return fmaxf(deltaTime - this->fields.expectedDeltaTime, 0.0);
+  float result; // s0
+
+  result = deltaTime - this->fields.expectedDeltaTime;
+  if ( result < 0.0 )
+    return 0.0;
+  return result;
 }
 
 
@@ -43,31 +49,31 @@ System_Collections_IEnumerator_o *BackTaskAmountAdjuster__Execute(
         const MethodInfo *method)
 {
   __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
   int32_t v9; // w5
-  int64_t v10; // x6
-  System_String_o *v11; // x7
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
+  bool v10; // w6
+  bool v11; // w7
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
   int32_t v15; // w5
-  int64_t v16; // x6
-  System_String_o *v17; // x7
+  bool v16; // w6
+  bool v17; // w7
 
-  if ( (byte_4E79338 & 1) == 0 )
+  if ( (byte_593A38C & 1) == 0 )
   {
-    sub_1D0F0B4(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
-    byte_4E79338 = 1;
+    sub_21FFC50(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
+    byte_593A38C = 1;
   }
-  v5 = sub_1D0F300(BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
+  v5 = sub_21FFEBC(BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = bgTask;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)bgTask, v12, v13, v14, v15, v16, v17);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)bgTask, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -79,7 +85,7 @@ bool BackTaskAmountAdjuster__IsOverWork(BackTaskAmountAdjuster_o *this, const Me
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   if ( !stopwatch->fields.is_running )
     return 1;
   plannedWorkDeltaTime = this->fields.plannedWorkDeltaTime;
@@ -93,6 +99,7 @@ void BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *this, const 
   __int64 v3; // x1
   float deltaTime; // s0
   float expectedDeltaTime; // s1
+  float v6; // s0
   float minWorkDeltaTime; // s0
   System_Diagnostics_Stopwatch_o *stopwatch; // x0
 
@@ -104,14 +111,17 @@ void BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *this, const 
   }
   else
   {
-    minWorkDeltaTime = this->fields.actualWorkDeltaTime - fmaxf(deltaTime - expectedDeltaTime, 0.0);
+    v6 = deltaTime - expectedDeltaTime;
+    if ( v6 < 0.0 )
+      v6 = 0.0;
+    minWorkDeltaTime = this->fields.actualWorkDeltaTime - v6;
     if ( this->fields.minWorkDeltaTime > minWorkDeltaTime )
       minWorkDeltaTime = this->fields.minWorkDeltaTime;
   }
   stopwatch = this->fields.stopwatch;
   this->fields.plannedWorkDeltaTime = minWorkDeltaTime;
   if ( !stopwatch || (System_Diagnostics_Stopwatch__Reset(stopwatch, 0), (stopwatch = this->fields.stopwatch) == 0) )
-    sub_1D0F30C(stopwatch, v3);
+    sub_21FFECC(stopwatch, v3);
   System_Diagnostics_Stopwatch__Start(stopwatch, 0);
 }
 
@@ -122,7 +132,7 @@ void BackTaskAmountAdjuster__SaveActualWorkDeltaTime(BackTaskAmountAdjuster_o *t
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1D0F30C(0, method);
+    sub_21FFECC(0, method);
   this->fields.actualWorkDeltaTime = (float)System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(stopwatch, 0) / 1000.0;
 }
 
@@ -155,41 +165,40 @@ bool BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   __int64 v13; // x0
   __int64 v14; // x0
   const MethodInfo *v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
   int32_t v19; // w5
-  int64_t v20; // x6
-  System_String_o *v21; // x7
-  GrandQuestFolderBoardItem_o *p__2__current; // x19
-  int32_t v23; // w2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  int32_t v26; // w5
-  int64_t v27; // x6
-  System_String_o *v28; // x7
+  bool v20; // w6
+  bool v21; // w7
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  int v28; // w8
   bool result; // w0
-  GrandQuestFolderBoardItem_o *v30; // x19
 
   v2 = this;
-  if ( (byte_4E79339 & 1) == 0 )
+  if ( (byte_593A38D & 1) == 0 )
   {
-    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_1D0F0B4(&System_Collections_IEnumerator_TypeInfo);
-    byte_4E79339 = 1;
+    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
+    byte_593A38D = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( v2->fields.__1__state > 2u )
     return 0;
   v2->fields.__1__state = -1;
   if ( !_4__this )
-LABEL_26:
-    sub_1D0F30C(this, method);
+LABEL_27:
+    sub_21FFECC(this, method);
   BackTaskAmountAdjuster__PlanNextWork(_4__this, method);
   while ( 1 )
   {
     bgTask = v2->fields.bgTask;
     if ( !bgTask )
-      goto LABEL_26;
+      goto LABEL_27;
     klass = bgTask->klass;
     v6 = *(unsigned __int16 *)&bgTask->klass->_2.rank;
     if ( *(_WORD *)&bgTask->klass->_2.rank )
@@ -207,7 +216,7 @@ LABEL_26:
     else
     {
 LABEL_11:
-      v8 = sub_1CE5430(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0);
+      v8 = sub_2237E2C(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0);
     }
     this = (BackTaskAmountAdjuster__Execute_d__9_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v8)(
                                                        bgTask,
@@ -216,7 +225,7 @@ LABEL_11:
       return 0;
     v9 = v2->fields.bgTask;
     if ( !v9 )
-      goto LABEL_26;
+      goto LABEL_27;
     v10 = v9->klass;
     v11 = *(unsigned __int16 *)&v9->klass->_2.rank;
     if ( *(_WORD *)&v9->klass->_2.rank )
@@ -234,7 +243,7 @@ LABEL_11:
     else
     {
 LABEL_19:
-      v13 = sub_1CE5430(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1);
+      v13 = sub_2237E2C(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v14 = (*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
     if ( v14 )
@@ -244,17 +253,17 @@ LABEL_19:
     {
       BackTaskAmountAdjuster__SaveActualWorkDeltaTime(_4__this, method);
       v2->fields.__2__current = 0;
-      p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-      sub_1D0F058(p__2__current, 0, v23, v24, v25, v26, v27, v28);
-      LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 2;
-      return 1;
+      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, 0, v22, v23, v24, v25, v26, v27);
+      v28 = 2;
+      goto LABEL_26;
     }
   }
   v2->fields.__2__current = (Il2CppObject *)v14;
-  v30 = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
-  sub_1D0F058(v30, v14, v16, v17, v18, v19, v20, v21);
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, v14, v16, v17, v18, v19, v20, v21);
+  v28 = 1;
+LABEL_26:
   result = 1;
-  LODWORD(v30[-1].fields._ClosedMessage_k__BackingField) = 1;
+  v2->fields.__1__state = v28;
   return result;
 }
 
@@ -275,11 +284,11 @@ void __noreturn BackTaskAmountAdjuster__Execute_d__9__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1D0F0C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1D0F300(v2);
+  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1D0F0C8(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1D0F1DC(v3, v4);
+  v4 = sub_21FFC64(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
+  sub_21FFD90(v3, v4);
 }
 
 

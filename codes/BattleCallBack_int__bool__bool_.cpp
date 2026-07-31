@@ -4,37 +4,33 @@ void BattleCallBack_int__bool__bool____ctor(
         bool arg2,
         bool arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_34A9BAC *method)
+        const MethodInfo_3E39DE4 *method)
 {
-  BattleCallBack_int__bool__bool__o *v8; // x21
-  bool v9; // w22
-  bool v10; // w23
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
+  BattleCallBack_int__bool__bool__o *v10; // x23
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
   int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  bool v15; // w6
+  bool v16; // w7
 
-  v8 = this;
-  v9 = arg2;
-  v10 = arg3;
+  v10 = this;
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0);
-  v8->fields.callBack = callBack;
-  v8 = (BattleCallBack_int__bool__bool__o *)((char *)v8 + 24);
-  LODWORD(v8[-1].fields.callBack) = arg1;
-  BYTE4(v8[-1].fields.callBack) = v9;
-  BYTE5(v8[-1].fields.callBack) = v10;
-  sub_1D0F058((GrandQuestFolderBoardItem_o *)v8, (int32_t)callBack, v11, v12, v13, v14, v15, v16);
+  v10->fields.callBack = callBack;
+  v10 = (BattleCallBack_int__bool__bool__o *)((char *)v10 + 24);
+  LODWORD(v10[-1].fields.callBack) = arg1;
+  BYTE4(v10[-1].fields.callBack) = arg2;
+  BYTE5(v10[-1].fields.callBack) = arg3;
+  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10, (int32_t)callBack, v11, v12, v13, v14, v15, v16);
 }
 
 
-void BattleCallBack_int__bool__bool___call(BattleCallBack_int__bool__bool__o *this, const MethodInfo_34A9BFC *method)
+void BattleCallBack_int__bool__bool___call(BattleCallBack_int__bool__bool__o *this, const MethodInfo_3E39E34 *method)
 {
   ActionExtensions__Call_int__bool__bool_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
     this->fields.arg3,
-    (const MethodInfo_31938C0 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
+    (const MethodInfo_36CE524 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
 }

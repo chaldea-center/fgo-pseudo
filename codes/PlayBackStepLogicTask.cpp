@@ -2,9 +2,9 @@
 void PlayBackStepLogicTask___ctor(PlayBackStepLogicTask_o *this, int32_t actorId, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actorId);
+  *((_DWORD *)&this->fields.gimmickFixedReelOrder + 1) = actorId;
   this->fields.actiontype = 71;
   this->fields.isSkipStep = 1;
-  this->fields.backStepActorId = actorId;
 }
 
 
@@ -20,29 +20,32 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
   const MethodInfo *v8; // x1
 
   v4 = this;
-  if ( (byte_4E7AAE0 & 1) == 0 )
+  if ( (byte_593BB3F & 1) == 0 )
   {
-    sub_1D0F0B4(&BattleLogicTask_TypeInfo);
-    this = (PlayBackStepLogicTask_o *)sub_1D0F0B4(&BattlePerformance_TypeInfo);
-    byte_4E7AAE0 = 1;
+    sub_21FFC50(&BattleLogicTask_TypeInfo);
+    this = (PlayBackStepLogicTask_o *)sub_21FFC50(&BattlePerformance_TypeInfo);
+    byte_593BB3F = 1;
   }
   if ( !logic )
     goto LABEL_15;
   this = (PlayBackStepLogicTask_o *)logic->fields.data;
   if ( !this )
     goto LABEL_15;
-  ServantData = BattleData__getServantData((BattleData_o *)this, v4->fields.backStepActorId, 0);
+  ServantData = BattleData__getServantData((BattleData_o *)this, *((_DWORD *)&v4->fields.gimmickFixedReelOrder + 1), 0);
   if ( ServantData && !ServantData->fields.isDeadAnime )
   {
     this = (PlayBackStepLogicTask_o *)logic->fields.logicnomal;
     if ( this )
     {
-      BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0);
-      v7 = (BattleLogicTask_o *)sub_1D0F300(BattleLogicTask_TypeInfo);
+      BackStep = BattleLogicNomal__createBackStep(
+                   (BattleLogicNomal_o *)this,
+                   *((_DWORD *)&v4->fields.gimmickFixedReelOrder + 1),
+                   0);
+      v7 = (BattleLogicTask_o *)sub_21FFEBC(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v7, v8);
       this = (PlayBackStepLogicTask_o *)BattlePerformance_TypeInfo;
-      if ( !BattlePerformance_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(BattlePerformance_TypeInfo);
+      if ( !*(&BattlePerformance_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(BattlePerformance_TypeInfo, logic);
       if ( v7 )
       {
         v7->fields.systemTime = BattlePerformance_TypeInfo->static_fields->AFTER_BACK_STEP_INTERVAL;
@@ -55,7 +58,7 @@ BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
       }
     }
 LABEL_15:
-    sub_1D0F30C(this, logic);
+    sub_21FFECC(this, logic);
   }
   return 0;
 }
